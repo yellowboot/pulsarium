@@ -6,39 +6,39 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 16.09.2026 19:22
-40 of 80 news items unmatched this run
+Generated: 16.09.2026 20:20
+38 of 80 news items unmatched this run
 
-- [CNBC] Continental Resources to develop massive oil patch in Venezuela
-- [CoinDesk] Revolut hackers demand $3 million in Monero, threaten to sell customer data
-- [Nasdaq] Cotton Posting Mixed Wednesday Trade
-- [Nasdaq] Hogs Back to Mixed Midweek Action
-- [Nasdaq] Cattle Extending Weakness to Wednesday
+- [CNBC] Trump donor Harold Hamm's Continental Resources to develop oil region in Venezuela
+- [CNBC] J.B. Hunt stock plunges 13% after company warns third-quarter earnings will fall
 - [Nasdaq] Soybean Pulling Back on Wednesday
-- [Nasdaq] Corn Falling Lower on Wednesday
 - [Nasdaq] Wheat Posting Mixed Action on Wednesday
 - [Nasdaq] Cocoa Prices Trade Sideways Below 11.5-Month Highs
 - [Nasdaq] Coffee Prices Pressured by Improved Global Supply Outlook
-- [Nasdaq] Corn Fading Back to Start Wednesday Trade
 - [Nasdaq] Crude Oil Prices Retreat as Supply Fears Ease
-- [CNBC] American Airlines says 30% of seats drive half of revenue as premium cabin rush heats up
-- [Investing.com] American, United prepare further capacity trims as fuel shock reshapes flying
 - [Nasdaq] Signs of Weak Demand Undercut Sugar Prices
-- [Nasdaq] Wheat Starting Wednesday with Weakness
-- [Investing.com] Why is Ciena stock surging today?
-- [Investing.com] Why is Critical Metals stock climbing today?
-- [Investing.com] Why is Twist Bioscience stock rallying today?
-- [Investing.com] Union Pacific says high diesel prices shifting freight from trucks to rail
+- [Investing.com] S&P upgrades Packaging Corp. rating to BBB+ on low leverage
+- [Investing.com] INNIO’s credit rating upgraded to Ba3 by Moody’s
+- [Investing.com] Moody’s upgrades Performance Food notes on debt paydown
+- [Investing.com] KNDS IPO may be delayed as defense shares weaken - Bloomberg
+- [Investing.com] Goldman CEO says fixed income, currencies, commodities business slightly softer in Q3
+- [Investing.com] Chile’s state-owned miner Codelco says restructuring plan may be delayed until end of 2026
+- [Investing.com] Hub Group stock slumps as J Capital warns on accounting delays
+- [Nasdaq] Gabelli Dividend & Income Trust's Series H Preferred Shares Cross 6.5% Yield Mark
+- [Nasdaq] Hartford Insurance Group's Preferred Stock, Series G Shares Cross 6.5% Yield Mark
+- [Nasdaq] UDR Shares Cross 5% Yield Mark
+- [Nasdaq] Cotton Posting Mixed Wednesday Trade
+- [Nasdaq] Hogs Back to Mixed Midweek Action
+- [Nasdaq] Cattle Extending Weakness to Wednesday
+- [Nasdaq] Corn Falling Lower on Wednesday
+- [CoinDesk] Revolut hackers demand $3 million in Monero, threaten to sell customer data
+- [CNBC] American Airlines says 30% of seats drive half of revenue as premium cabin rush heats up
 - [CNBC] Lagging sector looks poised for a rebound. Here's how Mike Khouw is trading it
 - [CNBC] A healthcare provider is set up for a big move higher, according to the charts
 - [Mining.com] EU objects to MMG’s Anglo American nickel deal
-- [CNBC] Hyperscaler debt signals warning sign, Apollo cautions
-- [CNBC] J.B. Hunt stock plunges 10% after company warns third-quarter earnings will fall
-- [Yahoo Finance] Mysterious trader moves $122 million ahead of Fed's 2 p.m. decision
 - [Mining.com] Lundin Gold tax claim puts Ecuador mining rules under scrutiny
 - [CoinDesk] U.S. House's tax committee advances crypto tax bill in wake of Clarity Act loss
 - [Mining.com] New Found Gold hits commercial output at Hammerdown
-- [CoinDesk] Hamas’ military wing told donors to avoid Binance. Use Bybit, OKX and others instead
 - [Mining.com] Silver price surge revives Nord’s Gowganda tailings near Cobalt
 - [CNBC] OpenAI investors have approached the company about a new funding round
 - [Mining.com] Outcrop doubles inferred silver at Santa Ana in Colombia
@@ -46,6 +46,4 @@ Generated: 16.09.2026 19:22
 - [CoinDesk] Payward plans to offer U.S. clients onchain perpetual futures on Hyperliquid
 - [CoinDesk] Blockchain finance platform Theo launches tokenized silver backed by $40 million in active leases
 - [CoinDesk] A LatAm telecom operator is putting part of its finances on Avalanche
-- [OilPrice.com] Saudi Oil Crisis Is About to Hit Europe
 - [OilPrice.com] Continental Strikes Venezuela Oil Deal with PDVSA
-- [OilPrice.com] Export Constraints Curb Kazakhstan’s Ability to Offset the Global Oil Shortage
