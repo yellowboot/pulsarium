@@ -1200,10 +1200,13 @@
 
   // Importance threshold above which we show the LIVE/BREAKING badge.
   // A normal news item usually scores 10-40 (both by the local heuristic
-  // and by the DeepSeek prompt's calibration — see fetch_news.py); 75+ is
-  // a rare market-wide move on the scale of a macro event, not an
-  // ordinary green day.
-  const LIVE_THRESHOLD = 75;
+  // and by the DeepSeek prompt's calibration — see fetch_news.py); the
+  // prompt's own calibration anchors reserve 80-100 for historic-scale
+  // events only, so a real macro event (Fed decision, CPI print) tops
+  // out around 60-75 in practice. 75 as a threshold was unreachable on
+  // an ordinary day — even a Fed meeting day topped out at 60 — so
+  // Breaking never fired. Lowered to match the achievable range.
+  const LIVE_THRESHOLD = 60;
 
   function matchesSearch(item, query) {
     if (!query) return true;
