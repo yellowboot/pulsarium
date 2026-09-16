@@ -6,44 +6,54 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 15.09.2026 23:36
-38 of 80 news items unmatched this run
+Generated: 16.09.2026 15:29
+48 of 80 news items unmatched this run
 
-- [Nasdaq] Dollar Rises on Surging Crude Prices and T-Note Yields
-- [Nasdaq] Signs of Adequate Supplies Weigh on Cocoa Prices
-- [Nasdaq] Coffee Prices Retreat on Ideal Growing Weather in Brazil and Vietnam
-- [Nasdaq] Cattle Facing Turnaround Tuesday Weakness
-- [Nasdaq] Corn Pulling Off Early Lows on Tuesday
-- [Nasdaq] Sugar Prices Decline as Dollar Strength Spurs Long Liquidation
-- [Nasdaq] Soybeans Posting Gains As Meal Rallies
-- [Nasdaq] Cocoa Prices Fall on Signs of Adequate Supplies
-- [MarketWatch] Medicare is using AI to approve claims. The result has been ‘alarmingly high denial rates.’
-- [Investing.com] US DoJ backs bond demand in Paramount-Warner Bros antitrust fight
-- [Nasdaq] Cotton Fading Lower on Tuesday
-- [Investing.com] OpenAI mulls funding round at $1.2 trillion valuation ahead of IPO, FT reports
-- [Investing.com] Norfolk Southern sees fuel prices weighing on third quarter despite freight share gains
-- [Nasdaq] Dollar Strength Spurs Long Liquidation in Sugar Futures
-- [Investing.com] OpenAI considers funding round at $1.2tn valuation ahead of delayed IPO - FT
-- [Nasdaq] Dollar Supported by Higher Crude Prices and T-Note Yields
-- [Mining.com] Hercules advances Hook in Idaho after porphyry signs
-- [MarketWatch] These 4 stocks could benefit most from a $3.2 trillion semiconductor opportunity
-- [Investing.com] Mexico stocks lower at close of trade; S&P/BMV IPC down 1.11%
-- [MarketWatch] AI stocks are rebounding. One analyst says there’s no spending slowdown in sight.
-- [Nasdaq] 3 Defensive-Styled Stocks to Help Weather Volatility
-- [Mining.com] Green Manganese demonstrates single process critical metals recovery from polymetallic nodules
-- [CNBC] Stocks post back-to-back losses as oil surges, 10-year yield hits 19-year high: Live updates
-- [CNBC] Senate cloture vote on Clarity Act fails, dealing regulatory blow to crypto industry
-- [Mining.com] Billionaire Rinehart’s Hancock takes stake in Nunavut copper explorer
-- [CoinDesk] Crypto industry reacts after Clarity Act fails Senate vote
-- [Mining.com] Sandvik advances cyber security for intelligent mining equipment
-- [CNBC] U.S. oil tops $105 as Saudi Arabia reportedly cancels some crude cargoes after pipeline closure
-- [CoinDesk] Crypto Clarity Act flames out in failed U.S. Senate vote
-- [CNBC] Saudi pipeline closure is a brief interruption that will last days, U.S. Energy secretary tells CNBC
-- [CNBC] This AI play has an unshakeable moat, but has flown under the radar
-- [CoinDesk] Solana lender Kamino taps fintech veteran Michael Weisz as CEO for massive U.S. expansion
-- [OilPrice.com] Chinese Solar Panels Drop to 12 Cents a Watt, Rooftop Installs Surge Worldwide
-- [CNBC] Stocks making the biggest moves midday: Skyworks Solutions, Axon, Dave & Buster's, Revvity & more
-- [OilPrice.com] Hormuz Risk Opens $40-Plus Price Gap Between Crude Grades
-- [Mining.com] Bitterroot doubles on $5.2M Pentagon funding
-- [Mining.com] Elemental seals $239M Vizsla deal for Panuco royalties
-- [OilPrice.com] U.S. Oil Inventories Jump as Cushing Stocks Keep Falling
+- [Investing.com] Why is Sylvamo stock rallying today?
+- [Investing.com] Why is First Tracks Biotherapeutics stock rallying today?
+- [Investing.com] Why is Brinker International stock gaining today?
+- [Investing.com] Why is Arcus Biosciences stock rallying today?
+- [Nasdaq] Hog Weakness Continues, as Traders Look to Wednesday
+- [Nasdaq] Cotton Weakness Continuing on Wednesday Morning
+- [Nasdaq] Soybean Gains Extending to Wednesday Morning
+- [Nasdaq] Corn Fading Back to Start Wednesday Trade
+- [Investing.com] Alvotech stock surges on Barclays upgrade to Overweight
+- [Investing.com] Cellectis stock tumbles after Barclays double downgrade
+- [Nasdaq] Wheat Starting Wednesday with Weakness
+- [Nasdaq] Corn Bulls Gain Steam into the Close
+- [Investing.com] First Tracks Biotherapeutics stock rises on Guggenheim buy rating
+- [Investing.com] Morocco stocks lower at close of trade; Moroccan All Shares down 1.13%
+- [CNBC] Growth stocks are still attractive compared to value even as rates rise, charts show
+- [Yahoo Finance] Why Cipher Digital Stock Is Skyrocketing Today
+- [Nasdaq] BHM Selling 25.3% Below CEO's Recent Buy Price
+- [Yahoo Finance] Direxion Semiconductor Bull ETF Drops 14% as Chip Sector Faces Sharp Selloff
+- [Yahoo Finance] Alluvium Raised Its McKesson (MCK) Stake as Long-Term Growth Expectations Remain Strong
+- [Nasdaq] State Street Materials Select Sector SPDR ETF Experiences Big Outflow
+- [Nasdaq] Notable ETF Outflow Detected - XRT, ANF, HZO, GO
+- [CNBC] Oil prices fall after U.S. says damaged Saudi pipeline will restart operations in days
+- [Nasdaq] Notable ETF Outflow Detected - KRE, CFR, SSB, BPOP
+- [Yahoo Finance] American Express Sees Strong Spending, Raises Revenue Outlook at Conference
+- [Yahoo Finance] This AI Stock Could Be Worth Far More Than Investors Think
+- [Yahoo Finance] America Is Aging Faster Than Its Housing Supply Can Keep Up. 3 REITs Are Positioned for the Gap
+- [CoinDesk] Crypto Long & Short: Six signs a crypto winter is ending
+- [Yahoo Finance] Here’s Why This Fund Sold Brown & Brown (BRO)
+- [Yahoo Finance] US Politicians Are Buying These Two Stocks
+- [Yahoo Finance] Dave & Buster’s (PLAY) Bets On New Leaders To Reverse Its Slide
+- [Yahoo Finance] Comfort Systems USA (FIX) Positioned to Benefit from Accelerated AI Investment
+- [Yahoo Finance] The Fund Exited Insmed (INSM) After the Investment Thesis Played Out
+- [CoinDesk] Payward plans to offer U.S. clients onchain perpetual futures on Hyperliquid
+- [Yahoo Finance] Billionaire Ray Dalio’s Bridgewater’s and Cathie Wood’s ARK Portfolios: 2 Stocks They Both Own
+- [Yahoo Finance] Medline (MDLN) Slips Amid Broader MedTech Weakness
+- [Yahoo Finance] Brad Gerstner Says Latest ‘Negativity’ Around AI is ‘Political Agenda’; See His 2 New AI Stock Picks
+- [Yahoo Finance] J.B. Hunt flags Q3 cost pressures, shares sink 12%
+- [Yahoo Finance] American Battery Technology (ABAT) Turns A Profit, But Faces A New Export Threat
+- [Yahoo Finance] Coda Octopus (CODA) Just Posted A First-Ever Profit Milestone
+- [MarketWatch] More home builders cut prices as buyers get spooked
+- [Yahoo Finance] Billionaire Ray Dalio’s Bridgewater’s 2 Non-AI Stock Picks
+- [Yahoo Finance] Deutsche Bank To Offer Crypto Custody For Institutions
+- [CNBC] The Fed is expected to raise rates. There's a bearish trade to be made on this homebuilder
+- [Yahoo Finance] Ray Dalio’s Fund Was Buying These 2 AI Stocks
+- [Yahoo Finance] US homebuilder sentiment drops to 12-month low in September
+- [CoinDesk] Blockchain finance platform Theo launches tokenized silver backed by $40 million in active leases
+- [CoinDesk] A LatAm telecom operator is putting part of its finances on Avalanche
+- [Yahoo Finance] AI and Next-Gen Sequencing Strengthens Twist Bioscience Corp. (TWST)
