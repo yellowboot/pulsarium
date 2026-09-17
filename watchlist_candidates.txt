@@ -6,42 +6,41 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 17.09.2026 20:28
-42 of 80 news items unmatched this run
+Generated: 17.09.2026 21:57
+41 of 80 news items unmatched this run
 
-- [CNBC] Stocks surge as oil and bond yields retreat, recovering from Fed-induced sell-off
-- [MarketWatch] Pokémon has turned 30, and Target is set to cash in on the anniversary craze
-- [Investing.com] Xenon Pharma stock tumbles on psychiatry trial pause
+- [CoinDesk] Real stocks are finally coming on blockchain. Here’s how the SEC wants it to work
+- [Nasdaq] Dollar Slightly Lower as T-Note Yields Fall
 - [Nasdaq] Signs of Weak Demand Undercut Sugar Prices
 - [Nasdaq] Cocoa Prices Sink on Abundant Supplies
 - [Nasdaq] Coffee Prices Settle Lower as Supply Situation Improves
 - [Nasdaq] Demand Concerns Knock Sugar Prices Lower
 - [Nasdaq] Adequate Supplies Pressure Cocoa Prices
-- [Investing.com] US FDA approves Ultragenyx’s gene therapy for rare disorder
-- [Nasdaq] Crown Holdings Becomes Oversold
-- [Nasdaq] Relative Strength Alert For Mueller Water Products
-- [Nasdaq] Relative Strength Alert For Marsh & McLennan Companies
-- [Nasdaq] Selective Insurance Group is Oversold
-- [Nasdaq] Lamb Weston Holdings is Oversold
-- [Nasdaq] Notable Two Hundred Day Moving Average Cross - HXL
-- [Nasdaq] VanEck BDC Income (BIZD) Shares Cross Above 200 DMA
-- [Nasdaq] Amplify BlueStar Israel Technology Breaks Above 200-Day Moving Average - Bullish for ITEQ
-- [Investing.com] Spot gold set to snap three-day losing streak a day after Fed’s rate hike
-- [Investing.com] U.S. approves possible $24.3 billion F-35 sale to Saudi Arabia
-- [Investing.com] Figma stock analysis: IPO hangover, strong fundamentals, and a contested valuation
-- [Investing.com] USD/SGD trade outlook: MAS tightening points to further SGD gains
+- [Investing.com] US FCC approves foreign investment in Paramount Warner merger deal
+- [Investing.com] Mexico stocks higher at close of trade; S&P/BMV IPC up 0.58%
+- [Nasdaq] Crude Prices Slip as Supply Fears Ease
+- [Nasdaq] Nat-Gas Prices Climb on Smaller-Than-Expected Storage Build
+- [Nasdaq] Coffee Prices Retreat as Global Supplies Improve
+- [Investing.com] Anduril wins $85 million Air Force contract for aerospace design
+- [Investing.com] Colombia stocks higher at close of trade; COLCAP up 0.40%
+- [Investing.com] General Dynamics wins $47.6m in Navy contract modifications
+- [Investing.com] Russia stocks lower at close of trade; MOEX Russia Index down 1.68%
+- [Investing.com] Latin American stocks climb as dollar weakens after Fed hike
 - [Nasdaq] Wheat Popping Off Early Losses on Thursday
+- [Nasdaq] CTO Realty Growth is Now Oversold
+- [Nasdaq] Axos Financial is Now Oversold (AX)
+- [CNBC] Stocks surge as oil and bond yields retreat, recovering from Fed-induced sell-off
+- [CNBC] As Fed raises rates, income investors can buy these bonds for solid yields and a portfolio cushion
+- [CNBC] Chase celebrates the Sapphire Reserve’s 10th anniversary with new credits and a 5.5 million-point grand prize
+- [MarketWatch] Pokémon has turned 30, and Target is set to cash in on the anniversary craze
 - [CNBC] Oil prices fall as Saudi Arabia reportedly offers more crude via Hormuz after pipeline attack
 - [MarketWatch] This is the only cybersecurity stock that can post big gains, according to one analyst
-- [CNBC] Chase celebrates the Sapphire Reserve’s 10th anniversary with new credits and a 5.5 million-point grand prize
 - [CoinDesk] SEC opens door to tokenized U.S. stock trading. Here’s who could benefit
-- [CNBC] One cybersecurity stock has lagged of late. Jay Woods says the charts are now turning bullish
 - [CNBC] Securitize jumps after regulators greenlight some tokenized U.S. stock trading
 - [CNBC] Stephen Curry says his Li-Ning signature shoe will debut early next year
 - [Mining.com] West Africa key to gold growth, Fortuna CEO says
 - [Mining.com] Newcore’s wide gold hit boosts Enchi plan in Ghana
 - [CoinDesk] UK signals end of 'light-touch' era with multi-agency raid on peer-to-peer crypto hubs
-- [CoinDesk] U.S. SEC begins prepping for around-the-clock trading that crypto treats as the norm
 - [Mining.com] Luca Mining adds 3rd Mexican property in $60M Agnico deal
 - [Mining.com] Agnico-backed Cartier lowers Cadillac spend in Quebec gold belt
 - [CNBC] A Chinese AI company just connected its model to Wall Street's leading data providers
@@ -49,5 +48,5 @@ Generated: 17.09.2026 20:28
 - [OilPrice.com] Russian Fuel Exports Rebound in August But Still Down 50% From Last Year
 - [Mining.com] MMG moves to ease EU concerns over $500M Anglo nickel deal
 - [CNBC] SEC clears path for tokenized stocks, bringing the market closer to 24/7 trading
+- [OilPrice.com] Cooking Oil-Powered Plane to Fly Tourists to Antarctica
 - [CoinDesk] SEC rolls out long-awaited 'innovation exemption' for tokenized securities venues
-- [Mining.com] Rinehart’s nine-deal spree takes her well beyond iron ore
