@@ -6,31 +6,31 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 17.09.2026 23:00
-40 of 80 news items unmatched this run
+Generated: 17.09.2026 23:37
+39 of 80 news items unmatched this run
 
-- [Investing.com] Ultragenyx sets $3.95 million price for rare disease gene therapy
-- [CNBC] Anthropic shares 3 metrics to help AI companies monitor pace of development
-- [Nasdaq] Coffee Prices Settle Lower as Supply Situation Improves
 - [Nasdaq] Cotton Faces Thursday Weakness, Following Slow Export Business
+- [Mining.com] IperionX validates technology to scale US titanium production
+- [Investing.com] US FCC approves foreign investment in Paramount Warner merger
+- [Nasdaq] Signs of Weak Demand Undercut Sugar Prices
+- [Investing.com] Ultragenyx sets $3.95 million price for rare disease gene therapy
+- [Nasdaq] Coffee Prices Settle Lower as Supply Situation Improves
 - [Nasdaq] Wheat Popping Off Early Losses on Thursday
 - [Investing.com] Why is Nucor stock sliding today?
 - [Investing.com] Why is Xenon Pharmaceuticals stock plunging today?
 - [Investing.com] Why is Steel Dynamics stock sliding today?
 - [Investing.com] Nucor stock falls on weaker than expected third quarter guidance
-- [CoinDesk] Real stocks are finally coming on blockchain. Here’s how the SEC wants it to work
-- [Nasdaq] Signs of Weak Demand Undercut Sugar Prices
 - [Nasdaq] Cocoa Prices Sink on Abundant Supplies
 - [Investing.com] Steel Dynamics stock falls on weaker third quarter guidance
 - [Nasdaq] Dollar Slightly Lower as T-Note Yields Fall
 - [Nasdaq] Demand Concerns Knock Sugar Prices Lower
 - [Nasdaq] Adequate Supplies Pressure Cocoa Prices
-- [Investing.com] US FCC approves foreign investment in Paramount Warner merger deal
 - [CoinDesk] The Ondo Finance succession crisis gets messier as Kathleen Allman’s daughter alleges ‘dementia’, alcoholism and reckless spending
 - [Nasdaq] Crude Prices Slip as Supply Fears Ease
 - [Nasdaq] Nat-Gas Prices Climb on Smaller-Than-Expected Storage Build
 - [Nasdaq] Coffee Prices Retreat as Global Supplies Improve
 - [Nasdaq] Are Options Traders Betting on a Big Move in Sierra Bancorp Stock?
+- [CNBC] As Fed raises rates, income investors can buy these bonds for solid yields and a portfolio cushion
 - [CNBC] Chase celebrates the Sapphire Reserve’s 10th anniversary with new credits and a 5.5 million-point grand prize
 - [MarketWatch] Pokémon has turned 30, and Target is set to cash in on the anniversary craze
 - [MarketWatch] Saudi Arabia is now pushing to export more oil through the Strait of Hormuz
@@ -41,9 +41,8 @@ Generated: 17.09.2026 23:00
 - [CNBC] Securitize jumps after regulators greenlight some tokenized U.S. stock trading
 - [CNBC] Stephen Curry says his Li-Ning signature shoe will debut early next year
 - [Mining.com] West Africa key to gold growth, Fortuna CEO says
-- [Defense One] Defense Business Brief: Dispatch from AFA’s Air, Space, & Cyber 2026
 - [Mining.com] Newcore’s wide gold hit boosts Enchi plan in Ghana
-- [CoinDesk] U.S. SEC begins prepping for around-the-clock trading that crypto treats as the norm
+- [CoinDesk] UK signals end of 'light-touch' era with multi-agency raid on peer-to-peer crypto hubs
 - [Mining.com] Luca Mining adds 3rd Mexican property in $60M Agnico deal
 - [Mining.com] Agnico-backed Cartier lowers Cadillac spend in Quebec gold belt
 - [CNBC] A Chinese AI company just connected its model to Wall Street's leading data providers
