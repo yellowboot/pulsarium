@@ -191,6 +191,7 @@ COMPANY_MAP = [
     {"ticker": "NEM",  "sector": "Metals & Mining",       "names": ["Newmont"]},
     {"ticker": "AA",   "sector": "Metals & Mining",       "names": ["Alcoa"]},
     {"ticker": "GOLD", "sector": "Metals & Mining",       "names": ["Barrick Gold"]},
+    {"ticker": "LUG",  "sector": "Metals & Mining",       "names": ["Lundin Gold"]},
 
     # ---- Defense / Space ----
     {"ticker": "RHM",  "sector": "Defense",       "names": ["Rheinmetall"]},
@@ -212,6 +213,7 @@ COMPANY_MAP = [
     {"ticker": "BRK.B","sector": "Banking & Finance",        "names": ["Berkshire Hathaway"]},
     {"ticker": "MORN", "sector": "Banking & Finance",        "names": ["Morningstar"]},
     {"ticker": "EQH",  "sector": "Banking & Finance",        "names": ["Equitable Holdings"]},
+    {"ticker": "APO",  "sector": "Banking & Finance",        "names": ["Apollo Global Management"]},
     {"ticker": "V",    "sector": "Payments / Fintech",       "names": ["Visa"]},
     {"ticker": "MA",   "sector": "Payments / Fintech",       "names": ["Mastercard"]},
     {"ticker": "PYPL", "sector": "Payments / Fintech",       "names": ["PayPal"]},
@@ -251,6 +253,10 @@ COMPANY_MAP = [
     {"ticker": "UBER", "sector": "Airlines / Travel", "names": ["Uber"]},
     {"ticker": "LVS",  "sector": "Airlines / Travel", "names": ["Las Vegas Sands"]},
     {"ticker": "TCOM", "sector": "Airlines / Travel", "names": ["Trip.com"]},
+    {"ticker": "AAL",  "sector": "Airlines / Travel", "names": ["American Airlines"]},
+
+    # ---- Real estate / homebuilders ----
+    {"ticker": "LEN",  "sector": "Real Estate / Homebuilders", "names": ["Lennar"]},
 
     # ---- Crypto ----
     {"ticker": "BTC",  "sector": "Cryptocurrencies",           "names": ["Bitcoin"]},
@@ -258,6 +264,7 @@ COMPANY_MAP = [
     {"ticker": "COIN", "sector": "Cryptocurrencies",           "names": ["Coinbase"]},
     {"ticker": "MSTR", "sector": "Cryptocurrencies",           "names": ["MicroStrategy", "Strategy"]},
     {"ticker": "CRCL", "sector": "Cryptocurrencies",           "names": ["Circle Internet Group", "Circle Internet Financial"]},
+    {"ticker": "XMR",  "sector": "Cryptocurrencies",           "names": ["Monero"]},
 
     # ---- Bonds / macro (not companies, but market terms) ----
     {"ticker": "UST10Y","sector": "Bonds / Macro",     "names": ["10-year Treasury", "Treasury yield", "Treasury yields", "U.S. Treasury"]},
