@@ -6,45 +6,49 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 17.09.2026 23:37
-39 of 80 news items unmatched this run
+Generated: 18.09.2026 15:05
+43 of 80 news items unmatched this run
 
-- [Nasdaq] Cotton Faces Thursday Weakness, Following Slow Export Business
-- [Mining.com] IperionX validates technology to scale US titanium production
-- [Investing.com] US FCC approves foreign investment in Paramount Warner merger
-- [Nasdaq] Signs of Weak Demand Undercut Sugar Prices
-- [Investing.com] Ultragenyx sets $3.95 million price for rare disease gene therapy
-- [Nasdaq] Coffee Prices Settle Lower as Supply Situation Improves
-- [Nasdaq] Wheat Popping Off Early Losses on Thursday
-- [Investing.com] Why is Nucor stock sliding today?
-- [Investing.com] Why is Xenon Pharmaceuticals stock plunging today?
-- [Investing.com] Why is Steel Dynamics stock sliding today?
-- [Investing.com] Nucor stock falls on weaker than expected third quarter guidance
-- [Nasdaq] Cocoa Prices Sink on Abundant Supplies
-- [Investing.com] Steel Dynamics stock falls on weaker third quarter guidance
-- [Nasdaq] Dollar Slightly Lower as T-Note Yields Fall
-- [Nasdaq] Demand Concerns Knock Sugar Prices Lower
-- [Nasdaq] Adequate Supplies Pressure Cocoa Prices
-- [CoinDesk] The Ondo Finance succession crisis gets messier as Kathleen Allman’s daughter alleges ‘dementia’, alcoholism and reckless spending
-- [Nasdaq] Crude Prices Slip as Supply Fears Ease
-- [Nasdaq] Nat-Gas Prices Climb on Smaller-Than-Expected Storage Build
-- [Nasdaq] Coffee Prices Retreat as Global Supplies Improve
-- [Nasdaq] Are Options Traders Betting on a Big Move in Sierra Bancorp Stock?
-- [CNBC] As Fed raises rates, income investors can buy these bonds for solid yields and a portfolio cushion
-- [CNBC] Chase celebrates the Sapphire Reserve’s 10th anniversary with new credits and a 5.5 million-point grand prize
-- [MarketWatch] Pokémon has turned 30, and Target is set to cash in on the anniversary craze
-- [MarketWatch] Saudi Arabia is now pushing to export more oil through the Strait of Hormuz
-- [CNBC] Oil prices fall as Saudi Arabia reportedly offers more crude via Hormuz after pipeline attack
-- [MarketWatch] This is the only cybersecurity stock that can post big gains, according to one analyst
-- [CoinDesk] SEC opens door to tokenized U.S. stock trading. Here’s who could benefit
-- [OilPrice.com] Saudi Pipeline Outage Could Deepen the Global Fuel Crunch
-- [CNBC] Securitize jumps after regulators greenlight some tokenized U.S. stock trading
-- [CNBC] Stephen Curry says his Li-Ning signature shoe will debut early next year
-- [Mining.com] West Africa key to gold growth, Fortuna CEO says
-- [Mining.com] Newcore’s wide gold hit boosts Enchi plan in Ghana
-- [CoinDesk] UK signals end of 'light-touch' era with multi-agency raid on peer-to-peer crypto hubs
-- [Mining.com] Luca Mining adds 3rd Mexican property in $60M Agnico deal
-- [Mining.com] Agnico-backed Cartier lowers Cadillac spend in Quebec gold belt
-- [CNBC] A Chinese AI company just connected its model to Wall Street's leading data providers
-- [OilPrice.com] Russian Fuel Exports Rebound in August But Still Down 50% From Last Year
-- [Mining.com] MMG moves to ease EU concerns over $500M Anglo nickel deal
+- [Yahoo Finance] KCM awards $498m copper recovery plant contract to China’s NERIN
+- [Investing.com] Norway stocks lower at close of trade; Oslo OBX down 1.02%
+- [Investing.com] Edgewise Therapeutics options flow shows lopsided call activity
+- [Investing.com] Greece stocks lower at close of trade; Athens General Composite down 0.98%
+- [Investing.com] Lamb Weston options flow shows near-pure bearish positioning at $37.50 strike
+- [Yahoo Finance] Rocket Lab Slides 5% as Space Names Give Back Gains; AST SpaceMobile Drops 6%, Planet Labs Sinks 4%
+- [Investing.com] Redburn upgrades Southwest, stays bullish on Delta and United
+- [Yahoo Finance] EnBW and partners inaugurate 960MW He Dreiht offshore wind project
+- [Investing.com] Evolution AB options flow points to takeover speculation ahead of mandatory bid
+- [Yahoo Finance] CNBC Host Says Berkshire Should Buy Iconic Consumer Brand After Stock Falls 75%
+- [Nasdaq] Wheat Falling Lower on Friday Morning
+- [Yahoo Finance] Thermo Fisher Scientific (TMO) is Positioned for Resurgence
+- [Nasdaq] Cotton Weakness Extending to Friday AM Trade
+- [Nasdaq] Cattle Look to Friday, Following Thursday Pressure
+- [Nasdaq] Soybeans Falling on Friday Morning
+- [Nasdaq] Hogs Look to Round Out the Week
+- [CNBC] This semiconductor stock is in the dumps. BMO says it can bounce back
+- [Yahoo Finance] Should You Be Bullish on Tyler Technologies (TYL)?
+- [Nasdaq] Ex-Div Reminder for Alpine Total Dynamic Dividend Fund (AOD)
+- [Nasdaq] Berkley About To Put More Money In Your Pocket (WRB)
+- [Nasdaq] Ex-Div Reminder for Hamilton Lane (HLNE)
+- [Nasdaq] Ex-Div Reminder for Adamas Trust (ADAM)
+- [Nasdaq] Chiron Real Estate About To Put More Money In Your Pocket (XRN)
+- [Nasdaq] Reminder - Ferroglobe (GSM) Goes Ex-Dividend Soon
+- [Nasdaq] LAMR Ex-Dividend Reminder - 9/21/26
+- [CNBC] Anthropic quietly sets up biology lab as it ramps AI drug program: Reuters
+- [Yahoo Finance] What Makes Ryan Specialty Holdings (RYAN) an Attractive Opportunity?
+- [CNBC] U.S. crude oil rises as market assesses disruption from Saudi pipeline closure
+- [Yahoo Finance] Accenture (ACN) Positioned to Sustain Its Long-Term Competitive Position
+- [Yahoo Finance] The Biotech Surged 50% On Positive Data In March. Now, It's Almost Gone.
+- [Yahoo Finance] Here’s Why Aristotle International Equity Fund Exited Unilever (UL)
+- [Yahoo Finance] Magnum Ice Cream (MICC): Standalone Structure Enables Exclusive Focus on Frozen Desserts
+- [Yahoo Finance] U.S. Regulator Expands Crypto Trading To Online Platforms
+- [Yahoo Finance] Stock Market Falls On AI Fears, Hawkish Fed But Bounces Back: Weekly Review
+- [Yahoo Finance] Buffett Finally Steps Down As Berkshire Chairman At 96
+- [Yahoo Finance] These Are The 5 Best Stocks To Buy Or Watch Now
+- [MarketWatch] A sideways market and rising earnings are presenting a buying opportunity for this crucial sector
+- [CoinDesk] ECB President Christine Lagarde intervened to block Binance’s EU MiCA license: WSJ
+- [CNBC] AI stock swings could affect your 401(k). Here’s what retirement savers need to know
+- [CoinDesk] Zcash targets November upgrade to make private payments up to three times faster
+- [Mining.com] China Rare Earths eyes indirect stake in MP Materials
+- [CNBC] Putin targets Nestle's Russian business as Kremlin tightens grip on Western assets
+- [MarketWatch] Wall Street is betting Trump backs down on Iran — but what if the ‘TACO’ trade fails this time?
