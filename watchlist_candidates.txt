@@ -6,49 +6,41 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 18.09.2026 15:05
-43 of 80 news items unmatched this run
+Generated: 18.09.2026 16:49
+35 of 80 news items unmatched this run
 
-- [Yahoo Finance] KCM awards $498m copper recovery plant contract to China’s NERIN
-- [Investing.com] Norway stocks lower at close of trade; Oslo OBX down 1.02%
-- [Investing.com] Edgewise Therapeutics options flow shows lopsided call activity
-- [Investing.com] Greece stocks lower at close of trade; Athens General Composite down 0.98%
-- [Investing.com] Lamb Weston options flow shows near-pure bearish positioning at $37.50 strike
-- [Yahoo Finance] Rocket Lab Slides 5% as Space Names Give Back Gains; AST SpaceMobile Drops 6%, Planet Labs Sinks 4%
-- [Investing.com] Redburn upgrades Southwest, stays bullish on Delta and United
-- [Yahoo Finance] EnBW and partners inaugurate 960MW He Dreiht offshore wind project
-- [Investing.com] Evolution AB options flow points to takeover speculation ahead of mandatory bid
-- [Yahoo Finance] CNBC Host Says Berkshire Should Buy Iconic Consumer Brand After Stock Falls 75%
-- [Nasdaq] Wheat Falling Lower on Friday Morning
-- [Yahoo Finance] Thermo Fisher Scientific (TMO) is Positioned for Resurgence
-- [Nasdaq] Cotton Weakness Extending to Friday AM Trade
+- [Yahoo Finance] Using A Limit Order To Buy Occidental Petroleum At A Discount
+- [Investing.com] Domino’s Pizza options flow shows bullish calendar spreads at $460–$480 strikes
+- [Investing.com] Why is Corpay stock sliding today?
+- [Yahoo Finance] The CFTC Just Sent Its Crypto Rules to the White House. What’s in the Filing, and How Quickly Could It Move?
+- [Yahoo Finance] Can Hewlett Packard Enterprise Stock Keep Running On Orders It Cannot Ship?
+- [Yahoo Finance] Jim Cramer Says to Wait For Corning (GLW) to Fall Further
+- [Investing.com] Orion180 Insurance opens at $11.50 after $12 IPO pricing
+- [Nasdaq] Dollar Gains on Yen Weakness and Higher T-note Yields
+- [Yahoo Finance] Portfolio Fit: UCBG
+- [Investing.com] Virginia tightens data center restrictions amid political backlash
+- [Investing.com] FTSE 100 today: Stocks drop as Hormuz tanker hit, Aramco cuts Europe supply
+- [Investing.com] TSX top gainers and losers for the week ending Sept 18
 - [Nasdaq] Cattle Look to Friday, Following Thursday Pressure
-- [Nasdaq] Soybeans Falling on Friday Morning
+- [Nasdaq] Corn Losses Slipping to Friday Morning
 - [Nasdaq] Hogs Look to Round Out the Week
+- [Nasdaq] Friday 9/18 Insider Buying Report: TFC, KRMN
+- [Nasdaq] YieldBoost Vishay Intertechnology To 15% Using Options
+- [Investing.com] European equities cap 3rd-weekly fall as Saudi supply cuts stings
+- [CNBC] Wendy's franchisee files for Chapter 11 bankruptcy protection as burger chain struggles
+- [Investing.com] Warren Buffett steps down as Berkshire chairman, son Howard succeeds
+- [Yahoo Finance] Global AI Infrastructure Spending Will Hit $31.6 Trillion by 2050. This Is the Stock That Could Benefit the Most
+- [MarketWatch] These fast-growing ETFs aim for yields as high as 17.5%. But here’s the catch.
+- [Investing.com] Top Dutch Banks, According to Citi
+- [Nasdaq] Soybeans Falling on Friday Morning
+- [Nasdaq] Signs of Weak Demand Undercut Sugar Prices
+- [Nasdaq] Cocoa Prices Sink on Abundant Supplies
+- [Nasdaq] Coffee Prices Settle Lower as Supply Situation Improves
+- [Nasdaq] Cotton Weakness Extending to Friday AM Trade
+- [Yahoo Finance] Gold Stock Franco-Nevada Flashes Strength Amid Rate-Hike Woes
+- [CNBC] Sportsbooks remain king this football season, but upstarts are making a run for the money
+- [CoinDesk] CFTC sends crypto rules to White House to review as Congress stalls on Clarity Act
+- [CNBC] StubHub shares tick higher for third day in a row after Citi upgrade
+- [CoinDesk] Crypto tech provider Haruko hit by cyberattack affecting 15 clients, some funds lost
 - [CNBC] This semiconductor stock is in the dumps. BMO says it can bounce back
-- [Yahoo Finance] Should You Be Bullish on Tyler Technologies (TYL)?
-- [Nasdaq] Ex-Div Reminder for Alpine Total Dynamic Dividend Fund (AOD)
-- [Nasdaq] Berkley About To Put More Money In Your Pocket (WRB)
-- [Nasdaq] Ex-Div Reminder for Hamilton Lane (HLNE)
-- [Nasdaq] Ex-Div Reminder for Adamas Trust (ADAM)
-- [Nasdaq] Chiron Real Estate About To Put More Money In Your Pocket (XRN)
-- [Nasdaq] Reminder - Ferroglobe (GSM) Goes Ex-Dividend Soon
-- [Nasdaq] LAMR Ex-Dividend Reminder - 9/21/26
-- [CNBC] Anthropic quietly sets up biology lab as it ramps AI drug program: Reuters
-- [Yahoo Finance] What Makes Ryan Specialty Holdings (RYAN) an Attractive Opportunity?
-- [CNBC] U.S. crude oil rises as market assesses disruption from Saudi pipeline closure
-- [Yahoo Finance] Accenture (ACN) Positioned to Sustain Its Long-Term Competitive Position
-- [Yahoo Finance] The Biotech Surged 50% On Positive Data In March. Now, It's Almost Gone.
-- [Yahoo Finance] Here’s Why Aristotle International Equity Fund Exited Unilever (UL)
-- [Yahoo Finance] Magnum Ice Cream (MICC): Standalone Structure Enables Exclusive Focus on Frozen Desserts
-- [Yahoo Finance] U.S. Regulator Expands Crypto Trading To Online Platforms
-- [Yahoo Finance] Stock Market Falls On AI Fears, Hawkish Fed But Bounces Back: Weekly Review
-- [Yahoo Finance] Buffett Finally Steps Down As Berkshire Chairman At 96
-- [Yahoo Finance] These Are The 5 Best Stocks To Buy Or Watch Now
 - [MarketWatch] A sideways market and rising earnings are presenting a buying opportunity for this crucial sector
-- [CoinDesk] ECB President Christine Lagarde intervened to block Binance’s EU MiCA license: WSJ
-- [CNBC] AI stock swings could affect your 401(k). Here’s what retirement savers need to know
-- [CoinDesk] Zcash targets November upgrade to make private payments up to three times faster
-- [Mining.com] China Rare Earths eyes indirect stake in MP Materials
-- [CNBC] Putin targets Nestle's Russian business as Kremlin tightens grip on Western assets
-- [MarketWatch] Wall Street is betting Trump backs down on Iran — but what if the ‘TACO’ trade fails this time?
