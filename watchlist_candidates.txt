@@ -6,19 +6,22 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 18.09.2026 22:46
-40 of 80 news items unmatched this run
+Generated: 18.09.2026 23:30
+42 of 80 news items unmatched this run
 
+- [Investing.com] Paramount, states discuss CNN monitoring and film release commitment, sources say
+- [Mining.com] Aura Minerals secures $200M loan for Americas growth
+- [Investing.com] US, China discuss cutting tariffs on US LNG ahead of Xi visit
+- [Mining.com] Nigeria mining crackdown under fire after 37 die
 - [Investing.com] Anthropic, Accenture to invest $2 billion in AI model evaluation as safety concerns rise
 - [Investing.com] Top Airline Stocks to Watch, According to TD Cowen
+- [Nasdaq] Zillow Stock Near 52-Week Lows: Is It Time to Buy the Dip?
 - [Nasdaq] Coffee Prices Recover as Dollar Weakness Spurs Short Covering
-- [Investing.com] Stifel Analyst Names Top Pick in Drone Sector
-- [Investing.com] Why is Accenture stock surging today?
+- [Nasdaq] Dollar Erases Early Gains on Weak US Economic News
 - [CNBC] Anthropic selects Accenture as first embedded evaluator to help implement Amodei's slowdown proposal
 - [Nasdaq] Cocoa Prices Slump on Abundant Supplies
 - [Nasdaq] Cotton Losses Extend to Friday
 - [Mining.com] Copper mine supply risks first decline since 2017: Sprott
-- [MarketWatch] It’s almost impossible to sell a condo unit these days: ‘I feel trapped’
 - [CNBC] AI cloud provider Nscale files to go public
 - [Nasdaq] Crude Prices Retreat on Hopes Middle East Energy Exports to Recover
 - [Nasdaq] Nat-Gas Prices Rebound on Pre-Weekend Short Covering
@@ -28,17 +31,18 @@ Generated: 18.09.2026 22:46
 - [Nasdaq] Ally Financial Enters Oversold Territory
 - [Nasdaq] Arcos Dorados Holdings is Now Oversold (ARCO)
 - [Nasdaq] Banco Macro Becomes Oversold (BMA)
-- [Nasdaq] Sugar Prices Undercut by Demand Concerns
-- [Nasdaq] Dollar Gains on Yen Weakness and Higher T-note Yields
 - [CNBC] Amex launches high-yield savings account to complement business checking
 - [Mining.com] Gold is tariff-proof. Canada has $11 billion a year of it stuck in permitting
+- [Defense One] Cape Canaveral is building up its counter-drone defenses, Space Force says
 - [CNBC] What it will take for us to buy the dip in DuPont. Plus, profit-taking hits cyber stocks
-- [CNBC] Auto industry urges Trump to bar Chinese automakers in U.S. ahead of Xi visit
 - [CNBC] Tokenization is set to change stock trading. These stocks could get a boost
 - [CNBC] Wendy's franchisee files for Chapter 11 bankruptcy protection as burger chain struggles
 - [OilPrice.com] Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes
 - [OilPrice.com] Space-Based Solar Power Could Reach the Grid by 2028
+- [OilPrice.com] Macron Calls for Another Emergency Oil Release as Europe Loses Supply
 - [Mining.com] US backs Global Atomic’s Niger uranium mine with $414M loan
+- [CNBC] Sportsbooks remain king this football season, but upstarts are making a run for the money
+- [CoinDesk] CFTC sends crypto rules to White House to review as Congress stalls on Clarity Act
 - [CoinDesk] Crypto tech provider Haruko hit by cyberattack affecting 15 clients, some funds lost
 - [Mining.com] Aya logs high-grade, shallow silver in Morocco
 - [CoinDesk] ECB President Christine Lagarde intervened to block Binance’s EU MiCA license: WSJ
@@ -47,5 +51,3 @@ Generated: 18.09.2026 22:46
 - [Mining.com] China Rare Earth eyes indirect stake in MP Materials
 - [OilPrice.com] U.S. Oil, Gas Rig Count Creeps Up With Strong Prices
 - [CNBC] Putin targets Nestle's Russian business as Kremlin tightens grip on Western assets
-- [Retail Dive] Longtime Christmas decor retailer files for bankruptcy
-- [OilPrice.com] TotalEnergies and BlackRock Sign $1.8B Deal for African Oil and Gas Assets
