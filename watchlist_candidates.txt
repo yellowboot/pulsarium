@@ -6,17 +6,18 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 22.09.2026 23:12
-38 of 80 news items unmatched this run
+Generated: 22.09.2026 23:43
+40 of 80 news items unmatched this run
 
 - [Nasdaq] Dollar Supported by Hawkish Fed Comments
-- [Nasdaq] Coffee Prices Fall as Global Supplies Grow
-- [Nasdaq] Wheat Facing Tuesday Pressure
-- [Nasdaq] Soybean Bulls Pushing Higher at Midday
+- [Nasdaq] Sugar Prices Finish Higher as Rain Slows Brazil’s Sugar Harvest
 - [Nasdaq] Cotton Falling Back on Tuesday
 - [Nasdaq] Corn Slipping Back on Tuesday
+- [Nasdaq] Keybanc Upgrades Plexus to Overweight from Sector Weight
+- [Nasdaq] Soybean Bulls Pushing Higher at Midday
+- [Nasdaq] Coffee Prices Fall as Global Supplies Grow
+- [Nasdaq] Wheat Facing Tuesday Pressure
 - [Investing.com] Live Oak Acquisition Corp. VI prices $200M IPO on Nasdaq
-- [Nasdaq] Sugar Prices Finish Higher as Rain Slows Brazil’s Sugar Harvest
 - [Nasdaq] Wheat Falling Back on Tuesday
 - [Investing.com] Apollo private credit fund redemption requests ease in third quarter
 - [Nasdaq] Leerink Partners Initiates Coverage of Obsidian Therapeutics with Outperform Rating
@@ -25,6 +26,7 @@ Generated: 22.09.2026 23:12
 - [MarketWatch] The Nasdaq’s rapid rise to a record is sending a message to investors: Don’t wait for a pullback to buy
 - [Nasdaq] Nat-Gas Prices Jump as US Weather Forecasts Turn Hotter
 - [Nasdaq] Cocoa Prices Rebound on Ivory Coast Weather Concerns
+- [MarketWatch] Want to bet on risky, high-beta stocks? Why you should wait for mid-October.
 - [CNBC] Royal Caribbean nears $3 billion deal to take 50% equity stake in Sandals
 - [CNBC] Cisco stock sinks 5% after Piper Sandler cuts price target on growth concerns
 - [Mining.com] Nth Cycle signs 10-year, $1 billion offtake deal with Glencore
@@ -32,6 +34,7 @@ Generated: 22.09.2026 23:12
 - [MarketWatch] Jet fuel is following diesel’s price jump as the Hormuz supply shock hits the skies
 - [CNBC] Anthropic and OpenAI roll out cheaper models in first release since call for slowdown
 - [CNBC] Climate risk is reshaping muni credit — and income opportunities
+- [Mining.com] Mining companies built ‘mini armies’ in risky regions: expert
 - [CNBC] Peloton is revamping its treadmills with new features in the next phase of its turnaround
 - [Mining.com] Blue Moon reports 7 metre tungsten interval, gains access to public land
 - [Mining.com] Barrick, Equinox among TD Cowen’s best stock picks
@@ -45,5 +48,4 @@ Generated: 22.09.2026 23:12
 - [OilPrice.com] US Gasoline, Distillate Inventories Continue to Fall as Crude Stocks Hold
 - [Mining.com] Value rises to $1.45B for Bravo’s Luanga PGM project in Brazil
 - [Mining.com] Selkirk Copper’s $494M value for Minto nearly triple its costs
-- [CoinDesk] Next for the U.S. SEC: Agency's chief crypto counsel illuminates path for custody
 - [OilPrice.com] Norway’s Liquids Output Rebounds by Nearly 100,000 Bpd—but Still Trails 2025
