@@ -6,35 +6,28 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 22.09.2026 21:51
-45 of 80 news items unmatched this run
+Generated: 22.09.2026 23:12
+38 of 80 news items unmatched this run
 
-- [MarketWatch] The Nasdaq’s rapid rise to a record is sending a message to investors: Don’t wait for a pullback to buy
-- [Nasdaq] Cocoa Prices Rebound on Ivory Coast Weather Concerns
+- [Nasdaq] Dollar Supported by Hawkish Fed Comments
 - [Nasdaq] Coffee Prices Fall as Global Supplies Grow
 - [Nasdaq] Wheat Facing Tuesday Pressure
-- [Nasdaq] Corn Slipping Back on Tuesday
 - [Nasdaq] Soybean Bulls Pushing Higher at Midday
-- [Investing.com] Smaller packs, more protein: AB InBev to adapt drinks to shifting tastes
-- [Investing.com] Mexico stocks higher at close of trade; S&P/BMV IPC up 1.45%
-- [Investing.com] Apollo limits redemptions as withdrawal requests hit 14.7% - Bloomberg
-- [CNBC] Royal Caribbean nears $3 billion deal to take 50% equity stake in Sandals
-- [Investing.com] Colombia stocks higher at close of trade; COLCAP up 0.90%
-- [Investing.com] Apollo private credit fund redemption requests ease in third quarter
-- [Nasdaq] Dollar Supported by Hawkish Fed Comments
-- [Nasdaq] Nat-Gas Prices Jump as US Weather Forecasts Turn Hotter
-- [Investing.com] Russia stocks higher at close of trade; MOEX Russia Index up 1.78%
-- [Nasdaq] Sugar Prices Finish Higher as Rain Slows Brazil’s Sugar Harvest
-- [Investing.com] Talos Energy stock rises on $420M Gulf of America asset deal
-- [Investing.com] Why is KB Home stock sliding today?
-- [Investing.com] Why is Voyager Technologies stock sliding today?
-- [Nasdaq] Dollar Climbs on Hawkish Fed President Collins
-- [CNBC] Cisco stock sinks 5% after Piper Sandler cuts price target on growth concerns
-- [Nasdaq] Diplomatic Hopes in the Middle East Knock Crude Prices Lower
-- [Nasdaq] Crude Oil Prices Pressured by Diplomatic Hopes in the Middle East
-- [Mining.com] Nth Cycle signs 10-year, $1 billion offtake deal with Glencore
 - [Nasdaq] Cotton Falling Back on Tuesday
+- [Nasdaq] Corn Slipping Back on Tuesday
+- [Investing.com] Live Oak Acquisition Corp. VI prices $200M IPO on Nasdaq
+- [Nasdaq] Sugar Prices Finish Higher as Rain Slows Brazil’s Sugar Harvest
 - [Nasdaq] Wheat Falling Back on Tuesday
+- [Investing.com] Apollo private credit fund redemption requests ease in third quarter
+- [Nasdaq] Leerink Partners Initiates Coverage of Obsidian Therapeutics with Outperform Rating
+- [Investing.com] Booz Allen Hamilton wins $85m Air Force research contract
+- [Investing.com] General Dynamics wins $49.3m Army contract modification
+- [MarketWatch] The Nasdaq’s rapid rise to a record is sending a message to investors: Don’t wait for a pullback to buy
+- [Nasdaq] Nat-Gas Prices Jump as US Weather Forecasts Turn Hotter
+- [Nasdaq] Cocoa Prices Rebound on Ivory Coast Weather Concerns
+- [CNBC] Royal Caribbean nears $3 billion deal to take 50% equity stake in Sandals
+- [CNBC] Cisco stock sinks 5% after Piper Sandler cuts price target on growth concerns
+- [Mining.com] Nth Cycle signs 10-year, $1 billion offtake deal with Glencore
 - [Mining.com] Military Metals gets exploration grant for West Gore antimony-gold project in Nova Scotia
 - [MarketWatch] Jet fuel is following diesel’s price jump as the Hormuz supply shock hits the skies
 - [CNBC] Anthropic and OpenAI roll out cheaper models in first release since call for slowdown
@@ -46,6 +39,7 @@ Generated: 22.09.2026 21:51
 - [CNBC] No new stock highs, no problem: Options traders bet they're coming in these names
 - [CNBC] Autonomous trucking company Aurora looks to accelerate toward profitability
 - [CoinDesk] Canada's 'Big Six' banks to launch interbank tokenized deposit initiative
+- [OilPrice.com] Is China’s Secret Power Advantage About To Trigger An 89% Crash In U.S. AI Stock
 - [Mining.com] Meridian’s Cabaçal value doubles on higher prices
 - [Mining.com] Vale takes 30% of Ligga iron ore mine in $190M deal
 - [OilPrice.com] US Gasoline, Distillate Inventories Continue to Fall as Crude Stocks Hold
@@ -53,4 +47,3 @@ Generated: 22.09.2026 21:51
 - [Mining.com] Selkirk Copper’s $494M value for Minto nearly triple its costs
 - [CoinDesk] Next for the U.S. SEC: Agency's chief crypto counsel illuminates path for custody
 - [OilPrice.com] Norway’s Liquids Output Rebounds by Nearly 100,000 Bpd—but Still Trails 2025
-- [CoinDesk] European central banks push to expand stablecoin yield ban to crypto lending and staking
