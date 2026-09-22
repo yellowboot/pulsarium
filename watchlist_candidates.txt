@@ -6,29 +6,34 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 22.09.2026 19:34
-34 of 80 news items unmatched this run
+Generated: 22.09.2026 20:22
+39 of 80 news items unmatched this run
 
-- [CNBC] Climate risk is reshaping muni credit — and income opportunities
-- [CNBC] Cisco stock sinks 5% after Piper Sandler cuts price target on growth concerns
-- [Nasdaq] Cattle Facing Turnaround Tuesday Pressure
-- [Nasdaq] Hogs Posting Tuesday Gains
+- [Investing.com] IonQ stock jumps 7% on quantum error correction breakthrough
+- [Investing.com] Brightline nears bankruptcy filing to restructure debt - Bloomberg
+- [Investing.com] Sixth Street renews bid for Brighthouse Financial - Bloomberg
+- [Investing.com] Fitch upgrades ONEOK rating to BBB+ on Apollo investment
+- [Mining.com] Military Metals gets exploration grant for West Gore antimony-gold project in Nova Scotia
+- [Investing.com] Airtel Money plans London IPO filing as early as Wednesday
+- [MarketWatch] Jet fuel is following diesel’s price jump as the Hormuz supply shock hits the skies
+- [Investing.com] Frontier Nuclear: a uranium micro-cap speculation on royalty catalysts
+- [Nasdaq] IAT Makes Notable Cross Below Critical Moving Average
+- [CNBC] Royal Caribbean nears $3 billion deal to take 50% equity stake in Sandals
+- [Nasdaq] ONE Gas, Inc. Stock Getting Very Oversold
 - [Nasdaq] Soybean Bulls Pushing Higher at Midday
-- [Nasdaq] Sugar Prices Recover as Rain Slows Brazil’s Sugar Harvest
 - [Nasdaq] Crude Oil Prices Pressured by Diplomatic Hopes in the Middle East
-- [Nasdaq] Dynex Capital Inc's 6.90% Series C Fix/Float Cumulative Redeemable Preferred Stock Crosses Above 9.5% Yield Territory
-- [Nasdaq] Chimera Investment Corp's 7.75% Series C Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock Crosses Above 10% Yield Territory
+- [CNBC] Anthropic and OpenAI roll out cheaper models in first release since call for slowdown
+- [Nasdaq] Jefferies Initiates Coverage of W. P. Carey with Buy
 - [Nasdaq] Cotton Falling Back on Tuesday
 - [Nasdaq] Corn Slipping Back on Tuesday
+- [Nasdaq] Soybeans Fading Back After Monday’s Rally
+- [CNBC] Climate risk is reshaping muni credit — and income opportunities
 - [Nasdaq] Wheat Facing Tuesday Pressure
-- [Nasdaq] Ample Global Coffee Supplies Weigh on Prices
-- [Investing.com] Materials lead TSX rally as metals, infrastructure stocks surge
-- [CNBC] Peloton is revamping its treadmills with new features in the next phase of its turnaround
-- [Investing.com] Why is Twilio stock surging today?
-- [Investing.com] Why is LPL Financial stock sliding today?
 - [Nasdaq] Ivory Coast Crop Concerns Spur Short Covering in Cocoa
-- [Investing.com] Why is Expedia stock sliding today?
-- [CNBC] Anthropic and OpenAI roll out cheaper models in first release since call for slowdown
+- [Nasdaq] Wheat Falling Back on Tuesday
+- [Nasdaq] Notable Tuesday Option Activity: AZO, GLXY, FSLY
+- [CNBC] Cisco stock sinks 5% after Piper Sandler cuts price target on growth concerns
+- [CNBC] Peloton is revamping its treadmills with new features in the next phase of its turnaround
 - [Mining.com] Copper price closes in on new record as Shanghai, London warehouses empty out
 - [CNBC] No new stock highs, no problem: Options traders bet they're coming in these names
 - [CNBC] Autonomous trucking company Aurora looks to accelerate toward profitability
@@ -37,9 +42,9 @@ Generated: 22.09.2026 19:34
 - [CNBC] Circle lands $100 million from Binance to ramp up global USDC expansion
 - [Mining.com] Vale takes 30% of Ligga iron ore mine in $190M deal
 - [Mining.com] Value rises to $1.45B for Bravo’s Luanga PGM project in Brazil
+- [OilPrice.com] Norway’s Liquids Output Rebounds by Nearly 100,000 Bpd—but Still Trails 2025
+- [CNBC] Flight disruptions ease at Newark, Philadelphia airports following equipment outage
 - [CNBC] Buy the dip on GE Healthcare, says Needham
 - [Mining.com] Mining veterans bet $410M on Cape Town Formula One
-- [CNBC] Novo defends diversification push as CEO eyes deals beyond obesity
-- [CNBC] Kalshi asks CFTC to allow margin trading on its platform, letting users buy with borrowed funds
-- [Mining.com] Mali setbacks force Resolute Mining to cut Syama outlook
-- [CoinDesk] Why Payward-backed Reap is betting on non-USD stablecoins for 24/7 cross-border FX settlement
+- [Yahoo Finance] Kalshi asks CFTC to allow margin trading on prediction markets
+- [OilPrice.com] India’s Russian Oil Imports Slide as Refiners Hunt for Alternatives
