@@ -6,51 +6,42 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 22.09.2026 15:36
-45 of 80 news items unmatched this run
+Generated: 22.09.2026 17:26
+36 of 80 news items unmatched this run
 
-- [CNBC] DraftKings CEO doesn’t know why his stock loves bad prediction market news. Wall Street says it’s rational
-- [Yahoo Finance] Inside an award-winning Wendy’s operator’s bankruptcy crisis
-- [Nasdaq] Wheat Falling Back on Tuesday
-- [CNBC] Oil little changed after Trump tells UN that Iran will make a deal after midterm elections
-- [Yahoo Finance] Why Teekay Tankers Stock Dropped Today
-- [Yahoo Finance] Maximus’ (MMS) Tech Capabilities and Beaten-Down Valuation Point to M&A Upside
-- [CoinDesk] Next for the U.S. SEC: Agency's chief crypto counsel illuminates path for custody
-- [Nasdaq] Soybeans Fading Back After Monday’s Rally
-- [Yahoo Finance] Could This Overlooked Vanguard ETF Make You a Millionaire? Here's What History Says
-- [Yahoo Finance] AIG names Sierra Signorelli CEO for Americas and global insurance
-- [Yahoo Finance] What Makes CRA International (CRAI) an Investment Bet?
-- [Nasdaq] Improved Crude Flows Through the Strait of Hormuz Sink Oil Prices
-- [Yahoo Finance] Saudi Arabia restarts East-West oil pipeline, sources say
-- [Investing.com] Morocco stocks higher at close of trade; Moroccan All Shares up 0.47%
-- [Nasdaq] Corn Starting Tuesday with Turnaround Losses
-- [Yahoo Finance] ICON Public Limited Company’s (ICLR) Shrinking Moat Warranted an Early Departure
-- [Investing.com] Data center firm Accelevation targets up to $5.4 billion valuation in US IPO
-- [Nasdaq] Hartford Multifactor Developed Markets (ex-US) ETF Experiences Big Outflow
-- [Nasdaq] Notable ETF Outflow Detected - XLI, GE, UNP, ETN
-- [Nasdaq] WisdomTree U.S. Value Fund Experiences Big Outflow
-- [Nasdaq] XLU, SO, CEG, AEP: ETF Outflow Alert
-- [Nasdaq] Notable ETF Outflow Detected - XBI, TWST, HALO, NTRA
-- [Investing.com] Constellium may halt EU recycling expansion over scrap shortage
-- [CNBC] Autonomous trucking company Aurora looks to accelerate toward profitability
-- [Investing.com] Financial sector stocks fall as traders rotate into tech
-- [Yahoo Finance] Silver Beech’s Investment Thesis for Arthur J. Gallagher (AJG)
-- [Yahoo Finance] This Fund Trimmed Matson (MATX) on Strength
-- [Yahoo Finance] Continued AI Disruption Concerns Weigh on CCC Intelligent Solutions Holdings (CCC)
-- [Yahoo Finance] Resilient Cash Flows and Organic Drivers Position McGrath RentCorp (MGRC) for Long-Term Growth
-- [Yahoo Finance] Durable Business Strengths Underpin Vontier Corp’s (VNT) Long-Term Growth Outlook
-- [CNBC] Peloton is revamping its treadmills with new features in the next phase of its turnaround
-- [Yahoo Finance] How SoFi Is Turning Its Consumer App Into A Stablecoin Proving Ground
-- [Yahoo Finance] GameStop stock jumps as CEO Ryan Cohen buys $26 million in shares
-- [Yahoo Finance] This Fund Trimmed Murphy USA (MUSA) Amid Fuel Margin Strengths
-- [Yahoo Finance] Strong Results Lifted CTS Corporation (CTS) in Q2
-- [Yahoo Finance] Subscription Pivot and SCBA Replacement Cycle Set to Drive MSA Safety’s (MSA) Margin Expansion
-- [Yahoo Finance] Benchmark diesel sets new record; futures signaling relief?
-- [Yahoo Finance] Stock Market Today: Dow Slips, Oil Stocks Fall On U.S.-Iran Hopes; Homebuilders, Retailers Shine (Live Coverage)
-- [Yahoo Finance] AI infrastructure Boom Fuels Texas Instruments’ (TXN) Rally
-- [CNBC] Buy the dip on GE Healthcare, says Needham
-- [Yahoo Finance] Sonida Senior Living (SNDA) Poised for Strong Performance Over the Next Several Years
-- [Yahoo Finance] Minot Light’s Bullish Stance on Rockwell Medical (RMTI)
-- [CNBC] Iran reportedly says it can reopen Strait of Hormuz within 7 days if U.S. eases military pressure
-- [Mining.com] Mining veterans bet $410M on Cape Town Formula One
 - [CNBC] Circle lands $100 million from Binance to ramp up global USDC expansion
+- [Yahoo Finance] Cisco Sinks 6% While the Tech Sector Rises; Arista and Ciena Hold Flat
+- [Yahoo Finance] Silver Made America’s Critical Minerals List. This ETF Is the Easiest Way In
+- [Investing.com] AnaptysBio earnings analysis: questions answered and next catalysts
+- [Yahoo Finance] AutoZone Climbs 6% as Profit Beat Offsets Revenue Miss; Advance Auto Parts Rises 6%, O’Reilly Automotive Gains 4%
+- [Yahoo Finance] DraftKings Sees Strong NFL Start, Prediction Markets Surge as $1B EBITDA Target Holds
+- [Investing.com] Top Cyber Stocks as AI Safety Concerns Drive Security Demand
+- [Investing.com] AI infrastructure firm Accelevation targets up to $5.4 billion valuation in US IPO
+- [Investing.com] Anthropic unveils cheaper, faster Claude Opus 5.5 model as AI race accelerates
+- [Nasdaq] Wheat Bulls Post Monday Gains
+- [Yahoo Finance] Rocket Lab Stock Breaks Above Key Trendline
+- [Investing.com] AutoZone earnings analysis: questions answered and next catalysts
+- [Nasdaq] Improved Crude Flows Through the Strait of Hormuz Sink Oil Prices
+- [Investing.com] MillerKnoll earnings analysis: questions answered and next catalysts
+- [Yahoo Finance] MillerKnoll, Inc. Q1 2027 Earnings Call Summary
+- [CNBC] Autonomous trucking company Aurora looks to accelerate toward profitability
+- [Nasdaq] Dollar Climbs on Hawkish Fed President Collins
+- [Nasdaq] Wheat Falling Back on Tuesday
+- [Nasdaq] Soybeans Rally on Monday Ahead of US/China Meeting This Week
+- [Yahoo Finance] Why RPC (RES) Was a Q2 Detractor for Gabelli Small Cap Growth Fund
+- [Investing.com] Anthropic unveils Claude Opus 5.5
+- [Yahoo Finance] Why Dana (DAN) Was a Q2 Detractor for Gabelli Small Cap Growth Fund
+- [Yahoo Finance] Why Graco (GGG) Was a Q2 Detractor for Gabelli Small Cap Growth Fund
+- [Yahoo Finance] Why Myers Industries (MYE) Was a Top Performer for Gabelli in Q2
+- [Yahoo Finance] Why Crane Co. (CR) Was Among Gabelli’s Top Q2 Performers
+- [Yahoo Finance] Why Gorman-Rupp Co. (GRC) Was a Top Performer for Gabelli in Q2
+- [Nasdaq] Cocoa Prices Supported by Forecasts for Dry Weather in the Ivory Coast
+- [CNBC] Oil little changed after Trump tells UN that Iran will make a deal after midterm elections
+- [Nasdaq] Needham Initiates Coverage of Butterfly Network with Buy Rating
+- [Nasdaq] Cotton Rallies on Monday Ahead of Trump/Xi Meeting
+- [Mining.com] Vale takes 30% of Ligga iron ore mine in $190M deal
+- [Nasdaq] Soybeans Fading Back After Monday’s Rally
+- [Nasdaq] Coffee Prices Retreat as Global Supply Situation Improves
+- [Yahoo Finance] Saudi Pipeline Restart Fails to End Oil Market Tightness
+- [Nasdaq] Corn Bulls Flock Back in on Monday as Export Shipments Remain Strong
+- [MarketWatch] Tax-free bond yields are in a sweet spot. Get in before it’s too late.
