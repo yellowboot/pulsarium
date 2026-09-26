@@ -134,8 +134,7 @@
   .main-nav { display: flex; align-items: center; gap: 6px; }
   .navlink { height: 44px; display: inline-flex; align-items: center; padding: 0 12px; color: var(--text-mid); font-size: 14px; font-weight: 500; transition: color 0.2s; }
   .navlink:hover { color: #ffffff; }
-  .main-nav .btn { height: 44px; padding: 0 18px; font-size: 14px; }
-  .main-nav .btn-ghost { margin-left: 10px; }
+  .main-nav .btn { height: 44px; padding: 0 18px; font-size: 14px; margin-left: 10px; }
 
   /* ---------- Buttons ---------- */
   .btn {
@@ -151,6 +150,8 @@
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px var(--accent), 0 0 42px rgba(0,240,255,0.7); }
   .btn-ghost { color: var(--text); background: rgba(10,18,40,0.55); box-shadow: inset 0 0 0 1px rgba(120,220,255,0.28); }
   .btn-ghost:hover { color: #ffffff; transform: translateY(-2px); box-shadow: inset 0 0 0 1px var(--accent), 0 0 22px rgba(0,240,255,0.25); }
+  /* placeholder until public sign-ups open — not a link */
+  .btn-soon { color: var(--text-low); background: transparent; border: 1px dashed rgba(120,220,255,0.28); cursor: default; }
 
   /* ---------- Hero ---------- */
   .hero {
@@ -270,7 +271,6 @@
     .later { grid-template-columns: 1fr; gap: 14px; }
   }
   @media (max-width: 560px) {
-    .main-nav .btn-ghost { display: none; }
     .site-header .wordmark { font-size: 15px; }
     .hero-visual { height: 280px; }
     .pulsar { transform: scale(0.6); }
@@ -312,8 +312,7 @@
         <a class="navlink" href="#cabinet">Personal cabinet</a>
         <a class="navlink" href="#security">Security</a>
         <a class="navlink" href="https://app.pulsarium.finance/?legal=faq">FAQ</a>
-        <a class="btn btn-ghost" href="https://app.pulsarium.finance/">Sign in</a>
-        <a class="btn btn-primary" href="https://app.pulsarium.finance/">Sign up free</a>
+        <span class="btn btn-soon" aria-disabled="true">Sign in · soon</span>
       </nav>
     </header>
 
@@ -328,7 +327,7 @@
               Open the news dashboard
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a class="btn btn-ghost" href="https://app.pulsarium.finance/">Sign up free</a>
+            <span class="btn btn-soon" aria-disabled="true">Sign-ups open soon</span>
           </div>
           <span class="hero-note mono">NEWS · PORTFOLIOS · WATCHLISTS · ALERTS</span>
         </div>
@@ -404,10 +403,7 @@
           <div class="chips" aria-label="Supported currencies">
             <span class="chipx">EUR</span><span class="chipx">USD</span><span class="chipx">GBP</span><span class="chipx">CHF</span><span class="chipx">JPY</span><span class="chipx">+2</span>
           </div>
-          <a class="btn btn-primary" href="https://app.pulsarium.finance/">
-            Sign up free
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          <span class="btn btn-soon" aria-disabled="true">Sign-ups open soon</span>
         </article>
       </section>
 
