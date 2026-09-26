@@ -131,6 +131,11 @@
     animation: floor 3.5s linear infinite;
   }
   @keyframes floor { to { background-position: 0 64px; } }
+  /* fine scanlines over the whole page (static, pointer-transparent) */
+  .bg-scan {
+    position: fixed; inset: 0; pointer-events: none; z-index: 50;
+    background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.018) 0 1px, transparent 1px 3px);
+  }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; }
@@ -609,14 +614,6 @@
     font-weight: 600;
     box-shadow: 0 0 14px rgba(0, 240, 255, 0.3);
   }
-  /* Magenta is reserved for "importance / attention". */
-  .chip.active-importance {
-    background: var(--magenta);
-    color: #1a0014;
-    border-color: var(--magenta);
-    font-weight: 600;
-    box-shadow: 0 0 16px rgba(255, 43, 214, 0.5);
-  }
 
   /* ---------- News grid ---------- */
   .news-grid {
@@ -698,6 +695,23 @@
     88%  { opacity: 1; }
     100% { top: 100%; opacity: 0; }
   }
+  /* Macro cards: a large, dim wireframe globe tucked into the top-right corner */
+  .card-img-placeholder .ph-globe {
+    position: absolute;
+    right: -10px;
+    top: -6px;
+    width: 160px;
+    height: 160px;
+    opacity: 0.8;
+  }
+  .ph-globe .globe { transform-box: fill-box; transform-origin: center; animation: spin 18s linear infinite; }
+  /* Sparkline comet: a short white streak running along the line */
+  .ph-comet {
+    stroke-dasharray: 36 600;
+    stroke-dashoffset: 636;
+    animation: comet 3.4s linear infinite;
+  }
+  @keyframes comet { to { stroke-dashoffset: 0; } }
   .card-img-placeholder .ph-source {
     position: relative;
     z-index: 2;
@@ -804,8 +818,8 @@
     font-weight: 700;
     padding: 2px 8px;
     border-radius: 8px;
-    background: rgba(0,240,255,0.10);
-    border: 1px solid rgba(0,240,255,0.25);
+    background: rgba(0,240,255,0.12);
+    box-shadow: inset 0 0 0 1px rgba(0,240,255,0.25);
     color: var(--gold-1);
     letter-spacing: 0.03em;
   }
@@ -819,16 +833,14 @@
   .sent-negative { background: var(--neg-bg); color: var(--neg); }
   .sent-neutral  { background: var(--neu-bg); color: var(--neu); }
   .context-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
     font-size: 11px;
     font-weight: 600;
+    font-style: italic;
     padding: 2px 9px;
     border-radius: 8px;
-    background: rgba(127,168,232,0.10);
-    border: 1px solid rgba(127,168,232,0.35);
-    color: var(--globe-line);
+    background: transparent;
+    border: 1px dashed rgba(127,168,232,0.5);
+    color: var(--text-mid);
   }
 
   .card-link {
@@ -875,6 +887,18 @@
     color: var(--text-low);
     font-size: 12.5px;
   }
+  .footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px 18px;
+    margin-top: 14px;
+    font-size: 12px;
+  }
+  .footer-legal a { color: var(--text-low); transition: color .2s, text-shadow .2s; }
+  .footer-legal a:hover { color: #ffffff; text-shadow: 0 0 10px var(--gold-1); }
+  .footer-legal a.footer-faq { color: var(--gold-1); font-weight: 600; font-size: 13px; }
 </style>
 </head>
 <body>
@@ -883,6 +907,7 @@
 <div class="bg-layer bg-stars" aria-hidden="true"></div>
 <div class="bg-layer bg-stars bg-stars-2" aria-hidden="true"></div>
 <div class="bg-floor" aria-hidden="true"></div>
+<div class="bg-scan" aria-hidden="true"></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -893,24 +918,33 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <!-- comet glow: white core, halo in the sentiment color -->
-    <filter id="comet-glow-positive" x="-300%" y="-300%" width="700%" height="700%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="3.5" result="blur"/>
-      <feFlood flood-color="var(--pos)"/>
-      <feComposite operator="in" in2="blur" result="halo"/>
-      <feMerge><feMergeNode in="halo"/><feMergeNode in="halo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <!-- comet glow: white core, two-step halo in the sentiment color.
+         Fixed user-space region (the card's 300x160 viewBox plus margin) so
+         the filter buffer stays small even though the streak's path spans
+         the whole card. -->
+    <filter id="comet-glow-positive" filterUnits="userSpaceOnUse" x="-20" y="-20" width="340" height="200">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="b1"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="b2"/>
+      <feFlood flood-color="var(--pos)" result="c"/>
+      <feComposite in="c" in2="b1" operator="in" result="h1"/>
+      <feComposite in="c" in2="b2" operator="in" result="h2"/>
+      <feMerge><feMergeNode in="h2"/><feMergeNode in="h2"/><feMergeNode in="h1"/><feMergeNode in="h1"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="comet-glow-negative" x="-300%" y="-300%" width="700%" height="700%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="3.5" result="blur"/>
-      <feFlood flood-color="var(--neg)"/>
-      <feComposite operator="in" in2="blur" result="halo"/>
-      <feMerge><feMergeNode in="halo"/><feMergeNode in="halo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="comet-glow-negative" filterUnits="userSpaceOnUse" x="-20" y="-20" width="340" height="200">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="b1"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="b2"/>
+      <feFlood flood-color="var(--neg)" result="c"/>
+      <feComposite in="c" in2="b1" operator="in" result="h1"/>
+      <feComposite in="c" in2="b2" operator="in" result="h2"/>
+      <feMerge><feMergeNode in="h2"/><feMergeNode in="h2"/><feMergeNode in="h1"/><feMergeNode in="h1"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="comet-glow-neutral" x="-300%" y="-300%" width="700%" height="700%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="3.5" result="blur"/>
-      <feFlood flood-color="var(--neu)"/>
-      <feComposite operator="in" in2="blur" result="halo"/>
-      <feMerge><feMergeNode in="halo"/><feMergeNode in="halo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="comet-glow-neutral" filterUnits="userSpaceOnUse" x="-20" y="-20" width="340" height="200">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="b1"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="b2"/>
+      <feFlood flood-color="var(--neu)" result="c"/>
+      <feComposite in="c" in2="b1" operator="in" result="h1"/>
+      <feComposite in="c" in2="b2" operator="in" result="h2"/>
+      <feMerge><feMergeNode in="h2"/><feMergeNode in="h2"/><feMergeNode in="h1"/><feMergeNode in="h1"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <linearGradient id="fill-positive" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="var(--pos)" stop-opacity="0.32"/>
@@ -919,10 +953,6 @@
     <linearGradient id="fill-negative" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="var(--neg)" stop-opacity="0.32"/>
       <stop offset="100%" stop-color="var(--neg)" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="fill-neutral" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="var(--neu)" stop-opacity="0.26"/>
-      <stop offset="100%" stop-color="var(--neu)" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="fill-vix-hot" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="var(--vix-hot)" stop-opacity="0.32"/>
@@ -1023,7 +1053,17 @@
   <p>Then refresh the page (F5).</p>
 </div>
 
-<footer>Sources: Yahoo Finance · MarketWatch · Investing.com · CNBC · Nasdaq</footer>
+<footer>
+  <div>Sources: Yahoo Finance · MarketWatch · Investing.com · CNBC · Nasdaq</div>
+  <nav class="footer-legal" aria-label="Legal">
+    <a class="footer-faq" href="https://app.pulsarium.finance/?legal=faq">FAQ</a>
+    <a href="https://app.pulsarium.finance/?legal=disclaimer">Financial notice</a>
+    <a href="https://app.pulsarium.finance/?legal=imprint">Imprint</a>
+    <a href="https://app.pulsarium.finance/?legal=privacy">Privacy</a>
+    <a href="https://app.pulsarium.finance/?legal=terms">Terms</a>
+    <span>Market data may be delayed.</span>
+  </nav>
+</footer>
 
 <script src="../news_data.js" onerror="window.__NO_DATA_FILE__ = true"></script>
 <script>
@@ -1195,7 +1235,7 @@
     sortToggleEl.appendChild(dateBtn);
 
     const impBtn = document.createElement('button');
-    impBtn.className = 'chip' + (sortMode === 'importance' ? ' active-importance' : '');
+    impBtn.className = 'chip' + (sortMode === 'importance' ? ' active' : '');
     impBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 4 14 11 14 10 22 20 9 13 9 13 2"/></svg>Most important first';
     impBtn.onclick = () => { sortMode = 'importance'; renderSortToggle(); renderGrid(); };
     sortToggleEl.appendChild(impBtn);
@@ -1252,74 +1292,20 @@
   const SPARK_COLOR_VAR = { positive: '--pos', negative: '--neg', neutral: '--neu' };
 
   function buildMacroPlaceholder(source) {
-    // Five "meridians" animate their rx from almost a line (2) to a full
-    // circle (54) and back, phase-shifted — this creates the illusion of
-    // a rotating globe, no 3D magic involved, pure SVG SMIL.
-    const meridianBegins = ['0s', '-1.8s', '-3.6s', '-5.4s', '-7.2s'];
-    const meridians = meridianBegins.map(begin => `
-          <ellipse rx="2" ry="54" fill="none" stroke="var(--globe-bright)" stroke-width="1.3" opacity="0.55" filter="url(#ph-glow)">
-            <animate attributeName="rx" values="2;54;2" dur="9s" repeatCount="indefinite" begin="${begin}"/>
-          </ellipse>`).join('');
-
-    // Latitudes: equator + two parallels each to the north and south —
-    // same count (5) as the meridians, for a symmetric globe "grid".
-    // Ellipses get narrower toward the poles; rx is derived from the
-    // sphere's radius via the Pythagorean theorem.
-    const latitudes = [
-      { cy: 0,   ry: 15 },
-      { cy: -20, ry: 12 },
-      { cy: 20,  ry: 12 },
-      { cy: -38, ry: 7 },
-      { cy: 38,  ry: 7 },
-    ].map(l => `
-          <ellipse cy="${l.cy}" rx="${Math.sqrt(Math.max(54 * 54 - l.cy * l.cy, 1)).toFixed(1)}" ry="${l.ry}"
-                   fill="none" stroke="var(--globe-line)" stroke-width="1" opacity="0.4"/>`).join('');
-
-    // "Pings" — event points on the globe's surface, each pulsing with
-    // an expanding ring on its own delay. They use the bright accent
-    // (--gold-2) so they stand out against the ice-blue globe lines.
-    const pings = [
-      { x: -20, y: -22, begin: '0s' },
-      { x: 18,  y: 8,   begin: '-1.1s' },
-      { x: -6,  y: 28,  begin: '-2.2s' },
-    ].map(p => `
-          <circle cx="${p.x}" cy="${p.y}" r="2.6" fill="var(--gold-2)"/>
-          <circle cx="${p.x}" cy="${p.y}" r="2.6" fill="none" stroke="var(--gold-2)" stroke-width="1.4">
-            <animate attributeName="r" values="2.6;16;2.6" dur="3.2s" repeatCount="indefinite" begin="${p.begin}"/>
-            <animate attributeName="opacity" values="0.8;0;0.8" dur="3.2s" repeatCount="indefinite" begin="${p.begin}"/>
-          </circle>`).join('');
-
-    // Drifting particles around the globe — pure SVG, not Canvas/WebGL
-    // (with dozens of cards on the page, a separate WebGL context per card
-    // would tank performance). SMIL animation is nearly free for the
-    // browser — it's GPU compositing, not a per-frame JS render, so it's
-    // safe even with a large number of cards.
-    const particles = [
-      { x: 40,  y: 28,  r: 1.6, dx: 10,  dy: -8,  dur: 16 },
-      { x: 232, y: 22,  r: 1.3, dx: -9,  dy: 10,  dur: 19 },
-      { x: 272, y: 100, r: 1.8, dx: -12, dy: -7,  dur: 14 },
-      { x: 18,  y: 112, r: 1.4, dx: 9,   dy: -10, dur: 21 },
-      { x: 122, y: 16,  r: 1.2, dx: -7,  dy: 9,   dur: 17 },
-      { x: 182, y: 132, r: 1.6, dx: 11,  dy: 7,   dur: 15 },
-      { x: 262, y: 52,  r: 1.3, dx: -9,  dy: -9,  dur: 18 },
-    ].map(p => `
-          <circle cx="${p.x}" cy="${p.y}" r="${p.r}" fill="var(--globe-bright)" opacity="0.4">
-            <animateTransform attributeName="transform" type="translate"
-              values="0,0; ${p.dx},${p.dy}; 0,0" dur="${p.dur}s" repeatCount="indefinite"/>
-          </circle>`).join('');
-
+    // A large, dim wireframe globe tucked into the top-right corner and
+    // slowly turning — calm on purpose: macro items are context, not a
+    // market signal.
     return `
       <div class="card-img-placeholder ph-neutral ph-macro">
-        <div class="ph-radar"></div>
-        <svg class="spark-svg" viewBox="0 0 300 160" aria-hidden="true">
-          <g transform="translate(150,80)">
-            <circle r="54" fill="none" stroke="var(--globe-line)" stroke-width="1.5" opacity="0.6" filter="url(#ph-glow)"/>
-            ${latitudes}
-            ${meridians}
-            ${pings}
+        <svg class="ph-globe" viewBox="0 0 160 160" aria-hidden="true">
+          <g class="globe">
+            <circle cx="80" cy="80" r="54" fill="none" stroke="var(--globe-line)" stroke-width="1.4" opacity="0.7"/>
+            <ellipse cx="80" cy="80" rx="22" ry="54" fill="none" stroke="var(--globe-bright)" stroke-width="1.1" opacity="0.55"/>
+            <ellipse cx="80" cy="80" rx="42" ry="54" fill="none" stroke="var(--globe-line)" stroke-width="1" opacity="0.4"/>
+            <line x1="26" y1="80" x2="134" y2="80" stroke="var(--globe-line)" stroke-width="1" opacity="0.4"/>
           </g>
-          ${particles}
         </svg>
+        <div class="ph-radar"></div>
         <span class="ph-source">${escapeHtml(source)}</span>
       </div>
     `;
@@ -1333,28 +1319,12 @@
     const s = SPARK_PATHS[sentiment] ? sentiment : 'neutral';
     const path = SPARK_PATHS[s];
     const colorVar = SPARK_COLOR_VAR[s];
-    const areaPath = `${path} L292,160 L8,160 Z`;
 
-    // Comet tail: 4 dots on the same path. dur=6s, and to make a dot
-    // ACTUALLY lag behind (rather than jump ahead — a negative begin like
-    // "-0.25s" shifts the animation FORWARD in time, not back), we use
-    // begin = (desired lag − dur): e.g. for a 0.25s lag at dur=6s that's
-    // "-5.75s", not "-0.25s".
-    // Each card gets its own phase offset so the comets don't all run in
-    // lockstep across the grid.
-    const phase = (cometSeq++ * 0.9) % 6;
-    const cometDots = [
-      { r: 4.5, opacity: 1,    lag: 0 },
-      { r: 3.6, opacity: 0.55, lag: 0.25 },
-      { r: 2.8, opacity: 0.3,  lag: 0.5 },
-      { r: 2.0, opacity: 0.15, lag: 0.75 },
-    ].map(d => {
-      const begin = d.lag === 0 ? -phase : -(phase + 6 - d.lag);
-      return `
-          <circle r="${d.r}" fill="var(--spark-white)" opacity="${d.opacity}">
-            <animateMotion dur="6s" repeatCount="indefinite" begin="${begin.toFixed(2)}s" path="${path}"/>
-          </circle>`;
-    }).join('');
+    // Comet: a short white streak (stroke-dasharray, see .ph-comet) running
+    // along the line. Each card gets its own phase offset so the streaks
+    // don't all run in lockstep across the grid. non-scaling-stroke keeps
+    // the line width even while the SVG is stretched to the card's width.
+    const delay = -((cometSeq++ * 0.9) % 3.4);
 
     return `
       <div class="card-img-placeholder ph-${s}">
@@ -1363,10 +1333,11 @@
           <line x1="0" y1="45" x2="300" y2="45" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
           <line x1="0" y1="90" x2="300" y2="90" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
           <line x1="0" y1="135" x2="300" y2="135" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-          <path d="${areaPath}" fill="url(#fill-${s})" stroke="none"/>
-          <path d="${path}" fill="none" stroke="var(${colorVar})" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" opacity="0.9" filter="url(#ph-glow)"/>
-          <g class="ph-comet" filter="url(#comet-glow-${s})">${cometDots}</g>
+          <path d="${path}" fill="none" stroke="var(${colorVar})" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" filter="url(#ph-glow)"/>
+          <path class="ph-comet" d="${path}" fill="none" stroke="var(--spark-white)" stroke-width="3.2"
+                stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"
+                style="animation-delay: ${delay.toFixed(1)}s" filter="url(#comet-glow-${s})"/>
         </svg>
         <span class="ph-source">${escapeHtml(source)}</span>
       </div>
@@ -1452,7 +1423,7 @@
       const tags = (item.tickers || []).map(t => `<span class="tag-ticker">${t}</span>`).join('');
 
       const sentimentTag = isMacro
-        ? `<span class="context-badge" title="Geopolitics/macro context — not a direct market signal for a specific stock"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg>Context</span>`
+        ? `<span class="context-badge" title="Geopolitics/macro context — not a direct market signal for a specific stock">Macro context</span>`
         : `<span class="sent-badge sent-${item.sentiment}">${sentLabels[item.sentiment]}</span>`;
 
       return `
