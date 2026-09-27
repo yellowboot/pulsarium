@@ -287,6 +287,14 @@
     .ping, .mini-ping { display: none; }
   }
 </style>
+<style>
+  .analytics-consent { position:fixed; z-index:100; right:1rem; bottom:1rem; width:min(440px,calc(100vw - 2rem)); padding:1rem; border:1px solid #675f93; border-radius:12px; background:#14172a; color:#f4f6ff; box-shadow:0 12px 40px #0009; font:400 14px/1.45 system-ui,sans-serif; }
+  .analytics-consent p { margin:0 0 .8rem; }
+  .analytics-consent a { color:#b7d5ff; }
+  .analytics-consent-actions { display:flex; justify-content:flex-end; gap:.6rem; }
+  .analytics-consent button { padding:.6rem .85rem; color:inherit; background:#30304d; border:1px solid #8580ab; border-radius:7px; cursor:pointer; }
+  .analytics-consent button:last-child { background:#554b90; }
+</style>
 </head>
 <body>
 
@@ -446,10 +454,79 @@
       <a href="https://app.pulsarium.finance/?legal=imprint">Imprint</a>
       <a href="https://app.pulsarium.finance/?legal=privacy">Privacy</a>
       <a href="https://app.pulsarium.finance/?legal=terms">Terms</a>
+      <button type="button" id="analytics-settings" style="color:inherit;background:none;border:0;text-decoration:underline;cursor:pointer">Analytics settings</button>
       <span>Market data may be delayed.</span>
     </nav>
   </div>
 </footer>
 
+<aside id="analytics-consent" class="analytics-consent" aria-label="Analytics preference" hidden>
+  <p><strong>Help improve Pulsarium?</strong> With your permission, we count visits and signup journeys and save the campaign source for this browser session. No advertising trackers. Read the <a href="https://app.pulsarium.finance/?legal=privacy">Privacy policy</a>.</p>
+  <div class="analytics-consent-actions"><button type="button" data-choice="no">Decline</button><button type="button" data-choice="yes">Allow analytics</button></div>
+</aside>
+<script>
+(() => {
+  const consentKey = 'pulsarium.landing-analytics-consent.v1';
+  const sourceKey = 'pulsarium.landing-analytics-source.v1';
+  const visitKey = 'pulsarium.landing-analytics-visit.v1';
+  const consentCookie = 'pulsarium_analytics_consent';
+  const key = 'sb_publishable_Iike5dnuHEuwIIF-qruzzg_WkWJodcF';
+  const banner = document.getElementById('analytics-consent');
+  const consent = () => localStorage.getItem(consentKey) ||
+    document.cookie.split('; ').find(item => item.startsWith(consentCookie + '='))?.split('=')[1];
+  const clean = value => /^[a-z0-9][a-z0-9._-]{0,79}$/.test((value || '').trim().toLowerCase())
+    ? value.trim().toLowerCase() : null;
+  function source() {
+    const saved = sessionStorage.getItem(sourceKey);
+    if (saved) return JSON.parse(saved);
+    const params = new URLSearchParams(location.search);
+    const result = {
+      utm_source: clean(params.get('utm_source')) || 'direct',
+      utm_medium: clean(params.get('utm_medium')),
+      utm_campaign: clean(params.get('utm_campaign'))
+    };
+    sessionStorage.setItem(sourceKey, JSON.stringify(result));
+    return result;
+  }
+  function visit() {
+    let id = sessionStorage.getItem(visitKey);
+    if (!id) { id = crypto.randomUUID(); sessionStorage.setItem(visitKey, id); }
+    return id;
+  }
+  function record() {
+    if (consent() !== 'yes') return;
+    const payload = { event_name:'landing_view', visitor_id:visit(), user_id:null, ...source() };
+    fetch('https://omkeplyeuxwlsqnblsjm.supabase.co/rest/v1/analytics_events', {
+      method:'POST', headers:{ apikey:key, 'Content-Type':'application/json', Prefer:'return=minimal' },
+      body:JSON.stringify(payload), keepalive:true
+    }).catch(() => {});
+  }
+  try {
+    if (!consent()) banner.hidden = false;
+    else record();
+    banner.addEventListener('click', event => {
+      const choice = event.target.closest('button[data-choice]');
+      if (!choice) return;
+      localStorage.setItem(consentKey, choice.dataset.choice);
+      document.cookie = consentCookie + '=' + choice.dataset.choice +
+        '; Domain=.pulsarium.finance; Path=/; Max-Age=31536000; SameSite=Lax; Secure';
+      banner.hidden = true;
+      if (choice.dataset.choice === 'yes') record();
+      else { sessionStorage.removeItem(sourceKey); sessionStorage.removeItem(visitKey); }
+    });
+    document.getElementById('analytics-settings').addEventListener('click', () => { banner.hidden = false; });
+    document.addEventListener('click', event => {
+      const link = event.target.closest('a[href^="https://app.pulsarium.finance/"]');
+      if (!link || consent() !== 'yes') return;
+      const url = new URL(link.href);
+      if (url.searchParams.has('legal')) return;
+      const tags = source();
+      for (const [name, value] of Object.entries(tags)) if (value) url.searchParams.set(name, value);
+      url.searchParams.set('pv', visit());
+      link.href = url.toString();
+    }, true);
+  } catch { banner.hidden = true; }
+})();
+</script>
 </body>
 </html>
