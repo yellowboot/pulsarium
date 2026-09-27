@@ -469,8 +469,11 @@
   const consentKey = 'pulsarium.landing-analytics-consent.v1';
   const sourceKey = 'pulsarium.landing-analytics-source.v1';
   const visitKey = 'pulsarium.landing-analytics-visit.v1';
+  const consentCookie = 'pulsarium_analytics_consent';
   const key = 'sb_publishable_Iike5dnuHEuwIIF-qruzzg_WkWJodcF';
   const banner = document.getElementById('analytics-consent');
+  const consent = () => localStorage.getItem(consentKey) ||
+    document.cookie.split('; ').find(item => item.startsWith(consentCookie + '='))?.split('=')[1];
   const clean = value => /^[a-z0-9][a-z0-9._-]{0,79}$/.test((value || '').trim().toLowerCase())
     ? value.trim().toLowerCase() : null;
   function source() {
@@ -491,7 +494,7 @@
     return id;
   }
   function record() {
-    if (localStorage.getItem(consentKey) !== 'yes') return;
+    if (consent() !== 'yes') return;
     const payload = { event_name:'landing_view', visitor_id:visit(), user_id:null, ...source() };
     fetch('https://omkeplyeuxwlsqnblsjm.supabase.co/rest/v1/analytics_events', {
       method:'POST', headers:{ apikey:key, 'Content-Type':'application/json', Prefer:'return=minimal' },
@@ -499,12 +502,14 @@
     }).catch(() => {});
   }
   try {
-    if (!localStorage.getItem(consentKey)) banner.hidden = false;
+    if (!consent()) banner.hidden = false;
     else record();
     banner.addEventListener('click', event => {
       const choice = event.target.closest('button[data-choice]');
       if (!choice) return;
       localStorage.setItem(consentKey, choice.dataset.choice);
+      document.cookie = consentCookie + '=' + choice.dataset.choice +
+        '; Domain=.pulsarium.finance; Path=/; Max-Age=31536000; SameSite=Lax; Secure';
       banner.hidden = true;
       if (choice.dataset.choice === 'yes') record();
       else { sessionStorage.removeItem(sourceKey); sessionStorage.removeItem(visitKey); }
@@ -512,7 +517,7 @@
     document.getElementById('analytics-settings').addEventListener('click', () => { banner.hidden = false; });
     document.addEventListener('click', event => {
       const link = event.target.closest('a[href^="https://app.pulsarium.finance/"]');
-      if (!link || localStorage.getItem(consentKey) !== 'yes') return;
+      if (!link || consent() !== 'yes') return;
       const url = new URL(link.href);
       if (url.searchParams.has('legal')) return;
       const tags = source();
