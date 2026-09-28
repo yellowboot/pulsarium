@@ -6,456 +6,456 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Mon, 28 Sep 2026 18:40:51 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 28 Sep 2026 19:54:59 +0000</lastBuildDate>
   <item>
-    <title>Watch: Trump announces plan for $15 billion steel plant, would be largest in U.S. history</title>
+    <title>Stocks Retreat as Bond Yields Surge</title>
+    <link>https://www.nasdaq.com/articles/stocks-retreat-bond-yields-surge</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-retreat-bond-yields-surge</guid>
+    <pubDate>Mon, 28 Sep 2026 19:45:55 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is down by -0.92% today, the Dow Jones Industrial Average ($DOWI ) (DIA ) is down by -0.75%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is down -1.55%. December E-mini S&amp;P futures (ESZ26 ) are down -0.90%,…</description>
+    <category>SPY</category><category>QQQ</category><category>DJI</category>
+  </item>
+  <item>
+    <title>Amazon Has a $10 Billion Holiday Catalyst Coming in October</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/amazon-10-billion-holiday-catalyst-194457409.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/amazon-10-billion-holiday-catalyst-194457409.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:44:57 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Adobe expects U.S. consumers to spend $10 billion during Amazon&#x27;s October Prime Day event as online holiday sales head toward another record.</description>
+    <category>ADBE</category><category>AMZN</category>
+  </item>
+  <item>
+    <title>Amazon, Walmart Face Record $275 Billion Holiday Rush</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/amazon-walmart-face-record-275-194315689.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/amazon-walmart-face-record-275-194315689.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:43:15 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Record spending could come with a costly promotional battle</description>
+    <category>AMZN</category><category>WMT</category>
+  </item>
+  <item>
+    <title>Meta Platform Takes Aim at Salesforce, ServiceNow With AI Push</title>
+    <link>https://finance.yahoo.com/technology/ai/articles/meta-platform-takes-aim-salesforce-194111319.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/meta-platform-takes-aim-salesforce-194111319.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:41:11 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>A new AI competitor just entered enterprise software</description>
+    <category>CRM</category><category>NOW</category><category>META</category>
+  </item>
+  <item>
+    <title>Meta Just Put Microsoft, Salesforce and ServiceNow on Notice</title>
+    <link>https://finance.yahoo.com/technology/ai/articles/meta-just-put-microsoft-salesforce-193907867.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/meta-just-put-microsoft-salesforce-193907867.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:39:07 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Meta is taking its AI technology deeper into corporate software with a new enterprise platform led by MongoDB&#x27;s outgoing CEO.</description>
+    <category>CRM</category><category>NOW</category><category>MSFT</category><category>META</category>
+  </item>
+  <item>
+    <title>Trump announces plan for $15 billion steel plant, would be largest in U.S. history</title>
     <link>https://www.cnbc.com/2026/09/28/trump-steel-plant-iowa.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/09/28/trump-steel-plant-iowa.html</guid>
-    <pubDate>Mon, 28 Sep 2026 18:35:55 +0000</pubDate>
+    <pubDate>Mon, 28 Sep 2026 19:37:50 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>Trump&#x27;s announcement with Mesabi Metallics comes as Americans&#x27; souring views of the economy are poised to shape the upcoming midterm election.</description>
     
   </item>
   <item>
-    <title>3 Reasons to Avoid BILL and 1 Stock to Buy Instead</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/3-reasons-avoid-bill-1-183036391.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/3-reasons-avoid-bill-1-183036391.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 18:30:36 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>BILL trades at $44.21 and has moved in lockstep with the market. Its shares have returned 18.7% over the last six months while the S&amp;P 500 has gained 21.4%.</description>
-    <category>SPY</category>
-  </item>
-  <item>
-    <title>U.S. Strategic Petroleum Reserve Falls to Lowest Level Since 1982</title>
-    <link>https://oilprice.com/Latest-Energy-News/World-News/US-Strategic-Petroleum-Reserve-Falls-to-Lowest-Level-Since-1982.html</link>
-    <guid isPermaLink="false">https://oilprice.com/Latest-Energy-News/World-News/US-Strategic-Petroleum-Reserve-Falls-to-Lowest-Level-Since-1982.html</guid>
-    <pubDate>Mon, 28 Sep 2026 18:30:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">OilPrice.com</source>
-    <description>Crude stocks in the U.S. Strategic Petroleum Reserve stood at 284.6 million barrels for the week ending September 18, according to the Energy Information Administration, down from 285.0 million the week before and 406.0 million a year…</description>
+    <title>Pinnacle West Capital (PNW) Shares Cross 4% Yield Mark</title>
+    <link>https://www.nasdaq.com/articles/pinnacle-west-capital-pnw-shares-cross-4-yield-mark</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/pinnacle-west-capital-pnw-shares-cross-4-yield-mark</guid>
+    <pubDate>Mon, 28 Sep 2026 19:37:08 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Looking at the universe of stocks we cover at Dividend Channel, in trading on Monday, shares of Pinnacle West Capital Corp (Symbol: PNW) were yielding above the 4% mark based on its quarterly dividend (annualized to $3.64), with the…</description>
     
   </item>
   <item>
-    <title>Support and resistance levels explained: how traders use price floors and ceilings</title>
-    <link>https://www.investing.com/news/stock-market-news/support-and-resistance-levels-explained-how-traders-use-price-floors-and-ceilings-93CH-4921003</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/support-and-resistance-levels-explained-how-traders-use-price-floors-and-ceilings-93CH-4921003</guid>
-    <pubDate>Mon, 28 Sep 2026 18:28:32 +0000</pubDate>
+    <title>PepsiCo plans to raise prices on sodas, chips and dip — and that has Wall Street worried</title>
+    <link>https://www.marketwatch.com/story/pepsico-plans-to-raise-prices-on-sodas-chips-and-dip-and-that-has-wall-street-worried-0ec355bf?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/pepsico-plans-to-raise-prices-on-sodas-chips-and-dip-and-that-has-wall-street-worried-0ec355bf?mod=mw_rss_topstories</guid>
+    <pubDate>Mon, 28 Sep 2026 19:37:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>TD Cowen analysts flagged the company’s “shifting narrative on affordability” as a risk.</description>
+    <category>PEP</category>
+  </item>
+  <item>
+    <title>Eversource Energy (ES) Shares Cross 5% Yield Mark</title>
+    <link>https://www.nasdaq.com/articles/eversource-energy-es-shares-cross-5-yield-mark</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/eversource-energy-es-shares-cross-5-yield-mark</guid>
+    <pubDate>Mon, 28 Sep 2026 19:36:46 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Looking at the universe of stocks we cover at Dividend Channel, in trading on Monday, shares of Eversource Energy (Symbol: ES) were yielding above the 5% mark based on its quarterly dividend (annualized to $3.15), with the stock…</description>
+    
+  </item>
+  <item>
+    <title>Nvidia Drops Massive Number on Anthropic AI Spending</title>
+    <link>https://finance.yahoo.com/technology/ai/articles/nvidia-drops-massive-number-anthropic-193644610.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/nvidia-drops-massive-number-anthropic-193644610.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:36:44 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>One infrastructure number changes the Nvidia demand debate</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Notable Monday Option Activity: SNDK, AMC, HY</title>
+    <link>https://www.nasdaq.com/articles/notable-monday-option-activity-sndk-amc-hy</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/notable-monday-option-activity-sndk-amc-hy</guid>
+    <pubDate>Mon, 28 Sep 2026 19:36:22 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Looking at options trading activity among components of the Russell 3000 index, there is noteworthy activity today in SanDisk Corp (Symbol: SNDK), where a total volume of 115,973 contracts has been traded thus far today, a contract…</description>
+    <category>SNDK</category>
+  </item>
+  <item>
+    <title>Notable Monday Option Activity: PSIX, UVE, PRAX</title>
+    <link>https://www.nasdaq.com/articles/notable-monday-option-activity-psix-uve-prax</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/notable-monday-option-activity-psix-uve-prax</guid>
+    <pubDate>Mon, 28 Sep 2026 19:36:16 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Among the underlying components of the Russell 3000 index, we saw noteworthy options trading volume today in Power Solutions International Inc (Symbol: PSIX), where a total of 2,200 contracts have traded so far, representing…</description>
+    
+  </item>
+  <item>
+    <title>Noteworthy Monday Option Activity: INTC, LLY, ACAD</title>
+    <link>https://www.nasdaq.com/articles/noteworthy-monday-option-activity-intc-lly-acad</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/noteworthy-monday-option-activity-intc-lly-acad</guid>
+    <pubDate>Mon, 28 Sep 2026 19:36:12 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Looking at options trading activity among components of the Russell 3000 index, there is noteworthy activity today in Intel Corp (Symbol: INTC), where a total volume of 925,123 contracts has been traded thus far today, a contract volume…</description>
+    <category>INTC</category><category>LLY</category>
+  </item>
+  <item>
+    <title>Noteworthy Monday Option Activity: TEX, GEO, CLF</title>
+    <link>https://www.nasdaq.com/articles/noteworthy-monday-option-activity-tex-geo-clf</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/noteworthy-monday-option-activity-tex-geo-clf</guid>
+    <pubDate>Mon, 28 Sep 2026 19:36:10 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Looking at options trading activity among components of the Russell 3000 index, there is noteworthy activity today in Terex Corp. (Symbol: TEX), where a total volume of 10,037 contracts has been traded thus far today, a contract volume…</description>
+    
+  </item>
+  <item>
+    <title>Update: US Equity Indexes Fall as Iran Settlement Talks Lose Momentum</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-fall-iran-193437834.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-fall-iran-193437834.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:34:37 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>(Updates with index/price action, macroeconomic data, corporate developments, company/geopolitical n</description>
+    
+  </item>
+  <item>
+    <title>A US Jury Orders Apple (AAPL) to Pay a Record $5.7 Billion in a Patent Case</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/us-jury-orders-apple-aapl-193343941.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/us-jury-orders-apple-aapl-193343941.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:33:43 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Apple Inc. (NASDAQ:AAPL) has been ordered by a United States jury to pay about $5.7 billion over patents covering haptic technology, the vibration feedback that makes a phone buzz under a fingertip. The award is the largest of its kind…</description>
+    <category>AAPL</category>
+  </item>
+  <item>
+    <title>U.S. stocks slip as OpenAI training halt weighs on AI trade, bonds extend rout</title>
+    <link>https://www.investing.com/news/stock-market-news/us-stock-futures-dip-as-markets-parse-iran-tensions-openai-training-halt-4919222</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/us-stock-futures-dip-as-markets-parse-iran-tensions-openai-training-halt-4919222</guid>
+    <pubDate>Mon, 28 Sep 2026 19:32:38 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
     <description></description>
+    
+  </item>
+  <item>
+    <title>How Has Alphabet Stock&#x27;s Story Changed?</title>
+    <link>https://www.trefis.com/articles/616790/how-has-alphabet-stocks-story-changed/2026-09-28?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/articles/616790/how-has-alphabet-stocks-story-changed/2026-09-28?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:31:07 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Alphabet&#x27;s management has changed what it talks about on its earnings calls. In April 2024, managing its own cost base was a major strategic focus. By July 2026, spending on AI infrastructure had taken center stage. Management plans…</description>
+    <category>GOOGL</category>
+  </item>
+  <item>
+    <title>IRS hires Joseph Velli to help administer Trump accounts</title>
+    <link>https://www.cnbc.com/2026/09/28/irs-trump-accounts-joseph-velli.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/09/28/irs-trump-accounts-joseph-velli.html</guid>
+    <pubDate>Mon, 28 Sep 2026 19:30:50 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Velli previously served on the boards of Paychex, Cognizant and Computershare.</description>
+    
+  </item>
+  <item>
+    <title>‘We lived within our means’: I earned $30,000 as a pastor and still retired comfortably. Why don’t you tell people that?</title>
+    <link>https://www.marketwatch.com/story/we-lived-within-our-means-i-earned-30-000-as-a-pastor-and-still-retired-comfortably-why-dont-you-tell-people-that-6b9f231e?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/we-lived-within-our-means-i-earned-30-000-as-a-pastor-and-still-retired-comfortably-why-dont-you-tell-people-that-6b9f231e?mod=mw_rss_topstories</guid>
+    <pubDate>Mon, 28 Sep 2026 19:30:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>“As a country, we have grown dangerously comfortable.”</description>
+    
+  </item>
+  <item>
+    <title>Trade Desk Is Down 68% This Year. Is It Time to Sell, or Is This a Lifetime Opportunity?</title>
+    <link>https://247wallst.com/investing/2026/09/28/trade-desk-is-down-68-this-year-is-it-time-to-sell-or-is-this-a-lifetime-opportunity/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/investing/2026/09/28/trade-desk-is-down-68-this-year-is-it-time-to-sell-or-is-this-a-lifetime-opportunity/?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:29:26 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>One advertising technology stock climbed 46% this year while Trade Desk collapsed, and that split forces every shareholder to confront whether the buying side of programmatic advertising faces a temporary stumble or something far harder…</description>
     
   </item>
   <item>
     <title>Treasury yields rise as march to multiyear highs continues</title>
     <link>https://www.cnbc.com/2026/09/28/treasury-yields-bonds-selloff.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/09/28/treasury-yields-bonds-selloff.html</guid>
-    <pubDate>Mon, 28 Sep 2026 18:28:30 +0000</pubDate>
+    <pubDate>Mon, 28 Sep 2026 19:29:22 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>Treasury yields edged higher on Monday as investors look ahead to fresh economic data releases this week.</description>
     <category>UST10Y</category>
   </item>
   <item>
-    <title>Best drone ETFs: a head-to-head comparison of JEDI, DRNZ, and European options</title>
-    <link>https://www.investing.com/news/stock-market-news/best-drone-etfs-a-headtohead-comparison-of-jedi-drnz-and-european-options-93CH-4921002</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/best-drone-etfs-a-headtohead-comparison-of-jedi-drnz-and-european-options-93CH-4921002</guid>
-    <pubDate>Mon, 28 Sep 2026 18:27:54 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
+    <title>Cotton Trying to Push Higher on Monday</title>
+    <link>https://www.nasdaq.com/articles/cotton-trying-push-higher-monday</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/cotton-trying-push-higher-monday</guid>
+    <pubDate>Mon, 28 Sep 2026 19:28:13 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Cotton futures are trading with October down 60 points, with other contracts up 10 to 21 points. Crude oil is up 68 cents per barrel on the session, with the US dollar index $0.162 higher. Following last week’s US/China meeting, China…</description>
     
   </item>
   <item>
-    <title>Tesla Heads to Trial in California. Should Investors Be Worried?</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/tesla-heads-trial-california-investors-182518844.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/tesla-heads-trial-california-investors-182518844.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 18:25:18 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Tesla (NASDAQ:TSLA) investors already have plenty to keep track of, from vehicle deliveries to the company’s expansion into AI and autonomous driving. This week adds something very different to that list. A lawsuit brought by the…</description>
-    <category>TSLA</category>
+    <title>Cattle Slipping Back to Start the Week</title>
+    <link>https://www.nasdaq.com/articles/cattle-slipping-back-start-week</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/cattle-slipping-back-start-week</guid>
+    <pubDate>Mon, 28 Sep 2026 19:28:13 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Live cattle futures are showing modest losses of 85 cents to $1.15 at midday. Cash trade was reported at $345-350 dressed in the North, with $222-223 live sales. Feeder cattle futures are falling $1.60 to $2.35 on Monday. The CME Feeder…</description>
+    
   </item>
   <item>
-    <title>Nvidia at $230: ceiling test or breakout in the making</title>
-    <link>https://www.investing.com/news/stock-market-news/nvidia-at-230-ceiling-test-or-breakout-in-the-making-93CH-4921000</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/nvidia-at-230-ceiling-test-or-breakout-in-the-making-93CH-4921000</guid>
-    <pubDate>Mon, 28 Sep 2026 18:24:43 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
+    <title>Hogs Showing Steadier Trade on Monday</title>
+    <link>https://www.nasdaq.com/articles/hogs-showing-steadier-trade-monday</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/hogs-showing-steadier-trade-monday</guid>
+    <pubDate>Mon, 28 Sep 2026 19:28:13 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Lean hog futures are up 50 cents to 22 cents lower on Monday, showing mixed trade. USDA’s national base hog price was not reported on Monday morning due to thin volume. The CME Lean Hog Index was down another 44 cents on September 24 at…</description>
+    
+  </item>
+  <item>
+    <title>Corn Getting Pressured Lower at Midday</title>
+    <link>https://www.nasdaq.com/articles/corn-getting-pressured-lower-midday</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/corn-getting-pressured-lower-midday</guid>
+    <pubDate>Mon, 28 Sep 2026 19:28:13 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Corn futures are facing spillover weakness to start the week, with beans adding pressure. Contracts are down 6 to 7 cents in the front months, but off the early session highs. The CmdtyView national average Cash Corn price is down 6…</description>
+    
+  </item>
+  <item>
+    <title>Wheat Facing Early Monday Losses</title>
+    <link>https://www.nasdaq.com/articles/wheat-facing-early-monday-losses</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-facing-early-monday-losses</guid>
+    <pubDate>Mon, 28 Sep 2026 19:28:12 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Wheat is showing modest losses in Monday morning trade. The wheat complex saw some buying off the early lows on Friday but still faced weakness at the final bell. Chicago SRW was down 1 to 3 ¾ cents on the day, with December falling…</description>
+    
+  </item>
+  <item>
+    <title>Why Shares of Perpetua Resources Are Falling Today</title>
+    <link>https://www.fool.com/investing/2026/09/28/why-shares-of-perpetua-resources-are-falling-today/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/09/28/why-shares-of-perpetua-resources-are-falling-today/?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:27:53 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>News of the company&#x27;s project in the Gem State isn&#x27;t glittering brightly in investors&#x27; eyes.</description>
+    
+  </item>
+  <item>
+    <title>LeBron James is already boosting ticket and merchandise demand for Philadelphia 76ers</title>
+    <link>https://www.cnbc.com/2026/09/28/lebron-james-boosts-ticket-jersey-demand-for-nba-philadelphia-76ers.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/09/28/lebron-james-boosts-ticket-jersey-demand-for-nba-philadelphia-76ers.html</guid>
+    <pubDate>Mon, 28 Sep 2026 19:27:48 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>NBA star LeBron James is having a major financial impact on the Philadelphia 76ers and Philadelphia, boosting sponsorships, ticket sales, and economic activity</description>
+    
+  </item>
+  <item>
+    <title>Apple Stock Edges Higher Although Two Legal Bills Stack Up</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/apple-stock-edges-higher-although-192653726.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/apple-stock-edges-higher-although-192653726.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:26:53 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>A revived UK reseller case follows a $5.7 billion U.S. patent verdict that Apple plans to appeal.</description>
+    <category>AAPL</category>
+  </item>
+  <item>
+    <title>Nvidia unveils security platform to rein in AI agents and $150bn stock buyback</title>
+    <link>https://finance.yahoo.com/technology/ai/articles/nvidia-unveils-security-platform-rein-153257645.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/nvidia-unveils-security-platform-rein-153257645.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:24:07 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Chipmaker says new system was designed to prevent AI agents from going rogue amid incidents at top companies</description>
     <category>NVDA</category>
   </item>
   <item>
-    <title>WestJet said it has not seen any in-service events related to software under FAA review</title>
-    <link>https://www.investing.com/news/stock-market-news/westjet-said-it-has-not-seen-any-inservice-events-related-to-software-under-faa-review-4920999</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/westjet-said-it-has-not-seen-any-inservice-events-related-to-software-under-faa-review-4920999</guid>
-    <pubDate>Mon, 28 Sep 2026 18:24:38 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Top Midday Decliners</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/top-midday-decliners-182357644.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/top-midday-decliners-182357644.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 18:23:57 +0000</pubDate>
+    <title>Microsoft Stock Drops 2.2% as AI Adoption Gap Reaches 12.6 Points</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/microsoft-stock-drops-2-2-192342013.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/microsoft-stock-drops-2-2-192342013.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:23:42 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Coastal Financial (CCB) unit Coastal Community Bank&#x27;s financial technology partner, Bluevine, has si</description>
-    
-  </item>
-  <item>
-    <title>Nike earnings outlook: guidance credibility is the real test Thursday</title>
-    <link>https://www.investing.com/news/stock-market-news/nike-earnings-outlook-guidance-credibility-is-the-real-test-thursday-93CH-4920998</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/nike-earnings-outlook-guidance-credibility-is-the-real-test-thursday-93CH-4920998</guid>
-    <pubDate>Mon, 28 Sep 2026 18:23:24 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>NKE</category>
-  </item>
-  <item>
-    <title>Stock Market Today: Dow Off Lows After Iran Report; Baseball Play Tests Entry, MongoDB Dives (Live Coverage)</title>
-    <link>https://finance.yahoo.com/m/6b34a52f-8642-3ca8-8589-c9e25040f485/stock-market-today%3A-dow-off.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/6b34a52f-8642-3ca8-8589-c9e25040f485/stock-market-today%3A-dow-off.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 18:22:05 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Stock Market Today: The Dow Jones index was off lows Monday after a new Iran report. Oil prices jump but Nvidia gains on a buyback.</description>
-    <category>NVDA</category><category>DJI</category>
-  </item>
-  <item>
-    <title>CVX vs XOM: valuation, momentum, and which side the pairs trade favors</title>
-    <link>https://www.investing.com/news/stock-market-news/cvx-vs-xom-valuation-momentum-and-which-side-the-pairs-trade-favors-93CH-4920997</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/cvx-vs-xom-valuation-momentum-and-which-side-the-pairs-trade-favors-93CH-4920997</guid>
-    <pubDate>Mon, 28 Sep 2026 18:20:04 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>XOM</category><category>CVX</category>
-  </item>
-  <item>
-    <title>Could This Be the Catalyst That Supercharges Tesla Stock Before the End of 2026?</title>
-    <link>https://www.fool.com/investing/2026/09/28/could-this-be-the-catalyst-that-supercharges-tesla-stock-before-the-end-of-2026/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/09/28/could-this-be-the-catalyst-that-supercharges-tesla-stock-before-the-end-of-2026/?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 18:20:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Tesla has begun delivering its Semi trucks to customers.</description>
-    <category>TSLA</category>
-  </item>
-  <item>
-    <title>US Supreme Court’s Alito won’t participate in climate case involving oil companies</title>
-    <link>https://www.investing.com/news/stock-market-news/us-supreme-courts-alito-wont-participate-in-climate-case-involving-oil-companies-4920969</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/us-supreme-courts-alito-wont-participate-in-climate-case-involving-oil-companies-4920969</guid>
-    <pubDate>Mon, 28 Sep 2026 18:18:25 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Oil integrated sector outlook: COP leads peers on valuation and margins</title>
-    <link>https://www.investing.com/news/stock-market-news/oil-integrated-sector-outlook-cop-leads-peers-on-valuation-and-margins-93CH-4920994</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/oil-integrated-sector-outlook-cop-leads-peers-on-valuation-and-margins-93CH-4920994</guid>
-    <pubDate>Mon, 28 Sep 2026 18:17:52 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>COP</category>
-  </item>
-  <item>
-    <title>Top software application stocks to watch, according to Oppenheimer</title>
-    <link>https://www.investing.com/news/stock-market-news/top-software-application-stocks-to-watch-according-to-oppenheimer-4920993</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/top-software-application-stocks-to-watch-according-to-oppenheimer-4920993</guid>
-    <pubDate>Mon, 28 Sep 2026 18:16:23 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Microsoft’s AI Gains Can Push the Stock Higher. That’s Good News for Software Peers.</title>
-    <link>https://finance.yahoo.com/m/b6d41546-cafe-301e-8581-3a5f272e85c8/microsoft%E2%80%99s-ai-gains-can-push.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/b6d41546-cafe-301e-8581-3a5f272e85c8/microsoft%E2%80%99s-ai-gains-can-push.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 18:16:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Microsoft’s Azure business has cleared $100 billion in annual revenue and its stock is on a run. How high can it go?</description>
+    <description>Usage reached 28.8% in the Global North against 16.2% across the Global South.</description>
     <category>MSFT</category>
   </item>
   <item>
-    <title>Weekly market catalysts: Core PCE, NFP, and key earnings in focus</title>
-    <link>https://www.investing.com/news/stock-market-news/weekly-market-catalysts-core-pce-nfp-and-key-earnings-in-focus-93CH-4920992</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/weekly-market-catalysts-core-pce-nfp-and-key-earnings-in-focus-93CH-4920992</guid>
-    <pubDate>Mon, 28 Sep 2026 18:15:02 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>The U.S. and China agree to $60 billion in tariff cuts on products like dolls and fireworks. Rare earths remain a sticking point.</title>
-    <link>https://www.marketwatch.com/story/the-u-s-and-china-agree-to-60-billion-in-tariff-cuts-on-products-like-dolls-and-fireworks-rare-earths-remain-a-sticking-point-e4667872?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/the-u-s-and-china-agree-to-60-billion-in-tariff-cuts-on-products-like-dolls-and-fireworks-rare-earths-remain-a-sticking-point-e4667872?mod=mw_rss_topstories</guid>
-    <pubDate>Mon, 28 Sep 2026 18:15:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>There were no major breakthroughs on big issues including AI, Iran and Taiwan.</description>
-    
-  </item>
-  <item>
-    <title>3 Reasons to Avoid BCC and 1 Stock to Buy Instead</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/3-reasons-avoid-bcc-1-181436100.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/3-reasons-avoid-bcc-1-181436100.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 18:14:36 +0000</pubDate>
+    <title>MP Materials Just Sank 21% in a Month. Is It Time to Sell, or Is This a Prime Buying Opportunity?</title>
+    <link>https://247wallst.com/investing/2026/09/28/mp-materials-just-sank-21-in-a-month-is-it-time-to-sell-or-is-this-a-prime-buying-opportunity/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/investing/2026/09/28/mp-materials-just-sank-21-in-a-month-is-it-time-to-sell-or-is-this-a-prime-buying-opportunity/?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:23:02 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Boise Cascade currently trades at $77.16 per share and has shown little upside over the past six months, posting a middling return of 2.9%. The stock also fell short of the S&amp;P 500’s 21.4% gain during that period.</description>
-    <category>SPY</category>
+    <description>Rare earth stocks just shed a fifth of their value while the broad market barely budged, leaving MP Materials shareholders facing a decision that the numbers alone cannot resolve.</description>
+    
   </item>
   <item>
-    <title>Meta hires MongoDB CEO CJ Desai to lead enterprise unit. MongoDB shares crater</title>
-    <link>https://www.cnbc.com/2026/09/28/mongodb-meta-cj-desai.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/09/28/mongodb-meta-cj-desai.html</guid>
-    <pubDate>Mon, 28 Sep 2026 18:10:02 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Desai will lead the new Meta Enterprise Platform unit and report to CEO Mark Zuckerberg.</description>
-    <category>META</category>
+    <title>Tesla Stock Drops Over 3% Before Cybercab&#x27;s Federal Answers Come Due</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/tesla-stock-drops-over-3-192209629.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/tesla-stock-drops-over-3-192209629.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:22:09 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>NHTSA&#x27;s September 30 deadline tests certification discipline before autonomous vehicles reach greater scale.</description>
+    <category>TSLA</category>
   </item>
   <item>
-    <title>Sugar Prices Rebound as Crude Oil Jumps</title>
-    <link>https://www.nasdaq.com/articles/sugar-prices-rebound-crude-oil-jumps</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/sugar-prices-rebound-crude-oil-jumps</guid>
-    <pubDate>Mon, 28 Sep 2026 18:09:46 +0000</pubDate>
+    <title>Soybean Pressure Continuing to Monday’s Midday</title>
+    <link>https://www.nasdaq.com/articles/soybean-pressure-continuing-mondays-midday</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/soybean-pressure-continuing-mondays-midday</guid>
+    <pubDate>Mon, 28 Sep 2026 19:21:45 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>October NY world sugar #11 (SBV26 ) is up +0.05 (+0.29%) today, and December London ICE white sugar #5 (SWZ26 ) is up +4.20 (+0.84%). Sugar prices recovered from early losses today and turned higher, amid a jump in crude oil prices. WTI…</description>
+    <description>Soybeans are showing losses of 27 to 31 cents in the front months at midday. The cmdtyView national average Cash Bean price is down 29 1/2 cents at $12.32. Soymeal futures are down $10 to $11.40, with Soy Oil slipping just 4 to 7…</description>
     
   </item>
   <item>
-    <title>3 Reasons LEN is Risky and 1 Stock to Buy Instead</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/3-reasons-len-risky-1-180636278.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/3-reasons-len-risky-1-180636278.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 18:06:36 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Lennar has been treading water for the past six months, recording a small loss of 3.1% while holding steady at $82.27. The stock also fell short of the S&amp;P 500’s 21.4% gain during that period.</description>
-    <category>LEN</category><category>SPY</category>
-  </item>
-  <item>
-    <title>Sector Update: Energy Stocks Rise Monday Afternoon</title>
-    <link>https://finance.yahoo.com/energy/articles/sector-energy-stocks-rise-monday-180541807.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/energy/articles/sector-energy-stocks-rise-monday-180541807.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 18:05:41 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Energy stocks advanced Monday afternoon, with the NYSE Energy Sector Index adding 0.4% and the State</description>
+    <title>Wheat Weakness Holding at Monday’s Midday Trade</title>
+    <link>https://www.nasdaq.com/articles/wheat-weakness-holding-mondays-midday-trade</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-weakness-holding-mondays-midday-trade</guid>
+    <pubDate>Mon, 28 Sep 2026 19:21:45 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The wheat complex started Monday with weakness, as losses are extending to midday. Chicago SRW is down 12 to 13 cents on the day. KC HRW futures are 13 to 14 cents lower at midday. MPLS spring wheat is 9 to 10 cents in the red so far.…</description>
     
-  </item>
-  <item>
-    <title>The Bond Market Is Repeating a Pattern Last Observed Ahead of the Great Recession. Here&#x27;s What History Says Comes Next.</title>
-    <link>https://www.fool.com/investing/2026/09/28/bond-market-repeating-pattern-great-recession/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/09/28/bond-market-repeating-pattern-great-recession/?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 18:05:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Longer-term bond yields are at some of the highest levels seen since right before the Great Recession in 2007.</description>
-    
-  </item>
-  <item>
-    <title>An Ex-Google Researcher Says AI Could “Kill Us All.” Should Alphabet Investors Care?</title>
-    <link>https://finance.yahoo.com/technology/ai/articles/ex-google-researcher-says-ai-180455667.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/ex-google-researcher-says-ai-180455667.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 18:04:55 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Warnings about artificial intelligence don’t get much more extreme than this. Bilal Chughtai, a former Google DeepMind research engineer who worked on AGI safety and alignment research, said he believes AI has the potential to “kill us…</description>
-    <category>GOOGL</category>
-  </item>
-  <item>
-    <title>Behind the AI Mask, There’s a Stealth Bear Market Lurking Under Those Record Highs</title>
-    <link>https://finance.yahoo.com/m/61a1255c-4d4f-36b0-8873-881a18b64b03/behind-the-ai-mask%2C-there%E2%80%99s-a.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/61a1255c-4d4f-36b0-8873-881a18b64b03/behind-the-ai-mask%2C-there%E2%80%99s-a.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 18:03:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Big Tech is once again doing the market’s heavy lifting. That has more than a few on Wall Street very worried.</description>
-    
-  </item>
-  <item>
-    <title>Anthropic launches cheaper AI model, its second release since CEO&#x27;s call for a slowdown</title>
-    <link>https://www.cnbc.com/2026/09/28/anthropic-sonnet-5-5-launch.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/09/28/anthropic-sonnet-5-5-launch.html</guid>
-    <pubDate>Mon, 28 Sep 2026 18:00:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The company said Sonnet 5.5 doesn&#x27;t advance the frontier, but that it is better at coding and knowledge work tasks than its predecessor.</description>
-    
-  </item>
-  <item>
-    <title>The AI Hacks Are Way Worse Than We Thought</title>
-    <link>https://finance.yahoo.com/video/ai-hacks-way-worse-thought-180000827.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/video/ai-hacks-way-worse-thought-180000827.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 18:00:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Have we reached the point-of-no-return for AI hacks? In recent days, a swarm of autonomous AI agents broke out of containment and executed a series of hacks–including an attempt at breaching a government database. On today&#x27;s episode of…</description>
-    
-  </item>
-  <item>
-    <title>Goldman Sachs brings $100 billion Treasury fund into crypto’s institutional plumbing</title>
-    <link>https://www.coindesk.com/markets/2026/09/28/goldman-sachs-brings-usd100-billion-treasury-fund-into-crypto-s-institutional-plumbing</link>
-    <guid isPermaLink="false">https://www.coindesk.com/markets/2026/09/28/goldman-sachs-brings-usd100-billion-treasury-fund-into-crypto-s-institutional-plumbing</guid>
-    <pubDate>Mon, 28 Sep 2026 18:00:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
-    <description>The bank is bringing its roughly $100 billion Treasury fund to institutional crypto firms without creating a tokenized version of it.</description>
-    <category>GS</category>
-  </item>
-  <item>
-    <title>3 Reasons to Sell RSG and 1 Stock to Buy Instead</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/3-reasons-sell-rsg-1-175836931.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/3-reasons-sell-rsg-1-175836931.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 17:58:36 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Since March 2026, Republic Services has been in a holding pattern, posting a small loss of 4.1% while floating around $212.60. The stock also fell short of the S&amp;P 500’s 21.4% gain during that period.</description>
-    <category>SPY</category>
   </item>
   <item>
     <title>Cocoa Prices Erase Early Gains on Abundant Ivory Coast Supplies</title>
     <link>https://www.nasdaq.com/articles/cocoa-prices-erase-early-gains-abundant-ivory-coast-supplies</link>
     <guid isPermaLink="false">https://www.nasdaq.com/articles/cocoa-prices-erase-early-gains-abundant-ivory-coast-supplies</guid>
-    <pubDate>Mon, 28 Sep 2026 17:57:47 +0000</pubDate>
+    <pubDate>Mon, 28 Sep 2026 19:21:44 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
     <description>December ICE NY cocoa (CCZ26 ) is down -17 (-0.30%) today, and December ICE London cocoa #7 (CAZ26 ) is down -24 (-0.57%). Cocoa prices fell from 1-week highs today and turned lower on signs of abundant cocoa supplies from the Ivory…</description>
     
   </item>
   <item>
-    <title>Soybeans Falling on Monday Morning as China Leaves Bean Tariffs On</title>
-    <link>https://www.nasdaq.com/articles/soybeans-falling-monday-morning-china-leaves-bean-tariffs</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/soybeans-falling-monday-morning-china-leaves-bean-tariffs</guid>
-    <pubDate>Mon, 28 Sep 2026 17:57:47 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Soybeans are trading with Monday AM losses of 20 to 25 cents. Futures came back to close Friday with contracts down 1 ¾ cent in some back months to November’s 1 ½ cent gain. Trade details set to be announced Monday calmed the selling.…</description>
-    
-  </item>
-  <item>
-    <title>9 Green Days In A Row: nVent Electric Stock Is Up 12%</title>
-    <link>https://www.trefis.com/articles/616743/9-green-days-in-a-row-nvent-electric-stock-is-up-12/2026-09-28?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.trefis.com/articles/616743/9-green-days-in-a-row-nvent-electric-stock-is-up-12/2026-09-28?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 17:57:42 +0000</pubDate>
+    <title>Stock Market Today: Dow Off Lows After Iran Report; Leisure Play Tests Entry, MongoDB Dives (Live Coverage)</title>
+    <link>https://finance.yahoo.com/m/6b34a52f-8642-3ca8-8589-c9e25040f485/stock-market-today%3A-dow-off.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/6b34a52f-8642-3ca8-8589-c9e25040f485/stock-market-today%3A-dow-off.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:21:21 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>A nine-day run has pushed the stock higher, raising new questions about whether the price now reflects the underlying business.</description>
-    
+    <description>Stock Market Today: The Dow Jones index was off lows Monday after a new Iran report. Oil prices jump but Nvidia gains on a buyback.</description>
+    <category>NVDA</category><category>DJI</category>
   </item>
   <item>
-    <title>Update: Equities Fall Intraday as Oil, Yields Jump</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/equities-fall-intraday-oil-yields-175512205.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/equities-fall-intraday-oil-yields-175512205.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 17:55:12 +0000</pubDate>
+    <title>Is eBay Stock Priced Right Against Its Peers?</title>
+    <link>https://www.trefis.com/articles/616794/is-ebay-stock-priced-right-against-its-peers/2026-09-28?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/articles/616794/is-ebay-stock-priced-right-against-its-peers/2026-09-28?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:21:16 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>(Updates with latest market prices and developments.) US benchmark equity indexes were lower intr</description>
-    
+    <description>eBay (EBAY) turns more of its sales into operating profit than Amazon, Walmart, MercadoLibre, Etsy or Target. Yet you pay less for each dollar of eBay&#x27;s profit than for Walmart&#x27;s or MercadoLibre&#x27;s. Is eBay stock discounted against those…</description>
+    <category>AMZN</category><category>WMT</category>
   </item>
   <item>
-    <title>Nearly half the stocks in the S&amp;P 500 are at cross purposes with the rest of the market</title>
-    <link>https://www.cnbc.com/2026/09/28/nearly-half-of-the-stocks-in-the-sp-500-are-working-against-it.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/09/28/nearly-half-of-the-stocks-in-the-sp-500-are-working-against-it.html</guid>
-    <pubDate>Mon, 28 Sep 2026 17:53:31 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Almost half of the stocks in the S&amp;P 500 have a negative beta, evidence of a chasm between the entire index and its individual components.</description>
+    <title>China Weighs Letting ByteDance and Alibaba Buy New Nvidia (NVDA) Chips</title>
+    <link>https://finance.yahoo.com/technology/articles/china-weighs-letting-bytedance-alibaba-192115872.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/technology/articles/china-weighs-letting-bytedance-alibaba-192115872.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:21:15 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>NVIDIA Corporation (NASDAQ:NVDA) may be allowed to sell part of its chip range in China again. Officials there have asked ByteDance and Alibaba Group Holding Limited (NYSE:BABA) to report their plans for buying its RTX PRO 5500…</description>
+    <category>NVDA</category><category>BABA</category>
+  </item>
+  <item>
+    <title>Where Will the S&amp;P 500 Be in 30 Years? History Offers a Clear Answer for Investors.</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/where-p-500-30-years-192000270.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/where-p-500-30-years-192000270.html?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:20:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The most important takeaway is that investors need to put money to work early and let compounding do the trick.</description>
     <category>SPY</category>
   </item>
   <item>
-    <title>Soybeans Rally Off Early Lows as Traders Eye Monday Trade Announcement</title>
-    <link>https://www.nasdaq.com/articles/soybeans-rally-early-lows-traders-eye-monday-trade-announcement</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/soybeans-rally-early-lows-traders-eye-monday-trade-announcement</guid>
-    <pubDate>Mon, 28 Sep 2026 17:52:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Soybeans came back to close Friday with contracts down 1 ¾ cent in some back months to November’s 1 ½ cent gain. Trade details set to be announced Monday calmed the selling. November saw 15 ½ cent gain on the week. The cmdtyView…</description>
+    <title>Transportation secretary urges Congress to approve $30bn in aviation funding</title>
+    <link>https://www.investing.com/news/stock-market-news/transportation-secretary-urges-congress-to-approve-30bn-in-aviation-funding-93CH-4921029</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/transportation-secretary-urges-congress-to-approve-30bn-in-aviation-funding-93CH-4921029</guid>
+    <pubDate>Mon, 28 Sep 2026 19:19:51 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
     
   </item>
   <item>
-    <title>Dry Weather Forecasts for Brazil Boost Coffee Prices</title>
-    <link>https://www.nasdaq.com/articles/dry-weather-forecasts-brazil-boost-coffee-prices</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/dry-weather-forecasts-brazil-boost-coffee-prices</guid>
-    <pubDate>Mon, 28 Sep 2026 17:52:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>December arabica coffee (KCZ26 ) is up +11.00 (+3.95%) today, and November ICE robusta coffee (RMX26 ) is up +47 (+1.40%). Coffee prices are sharply higher today, with arabica posting a 2-week high and robusta posting a 1-week high.…</description>
-    
-  </item>
-  <item>
-    <title>The minivan renaissance: Why SUV sales are falling behind</title>
-    <link>https://finance.yahoo.com/video/minivan-renaissance-why-suv-sales-175042823.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/video/minivan-renaissance-why-suv-sales-175042823.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 17:50:42 +0000</pubDate>
+    <title>Why Sandisk Stock Dropped Today</title>
+    <link>https://www.fool.com/investing/2026/09/28/why-sandisk-stock-dropped-today/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/09/28/why-sandisk-stock-dropped-today/?.tsrc=rss</guid>
+    <pubDate>Mon, 28 Sep 2026 19:19:50 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Turney Duff chats with Barron&#x27;s associate editor Al Root, Kelly Intelligence founder and CEO Kevin Kelly, Cleo Capital managing director Sarah Kunst, and Yahoo Finance Senior Autos Reporter Pras Subramanian about the rising popularity…</description>
-    
+    <description>Investors are worried about Sandisk today. Should you be, too?</description>
+    <category>SNDK</category>
   </item>
   <item>
-    <title>3 Reasons to Avoid TFX and 1 Stock to Buy Instead</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/3-reasons-avoid-tfx-1-175036899.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/3-reasons-avoid-tfx-1-175036899.html?.tsrc=rss</guid>
-    <pubDate>Mon, 28 Sep 2026 17:50:36 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Even though Teleflex (currently trading at $122.08 per share) has gained 6.2% over the last six months, it has lagged the S&amp;P 500’s 21.4% return during that period. This may have investors wondering how to approach the situation.</description>
+    <title>Dow Jones stalls below 52,200 resistance: Live levels</title>
+    <link>https://www.investing.com/news/stock-market-news/dow-jones-trapped-at-51913-between-double-bottom-and-downtrend-live-93CH-4920690</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/dow-jones-trapped-at-51913-between-double-bottom-and-downtrend-live-93CH-4920690</guid>
+    <pubDate>Mon, 28 Sep 2026 19:19:08 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>DJI</category>
+  </item>
+  <item>
+    <title>Alphabet C stuck in range below $342 resistance: Live levels</title>
+    <link>https://www.investing.com/news/stock-market-news/alphabet-c-tests-33690-support-below-ichimoku-cloud-live-levels-93CH-4920694</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/alphabet-c-tests-33690-support-below-ichimoku-cloud-live-levels-93CH-4920694</guid>
+    <pubDate>Mon, 28 Sep 2026 19:19:08 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>GOOGL</category>
+  </item>
+  <item>
+    <title>Nasdaq 100 clings to SuperTrend support at 30,548: Live levels</title>
+    <link>https://www.investing.com/news/stock-market-news/nasdaq-100-rangebound-between-30548-and-30787-live-levels-93CH-4920692</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/nasdaq-100-rangebound-between-30548-and-30787-live-levels-93CH-4920692</guid>
+    <pubDate>Mon, 28 Sep 2026 19:19:02 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>QQQ</category>
+  </item>
+  <item>
+    <title>Tesla breaks below Ichimoku cloud at $357.91: Live levels</title>
+    <link>https://www.investing.com/news/stock-market-news/tesla-teeters-above-support-at-361-live-levels-93CH-4920695</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/tesla-teeters-above-support-at-361-live-levels-93CH-4920695</guid>
+    <pubDate>Mon, 28 Sep 2026 19:19:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>TSLA</category>
+  </item>
+  <item>
+    <title>S&amp;P 500 trapped in choppy range between 7,724-7,780: Live levels</title>
+    <link>https://www.investing.com/news/stock-market-news/sp-500-doji-signals-breakout-or-breakdown-at-7766-live-93CH-4920693</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/sp-500-doji-signals-breakout-or-breakdown-at-7766-live-93CH-4920693</guid>
+    <pubDate>Mon, 28 Sep 2026 19:18:54 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
     <category>SPY</category>
   </item>
   <item>
-    <title>A key test looms for the AI trade this week. Here&#x27;s how Mike Khouw is trading it</title>
-    <link>https://www.cnbc.com/2026/09/28/a-key-test-looms-for-the-ai-trade-this-week-heres-how-mike-khouw-is-trading-it.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/09/28/a-key-test-looms-for-the-ai-trade-this-week-heres-how-mike-khouw-is-trading-it.html</guid>
-    <pubDate>Mon, 28 Sep 2026 17:48:15 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Micron reports after the bell Wednesday.</description>
+    <title>Dollar Index stalls at 101.15 resistance on bearish divergence: Live</title>
+    <link>https://www.investing.com/news/stock-market-news/dollar-index-stalls-below-101-with-double-top-risk-live-levels-93CH-4920689</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/dollar-index-stalls-below-101-with-double-top-risk-live-levels-93CH-4920689</guid>
+    <pubDate>Mon, 28 Sep 2026 19:18:33 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Micron stuck between $1,042 support and $1,070 resistance: Live levels</title>
+    <link>https://www.investing.com/news/stock-market-news/micron-tests-critical-support-as-momentum-turns-bearish-live-93CH-4920688</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/micron-tests-critical-support-as-momentum-turns-bearish-live-93CH-4920688</guid>
+    <pubDate>Mon, 28 Sep 2026 19:18:30 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
     <category>MU</category>
-  </item>
-  <item>
-    <title>Stocks Retreat as Bond Yields Surge</title>
-    <link>https://www.nasdaq.com/articles/stocks-retreat-bond-yields-surge</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-retreat-bond-yields-surge</guid>
-    <pubDate>Mon, 28 Sep 2026 17:45:31 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is down by -0.92% today, the Dow Jones Industrial Average ($DOWI ) (DIA ) is down by -0.75%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is down -1.55%. December E-mini S&amp;P futures (ESZ26 ) are down -0.90%,…</description>
-    <category>SPY</category><category>QQQ</category><category>DJI</category>
-  </item>
-  <item>
-    <title>Oil prices off highs after reports Saudi pipeline ramping back up</title>
-    <link>https://www.cnbc.com/2026/09/28/oil-price-today-wti-brent-trump-iran.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/09/28/oil-price-today-wti-brent-trump-iran.html</guid>
-    <pubDate>Mon, 28 Sep 2026 17:40:23 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The Saudis shutdown the pipeline earlier this month after it sustained damage in a drone strike launched form Iraq.</description>
-    
-  </item>
-  <item>
-    <title>Dollar Falls as Crude Prices Decline and Stocks Gain</title>
-    <link>https://www.nasdaq.com/articles/dollar-falls-crude-prices-decline-and-stocks-gain</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/dollar-falls-crude-prices-decline-and-stocks-gain</guid>
-    <pubDate>Mon, 28 Sep 2026 17:34:30 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The dollar index (DXY00 ) fell by -0.32% on Friday. The dollar was under pressure Friday after WTI crude oil prices fell more than -2%, easing inflation expectations and weighing on Fed policy. Also, strength in stocks on Friday curbed…</description>
-    
-  </item>
-  <item>
-    <title>Corn Falling Back Early on Monday as Traders look for US/China Details</title>
-    <link>https://www.nasdaq.com/articles/corn-falling-back-early-monday-traders-look-us-china-details</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/corn-falling-back-early-monday-traders-look-us-china-details</guid>
-    <pubDate>Mon, 28 Sep 2026 17:34:30 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Corn price action is down 3 to 4 ½ cents early on Monday, getting spillover weakness from soybeans. Futures found strength throughout the Friday session, as contracts closed 10-15 cents off the early lows and steady to a penny higher.…</description>
-    
-  </item>
-  <item>
-    <title>‘I’m never selling’: I’m 47 and buy bitcoin with every dollar I earn. Am I crazy?</title>
-    <link>https://www.marketwatch.com/story/im-never-selling-im-47-and-buy-bitcoin-with-every-dollar-i-earn-am-i-crazy-364d2a64?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/im-never-selling-im-47-and-buy-bitcoin-with-every-dollar-i-earn-am-i-crazy-364d2a64?mod=mw_rss_topstories</guid>
-    <pubDate>Mon, 28 Sep 2026 17:30:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>“When my paycheck lands, it takes a detour through bitcoin.”</description>
-    <category>BTC</category>
-  </item>
-  <item>
-    <title>Dollar Gains and Gold Slumps on Higher Crude Prices and T-note Yields</title>
-    <link>https://www.nasdaq.com/articles/dollar-gains-and-gold-slumps-higher-crude-prices-and-t-note-yields</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/dollar-gains-and-gold-slumps-higher-crude-prices-and-t-note-yields</guid>
-    <pubDate>Mon, 28 Sep 2026 17:27:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The dollar index (DXY00 ) is up by +0.21% today. The dollar is moving higher today, amid the +2% jump in WTI crude oil, which raises inflation expectations and could prompt the Fed to tighten monetary policy, a supportive factor for the…</description>
-    
-  </item>
-  <item>
-    <title>Stocks Pressured as Crude Prices and Bond Yields Soar</title>
-    <link>https://www.nasdaq.com/articles/stocks-pressured-crude-prices-and-bond-yields-soar</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-pressured-crude-prices-and-bond-yields-soar</guid>
-    <pubDate>Mon, 28 Sep 2026 17:27:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is down by -0.51% today, the Dow Jones Industrial Average ($DOWI ) (DIA ) is down by -0.66%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is down -0.76%. December E-mini S&amp;P futures (ESZ26 ) are down -0.52%,…</description>
-    <category>SPY</category><category>QQQ</category><category>DJI</category>
-  </item>
-  <item>
-    <title>Cotton Starting Monday with Slight Weakness</title>
-    <link>https://www.nasdaq.com/articles/cotton-starting-monday-slight-weakness</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cotton-starting-monday-slight-weakness</guid>
-    <pubDate>Mon, 28 Sep 2026 17:27:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Cotton prices are down 3 to 6 points so far on Monday morning. Futures posted mixed trade at the Friday close, with front months down 51 to 60 points and deferreds up 8 to 11 points. December closed the week with a 156 point gain. Crude…</description>
-    
   </item>
 </channel>
 </rss>
