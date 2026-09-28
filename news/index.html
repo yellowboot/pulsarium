@@ -458,6 +458,8 @@
     flex-wrap: wrap;
   }
   .sentiment-legend span { display: flex; align-items: center; gap: 6px; }
+  .sentiment-legend .legend-more { margin-left: auto; color: var(--gold-1); font-weight: 600; }
+  .sentiment-legend .legend-more:hover { color: var(--gold-2); text-shadow: 0 0 10px var(--gold-1); }
   .legend-dot { width: 7px; height: 7px; border-radius: 50%; }
 
   .top-tickers-list {
@@ -1118,6 +1120,7 @@
       <span><span class="legend-dot" style="background:var(--pos)"></span>Positive</span>
       <span><span class="legend-dot" style="background:var(--neu)"></span>Neutral</span>
       <span><span class="legend-dot" style="background:var(--neg)"></span>Negative</span>
+      <a class="legend-more" href="/mood/">Mood Index history →</a>
     </div>
   </div>
   <div class="panel panel-mentions">
@@ -1169,6 +1172,7 @@
   <nav class="footer-browse" aria-label="Browse">
     <a href="/news/companies/">News by company &amp; sector</a>
     <a href="/news/daily/">Daily digest</a>
+    <a href="/mood/">Mood Index</a>
     <a href="/news/feed.xml">RSS feed</a>
   </nav>
   <div>Sources: Yahoo Finance · MarketWatch · Investing.com · CNBC · Nasdaq</div>

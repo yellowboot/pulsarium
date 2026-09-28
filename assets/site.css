@@ -255,6 +255,45 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 .analytics-consent button { padding: 0.55rem 0.9rem; color: inherit; background: rgba(10, 18, 40, 0.8); border: 1px solid rgba(120, 220, 255, 0.28); border-radius: 9px; cursor: pointer; font: inherit; }
 .analytics-consent button[data-choice="yes"] { background: var(--accent); color: var(--bg-0); border-color: var(--accent); font-weight: 700; }
 
+/* ---------- Mood Index (/mood/) ---------- */
+.mood-now strong { display: flex; align-items: baseline; gap: 4px; font-size: 44px; }
+.mood-now strong small { font-family: 'Chakra Petch', sans-serif; font-size: 15px; color: var(--text-low); }
+.mood-label { font-weight: 700; font-size: 16px; color: var(--accent); }
+.chart-panel { padding: 18px 16px 8px; }
+.mood-chart { display: block; width: 100%; height: auto; }
+.mood-chart .grid { stroke: rgba(120, 220, 255, 0.12); stroke-width: 1; }
+.mood-chart .grid.mid { stroke: rgba(120, 220, 255, 0.35); stroke-dasharray: 4 6; }
+.mood-chart .axis { fill: var(--text-low); font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+.mood-chart .bar.pos { fill: rgba(61, 255, 162, 0.55); }
+.mood-chart .bar.neg { fill: rgba(255, 107, 142, 0.6); }
+.mood-chart .bar.neu { fill: rgba(157, 178, 214, 0.5); }
+.mood-chart .avg { fill: none; stroke: url(#mood-line); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.6)); }
+.mood-list { display: flex; flex-direction: column; gap: 8px; }
+.mood-row {
+  display: grid; grid-template-columns: minmax(140px, 220px) minmax(0, 1fr) 44px minmax(0, 240px);
+  gap: 16px; align-items: center;
+  padding: 12px 18px; border-radius: 12px;
+  border: 1px solid rgba(120, 220, 255, 0.10); background: rgba(10, 18, 40, 0.5);
+  transition: border-color 0.2s;
+}
+.mood-row:hover { border-color: rgba(0, 240, 255, 0.45); }
+.mood-row > span:first-child { color: var(--text-hi); font-weight: 600; }
+.mood-row strong { font-family: 'Orbitron', sans-serif; color: var(--text-hi); text-align: right; }
+.mood-row small { color: var(--text-mid); font-size: 12.5px; }
+.mood-meter { position: relative; height: 8px; border-radius: 5px; background: var(--bg-0); overflow: hidden; }
+.mood-meter::after { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(255, 255, 255, 0.35); }
+.mood-meter i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 5px; }
+.mood-meter i.pos { background: linear-gradient(90deg, #10b981, var(--pos)); box-shadow: 0 0 10px rgba(61, 255, 162, 0.45); }
+.mood-meter i.neg { background: linear-gradient(90deg, #ff4757, var(--neg)); box-shadow: 0 0 10px rgba(255, 107, 142, 0.45); }
+.mood-meter i.neu { background: var(--neu); }
+.method p { max-width: 860px; color: var(--text-mid); font-size: 14.5px; line-height: 1.7; }
+.method a { color: var(--accent); }
+@media (max-width: 760px) {
+  .mood-row { grid-template-columns: minmax(0, 1fr) 44px; }
+  .mood-row .mood-meter { grid-column: 1 / -1; order: 3; }
+  .mood-row small { grid-column: 1 / -1; order: 4; }
+}
+
 /* ---------- Cabinet feature pages (site_pages.py) ---------- */
 .feature-head { max-width: 900px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }

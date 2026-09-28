@@ -60,7 +60,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add news_data.js watchlist_candidates.txt data/archive news sitemap.xml
+          git add news_data.js watchlist_candidates.txt data/archive news mood sitemap.xml
           if git diff --cached --quiet; then
             echo "No changes — skipping commit"
           else

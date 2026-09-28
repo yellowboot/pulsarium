@@ -62,6 +62,13 @@ STATIC_PAGES = [
     ("/news/", "hourly"),
 ]
 
+NEWS_LINKS = [
+    ("/news/", "Live news"),
+    ("/news/companies/", "News by company"),
+    ("/news/daily/", "Daily digest"),
+    ("/mood/", "Mood Index"),
+]
+
 esc = html.escape
 
 
@@ -250,6 +257,162 @@ def mood(items: list) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Pulsarium Mood Index
+# ---------------------------------------------------------------------------
+
+# A day needs this many market-signal headlines for an index value.
+MIN_MOOD_ITEMS = 10
+MOOD_LABELS = [(30, "Cautious"), (44, "Leaning cautious"), (55, "Neutral"), (69, "Leaning optimistic"), (100, "Optimistic")]
+
+
+def mood_label(value: int) -> str:
+    for limit, label in MOOD_LABELS:
+        if value <= limit:
+            return label
+    return MOOD_LABELS[-1][1]
+
+
+def mood_index(items: list, minimum: int = MIN_MOOD_ITEMS):
+    """0-100 from the sentiment of market-signal headlines (macro context is
+    left out, like everywhere on the site): positive +1, negative -1,
+    neutral 0, each weighted by 1 + importance/50 so that big stories count
+    more. 50 is neutral. None when there are too few headlines."""
+    signal = [i for i in items if (i.get("content_type") or "market_signal") == "market_signal"]
+    if len(signal) < minimum:
+        return None
+    total = score = 0.0
+    for item in signal:
+        weight = 1 + (item.get("importance") or 0) / 50
+        sign = 1 if item.get("sentiment") == "positive" else -1 if item.get("sentiment") == "negative" else 0
+        score += weight * sign
+        total += weight
+    value = round(50 + 50 * score / total)
+    return {"value": value, "label": mood_label(value), "headlines": len(signal)}
+
+
+def mood_history(days: list, per_day: dict) -> list:
+    """[{date, value, label, headlines, avg7}] for every day with enough news."""
+    history = []
+    for day in days:
+        m = mood_index(per_day[day])
+        if m:
+            history.append({"date": day, **m})
+    for n, point in enumerate(history):
+        start = date.fromisoformat(point["date"]) - timedelta(days=6)
+        week = [p["value"] for p in history[: n + 1] if date.fromisoformat(p["date"]) >= start]
+        point["avg7"] = round(sum(week) / len(week), 1)
+    return history
+
+
+def mood_chart(history: list) -> str:
+    """Static SVG: a bar per day (above/below 50) and the 7-day average line."""
+    if not history:
+        return ""
+    width, height, pad_l, pad_r, pad_t, pad_b = 1000, 300, 36, 12, 16, 34
+    plot_w, plot_h = width - pad_l - pad_r, height - pad_t - pad_b
+    first = date.fromisoformat(history[0]["date"])
+    span = max(1, (date.fromisoformat(history[-1]["date"]) - first).days)
+    # the scale fits the values seen (at least 30-70), so a calm month
+    # isn't a row of flat stubs
+    values = [p["value"] for p in history]
+    low = min(30, min(values) // 10 * 10)
+    high = max(70, -(-max(values) // 10) * 10)
+    x = lambda d: pad_l + (date.fromisoformat(d) - first).days / span * plot_w
+    y = lambda v: pad_t + (high - v) / (high - low) * plot_h
+    bar_w = max(3, min(14, plot_w / (span + 1) * 0.55))
+    parts = [f'<svg class="mood-chart" viewBox="0 0 {width} {height}" role="img" aria-label="Pulsarium Mood Index by day">',
+             '<defs><linearGradient id="mood-line" x1="0" x2="1"><stop offset="0" stop-color="#2f7bff"/>'
+             '<stop offset="1" stop-color="#00f0ff"/></linearGradient></defs>']
+    for level in range(low, high + 1, 10):
+        parts.append(f'<line x1="{pad_l}" x2="{width - pad_r}" y1="{y(level):.1f}" y2="{y(level):.1f}" class="grid{" mid" if level == 50 else ""}"/>'
+                     f'<text x="{pad_l - 8}" y="{y(level) + 4:.1f}" class="axis" text-anchor="end">{level}</text>')
+    for p in history:
+        top, bottom = sorted((y(p["value"]), y(50)))
+        tone = "pos" if p["value"] > 50 else "neg" if p["value"] < 50 else "neu"
+        parts.append(f'<rect x="{x(p["date"]) - bar_w / 2:.1f}" y="{top:.1f}" width="{bar_w:.1f}" height="{max(1.5, bottom - top):.1f}" rx="2" class="bar {tone}">'
+                     f'<title>{p["date"]}: {p["value"]} ({p["label"]})</title></rect>')
+    line = " ".join(f'{x(p["date"]):.1f},{y(p["avg7"]):.1f}' for p in history)
+    parts.append(f'<polyline points="{line}" class="avg"/>')
+    last_label = None
+    for p in history:
+        d = date.fromisoformat(p["date"])
+        if d.weekday() == 0 and (last_label is None or (d - last_label).days >= 7):
+            parts.append(f'<text x="{x(p["date"]):.1f}" y="{height - 10}" class="axis" text-anchor="middle">{d.day} {d.strftime("%b")}</text>')
+            last_label = d
+    parts.append("</svg>")
+    return "".join(parts)
+
+
+def mood_page(history: list, window: list, now: datetime) -> tuple:
+    path = "/mood/"
+    today = history[-1] if history else None
+    prev = history[-2] if len(history) > 1 else None
+    week_items = [i for i in window if i["_time"] >= now - timedelta(days=7)]
+    sectors = {}
+    for item in week_items:
+        for s in item["_sectors"]:
+            sectors.setdefault(s, []).append(item)
+    sector_rows = []
+    for sector, items in sectors.items():
+        m = mood_index(items, minimum=8)
+        if m:
+            sector_rows.append((sector, m))
+    sector_rows.sort(key=lambda row: -row[1]["value"])
+    sector_html = "".join(
+        f'<a class="mood-row" href="/news/sector/{sector_slug(s)}/"><span>{esc(s)}</span>'
+        f'<span class="mood-meter"><i style="width:{m["value"]}%" class="{"pos" if m["value"] > 50 else "neg" if m["value"] < 50 else "neu"}"></i></span>'
+        f'<strong>{m["value"]}</strong><small>{esc(m["label"])} · {m["headlines"]} headlines</small></a>'
+        for s, m in sector_rows
+    )
+    recent = "".join(
+        f'<a class="day-row" href="/news/daily/{p["date"]}/"><strong>{fmt_day(date.fromisoformat(p["date"]))}</strong>'
+        f'<span>{p["value"]} · {esc(p["label"])}</span><span>{p["headlines"]} headlines · 7-day avg {p["avg7"]:g}</span></a>'
+        for p in reversed(history[-14:])
+    )
+    if today:
+        change = f'{today["value"] - prev["value"]:+d} vs previous day' if prev else "first reading"
+        headline = f'{today["value"]} — {today["label"]}'
+        gauge = f"""<section class="stats">
+  <div class="panel stat mood-now"><span class="stat-label">Latest · {fmt_short_day(date.fromisoformat(today["date"]))}</span><strong>{today["value"]}<small>/100</small></strong><span class="mood-label">{esc(today["label"])}</span><small>{change}</small></div>
+  <div class="panel stat"><span class="stat-label">7-day average</span><strong>{today["avg7"]:g}</strong><small>{esc(mood_label(round(today["avg7"])))}</small></div>
+  <div class="panel stat"><span class="stat-label">Based on</span><strong>{today["headlines"]}</strong><small>market headlines that day</small></div>
+</section>"""
+        title = f"Stock market mood today: {today['value']}/100, {today['label'].lower()} | Pulsarium Mood Index"
+        description = (f"The Pulsarium Mood Index reads the sentiment of the day's stock market headlines: "
+                       f"{today['value']}/100 ({today['label'].lower()}) on {fmt_day(date.fromisoformat(today['date']))}, "
+                       f"7-day average {today['avg7']:g}. Daily history and sector moods.")
+    else:
+        headline, gauge = "not enough headlines yet", ""
+        title = "Stock market mood index from the news | Pulsarium"
+        description = "The Pulsarium Mood Index reads the sentiment of each day's stock market headlines."
+    body = f"""<header class="page-head">
+  <span class="eyebrow">Pulsarium Mood Index</span>
+  <h1>Stock market mood: {esc(headline)}</h1>
+  <p class="lead">How the day's market news reads, on a scale from 0 (every headline negative) to 100 (every headline positive); 50 is neutral. Updated with every news refresh.</p>
+</header>
+{gauge}
+<section class="block">
+  <h2>Day by day <small>bars: the day's value · line: 7-day average</small></h2>
+  <div class="panel chart-panel">{mood_chart(history)}</div>
+</section>
+{f'<section class="block"><h2>Sector moods <small>last 7 days, sectors with at least 8 headlines</small></h2><div class="mood-list">{sector_html}</div></section>' if sector_html else ""}
+{cta("Your holdings, with the mood around them",
+     "The free cabinet filters the news to what you own and watch, so you see which way your names are being written about.")}
+<section class="block">
+  <h2>Recent days</h2>
+  <div class="day-list">{recent}</div>
+</section>
+<section class="block method">
+  <h2>How the index is made</h2>
+  <p>Every headline Pulsarium collects from public sources is scored as positive, negative or neutral and given an importance from 0 to 100 (by a language model when available, otherwise by keyword rules). Macro and geopolitical context without a direct market target is left out. For each day, positive headlines count +1 and negative −1, each weighted by 1 + importance/50, and the weighted average is mapped to 0–100. Days with fewer than {MIN_MOOD_ITEMS} market headlines get no value.</p>
+  <p>The index describes the tone of news coverage, not prices, and is not investment advice. The full history is available as <a href="/mood/history.json">JSON</a>; please link to this page if you use it.</p>
+</section>
+"""
+    crumbs = [("Home", "/"), ("News", "/news/"), ("Mood Index", path)]
+    return path, page(path=path, title=title, description=description, body=body, crumbs=crumbs), True
+
+
+# ---------------------------------------------------------------------------
 # HTML pieces
 # ---------------------------------------------------------------------------
 
@@ -330,6 +493,7 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
 
 <footer class="site-footer">
   <nav class="footer-cabinet" aria-label="Personal cabinet">{"".join(f'<a href="{href}">{esc(name)}</a>' for href, name in site_pages.CABINET_LINKS)}</nav>
+  <nav class="footer-cabinet footer-news" aria-label="News">{"".join(f'<a href="{href}">{esc(name)}</a>' for href, name in NEWS_LINKS)}</nav>
   <p>Headlines come from public RSS feeds and link to their original publishers. Sentiment and importance are automated scores, not investment advice.</p>
   <nav class="footer-legal" aria-label="Legal">
     <a class="footer-faq" href="{APP_URL}?legal=faq">FAQ</a>
@@ -543,7 +707,7 @@ def sector_page(sector: str, items: list, companies: dict, counts: dict, now: da
     return path, page(path=path, title=title, description=description, body=body, crumbs=crumbs, indexable=indexable), indexable
 
 
-def daily_page(day: str, items: list, companies: dict, prev_day, next_day) -> tuple:
+def daily_page(day: str, items: list, companies: dict, prev_day, next_day, mood_point=None) -> tuple:
     d = date.fromisoformat(day)
     path = f"/news/daily/{day}/"
     m = mood(items)
@@ -578,6 +742,7 @@ def daily_page(day: str, items: list, companies: dict, prev_day, next_day) -> tu
 </header>
 
 <section class="stats">
+  {f'<div class="panel stat"><span class="stat-label">Mood Index</span><strong>{mood_point["value"]}</strong><small>{esc(mood_point["label"])} · <a href="/mood/">about the index</a></small></div>' if mood_point else ""}
   <div class="panel stat stat-wide"><span class="stat-label">Sentiment</span>{sentiment_bar(m)}</div>
   <div class="panel stat stat-wide"><span class="stat-label">Most mentioned</span><div class="chips">{ticker_chips or '<small>—</small>'}</div></div>
 </section>
@@ -761,18 +926,25 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
     # rebuilds them all, e.g. after a template or COMPANY_MAP change.
     days = archive.all_days()
     per_day = {day: list(archive.load(day).values()) for day in days}
+    history = mood_history(days, per_day)
+    mood_by_day = {p["date"]: p for p in history}
     for n, day in enumerate(days):
         day_path = f"/news/daily/{day}/"
         freq = "daily" if n + 1 == len(days) else "monthly"
         if full or n >= len(days) - 3 or not os.path.exists(url_file(day_path)):
             prev_day = days[n - 1] if n > 0 else None
             next_day = days[n + 1] if n + 1 < len(days) else None
-            emit(daily_page(day, tag_items(per_day[day]), companies, prev_day, next_day), day, freq)
+            emit(daily_page(day, tag_items(per_day[day]), companies, prev_day, next_day, mood_by_day.get(day)), day, freq)
         elif len(per_day[day]) >= MIN_INDEXABLE_DAY:
             sitemap_entries.append((day_path, day, freq))
     if days:
         emit(daily_index(days, per_day), days[-1], "daily")
     emit(companies_hub(companies, counts, sector_totals), today.isoformat(), "daily")
+    emit(mood_page(history, window, now), history[-1]["date"] if history else None, "daily")
+    write_if_changed(os.path.join("mood", "history.json"),
+                     json.dumps({"index": "Pulsarium Mood Index", "scale": "0-100, 50 = neutral",
+                                 "source": f"{SITE}/mood/", "days": history}, indent=1) + "\n",
+                     changed_files)
 
     # the personal cabinet's feature and broker-import pages (site_pages.py)
     for spec in site_pages.all_pages():

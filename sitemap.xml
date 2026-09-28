@@ -33,6 +33,11 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/mood/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/aal/</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>hourly</changefreq>
