@@ -49,14 +49,33 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: python fetch_news.py
 
+      # Archive + company/sector/daily pages, RSS and sitemap (site_build.py).
+      # A failure here must not hold back the news update itself.
+      - name: Build the SEO pages
+        continue-on-error: true
+        run: python site_build.py --changed-urls "$RUNNER_TEMP/changed-urls.txt"
+
       - name: Commit updated news_data.js
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add news_data.js watchlist_candidates.txt
+          git add news_data.js watchlist_candidates.txt data/archive news sitemap.xml
           if git diff --cached --quiet; then
             echo "No changes — skipping commit"
           else
             git commit -m "Auto-update news feed [skip ci]"
             git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # IndexNow (Bing, Yandex, Seznam...) fetches the changed pages right
+      # away; wait for GitHub Pages to publish the push first.
+      - name: Ping IndexNow
+        if: steps.commit.outputs.pushed == 'true'
+        continue-on-error: true
+        run: |
+          if [ -s "$RUNNER_TEMP/changed-urls.txt" ]; then
+            sleep 90
+            python site_build.py --indexnow "$RUNNER_TEMP/changed-urls.txt"
           fi

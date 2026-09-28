@@ -210,7 +210,9 @@ COMPANY_MAP = [
     {"ticker": "LMT",  "sector": "Defense",       "names": ["Lockheed Martin"]},
     {"ticker": "BA",   "sector": "Defense",       "names": ["Boeing"]},
     {"ticker": "NOC",  "sector": "Defense",       "names": ["Northrop Grumman"]},
-    {"ticker": "RTX",  "sector": "Defense",       "names": ["RTX", "Raytheon"]},
+    # "RTX PRO 5500", "RTX 5090" are Nvidia graphics cards, not RTX Corp
+    {"ticker": "RTX",  "sector": "Defense",       "names": ["RTX", "Raytheon"],
+     "exclude": r"\bRTX\s*(?:PRO\b|\d{3,4}\b)"},
     {"ticker": "LHX",  "sector": "Defense",       "names": ["L3Harris"]},
     # Paris listing; plain "AIR" is AAR Corp's US ticker
     {"ticker": "AIR.PA", "sector": "Defense",     "names": ["Airbus"]},
@@ -758,6 +760,8 @@ def detect_watchlist_matches(text: str) -> list:
     4) An entry with "match_ticker": False is found by name only — for a
        ticker that is also part of other names ("MGM" in "Amazon MGM
        Studios").
+    5) An entry's "exclude" pattern is cut out of the text before matching
+       it — for look-alikes such as Nvidia's "RTX PRO" cards vs RTX Corp.
     Typographic apostrophes are made plain first: feeds write
     "McDonald’s", COMPANY_MAP writes "McDonald's".
     """
@@ -766,14 +770,15 @@ def detect_watchlist_matches(text: str) -> list:
     for entry in COMPANY_MAP:
         ticker = entry["ticker"]
         matched = False
+        entry_text = re.sub(entry["exclude"], " ", text) if entry.get("exclude") else text
 
         if (len(ticker) >= 3 and entry.get("match_ticker", True)
-                and re.search(r"\b" + re.escape(ticker) + r"\b", text)):
+                and re.search(r"\b" + re.escape(ticker) + r"\b", entry_text)):
             matched = True
 
         if not matched:
             for name in entry["names"]:
-                if re.search(r"\b" + re.escape(name) + r"\b", text, flags=re.IGNORECASE):
+                if re.search(r"\b" + re.escape(name) + r"\b", entry_text, flags=re.IGNORECASE):
                     matched = True
                     break
 

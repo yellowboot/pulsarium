@@ -1,7 +1,23 @@
 # Pulsarium
 
-> Pulsarium is a market intelligence platform for investors. It currently provides a free, real-time stock market news dashboard; a personal portfolio, watchlist and AI research assistant are in development.
+> Pulsarium is a market intelligence platform for private investors: a free, live stock market news dashboard at pulsarium.finance, and a free personal cabinet at app.pulsarium.finance for tracking portfolios, dividends, watchlists and price alerts. Paid tiers with an AI research assistant are planned.
 
-## Product
-- [News dashboard](https://pulsarium.finance/news/): Live stock market news aggregated from public sources (Yahoo Finance, MarketWatch, CNBC, Nasdaq, Investing.com, CoinDesk), tagged by ticker and sector, and scored for sentiment and importance. Refreshes automatically throughout the trading day.
-- [Home](https://pulsarium.finance/): Overview of the platform and what's coming next.
+## Personal cabinet (app.pulsarium.finance, free beta)
+- Portfolio tracking: several portfolios in different currencies, positions, weights, performance over time, per-position weight limits.
+- Dividends and stock splits: detected automatically and applied after the investor confirms them; dividend history per holding.
+- Broker file import: transaction exports from Revolut, DEGIRO, Trading 212 and Interactive Brokers (IBKR activity statements), plus any CSV with column mapping. No broker login or credentials are needed — only the exported file.
+- Watchlists with price alerts above or below a level, with email notifications.
+- Signal Feed: news filtered to the investor's holdings and watchlists.
+- Privacy and security: two-factor authentication (TOTP), Google and Apple sign-in, row-level data isolation, full data export and self-service account deletion.
+- Market data may be delayed.
+
+## News (pulsarium.finance)
+- [Live news dashboard](https://pulsarium.finance/news/): stock market headlines aggregated from public sources (Yahoo Finance, CNBC, MarketWatch, Nasdaq, Investing.com, CoinDesk and sector outlets), tagged by ticker and sector and scored for sentiment and importance. Refreshes throughout the trading day.
+- [News by company and sector](https://pulsarium.finance/news/companies/): one page per company (e.g. [Nvidia](https://pulsarium.finance/news/nvda/)) and per sector with the last 30 days of headlines and a sentiment summary.
+- [Daily digest](https://pulsarium.finance/news/daily/): each day's top stories, sentiment and most mentioned companies.
+- [RSS feed](https://pulsarium.finance/news/feed.xml) of the latest headlines.
+
+## About
+- [Home](https://pulsarium.finance/): overview of the platform.
+- [FAQ](https://app.pulsarium.finance/?legal=faq), [Privacy](https://app.pulsarium.finance/?legal=privacy), [Financial notice](https://app.pulsarium.finance/?legal=disclaimer).
+- Sentiment and importance scores are automated and are not investment advice.
