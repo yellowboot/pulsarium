@@ -425,14 +425,6 @@ def mood_page(history: list, window: list, now: datetime) -> tuple:
 # HTML pieces
 # ---------------------------------------------------------------------------
 
-FAVICON = (
-    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' "
-    "height='64' rx='16' fill='%2304050c'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23ff2bd6' "
-    "stroke-width='1.5' opacity='0.45'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%2300f0ff' "
-    "stroke-width='2' opacity='0.6'/%3E%3Cpath d='M32 32 L29.5 4 L34.5 4 Z M32 32 L29.5 60 L34.5 60 Z' "
-    "fill='%2300f0ff' opacity='0.85' transform='rotate(25 32 32)'/%3E%3Ccircle cx='32' cy='32' r='7' "
-    "fill='%23ffffff'/%3E%3C/svg%3E"
-)
 
 
 @functools.lru_cache(maxsize=None)
@@ -481,7 +473,9 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{SITE}/og/pulsarium-og-v2.jpg">
 <link rel="alternate" type="application/rss+xml" title="Pulsarium market news" href="/news/feed.xml">
-<link rel="icon" type="image/svg+xml" href="{FAVICON}">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="{asset_url('/assets/site.css')}">
 <script type="application/ld+json">{json.dumps(crumb_ld, ensure_ascii=False)}</script>
