@@ -492,6 +492,7 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
     <a href="/portfolio-tracker/">Portfolio tracker</a>
     <a href="/news/">Live news</a>
     <a href="/mood/">Mood Index</a>
+    <a href="/tools/">Calculators</a>
     <a class="nav-secondary" href="/news/companies/">Companies</a>
     <a class="nav-secondary" href="/news/daily/">Daily digest</a>
     <a class="btn btn-primary" href="{APP_URL}">Sign in</a>

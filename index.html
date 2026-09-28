@@ -252,6 +252,16 @@
   .trust-row { margin-top: 22px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; scroll-margin-top: 20px; }
   .trust { display: flex; align-items: center; gap: 12px; padding: 18px 20px; border-radius: 16px; border: 1px solid rgba(120,220,255,0.12); background: rgba(8,14,32,0.5); font-size: 14px; line-height: 1.4; color: var(--text-body); }
   .trust svg { flex-shrink: 0; color: var(--accent); }
+  .tools-row { margin-top: 22px; display: grid; grid-template-columns: auto repeat(3, minmax(0, 1fr)); align-items: center; gap: 14px; }
+  .tools-eyebrow { padding-right: 6px; }
+  .tool { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-radius: 16px; border: 1px solid rgba(120,220,255,0.12); background: rgba(8,14,32,0.5); transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
+  .tool:hover { border-color: rgba(0,240,255,0.5); box-shadow: 0 0 24px rgba(0,240,255,0.15); transform: translateY(-2px); }
+  .tool svg { flex-shrink: 0; color: var(--accent); }
+  .tool span { display: flex; flex-direction: column; gap: 2px; }
+  .tool strong { font-size: 15px; color: var(--text-hi); }
+  .tool small { font-size: 12.5px; color: var(--text-mid); }
+  @media (max-width: 1100px) { .tools-row { grid-template-columns: repeat(3, minmax(0, 1fr)); } .tools-eyebrow { grid-column: 1 / -1; } }
+  @media (max-width: 700px) { .tools-row { grid-template-columns: 1fr; } }
 
   /* ---------- Coming later ---------- */
   .later {
@@ -341,6 +351,7 @@
       <nav class="main-nav" aria-label="Main">
         <a class="navlink" href="news/">News</a>
         <a class="navlink" href="/mood/">Mood Index</a>
+        <a class="navlink" href="/tools/">Calculators</a>
         <a class="navlink" href="#cabinet">Personal cabinet</a>
         <a class="navlink" href="#security">Security</a>
         <a class="navlink" href="https://app.pulsarium.finance/?legal=faq">FAQ</a>
@@ -461,6 +472,13 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
           <span>End-of-day prices from Marketstack</span>
         </div>
+      </section>
+
+      <section class="tools-row" aria-label="Free calculators">
+        <span class="eyebrow tools-eyebrow">Free calculators</span>
+        <a class="tool" href="/tools/dividend-yield-calculator/"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 19h2M12 19h4"/></svg><span><strong>Dividend yield</strong><small>Yield, yield on cost and your yearly income</small></span></a>
+        <a class="tool" href="/tools/dca-calculator/"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 19h2M12 19h4"/></svg><span><strong>Monthly investing (DCA)</strong><small>What regular investing can grow to</small></span></a>
+        <a class="tool" href="/tools/rebalancing-calculator/"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 19h2M12 19h4"/></svg><span><strong>Rebalancing</strong><small>What to buy or sell to hit your targets</small></span></a>
       </section>
 
       <section class="later" aria-label="Coming soon">
