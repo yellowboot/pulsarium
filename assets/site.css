@@ -336,6 +336,15 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 .calc-warning { margin: 0; color: #ffb347; font-size: 13.5px; }
 @media (max-width: 560px) { .rb-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .rb-name { grid-column: 1 / -1; } .rb-head { display: none; } }
 
+/* ---------- Cabinet screenshots ---------- */
+.shot { margin: 30px 0 0; padding: 10px 10px 0; overflow: hidden; }
+.shot img { display: block; width: 100%; height: auto; border-radius: 11px; box-shadow: 0 0 0 1px rgba(120, 220, 255, 0.12), 0 18px 50px rgba(0, 0, 0, 0.5); }
+.shot figcaption { padding: 12px 6px 14px; font-size: 13px; color: var(--text-mid); }
+.shot figcaption span { color: var(--text-low); }
+.shot-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.shot-pair .shot { margin: 0; }
+@media (max-width: 760px) { .shot-pair { grid-template-columns: minmax(0, 1fr); } }
+
 /* ---------- Cabinet feature pages (site_pages.py) ---------- */
 .feature-head { max-width: 900px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }

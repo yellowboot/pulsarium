@@ -438,7 +438,7 @@ def asset_url(path: str) -> str:
 
 
 def page(*, path: str, title: str, description: str, body: str, crumbs: list,
-         indexable: bool = True, extra_head: str = "") -> str:
+         indexable: bool = True, extra_head: str = "", og_image: str = "/og/pulsarium-og-v2.jpg") -> str:
     url = SITE + path
     crumb_ld = {
         "@context": "https://schema.org",
@@ -467,11 +467,9 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{esc(url)}">
-<meta property="og:image" content="{SITE}/og/pulsarium-og-v2.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="{SITE}{og_image}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="{SITE}/og/pulsarium-og-v2.jpg">
+<meta name="twitter:image" content="{SITE}{og_image}">
 <link rel="alternate" type="application/rss+xml" title="Pulsarium market news" href="/news/feed.xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -965,7 +963,8 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
     for spec in site_pages.all_pages() + site_tools.all_pages():
         crumbs = [("Home", "/")] + ([spec["parent"]] if spec.get("parent") else []) + [(spec["crumb"], spec["path"])]
         emit((spec["path"], page(path=spec["path"], title=spec["title"], description=spec["description"],
-                                 body=spec["body"], crumbs=crumbs, extra_head=spec.get("head", "")), True),
+                                 body=spec["body"], crumbs=crumbs, extra_head=spec.get("head", ""),
+                                 **({"og_image": spec["og_image"]} if spec.get("og_image") else {})), True),
              None, "monthly")
 
     write_if_changed(os.path.join("news", "feed.xml"), rss_feed(window, now), changed_files)

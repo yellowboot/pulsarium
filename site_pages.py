@@ -38,6 +38,36 @@ def hero(eyebrow: str, h1: str, lead: str, secondary=None) -> str:
 </header>"""
 
 
+# Screenshots of a demo account (sample data, no real portfolio): name ->
+# height at 1600 px wide. WebP for the page, JPEG as the sharing image.
+SHOTS = {
+    "cabinet-overview": 769,
+    "cabinet-overview-sectors": 776,
+    "cabinet-portfolio": 780,
+    "cabinet-dividends": 772,
+    "cabinet-watchlists": 772,
+    "cabinet-overview-calm": 773,
+}
+
+
+def shot_pair(title: str, left: tuple, right: tuple) -> str:
+    """Two screenshots side by side, each (name, alt, label)."""
+    figures = "".join(
+        f'<figure class="panel shot"><img src="/assets/shots/{name}.webp" alt="{esc(alt)}" width="1600" '
+        f'height="{SHOTS[name]}" loading="lazy" decoding="async"><figcaption>{esc(label)}</figcaption></figure>'
+        for name, alt, label in (left, right)
+    )
+    return f'<section class="block"><h2>{esc(title)}</h2><div class="shot-pair">{figures}</div></section>'
+
+
+def shot(name: str, alt: str, caption: str, first: bool = False) -> str:
+    """A cabinet screenshot; the first one on a page loads eagerly (it's in view)."""
+    loading = 'fetchpriority="high"' if first else 'loading="lazy"'
+    return (f'<figure class="panel shot"><img src="/assets/shots/{name}.webp" alt="{esc(alt)}" '
+            f'width="1600" height="{SHOTS[name]}" {loading} decoding="async">'
+            f'<figcaption>{esc(caption)} <span>Demo account with sample data.</span></figcaption></figure>')
+
+
 def features(title: str, cards: list) -> str:
     items = "".join(
         f'<article class="panel feature"><h3>{esc(h)}</h3><p>{p}</p></article>' for h, p in cards
@@ -207,6 +237,8 @@ def broker_page(slug: str, broker: dict) -> dict:
              ("/import/", "All supported brokers"))
         + steps(f"1. Export the file from {name}", broker["export"])
         + steps("2. Import it into Pulsarium", IMPORT_REVIEW_STEPS)
+        + shot("cabinet-portfolio", "Imported trades shown as positions in the Pulsarium portfolio table",
+               "After the import: every position with its average cost, P&L, dividends and weight.")
         + notes
         + closing_cta(f"Track your {short} portfolio in one place",
                       "Positions, dividends, price alerts and news about what you hold — free during the beta.")
@@ -242,6 +274,8 @@ def portfolio_tracker() -> dict:
              "alerts at your price levels and the news that concerns it. Import trades from your broker's file; "
              "no broker login needed.",
              ("/import/", "Import from your broker"))
+        + shot("cabinet-overview", "Pulsarium overview: portfolio value, performance chart, top positions, news and alert bands",
+               "The overview: value and P&L, performance, top positions, the news about them and alert bands.", first=True)
         + features("Everything about your holdings, in one place", [
             ("Several portfolios and currencies", "Keep separate portfolios — each with its own base currency — and see positions, weights and value converted for you."),
             ("Performance over time", "A performance chart with the ranges you need, plus the day's move of every position."),
@@ -250,6 +284,8 @@ def portfolio_tracker() -> dict:
             ("News about what you own", "The Signal Feed filters market news to your holdings and watchlists, tagged by sentiment."),
             ("Your data stays yours", "Two-factor sign-in, data isolated per account, full export of transactions and account data, and self-service deletion."),
         ])
+        + shot("cabinet-portfolio", "Pulsarium portfolio table with shares, average cost, price, P&L, dividends and weight",
+               "Every position with its average cost, price, unrealized and realized P&L, dividends and weight.")
         + steps("Start in three steps", [
             ("Create a free account", "Sign up with email or Google and turn on two-factor authentication if you like."),
             ("Add your trades", "Upload a file from <a href=\"/import/\">Revolut, DEGIRO, Trading 212 or IBKR</a>, import any CSV or TSV, or add trades by hand."),
@@ -261,7 +297,7 @@ def portfolio_tracker() -> dict:
         + related("/portfolio-tracker/")
     )
     return {
-        "path": "/portfolio-tracker/", "crumb": "Portfolio tracker",
+        "path": "/portfolio-tracker/", "crumb": "Portfolio tracker", "og_image": "/assets/shots/cabinet-overview.jpg",
         "title": "Free stock portfolio tracker with dividends, alerts and news | Pulsarium",
         "description": "Track several stock portfolios in different currencies: weights, performance, dividends, "
                        "price alerts and news about your holdings. Import from Revolut, DEGIRO, Trading 212 or IBKR "
@@ -285,6 +321,8 @@ def dividend_tracker() -> dict:
              "A dividend calendar for your own holdings: expected payouts, your monthly dividend flow and every "
              "dividend recorded against the position that paid it.",
              ("/portfolio-tracker/", "See the portfolio tracker"))
+        + shot("cabinet-dividends", "Pulsarium dividend calendar with expected payouts and monthly dividend flow",
+               "The dividend calendar: announced and estimated payouts, the next 90 days and the monthly flow.", first=True)
         + features("Built for dividend investors", [
             ("Dividend calendar", "Expected payouts for the companies you hold, in one calendar."),
             ("Monthly dividend flow", "See how much income arrives month by month."),
@@ -297,7 +335,7 @@ def dividend_tracker() -> dict:
         + related("/dividend-tracker/")
     )
     return {
-        "path": "/dividend-tracker/", "crumb": "Dividend tracker",
+        "path": "/dividend-tracker/", "crumb": "Dividend tracker", "og_image": "/assets/shots/cabinet-dividends.jpg",
         "title": "Free dividend tracker and dividend calendar for your stocks | Pulsarium",
         "description": "A dividend calendar for your own portfolio: expected payouts, monthly dividend flow, "
                        "dividends and splits detected automatically and confirmed by you. Free during the beta.",
@@ -320,6 +358,8 @@ def price_alerts() -> dict:
              "Put the stocks you are waiting for on a watchlist, set an upper or lower price, and get an email when "
              "the close crosses it — no need to check the market every day.",
              ("/portfolio-tracker/", "See the portfolio tracker"))
+        + shot("cabinet-watchlists", "Pulsarium watchlist with upper and lower price alerts per stock",
+               "A watchlist with an upper and a lower alert on each name.", first=True)
         + features("Wait for your price, calmly", [
             ("Upper and lower levels", "Set a price above, below, or both for any name on a watchlist."),
             ("Alert bands on the overview", "See at a glance how close each name is to its alert — the closest ones first."),
@@ -332,7 +372,7 @@ def price_alerts() -> dict:
         + related("/price-alerts/")
     )
     return {
-        "path": "/price-alerts/", "crumb": "Price alerts",
+        "path": "/price-alerts/", "crumb": "Price alerts", "og_image": "/assets/shots/cabinet-watchlists.jpg",
         "title": "Free stock price alerts by email for your watchlist | Pulsarium",
         "description": "Set upper and lower price alerts on a stock watchlist and get an email when the closing "
                        "price crosses your level. Free during the beta, no broker login needed.",
@@ -386,6 +426,8 @@ def why_pulsarium() -> dict:
              "the other road: you upload the file your broker already gives you, and your holdings, dividends, alerts "
              "and news live in a private cabinet only you can open.",
              ("/import/", "See supported brokers"))
+        + shot("cabinet-overview-sectors", "Pulsarium overview with allocation by sector, performance and news",
+               "The overview with allocation by sector, performance and the news about your holdings.", first=True)
         + features("What sets it apart", [
             ("No credentials, no aggregator", "Nothing connects to your broker. You decide what goes in, file by file."),
             ("News where your money is", "A live news desk tagged by ticker and sector, and a feed filtered to what you hold — not a social timeline."),
@@ -394,12 +436,15 @@ def why_pulsarium() -> dict:
             ("Privacy you can check", "Two-factor sign-in, data isolated per account, full export and self-service deletion."),
             ("Free to start", "The cabinet is free during the public beta; paid plans will add an AI research assistant."),
         ])
+        + shot_pair("Two themes, one workspace",
+                    ("cabinet-overview", "Pulsarium overview in the dark Neon theme", "Neon — a night mode with glow"),
+                    ("cabinet-overview-calm", "Pulsarium overview in the light Calm theme", "Calm — a quiet light theme"))
         + closing_cta("Try it with your own portfolio", "Create a free account and import your broker file in minutes.")
         + faq_section
         + related("/why-pulsarium/")
     )
     return {
-        "path": "/why-pulsarium/", "crumb": "Why Pulsarium",
+        "path": "/why-pulsarium/", "crumb": "Why Pulsarium", "og_image": "/assets/shots/cabinet-overview-sectors.jpg",
         "title": "A private portfolio tracker without broker logins - why Pulsarium | Pulsarium",
         "description": "Pulsarium tracks your stocks, dividends and price alerts from broker files you upload - no "
                        "broker credentials, no aggregator, no ads. Free during the public beta.",
