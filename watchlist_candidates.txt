@@ -6,30 +6,39 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 28.09.2026 19:54
-24 of 80 news items unmatched this run
+Generated: 28.09.2026 20:40
+33 of 80 news items unmatched this run
 
-- [Nasdaq] Pinnacle West Capital (PNW) Shares Cross 4% Yield Mark
-- [Nasdaq] Eversource Energy (ES) Shares Cross 5% Yield Mark
-- [Nasdaq] Notable Monday Option Activity: PSIX, UVE, PRAX
-- [Nasdaq] Noteworthy Monday Option Activity: TEX, GEO, CLF
-- [Yahoo Finance] Update: US Equity Indexes Fall as Iran Settlement Talks Lose Momentum
-- [Investing.com] U.S. stocks slip as OpenAI training halt weighs on AI trade, bonds extend rout
-- [Yahoo Finance] Trade Desk Is Down 68% This Year. Is It Time to Sell, or Is This a Lifetime Opportunity?
+- [Investing.com] Canada stocks lower at close of trade; S&P/TSX Composite down 0.87%
+- [Investing.com] Moody’s cuts Dave & Buster’s outlook to negative on sales slump
+- [Investing.com] Brazil stocks lower at close of trade; Bovespa down 0.26%
+- [CNBC] A relief rally could be coming soon for these stocks getting hurt by higher rates, says Katie Stockton
+- [Investing.com] US says GM tech costs to drop by $20 billion through 2031 due to new emissions rules
+- [Investing.com] Jefferies quarterly profit jumps on deal surge, equities trading strength
+- [Investing.com] Navitas Semiconductor stock surges 20% on U.S. defense contract
+- [Investing.com] TSX ends lower as telecoms and financials slide, energy stocks buck trend
+- [Investing.com] SI-Bone stock gains after FDA clears spinal fusion system
 - [Nasdaq] Cotton Trying to Push Higher on Monday
 - [Nasdaq] Cattle Slipping Back to Start the Week
-- [Nasdaq] Hogs Showing Steadier Trade on Monday
 - [Nasdaq] Corn Getting Pressured Lower at Midday
+- [Nasdaq] Hogs Showing Steadier Trade on Monday
 - [Nasdaq] Wheat Facing Early Monday Losses
-- [Yahoo Finance] Why Shares of Perpetua Resources Are Falling Today
 - [CNBC] LeBron James is already boosting ticket and merchandise demand for Philadelphia 76ers
-- [Yahoo Finance] MP Materials Just Sank 21% in a Month. Is It Time to Sell, or Is This a Prime Buying Opportunity?
-- [Nasdaq] Soybean Pressure Continuing to Monday’s Midday
-- [Nasdaq] Wheat Weakness Holding at Monday’s Midday Trade
-- [Nasdaq] Cocoa Prices Erase Early Gains on Abundant Ivory Coast Supplies
-- [Investing.com] Dollar Index stalls at 101.15 resistance on bearish divergence: Live
+- [Nasdaq] Sugar Prices Settle Mixed as Crude Oil Erases an Early Rally
+- [Nasdaq] Cocoa Prices Pressured by Ample Ivory Coast Cocoa Supplies
+- [Nasdaq] Dry Weather Forecasts in Brazil Spark Short Covering in Coffee
+- [Nasdaq] HMY Makes Notable Cross Below Critical Moving Average
+- [Nasdaq] AngloGold Ashanti Breaks Below 200-Day Moving Average - Notable for AU
+- [Nasdaq] Natural Resource Partners Breaks Above 200-Day Moving Average - Bullish for NRP
+- [Nasdaq] Bullish Two Hundred Day Moving Average Cross - UMH
+- [Nasdaq] Blue Owl Capital Becomes Oversold
+- [Nasdaq] ATI Stock Getting Very Oversold
+- [Nasdaq] AREC Crosses Critical Technical Indicator
+- [MarketWatch] Before you invest in the Oura IPO, understand what you’re buying
+- [Yahoo Finance] Sector Update: Energy Stocks Higher Late Afternoon
+- [Yahoo Finance] Sector Update: Tech Stocks Fall Late Afternoon
+- [Yahoo Finance] Veteran marketer defends controversial Sydney Sweeney jeans ad campaign: The publicity was 'worth billions'
 - [CNBC] Oil prices off highs after reports Saudi pipeline ramping back up
-- [CNBC] Elon Musk, SpaceXAI subpoenaed by NYC in AI safety investigation
+- [MarketWatch] The U.S. and China agree to $60 billion in tariff cuts on products like dolls and fireworks. Rare earths remain a sticking point.
 - [CNBC] Anthropic launches cheaper AI model, its second release since CEO's call for a slowdown
 - [Mining.com] B2Gold strikes new Goose gold zone
-- [Mining.com] Montage pours first gold at Koné ahead of schedule
