@@ -252,7 +252,7 @@ def portfolio_tracker() -> dict:
         ])
         + steps("Start in three steps", [
             ("Create a free account", "Sign up with email or Google and turn on two-factor authentication if you like."),
-            ("Add your trades", "Upload a file from <a href=\"/import/\">Revolut, DEGIRO, Trading 212 or IBKR</a>, import a CSV, or add trades by hand."),
+            ("Add your trades", "Upload a file from <a href=\"/import/\">Revolut, DEGIRO, Trading 212 or IBKR</a>, import any CSV or TSV, or add trades by hand."),
             ("Follow along", "Watch weights, dividends and news; set <a href=\"/price-alerts/\">price alerts</a> on the names you are waiting for."),
         ])
         + closing_cta("Put your portfolio in one calm place",
@@ -356,7 +356,7 @@ def import_hub() -> dict:
         hero("Broker import",
              "Import your trades from a broker file — no broker login",
              "Pulsarium reads the transaction exports of Revolut, DEGIRO, Trading 212 and Interactive Brokers, "
-             "and any other CSV you can map. Every row is reviewed with you before anything is saved.",
+             "and any other CSV or TSV file you can map. Every row is reviewed with you before anything is saved.",
              ("/portfolio-tracker/", "See the portfolio tracker"))
         + f'<section class="block"><h2>Choose your broker</h2><div class="feature-grid cols-2">{cards}</div></section>'
         + steps("How the import works", IMPORT_REVIEW_STEPS)
@@ -372,7 +372,7 @@ def import_hub() -> dict:
         "path": "/import/", "crumb": "Broker import",
         "title": "Import trades from Revolut, DEGIRO, Trading 212, IBKR into a portfolio tracker | Pulsarium",
         "description": "Import your broker's transaction export into Pulsarium's free portfolio tracker: Revolut, "
-                       "DEGIRO, Trading 212, Interactive Brokers or any CSV. No broker login, every row reviewed.",
+                       "DEGIRO, Trading 212, Interactive Brokers or any CSV/TSV. No broker login, every row reviewed.",
         "body": body, "head": faq_ld,
     }
 
