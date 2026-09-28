@@ -153,11 +153,12 @@ COMMON_FAQ = {
 
 IMPORT_REVIEW_STEPS = [
     ("Upload the file",
-     "In the cabinet open <em>Account → Export / Import CSV → Import trades from a broker</em> and choose the file. "
+     "In the cabinet open <em>Account → Export / Import CSV → Import from a broker</em> and choose the file. "
      "CSV and TSV work; save an Excel file as CSV first."),
     ("Check the columns",
-     "Pick the target portfolio. Pulsarium pre-selects the date, operation, instrument, quantity and price columns — "
-     "check them and set whether dates are day-first."),
+     "Pick the target portfolio. Pulsarium suggests the broker from the file name and pre-selects the date, operation, instrument, "
+     "quantity, price and fee columns — check them and whether dates are day- or month-first. After a successful "
+     "import the column choices for that file format are remembered on your device."),
     ("Review every row",
      "Click <em>Review rows</em>. Each trade is matched to a listing (the exchange is named, the most likely one is "
      "marked <em>best match</em>), already imported rows are skipped and possible duplicates are flagged. Nothing "
@@ -166,6 +167,7 @@ IMPORT_REVIEW_STEPS = [
 
 BROKERS = {
     "revolut": {
+        "region": "global",
         "name": "Revolut",
         "export": [
             ("Open the statements", "In the Revolut app go to <em>Invest</em> (Stocks), tap <em>More</em> and then <em>Statements</em>."),
@@ -180,6 +182,7 @@ BROKERS = {
                 "Revolut's order types such as “BUY - MARKET” and “SELL - LIMIT”."),
     },
     "degiro": {
+        "region": "global",
         "name": "DEGIRO",
         "export": [
             ("Open Transactions on the web", "Log in to DEGIRO in a browser (the app can't export). Hover the <em>Inbox</em> icon in the left menu and open <em>Transactions</em>."),
@@ -194,6 +197,7 @@ BROKERS = {
                 "quantity, price and currency."),
     },
     "trading-212": {
+        "region": "global",
         "name": "Trading 212",
         "export": [
             ("Open History", "In Trading 212 open the menu, go to <em>History</em> and tap the export icon at the top right."),
@@ -208,6 +212,7 @@ BROKERS = {
                 "one by one; overlapping rows are recognised and skipped."),
     },
     "interactive-brokers": {
+        "region": "global",
         "name": "Interactive Brokers",
         "short": "IBKR",
         "export": [
@@ -220,6 +225,54 @@ BROKERS = {
         ],
         "faq": ("Do I need a Flex Query?",
                 "No. A standard Activity statement exported as CSV is enough; Pulsarium reads its Trades section."),
+    },
+    # US brokers: parsing was checked on sample files in each broker's style;
+    # the pages say so and point to the in-app report for anything unread.
+    "robinhood": {
+        "region": "us",
+        "name": "Robinhood",
+        "export": [
+            ("Request an activity report", "In the Robinhood app or website open <em>Account → Reports and statements</em>, create a custom account activity report and choose the start and end dates."),
+            ("Download the CSV", "Robinhood prepares the report in the background — usually within a couple of hours, at most a day — and notifies you; then download it as CSV from <em>Reports</em>."),
+        ],
+        "notes": [
+            ("US formats understood", "Month-first dates, dollar signs and thousands separators in amounts are read as Robinhood writes them."),
+            ("Trades and dividends", "Buys, sells and dividends are read; rows that are neither, such as transfers, are flagged so you can exclude them."),
+        ],
+        "faq": ("What if a row from my Robinhood file isn't recognised?",
+                "It is flagged in the preview instead of being guessed. Exclude it or fix the ticker — and send the "
+                "report offered on the import screen, so we can add that format."),
+    },
+    "fidelity": {
+        "region": "us",
+        "name": "Fidelity",
+        "export": [
+            ("Open your history", "Log in to Fidelity, pick the account and open <em>Activity &amp; Orders → History</em>."),
+            ("Download the CSV", "Choose a date range, apply it and click <em>Download</em>. If Fidelity limits the range of one download, download a few periods and upload them one after another — rows already imported are skipped."),
+        ],
+        "notes": [
+            ("Fees and commissions", "Separate fee and commission columns are both counted in the trade's cost."),
+            ("US formats understood", "Month-first dates, dollar signs and thousands separators in amounts are read as Fidelity writes them."),
+        ],
+        "faq": ("Can I import several Fidelity accounts?",
+                "Yes. Download each account's history and import it into the same portfolio or into separate ones; "
+                "use the same broker name each time so repeated rows are recognised."),
+    },
+    "charles-schwab": {
+        "region": "us",
+        "name": "Charles Schwab",
+        "short": "Schwab",
+        "export": [
+            ("Open Transactions history", "Log in to Schwab, go to <em>Accounts → History</em>, choose the account and set the date range (all transaction types)."),
+            ("Export as CSV", "Click <em>Export</em> at the top right, choose CSV and save the file."),
+        ],
+        "notes": [
+            ("Fees and commissions", "Schwab's combined “Fees &amp; Comm” column is read as the trade's full cost."),
+            ("US formats understood", "Month-first dates, dollar signs and thousands separators in amounts are read as Schwab writes them."),
+        ],
+        "faq": ("Does Pulsarium connect to my Schwab account?",
+                "No. Nothing connects to Schwab: you export your history as a CSV and upload the file. Your Schwab "
+                "login never leaves your hands."),
     },
 }
 
@@ -288,7 +341,7 @@ def portfolio_tracker() -> dict:
                "Every position with its average cost, price, unrealized and realized P&L, dividends and weight.")
         + steps("Start in three steps", [
             ("Create a free account", "Sign up with email or Google and turn on two-factor authentication if you like."),
-            ("Add your trades", "Upload a file from <a href=\"/import/\">Revolut, DEGIRO, Trading 212 or IBKR</a>, import any CSV or TSV, or add trades by hand."),
+            ("Add your trades", "Upload your broker's file — <a href=\"/import/\">Revolut, DEGIRO, Trading 212, IBKR, Robinhood, Fidelity, Schwab</a> or any CSV/TSV — or add trades by hand."),
             ("Follow along", "Watch weights, dividends and news; set <a href=\"/price-alerts/\">price alerts</a> on the names you are waiting for."),
         ])
         + closing_cta("Put your portfolio in one calm place",
@@ -300,7 +353,7 @@ def portfolio_tracker() -> dict:
         "path": "/portfolio-tracker/", "crumb": "Portfolio tracker", "og_image": "/assets/shots/cabinet-overview.jpg",
         "title": "Free stock portfolio tracker with dividends, alerts and news | Pulsarium",
         "description": "Track several stock portfolios in different currencies: weights, performance, dividends, "
-                       "price alerts and news about your holdings. Import from Revolut, DEGIRO, Trading 212 or IBKR "
+                       "price alerts and news about your holdings. Import from Revolut, DEGIRO, Trading 212, IBKR, Robinhood, Fidelity or Schwab "
                        "files - no broker login. Free during the beta.",
         "body": body, "head": faq_ld,
     }
@@ -381,11 +434,15 @@ def price_alerts() -> dict:
 
 
 def import_hub() -> dict:
-    cards = "".join(
-        f'<a class="panel feature feature-link" href="/import/{slug}/"><h3>{esc(b["name"])}</h3>'
-        f'<p>How to export your {esc(b["name"])} history and import it, step by step →</p></a>'
-        for slug, b in BROKERS.items()
-    )
+    def cards(region: str) -> str:
+        chosen = [(slug, b) for slug, b in BROKERS.items() if b["region"] == region]
+        items = "".join(
+            f'<a class="panel feature feature-link" href="/import/{slug}/"><h3>{esc(b["name"])}</h3>'
+            f'<p>How to export your {esc(b["name"])} history and import it, step by step →</p></a>'
+            for slug, b in chosen
+        )
+        return f'<div class="feature-grid cols-{3 if len(chosen) % 3 == 0 else 2}">{items}</div>'
+
     faq_section, faq_ld = faq([
         ("My broker isn't listed — can I still import?",
          "Usually yes. Any CSV or TSV transaction file with a date, operation, instrument, quantity and price "
@@ -395,10 +452,12 @@ def import_hub() -> dict:
     body = (
         hero("Broker import",
              "Import your trades from a broker file — no broker login",
-             "Pulsarium reads the transaction exports of Revolut, DEGIRO, Trading 212 and Interactive Brokers, "
-             "and any other CSV or TSV file you can map. Every row is reviewed with you before anything is saved.",
+             "Pulsarium reads the transaction exports of Revolut, DEGIRO, Trading 212, Interactive Brokers, Robinhood, "
+             "Fidelity and Charles Schwab — and CSV or TSV files from other brokers such as E*TRADE, Webull, Saxo or XTB "
+             "once you match their columns. Every row is reviewed with you before anything is saved.",
              ("/portfolio-tracker/", "See the portfolio tracker"))
-        + f'<section class="block"><h2>Choose your broker</h2><div class="feature-grid cols-2">{cards}</div></section>'
+        + f'<section class="block"><h2>Europe and global brokers</h2>{cards("global")}</section>'
+        + f'<section class="block"><h2>US brokers</h2>{cards("us")}</section>'
         + steps("How the import works", IMPORT_REVIEW_STEPS)
         + features("Why file import instead of a broker connection", [
             ("Your login stays with you", "Pulsarium never asks for broker credentials and no third-party aggregator gets access to your account."),
@@ -410,9 +469,10 @@ def import_hub() -> dict:
     )
     return {
         "path": "/import/", "crumb": "Broker import",
-        "title": "Import trades from Revolut, DEGIRO, Trading 212, IBKR into a portfolio tracker | Pulsarium",
+        "title": "Import broker trades into a portfolio tracker: Revolut, DEGIRO, IBKR, Robinhood, Schwab | Pulsarium",
         "description": "Import your broker's transaction export into Pulsarium's free portfolio tracker: Revolut, "
-                       "DEGIRO, Trading 212, Interactive Brokers or any CSV/TSV. No broker login, every row reviewed.",
+                       "DEGIRO, Trading 212, Interactive Brokers, Robinhood, Fidelity, Schwab or any CSV/TSV. "
+                       "No broker login, every row reviewed.",
         "body": body, "head": faq_ld,
     }
 

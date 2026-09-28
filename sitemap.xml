@@ -17,7 +17,15 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/import/charles-schwab/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/import/degiro/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/import/fidelity/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
@@ -26,6 +34,10 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/import/revolut/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/import/robinhood/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
