@@ -56,10 +56,8 @@ for _stream in (sys.stdout, sys.stderr):
 # environment variable only. For a local run:
 #   macOS/Linux:   export DEEPSEEK_API_KEY="sk-..."
 #   Windows (cmd): set DEEPSEEK_API_KEY=sk-...
-# For automatic updates via GitHub Actions, the key must live ONLY in the
-# repo's encrypted GitHub Secrets (Settings → Secrets and variables →
-# Actions), never in code or workflow logs — details and instructions on
-# setting the secret without showing it to anyone are in README.md.
+# For automatic updates via GitHub Actions, use an encrypted repository
+# secret named DEEPSEEK_API_KEY. Never commit the key or print it in logs.
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "").strip()
 DEEPSEEK_MODEL = "deepseek-chat"  # DeepSeek-V3 — cheap, plenty for classification
 LLM_BATCH_SIZE = 15  # how many news items to send per API request
