@@ -16,6 +16,12 @@
 - [News by company and sector](https://pulsarium.finance/news/companies/): one page per company (e.g. [Nvidia](https://pulsarium.finance/news/nvda/)) and per sector with the last 30 days of headlines and a sentiment summary.
 - [Daily digest](https://pulsarium.finance/news/daily/): each day's top stories, sentiment and most mentioned companies.
 - [RSS feed](https://pulsarium.finance/news/feed.xml) of the latest headlines.
+- [Pulsarium Mood Index](https://pulsarium.finance/mood/): a daily 0-100 score of how positive the day's stock market headlines are (50 = neutral), with history as [JSON](https://pulsarium.finance/mood/history.json) and sector moods.
+
+## Guides and tools
+- Cabinet features: [portfolio tracker](https://pulsarium.finance/portfolio-tracker/), [dividend tracker](https://pulsarium.finance/dividend-tracker/), [price alerts](https://pulsarium.finance/price-alerts/), [why Pulsarium](https://pulsarium.finance/why-pulsarium/).
+- [Broker import guides](https://pulsarium.finance/import/): step by step for Revolut, DEGIRO, Trading 212 and Interactive Brokers.
+- [Free calculators](https://pulsarium.finance/tools/): dividend yield, DCA (monthly investing) and portfolio rebalancing.
 
 ## About
 - [Home](https://pulsarium.finance/): overview of the platform.

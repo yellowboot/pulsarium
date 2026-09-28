@@ -40,6 +40,7 @@ from email.utils import format_datetime
 
 import fetch_news
 import site_pages
+import site_tools
 
 SITE ="https://pulsarium.finance"
 APP_URL = "https://app.pulsarium.finance/"
@@ -67,6 +68,7 @@ NEWS_LINKS = [
     ("/news/companies/", "News by company"),
     ("/news/daily/", "Daily digest"),
     ("/mood/", "Mood Index"),
+    ("/tools/", "Calculators"),
 ]
 
 esc = html.escape
@@ -947,7 +949,8 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
                      changed_files)
 
     # the personal cabinet's feature and broker-import pages (site_pages.py)
-    for spec in site_pages.all_pages():
+    # and the calculators (site_tools.py)
+    for spec in site_pages.all_pages() + site_tools.all_pages():
         crumbs = [("Home", "/")] + ([spec["parent"]] if spec.get("parent") else []) + [(spec["crumb"], spec["path"])]
         emit((spec["path"], page(path=spec["path"], title=spec["title"], description=spec["description"],
                                  body=spec["body"], crumbs=crumbs, extra_head=spec.get("head", "")), True),
