@@ -9,6 +9,30 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/dividend-tracker/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/import/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/import/degiro/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/import/interactive-brokers/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/import/revolut/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/import/trading-212/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/aal/</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>hourly</changefreq>
@@ -987,5 +1011,17 @@
     <loc>https://pulsarium.finance/news/xom/</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/portfolio-tracker/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/price-alerts/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/why-pulsarium/</loc>
+    <changefreq>monthly</changefreq>
   </url>
 </urlset>

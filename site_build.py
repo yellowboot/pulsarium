@@ -39,8 +39,9 @@ from datetime import date, datetime, timedelta, timezone
 from email.utils import format_datetime
 
 import fetch_news
+import site_pages
 
-SITE = "https://pulsarium.finance"
+SITE ="https://pulsarium.finance"
 APP_URL = "https://app.pulsarium.finance/"
 ARCHIVE_DIR = os.path.join("data", "archive")
 WINDOW_DAYS = 30
@@ -57,7 +58,7 @@ INDEXNOW_KEY = "8dc724623930bde2d9ce70c606857a9e"
 
 # Handwritten pages that belong in the sitemap next to the generated ones.
 STATIC_PAGES = [
-    ("/", "weekly"),
+    ("/", "weekly"),  # cabinet feature pages come from site_pages.py
     ("/news/", "hourly"),
 ]
 
@@ -314,9 +315,10 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
     <span class="wordmark">PULSARIUM</span>
   </a>
   <nav class="site-nav" aria-label="Main">
+    <a href="/portfolio-tracker/">Portfolio tracker</a>
     <a href="/news/">Live news</a>
-    <a href="/news/companies/">Companies</a>
-    <a href="/news/daily/">Daily digest</a>
+    <a class="nav-secondary" href="/news/companies/">Companies</a>
+    <a class="nav-secondary" href="/news/daily/">Daily digest</a>
     <a class="btn btn-primary" href="{APP_URL}">Sign in</a>
   </nav>
 </header>
@@ -327,6 +329,7 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
 </main>
 
 <footer class="site-footer">
+  <nav class="footer-cabinet" aria-label="Personal cabinet">{"".join(f'<a href="{href}">{esc(name)}</a>' for href, name in site_pages.CABINET_LINKS)}</nav>
   <p>Headlines come from public RSS feeds and link to their original publishers. Sentiment and importance are automated scores, not investment advice.</p>
   <nav class="footer-legal" aria-label="Legal">
     <a class="footer-faq" href="{APP_URL}?legal=faq">FAQ</a>
@@ -770,6 +773,13 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
     if days:
         emit(daily_index(days, per_day), days[-1], "daily")
     emit(companies_hub(companies, counts, sector_totals), today.isoformat(), "daily")
+
+    # the personal cabinet's feature and broker-import pages (site_pages.py)
+    for spec in site_pages.all_pages():
+        crumbs = [("Home", "/")] + ([spec["parent"]] if spec.get("parent") else []) + [(spec["crumb"], spec["path"])]
+        emit((spec["path"], page(path=spec["path"], title=spec["title"], description=spec["description"],
+                                 body=spec["body"], crumbs=crumbs, extra_head=spec.get("head", "")), True),
+             None, "monthly")
 
     write_if_changed(os.path.join("news", "feed.xml"), rss_feed(window, now), changed_files)
     static = [(p, None, f) for p, f in STATIC_PAGES]

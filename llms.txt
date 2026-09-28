@@ -8,7 +8,7 @@
 - Broker file import: transaction exports from Revolut, DEGIRO, Trading 212 and Interactive Brokers (IBKR activity statements), plus any CSV with column mapping. No broker login or credentials are needed — only the exported file.
 - Watchlists with price alerts above or below a level, with email notifications.
 - Signal Feed: news filtered to the investor's holdings and watchlists.
-- Privacy and security: two-factor authentication (TOTP), Google and Apple sign-in, row-level data isolation, full data export and self-service account deletion.
+- Privacy and security: two-factor authentication (TOTP), Google sign-in, row-level data isolation, full data export and self-service account deletion.
 - Market data may be delayed.
 
 ## News (pulsarium.finance)
