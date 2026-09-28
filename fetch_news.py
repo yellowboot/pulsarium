@@ -63,8 +63,16 @@ DEEPSEEK_MODEL = "deepseek-chat"  # DeepSeek-V3 — cheap, plenty for classifica
 LLM_BATCH_SIZE = 15  # how many news items to send per API request
 
 # Public financial news RSS feeds (no subscription, no headline-level paywall)
+#
+# Yahoo Finance: its general feed (finance.yahoo.com/news/rssindex and its
+# aliases) froze on 2026-09-23 and mixes in items from as far back as 2024,
+# so every one of them fell outside the 80 newest and Yahoo vanished from
+# the dashboard. The per-symbol headline feed stays current; asking it for
+# the main indices plus the largest caps gives a general market stream.
+# BioPharma Dive replaces FiercePharma, whose feed answers 403 to scripts
+# and never delivered an item.
 FEEDS = [
-    {"name": "Yahoo Finance", "url": "https://finance.yahoo.com/news/rssindex"},
+    {"name": "Yahoo Finance", "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=%5EGSPC,%5EDJI,%5EIXIC,AAPL,MSFT,NVDA,AMZN,GOOGL,META,TSLA&region=US&lang=en-US"},
     {"name": "MarketWatch",   "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories"},
     {"name": "Investing.com", "url": "https://www.investing.com/rss/news_25.rss"},
     {"name": "CNBC",          "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"},
@@ -72,7 +80,7 @@ FEEDS = [
     {"name": "OilPrice.com",  "url": "https://oilprice.com/rss/main"},
     {"name": "Mining.com",    "url": "https://www.mining.com/feed"},
     {"name": "Defense One",   "url": "https://www.defenseone.com/rss/all/"},
-    {"name": "FiercePharma",  "url": "https://www.fiercepharma.com/rss/xml"},
+    {"name": "BioPharma Dive", "url": "https://www.biopharmadive.com/feeds/news/"},
     {"name": "CoinDesk",      "url": "https://www.coindesk.com/arc/outboundfeeds/rss/"},
     {"name": "Retail Dive",   "url": "https://www.retaildive.com/feeds/news/"},
 ]
@@ -119,6 +127,8 @@ COMPANY_MAP = [
     {"ticker": "DELL", "sector": "AI Infrastructure",      "names": ["Dell Technologies", "Dell"]},
     {"ticker": "LITE", "sector": "AI Infrastructure",      "names": ["Lumentum Holdings", "Lumentum"]},
     {"ticker": "SNX",  "sector": "AI Infrastructure",      "names": ["TD Synnex"]},
+    # Pure Storage renamed itself Everpure (Feb 2026), ticker PSTG → P
+    {"ticker": "P",    "sector": "AI Infrastructure",      "names": ["Everpure", "Pure Storage"]},
 
     # ---- Software / AI / Cybersecurity / Cloud ----
     {"ticker": "CRWD", "sector": "Cybersecurity",      "names": ["CrowdStrike"]},
@@ -137,7 +147,7 @@ COMPANY_MAP = [
     {"ticker": "MSFT", "sector": "Big Tech",               "names": ["Microsoft"]},
     {"ticker": "GOOGL","sector": "Big Tech",               "names": ["Alphabet", "Google"]},
     {"ticker": "AAPL", "sector": "Big Tech",               "names": ["Apple"]},
-    {"ticker": "AMZN", "sector": "Big Tech",               "names": ["Amazon"]},
+    {"ticker": "AMZN", "sector": "Big Tech",               "names": ["Amazon", "AWS", "Amazon Web Services"]},
     {"ticker": "META", "sector": "Big Tech",               "names": ["Meta", "Facebook"]},
     {"ticker": "BABA", "sector": "Big Tech",               "names": ["Alibaba"]},
 
@@ -170,8 +180,9 @@ COMPANY_MAP = [
     {"ticker": "NFLX", "sector": "Media / Entertainment",    "names": ["Netflix"]},
     {"ticker": "RDDT", "sector": "Media / Entertainment",    "names": ["Reddit"]},
     {"ticker": "NTDOY","sector": "Media / Entertainment",    "names": ["Nintendo"]},
-    {"ticker": "PARA", "sector": "Media / Entertainment",    "names": ["Paramount Global"]},
-    {"ticker": "WBD",  "sector": "Media / Entertainment",    "names": ["Warner Bros Discovery", "Warner Bros. Discovery"]},
+    # Paramount Global merged with Skydance (Aug 2025), ticker PARA → PSKY
+    {"ticker": "PSKY", "sector": "Media / Entertainment",    "names": ["Paramount Skydance", "Paramount"]},
+    {"ticker": "WBD",  "sector": "Media / Entertainment",    "names": ["Warner Bros Discovery", "Warner Bros. Discovery", "Warner Bros"]},
 
     # ---- Energy (oil and gas) ----
     {"ticker": "XOM",  "sector": "Oil & Gas",            "names": ["ExxonMobil", "Exxon Mobil"]},
@@ -188,8 +199,11 @@ COMPANY_MAP = [
     {"ticker": "FCX",  "sector": "Metals & Mining",       "names": ["Freeport-McMoRan"]},
     {"ticker": "NEM",  "sector": "Metals & Mining",       "names": ["Newmont"]},
     {"ticker": "AA",   "sector": "Metals & Mining",       "names": ["Alcoa"]},
-    {"ticker": "GOLD", "sector": "Metals & Mining",       "names": ["Barrick Gold"]},
+    # Barrick Gold became Barrick Mining (May 2025), ticker GOLD → B; the old
+    # ticker also matched "GOLD" written in capitals in commodity headlines
+    {"ticker": "B",    "sector": "Metals & Mining",       "names": ["Barrick Mining", "Barrick Gold", "Barrick"]},
     {"ticker": "LUG",  "sector": "Metals & Mining",       "names": ["Lundin Gold"]},
+    {"ticker": "GLEN", "sector": "Metals & Mining",       "names": ["Glencore"]},
 
     # ---- Defense / Space ----
     {"ticker": "RHM",  "sector": "Defense",       "names": ["Rheinmetall"]},
@@ -198,6 +212,8 @@ COMPANY_MAP = [
     {"ticker": "NOC",  "sector": "Defense",       "names": ["Northrop Grumman"]},
     {"ticker": "RTX",  "sector": "Defense",       "names": ["RTX", "Raytheon"]},
     {"ticker": "LHX",  "sector": "Defense",       "names": ["L3Harris"]},
+    # Paris listing; plain "AIR" is AAR Corp's US ticker
+    {"ticker": "AIR.PA", "sector": "Defense",     "names": ["Airbus"]},
     {"ticker": "SPCX", "sector": "Space",                 "names": ["SpaceX"]},
     {"ticker": "LUNR", "sector": "Space",                 "names": ["Intuitive Machines"]},
 
@@ -211,7 +227,8 @@ COMPANY_MAP = [
     {"ticker": "BRK.B","sector": "Banking & Finance",        "names": ["Berkshire Hathaway"]},
     {"ticker": "MORN", "sector": "Banking & Finance",        "names": ["Morningstar"]},
     {"ticker": "EQH",  "sector": "Banking & Finance",        "names": ["Equitable Holdings"]},
-    {"ticker": "APO",  "sector": "Banking & Finance",        "names": ["Apollo Global Management"]},
+    {"ticker": "APO",  "sector": "Banking & Finance",        "names": ["Apollo Global Management", "Apollo Global", "Apollo"]},
+    {"ticker": "UBS",  "sector": "Banking & Finance",        "names": ["UBS"]},
     {"ticker": "V",    "sector": "Payments / Fintech",       "names": ["Visa"]},
     {"ticker": "MA",   "sector": "Payments / Fintech",       "names": ["Mastercard"]},
     {"ticker": "PYPL", "sector": "Payments / Fintech",       "names": ["PayPal"]},
@@ -220,7 +237,7 @@ COMPANY_MAP = [
     # ---- Healthcare / pharma / biotech ----
     {"ticker": "PFE",  "sector": "Healthcare",        "names": ["Pfizer"]},
     {"ticker": "JNJ",  "sector": "Healthcare",        "names": ["Johnson & Johnson"]},
-    {"ticker": "LLY",  "sector": "Healthcare",        "names": ["Eli Lilly"]},
+    {"ticker": "LLY",  "sector": "Healthcare",        "names": ["Eli Lilly", "Lilly"]},
     {"ticker": "MRK",  "sector": "Healthcare",        "names": ["Merck"]},
     {"ticker": "UNH",  "sector": "Healthcare",        "names": ["UnitedHealth"]},
     {"ticker": "MRNA", "sector": "Healthcare",        "names": ["Moderna"]},
@@ -229,6 +246,7 @@ COMPANY_MAP = [
     {"ticker": "RVMD", "sector": "Healthcare",        "names": ["Revolution Medicines"]},
     {"ticker": "AZN",  "sector": "Healthcare",        "names": ["AstraZeneca"]},
     {"ticker": "NVS",  "sector": "Healthcare",        "names": ["Novartis"]},
+    {"ticker": "NVO",  "sector": "Healthcare",        "names": ["Novo Nordisk", "Novo"]},
     {"ticker": "AMGN", "sector": "Healthcare",        "names": ["Amgen"]},
     {"ticker": "ZTS",  "sector": "Healthcare",        "names": ["Zoetis"]},
 
@@ -250,6 +268,7 @@ COMPANY_MAP = [
     {"ticker": "ABNB", "sector": "Airlines / Travel", "names": ["Airbnb"]},
     {"ticker": "UBER", "sector": "Airlines / Travel", "names": ["Uber"]},
     {"ticker": "LVS",  "sector": "Airlines / Travel", "names": ["Las Vegas Sands"]},
+    {"ticker": "MGM",  "sector": "Airlines / Travel", "names": ["MGM Resorts"], "match_ticker": False},
     {"ticker": "TCOM", "sector": "Airlines / Travel", "names": ["Trip.com"]},
     {"ticker": "AAL",  "sector": "Airlines / Travel", "names": ["American Airlines"]},
 
@@ -415,6 +434,16 @@ ADVICE_COLUMN_RE = re.compile("|".join(ADVICE_COLUMN_PATTERNS), flags=re.IGNOREC
 def is_advice_column(title: str) -> bool:
     """True if the headline looks like a personal advice column rather than news."""
     return bool(ADVICE_COLUMN_RE.search(title))
+
+
+# Paid market-research press releases that Yahoo's headline feed carries
+# ("Cluster Computing Global Market Report 2026: Capitalize on the surge
+# to $85.27 billion by 2030") — industry sizing ads, not market news.
+MARKET_REPORT_RE = re.compile(r"\bglobal market report\b|\bmarket report 20\d\d\b", flags=re.IGNORECASE)
+
+
+def is_market_report_ad(title: str) -> bool:
+    return bool(MARKET_REPORT_RE.search(title))
 
 
 def strip_html(raw_html: str) -> str:
@@ -726,13 +755,20 @@ def detect_watchlist_matches(text: str) -> list:
        ("Ford", "AT&T", "Mastercard", etc).
     3) Company names are matched case-insensitively, since in headlines
        they can also appear at the start of a sentence.
+    4) An entry with "match_ticker": False is found by name only — for a
+       ticker that is also part of other names ("MGM" in "Amazon MGM
+       Studios").
+    Typographic apostrophes are made plain first: feeds write
+    "McDonald’s", COMPANY_MAP writes "McDonald's".
     """
+    text = text.replace("’", "'").replace("‘", "'")
     found = {}
     for entry in COMPANY_MAP:
         ticker = entry["ticker"]
         matched = False
 
-        if len(ticker) >= 3 and re.search(r"\b" + re.escape(ticker) + r"\b", text):
+        if (len(ticker) >= 3 and entry.get("match_ticker", True)
+                and re.search(r"\b" + re.escape(ticker) + r"\b", text)):
             matched = True
 
         if not matched:
@@ -774,7 +810,7 @@ def parse_feed(feed_name: str, url: str) -> list:
         if not title:
             continue
 
-        if is_advice_column(title):
+        if is_advice_column(title) or is_market_report_ad(title):
             continue
 
         link_el = item.find("link")
