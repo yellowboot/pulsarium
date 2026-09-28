@@ -28,6 +28,8 @@ Pure standard library, like fetch_news.py.
 """
 
 import argparse
+import functools
+import hashlib
 import html
 import json
 import os
@@ -339,7 +341,10 @@ def mood_chart(history: list) -> str:
     for p in history:
         d = date.fromisoformat(p["date"])
         if d.weekday() == 0 and (last_label is None or (d - last_label).days >= 7):
-            parts.append(f'<text x="{x(p["date"]):.1f}" y="{height - 10}" class="axis" text-anchor="middle">{d.day} {d.strftime("%b")}</text>')
+            # a label near either edge is aligned to it instead of cut off
+            px = x(p["date"])
+            anchor = "end" if px > width - pad_r - 30 else "start" if px < pad_l + 30 else "middle"
+            parts.append(f'<text x="{px:.1f}" y="{height - 10}" class="axis" text-anchor="{anchor}">{d.day} {d.strftime("%b")}</text>')
             last_label = d
     parts.append("</svg>")
     return "".join(parts)
@@ -372,7 +377,9 @@ def mood_page(history: list, window: list, now: datetime) -> tuple:
         for p in reversed(history[-14:])
     )
     if today:
-        change = f'{today["value"] - prev["value"]:+d} vs previous day' if prev else "first reading"
+        diff = today["value"] - prev["value"] if prev else None
+        change = ("first reading" if diff is None else "same as the previous day" if diff == 0
+                  else f"{diff:+d} vs previous day")
         headline = f'{today["value"]} — {today["label"]}'
         gauge = f"""<section class="stats">
   <div class="panel stat mood-now"><span class="stat-label">Latest · {fmt_short_day(date.fromisoformat(today["date"]))}</span><strong>{today["value"]}<small>/100</small></strong><span class="mood-label">{esc(today["label"])}</span><small>{change}</small></div>
@@ -428,6 +435,16 @@ FAVICON = (
 )
 
 
+@functools.lru_cache(maxsize=None)
+def asset_url(path: str) -> str:
+    """/assets/x?v=<content hash>: a changed file gets a new URL, so browsers
+    don't keep an old copy for GitHub Pages' 10-minute cache. Line endings
+    are ignored so a Windows checkout hashes like the Linux runner."""
+    with open(path.lstrip("/"), "rb") as f:
+        digest = hashlib.sha1(f.read().replace(b"\r\n", b"\n")).hexdigest()[:10]
+    return f"{path}?v={digest}"
+
+
 def page(*, path: str, title: str, description: str, body: str, crumbs: list,
          indexable: bool = True, extra_head: str = "") -> str:
     url = SITE + path
@@ -466,7 +483,7 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
 <link rel="alternate" type="application/rss+xml" title="Pulsarium market news" href="/news/feed.xml">
 <link rel="icon" type="image/svg+xml" href="{FAVICON}">
 <link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="{asset_url('/assets/site.css')}">
 <script type="application/ld+json">{json.dumps(crumb_ld, ensure_ascii=False)}</script>
 {extra_head}</head>
 <body>
@@ -482,6 +499,7 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
   <nav class="site-nav" aria-label="Main">
     <a href="/portfolio-tracker/">Portfolio tracker</a>
     <a href="/news/">Live news</a>
+    <a href="/mood/">Mood Index</a>
     <a class="nav-secondary" href="/news/companies/">Companies</a>
     <a class="nav-secondary" href="/news/daily/">Daily digest</a>
     <a class="btn btn-primary" href="{APP_URL}">Sign in</a>
@@ -507,7 +525,7 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
     <button type="button" class="link-button" data-analytics-settings>Analytics settings</button>
   </nav>
 </footer>
-<script src="/assets/analytics.js" defer></script>
+<script src="{asset_url('/assets/analytics.js')}" defer></script>
 </body>
 </html>
 """

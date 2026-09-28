@@ -20,7 +20,7 @@
 <link rel="alternate" type="application/rss+xml" title="Pulsarium market news" href="/news/feed.xml">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2304050c'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23ff2bd6' stroke-width='1.5' opacity='0.45'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%2300f0ff' stroke-width='2' opacity='0.6'/%3E%3Cpath d='M32 32 L29.5 4 L34.5 4 Z M32 32 L29.5 60 L34.5 60 Z' fill='%2300f0ff' opacity='0.85' transform='rotate(25 32 32)'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%23ffffff'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=4b9c3d0256">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pulsarium.finance/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://pulsarium.finance/tools/"}, {"@type": "ListItem", "position": 3, "name": "DCA calculator", "item": "https://pulsarium.finance/tools/dca-calculator/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is dollar-cost averaging (DCA)?", "acceptedAnswer": {"@type": "Answer", "text": "Investing the same amount at regular intervals — for example every month — whatever the market does. You buy more shares when prices are low and fewer when they are high, and you don't have to time the market."}}, {"@type": "Question", "name": "How does this calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "It adds your monthly amount at the end of each month and grows the balance at the monthly equivalent of the yearly return you enter (compounded monthly). It ignores fees and taxes."}}, {"@type": "Question", "name": "What return should I enter?", "acceptedAnswer": {"@type": "Answer", "text": "Nobody knows future returns. Try a few — for example 3%, 6% and 9% — to see a range rather than a single number."}}]}</script>
 </head>
@@ -37,6 +37,7 @@
   <nav class="site-nav" aria-label="Main">
     <a href="/portfolio-tracker/">Portfolio tracker</a>
     <a href="/news/">Live news</a>
+    <a href="/mood/">Mood Index</a>
     <a class="nav-secondary" href="/news/companies/">Companies</a>
     <a class="nav-secondary" href="/news/daily/">Daily digest</a>
     <a class="btn btn-primary" href="https://app.pulsarium.finance/">Sign in</a>
@@ -112,6 +113,6 @@ const num = (form, name) => { const v = parseFloat(form.elements[name].value); r
     <button type="button" class="link-button" data-analytics-settings>Analytics settings</button>
   </nav>
 </footer>
-<script src="/assets/analytics.js" defer></script>
+<script src="/assets/analytics.js?v=d1521d62ee" defer></script>
 </body>
 </html>
