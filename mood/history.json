@@ -327,10 +327,17 @@
   },
   {
    "date": "2026-09-27",
-   "value": 66,
+   "value": 60,
    "label": "Leaning optimistic",
-   "headlines": 25,
-   "avg7": 59.4
+   "headlines": 31,
+   "avg7": 58.6
+  },
+  {
+   "date": "2026-09-28",
+   "value": 60,
+   "label": "Leaning optimistic",
+   "headlines": 44,
+   "avg7": 56.9
   }
  ]
 }
