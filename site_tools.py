@@ -123,7 +123,12 @@ def dca() -> dict:
     {field("initial", "Starting amount", "1000")}
     {field("monthly", "Invested every month", "200")}
     {field("years", "Years", "10", "1", "", "1")}
-    {field("rate", "Expected yearly return", "6", "0.1", "%", "-50")}
+    <div class="calc-rate">
+      {field("rate", "Yearly return (your guess)", "6", "0.1", "%", "-50")}
+      <div class="calc-presets" role="group" aria-label="Example yearly returns">
+        <span>Try</span><button type="button" data-rate="3" title="Cautious">3%</button><button type="button" data-rate="6" title="Moderate">6%</button><button type="button" data-rate="9" title="Bold">9%</button>
+      </div>
+    </div>
   </form>
   <div class="calc-results" aria-live="polite">
     <div><span>Value at the end</span><strong id="dca-final">—</strong></div>
@@ -150,8 +155,13 @@ def dca() -> dict:
     out('dca-invested').textContent = fmt(invested, 0);
     out('dca-growth').textContent = fmt(value - invested, 0);
     out('dca-rows').innerHTML = rows;
+    form.querySelectorAll('[data-rate]').forEach(b => b.classList.toggle('active', Number(b.dataset.rate) === num(form, 'rate')));
   }}
   form.addEventListener('input', update);
+  form.querySelectorAll('[data-rate]').forEach(button => button.addEventListener('click', () => {{
+    form.elements.rate.value = button.dataset.rate;
+    update();
+  }}));
   update();
 }})();
 </script>"""

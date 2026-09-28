@@ -20,7 +20,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/site.css?v=0b29e36af8">
+<link rel="stylesheet" href="/assets/site.css?v=be403ce7ec">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pulsarium.finance/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://pulsarium.finance/tools/"}, {"@type": "ListItem", "position": 3, "name": "DCA calculator", "item": "https://pulsarium.finance/tools/dca-calculator/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is dollar-cost averaging (DCA)?", "acceptedAnswer": {"@type": "Answer", "text": "Investing the same amount at regular intervals — for example every month — whatever the market does. You buy more shares when prices are low and fewer when they are high, and you don't have to time the market."}}, {"@type": "Question", "name": "How does this calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "It adds your monthly amount at the end of each month and grows the balance at the monthly equivalent of the yearly return you enter (compounded monthly). It ignores fees and taxes."}}, {"@type": "Question", "name": "What return should I enter?", "acceptedAnswer": {"@type": "Answer", "text": "Nobody knows future returns. Try a few — for example 3%, 6% and 9% — to see a range rather than a single number."}}]}</script>
 </head>
@@ -56,7 +56,12 @@
     <label class="calc-field"><span>Starting amount</span><span class="calc-input"><input type="number" inputmode="decimal" name="initial" value="1000" step="any" min="0"></span></label>
     <label class="calc-field"><span>Invested every month</span><span class="calc-input"><input type="number" inputmode="decimal" name="monthly" value="200" step="any" min="0"></span></label>
     <label class="calc-field"><span>Years</span><span class="calc-input"><input type="number" inputmode="decimal" name="years" value="10" step="1" min="1"></span></label>
-    <label class="calc-field"><span>Expected yearly return</span><span class="calc-input"><input type="number" inputmode="decimal" name="rate" value="6" step="0.1" min="-50"><em>%</em></span></label>
+    <div class="calc-rate">
+      <label class="calc-field"><span>Yearly return (your guess)</span><span class="calc-input"><input type="number" inputmode="decimal" name="rate" value="6" step="0.1" min="-50"><em>%</em></span></label>
+      <div class="calc-presets" role="group" aria-label="Example yearly returns">
+        <span>Try</span><button type="button" data-rate="3" title="Cautious">3%</button><button type="button" data-rate="6" title="Moderate">6%</button><button type="button" data-rate="9" title="Bold">9%</button>
+      </div>
+    </div>
   </form>
   <div class="calc-results" aria-live="polite">
     <div><span>Value at the end</span><strong id="dca-final">—</strong></div>
@@ -86,8 +91,13 @@ const num = (form, name) => { const v = parseFloat(form.elements[name].value); r
     out('dca-invested').textContent = fmt(invested, 0);
     out('dca-growth').textContent = fmt(value - invested, 0);
     out('dca-rows').innerHTML = rows;
+    form.querySelectorAll('[data-rate]').forEach(b => b.classList.toggle('active', Number(b.dataset.rate) === num(form, 'rate')));
   }
   form.addEventListener('input', update);
+  form.querySelectorAll('[data-rate]').forEach(button => button.addEventListener('click', () => {
+    form.elements.rate.value = button.dataset.rate;
+    update();
+  }));
   update();
 })();
 </script><p class="calc-note">For illustration only — not investment advice. Results depend entirely on the numbers you enter; real returns, dividends and taxes vary.</p><aside class="panel cta">
