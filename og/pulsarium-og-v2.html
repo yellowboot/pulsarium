@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Pulsarium OG card</title>
+<!--
+  Source of pulsarium-og-v2.jpg, the 1200x630 sharing preview. To redraw,
+  screenshot this page at exactly 1200x630, e.g. with headless Edge/Chrome:
+    msedge --headless=new --hide-scrollbars --force-device-scale-factor=1
+      --window-size=1200,630 --virtual-time-budget=4000
+      --screenshot=card.png file:///.../og/pulsarium-og-v2.html
+  then save it as a JPEG (quality ~92, keep it under 300 KB for WhatsApp)
+  under a NEW file name and point the og:image / twitter:image tags in
+  index.html at it - platforms cache previews by URL.
+-->
+<link rel="stylesheet" href="../fonts/fonts.css">
+<style>
+  :root {
+    --accent: #00f0ff;
+    --accent-ice: #d8fbff;
+    --accent-blue: #2f7bff;
+    --magenta: #ff2bd6;
+    --bg-0: #04050c;
+    --bg-1: #070a16;
+    --text-hi: #f2f8ff;
+    --text-mid: #a9bddf;
+    --text-low: #7489b3;
+  }
+  html, body { margin: 0; padding: 0; }
+  body { width: 1200px; height: 630px; overflow: hidden; background: var(--bg-0); }
+  .card {
+    position: relative; width: 1200px; height: 630px; overflow: hidden;
+    background: linear-gradient(180deg, var(--bg-0), var(--bg-1) 45%, var(--bg-0));
+    font-family: 'Chakra Petch', sans-serif; color: var(--text-hi);
+  }
+  .layer { position: absolute; inset: 0; pointer-events: none; }
+  .nebula {
+    background:
+      radial-gradient(520px 420px at 77% 48%, rgba(0,240,255,0.15), transparent 70%),
+      radial-gradient(520px 360px at 99% 0%, rgba(255,43,214,0.14), transparent 70%),
+      radial-gradient(420px 320px at 62% 100%, rgba(255,43,214,0.07), transparent 70%),
+      radial-gradient(760px 520px at 0% 22%, rgba(30,90,255,0.11), transparent 70%);
+  }
+  .stars {
+    background-image:
+      radial-gradient(1.2px 1.2px at 30px 40px, rgba(255,255,255,0.95), transparent 60%),
+      radial-gradient(1px 1px at 120px 210px, rgba(180,230,255,0.85), transparent 60%),
+      radial-gradient(1.4px 1.4px at 260px 90px, rgba(255,255,255,0.75), transparent 60%),
+      radial-gradient(1px 1px at 340px 310px, rgba(255,200,240,0.75), transparent 60%),
+      radial-gradient(1.2px 1.2px at 190px 360px, rgba(255,255,255,0.65), transparent 60%),
+      radial-gradient(1px 1px at 70px 280px, rgba(160,220,255,0.75), transparent 60%);
+    background-size: 400px 400px; opacity: 0.6;
+  }
+  .stars-2 { background-size: 260px 260px; background-position: 130px 70px; opacity: 0.3; }
+  .floor-wrap { position: absolute; left: 0; right: 0; bottom: 0; height: 260px; overflow: hidden; }
+  .floor {
+    position: absolute; left: -40%; right: -40%; bottom: 0; height: 360px;
+    background-image:
+      linear-gradient(to bottom, var(--accent) 1px, transparent 1px),
+      linear-gradient(to right, var(--accent) 1px, transparent 1px);
+    background-size: 72px 72px; background-position: 36px 0;
+    transform: perspective(420px) rotateX(66deg); transform-origin: 50% 100%;
+    opacity: 0.24;
+    -webkit-mask-image: linear-gradient(to top, #000 30%, transparent 96%);
+    mask-image: linear-gradient(to top, #000 30%, transparent 96%);
+  }
+  .scan { background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.018) 0 1px, transparent 1px 3px); }
+
+  .corner { position: absolute; width: 26px; height: 26px; opacity: 0.85; }
+  .corner.tl { top: 34px; left: 34px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); filter: drop-shadow(0 0 6px rgba(0,240,255,0.6)); }
+  .corner.br { bottom: 34px; right: 34px; border-bottom: 2px solid var(--magenta); border-right: 2px solid var(--magenta); filter: drop-shadow(0 0 6px rgba(255,43,214,0.6)); }
+
+  .copy { position: absolute; left: 84px; top: 0; bottom: 0; width: 600px; display: flex; flex-direction: column; justify-content: center; }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 17px; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--accent); text-shadow: 0 0 12px rgba(0,240,255,0.45); }
+  .wordmark {
+    margin-top: 22px; font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 70px; line-height: 1; letter-spacing: 0.08em;
+    background: linear-gradient(110deg, var(--accent-ice), var(--accent) 42%, var(--accent-blue) 78%, var(--magenta));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 0 14px rgba(0,240,255,0.45)) drop-shadow(0 0 34px rgba(47,123,255,0.3));
+    align-self: flex-start;
+  }
+  .headline { margin: 30px 0 0; font-weight: 700; font-size: 50px; line-height: 1.08; letter-spacing: -0.01em; color: var(--text-hi); text-shadow: 0 0 30px rgba(0,240,255,0.25); }
+  .hl {
+    background: linear-gradient(110deg, var(--accent-ice), var(--accent) 55%, var(--accent-blue));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    text-shadow: none; filter: drop-shadow(0 0 16px rgba(0,240,255,0.35));
+  }
+  .rule { margin-top: 34px; width: 470px; height: 1px; background: linear-gradient(90deg, var(--accent), rgba(0,240,255,0.35) 60%, transparent); box-shadow: 0 0 10px rgba(0,240,255,0.5); }
+  .note { margin-top: 20px; font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600; letter-spacing: 0.16em; color: var(--text-mid); }
+  .note b { color: var(--accent); font-weight: 600; }
+
+  .url { position: absolute; left: 84px; bottom: 44px; font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--text-low); }
+
+  .pulsar { position: absolute; left: 912px; top: 318px; width: 0; height: 0; }
+  .pulsar svg { position: absolute; left: -330px; top: -330px; overflow: visible; }
+  .core {
+    position: absolute; left: -24px; top: -24px; width: 48px; height: 48px; border-radius: 50%;
+    background: radial-gradient(circle at 40% 38%, #ffffff, var(--accent-ice) 45%, var(--accent));
+    box-shadow: 0 0 24px #ffffff, 0 0 60px var(--accent), 0 0 120px var(--accent), 0 0 210px rgba(255,43,214,0.4);
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="layer nebula"></div>
+  <div class="layer stars"></div>
+  <div class="layer stars stars-2"></div>
+  <div class="floor-wrap"><div class="floor"></div></div>
+
+  <div class="pulsar">
+    <svg width="660" height="660" viewBox="0 0 660 660">
+      <defs>
+        <linearGradient id="beam-up" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+          <stop offset="0.3" stop-color="#00f0ff" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#00f0ff" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="beam-down" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+          <stop offset="0.3" stop-color="#00f0ff" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#00f0ff" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="3" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- pulses fading as they travel out -->
+      <circle cx="330" cy="330" r="86" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.7" filter="url(#soft)"/>
+      <circle cx="330" cy="330" r="150" fill="none" stroke="#ff2bd6" stroke-width="1.6" opacity="0.42" filter="url(#soft)"/>
+      <circle cx="330" cy="330" r="222" fill="none" stroke="#00f0ff" stroke-width="1.2" opacity="0.18"/>
+
+      <!-- orbits, as on the homepage -->
+      <ellipse cx="330" cy="330" rx="280" ry="92" fill="none" stroke="#00f0ff" stroke-width="1.6" stroke-dasharray="4 10" opacity="0.6" transform="rotate(-18 330 330)" filter="url(#soft)"/>
+      <ellipse cx="330" cy="330" rx="236" ry="76" fill="none" stroke="#ff2bd6" stroke-width="1.6" opacity="0.5" transform="rotate(24 330 330)" filter="url(#soft)"/>
+
+      <!-- beams from the poles -->
+      <g transform="rotate(20 330 330)" filter="url(#glow)">
+        <path d="M330 330 L321 64 L339 64 Z" fill="url(#beam-up)"/>
+        <path d="M330 330 L321 596 L339 596 Z" fill="url(#beam-down)"/>
+      </g>
+    </svg>
+    <span class="core"></span>
+  </div>
+
+  <div class="copy">
+    <span class="eyebrow">Market intelligence platform</span>
+    <span class="wordmark">PULSARIUM</span>
+    <h1 class="headline">A calmer way to<br><span class="hl">watch the market.</span></h1>
+    <div class="rule"></div>
+    <span class="note">NEWS <b>·</b> PORTFOLIOS <b>·</b> WATCHLISTS <b>·</b> ALERTS</span>
+  </div>
+
+  <span class="url">pulsarium.finance</span>
+  <span class="corner tl"></span>
+  <span class="corner br"></span>
+  <div class="layer scan"></div>
+</div>
+</body>
+</html>
