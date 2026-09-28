@@ -179,6 +179,34 @@
     box-shadow: 0 0 10px #ffffff, 0 0 24px var(--gold-1), 0 0 46px var(--gold-1);
   }
 
+  /* the way into the personal cabinet, styled like the homepage's Sign in */
+  .header-signin {
+    position: absolute;
+    top: 40px;
+    right: 6vw;
+    display: inline-flex;
+    align-items: center;
+    height: 44px;
+    padding: 0 20px;
+    border-radius: 13px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    background: var(--gold-1);
+    color: var(--bg-0);
+    box-shadow: 0 0 0 1px rgba(0, 240, 255, 0.6), 0 0 26px rgba(0, 240, 255, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .header-signin:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px var(--gold-1), 0 0 42px rgba(0, 240, 255, 0.7); }
+  .header-signin:focus-visible { outline: 2px solid var(--gold-1); outline-offset: 3px; }
+  /* on a phone the wordmark fills the row, so the button sits above it */
+  @media (max-width: 640px) {
+    header { padding-top: 62px; }
+    .header-signin { top: 14px; height: 34px; padding: 0 14px; font-size: 13px; border-radius: 10px; }
+  }
+
   .eyebrow {
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
@@ -613,6 +641,60 @@
     font-weight: 600;
     box-shadow: 0 0 14px rgba(0, 240, 255, 0.3);
   }
+  .chip:focus-visible { outline: 2px solid var(--gold-1); outline-offset: 2px; }
+  .filter-divider { width: 1px; height: 24px; align-self: center; margin: 0 4px; background: rgba(120, 220, 255, 0.18); }
+  /* on narrow screens the bar wraps and the divider would dangle at a row end */
+  @media (max-width: 700px) { .filter-divider { display: none; } }
+  .chip-reset:disabled { opacity: 0.45; cursor: default; }
+  .chip-reset:disabled:hover { border-color: rgba(120, 220, 255, 0.14); color: var(--text-mid); }
+
+  /* Sector / source pickers: a chip that opens a menu under it */
+  .dropdown { position: relative; }
+  .dropdown-toggle .chev { opacity: 0.8; transition: transform 0.2s ease; }
+  .dropdown-toggle[aria-expanded="true"] .chev { transform: rotate(180deg); }
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 40;
+    min-width: 230px;
+    max-width: calc(100vw - 32px);
+    max-height: 340px;
+    overflow-y: auto;
+    padding: 6px;
+    background: rgba(8, 12, 30, 0.96);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 240, 255, 0.35);
+    border-radius: 14px;
+    box-shadow: 0 0 24px rgba(0, 240, 255, 0.16), 0 24px 50px rgba(0, 0, 0, 0.6);
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) transparent;
+    animation: menu-in 0.14s ease-out;
+  }
+  .dropdown-menu.align-right { left: auto; right: 0; }
+  @keyframes menu-in { from { opacity: 0; transform: translateY(-4px); } }
+  .dropdown-option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 8px 10px;
+    border: 0;
+    border-radius: 9px;
+    background: none;
+    color: var(--text-mid);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 13.5px;
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .dropdown-option:hover, .dropdown-option:focus-visible { background: rgba(0, 240, 255, 0.1); color: #ffffff; outline: none; }
+  .dropdown-option.selected { color: var(--gold-1); font-weight: 600; }
+  .dropdown-count { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--text-low); }
+  .dropdown-option.selected .dropdown-count { color: var(--gold-1); }
 
   /* ---------- News grid ---------- */
   .news-grid {
@@ -980,6 +1062,7 @@
       <h1>Pulsarium</h1>
     </div>
   </a>
+  <a class="header-signin" href="https://app.pulsarium.finance/">Sign in</a>
   <div class="meta-row">
     <span class="status-dot" aria-hidden="true"></span>
     <span id="updated-at">Data not loaded yet</span>
@@ -1036,9 +1119,7 @@
       <span id="search-result-count"></span>
     </div>
 
-    <div class="filters" id="filters"></div>
-    <div class="filters" id="sector-filters"></div>
-    <div class="filters sort-toggle" id="sort-toggle"></div>
+    <div class="filters" id="filter-bar"></div>
   </div>
 </div>
 
@@ -1069,9 +1150,7 @@
 (function () {
   const grid = document.getElementById('news-grid');
   const emptyState = document.getElementById('empty-state');
-  const filtersEl = document.getElementById('filters');
-  const sectorFiltersEl = document.getElementById('sector-filters');
-  const sortToggleEl = document.getElementById('sort-toggle');
+  const filterBarEl = document.getElementById('filter-bar');
   const tickerWrap = document.getElementById('ticker-wrap');
   const tickerTrack = document.getElementById('ticker-track');
 
@@ -1223,60 +1302,143 @@
   let activeSector = 'all';
   let sortMode = 'date'; // 'date' | 'importance'
   let searchQuery = '';
+  let openMenu = null; // 'sector' | 'source' | null
 
-  function renderSortToggle() {
-    sortToggleEl.innerHTML = '';
+  const sourceCounts = {};
+  const sectorCounts = {};
+  data.items.forEach(i => {
+    sourceCounts[i.source] = (sourceCounts[i.source] || 0) + 1;
+    (i.sectors || []).forEach(sec => { sectorCounts[sec] = (sectorCounts[sec] || 0) + 1; });
+  });
 
-    const dateBtn = document.createElement('button');
-    dateBtn.className = 'chip' + (sortMode === 'date' ? ' active' : '');
-    dateBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>Newest first';
-    dateBtn.onclick = () => { sortMode = 'date'; renderSortToggle(); renderGrid(); };
-    sortToggleEl.appendChild(dateBtn);
+  const CHEVRON = '<svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>';
 
-    const impBtn = document.createElement('button');
-    impBtn.className = 'chip' + (sortMode === 'importance' ? ' active' : '');
-    impBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 4 14 11 14 10 22 20 9 13 9 13 2"/></svg>Most important first';
-    impBtn.onclick = () => { sortMode = 'importance'; renderSortToggle(); renderGrid(); };
-    sortToggleEl.appendChild(impBtn);
+  function filtersActive() {
+    return activeSource !== 'all' || activeSector !== 'all' || searchQuery.trim() !== '';
   }
 
-  function renderFilters() {
-    filtersEl.innerHTML = '';
-    const allChip = document.createElement('button');
-    allChip.className = 'chip' + (activeSource === 'all' ? ' active' : '');
-    allChip.textContent = 'All sources';
-    allChip.onclick = () => { activeSource = 'all'; renderFilters(); renderGrid(); };
-    filtersEl.appendChild(allChip);
-
-    sources.forEach(src => {
-      const chip = document.createElement('button');
-      chip.className = 'chip' + (activeSource === src ? ' active' : '');
-      chip.textContent = src;
-      chip.onclick = () => { activeSource = src; renderFilters(); renderGrid(); };
-      filtersEl.appendChild(chip);
-    });
-
-    renderSectorFilters();
+  function sortChip(mode, icon, label) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'chip' + (sortMode === mode ? ' active' : '');
+    btn.setAttribute('aria-pressed', sortMode === mode ? 'true' : 'false');
+    btn.innerHTML = icon + label;
+    btn.onclick = () => { sortMode = mode; openMenu = null; renderFilterBar(); renderGrid(); };
+    return btn;
   }
 
-  function renderSectorFilters() {
-    if (sectors.length === 0) { sectorFiltersEl.style.display = 'none'; return; }
-    sectorFiltersEl.innerHTML = '';
+  // A chip showing the current choice ("All sectors", "Big Tech") that opens
+  // a menu of every option with its article count.
+  function dropdown(kind, allLabel, options, counts, active, choose) {
+    const wrap = document.createElement('div');
+    wrap.className = 'dropdown';
 
-    const allChip = document.createElement('button');
-    allChip.className = 'chip' + (activeSector === 'all' ? ' active-sector' : '');
-    allChip.textContent = 'All sectors';
-    allChip.onclick = () => { activeSector = 'all'; renderSectorFilters(); renderGrid(); };
-    sectorFiltersEl.appendChild(allChip);
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'chip dropdown-toggle' + (active !== 'all' ? ' active-sector' : '');
+    toggle.dataset.menu = kind;
+    toggle.setAttribute('aria-haspopup', 'menu');
+    toggle.setAttribute('aria-expanded', openMenu === kind ? 'true' : 'false');
+    toggle.innerHTML = `<span>${escapeHtml(active === 'all' ? allLabel : active)}</span>${CHEVRON}`;
+    toggle.onclick = () => {
+      openMenu = openMenu === kind ? null : kind;
+      renderFilterBar();
+      if (openMenu) {
+        const menu = filterBarEl.querySelector('.dropdown-menu');
+        if (menu.getBoundingClientRect().right > window.innerWidth - 12) menu.classList.add('align-right');
+        (menu.querySelector('.selected') || menu.firstChild).focus();
+      }
+    };
+    wrap.appendChild(toggle);
 
-    sectors.forEach(sec => {
-      const chip = document.createElement('button');
-      chip.className = 'chip' + (activeSector === sec ? ' active-sector' : '');
-      chip.textContent = sec;
-      chip.onclick = () => { activeSector = sec; renderSectorFilters(); renderGrid(); };
-      sectorFiltersEl.appendChild(chip);
-    });
+    if (openMenu === kind) {
+      const menu = document.createElement('div');
+      menu.className = 'dropdown-menu';
+      menu.setAttribute('role', 'menu');
+      ['all', ...options].forEach(value => {
+        const option = document.createElement('button');
+        option.type = 'button';
+        option.className = 'dropdown-option' + (value === active ? ' selected' : '');
+        option.setAttribute('role', 'menuitemradio');
+        option.setAttribute('aria-checked', value === active ? 'true' : 'false');
+        const count = value === 'all' ? data.items.length : counts[value];
+        option.innerHTML = `<span>${escapeHtml(value === 'all' ? allLabel : value)}</span><span class="dropdown-count">${count}</span>`;
+        option.onclick = () => {
+          choose(value);
+          closeMenu();
+          renderGrid();
+        };
+        menu.appendChild(option);
+      });
+      wrap.appendChild(menu);
+    }
+    return wrap;
   }
+
+  function closeMenu() {
+    const kind = openMenu;
+    openMenu = null;
+    renderFilterBar();
+    const toggle = kind && filterBarEl.querySelector(`[data-menu="${kind}"]`);
+    if (toggle) toggle.focus();
+  }
+
+  function renderFilterBar() {
+    filterBarEl.innerHTML = '';
+
+    filterBarEl.appendChild(sortChip('date',
+      '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>',
+      'Newest first'));
+    filterBarEl.appendChild(sortChip('importance',
+      '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 4 14 11 14 10 22 20 9 13 9 13 2"/></svg>',
+      'Most important first'));
+
+    const divider = document.createElement('span');
+    divider.className = 'filter-divider';
+    divider.setAttribute('aria-hidden', 'true');
+    filterBarEl.appendChild(divider);
+
+    if (sectors.length) {
+      filterBarEl.appendChild(dropdown('sector', 'All sectors', sectors, sectorCounts, activeSector,
+        value => { activeSector = value; }));
+    }
+    filterBarEl.appendChild(dropdown('source', 'All sources', sources, sourceCounts, activeSource,
+      value => { activeSource = value; }));
+
+    const reset = document.createElement('button');
+    reset.type = 'button';
+    reset.className = 'chip chip-reset';
+    reset.disabled = !filtersActive();
+    reset.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 3 3 9 9 9"/></svg>Reset filters';
+    reset.onclick = () => {
+      activeSource = 'all';
+      activeSector = 'all';
+      searchQuery = '';
+      searchInput.value = '';
+      searchClearBtn.style.display = 'none';
+      openMenu = null;
+      renderFilterBar();
+      renderGrid();
+    };
+    filterBarEl.appendChild(reset);
+  }
+
+  // Close an open menu on a click elsewhere or on Escape; arrow keys move
+  // between its options.
+  document.addEventListener('click', (e) => {
+    if (openMenu && !e.target.closest('.dropdown')) closeMenu();
+  });
+  filterBarEl.addEventListener('keydown', (e) => {
+    if (!openMenu) return;
+    if (e.key === 'Escape') { e.preventDefault(); closeMenu(); return; }
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    const options = [...filterBarEl.querySelectorAll('.dropdown-option')];
+    if (!options.length) return;
+    e.preventDefault();
+    const step = e.key === 'ArrowDown' ? 1 : -1;
+    const next = (options.indexOf(document.activeElement) + step + options.length) % options.length;
+    options[next].focus();
+  });
 
   // ---- Grid ----
   const sentLabels = { positive: 'Positive', negative: 'Negative', neutral: 'Neutral' };
@@ -1463,6 +1625,7 @@
   searchInput.addEventListener('input', (e) => {
     searchQuery = e.target.value;
     searchClearBtn.style.display = searchQuery ? 'inline-block' : 'none';
+    renderFilterBar();
     renderGrid();
   });
 
@@ -1474,6 +1637,7 @@
     searchQuery = ticker;
     searchInput.value = ticker;
     searchClearBtn.style.display = 'inline-block';
+    renderFilterBar();
     renderGrid();
     document.querySelector('.controls-block').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
@@ -1493,11 +1657,11 @@
     searchInput.value = '';
     searchClearBtn.style.display = 'none';
     searchInput.focus();
+    renderFilterBar();
     renderGrid();
   });
 
-  renderFilters();
-  renderSortToggle();
+  renderFilterBar();
   renderGrid();
 })();
 </script>
