@@ -336,15 +336,15 @@
    "date": "2026-09-28",
    "value": 51,
    "label": "Neutral",
-   "headlines": 280,
+   "headlines": 283,
    "avg7": 55.6
   },
   {
    "date": "2026-09-29",
-   "value": 45,
+   "value": 53,
    "label": "Neutral",
-   "headlines": 16,
-   "avg7": 52.9
+   "headlines": 25,
+   "avg7": 54.0
   }
  ]
 }
