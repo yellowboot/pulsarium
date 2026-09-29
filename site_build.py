@@ -404,14 +404,15 @@ def mood_page(history: list, window: list, now: datetime) -> tuple:
   <h2>Day by day <small>bars: the day's value · line: 7-day average</small></h2>
   <div class="panel chart-panel">{mood_chart(history)}</div>
 </section>
-{f'<section class="block"><h2>Sector moods <small>last 7 days, sectors with at least 8 headlines</small></h2><div class="mood-list">{sector_html}</div></section>' if sector_html else ""}
+{f'<section class="block"><h2>Sector moods <small>last 7 days, sectors with at least 8 headlines</small></h2><div class="mood-list fit-rows">{sector_html}</div></section>' if sector_html else ""}
 {cta("Your holdings, with the mood around them",
      "The free cabinet filters the news to what you own and watch, so you see which way your names are being written about.")}
 <section class="block">
   <h2>Recent days</h2>
-  <div class="day-list">{recent}</div>
+  <div class="day-list fit-rows">{recent}</div>
 </section>
 {MOOD_EMBED}
+{FIT_ROWS_SCRIPT}
 <section class="block method">
   <h2>How the index is made</h2>
   <p>Every headline Pulsarium collects from public sources is scored as positive, negative or neutral and given an importance from 0 to 100 (by a language model when available, otherwise by keyword rules). Macro and geopolitical context without a direct market target is left out. For each day, positive headlines count +1 and negative −1, each weighted by 1 + importance/50, and the weighted average is mapped to 0–100. Days with fewer than {MIN_MOOD_ITEMS} market headlines get no value.</p>
@@ -421,6 +422,23 @@ def mood_page(history: list, window: list, now: datetime) -> tuple:
     crumbs = [("Home", "/"), ("News", "/news/"), ("Mood Index", path)]
     return path, page(path=path, title=title, description=description, body=body, crumbs=crumbs), True
 
+
+# Long lists show their first rows (four, or data-rows) and scroll the rest.
+# Measured rather than a fixed height, because rows wrap on phones.
+FIT_ROWS_SCRIPT = """<script>
+(function () {
+  var lists = document.querySelectorAll('.fit-rows');
+  function fit(list) {
+    var count = Number(list.dataset.rows) || 4, rows = list.children, last = rows[count - 1];
+    list.style.maxHeight = rows.length > count && last ? (last.offsetTop + last.offsetHeight) + 'px' : '';
+  }
+  lists.forEach(fit);
+  if (window.ResizeObserver) {
+    var observer = new ResizeObserver(function () { lists.forEach(fit); });
+    lists.forEach(function (list) { observer.observe(list); });
+  }
+})();
+</script>"""
 
 # The embed code offered on /mood/. The iframe shows the card; the plain
 # link under it is what search engines count, so the snippet keeps it.
@@ -913,7 +931,8 @@ def daily_index(days: list, per_day: dict) -> tuple:
   <h1>Stock market news, day by day</h1>
   <p class="lead">Every trading day's headlines in one place: top stories by importance, the day's sentiment and the most mentioned companies.</p>
 </header>
-<section class="block day-list">{"".join(rows)}</section>
+<section class="block day-list fit-rows" data-rows="7">{"".join(rows)}</section>
+{FIT_ROWS_SCRIPT}
 """
     title = "Daily stock market news digest: top stories by day | Pulsarium"
     description = "An archive of daily stock market headlines with top stories, sentiment and the most mentioned companies for each day."
