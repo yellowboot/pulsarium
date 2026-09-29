@@ -47,6 +47,8 @@ SHOTS = {
     "cabinet-dividends": 772,
     "cabinet-watchlists": 772,
     "cabinet-overview-calm": 773,
+    "cabinet-company": 1285,
+    "cabinet-company-calm": 1285,
 }
 
 
@@ -339,6 +341,9 @@ def portfolio_tracker() -> dict:
         ])
         + shot("cabinet-portfolio", "Pulsarium portfolio table with shares, average cost, price, P&L, dividends and weight",
                "Every position with its average cost, price, unrealized and realized P&L, dividends and weight.")
+        + shot("cabinet-company", "Pulsarium company page for NVIDIA: price history, position, price alerts, key figures from SEC filings, dividends and news",
+               "Every stock you hold or watch has its own page: price history, your position and alerts, private "
+               "notes, its news and, for US-listed companies, key figures and dividend history from SEC filings.")
         + steps("Start in three steps", [
             ("Create a free account", "Sign up with email or Google and turn on two-factor authentication if you like."),
             ("Add your trades", "Upload your broker's file — <a href=\"/import/\">Revolut, DEGIRO, Trading 212, IBKR, Robinhood, Fidelity, Schwab</a> or any CSV/TSV — or add trades by hand."),
@@ -382,6 +387,9 @@ def dividend_tracker() -> dict:
             ("Detected, then confirmed", "New dividends and stock splits are detected automatically and applied only after you confirm them — no silent changes to your records."),
             ("Imported with your trades", "Dividend rows in broker files (for example Trading 212's “Dividend (Ordinary)”) come in with the trades."),
         ])
+        + shot("cabinet-company-calm", "Pulsarium company page for Coca-Cola in the light theme, with dividends per share by year and a run of increases since 2008",
+               "For US-listed companies, the company page shows the dividend per share by year from SEC filings, "
+               "adjusted for splits, and how long it has kept rising.")
         + closing_cta("See your dividend income at a glance",
                       "Add your holdings once — the calendar and monthly flow follow. Free during the beta.")
         + faq_section
