@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Stock market mood 71/100, optimistic · Pulsarium</title>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<script>try { var t = new URLSearchParams(location.search).get('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<style>
+:root { --card: linear-gradient(160deg, #0b1024, #05070f); --ring: #05070f; --line: rgba(120, 220, 255, .22); --text: #e6f1ff; --mid: #a9bddf; --low: #7489b3;
+  --accent: #00f0ff; --pos: #3dffa2; --neg: #ff6b8e; --neu: #9db2d6; --track: linear-gradient(90deg, #ff6b8e, #56627f 50%, #3dffa2); --glow: 0 0 12px rgba(0, 240, 255, .6); }
+:root[data-theme="light"] { --card: #ffffff; --ring: #ffffff; --line: #d6e0e4; --text: #16232b; --mid: #46565f; --low: #6b7b84;
+  --accent: #007f8c; --pos: #1d7a4d; --neg: #c43b5c; --neu: #5b6b74; --track: linear-gradient(90deg, #eeb1c0, #d5dee2 50%, #a8dcc0); --glow: 0 1px 4px rgba(0, 60, 70, .35); }
+html, body { margin: 0; height: 100%; background: transparent; }
+.card { box-sizing: border-box; height: 100%; display: flex; flex-direction: column; justify-content: space-between; gap: 7px; padding: 11px 14px 10px;
+  border: 1px solid var(--line); border-radius: 12px; background: var(--card); color: var(--text); text-decoration: none; overflow: hidden;
+  font-family: 'Chakra Petch', system-ui, -apple-system, sans-serif; }
+.card:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--accent);
+  font: 600 10px/1 'Orbitron', system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+.top time { color: var(--low); font: 400 10.5px/1 'JetBrains Mono', ui-monospace, monospace; letter-spacing: 0; text-transform: none; white-space: nowrap; }
+.main { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+.value { font: 700 30px/1 'JetBrains Mono', ui-monospace, monospace; }
+.value small { font-size: 12px; font-weight: 400; color: var(--low); }
+.label { font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.change { margin-left: auto; font: 600 12px/1 'JetBrains Mono', ui-monospace, monospace; }
+.pos { color: var(--pos); } .neg { color: var(--neg); } .neu { color: var(--neu); }
+.scale { position: relative; height: 6px; margin: 3px 6px 0; border-radius: 99px; background: var(--track); }
+.scale i { position: absolute; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; box-sizing: border-box; border-radius: 50%;
+  background: var(--accent); border: 2px solid var(--ring); box-shadow: var(--glow); }
+.ticks { display: flex; justify-content: space-between; color: var(--low); font: 400 9.5px/1 'JetBrains Mono', ui-monospace, monospace; }
+.foot { display: flex; justify-content: space-between; gap: 8px; color: var(--mid); font-size: 11.5px; line-height: 1.2; }
+.foot b { color: var(--accent); font-weight: 600; white-space: nowrap; }
+.card:hover .foot b { text-decoration: underline; }
+@media (max-width: 300px) { .value { font-size: 25px; } .label { font-size: 13px; } .count, .foot span { display: none; } }
+</style>
+</head>
+<body>
+<a class="card" href="https://pulsarium.finance/mood/" target="_blank" rel="noopener" title="How today's stock market news reads, from 0 to 100 — open the Pulsarium Mood Index">
+  <div class="top"><span>Market mood</span><time datetime="2026-09-29">Tue 29 Sep<span class="count"> · 81 headlines</span></time></div>
+  <div class="main"><span class="value">71<small>/100</small></span><span class="label pos">Optimistic</span><span class="change pos" title="vs previous day">▲20</span></div>
+  <div class="scale" aria-hidden="true"><i style="left:71%"></i></div>
+  <div class="ticks" aria-hidden="true"><span>0 · cautious</span><span>50</span><span>optimistic · 100</span></div>
+  <div class="foot"><span>7-day average 56.6</span><b>Pulsarium Mood Index ↗</b></div>
+</a>
+</body>
+</html>
