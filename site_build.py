@@ -411,6 +411,7 @@ def mood_page(history: list, window: list, now: datetime) -> tuple:
   <h2>Recent days</h2>
   <div class="day-list">{recent}</div>
 </section>
+{MOOD_EMBED}
 <section class="block method">
   <h2>How the index is made</h2>
   <p>Every headline Pulsarium collects from public sources is scored as positive, negative or neutral and given an importance from 0 to 100 (by a language model when available, otherwise by keyword rules). Macro and geopolitical context without a direct market target is left out. For each day, positive headlines count +1 and negative −1, each weighted by 1 + importance/50, and the weighted average is mapped to 0–100. Days with fewer than {MIN_MOOD_ITEMS} market headlines get no value.</p>
@@ -419,6 +420,124 @@ def mood_page(history: list, window: list, now: datetime) -> tuple:
 """
     crumbs = [("Home", "/"), ("News", "/news/"), ("Mood Index", path)]
     return path, page(path=path, title=title, description=description, body=body, crumbs=crumbs), True
+
+
+# The embed code offered on /mood/. The iframe shows the card; the plain
+# link under it is what search engines count, so the snippet keeps it.
+MOOD_SNIPPET = ('<iframe src="{site}/mood/widget/?theme={theme}" title="Pulsarium Mood Index" width="340" height="140" '
+                'style="border:0;max-width:100%" loading="lazy"></iframe>\n'
+                '<p style="margin:4px 0 0;font:12px/1.4 sans-serif"><a href="{site}/mood/">Stock market mood index</a> by Pulsarium</p>')
+
+MOOD_EMBED = f"""<section class="block" id="embed">
+  <h2>Put the Mood Index on your site <small>free · updates by itself</small></h2>
+  <div class="embed-grid">
+    <div class="embed-preview">
+      <iframe src="/mood/widget/?theme=dark" title="Pulsarium Mood Index, dark" width="340" height="140" loading="lazy"></iframe>
+      <iframe src="/mood/widget/?theme=light" title="Pulsarium Mood Index, light" width="340" height="140" loading="lazy"></iframe>
+    </div>
+    <div class="panel embed-code">
+      <div class="embed-switch" role="group" aria-label="Widget theme">
+        <button type="button" class="active" data-theme="dark" aria-pressed="true">Dark</button>
+        <button type="button" data-theme="light" aria-pressed="false">Light</button>
+      </div>
+      <textarea id="embed-snippet" readonly rows="5" aria-label="Embed code">{esc(MOOD_SNIPPET.format(site=SITE, theme="dark"))}</textarea>
+      <button type="button" class="embed-copy" id="embed-copy">Copy code</button>
+      <p>Paste it into any HTML block of your blog or site. The card shows today's value and refreshes on its own; please keep the link under it.</p>
+    </div>
+  </div>
+  <script>
+  (function () {{
+    var box = document.getElementById('embed-snippet'), copy = document.getElementById('embed-copy');
+    var template = {json.dumps(MOOD_SNIPPET.replace("{site}", SITE))};
+    document.querySelectorAll('.embed-switch button').forEach(function (button) {{
+      button.addEventListener('click', function () {{
+        document.querySelectorAll('.embed-switch button').forEach(function (b) {{
+          b.classList.toggle('active', b === button); b.setAttribute('aria-pressed', b === button);
+        }});
+        box.value = template.replace('{{theme}}', button.dataset.theme);
+      }});
+    }});
+    copy.addEventListener('click', function () {{
+      var done = function () {{ copy.textContent = 'Copied'; setTimeout(function () {{ copy.textContent = 'Copy code'; }}, 1600); }};
+      if (navigator.clipboard) navigator.clipboard.writeText(box.value).then(done, function () {{ box.select(); }});
+      else {{ box.select(); document.execCommand('copy'); done(); }}
+    }});
+  }})();
+  </script>
+</section>"""
+
+
+def mood_widget(history: list) -> str:
+    """/mood/widget/: the card other sites embed. Today's value on the 0-100
+    scale, its label, the change from the previous reading and the 7-day
+    average; the whole card links to /mood/. ?theme=light for light pages
+    (dark Neon by default). Fonts come from this site, so embedding it sends
+    no visitor data to anyone else; not indexed, not in the sitemap."""
+    today = history[-1] if history else None
+    prev = history[-2] if len(history) > 1 else None
+    if today:
+        tone = "neg" if today["value"] <= 44 else "neu" if today["value"] <= 55 else "pos"
+        diff = today["value"] - prev["value"] if prev else None
+        change = "" if diff is None else (
+            f'<span class="change {"pos" if diff > 0 else "neg" if diff < 0 else "neu"}" title="vs previous day">'
+            f'{"▲" if diff > 0 else "▼" if diff < 0 else "±"}{abs(diff)}</span>')
+        day = date.fromisoformat(today["date"])
+        content = f"""<div class="top"><span>Market mood</span><time datetime="{today["date"]}">{fmt_short_day(day)}<span class="count"> · {today["headlines"]} headlines</span></time></div>
+  <div class="main"><span class="value">{today["value"]}<small>/100</small></span><span class="label {tone}">{esc(today["label"])}</span>{change}</div>
+  <div class="scale" aria-hidden="true"><i style="left:{today["value"]}%"></i></div>
+  <div class="ticks" aria-hidden="true"><span>0 · cautious</span><span>50</span><span>optimistic · 100</span></div>
+  <div class="foot"><span>7-day average {today["avg7"]:g}</span><b>Pulsarium Mood Index ↗</b></div>"""
+        summary = f'Stock market mood {today["value"]}/100, {today["label"].lower()}'
+    else:
+        content = """<div class="top"><span>Market mood</span></div>
+  <div class="main"><span class="label neu">Not enough headlines yet today</span></div>
+  <div class="foot"><span>Back after the next news refresh</span><b>Pulsarium Mood Index ↗</b></div>"""
+        summary = "Pulsarium Mood Index"
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>{esc(summary)} · Pulsarium</title>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<script>try {{ var t = new URLSearchParams(location.search).get('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; }} catch (e) {{}}</script>
+<style>
+:root {{ --card: linear-gradient(160deg, #0b1024, #05070f); --ring: #05070f; --line: rgba(120, 220, 255, .22); --text: #e6f1ff; --mid: #a9bddf; --low: #7489b3;
+  --accent: #00f0ff; --pos: #3dffa2; --neg: #ff6b8e; --neu: #9db2d6; --track: linear-gradient(90deg, #ff6b8e, #56627f 50%, #3dffa2); --glow: 0 0 12px rgba(0, 240, 255, .6); }}
+:root[data-theme="light"] {{ --card: #ffffff; --ring: #ffffff; --line: #d6e0e4; --text: #16232b; --mid: #46565f; --low: #6b7b84;
+  --accent: #007f8c; --pos: #1d7a4d; --neg: #c43b5c; --neu: #5b6b74; --track: linear-gradient(90deg, #eeb1c0, #d5dee2 50%, #a8dcc0); --glow: 0 1px 4px rgba(0, 60, 70, .35); }}
+html, body {{ margin: 0; height: 100%; background: transparent; }}
+.card {{ box-sizing: border-box; height: 100%; display: flex; flex-direction: column; justify-content: space-between; gap: 7px; padding: 11px 14px 10px;
+  border: 1px solid var(--line); border-radius: 12px; background: var(--card); color: var(--text); text-decoration: none; overflow: hidden;
+  font-family: 'Chakra Petch', system-ui, -apple-system, sans-serif; }}
+.card:focus-visible {{ outline: 2px solid var(--accent); outline-offset: -2px; }}
+.top {{ display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--accent);
+  font: 600 10px/1 'Orbitron', system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; }}
+.top time {{ color: var(--low); font: 400 10.5px/1 'JetBrains Mono', ui-monospace, monospace; letter-spacing: 0; text-transform: none; white-space: nowrap; }}
+.main {{ display: flex; align-items: baseline; gap: 10px; min-width: 0; }}
+.value {{ font: 700 30px/1 'JetBrains Mono', ui-monospace, monospace; }}
+.value small {{ font-size: 12px; font-weight: 400; color: var(--low); }}
+.label {{ font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
+.change {{ margin-left: auto; font: 600 12px/1 'JetBrains Mono', ui-monospace, monospace; }}
+.pos {{ color: var(--pos); }} .neg {{ color: var(--neg); }} .neu {{ color: var(--neu); }}
+.scale {{ position: relative; height: 6px; margin: 3px 6px 0; border-radius: 99px; background: var(--track); }}
+.scale i {{ position: absolute; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; box-sizing: border-box; border-radius: 50%;
+  background: var(--accent); border: 2px solid var(--ring); box-shadow: var(--glow); }}
+.ticks {{ display: flex; justify-content: space-between; color: var(--low); font: 400 9.5px/1 'JetBrains Mono', ui-monospace, monospace; }}
+.foot {{ display: flex; justify-content: space-between; gap: 8px; color: var(--mid); font-size: 11.5px; line-height: 1.2; }}
+.foot b {{ color: var(--accent); font-weight: 600; white-space: nowrap; }}
+.card:hover .foot b {{ text-decoration: underline; }}
+@media (max-width: 300px) {{ .value {{ font-size: 25px; }} .label {{ font-size: 13px; }} .count, .foot span {{ display: none; }} }}
+</style>
+</head>
+<body>
+<a class="card" href="{SITE}/mood/" target="_blank" rel="noopener" title="How today's stock market news reads, from 0 to 100 — open the Pulsarium Mood Index">
+  {content}
+</a>
+</body>
+</html>
+"""
 
 
 # ---------------------------------------------------------------------------
@@ -954,6 +1073,7 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
         emit(daily_index(days, per_day), days[-1], "daily")
     emit(companies_hub(companies, counts, sector_totals), today.isoformat(), "daily")
     emit(mood_page(history, window, now), history[-1]["date"] if history else None, "daily")
+    write_if_changed(url_file("/mood/widget/"), mood_widget(history), changed_files)
     write_if_changed(os.path.join("mood", "history.json"),
                      json.dumps({"index": "Pulsarium Mood Index", "scale": "0-100, 50 = neutral",
                                  "source": f"{SITE}/mood/", "days": history}, indent=1) + "\n",

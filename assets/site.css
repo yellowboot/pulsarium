@@ -288,6 +288,21 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 .mood-meter i.neu { background: var(--neu); }
 .method p { max-width: 860px; color: var(--text-mid); font-size: 14.5px; line-height: 1.7; }
 .method a { color: var(--accent); }
+/* embed code for the Mood Index card (/mood/widget/) */
+.embed-grid { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 22px; align-items: start; }
+.embed-preview { display: grid; gap: 12px; }
+.embed-preview iframe { display: block; width: 100%; max-width: 340px; height: 140px; border: 0; }
+.embed-code { padding: 18px; display: grid; gap: 12px; }
+.embed-switch { display: flex; gap: 6px; }
+.embed-switch button, .embed-copy { font: 500 13px/1 'Chakra Petch', sans-serif; padding: 8px 14px; border-radius: 8px; cursor: pointer;
+  color: var(--text-mid); background: rgba(10, 18, 40, 0.55); border: 1px solid var(--line); }
+.embed-switch button.active { color: var(--bg-0); background: var(--accent); border-color: var(--accent); }
+.embed-code textarea { width: 100%; box-sizing: border-box; resize: vertical; padding: 12px; border-radius: 10px; border: 1px solid var(--line);
+  background: var(--bg-0); color: var(--accent-ice); font: 12.5px/1.55 'JetBrains Mono', monospace; }
+.embed-copy { justify-self: start; color: var(--bg-0); background: var(--accent); border-color: var(--accent); font-weight: 600; }
+.embed-copy:hover { box-shadow: 0 0 18px rgba(0, 240, 255, 0.45); }
+.embed-code p { margin: 0; color: var(--text-mid); font-size: 13.5px; line-height: 1.6; }
+@media (max-width: 760px) { .embed-grid { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 760px) {
   .mood-row { grid-template-columns: minmax(0, 1fr) 44px; }
   .mood-row .mood-meter { grid-column: 1 / -1; order: 3; }
