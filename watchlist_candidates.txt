@@ -6,35 +6,39 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 30.09.2026 16:55
-29 of 80 news items unmatched this run
+Generated: 30.09.2026 18:12
+33 of 80 news items unmatched this run
 
-- [MarketWatch] Gold is supposed to be a safe haven when inflation surges. So why isn’t it working that way now?
-- [Nasdaq] Wheat Starting Wednesday with Gains
+- [CNBC] Crude oil exports through the Strait of Hormuz hit prewar levels, but fuel shipments remain constrained
+- [MarketWatch] Medicare Advantage plans will be cheaper next year. Here’s the new cost.
+- [Yahoo Finance] Arm Is Betting on a World Where Everything Needs a Chip
+- [Nasdaq] Demand Concerns Weigh on Cocoa Prices
 - [Nasdaq] Cotton Following Tuesday’s Limit Losses with a Modest Bounce
-- [Nasdaq] Soybeans Extending Bounce to Wednesday AM Trade
-- [Nasdaq] Cotton Fall the 4 Cent Limit on Tuesday
-- [Nasdaq] Corn Slips Lower as Traders Square Up Ahead of USDA Report
-- [Nasdaq] Cocoa Prices Fall on Dollar Strength and Robust Supplies
-- [Investing.com] ElevenLabs’ valuation doubles to $22 billion on surging AI voice-agent demand
+- [Yahoo Finance] Sector Update: Energy Stocks Rise Wednesday Afternoon
+- [Nasdaq] Brazil Weather Risks Boost Coffee Prices
+- [Nasdaq] Ex-Div Reminder for DuPont's Preferred Stock
+- [Nasdaq] Wednesday 9/30 Insider Buying Report: SWZ, FUL
+- [Nasdaq] Wednesday's ETF with Unusual Volume: PRFZ
+- [Nasdaq] Reminder: NGL Energy Partners' Class C Preferred Units Goes Ex-Dividend Soon
+- [Nasdaq] Wednesday's ETF Movers: BUG, JETS
+- [Nasdaq] Corn Bulls Pushing Higher Ahead of USDA Stocks Report
+- [Nasdaq] Wheat Posts Mixed Trade on Tuesday
+- [Nasdaq] Saul Centers' Series E Preferred Stock Ex-Dividend Reminder - 10/1/26
+- [CNBC] The hottest trade of the year so far isn't AI. It's tanker stocks
+- [CNBC] Kalshi traders see high odds Anthropic's IPO is announced this year
+- [CNBC] The market search for balance sheet cash cow 'quality' stocks is shifting with mega AI spend
+- [Investing.com] S&P and Moody’s downgrade Hormel Foods following $1.05B Brakebush deal
 - [Investing.com] Mattel taps Condé Nast’s Lynch as CEO Kreiz, who led brand revival, departs
-- [Yahoo Finance] 3 Dividend Stocks Yielding Over 5% to Buy and Hold for the Next 5 Years.
-- [Investing.com] Conagra sales volumes dip as new CEO Brase grapples with inflation pressures
-- [Yahoo Finance] Why The Metals Company Stock Is Soaring Today
-- [Investing.com] Firefly Aerospace stock rises on Starcloud AI computing deal
-- [Yahoo Finance] CRMLS Rejects Compass's Demands, Stands Firm on Cooperation and Transparency
-- [Investing.com] Why are US Corn Futures falling 3% today?
-- [Investing.com] European stocks fall as markets weigh hot EU Inflation against soft U.S. data
-- [Yahoo Finance] Iceland Seafood International hf: Non-binding Letter of Intent regarding the Company's Shareholding in Ahumados Domínguez
-- [Nasdaq] Coffee Prices Supported by Dry Weather in Brazil
+- [Investing.com] AI infra firm Accelevation valued at $3.9 billion as shares fall in Nasdaq debut
+- [MarketWatch] Gold is supposed to be a safe haven when inflation surges. So why isn’t it working that way now?
+- [Investing.com] GameStop shares rise as CEO Ryan Cohen buys $10.6 million in stock
+- [Investing.com] Hermes stock target lowered at Citi on continued China weakness
+- [Investing.com] ElevenLabs’ valuation doubles to $22 billion on surging AI voice-agent demand
 - [CNBC] These two chip stocks could join the elite $2 trillion tech giant club, says top analyst
-- [Nasdaq] Wednesday Sector Leaders: Oil & Gas Refining & Marketing, Information Technology Services
-- [Nasdaq] Wednesday Sector Laggards: Real Estate, Agriculture & Farm Products
-- [Nasdaq] Daily Dividend Report: GIS,FE,MA,GEV,CAC
 - [CNBC] FTC is investigating OpenAI, Anthropic and other AI companies over product risks
-- [Nasdaq] Analyst Favorites: Coeur Mining Ranks As a Top Metals Pick
 - [CoinDesk] Open USD takes on Tether, Circle with a different stablecoin model that's 'building money'
-- [Nasdaq] Stifel Initiates Coverage of Achieve Life Sciences with Buy
-- [CoinDesk] Clock's ticking: UK's crypto regulatory application window opens with February deadline
+- [Mining.com] Arizona Gold finds high-grade zones at main project
+- [Mining.com] Miata drills 3.4 g gold at Sela Creek in Suriname
+- [CNBC] Private sector jobs rose by 90,000 in September, better than expected, ADP reports
+- [CNBC] Kalshi, Polymarket trading volumes on some products raises questions amid massive growth
 - [Mining.com] DiCaprio joins opposition to Belo Sun’s $300M Brazil mine
-- [CNBC] Mattel names Roger Lynch as CEO, replacing Ynon Kreiz
