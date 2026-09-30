@@ -343,8 +343,15 @@
    "date": "2026-09-29",
    "value": 67,
    "label": "Leaning optimistic",
-   "headlines": 352,
+   "headlines": 361,
    "avg7": 56.0
+  },
+  {
+   "date": "2026-09-30",
+   "value": 62,
+   "label": "Leaning optimistic",
+   "headlines": 23,
+   "avg7": 56.3
   }
  ]
 }
