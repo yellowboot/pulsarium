@@ -22,7 +22,13 @@ on:
     # Weekends: two sweeps, roughly twelve hours apart.
     - cron: '30 3 * * 0,6'
     - cron: '0 15 * * 0,6'
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: 'Label the whole feed with one model (to check it works), or auto'
+        type: choice
+        options: [auto, DeepSeek, Gemini]
+        default: auto
 
 permissions:
   contents: write
@@ -53,6 +59,7 @@ jobs:
           # fallback. GEMINI_MODEL can be a repository variable or a secret.
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || secrets.GEMINI_MODEL }}
+          LLM_ONLY: ${{ inputs.provider }}
         run: python fetch_news.py
 
       # Archive + company/sector/daily pages, RSS and sitemap (site_build.py).

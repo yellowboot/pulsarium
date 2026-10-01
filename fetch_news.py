@@ -68,6 +68,10 @@ LLM_BATCH_SIZE = 15  # how many news items to send per API request
 # the model from the GEMINI_MODEL setting, else a cheap fast one.
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "").strip() or "gemini-flash-lite-latest"
+# A manual run can try one provider on the whole feed ("DeepSeek" or
+# "Gemini"), e.g. to check the fallback works; empty or "auto" = normal runs.
+LLM_ONLY = os.environ.get("LLM_ONLY", "").strip()
+LLM_ONLY = "" if LLM_ONLY.lower() == "auto" else LLM_ONLY
 LLM_TIMEOUT = 60  # seconds per request in total; DeepSeek can be slow under load
 # all model calls in a run stop after this many seconds, so a slow provider
 # never holds up the feed: what's left keeps its earlier labels this run
@@ -791,7 +795,9 @@ def ask_gemini(prompt, count):
     raw = post_json("Gemini", f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent",
                     {"x-goog-api-key": GEMINI_API_KEY}, {
                         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-                        "generationConfig": {"temperature": 0, "maxOutputTokens": 2000,
+                        # room for the reasoning tokens newer models spend
+                        # before answering, so the JSON is never cut short
+                        "generationConfig": {"temperature": 0, "maxOutputTokens": 8192,
                                              "responseMimeType": "application/json"},
                     })
     try:
@@ -806,9 +812,9 @@ LLM_PROVIDERS = {"DeepSeek": ask_deepseek, "Gemini": ask_gemini}
 
 
 def active_providers():
-    """Providers with a key, in fallback order."""
+    """Providers with a key, in fallback order; LLM_ONLY narrows it to one."""
     keys = {"DeepSeek": DEEPSEEK_API_KEY, "Gemini": GEMINI_API_KEY}
-    return [name for name in LLM_PROVIDERS if keys[name]]
+    return [name for name in LLM_PROVIDERS if keys[name] and LLM_ONLY in ("", name)]
 
 
 def classify_batch_with_llm(batch_items, providers):
@@ -863,7 +869,7 @@ def classify_items_with_llm(items):
         carried = previous.get(label_key(item))
         if carried:
             item.update(carried)
-        if not carried or carried.get("llm_version") != LLM_PROMPT_VERSION:
+        if not carried or carried.get("llm_version") != LLM_PROMPT_VERSION or LLM_ONLY:
             pending.append(item)
     print(f"  Labels kept from the last run: {len(items) - len(pending)}; sending {len(pending)}")
 
