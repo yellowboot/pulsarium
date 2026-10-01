@@ -62,6 +62,11 @@ for _stream in (sys.stdout, sys.stderr):
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "").strip()
 DEEPSEEK_MODEL = "deepseek-chat"  # DeepSeek-V3 — cheap, plenty for classification
 LLM_BATCH_SIZE = 15  # how many news items to send per API request
+# Fallback when DeepSeek doesn't answer: the same prompt goes to Google's
+# Gemini API. Key from the GEMINI_API_KEY secret (same rules as above);
+# the model from the GEMINI_MODEL setting, else a cheap fast one.
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "").strip() or "gemini-flash-lite-latest"
 LLM_TIMEOUT = 75  # seconds per request; DeepSeek can be slow under load
 # Bump whenever the classification prompt changes: items labelled under an
 # older version are sent again (and keep their old labels if that fails).
@@ -589,19 +594,11 @@ def calc_importance(title: str, description: str, tickers: list, pub_dt) -> floa
 # LLM CLASSIFICATION (optional, via the DeepSeek API)
 # ---------------------------------------------------------------------------
 
-def classify_batch_with_llm(batch_items):
-    """Sends a batch of news items to the DeepSeek API (OpenAI-compatible
-    /chat/completions endpoint) and asks it to honestly (with real context
-    understanding) determine sentiment, importance, and content type.
-
-    batch_items: a list of {"title": ..., "description": ...}
-    Returns a list of {"sentiment": ..., "importance": ..., "content_type": ...}
-    in the same order, or None on any error (network, rate limits,
-    unexpected format) — the caller then just keeps the heuristic values.
-    """
-    if not DEEPSEEK_API_KEY:
-        return None
-
+def build_prompt(batch_items):
+    """The classification request for a batch of {"title", "description"}:
+    asks the model to honestly (with real context understanding) determine
+    sentiment, importance, and content type. Provider-neutral — DeepSeek and
+    the Gemini fallback get the same text."""
     numbered = "\n\n".join(
         f"{i + 1}. Title: {it['title']}\nDescription: {(it['description'] or '')[:300]}"
         for i, it in enumerate(batch_items)
@@ -696,58 +693,103 @@ def classify_batch_with_llm(batch_items):
         '{"results": [{"content_type": "market_signal", "sentiment": "positive", "importance": 42}, ...]}'
     )
 
-    body = json.dumps({
-        "model": DEEPSEEK_MODEL,
-        "max_tokens": 2000,
-        # the same headline should get the same label on every run
-        "temperature": 0,
-        "response_format": {"type": "json_object"},
-        "messages": [{"role": "user", "content": prompt}],
-    }).encode("utf-8")
+    return prompt
 
+
+def post_json(name, url, headers, body):
+    """POSTs a JSON body and returns the parsed answer, or None. One retry
+    for a slow or busy moment (timeout, rate limit, server error); a
+    rejected key or an empty balance won't fix itself, so no retry for
+    other errors. Keys travel only in headers and are never printed."""
     req = urllib.request.Request(
-        "https://api.deepseek.com/chat/completions",
-        data=body,
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
-        },
-        method="POST",
+        url, data=json.dumps(body).encode("utf-8"),
+        headers={"Content-Type": "application/json", **headers}, method="POST",
     )
-
-    # one retry for a slow or busy moment (timeout, rate limit, server
-    # error); a rejected key or an empty balance won't fix itself, so no
-    # retry for other errors
-    raw = None
     for attempt in (1, 2):
         try:
             with urllib.request.urlopen(req, timeout=LLM_TIMEOUT) as resp:
-                raw = json.loads(resp.read())
-            break
+                return json.loads(resp.read())
         except urllib.error.HTTPError as e:
-            print(f"  [!] Error calling the DeepSeek API: {e}")
+            print(f"  [!] Error calling the {name} API: HTTP {e.code}")
             if e.code != 429 and e.code < 500:
                 return None
-        except (urllib.error.URLError, TimeoutError, OSError) as e:
-            print(f"  [!] Error calling the DeepSeek API: {e}")
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as e:
+            print(f"  [!] Error calling the {name} API: {e}")
         if attempt == 1:
             time.sleep(5)
-    if raw is None:
-        return None
+    return None
 
+
+def parse_results(name, text, count):
+    """The model's {"results": [...]} as a list of `count` entries, or None."""
     try:
-        text = raw["choices"][0]["message"]["content"].strip()
         # in case the model wrapped the JSON in ```json ... ``` anyway
-        text = re.sub(r"^```(?:json)?|```$", "", text, flags=re.MULTILINE).strip()
+        text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.MULTILINE).strip()
         parsed = json.loads(text)
         results = parsed.get("results") if isinstance(parsed, dict) else parsed
-        if isinstance(results, list) and len(results) == len(batch_items):
+        if isinstance(results, list) and len(results) == count:
             return results
-        print("  [!] LLM returned an unexpected response format — using the heuristic for this batch")
-        return None
+        print(f"  [!] {name} returned an unexpected response format")
     except Exception as e:
-        print(f"  [!] Failed to parse the DeepSeek API response: {e}")
+        print(f"  [!] Failed to parse the {name} API response: {e}")
+    return None
+
+
+def ask_deepseek(prompt, count):
+    """DeepSeek's OpenAI-compatible /chat/completions endpoint."""
+    raw = post_json("DeepSeek", "https://api.deepseek.com/chat/completions",
+                    {"Authorization": f"Bearer {DEEPSEEK_API_KEY}"}, {
+                        "model": DEEPSEEK_MODEL,
+                        "max_tokens": 2000,
+                        # the same headline should get the same label on every run
+                        "temperature": 0,
+                        "response_format": {"type": "json_object"},
+                        "messages": [{"role": "user", "content": prompt}],
+                    })
+    try:
+        return parse_results("DeepSeek", raw["choices"][0]["message"]["content"], count) if raw else None
+    except (KeyError, IndexError, TypeError):
+        print("  [!] DeepSeek returned no message")
         return None
+
+
+def ask_gemini(prompt, count):
+    """Google's Gemini API (generateContent), the fallback when DeepSeek
+    doesn't answer."""
+    raw = post_json("Gemini", f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent",
+                    {"x-goog-api-key": GEMINI_API_KEY}, {
+                        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                        "generationConfig": {"temperature": 0, "maxOutputTokens": 2000,
+                                             "responseMimeType": "application/json"},
+                    })
+    try:
+        text = "".join(part.get("text", "") for part in raw["candidates"][0]["content"]["parts"]) if raw else None
+    except (KeyError, IndexError, TypeError):
+        print("  [!] Gemini returned no text")
+        return None
+    return parse_results("Gemini", text, count) if text else None
+
+
+LLM_PROVIDERS = {"DeepSeek": ask_deepseek, "Gemini": ask_gemini}
+
+
+def active_providers():
+    """Providers with a key, in fallback order."""
+    keys = {"DeepSeek": DEEPSEEK_API_KEY, "Gemini": GEMINI_API_KEY}
+    return [name for name in LLM_PROVIDERS if keys[name]]
+
+
+def classify_batch_with_llm(batch_items, providers):
+    """Asks each provider in `providers` (names from LLM_PROVIDERS) in turn
+    until one answers for the whole batch. Returns (results, provider name)
+    with one {"sentiment", "importance", "content_type"} per item in the same
+    order, or (None, None) — the caller then keeps the earlier values."""
+    prompt = build_prompt(batch_items)
+    for name in providers:
+        results = LLM_PROVIDERS[name](prompt, len(batch_items))
+        if results is not None:
+            return results, name
+    return None, None
 
 
 def label_key(item: dict) -> str:
@@ -770,7 +812,7 @@ def load_previous_labels(path: str = "news_data.js") -> dict:
         return {}
     return {
         label_key(item): {field: item.get(field) for field in
-                          ("sentiment", "importance", "content_type", "llm_classified", "llm_version")}
+                          ("sentiment", "importance", "content_type", "llm_classified", "llm_version", "llm_provider")}
         for item in data.get("items", []) if item.get("llm_classified")
     }
 
@@ -791,21 +833,28 @@ def classify_items_with_llm(items):
             pending.append(item)
     print(f"  Labels kept from the last run: {len(items) - len(pending)}; sending {len(pending)}")
 
-    classified = 0
-    failures_in_a_row = 0
+    providers = active_providers()
+    counts = {name: 0 for name in providers}
+    failures_in_a_row = {name: 0 for name in providers}
     for start in range(0, len(pending), LLM_BATCH_SIZE):
-        # two whole batches lost in a row means the API is down right now;
-        # the next run picks the rest up
-        if failures_in_a_row >= 2:
-            print("  [!] DeepSeek isn't answering — skipping the remaining batches this run")
+        # two batches lost in a row means a provider is down right now: the
+        # run stops asking it (DeepSeek's batches go straight to Gemini), and
+        # with none left the next run picks the rest up
+        for name in [n for n in providers if failures_in_a_row[n] >= 2]:
+            print(f"  [!] {name} isn't answering — not asking it again this run")
+            providers.remove(name)
+        if not providers:
             break
         batch = pending[start:start + LLM_BATCH_SIZE]
         batch_input = [{"title": it["title"], "description": it["description"]} for it in batch]
-        result = classify_batch_with_llm(batch_input)
+        result, provider = classify_batch_with_llm(batch_input, providers)
+        # every provider asked before the one that answered has failed
+        for name in providers[:providers.index(provider) if provider else len(providers)]:
+            failures_in_a_row[name] += 1
         if result is None:
-            failures_in_a_row += 1
             continue  # this batch keeps its earlier labels
-        failures_in_a_row = 0
+        failures_in_a_row[provider] = 0
+        counts[provider] += len(batch)
 
         for item, res in zip(batch, result):
             sentiment = res.get("sentiment")
@@ -819,11 +868,12 @@ def classify_items_with_llm(items):
                 item["content_type"] = content_type
             item["llm_classified"] = True
             item["llm_version"] = LLM_PROMPT_VERSION
-        classified += len(batch)
+            item["llm_provider"] = provider
 
     labelled = sum(1 for item in items if item.get("llm_classified"))
-    print(f"  Classified via DeepSeek this run: {classified}/{len(pending)}; "
-          f"{labelled}/{len(items)} news items carry DeepSeek labels (the rest use the local heuristic)")
+    done = ", ".join(f"{name} {count}" for name, count in counts.items()) or "no provider"
+    print(f"  Classified this run: {done} of {len(pending)}; "
+          f"{labelled}/{len(items)} news items carry model labels (the rest use the local heuristic)")
 
 
 def detect_watchlist_matches(text: str) -> list:
@@ -1144,11 +1194,11 @@ def main():
 
     deduped = deduped[:MAX_ITEMS]
 
-    if DEEPSEEK_API_KEY:
-        print(f"\nAPI key found — refining sentiment and importance via DeepSeek ({DEEPSEEK_MODEL})...")
+    if active_providers():
+        print(f"\nRefining sentiment and importance via {' then '.join(active_providers())}...")
         classify_items_with_llm(deduped)
     else:
-        print("\nDEEPSEEK_API_KEY not set — using the local keyword heuristic.")
+        print("\nNo DEEPSEEK_API_KEY or GEMINI_API_KEY set — using the local keyword heuristic.")
         print("(See README.md for details on enabling LLM classification.)")
 
     write_watchlist_candidates(deduped)

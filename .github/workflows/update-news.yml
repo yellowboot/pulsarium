@@ -47,6 +47,10 @@ jobs:
           # committed. If the secret isn't set, fetch_news.py silently
           # falls back to the local keyword heuristic.
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          # Fallback when DeepSeek doesn't answer; same rules. Unset = no
+          # fallback. GEMINI_MODEL (a repository variable) is optional.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
         run: python fetch_news.py
 
       # Archive + company/sector/daily pages, RSS and sitemap (site_build.py).
