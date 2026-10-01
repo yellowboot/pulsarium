@@ -190,6 +190,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/cop/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/cost/</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>hourly</changefreq>
@@ -571,7 +576,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/jpm/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -796,7 +801,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/rtx/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -955,6 +960,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/soun/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/spcx/</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>hourly</changefreq>
@@ -971,7 +981,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/stla/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
