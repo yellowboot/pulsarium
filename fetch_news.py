@@ -16,6 +16,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
@@ -61,6 +62,10 @@ for _stream in (sys.stdout, sys.stderr):
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "").strip()
 DEEPSEEK_MODEL = "deepseek-chat"  # DeepSeek-V3 — cheap, plenty for classification
 LLM_BATCH_SIZE = 15  # how many news items to send per API request
+LLM_TIMEOUT = 75  # seconds per request; DeepSeek can be slow under load
+# Bump whenever the classification prompt changes: items labelled under an
+# older version are sent again (and keep their old labels if that fails).
+LLM_PROMPT_VERSION = 2
 
 # Public financial news RSS feeds (no subscription, no headline-level paywall)
 #
@@ -634,6 +639,24 @@ def classify_batch_with_llm(batch_items):
         "Russia.\n"
         "   - \"Nvidia surges to record high\" → content_type=market_signal, "
         "sentiment=positive.\n"
+        "   - \"CPI comes in hotter than expected\", \"Fed holds rates\", "
+        "\"Payrolls beat estimates\" → content_type=market_signal: scheduled "
+        "macro data and central-bank decisions move bonds, currencies and "
+        "the broad indices directly. Sentiment follows the market reaction "
+        "the item describes; if it describes none, judge the likely one "
+        "(hotter inflation is negative for stocks and bonds).\n"
+        "   - Opinion and promotional pieces — \"3 stocks to buy now\", "
+        "\"Is X a buy?\", \"Prediction: X will soar\", a manager's top picks "
+        "— are not news: sentiment=neutral unless the item reports an actual "
+        "price move, importance 5-10.\n"
+        "   - Previews of events that haven't happened yet — \"what to "
+        "expect from X's earnings\", \"week ahead\" — are sentiment=neutral, "
+        "importance 5-15.\n"
+        "   - Mixed or two-sided items — \"stocks mixed\", \"X rises while Y "
+        "falls\", a beat on one line and a miss on another — are "
+        "sentiment=neutral unless one side clearly dominates.\n"
+        "   - Analyst actions on one company: an upgrade or a raised price "
+        "target is positive, a downgrade or a cut target is negative.\n"
         "   - \"Wheat rallies as Russia rejects Ukraine's peace proposal\" → "
         "sentiment=positive for the wheat market (the price of the asset in "
         "the headline is explicitly rising — \"rallies\"), even though the "
@@ -676,6 +699,8 @@ def classify_batch_with_llm(batch_items):
     body = json.dumps({
         "model": DEEPSEEK_MODEL,
         "max_tokens": 2000,
+        # the same headline should get the same label on every run
+        "temperature": 0,
         "response_format": {"type": "json_object"},
         "messages": [{"role": "user", "content": prompt}],
     }).encode("utf-8")
@@ -690,11 +715,24 @@ def classify_batch_with_llm(batch_items):
         method="POST",
     )
 
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            raw = json.loads(resp.read())
-    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as e:
-        print(f"  [!] Error calling the DeepSeek API: {e}")
+    # one retry for a slow or busy moment (timeout, rate limit, server
+    # error); a rejected key or an empty balance won't fix itself, so no
+    # retry for other errors
+    raw = None
+    for attempt in (1, 2):
+        try:
+            with urllib.request.urlopen(req, timeout=LLM_TIMEOUT) as resp:
+                raw = json.loads(resp.read())
+            break
+        except urllib.error.HTTPError as e:
+            print(f"  [!] Error calling the DeepSeek API: {e}")
+            if e.code != 429 and e.code < 500:
+                return None
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            print(f"  [!] Error calling the DeepSeek API: {e}")
+        if attempt == 1:
+            time.sleep(5)
+    if raw is None:
         return None
 
     try:
@@ -712,18 +750,62 @@ def classify_batch_with_llm(batch_items):
         return None
 
 
+def label_key(item: dict) -> str:
+    """The same headline across runs: its link, else the start of its title
+    (as site_build.py keys the archive)."""
+    return (item.get("link") or "").strip() or item["title"].lower()[:60]
+
+
+def load_previous_labels(path: str = "news_data.js") -> dict:
+    """The language-model labels from the last run's feed, by label_key.
+    Most headlines stay in the feed for several runs; they keep these labels
+    instead of being sent again, so a DeepSeek outage only touches headlines
+    that are new in that run (and the archive behind the Mood Index isn't
+    overwritten with keyword-rule labels)."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            text = f.read()
+        data = json.loads(text[text.index("{"):text.rindex("}") + 1])
+    except (OSError, ValueError):
+        return {}
+    return {
+        label_key(item): {field: item.get(field) for field in
+                          ("sentiment", "importance", "content_type", "llm_classified", "llm_version")}
+        for item in data.get("items", []) if item.get("llm_classified")
+    }
+
+
 def classify_items_with_llm(items):
-    """Runs items through classify_batch_with_llm in batches, updating
-    sentiment/importance/content_type in place. News items the LLM didn't
-    answer for (a whole batch dropped due to network/rate limits) keep
-    their heuristic values."""
+    """Labels items through classify_batch_with_llm in batches, updating
+    sentiment/importance/content_type in place. Headlines labelled in the
+    last run under the current prompt version keep those labels; the rest
+    are sent. Items the LLM didn't answer for keep their last LLM labels if
+    they have any, else the heuristic values."""
+    previous = load_previous_labels()
+    pending = []
+    for item in items:
+        carried = previous.get(label_key(item))
+        if carried:
+            item.update(carried)
+        if not carried or carried.get("llm_version") != LLM_PROMPT_VERSION:
+            pending.append(item)
+    print(f"  Labels kept from the last run: {len(items) - len(pending)}; sending {len(pending)}")
+
     classified = 0
-    for start in range(0, len(items), LLM_BATCH_SIZE):
-        batch = items[start:start + LLM_BATCH_SIZE]
+    failures_in_a_row = 0
+    for start in range(0, len(pending), LLM_BATCH_SIZE):
+        # two whole batches lost in a row means the API is down right now;
+        # the next run picks the rest up
+        if failures_in_a_row >= 2:
+            print("  [!] DeepSeek isn't answering — skipping the remaining batches this run")
+            break
+        batch = pending[start:start + LLM_BATCH_SIZE]
         batch_input = [{"title": it["title"], "description": it["description"]} for it in batch]
         result = classify_batch_with_llm(batch_input)
         if result is None:
-            continue  # this batch stays on the heuristic
+            failures_in_a_row += 1
+            continue  # this batch keeps its earlier labels
+        failures_in_a_row = 0
 
         for item, res in zip(batch, result):
             sentiment = res.get("sentiment")
@@ -736,10 +818,12 @@ def classify_items_with_llm(items):
             if content_type in ("market_signal", "macro_context"):
                 item["content_type"] = content_type
             item["llm_classified"] = True
+            item["llm_version"] = LLM_PROMPT_VERSION
         classified += len(batch)
 
-    print(f"  Classified via DeepSeek: {classified}/{len(items)} news items "
-          f"(the rest use the local heuristic)")
+    labelled = sum(1 for item in items if item.get("llm_classified"))
+    print(f"  Classified via DeepSeek this run: {classified}/{len(pending)}; "
+          f"{labelled}/{len(items)} news items carry DeepSeek labels (the rest use the local heuristic)")
 
 
 def detect_watchlist_matches(text: str) -> list:
