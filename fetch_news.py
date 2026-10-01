@@ -16,6 +16,7 @@ import json
 import os
 import re
 import sys
+import threading
 import time
 import urllib.request
 import urllib.error
@@ -67,7 +68,11 @@ LLM_BATCH_SIZE = 15  # how many news items to send per API request
 # the model from the GEMINI_MODEL setting, else a cheap fast one.
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "").strip() or "gemini-flash-lite-latest"
-LLM_TIMEOUT = 75  # seconds per request; DeepSeek can be slow under load
+LLM_TIMEOUT = 60  # seconds per request in total; DeepSeek can be slow under load
+# all model calls in a run stop after this many seconds, so a slow provider
+# never holds up the feed: what's left keeps its earlier labels this run
+LLM_RUN_BUDGET = 6 * 60
+LLM_DEADLINE = time.monotonic() + LLM_RUN_BUDGET
 # Bump whenever the classification prompt changes: items labelled under an
 # older version are sent again (and keep their old labels if that fails).
 LLM_PROMPT_VERSION = 2
@@ -696,6 +701,28 @@ def build_prompt(batch_items):
     return prompt
 
 
+def within_timeout(call):
+    """call() with a hard limit of LLM_TIMEOUT seconds in total. urlopen's
+    own timeout only fires on silence, and a busy DeepSeek keeps sending
+    blank keep-alive lines while it queues a request, which kept a run
+    waiting for over twenty minutes. The worker is a daemon thread, so one
+    left hanging doesn't hold up the end of the run."""
+    box = {}
+    def work():
+        try:
+            box["value"] = call()
+        except BaseException as e:  # handed to the caller below
+            box["error"] = e
+    worker = threading.Thread(target=work, daemon=True)
+    worker.start()
+    worker.join(LLM_TIMEOUT)
+    if worker.is_alive():
+        raise TimeoutError(f"no complete answer within {LLM_TIMEOUT} s")
+    if "error" in box:
+        raise box["error"]
+    return box["value"]
+
+
 def post_json(name, url, headers, body):
     """POSTs a JSON body and returns the parsed answer, or None. One retry
     for a slow or busy moment (timeout, rate limit, server error); a
@@ -706,14 +733,19 @@ def post_json(name, url, headers, body):
         headers={"Content-Type": "application/json", **headers}, method="POST",
     )
     for attempt in (1, 2):
-        try:
+        if time.monotonic() > LLM_DEADLINE:
+            print(f"  [!] Time for model calls is up this run — not asking {name}")
+            return None
+        def fetch():
             with urllib.request.urlopen(req, timeout=LLM_TIMEOUT) as resp:
                 return json.loads(resp.read())
+        try:
+            return within_timeout(fetch)
         except urllib.error.HTTPError as e:
             print(f"  [!] Error calling the {name} API: HTTP {e.code}")
             if e.code != 429 and e.code < 500:
                 return None
-        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as e:
+        except Exception as e:  # a model call must never stop the news update
             print(f"  [!] Error calling the {name} API: {e}")
         if attempt == 1:
             time.sleep(5)
@@ -823,6 +855,8 @@ def classify_items_with_llm(items):
     last run under the current prompt version keep those labels; the rest
     are sent. Items the LLM didn't answer for keep their last LLM labels if
     they have any, else the heuristic values."""
+    global LLM_DEADLINE
+    LLM_DEADLINE = time.monotonic() + LLM_RUN_BUDGET
     previous = load_previous_labels()
     pending = []
     for item in items:

@@ -34,6 +34,8 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    # a hung run would hold every later one in the concurrency queue
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -48,9 +50,9 @@ jobs:
           # falls back to the local keyword heuristic.
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           # Fallback when DeepSeek doesn't answer; same rules. Unset = no
-          # fallback. GEMINI_MODEL (a repository variable) is optional.
+          # fallback. GEMINI_MODEL can be a repository variable or a secret.
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || secrets.GEMINI_MODEL }}
         run: python fetch_news.py
 
       # Archive + company/sector/daily pages, RSS and sitemap (site_build.py).
