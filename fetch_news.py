@@ -698,8 +698,9 @@ def build_prompt(batch_items):
         f"News items:\n{numbered}\n\n"
         "Respond with STRICTLY a JSON object, no prose outside the JSON, "
         "in this exact shape, with \"results\" containing one entry per news "
-        "item above IN THE SAME ORDER:\n"
-        '{"results": [{"content_type": "market_signal", "sentiment": "positive", "importance": 42}, ...]}'
+        "item above, in the same order, each with \"n\" set to that item's "
+        "number:\n"
+        '{"results": [{"n": 1, "content_type": "market_signal", "sentiment": "positive", "importance": 42}, ...]}'
     )
 
     return prompt
@@ -757,18 +758,36 @@ def post_json(name, url, headers, body):
 
 
 def parse_results(name, text, count):
-    """The model's {"results": [...]} as a list of `count` entries, or None."""
+    """The model's {"results": [...]} as one entry per item, or None in the
+    place of an item it skipped: matched by each entry's "n" (the item's
+    number), else by order when the count fits. A model now and then drops
+    or merges an item; the rest of its answer is still good. None when
+    nothing usable came back."""
     try:
         # in case the model wrapped the JSON in ```json ... ``` anyway
         text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.MULTILINE).strip()
         parsed = json.loads(text)
         results = parsed.get("results") if isinstance(parsed, dict) else parsed
-        if isinstance(results, list) and len(results) == count:
-            return results
-        print(f"  [!] {name} returned an unexpected response format")
     except Exception as e:
-        print(f"  [!] Failed to parse the {name} API response: {e}")
-    return None
+        print(f"  [!] {name}: unreadable answer ({e})")
+        return None
+    if not isinstance(results, list):
+        print(f"  [!] {name}: no results list in the answer")
+        return None
+    numbered = {}
+    for entry in results:
+        if isinstance(entry, dict) and str(entry.get("n", "")).strip().isdigit():
+            numbered[int(str(entry["n"]).strip())] = entry
+    if numbered:
+        matched = [numbered.get(i + 1) for i in range(count)]
+    elif len(results) == count:
+        matched = [entry if isinstance(entry, dict) else None for entry in results]
+    else:
+        matched = [None] * count
+    got = sum(1 for entry in matched if entry)
+    if got < count:
+        print(f"  [!] {name} answered for {got} of {count} items ({len(results)} entries came back)")
+    return matched if got else None
 
 
 def ask_deepseek(prompt, count):
@@ -800,12 +819,18 @@ def ask_gemini(prompt, count):
                         "generationConfig": {"temperature": 0, "maxOutputTokens": 8192,
                                              "responseMimeType": "application/json"},
                     })
-    try:
-        text = "".join(part.get("text", "") for part in raw["candidates"][0]["content"]["parts"]) if raw else None
-    except (KeyError, IndexError, TypeError):
-        print("  [!] Gemini returned no text")
+    if not raw:
         return None
-    return parse_results("Gemini", text, count) if text else None
+    try:
+        text = "".join(part.get("text", "") for part in raw["candidates"][0]["content"]["parts"])
+    except (KeyError, IndexError, TypeError):
+        text = ""
+    if not text:
+        candidate = (raw.get("candidates") or [{}])[0]
+        reason = candidate.get("finishReason") or (raw.get("promptFeedback") or {}).get("blockReason") or "unknown"
+        print(f"  [!] Gemini returned no text (reason: {reason})")
+        return None
+    return parse_results("Gemini", text, count)
 
 
 LLM_PROVIDERS = {"DeepSeek": ask_deepseek, "Gemini": ask_gemini}
@@ -819,8 +844,8 @@ def active_providers():
 
 def classify_batch_with_llm(batch_items, providers):
     """Asks each provider in `providers` (names from LLM_PROVIDERS) in turn
-    until one answers for the whole batch. Returns (results, provider name)
-    with one {"sentiment", "importance", "content_type"} per item in the same
+    until one answers. Returns (results, provider name) with one
+    {"sentiment", "importance", "content_type"} or None per item in the same
     order, or (None, None) — the caller then keeps the earlier values."""
     prompt = build_prompt(batch_items)
     for name in providers:
@@ -877,10 +902,10 @@ def classify_items_with_llm(items):
     counts = {name: 0 for name in providers}
     failures_in_a_row = {name: 0 for name in providers}
     for start in range(0, len(pending), LLM_BATCH_SIZE):
-        # two batches lost in a row means a provider is down right now: the
-        # run stops asking it (DeepSeek's batches go straight to Gemini), and
-        # with none left the next run picks the rest up
-        for name in [n for n in providers if failures_in_a_row[n] >= 2]:
+        # a batch lost even after its retry means a provider is down right
+        # now: the run stops asking it (DeepSeek's batches go straight to
+        # Gemini), and with none left the next run picks the rest up
+        for name in [n for n in providers if failures_in_a_row[n] >= 1]:
             print(f"  [!] {name} isn't answering — not asking it again this run")
             providers.remove(name)
         if not providers:
@@ -894,9 +919,11 @@ def classify_items_with_llm(items):
         if result is None:
             continue  # this batch keeps its earlier labels
         failures_in_a_row[provider] = 0
-        counts[provider] += len(batch)
 
         for item, res in zip(batch, result):
+            if not res:
+                continue  # skipped by the model: keeps its earlier labels
+            counts[provider] += 1
             sentiment = res.get("sentiment")
             importance = res.get("importance")
             content_type = res.get("content_type")
