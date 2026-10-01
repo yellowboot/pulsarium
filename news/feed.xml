@@ -6,7 +6,52 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Thu, 01 Oct 2026 20:52:45 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 01 Oct 2026 21:01:06 +0000</lastBuildDate>
+  <item>
+    <title>Nike announces layoffs as part of restructuring plan</title>
+    <link>https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html</guid>
+    <pubDate>Thu, 01 Oct 2026 20:55:20 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Nike is expected to post another quarter of declining sales as the company tries to turn around its business and regain growth in China.</description>
+    <category>NKE</category>
+  </item>
+  <item>
+    <title>Boeing engineers and technical workers approve new contract, avoiding strike</title>
+    <link>https://www.cnbc.com/2026/10/01/boeing-contract-engineers-technical-workers.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/01/boeing-contract-engineers-technical-workers.html</guid>
+    <pubDate>Thu, 01 Oct 2026 20:52:52 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>The work group comprises Boeing&#x27;s largest white-collar union.</description>
+    <category>BA</category>
+  </item>
+  <item>
+    <title>Nio&#x27;s Riskiest Asset Is Valued at $2.4 Billion, But Its Potential Just Skyrocketed</title>
+    <link>https://www.fool.com/investing/2026/10/01/nios-riskiest-asset-is-valued-at-24-billion-but-it/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/01/nios-riskiest-asset-is-valued-at-24-billion-but-it/?.tsrc=rss</guid>
+    <pubDate>Thu, 01 Oct 2026 20:50:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Some investors are uncertain of the future Nio&#x27;s battery swapping network has.</description>
+    
+  </item>
+  <item>
+    <title>Dow Jones Futures: Stocks Rise Off Support As Yields Tumble, Micron, Meta In Focus; Tesla, Jobs Report Due</title>
+    <link>https://finance.yahoo.com/m/f6c899dd-7f15-3879-b266-51980008982d/dow-jones-futures%3A-stocks.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/f6c899dd-7f15-3879-b266-51980008982d/dow-jones-futures%3A-stocks.html?.tsrc=rss</guid>
+    <pubDate>Thu, 01 Oct 2026 20:45:51 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Stock market rises slightly off key levels with Micron, Lumentum around buy points. Tesla deliveries, jobs report loom.</description>
+    <category>MU</category><category>LITE</category><category>META</category><category>TSLA</category><category>DJI</category>
+  </item>
+  <item>
+    <title>Stock Market Today: S&amp;P Climbs To Start October, Micron Gains; Barbie Maker Soars On Deal News</title>
+    <link>https://finance.yahoo.com/m/5f6e8554-d4a8-3f1c-bce8-2f5074e2e587/stock-market-today%3A-s%26p.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/5f6e8554-d4a8-3f1c-bce8-2f5074e2e587/stock-market-today%3A-s%26p.html?.tsrc=rss</guid>
+    <pubDate>Thu, 01 Oct 2026 20:42:04 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Micron Technology erased early losses after posting quarterly financial results, while deal news sent Barbie maker Mattel soaring on the stock market today. The Dow Jones Industrial Average edged into the black as did the Nasdaq while…</description>
+    <category>MU</category><category>DJI</category>
+  </item>
   <item>
     <title>Europe’s winter energy crunch may already be underway. Two U.S. stocks that may benefit</title>
     <link>https://www.cnbc.com/2026/10/01/europes-winter-energy-crunch-may-already-be-underway-two-us-stocks-that-may-benefit.html</link>
@@ -15,6 +60,15 @@
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>BP&#x27;s largest oil discovery in 25 years. What it means for the stock.</description>
     <category>BP</category>
+  </item>
+  <item>
+    <title>PaleBlueDot AI Raises $200M Series C Round to Scale Super Intelligence Infrastructure Platform</title>
+    <link>https://finance.yahoo.com/technology/ai/articles/palebluedot-ai-raises-200m-series-204100349.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/palebluedot-ai-raises-200m-series-204100349.html?.tsrc=rss</guid>
+    <pubDate>Thu, 01 Oct 2026 20:41:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>PaleBlueDot AI (&quot;the Company&quot;), a Silicon Valley-based Super Intelligence platform founded in 2024, today announced the completion of a $200 million Series C financing led by ComputeCore at a valuation of $3.2 billion.</description>
+    
   </item>
   <item>
     <title>CNBC AI Forum live updates: OpenAI&#x27;s Bret Taylor says we have an &quot;obligation&quot; to make AI safe</title>
@@ -35,13 +89,13 @@
     <category>SPY</category>
   </item>
   <item>
-    <title>Nike stock drops as revenue falls short of estimates, China sales plunge again</title>
-    <link>https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html</guid>
-    <pubDate>Thu, 01 Oct 2026 20:37:59 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Nike is expected to post another quarter of declining sales as the company tries to turn around its business and regain growth in China.</description>
-    <category>NKE</category>
+    <title>Amazon (AMZN) and GoodRx (GDRX) Chase Prescription Subscribers as Insurance Coverage Slips</title>
+    <link>https://finance.yahoo.com/healthcare/articles/amazon-amzn-goodrx-gdrx-chase-203853895.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/healthcare/articles/amazon-amzn-goodrx-gdrx-chase-203853895.html?.tsrc=rss</guid>
+    <pubDate>Thu, 01 Oct 2026 20:38:53 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Amazon.com, Inc. (NASDAQ:AMZN) and GoodRx Holdings, Inc. (NASDAQ:GDRX) are signing up Americans for flat-fee prescription plans as health insurance coverage thins, according to a Reuters report on September 29. Amazon charges from $5 a…</description>
+    <category>AMZN</category>
   </item>
   <item>
     <title>Mattel attracts takeover interest from Authentic Brands Group, source says</title>
@@ -323,7 +377,7 @@
     <category>DJI</category>
   </item>
   <item>
-    <title>U.S. SEC maps out crypto custody in new proposal that furthers its digital assets agenda</title>
+    <title>SEC proposes new crypto custody rules for investment advisers and funds</title>
     <link>https://www.coindesk.com/policy/2026/10/01/u-s-sec-maps-out-crypto-custody-in-new-proposal-that-furthers-its-digital-assets-agenda</link>
     <guid isPermaLink="false">https://www.coindesk.com/policy/2026/10/01/u-s-sec-maps-out-crypto-custody-in-new-proposal-that-furthers-its-digital-assets-agenda</guid>
     <pubDate>Thu, 01 Oct 2026 20:20:04 +0000</pubDate>
@@ -402,60 +456,6 @@
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
     <description>The company is constantly thinking big.</description>
     <category>LLY</category><category>MSTR</category>
-  </item>
-  <item>
-    <title>The Treasury Department started Trump accounts for 60 million kids — but families still have to take this step if they want one</title>
-    <link>https://www.marketwatch.com/story/the-treasury-department-started-trump-accounts-for-60-million-kids-but-families-still-have-to-take-this-step-if-they-want-one-003d9282?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/the-treasury-department-started-trump-accounts-for-60-million-kids-but-families-still-have-to-take-this-step-if-they-want-one-003d9282?mod=mw_rss_topstories</guid>
-    <pubDate>Thu, 01 Oct 2026 20:14:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>Here’s what parents seeking the $1,000 seed money for their child need to know.</description>
-    
-  </item>
-  <item>
-    <title>United Airlines gets aggressive in battle for top Delta, American flyers</title>
-    <link>https://www.cnbc.com/2026/10/01/united-airlines-status-match-delta-american.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/01/united-airlines-status-match-delta-american.html</guid>
-    <pubDate>Thu, 01 Oct 2026 20:06:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>United Airlines launched an aggressive status match program for Delta and American&#x27;s top frequent flyer elites.</description>
-    <category>UAL</category>
-  </item>
-  <item>
-    <title>Tenet Healthcare (THC): Buy, Sell, or Hold Post Q2 Earnings?</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/tenet-healthcare-thc-buy-sell-200507444.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/tenet-healthcare-thc-buy-sell-200507444.html?.tsrc=rss</guid>
-    <pubDate>Thu, 01 Oct 2026 20:05:07 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Tenet Healthcare currently trades at $255.62 and has been a dream stock for shareholders. It’s returned 271% since October 2021, blowing past the S&amp;P 500’s 76% gain. The company has also beaten the index over the past six months as its…</description>
-    <category>SPY</category>
-  </item>
-  <item>
-    <title>3 Pipeline Stocks Getting Bigger Without Taking on More Risk</title>
-    <link>https://www.fool.com/investing/2026/10/01/3-pipeline-stocks-getting-bigger-without-taking-on/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/01/3-pipeline-stocks-getting-bigger-without-taking-on/?.tsrc=rss</guid>
-    <pubDate>Thu, 01 Oct 2026 20:05:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The AI infrastructure build-out is a boon to natural gas pipeline operators.</description>
-    
-  </item>
-  <item>
-    <title>Nasdaq to Hold Third Quarter 2026 Investor Conference Call</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/nasdaq-hold-third-quarter-2026-200500180.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/nasdaq-hold-third-quarter-2026-200500180.html?.tsrc=rss</guid>
-    <pubDate>Thu, 01 Oct 2026 20:05:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>NEW YORK, Oct. 01, 2026 (GLOBE NEWSWIRE) -- Nasdaq (Nasdaq: NDAQ) has scheduled its third quarter 2026 financial results announcement. Who: Nasdaq’s CEO, CFO, and additional members of its senior management team What: Review Nasdaq’s…</description>
-    
-  </item>
-  <item>
-    <title>Boeing engineers and technical workers approve new contract, avoiding strike</title>
-    <link>https://www.cnbc.com/2026/10/01/boeing-contract-engineers-technical-workers.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/01/boeing-contract-engineers-technical-workers.html</guid>
-    <pubDate>Thu, 01 Oct 2026 20:00:23 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The work group comprises Boeing&#x27;s largest white-collar union.</description>
-    <category>BA</category>
   </item>
 </channel>
 </rss>
