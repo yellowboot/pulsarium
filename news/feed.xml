@@ -6,7 +6,34 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 02 Oct 2026 13:45:43 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 02 Oct 2026 13:58:22 +0000</lastBuildDate>
+  <item>
+    <title>Treasury Sec. Bessent, IRS crack down on ETF strategy the wealthy are using to avoid capital gains taxes</title>
+    <link>https://www.cnbc.com/2026/10/02/treasury-irs-capital-gains-income-tax-section-351-warning.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/02/treasury-irs-capital-gains-income-tax-section-351-warning.html</guid>
+    <pubDate>Fri, 02 Oct 2026 13:48:40 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>The IRS and Treasury issued a warning this week on an ETF strategy wealthy investors have been using to shield capital gains income from taxes.</description>
+    
+  </item>
+  <item>
+    <title>PLAYSTUDIOS Consensus Price Target Increased by 900.00% to $5.10</title>
+    <link>https://www.nasdaq.com/articles/playstudios-consensus-price-target-increased-90000-510</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/playstudios-consensus-price-target-increased-90000-510</guid>
+    <pubDate>Fri, 02 Oct 2026 13:46:24 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for PLAYSTUDIOS (NASDAQCM:MYPS) (DB:7E3) has been revised to $5.10 / share. This is an increase of 900.00% from the prior estimate of $0.51 dated September 11, 2026. These figures represent aggregate…</description>
+    
+  </item>
+  <item>
+    <title>Labor market faltered in September as jobs increased by just 29,000, unemployment rate rose to 4.2%</title>
+    <link>https://www.cnbc.com/2026/10/02/jobs-report-september-2026.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/02/jobs-report-september-2026.html</guid>
+    <pubDate>Fri, 02 Oct 2026 13:45:58 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Nonfarm payrolls rose by just 29,000 in September, well below the 84,000 forecast, and the unemployment rate rose to 4.2%, the Bureau of Labor Statistics said.</description>
+    
+  </item>
   <item>
     <title>Nike shares tumble after weak revenue outlook and layoff plans underway</title>
     <link>https://www.cnbc.com/2026/10/02/nike-nke-stock-q1-earnings-layoffs.html</link>
@@ -14,6 +41,33 @@
     <pubDate>Fri, 02 Oct 2026 13:43:56 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>Nike&#x27;s shares dropped for a second straight day of declines after it reported falling revenue and plans to lay off staff.</description>
+    <category>NKE</category>
+  </item>
+  <item>
+    <title>Wall St opens higher as softer payrolls data, lower yields lift sentiment</title>
+    <link>https://www.investing.com/news/stock-market-news/wall-st-opens-higher-as-softer-payrolls-data-lower-yields-lift-sentiment-4930009</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/wall-st-opens-higher-as-softer-payrolls-data-lower-yields-lift-sentiment-4930009</guid>
+    <pubDate>Fri, 02 Oct 2026 13:43:38 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>David Ellison says combined Paramount and Warner Bros Discovery will be named Skydance</title>
+    <link>https://www.investing.com/news/stock-market-news/david-ellison-says-combined-paramount-and-warner-bros-discovery-will-be-named-skydance-4930008</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/david-ellison-says-combined-paramount-and-warner-bros-discovery-will-be-named-skydance-4930008</guid>
+    <pubDate>Fri, 02 Oct 2026 13:43:16 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>PSKY</category><category>WBD</category>
+  </item>
+  <item>
+    <title>Analysis-Nike’s struggles test investor confidence in CEO Hill’s turnaround effort</title>
+    <link>https://www.investing.com/news/stock-market-news/analysisnikes-struggles-test-investor-confidence-in-ceo-hills-turnaround-effort-4929572</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/analysisnikes-struggles-test-investor-confidence-in-ceo-hills-turnaround-effort-4929572</guid>
+    <pubDate>Fri, 02 Oct 2026 13:42:38 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
     <category>NKE</category>
   </item>
   <item>
@@ -26,12 +80,30 @@
     <category>PSKY</category><category>WBD</category>
   </item>
   <item>
+    <title>NextNRG Consensus Price Target Increased by 900% to $12.75</title>
+    <link>https://www.nasdaq.com/articles/nextnrg-consensus-price-target-increased-900-1275</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/nextnrg-consensus-price-target-increased-900-1275</guid>
+    <pubDate>Fri, 02 Oct 2026 13:37:38 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for NextNRG (NASDAQCM:NXXT) has been revised to $12.75 / share. This is an increase of 900.00% from the prior estimate of $1.28 dated September 11, 2026. These figures represent aggregate analyst…</description>
+    
+  </item>
+  <item>
     <title>Controlling supply chain key to US future: DOE</title>
     <link>https://www.mining.com/controlling-supply-chain-key-to-us-future-doe/</link>
     <guid isPermaLink="false">https://www.mining.com/controlling-supply-chain-key-to-us-future-doe/</guid>
     <pubDate>Fri, 02 Oct 2026 13:37:18 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Mining.com</source>
     <description>The many new investments from the US Department of Energy have one simple objective: securing the supply chain.</description>
+    
+  </item>
+  <item>
+    <title>U.S. stocks open higher, Nasdaq surges 1% on pared Fed hike bets after jobs report</title>
+    <link>https://www.investing.com/news/stock-market-news/us-stock-futures-drift-higher-with-nonfarm-payrolls-in-focus-4928740</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/us-stock-futures-drift-higher-with-nonfarm-payrolls-in-focus-4928740</guid>
+    <pubDate>Fri, 02 Oct 2026 13:36:16 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
     
   </item>
   <item>
@@ -42,6 +114,24 @@
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
     <description>Tesla beat third-quarter deliveries on Friday.</description>
     <category>TSLA</category>
+  </item>
+  <item>
+    <title>Ford Q3 sales fall 6.6%, says F-150 disruption contained within guidance</title>
+    <link>https://www.investing.com/news/stock-market-news/ford-q3-sales-fall-66-says-f150-disruption-contained-within-guidance-4929975</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/ford-q3-sales-fall-66-says-f150-disruption-contained-within-guidance-4929975</guid>
+    <pubDate>Fri, 02 Oct 2026 13:34:32 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>F</category>
+  </item>
+  <item>
+    <title>Azitra Consensus Price Target Decreased by 13.55% to $0.68</title>
+    <link>https://www.nasdaq.com/articles/azitra-consensus-price-target-decreased-1355-068</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/azitra-consensus-price-target-decreased-1355-068</guid>
+    <pubDate>Fri, 02 Oct 2026 13:34:21 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Azitra (NYSEAM:AZTR) has been revised to $0.68 / share on October 2, 2026, a decrease of 13.55% from the prior estimate of $0.79 dated September 11, 2026. These figures represent aggregate analyst…</description>
+    
   </item>
   <item>
     <title>Tesla Q3 2026 vehicle deliveries beat Wall Street estimates</title>
@@ -89,6 +179,15 @@
     
   </item>
   <item>
+    <title>Dividend-Growth Alert: 2 Doublers and 5 Big Payers Up to 11%</title>
+    <link>https://www.nasdaq.com/articles/dividend-growth-alert-2-doublers-and-5-big-payers-11</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/dividend-growth-alert-2-doublers-and-5-big-payers-11</guid>
+    <pubDate>Fri, 02 Oct 2026 13:30:03 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Every now and then, I&#x27;ll field a reader letter asking me what&#x27;s more important: dividends or growth?</description>
+    
+  </item>
+  <item>
     <title>Three reasons this Wall Street market-making powerhouse says investors should reload on stocks right now</title>
     <link>https://www.marketwatch.com/story/three-reasons-why-this-wall-street-market-making-powerhouse-says-investors-should-reload-on-stocks-now-8e19ecce?mod=mw_rss_topstories</link>
     <guid isPermaLink="false">https://www.marketwatch.com/story/three-reasons-why-this-wall-street-market-making-powerhouse-says-investors-should-reload-on-stocks-now-8e19ecce?mod=mw_rss_topstories</guid>
@@ -116,12 +215,39 @@
     <category>NBIS</category>
   </item>
   <item>
+    <title>RBC cuts Northrop Grumman rating on slower growth, cautious defense outlook</title>
+    <link>https://www.investing.com/news/stock-market-news/rbc-cuts-northrop-grumman-rating-on-slower-growth-cautious-defense-outlook-4929938</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/rbc-cuts-northrop-grumman-rating-on-slower-growth-cautious-defense-outlook-4929938</guid>
+    <pubDate>Fri, 02 Oct 2026 13:28:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>NOC</category>
+  </item>
+  <item>
+    <title>Evercore survey shows Meta and Google lead digital ad spending</title>
+    <link>https://www.investing.com/news/stock-market-news/evercore-survey-shows-meta-and-google-lead-digital-ad-spending-93CH-4929935</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/evercore-survey-shows-meta-and-google-lead-digital-ad-spending-93CH-4929935</guid>
+    <pubDate>Fri, 02 Oct 2026 13:26:24 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>GOOGL</category><category>META</category>
+  </item>
+  <item>
     <title>Evercore sees Grok Bot as undervalued AI agent opportunity</title>
     <link>https://www.investing.com/news/stock-market-news/evercore-sees-grok-bot-as-undervalued-ai-agent-opportunity-93CH-4929930</link>
     <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/evercore-sees-grok-bot-as-undervalued-ai-agent-opportunity-93CH-4929930</guid>
     <pubDate>Fri, 02 Oct 2026 13:25:22 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
     <description></description>
+    
+  </item>
+  <item>
+    <title>GRAIL Consensus Price Target Increased by 32.52% to $99.35</title>
+    <link>https://www.nasdaq.com/articles/grail-consensus-price-target-increased-3252-9935</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/grail-consensus-price-target-increased-3252-9935</guid>
+    <pubDate>Fri, 02 Oct 2026 13:24:40 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for GRAIL (NASDAQGS:GRAL) (BMV:GRAL) has been revised to $99.35 / share. This is an increase of 32.52% from the prior estimate of $74.97 dated September 11, 2026. These figures represent aggregate…</description>
     
   </item>
   <item>
@@ -242,15 +368,6 @@
     
   </item>
   <item>
-    <title>Labor market faltered in September as jobs increased by just 29,000, unemployment rate rose to 4.2%</title>
-    <link>https://www.cnbc.com/2026/10/02/jobs-report-september-2026.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/02/jobs-report-september-2026.html</guid>
-    <pubDate>Fri, 02 Oct 2026 13:15:51 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Nonfarm payrolls were expected to increase by 84,000 in September while the unemployment rate held at 4.1%.</description>
-    
-  </item>
-  <item>
     <title>Treasury Yields Are Crushing Dividend Stocks. These 5 Could Be October Opportunities</title>
     <link>https://247wallst.com/investing/2026/10/02/treasury-yields-are-crushing-dividend-stocks-these-5-could-be-october-opportunities/?.tsrc=rss</link>
     <guid isPermaLink="false">https://247wallst.com/investing/2026/10/02/treasury-yields-are-crushing-dividend-stocks-these-5-could-be-october-opportunities/?.tsrc=rss</guid>
@@ -339,123 +456,6 @@
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
     <description>Apple (NasdaqGS:AAPL) plans a Siri AI-powered smart home hub, a new HomePod mini, and an updated Apple TV to expand its home ecosystem. The new Siri-centric hub is designed as a central controller for connected devices, positioning…</description>
     <category>AAPL</category>
-  </item>
-  <item>
-    <title>Forward Industries stock jumps on SOL holdings growth</title>
-    <link>https://www.investing.com/news/stock-market-news/forward-industries-stock-jumps-on-sol-holdings-growth-4929907</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/forward-industries-stock-jumps-on-sol-holdings-growth-4929907</guid>
-    <pubDate>Fri, 02 Oct 2026 13:10:53 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>If the Stock Market Crashes, Young Investors in Their 20s Might Want to Buy This Nasdaq ETF and Hold It Until Retirement</title>
-    <link>https://www.fool.com/investing/2026/10/02/stock-market-crashes-20s-buy-nasdaq-etf-retirement/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/02/stock-market-crashes-20s-buy-nasdaq-etf-retirement/?.tsrc=rss</guid>
-    <pubDate>Fri, 02 Oct 2026 13:09:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Stock market downturns often present investors with incredible buying opportunities.</description>
-    
-  </item>
-  <item>
-    <title>Rivian deliveries hit record high as R2 rollout gains momentum</title>
-    <link>https://www.investing.com/news/stock-market-news/rivian-deliveries-hit-record-high-as-r2-rollout-gains-momentum-4929797</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/rivian-deliveries-hit-record-high-as-r2-rollout-gains-momentum-4929797</guid>
-    <pubDate>Fri, 02 Oct 2026 13:07:21 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>RIVN</category>
-  </item>
-  <item>
-    <title>Piper Sandler Upgrades Alerus Financial to Overweight from Neutral</title>
-    <link>https://www.nasdaq.com/articles/piper-sandler-upgrades-alerus-financial-overweight-neutral</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/piper-sandler-upgrades-alerus-financial-overweight-neutral</guid>
-    <pubDate>Fri, 02 Oct 2026 13:06:34 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>On October 2, 2026, Piper Sandler upgraded their outlook for Alerus Financial (NASDAQCM:ALRS) (DB:5QD) from Neutral to Overweight. This rating action follows a prior action by the same firm on July 31, 2026, when Piper Sandler…</description>
-    
-  </item>
-  <item>
-    <title>Musk, Huang Forecast AI-Powered GDP Gains; ARK Buys More Rocket Lab</title>
-    <link>https://finance.yahoo.com/m/eab3c662-db24-3fe6-851e-852bfb85f8ea/musk%2C-huang-forecast.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/eab3c662-db24-3fe6-851e-852bfb85f8ea/musk%2C-huang-forecast.html?.tsrc=rss</guid>
-    <pubDate>Fri, 02 Oct 2026 13:06:25 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Elon Musk cut expectations for the number of SpaceX Starship launches next year, muses about AI impacts with Nvidia CEO. ARK buys Rocket Lab stock.</description>
-    <category>NVDA</category><category>SPCX</category><category>RKLB</category>
-  </item>
-  <item>
-    <title>TNL Mediagene stock surges on $5.5M Japan unit sale deal</title>
-    <link>https://www.investing.com/news/stock-market-news/tnl-mediagene-stock-surges-on-55m-japan-unit-sale-deal-4929905</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/tnl-mediagene-stock-surges-on-55m-japan-unit-sale-deal-4929905</guid>
-    <pubDate>Fri, 02 Oct 2026 13:06:24 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>AEON Biopharma Consensus Price Target Raised by 16.39% to $1.81</title>
-    <link>https://www.nasdaq.com/articles/aeon-biopharma-consensus-price-target-raised-1639-181</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/aeon-biopharma-consensus-price-target-raised-1639-181</guid>
-    <pubDate>Fri, 02 Oct 2026 13:06:08 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for AEON Biopharma (NYSEAM:AEON) has been revised to $1.81 / share, up 16.39% from the prior estimate of $1.56 dated September 11, 2026. These figures represent aggregate analyst targets compiled by…</description>
-    
-  </item>
-  <item>
-    <title>Tesla Q3 deliveries top estimates, shares rise 1.9%</title>
-    <link>https://www.investing.com/news/stock-market-news/tesla-q3-deliveries-top-estimates-shares-rise-19-4929902</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/tesla-q3-deliveries-top-estimates-shares-rise-19-4929902</guid>
-    <pubDate>Fri, 02 Oct 2026 13:05:52 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>TSLA</category>
-  </item>
-  <item>
-    <title>Corn Bulls Push Back to Close with Gains and Hold $5</title>
-    <link>https://www.nasdaq.com/articles/corn-bulls-push-back-close-gains-and-hold-5</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/corn-bulls-push-back-close-gains-and-hold-5</guid>
-    <pubDate>Fri, 02 Oct 2026 13:04:20 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Corn futures were fighting to stay above $5 for much of the session despite hitting a low of $4.95 in the December contract. Bulls battled back to close with contracts steady to 1 ½ cents higher. The CmdtyView national average Cash Corn…</description>
-    
-  </item>
-  <item>
-    <title>U.S. stock futures jump 1% as traders pare Fed rate hike bets after jobs report</title>
-    <link>https://www.investing.com/news/stock-market-news/us-stock-futures-drift-higher-with-nonfarm-payrolls-in-focus-4928740</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/us-stock-futures-drift-higher-with-nonfarm-payrolls-in-focus-4928740</guid>
-    <pubDate>Fri, 02 Oct 2026 13:02:35 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>FED</category>
-  </item>
-  <item>
-    <title>Why Western Digital and Seagate are seeing big stock drops today</title>
-    <link>https://www.marketwatch.com/story/why-western-digital-and-seagate-are-seeing-big-stock-drops-today-6b16d95e?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/why-western-digital-and-seagate-are-seeing-big-stock-drops-today-6b16d95e?mod=mw_rss_topstories</guid>
-    <pubDate>Fri, 02 Oct 2026 12:58:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>Investors are worried that Toshiba will boost its production of a key AI storage product, potentially hurting the strong pricing power that Western Digital and Seagate currently enjoy.</description>
-    <category>STX</category><category>WDC</category>
-  </item>
-  <item>
-    <title>FMC Consensus Price Target Lowered by 26.18% to $13.75</title>
-    <link>https://www.nasdaq.com/articles/fmc-consensus-price-target-lowered-2618-1375</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/fmc-consensus-price-target-lowered-2618-1375</guid>
-    <pubDate>Fri, 02 Oct 2026 12:54:26 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for FMC (NYSE:FMC) (BMV:FMC1) has been revised to $13.75 / share, down 26.18% from the prior estimate of $18.63 dated September 11, 2026. These figures represent aggregate analyst targets compiled by…</description>
-    
-  </item>
-  <item>
-    <title>Nike’s stock heads for its worst year ever as the company’s troubles mount</title>
-    <link>https://www.marketwatch.com/story/nikes-troubles-are-mounting-and-sales-could-fall-further-2c19699d?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/nikes-troubles-are-mounting-and-sales-could-fall-further-2c19699d?mod=mw_rss_topstories</guid>
-    <pubDate>Fri, 02 Oct 2026 12:50:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>The company has faced struggles in China and in its sneaker business.</description>
-    <category>NKE</category>
   </item>
 </channel>
 </rss>

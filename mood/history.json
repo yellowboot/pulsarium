@@ -5,121 +5,121 @@
  "days": [
   {
    "date": "2026-08-12",
-   "value": 66,
+   "value": 67,
    "label": "Leaning optimistic",
-   "headlines": 378,
-   "avg7": 66.0
+   "headlines": 352,
+   "avg7": 67.0
   },
   {
    "date": "2026-08-13",
-   "value": 62,
+   "value": 63,
    "label": "Leaning optimistic",
-   "headlines": 262,
-   "avg7": 64.0
+   "headlines": 236,
+   "avg7": 65.0
   },
   {
    "date": "2026-08-14",
    "value": 60,
    "label": "Leaning optimistic",
-   "headlines": 286,
-   "avg7": 62.7
+   "headlines": 246,
+   "avg7": 63.3
   },
   {
    "date": "2026-08-15",
    "value": 74,
    "label": "Optimistic",
    "headlines": 54,
-   "avg7": 65.5
+   "avg7": 66.0
   },
   {
    "date": "2026-08-16",
-   "value": 70,
-   "label": "Optimistic",
-   "headlines": 43,
-   "avg7": 66.4
+   "value": 67,
+   "label": "Leaning optimistic",
+   "headlines": 38,
+   "avg7": 66.2
   },
   {
    "date": "2026-08-17",
-   "value": 60,
+   "value": 61,
    "label": "Leaning optimistic",
-   "headlines": 373,
+   "headlines": 352,
    "avg7": 65.3
   },
   {
    "date": "2026-08-18",
    "value": 57,
    "label": "Leaning optimistic",
-   "headlines": 312,
+   "headlines": 306,
    "avg7": 64.1
   },
   {
    "date": "2026-08-19",
    "value": 65,
    "label": "Leaning optimistic",
-   "headlines": 317,
-   "avg7": 64.0
+   "headlines": 301,
+   "avg7": 63.9
   },
   {
    "date": "2026-08-20",
    "value": 62,
    "label": "Leaning optimistic",
-   "headlines": 340,
-   "avg7": 64.0
+   "headlines": 303,
+   "avg7": 63.7
   },
   {
    "date": "2026-08-21",
    "value": 67,
    "label": "Leaning optimistic",
-   "headlines": 278,
-   "avg7": 65.0
+   "headlines": 261,
+   "avg7": 64.7
   },
   {
    "date": "2026-08-22",
    "value": 56,
    "label": "Leaning optimistic",
    "headlines": 70,
-   "avg7": 62.4
+   "avg7": 62.1
   },
   {
    "date": "2026-08-23",
    "value": 69,
    "label": "Leaning optimistic",
    "headlines": 41,
-   "avg7": 62.3
+   "avg7": 62.4
   },
   {
    "date": "2026-08-24",
    "value": 63,
    "label": "Leaning optimistic",
-   "headlines": 352,
+   "headlines": 339,
    "avg7": 62.7
   },
   {
    "date": "2026-08-25",
    "value": 67,
    "label": "Leaning optimistic",
-   "headlines": 359,
+   "headlines": 343,
    "avg7": 64.1
   },
   {
    "date": "2026-08-26",
-   "value": 62,
+   "value": 61,
    "label": "Leaning optimistic",
-   "headlines": 285,
-   "avg7": 63.7
+   "headlines": 262,
+   "avg7": 63.6
   },
   {
    "date": "2026-08-27",
-   "value": 68,
+   "value": 69,
    "label": "Leaning optimistic",
-   "headlines": 98,
+   "headlines": 96,
    "avg7": 64.6
   },
   {
    "date": "2026-08-28",
    "value": 61,
    "label": "Leaning optimistic",
-   "headlines": 112,
+   "headlines": 111,
    "avg7": 63.7
   },
   {
@@ -138,52 +138,52 @@
   },
   {
    "date": "2026-08-31",
-   "value": 55,
-   "label": "Neutral",
-   "headlines": 158,
-   "avg7": 59.7
+   "value": 57,
+   "label": "Leaning optimistic",
+   "headlines": 145,
+   "avg7": 60.0
   },
   {
    "date": "2026-09-01",
-   "value": 61,
+   "value": 62,
    "label": "Leaning optimistic",
-   "headlines": 258,
-   "avg7": 58.9
+   "headlines": 236,
+   "avg7": 59.3
   },
   {
    "date": "2026-09-02",
-   "value": 62,
+   "value": 61,
    "label": "Leaning optimistic",
-   "headlines": 259,
-   "avg7": 58.9
+   "headlines": 237,
+   "avg7": 59.3
   },
   {
    "date": "2026-09-03",
-   "value": 67,
+   "value": 68,
    "label": "Leaning optimistic",
-   "headlines": 277,
-   "avg7": 58.7
+   "headlines": 247,
+   "avg7": 59.1
   },
   {
    "date": "2026-09-04",
-   "value": 58,
+   "value": 57,
    "label": "Leaning optimistic",
-   "headlines": 253,
-   "avg7": 58.3
+   "headlines": 208,
+   "avg7": 58.6
   },
   {
    "date": "2026-09-05",
    "value": 73,
    "label": "Optimistic",
    "headlines": 60,
-   "avg7": 62.7
+   "avg7": 63.0
   },
   {
    "date": "2026-09-06",
    "value": 62,
    "label": "Leaning optimistic",
    "headlines": 47,
-   "avg7": 62.6
+   "avg7": 62.9
   },
   {
    "date": "2026-09-07",
@@ -194,30 +194,30 @@
   },
   {
    "date": "2026-09-08",
-   "value": 66,
+   "value": 67,
    "label": "Leaning optimistic",
-   "headlines": 247,
+   "headlines": 219,
    "avg7": 64.6
   },
   {
    "date": "2026-09-09",
    "value": 61,
    "label": "Leaning optimistic",
-   "headlines": 249,
-   "avg7": 64.4
+   "headlines": 233,
+   "avg7": 64.6
   },
   {
    "date": "2026-09-10",
    "value": 59,
    "label": "Leaning optimistic",
-   "headlines": 244,
+   "headlines": 223,
    "avg7": 63.3
   },
   {
    "date": "2026-09-11",
-   "value": 61,
+   "value": 60,
    "label": "Leaning optimistic",
-   "headlines": 229,
+   "headlines": 220,
    "avg7": 63.7
   },
   {
@@ -238,133 +238,133 @@
    "date": "2026-09-14",
    "value": 58,
    "label": "Leaning optimistic",
-   "headlines": 190,
+   "headlines": 181,
    "avg7": 61.3
   },
   {
    "date": "2026-09-15",
    "value": 57,
    "label": "Leaning optimistic",
-   "headlines": 215,
-   "avg7": 60.0
+   "headlines": 201,
+   "avg7": 59.9
   },
   {
    "date": "2026-09-16",
    "value": 57,
    "label": "Leaning optimistic",
-   "headlines": 215,
-   "avg7": 59.4
+   "headlines": 200,
+   "avg7": 59.3
   },
   {
    "date": "2026-09-17",
    "value": 63,
    "label": "Leaning optimistic",
-   "headlines": 224,
-   "avg7": 60.0
+   "headlines": 206,
+   "avg7": 59.9
   },
   {
    "date": "2026-09-18",
-   "value": 55,
+   "value": 54,
    "label": "Neutral",
-   "headlines": 248,
-   "avg7": 59.1
+   "headlines": 234,
+   "avg7": 59.0
   },
   {
    "date": "2026-09-19",
    "value": 61,
    "label": "Leaning optimistic",
    "headlines": 48,
-   "avg7": 58.6
+   "avg7": 58.4
   },
   {
    "date": "2026-09-20",
    "value": 74,
    "label": "Optimistic",
    "headlines": 54,
-   "avg7": 60.7
+   "avg7": 60.6
   },
   {
    "date": "2026-09-21",
-   "value": 72,
+   "value": 73,
    "label": "Optimistic",
-   "headlines": 182,
+   "headlines": 177,
    "avg7": 62.7
   },
   {
    "date": "2026-09-22",
-   "value": 64,
+   "value": 66,
    "label": "Leaning optimistic",
-   "headlines": 228,
-   "avg7": 63.7
+   "headlines": 211,
+   "avg7": 64.0
   },
   {
    "date": "2026-09-23",
-   "value": 60,
+   "value": 61,
    "label": "Leaning optimistic",
-   "headlines": 213,
-   "avg7": 64.1
+   "headlines": 196,
+   "avg7": 64.6
   },
   {
    "date": "2026-09-24",
    "value": 52,
    "label": "Neutral",
-   "headlines": 209,
-   "avg7": 62.6
+   "headlines": 185,
+   "avg7": 63.0
   },
   {
    "date": "2026-09-25",
-   "value": 46,
+   "value": 45,
    "label": "Neutral",
-   "headlines": 184,
-   "avg7": 61.3
+   "headlines": 160,
+   "avg7": 61.7
   },
   {
    "date": "2026-09-26",
    "value": 56,
    "label": "Leaning optimistic",
    "headlines": 54,
-   "avg7": 60.6
+   "avg7": 61.0
   },
   {
    "date": "2026-09-27",
    "value": 60,
    "label": "Leaning optimistic",
    "headlines": 31,
-   "avg7": 58.6
+   "avg7": 59.0
   },
   {
    "date": "2026-09-28",
    "value": 51,
    "label": "Neutral",
-   "headlines": 283,
-   "avg7": 55.6
+   "headlines": 270,
+   "avg7": 55.9
   },
   {
    "date": "2026-09-29",
-   "value": 67,
+   "value": 68,
    "label": "Leaning optimistic",
-   "headlines": 361,
-   "avg7": 56.0
+   "headlines": 343,
+   "avg7": 56.1
   },
   {
    "date": "2026-09-30",
-   "value": 63,
+   "value": 64,
    "label": "Leaning optimistic",
-   "headlines": 320,
-   "avg7": 56.4
+   "headlines": 292,
+   "avg7": 56.6
   },
   {
    "date": "2026-10-01",
    "value": 58,
    "label": "Leaning optimistic",
-   "headlines": 304,
-   "avg7": 57.3
+   "headlines": 287,
+   "avg7": 57.4
   },
   {
    "date": "2026-10-02",
-   "value": 66,
+   "value": 64,
    "label": "Leaning optimistic",
-   "headlines": 93,
+   "headlines": 105,
    "avg7": 60.1
   }
  ]
