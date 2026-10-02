@@ -9,7 +9,9 @@ on:
     # i.e. 13:00-21:30 UTC covers the 30-min pre/post buffer year-round
     # (with a bit of extra slack on the side that isn't currently in DST).
     # 08:30 UTC catches overnight/European news, three hours before the
-    # existing 11:30 UTC pre-market run.
+    # existing 11:30 UTC pre-market run; 06:30 UTC starts the day two hours
+    # earlier, since GitHub's queue delays scheduled runs more and more.
+    - cron: '30 6 * * 1-5'
     - cron: '30 8 * * 1-5'
     - cron: '30 11 * * 1-5'
     - cron: '0 13 * * 1-5'
