@@ -630,6 +630,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/echo/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/enb/</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>hourly</changefreq>
