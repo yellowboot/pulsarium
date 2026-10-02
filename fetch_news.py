@@ -25,6 +25,8 @@ from email.utils import parsedate_to_datetime
 import xml.etree.ElementTree as ET
 from html import unescape
 
+from companies_sec import SEC_COMPANIES
+
 # On some Windows systems the console defaults to something other than
 # UTF-8 (e.g. cp1252), and the script's output is full of non-ASCII text.
 # Without this, print() crashes with UnicodeEncodeError on the very first
@@ -319,6 +321,11 @@ COMPANY_MAP = [
     {"ticker": "DJI",  "sector": "ETFs / Indices",          "names": ["Dow Jones"]},
     {"ticker": "VWCE", "sector": "ETFs / Indices",          "names": ["VWCE", "FTSE All-World"]},
 ]
+
+# The next 500 largest US listings, from SEC's ticker list (companies_sec.py);
+# an entry above always wins over one there for the same ticker.
+_CURATED_TICKERS = {entry["ticker"] for entry in COMPANY_MAP}
+COMPANY_MAP += [entry for entry in SEC_COMPANIES if entry["ticker"] not in _CURATED_TICKERS]
 
 # Keeping the old variable name for backward compatibility with code below
 WATCHLIST = COMPANY_MAP
@@ -974,30 +981,49 @@ def detect_watchlist_matches(text: str) -> list:
     "McDonald’s", COMPANY_MAP writes "McDonald's".
     """
     text = text.replace("’", "'").replace("‘", "'")
+    lower = text.lower()
     found = {}
-    for entry in COMPANY_MAP:
+    for entry, ticker_re, names, exclude in _compiled_company_map():
         ticker = entry["ticker"]
-        matched = False
-        entry_text = re.sub(entry["exclude"], " ", text) if entry.get("exclude") else text
-
-        if (len(ticker) >= 3 and entry.get("match_ticker", True)
-                and re.search(r"\b" + re.escape(ticker) + r"\b", entry_text)):
-            matched = True
-
+        # a plain substring check first: most companies aren't in a given headline
+        if not ((ticker_re and ticker in text) or any(name in lower for name, _, _ in names)):
+            continue
+        entry_text = exclude.sub(" ", text) if exclude else text
+        matched = bool(ticker_re and ticker_re.search(entry_text))
         if not matched:
-            for name in entry["names"]:
-                context = entry.get("context", {}).get(name)
-                if context:
-                    if re.search(r"\b" + re.escape(name) + r"\b", entry_text) and re.search(context, entry_text):
-                        matched = True
-                        break
-                elif re.search(r"\b" + re.escape(name) + r"\b", entry_text, flags=re.IGNORECASE):
+            for _, name_re, context_re in names:
+                if name_re.search(entry_text) and (context_re is None or context_re.search(entry_text)):
                     matched = True
                     break
-
         if matched:
             found[ticker] = entry["sector"]
     return [{"ticker": t, "sector": s} for t, s in found.items()]
+
+
+_COMPILED_MAP = {"key": None, "entries": []}
+
+
+def _compiled_company_map():
+    """COMPANY_MAP with its patterns compiled once. Some 2,000 patterns
+    overflow the re module's own cache, which then recompiled them for every
+    headline; site_build.py re-tags a month of headlines on every run."""
+    key = (id(COMPANY_MAP), len(COMPANY_MAP))
+    if _COMPILED_MAP["key"] != key:
+        entries = []
+        for entry in COMPANY_MAP:
+            ticker = entry["ticker"]
+            ticker_re = (re.compile(r"\b" + re.escape(ticker) + r"\b")
+                         if len(ticker) >= 3 and entry.get("match_ticker", True) else None)
+            names = []
+            for name in entry["names"]:
+                context = entry.get("context", {}).get(name)
+                names.append((name.lower(),
+                              re.compile(r"\b" + re.escape(name) + r"\b", 0 if context else re.IGNORECASE),
+                              re.compile(context) if context else None))
+            exclude = re.compile(entry["exclude"]) if entry.get("exclude") else None
+            entries.append((entry, ticker_re, names, exclude))
+        _COMPILED_MAP.update(key=key, entries=entries)
+    return _COMPILED_MAP["entries"]
 
 
 # ---------------------------------------------------------------------------

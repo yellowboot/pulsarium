@@ -54,6 +54,8 @@ WINDOW_DAYS = 30
 MIN_INDEXABLE = 3
 MIN_INDEXABLE_DAY = 5
 ITEMS_PER_PAGE = 60
+ITEMS_SHOWN = 6    # a company page shows this many headlines, the rest behind "Show more"
+PEERS_SHOWN = 12   # "More in <sector>" chips on a company page
 BREAKING_IMPORTANCE = 60  # same threshold as the LIVE/BREAKING badge on /news/
 ARCHIVE_FIELDS = ("title", "link", "description", "source", "published",
                   "sentiment", "importance", "content_type")
@@ -208,7 +210,8 @@ def sector_slug(sector: str) -> str:
 def build_companies() -> dict:
     companies = {}
     for entry in fetch_news.COMPANY_MAP:
-        name = entry["names"][0] if entry["names"] else entry["ticker"]
+        # companies_sec.py entries carry a "label"; their first name may be a matching variant
+        name = entry.get("label") or (entry["names"][0] if entry["names"] else entry["ticker"])
         companies[entry["ticker"]] = {
             "ticker": entry["ticker"],
             "name": name,
@@ -437,6 +440,22 @@ FIT_ROWS_SCRIPT = """<script>
     var observer = new ResizeObserver(function () { lists.forEach(fit); });
     lists.forEach(function (list) { observer.observe(list); });
   }
+})();
+</script>"""
+
+# Hides a list's "more" headlines behind a button (item_list's collapse_after).
+# Without scripts everything stays visible.
+SHOW_MORE_SCRIPT = """<script>
+(function () {
+  var box = document.currentScript.previousElementSibling;
+  if (!box || !box.classList.contains('show-more')) return;
+  box.classList.add('is-collapsed');
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'btn btn-ghost show-more-button';
+  button.textContent = 'Show ' + box.dataset.hidden + ' more';
+  button.addEventListener('click', function () { box.classList.remove('is-collapsed'); button.remove(); });
+  box.after(button);
 })();
 </script>"""
 
@@ -696,8 +715,10 @@ def item_html(item: dict, companies: dict, skip_ticker: str = None) -> str:
              else f'<span class="badge badge-{sentiment}">{SENT_LABELS[sentiment]}</span>')
     breaking = ('<span class="badge badge-breaking">Breaking</span>'
                 if (item.get("importance") or 0) >= BREAKING_IMPORTANCE else "")
+    # a ticker links to its page only when it has one (see "paged" in build)
     tags = "".join(
         f'<a class="tag" href="/news/{companies[t]["slug"]}/">{esc(t)}</a>'
+        if companies[t].get("paged", True) else f'<span class="tag">{esc(t)}</span>'
         for t in item["_tickers"] if t in companies and t != skip_ticker
     )
     desc = f'<p>{esc(item["description"])}</p>' if item.get("description") else ""
@@ -710,23 +731,32 @@ def item_html(item: dict, companies: dict, skip_ticker: str = None) -> str:
 </article>"""
 
 
-def item_list(items: list, companies: dict, skip_ticker: str = None, group_by_day: bool = True) -> str:
+def item_list(items: list, companies: dict, skip_ticker: str = None, group_by_day: bool = True,
+              collapse_after: int = None) -> str:
+    """Headlines, grouped under their day. With collapse_after, the rest are
+    marked "more" and SHOW_MORE_SCRIPT hides them behind a button; they stay
+    in the page (and visible without scripts) for readers and search engines."""
     if not items:
         return '<p class="empty">No headlines in the last 30 days yet. This page updates automatically when one appears.</p>'
     parts = []
     current = None
-    for item in items[:ITEMS_PER_PAGE]:
+    shown = items[:ITEMS_PER_PAGE]
+    for n, item in enumerate(shown):
+        more = ' data-more' if collapse_after is not None and n >= collapse_after else ""
         day = item["_time"].date()
         if group_by_day and day != current:
             if current is not None:
                 parts.append("</div>")
-            parts.append(f'<h3 class="day-head"><a href="/news/daily/{day.isoformat()}/">{fmt_day(day)}</a></h3><div class="items">')
+            parts.append(f'<h3 class="day-head"{more}><a href="/news/daily/{day.isoformat()}/">{fmt_day(day)}</a></h3><div class="items">')
             current = day
-        parts.append(item_html(item, companies, skip_ticker))
+        parts.append(item_html(item, companies, skip_ticker).replace('<article class="item">', f'<article class="item"{more}>', 1))
     if group_by_day and current is not None:
         parts.append("</div>")
     body = "\n".join(parts)
-    return body if group_by_day else f'<div class="items">{body}</div>'
+    body = body if group_by_day else f'<div class="items">{body}</div>'
+    if collapse_after is not None and len(shown) > collapse_after:
+        body = f'<div class="show-more" data-hidden="{len(shown) - collapse_after}">{body}</div>{SHOW_MORE_SCRIPT}'
+    return body
 
 
 def cta(title: str, text: str, button: str = "Get started free") -> str:
@@ -770,10 +800,15 @@ def ticker_page(company: dict, items: list, companies: dict, sector_counts: dict
         (c for c in companies.values() if c["sector"] == company["sector"] and c["ticker"] != ticker),
         key=lambda c: (-sector_counts.get(c["ticker"], 0), c["ticker"]),
     )
+    # the busiest dozen; the sector page lists the rest
+    active_peers = [c for c in peers if sector_counts.get(c["ticker"], 0) > 0]
     peer_links = "".join(
         f'<a class="chip" href="/news/{c["slug"]}/">{esc(c["ticker"])}<small>{esc(c["name"])}</small></a>'
-        for c in peers if sector_counts.get(c["ticker"], 0) > 0
+        for c in active_peers[:PEERS_SHOWN]
     )
+    if len(active_peers) > PEERS_SHOWN:
+        peer_links += (f'<a class="chip" href="/news/sector/{sector_slug(company["sector"])}/">'
+                       f'All {len(active_peers) + 1}<small>{esc(company["sector"])} companies</small></a>')
     last = (f'{fmt_short_day(items[0]["_time"].date())}, {items[0]["_time"].strftime("%H:%M")} UTC'
             if items else "—")
 
@@ -803,7 +838,7 @@ def ticker_page(company: dict, items: list, companies: dict, sector_counts: dict
 
 <section class="block">
   <h2>Latest {esc(ticker)} headlines</h2>
-  {item_list(items, companies, skip_ticker=ticker)}
+  {item_list(items, companies, skip_ticker=ticker, collapse_after=ITEMS_SHOWN)}
 </section>
 
 {f'<section class="block"><h2>More in {esc(company["sector"])}</h2><div class="chips">{peer_links}</div></section>' if peer_links else ""}
@@ -818,7 +853,8 @@ def sector_page(sector: str, items: list, companies: dict, counts: dict, now: da
     week = [i for i in items if i["_time"] >= now - timedelta(days=7)]
     m = mood(items)
     indexable = len(items) >= MIN_INDEXABLE
-    members = sorted((c for c in companies.values() if c["sector"] == sector),
+    # companies without a page (no headline yet) aren't listed
+    members = sorted((c for c in companies.values() if c["sector"] == sector and c.get("paged", True)),
                      key=lambda c: (-counts.get(c["ticker"], 0), c["ticker"]))
     member_links = "".join(
         f'<a class="chip" href="/news/{c["slug"]}/">{esc(c["ticker"])}<small>{esc(c["name"])} · {counts.get(c["ticker"], 0)}</small></a>'
@@ -942,9 +978,10 @@ def daily_index(days: list, per_day: dict) -> tuple:
 
 def companies_hub(companies: dict, counts: dict, sector_totals: dict) -> tuple:
     path = "/news/companies/"
+    listed = {t: c for t, c in companies.items() if c.get("paged", True)}  # companies with a page
     sections = []
-    for sector in sorted({c["sector"] for c in companies.values()}):
-        members = sorted((c for c in companies.values() if c["sector"] == sector), key=lambda c: c["name"].lower())
+    for sector in sorted({c["sector"] for c in listed.values()}):
+        members = sorted((c for c in listed.values() if c["sector"] == sector), key=lambda c: c["name"].lower())
         links = "".join(
             f'<a class="chip" href="/news/{c["slug"]}/">{esc(c["ticker"])}<small>{esc(c["name"])} · {counts.get(c["ticker"], 0)}</small></a>'
             if counts.get(c["ticker"], 0) else
@@ -958,14 +995,15 @@ def companies_hub(companies: dict, counts: dict, sector_totals: dict) -> tuple:
     body = f"""<header class="page-head">
   <span class="eyebrow">Browse</span>
   <h1>Stock news by company and sector</h1>
-  <p class="lead">{len(companies)} companies, funds and market themes Pulsarium tags in the news. Each page collects the last 30 days of headlines with a sentiment summary. The number is headlines in the last 30 days.</p>
+  <p class="lead">{len(listed)} companies, funds and market themes Pulsarium tags in the news. Each page collects the last 30 days of headlines with a sentiment summary. The number is headlines in the last 30 days.</p>
 </header>
 {cta("Follow the companies you own",
      "Pick your names once: the free cabinet keeps their news, prices, dividends and alerts together.")}
 {"".join(sections)}
 """
     title = "Stock news by company and sector | Pulsarium"
-    description = "Browse stock market news by company and sector: Nvidia, Apple, Microsoft, Tesla and 150 more, each with headlines and sentiment from the last 30 days."
+    description = (f"Browse stock market news by company and sector: Nvidia, Apple, Microsoft, Tesla and "
+                   f"{len(listed) - 4} more, each with headlines and sentiment from the last 30 days.")
     crumbs = [("Home", "/"), ("News", "/news/"), ("Companies", path)]
     return path, page(path=path, title=title, description=description, body=body, crumbs=crumbs), True
 
@@ -1062,8 +1100,17 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
             if len(changed_files) > before:
                 indexable_urls[path] = True
 
+    # A company gets a page once it has had a headline; a page that exists is
+    # kept (as noindex while empty) so links to it keep working. With 650
+    # companies, most of the 500 from SEC's list would otherwise be empty pages.
+    paged = {t for t, c in companies.items()
+             if by_ticker.get(t) or os.path.exists(url_file(f"/news/{c['slug']}/"))}
+    for ticker, company in companies.items():
+        company["paged"] = ticker in paged  # read by item_html and the chip lists
     for company in companies.values():
         items = by_ticker.get(company["ticker"], [])
+        if not company["paged"]:
+            continue
         lastmod = items[0]["_time"].date().isoformat() if items else None
         emit(ticker_page(company, items, companies, counts, now), lastmod, "hourly")
 
@@ -1111,7 +1158,7 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
     static = [(p, None, f) for p, f in STATIC_PAGES]
     write_if_changed("sitemap.xml", sitemap(static + sorted(sitemap_entries)), changed_files)
 
-    print(f"Pages: {len(companies)} companies, {len(by_sector)} sectors with news, {len(days)} days; "
+    print(f"Pages: {len(paged)} of {len(companies)} companies, {len(by_sector)} sectors with news, {len(days)} days; "
           f"{len(changed_files)} files changed, {len(sitemap_entries) + len(static)} URLs in the sitemap")
     return [SITE + p for p in indexable_urls]
 
