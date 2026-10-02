@@ -300,7 +300,11 @@ COMPANY_MAP = [
     {"ticker": "BTC",  "sector": "Cryptocurrencies",           "names": ["Bitcoin"]},
     {"ticker": "ETH",  "sector": "Cryptocurrencies",           "names": ["Ethereum"]},
     {"ticker": "COIN", "sector": "Cryptocurrencies",           "names": ["Coinbase"]},
-    {"ticker": "MSTR", "sector": "Cryptocurrencies",           "names": ["MicroStrategy", "Strategy"]},
+    # "Strategy" (its name since 2025) is an everyday word: it counts only
+    # capitalised and next to bitcoin or its preferred shares (STRC, STRK,
+    # STRF, STRD), as in "Strategy adds $370M of BTC"
+    {"ticker": "MSTR", "sector": "Cryptocurrencies",           "names": ["MicroStrategy", "Strategy", "Michael Saylor"],
+     "context": {"Strategy": r"(?i:\b(?:bitcoin|btc)\b)|\bSTR[CKFD]\b"}},
     {"ticker": "CRCL", "sector": "Cryptocurrencies",           "names": ["Circle Internet Group", "Circle Internet Financial"]},
     {"ticker": "XMR",  "sector": "Cryptocurrencies",           "names": ["Monero"]},
 
@@ -963,6 +967,9 @@ def detect_watchlist_matches(text: str) -> list:
        Studios").
     5) An entry's "exclude" pattern is cut out of the text before matching
        it — for look-alikes such as Nvidia's "RTX PRO" cards vs RTX Corp.
+    6) A name listed in an entry's "context" is a common word ("Strategy",
+       MicroStrategy's name since 2025): it is matched case-sensitively and
+       only when the text also matches its context pattern.
     Typographic apostrophes are made plain first: feeds write
     "McDonald’s", COMPANY_MAP writes "McDonald's".
     """
@@ -979,7 +986,12 @@ def detect_watchlist_matches(text: str) -> list:
 
         if not matched:
             for name in entry["names"]:
-                if re.search(r"\b" + re.escape(name) + r"\b", entry_text, flags=re.IGNORECASE):
+                context = entry.get("context", {}).get(name)
+                if context:
+                    if re.search(r"\b" + re.escape(name) + r"\b", entry_text) and re.search(context, entry_text):
+                        matched = True
+                        break
+                elif re.search(r"\b" + re.escape(name) + r"\b", entry_text, flags=re.IGNORECASE):
                     matched = True
                     break
 
