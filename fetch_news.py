@@ -478,6 +478,37 @@ def is_market_report_ad(title: str) -> bool:
     return bool(MARKET_REPORT_RE.search(title))
 
 
+# Nasdaq's feed carries hundreds of machine-written posts a month (ETF
+# Channel / BNK Invest): fund flows, option activity, moving-average
+# crosses, dividend calendars, "movers" ticker lists. They hold no news,
+# and each tags a handful of companies at once ("Notable ETF Outflow
+# Detected - XLE, VLO, EOG, BKR"); about 690 of 2,580 Nasdaq items in the
+# archive by 2 Oct 2026. Matched on Nasdaq only: the same words in another
+# outlet ("bitcoin ETF inflows of $700 million") are real news.
+TEMPLATED_POST_RE = re.compile("|".join([
+    # ETF flows
+    r"\b(?:Notable|Noteworthy) ETF (?:Outflows?|Inflows?)\b", r"\bBig ETF (?:Inflows|Outflows)\b",
+    r"\bLarge (?:Inflows|Outflows) Detected\b", r"\bETF (?:Outflow|Inflow) Alert\b",
+    # options
+    r"\bOption Activity\b", r"\bOptions Begin Trading\b", r"\bYieldBoost\b", r"\bPut And Call Options\b",
+    # technical levels
+    r"\b(?:Key|Critical) Moving Average\b", r"\bTwo Hundred Day Moving Average\b", r"\b200 DMA\b",
+    r"\bCritical Technical Indicator\b", r"\b(?:Now|Becomes|Getting Very) Oversold\b", r"\bOversold Conditions\b",
+    r"\bCrowded With (?:Sellers|Buyers)\b", r"\bwith Unusual Volume\b",
+    # holdings, dividends, ranks and ticker lists
+    r"\b13F Filers\b", r"\bDividend Run For\b", r"\bDaily Dividend Report\b", r"\bEx-Dividend Reminder\b",
+    r"\bDividend Yield Pushes Past\b", r"\bInsider Buying Report\b", r"\bAnalyst Moves: [A-Z]",
+    r"\bCrosses (?:Above|Below) Average Analyst Target\b", r"\bAchieves #\d+ Analyst Rank\b",
+    r"\bNew Strong (?:Buy|Sell) Stocks for\b",
+    r"\bMovers: [A-Z]{1,5}(?:\.[A-Z])?(?:, ?[A-Z]{1,5}(?:\.[A-Z])?)*\s*$",
+]), flags=re.IGNORECASE)
+
+
+def is_templated_post(title: str, source: str) -> bool:
+    """True for Nasdaq's machine-written ticker-list posts (see above)."""
+    return source == "Nasdaq" and bool(TEMPLATED_POST_RE.search(title))
+
+
 def strip_html(raw_html: str) -> str:
     """Strips HTML tags and extra whitespace from text."""
     if not raw_html:
@@ -1054,7 +1085,7 @@ def parse_feed(feed_name: str, url: str) -> list:
         if not title:
             continue
 
-        if is_advice_column(title) or is_market_report_ad(title):
+        if is_advice_column(title) or is_market_report_ad(title) or is_templated_post(title, feed_name):
             continue
 
         link_el = item.find("link")

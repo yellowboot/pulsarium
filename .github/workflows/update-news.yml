@@ -31,6 +31,10 @@ on:
         type: choice
         options: [auto, DeepSeek, Gemini]
         default: auto
+      full:
+        description: 'Rebuild every daily page too (after a template or filter change)'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -68,7 +72,7 @@ jobs:
       # A failure here must not hold back the news update itself.
       - name: Build the SEO pages
         continue-on-error: true
-        run: python site_build.py --changed-urls "$RUNNER_TEMP/changed-urls.txt"
+        run: python site_build.py --changed-urls "$RUNNER_TEMP/changed-urls.txt" ${{ inputs.full && '--full' || '' }}
 
       - name: Commit updated news_data.js
         id: commit

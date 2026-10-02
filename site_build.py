@@ -236,6 +236,13 @@ def news_noun(company: dict) -> str:
     return NON_STOCK_SECTORS.get(company["sector"], "stock news")
 
 
+def news_only(items) -> list:
+    """The archive without Nasdaq's machine-written ticker-list posts
+    (fetch_news.is_templated_post): the feed drops them now, and the ones
+    archived before stay in the files but leave the pages and the Mood Index."""
+    return [i for i in items if not fetch_news.is_templated_post(i["title"], i.get("source"))]
+
+
 def tag_items(items: list) -> list:
     """Adds _tickers, _sectors and _time; items already tagged keep theirs
     (the archive hands out the same dicts, so each is matched once)."""
@@ -1077,7 +1084,7 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
     companies = build_companies()
     today = now.date()
     window_days = [(today - timedelta(days=n)).isoformat() for n in range(WINDOW_DAYS)]
-    window = tag_items(archive.items_for(window_days))
+    window = tag_items(news_only(archive.items_for(window_days)))
     window = [i for i in window if i["_time"] >= now - timedelta(days=WINDOW_DAYS)]
 
     by_ticker, by_sector = {}, {}
@@ -1123,7 +1130,7 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
     # only the last three days are rebuilt (plus any missing page); --full
     # rebuilds them all, e.g. after a template or COMPANY_MAP change.
     days = archive.all_days()
-    per_day = {day: list(archive.load(day).values()) for day in days}
+    per_day = {day: news_only(archive.load(day).values()) for day in days}
     history = mood_history(days, per_day)
     mood_by_day = {p["date"]: p for p in history}
     for n, day in enumerate(days):
