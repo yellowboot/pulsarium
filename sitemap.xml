@@ -50,11 +50,6 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://pulsarium.finance/news/aal/</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://pulsarium.finance/news/aapl/</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>hourly</changefreq>
@@ -186,7 +181,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/companies/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -221,7 +216,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/daily/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -477,7 +472,7 @@
   <url>
     <loc>https://pulsarium.finance/news/daily/2026-10-01/</loc>
     <lastmod>2026-10-01</lastmod>
-    <changefreq>daily</changefreq>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://pulsarium.finance/news/dal/</loc>
@@ -675,11 +670,6 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://pulsarium.finance/news/nee/</loc>
-    <lastmod>2026-10-01</lastmod>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://pulsarium.finance/news/net/</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>hourly</changefreq>
@@ -747,11 +737,6 @@
   <url>
     <loc>https://pulsarium.finance/news/pfe/</loc>
     <lastmod>2026-10-01</lastmod>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://pulsarium.finance/news/pg/</loc>
-    <lastmod>2026-09-22</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
