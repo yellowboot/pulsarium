@@ -20,7 +20,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/site.css?v=d2ed19694f">
+<link rel="stylesheet" href="/assets/site.css?v=fe3db749b6">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pulsarium.finance/"}, {"@type": "ListItem", "position": 2, "name": "News", "item": "https://pulsarium.finance/news/"}, {"@type": "ListItem", "position": 3, "name": "Companies", "item": "https://pulsarium.finance/news/companies/"}, {"@type": "ListItem", "position": 4, "name": "BP", "item": "https://pulsarium.finance/news/bp/"}]}</script>
 </head>
 <body>
@@ -69,7 +69,7 @@
 
 <section class="block">
   <h2>Latest BP headlines</h2>
-  <h3 class="day-head"><a href="/news/daily/2026-10-01/">Thursday, 1 October 2026</a></h3><div class="items">
+  <div class="show-more" data-hidden="1"><h3 class="day-head"><a href="/news/daily/2026-10-01/">Thursday, 1 October 2026</a></h3><div class="items">
 <article class="item">
   <div class="item-meta"><span class="item-source">CNBC</span><time datetime="2026-10-01T20:41:38+00:00">Thu 1 Oct, 20:41 UTC</time><span class="badge badge-positive">Positive</span></div>
   <h3><a href="https://www.cnbc.com/2026/10/01/europes-winter-energy-crunch-may-already-be-underway-two-us-stocks-that-may-benefit.html" target="_blank" rel="noopener">Europe’s winter energy crunch may already be underway. Two U.S. stocks that may benefit</a></h3>
@@ -88,7 +88,7 @@
   <div class="item-meta"><span class="item-source">OilPrice.com</span><time datetime="2026-09-25T16:30:00+00:00">Fri 25 Sep, 16:30 UTC</time><span class="badge badge-positive">Positive</span></div>
   <h3><a href="https://oilprice.com/Latest-Energy-News/World-News/BP-Eyes-Bigger-US-Shale-Footprint-After-Devon-Deal-Talks.html" target="_blank" rel="noopener">BP Eyes Bigger U.S. Shale Footprint After Devon Deal Talks</a></h3>
   <p>BP has started looking seriously at U.S. shale assets again, including Devon Energy’s Eagle Ford business, as CEO Meg O’Neill pushes the company back toward oil and gas growth. BP entered the data room for Devon’s South Texas assets…</p>
-  <div class="item-tags"><a class="tag" href="/news/f/">F</a></div>
+  <div class="item-tags"><a class="tag" href="/news/f/">F</a><a class="tag" href="/news/dvn/">DVN</a></div>
 </article>
 </div>
 <h3 class="day-head"><a href="/news/daily/2026-09-14/">Monday, 14 September 2026</a></h3><div class="items">
@@ -114,16 +114,28 @@
   <p>The dollar index (DXY00 ) on Friday rose by +0.06%. The dollar found support as a hawkish US CPI report pushed odds of an FOMC rate hike next week up to 88% from 75% on Thursday. Also, the 10-year T-note yield on Friday rose by +0.6 bp,…</p>
   <div class="item-tags"><a class="tag" href="/news/fed/">FED</a></div>
 </article>
-<article class="item">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">Nasdaq</span><time datetime="2026-09-11T17:07:58+00:00">Fri 11 Sep, 17:07 UTC</time><span class="badge badge-neutral">Neutral</span></div>
   <h3><a href="https://www.nasdaq.com/articles/dollar-eases-crude-oil-prices-fall" target="_blank" rel="noopener">Dollar Eases as Crude Oil Prices Fall</a></h3>
   <p>The dollar index (DXY00 ) today is down -0.10%. The dollar is trading lower as today’s decline of more than -2% in WTI crude oil prices caused the 10-year T-note yield to fall -3.5 bp. Still, the dollar is seeing underlying support…</p>
   
 </article>
-</div>
+</div></div><script>
+(function () {
+  var box = document.currentScript.previousElementSibling;
+  if (!box || !box.classList.contains('show-more')) return;
+  box.classList.add('is-collapsed');
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'btn btn-ghost show-more-button';
+  button.textContent = 'Show ' + box.dataset.hidden + ' more';
+  button.addEventListener('click', function () { box.classList.remove('is-collapsed'); button.remove(); });
+  box.after(button);
+})();
+</script>
 </section>
 
-<section class="block"><h2>More in Oil &amp; Gas</h2><div class="chips"><a class="chip" href="/news/xom/">XOM<small>ExxonMobil</small></a><a class="chip" href="/news/cvx/">CVX<small>Chevron</small></a><a class="chip" href="/news/opec/">OPEC<small>OPEC</small></a><a class="chip" href="/news/shel/">SHEL<small>Shell</small></a><a class="chip" href="/news/cop/">COP<small>ConocoPhillips</small></a><a class="chip" href="/news/vist/">VIST<small>Vista Energy</small></a></div></section>
+<section class="block"><h2>More in Oil &amp; Gas</h2><div class="chips"><a class="chip" href="/news/xom/">XOM<small>ExxonMobil</small></a><a class="chip" href="/news/cvx/">CVX<small>Chevron</small></a><a class="chip" href="/news/bkr/">BKR<small>Baker Hughes</small></a><a class="chip" href="/news/mpc/">MPC<small>Marathon Petroleum</small></a><a class="chip" href="/news/dvn/">DVN<small>Devon Energy</small></a><a class="chip" href="/news/enb/">ENB<small>Enbridge</small></a><a class="chip" href="/news/vlo/">VLO<small>Valero Energy</small></a><a class="chip" href="/news/opec/">OPEC<small>OPEC</small></a><a class="chip" href="/news/oxy/">OXY<small>Occidental Petroleum</small></a><a class="chip" href="/news/psx/">PSX<small>Phillips 66</small></a><a class="chip" href="/news/shel/">SHEL<small>Shell</small></a><a class="chip" href="/news/cop/">COP<small>ConocoPhillips</small></a><a class="chip" href="/news/sector/oil-gas/">All 31<small>Oil &amp; Gas companies</small></a></div></section>
 
 </main>
 

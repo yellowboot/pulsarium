@@ -20,7 +20,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/site.css?v=d2ed19694f">
+<link rel="stylesheet" href="/assets/site.css?v=fe3db749b6">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pulsarium.finance/"}, {"@type": "ListItem", "position": 2, "name": "News", "item": "https://pulsarium.finance/news/"}, {"@type": "ListItem", "position": 3, "name": "Companies", "item": "https://pulsarium.finance/news/companies/"}, {"@type": "ListItem", "position": 4, "name": "GE", "item": "https://pulsarium.finance/news/ge/"}]}</script>
 </head>
 <body>
@@ -69,7 +69,7 @@
 
 <section class="block">
   <h2>Latest GE headlines</h2>
-  <h3 class="day-head"><a href="/news/daily/2026-09-29/">Tuesday, 29 September 2026</a></h3><div class="items">
+  <div class="show-more" data-hidden="4"><h3 class="day-head"><a href="/news/daily/2026-09-29/">Tuesday, 29 September 2026</a></h3><div class="items">
 <article class="item">
   <div class="item-meta"><span class="item-source">Yahoo Finance</span><time datetime="2026-09-29T19:12:00+00:00">Tue 29 Sep, 19:12 UTC</time><span class="badge badge-neutral">Neutral</span></div>
   <h3><a href="https://www.trefis.com/articles/616936/is-ge-stock-riskier-than-it-looks/2026-09-29?.tsrc=rss" target="_blank" rel="noopener">Is GE Stock Riskier Than It Looks?</a></h3>
@@ -112,40 +112,52 @@
   <div class="item-meta"><span class="item-source">Investing.com</span><time datetime="2026-09-09T17:25:02+00:00">Wed 9 Sep, 17:25 UTC</time><span class="badge badge-positive">Positive</span></div>
   <h3><a href="https://www.investing.com/news/stock-market-news/howmet-ceo-fine-with-ge-aerospace-deal-working-to-meet-demand-for-engine-parts-4894264" target="_blank" rel="noopener">Howmet CEO &quot;fine&quot; with GE Aerospace deal, working to meet demand for engine parts</a></h3>
   
-  
+  <div class="item-tags"><a class="tag" href="/news/hwm/">HWM</a></div>
 </article>
 </div>
-<h3 class="day-head"><a href="/news/daily/2026-09-08/">Tuesday, 8 September 2026</a></h3><div class="items">
-<article class="item">
+<h3 class="day-head" data-more><a href="/news/daily/2026-09-08/">Tuesday, 8 September 2026</a></h3><div class="items">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">Investing.com</span><time datetime="2026-09-08T18:18:46+00:00">Tue 8 Sep, 18:18 UTC</time><span class="badge badge-positive">Positive</span></div>
   <h3><a href="https://www.investing.com/news/stock-market-news/ge-aerospace-to-buy-castings-maker-cpp-for-nearly-12-billion-4891452" target="_blank" rel="noopener">GE Aerospace to buy castings supplier for nearly $12 billion to tackle engine bottleneck</a></h3>
   
   
 </article>
-<article class="item">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">Yahoo Finance</span><time datetime="2026-09-08T15:25:02+00:00">Tue 8 Sep, 15:25 UTC</time><span class="badge badge-positive">Positive</span></div>
   <h3><a href="https://www.investors.com/news/ge-aerospace-acquisition-precision-products-castings-capacity-deal-ge-stock/?src=A00220&amp;yptr=yahoo" target="_blank" rel="noopener">GE Aerospace To Buy Key Industry Castings Supplier CPP For Nearly $12 Billion</a></h3>
   
   
 </article>
-<article class="item">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">CNBC</span><time datetime="2026-09-08T13:55:12+00:00">Tue 8 Sep, 13:55 UTC</time><span class="badge badge-positive">Positive</span></div>
   <h3><a href="https://www.cnbc.com/2026/09/08/ge-aerospace-to-buy-castings-maker-cpp-for-nearly-12-billion.html" target="_blank" rel="noopener">GE Aerospace to spend nearly $12 billion to bring key castings supplier in-house</a></h3>
   <p>GE Aerospace said on Tuesday it would buy castings supplier Consolidated Precision Products from Warburg Pincus and Berkshire Partners for $11.75 billion.</p>
   
 </article>
 </div>
-<h3 class="day-head"><a href="/news/daily/2026-09-04/">Friday, 4 September 2026</a></h3><div class="items">
-<article class="item">
+<h3 class="day-head" data-more><a href="/news/daily/2026-09-04/">Friday, 4 September 2026</a></h3><div class="items">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">Nasdaq</span><time datetime="2026-09-04T17:22:28+00:00">Fri 4 Sep, 17:22 UTC</time><span class="badge badge-neutral">Neutral</span></div>
   <h3><a href="https://www.nasdaq.com/articles/noteworthy-friday-option-activity-ge-mrvl-snps" target="_blank" rel="noopener">Noteworthy Friday Option Activity: GE, MRVL, SNPS</a></h3>
   <p>Looking at options trading activity among components of the S&amp;P 500 index, there is noteworthy activity today in GE Aerospace (Symbol: GE), where a total volume of 35,893 contracts has been traded thus far today, a contract volume which…</p>
   <div class="item-tags"><a class="tag" href="/news/mrvl/">MRVL</a><a class="tag" href="/news/snps/">SNPS</a><a class="tag" href="/news/spy/">SPY</a></div>
 </article>
-</div>
+</div></div><script>
+(function () {
+  var box = document.currentScript.previousElementSibling;
+  if (!box || !box.classList.contains('show-more')) return;
+  box.classList.add('is-collapsed');
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'btn btn-ghost show-more-button';
+  button.textContent = 'Show ' + box.dataset.hidden + ' more';
+  button.addEventListener('click', function () { box.classList.remove('is-collapsed'); button.remove(); });
+  box.after(button);
+})();
+</script>
 </section>
 
-<section class="block"><h2>More in Industrials</h2><div class="chips"><a class="chip" href="/news/hon/">HON<small>Honeywell</small></a><a class="chip" href="/news/bdrbf/">BDRBF<small>Bombardier</small></a><a class="chip" href="/news/cat/">CAT<small>Caterpillar</small></a></div></section>
+<section class="block"><h2>More in Industrials</h2><div class="chips"><a class="chip" href="/news/hon/">HON<small>Honeywell</small></a><a class="chip" href="/news/bdrbf/">BDRBF<small>Bombardier</small></a><a class="chip" href="/news/gev/">GEV<small>GE Vernova</small></a><a class="chip" href="/news/mmm/">MMM<small>3M</small></a><a class="chip" href="/news/cat/">CAT<small>Caterpillar</small></a><a class="chip" href="/news/pwr/">PWR<small>Quanta Services</small></a><a class="chip" href="/news/uri/">URI<small>United Rentals</small></a><a class="chip" href="/news/etn/">ETN<small>Eaton</small></a><a class="chip" href="/news/jbht/">JBHT<small>J.B. Hunt</small></a><a class="chip" href="/news/unp/">UNP<small>Union Pacific</small></a><a class="chip" href="/news/cni/">CNI<small>Canadian National Railway</small></a><a class="chip" href="/news/cp/">CP<small>Canadian Pacific</small></a><a class="chip" href="/news/sector/industrials/">All 33<small>Industrials companies</small></a></div></section>
 
 </main>
 

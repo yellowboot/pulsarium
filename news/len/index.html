@@ -20,7 +20,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/site.css?v=d2ed19694f">
+<link rel="stylesheet" href="/assets/site.css?v=fe3db749b6">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pulsarium.finance/"}, {"@type": "ListItem", "position": 2, "name": "News", "item": "https://pulsarium.finance/news/"}, {"@type": "ListItem", "position": 3, "name": "Companies", "item": "https://pulsarium.finance/news/companies/"}, {"@type": "ListItem", "position": 4, "name": "LEN", "item": "https://pulsarium.finance/news/len/"}]}</script>
 </head>
 <body>
@@ -69,7 +69,7 @@
 
 <section class="block">
   <h2>Latest LEN headlines</h2>
-  <h3 class="day-head"><a href="/news/daily/2026-09-28/">Monday, 28 September 2026</a></h3><div class="items">
+  <div class="show-more" data-hidden="2"><h3 class="day-head"><a href="/news/daily/2026-09-28/">Monday, 28 September 2026</a></h3><div class="items">
 <article class="item">
   <div class="item-meta"><span class="item-source">Yahoo Finance</span><time datetime="2026-09-28T18:06:36+00:00">Mon 28 Sep, 18:06 UTC</time><span class="badge badge-negative">Negative</span></div>
   <h3><a href="https://finance.yahoo.com/markets/stocks/articles/3-reasons-len-risky-1-180636278.html?.tsrc=rss" target="_blank" rel="noopener">3 Reasons LEN is Risky and 1 Stock to Buy Instead</a></h3>
@@ -110,28 +110,40 @@
   <div class="item-meta"><span class="item-source">Nasdaq</span><time datetime="2026-09-16T17:34:46+00:00">Wed 16 Sep, 17:34 UTC</time><span class="badge badge-neutral">Neutral</span></div>
   <h3><a href="https://www.nasdaq.com/articles/noteworthy-wednesday-option-activity-cci-lyb-len" target="_blank" rel="noopener">Noteworthy Wednesday Option Activity: CCI, LYB, LEN</a></h3>
   <p>Among the underlying components of the S&amp;P 500 index, we saw noteworthy options trading volume today in Crown Castle Inc (Symbol: CCI), where a total of 18,416 contracts have traded so far, representing approximately 1.8 million…</p>
-  <div class="item-tags"><a class="tag" href="/news/spy/">SPY</a></div>
+  <div class="item-tags"><a class="tag" href="/news/spy/">SPY</a><a class="tag" href="/news/cci/">CCI</a><a class="tag" href="/news/lyb/">LYB</a></div>
 </article>
 </div>
-<h3 class="day-head"><a href="/news/daily/2026-09-05/">Saturday, 5 September 2026</a></h3><div class="items">
-<article class="item">
+<h3 class="day-head" data-more><a href="/news/daily/2026-09-05/">Saturday, 5 September 2026</a></h3><div class="items">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">Nasdaq</span><time datetime="2026-09-05T20:43:27+00:00">Sat 5 Sep, 20:43 UTC</time><span class="badge badge-neutral">Neutral</span></div>
   <h3><a href="https://www.nasdaq.com/articles/stonex-initiates-coverage-lennar-hold" target="_blank" rel="noopener">StoneX Initiates Coverage of Lennar at Hold</a></h3>
   <p>Fintel reports that on September 4, 2026, StoneX initiated coverage of Lennar (NYSE:LEN) with a Hold recommendation. This rating action occurred on September 4, 2026, the same day the stock&#x27;s latest close was recorded at $83.58. On the…</p>
   
 </article>
 </div>
-<h3 class="day-head"><a href="/news/daily/2026-09-04/">Friday, 4 September 2026</a></h3><div class="items">
-<article class="item">
+<h3 class="day-head" data-more><a href="/news/daily/2026-09-04/">Friday, 4 September 2026</a></h3><div class="items">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">Nasdaq</span><time datetime="2026-09-04T17:22:20+00:00">Fri 4 Sep, 17:22 UTC</time><span class="badge badge-neutral">Neutral</span></div>
   <h3><a href="https://www.nasdaq.com/articles/noteworthy-friday-option-activity-len-kr-intc" target="_blank" rel="noopener">Noteworthy Friday Option Activity: LEN, KR, INTC</a></h3>
   <p>Among the underlying components of the S&amp;P 500 index, we saw noteworthy options trading volume today in Lennar Corp (Symbol: LEN), where a total of 15,639 contracts have traded so far, representing approximately 1.6 million underlying…</p>
   <div class="item-tags"><a class="tag" href="/news/intc/">INTC</a><a class="tag" href="/news/spy/">SPY</a></div>
 </article>
-</div>
+</div></div><script>
+(function () {
+  var box = document.currentScript.previousElementSibling;
+  if (!box || !box.classList.contains('show-more')) return;
+  box.classList.add('is-collapsed');
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'btn btn-ghost show-more-button';
+  button.textContent = 'Show ' + box.dataset.hidden + ' more';
+  button.addEventListener('click', function () { box.classList.remove('is-collapsed'); button.remove(); });
+  box.after(button);
+})();
+</script>
 </section>
 
-
+<section class="block"><h2>More in Real Estate / Homebuilders</h2><div class="chips"><a class="chip" href="/news/o/">O<small>Realty Income</small></a><a class="chip" href="/news/phm/">PHM<small>PulteGroup</small></a><a class="chip" href="/news/dhi/">DHI<small>D.R. Horton</small></a><a class="chip" href="/news/dlr/">DLR<small>Digital Realty</small></a><a class="chip" href="/news/amt/">AMT<small>American Tower</small></a><a class="chip" href="/news/eqix/">EQIX<small>Equinix</small></a><a class="chip" href="/news/beke/">BEKE<small>KE Holdings</small></a><a class="chip" href="/news/bn/">BN<small>Brookfield Corp</small></a><a class="chip" href="/news/cci/">CCI<small>Crown Castle</small></a><a class="chip" href="/news/irm/">IRM<small>Iron Mountain</small></a><a class="chip" href="/news/pld/">PLD<small>Prologis</small></a><a class="chip" href="/news/spg/">SPG<small>Simon Property</small></a><a class="chip" href="/news/sector/real-estate-homebuilders/">All 15<small>Real Estate / Homebuilders companies</small></a></div></section>
 
 </main>
 

@@ -20,7 +20,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/site.css?v=d2ed19694f">
+<link rel="stylesheet" href="/assets/site.css?v=fe3db749b6">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pulsarium.finance/"}, {"@type": "ListItem", "position": 2, "name": "News", "item": "https://pulsarium.finance/news/"}, {"@type": "ListItem", "position": 3, "name": "Companies", "item": "https://pulsarium.finance/news/companies/"}, {"@type": "ListItem", "position": 4, "name": "NOC", "item": "https://pulsarium.finance/news/noc/"}]}</script>
 </head>
 <body>
@@ -69,7 +69,7 @@
 
 <section class="block">
   <h2>Latest NOC headlines</h2>
-  <h3 class="day-head"><a href="/news/daily/2026-09-15/">Tuesday, 15 September 2026</a></h3><div class="items">
+  <div class="show-more" data-hidden="1"><h3 class="day-head"><a href="/news/daily/2026-09-15/">Tuesday, 15 September 2026</a></h3><div class="items">
 <article class="item">
   <div class="item-meta"><span class="item-source">Investing.com</span><time datetime="2026-09-15T21:47:02+00:00">Tue 15 Sep, 21:47 UTC</time><span class="badge badge-positive">Positive</span></div>
   <h3><a href="https://www.investing.com/news/stock-market-news/northrop-grumman-wins-344-million-navy-contract-modification-93CH-4902709" target="_blank" rel="noopener">Northrop Grumman wins $34.4 million Navy contract modification</a></h3>
@@ -80,7 +80,7 @@
   <div class="item-meta"><span class="item-source">Nasdaq</span><time datetime="2026-09-15T14:49:54+00:00">Tue 15 Sep, 14:49 UTC</time><span class="badge badge-negative">Negative</span></div>
   <h3><a href="https://www.nasdaq.com/articles/noteworthy-etf-outflows-ita-gd-tdg-noc" target="_blank" rel="noopener">Noteworthy ETF Outflows: ITA, GD, TDG, NOC</a></h3>
   <p>Looking today at week-over-week shares outstanding changes among the universe of ETFs covered at ETF Channel, one standout is the iShares U.S. Aerospace &amp; Defense ETF (Symbol: ITA) where we have detected an approximate $108.4 million…</p>
-  
+  <div class="item-tags"><a class="tag" href="/news/tdg/">TDG</a></div>
 </article>
 </div>
 <h3 class="day-head"><a href="/news/daily/2026-09-14/">Monday, 14 September 2026</a></h3><div class="items">
@@ -113,17 +113,29 @@
   
 </article>
 </div>
-<h3 class="day-head"><a href="/news/daily/2026-09-04/">Friday, 4 September 2026</a></h3><div class="items">
-<article class="item">
+<h3 class="day-head" data-more><a href="/news/daily/2026-09-04/">Friday, 4 September 2026</a></h3><div class="items">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">Nasdaq</span><time datetime="2026-09-04T14:52:27+00:00">Fri 4 Sep, 14:52 UTC</time><span class="badge badge-negative">Negative</span></div>
   <h3><a href="https://www.nasdaq.com/articles/ita-noc-tdg-lhx-large-outflows-detected-etf" target="_blank" rel="noopener">ITA, NOC, TDG, LHX: Large Outflows Detected at ETF</a></h3>
   <p>Looking today at week-over-week shares outstanding changes among the universe of ETFs covered at ETF Channel, one standout is the iShares U.S. Aerospace &amp; Defense ETF (Symbol: ITA) where we have detected an approximate $169.5 million…</p>
-  <div class="item-tags"><a class="tag" href="/news/lhx/">LHX</a></div>
+  <div class="item-tags"><a class="tag" href="/news/lhx/">LHX</a><a class="tag" href="/news/tdg/">TDG</a></div>
 </article>
-</div>
+</div></div><script>
+(function () {
+  var box = document.currentScript.previousElementSibling;
+  if (!box || !box.classList.contains('show-more')) return;
+  box.classList.add('is-collapsed');
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'btn btn-ghost show-more-button';
+  button.textContent = 'Show ' + box.dataset.hidden + ' more';
+  button.addEventListener('click', function () { box.classList.remove('is-collapsed'); button.remove(); });
+  box.after(button);
+})();
+</script>
 </section>
 
-<section class="block"><h2>More in Defense</h2><div class="chips"><a class="chip" href="/news/ba/">BA<small>Boeing</small></a><a class="chip" href="/news/rtx/">RTX<small>RTX</small></a><a class="chip" href="/news/air-pa/">AIR.PA<small>Airbus</small></a><a class="chip" href="/news/lhx/">LHX<small>L3Harris</small></a><a class="chip" href="/news/lmt/">LMT<small>Lockheed Martin</small></a></div></section>
+<section class="block"><h2>More in Defense</h2><div class="chips"><a class="chip" href="/news/ba/">BA<small>Boeing</small></a><a class="chip" href="/news/rtx/">RTX<small>RTX</small></a><a class="chip" href="/news/air-pa/">AIR.PA<small>Airbus</small></a><a class="chip" href="/news/hwm/">HWM<small>Howmet</small></a><a class="chip" href="/news/lhx/">LHX<small>L3Harris</small></a><a class="chip" href="/news/lmt/">LMT<small>Lockheed Martin</small></a><a class="chip" href="/news/gd/">GD<small>General Dynamics</small></a><a class="chip" href="/news/tdg/">TDG<small>TransDigm</small></a><a class="chip" href="/news/axon/">AXON<small>Axon Enterprise</small></a><a class="chip" href="/news/hei/">HEI<small>Heico</small></a></div></section>
 
 </main>
 

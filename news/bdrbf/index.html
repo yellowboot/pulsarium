@@ -20,7 +20,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/site.css?v=d2ed19694f">
+<link rel="stylesheet" href="/assets/site.css?v=fe3db749b6">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pulsarium.finance/"}, {"@type": "ListItem", "position": 2, "name": "News", "item": "https://pulsarium.finance/news/"}, {"@type": "ListItem", "position": 3, "name": "Companies", "item": "https://pulsarium.finance/news/companies/"}, {"@type": "ListItem", "position": 4, "name": "BDRBF", "item": "https://pulsarium.finance/news/bdrbf/"}]}</script>
 </head>
 <body>
@@ -69,12 +69,12 @@
 
 <section class="block">
   <h2>Latest BDRBF headlines</h2>
-  <h3 class="day-head"><a href="/news/daily/2026-09-25/">Friday, 25 September 2026</a></h3><div class="items">
+  <div class="show-more" data-hidden="4"><h3 class="day-head"><a href="/news/daily/2026-09-25/">Friday, 25 September 2026</a></h3><div class="items">
 <article class="item">
   <div class="item-meta"><span class="item-source">Nasdaq</span><time datetime="2026-09-25T17:42:37+00:00">Fri 25 Sep, 17:42 UTC</time><span class="badge badge-neutral">Neutral</span></div>
   <h3><a href="https://www.nasdaq.com/articles/bombardiers-series-2-preferred-shares-about-put-more-money-your-pocket" target="_blank" rel="noopener">Bombardier&#x27;s Series 2 Preferred Shares About To Put More Money In Your Pocket</a></h3>
   <p>On 9/29/26, Bombardier Inc CL. B SV&#x27;s Series 2 Cumulative Redeemable Preferred Shares (TSX: BBD-PRB.TO) will trade ex-dividend, for its monthly dividend of $0.0927, payable on 10/15/26. As a percentage of BBD.PRB&#x27;s recent share price of…</p>
-  
+  <div class="item-tags"><a class="tag" href="/news/bbd/">BBD</a></div>
 </article>
 </div>
 <h3 class="day-head"><a href="/news/daily/2026-09-09/">Wednesday, 9 September 2026</a></h3><div class="items">
@@ -110,36 +110,48 @@
   
   
 </article>
-<article class="item">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">Investing.com</span><time datetime="2026-09-08T14:31:02+00:00">Tue 8 Sep, 14:31 UTC</time><span class="badge badge-negative">Negative</span></div>
   <h3><a href="https://www.investing.com/news/stock-market-news/bombardier-shares-drop-as-trump-threatens-us-sales-ban-4891975" target="_blank" rel="noopener">Bombardier shares drop as Trump threatens U.S. sales ban</a></h3>
   
   
 </article>
 </div>
-<h3 class="day-head"><a href="/news/daily/2026-09-07/">Monday, 7 September 2026</a></h3><div class="items">
-<article class="item">
+<h3 class="day-head" data-more><a href="/news/daily/2026-09-07/">Monday, 7 September 2026</a></h3><div class="items">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">Investing.com</span><time datetime="2026-09-07T21:12:25+00:00">Mon 7 Sep, 21:12 UTC</time><span class="badge badge-negative">Negative</span></div>
   <h3><a href="https://www.investing.com/news/stock-market-news/trump-says-canadas-bombardier-cannot-sell-in-us-unless-it-builds-there-4890715" target="_blank" rel="noopener">Trump says Canada’s Bombardier cannot sell in US unless it builds there</a></h3>
   
   
 </article>
-<article class="item">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">CNBC</span><time datetime="2026-09-07T18:52:24+00:00">Mon 7 Sep, 18:52 UTC</time><span class="badge badge-negative">Negative</span></div>
   <h3><a href="https://www.cnbc.com/2026/09/07/trump-bombardier-cant-sell-in-us-unless-canada-aerospace-giant-builds-there.html" target="_blank" rel="noopener">Trump says Bombardier can&#x27;t sell in U.S. unless Canada aerospace giant builds there</a></h3>
   <p>Trump&#x27;s announcement comes on the eve of Canadian retaliatory tariffs set to take effect Tuesday on $20 billion of U.S. goods.</p>
   
 </article>
-<article class="item">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">Investing.com</span><time datetime="2026-09-07T18:40:08+00:00">Mon 7 Sep, 18:40 UTC</time><span class="badge badge-negative">Negative</span></div>
   <h3><a href="https://www.investing.com/news/stock-market-news/trump-demands-bombardier-quit-us-market-unless-it-builds-planes-there-4890722" target="_blank" rel="noopener">Trump demands Bombardier quit US market unless it builds planes there</a></h3>
   
   
 </article>
-</div>
+</div></div><script>
+(function () {
+  var box = document.currentScript.previousElementSibling;
+  if (!box || !box.classList.contains('show-more')) return;
+  box.classList.add('is-collapsed');
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'btn btn-ghost show-more-button';
+  button.textContent = 'Show ' + box.dataset.hidden + ' more';
+  button.addEventListener('click', function () { box.classList.remove('is-collapsed'); button.remove(); });
+  box.after(button);
+})();
+</script>
 </section>
 
-<section class="block"><h2>More in Industrials</h2><div class="chips"><a class="chip" href="/news/hon/">HON<small>Honeywell</small></a><a class="chip" href="/news/ge/">GE<small>General Electric</small></a><a class="chip" href="/news/cat/">CAT<small>Caterpillar</small></a></div></section>
+<section class="block"><h2>More in Industrials</h2><div class="chips"><a class="chip" href="/news/hon/">HON<small>Honeywell</small></a><a class="chip" href="/news/ge/">GE<small>General Electric</small></a><a class="chip" href="/news/gev/">GEV<small>GE Vernova</small></a><a class="chip" href="/news/mmm/">MMM<small>3M</small></a><a class="chip" href="/news/cat/">CAT<small>Caterpillar</small></a><a class="chip" href="/news/pwr/">PWR<small>Quanta Services</small></a><a class="chip" href="/news/uri/">URI<small>United Rentals</small></a><a class="chip" href="/news/etn/">ETN<small>Eaton</small></a><a class="chip" href="/news/jbht/">JBHT<small>J.B. Hunt</small></a><a class="chip" href="/news/unp/">UNP<small>Union Pacific</small></a><a class="chip" href="/news/cni/">CNI<small>Canadian National Railway</small></a><a class="chip" href="/news/cp/">CP<small>Canadian Pacific</small></a><a class="chip" href="/news/sector/industrials/">All 33<small>Industrials companies</small></a></div></section>
 
 </main>
 

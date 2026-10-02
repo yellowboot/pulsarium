@@ -20,7 +20,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/site.css?v=d2ed19694f">
+<link rel="stylesheet" href="/assets/site.css?v=fe3db749b6">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pulsarium.finance/"}, {"@type": "ListItem", "position": 2, "name": "News", "item": "https://pulsarium.finance/news/"}, {"@type": "ListItem", "position": 3, "name": "Companies", "item": "https://pulsarium.finance/news/companies/"}, {"@type": "ListItem", "position": 4, "name": "NET", "item": "https://pulsarium.finance/news/net/"}]}</script>
 </head>
 <body>
@@ -69,7 +69,7 @@
 
 <section class="block">
   <h2>Latest NET headlines</h2>
-  <h3 class="day-head"><a href="/news/daily/2026-09-29/">Tuesday, 29 September 2026</a></h3><div class="items">
+  <div class="show-more" data-hidden="1"><h3 class="day-head"><a href="/news/daily/2026-09-29/">Tuesday, 29 September 2026</a></h3><div class="items">
 <article class="item">
   <div class="item-meta"><span class="item-source">Yahoo Finance</span><time datetime="2026-09-29T22:17:40+00:00">Tue 29 Sep, 22:17 UTC</time><span class="badge badge-positive">Positive</span></div>
   <h3><a href="https://www.tikr.com/blog/bot-traffic-will-be-1000x-bigger-than-human-traffic-in-just-five-years-according-to-cloudflare-ceo?ref=yahoofinance&amp;.tsrc=rss" target="_blank" rel="noopener">Bot Traffic Will Be “1000X” Bigger Than Human Traffic in Just Five Years, According to Cloudflare CEO</a></h3>
@@ -94,7 +94,7 @@
   <div class="item-meta"><span class="item-source">Nasdaq</span><time datetime="2026-09-24T14:57:36+00:00">Thu 24 Sep, 14:57 UTC</time><span class="badge badge-positive">Positive</span></div>
   <h3><a href="https://www.nasdaq.com/articles/notable-etf-inflow-detected-cibr-net-zs-ffiv" target="_blank" rel="noopener">Notable ETF Inflow Detected - CIBR, NET, ZS, FFIV</a></h3>
   <p>Looking today at week-over-week shares outstanding changes among the universe of ETFs covered at ETF Channel, one standout is the First Trust Nasdaq Cybersecurity ETF (Symbol: CIBR) where we have detected an approximate $296.4 million…</p>
-  
+  <div class="item-tags"><a class="tag" href="/news/ffiv/">FFIV</a></div>
 </article>
 </div>
 <h3 class="day-head"><a href="/news/daily/2026-09-21/">Monday, 21 September 2026</a></h3><div class="items">
@@ -113,17 +113,29 @@
   
 </article>
 </div>
-<h3 class="day-head"><a href="/news/daily/2026-09-05/">Saturday, 5 September 2026</a></h3><div class="items">
-<article class="item">
+<h3 class="day-head" data-more><a href="/news/daily/2026-09-05/">Saturday, 5 September 2026</a></h3><div class="items">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">Yahoo Finance</span><time datetime="2026-09-05T12:26:09+00:00">Sat 5 Sep, 12:26 UTC</time><span class="badge badge-neutral">Neutral</span></div>
   <h3><a href="https://finance.yahoo.com/technology/ai/articles/openai-1-billion-cyber-push-122609472.html" target="_blank" rel="noopener">OpenAI’s $1 Billion Cyber Push Backs Cloudflare and SentinelOne. Which Has the Better AI Security Model?</a></h3>
   
   
 </article>
-</div>
+</div></div><script>
+(function () {
+  var box = document.currentScript.previousElementSibling;
+  if (!box || !box.classList.contains('show-more')) return;
+  box.classList.add('is-collapsed');
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'btn btn-ghost show-more-button';
+  button.textContent = 'Show ' + box.dataset.hidden + ' more';
+  button.addEventListener('click', function () { box.classList.remove('is-collapsed'); button.remove(); });
+  box.after(button);
+})();
+</script>
 </section>
 
-<section class="block"><h2>More in Cybersecurity</h2><div class="chips"><a class="chip" href="/news/panw/">PANW<small>Palo Alto Networks</small></a><a class="chip" href="/news/crwd/">CRWD<small>CrowdStrike</small></a><a class="chip" href="/news/ftnt/">FTNT<small>Fortinet</small></a></div></section>
+<section class="block"><h2>More in Cybersecurity</h2><div class="chips"><a class="chip" href="/news/panw/">PANW<small>Palo Alto Networks</small></a><a class="chip" href="/news/crwd/">CRWD<small>CrowdStrike</small></a><a class="chip" href="/news/zs/">ZS<small>Zscaler</small></a><a class="chip" href="/news/okta/">OKTA<small>Okta</small></a><a class="chip" href="/news/ftnt/">FTNT<small>Fortinet</small></a></div></section>
 
 </main>
 
