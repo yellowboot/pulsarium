@@ -6,7 +6,25 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 02 Oct 2026 13:58:22 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 02 Oct 2026 14:03:18 +0000</lastBuildDate>
+  <item>
+    <title>‘I don’t want to die on the sales floor’: I’m 67 and earn $19.50 an hour at a big-box store. When can I finally retire?</title>
+    <link>https://www.marketwatch.com/story/i-dont-want-to-die-on-the-sales-floor-im-67-and-earn-19-50-an-hour-at-a-big-box-store-when-can-i-finally-retire-369abcf9?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/i-dont-want-to-die-on-the-sales-floor-im-67-and-earn-19-50-an-hour-at-a-big-box-store-when-can-i-finally-retire-369abcf9?mod=mw_rss_topstories</guid>
+    <pubDate>Fri, 02 Oct 2026 14:00:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>“I started taking Social Security at 66 and receive $2,410 a month. I have $214,000 in my 401(k).”</description>
+    
+  </item>
+  <item>
+    <title>Tech stocks jump after jobs report miss, Treasury yields ease: AlphaCheck</title>
+    <link>https://finance.yahoo.com/markets/article/tech-stocks-jump-after-jobs-report-miss-treasury-yields-ease-alphacheck-134916934.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/article/tech-stocks-jump-after-jobs-report-miss-treasury-yields-ease-alphacheck-134916934.html?.tsrc=rss</guid>
+    <pubDate>Fri, 02 Oct 2026 13:49:16 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The stock market opened higher after the economy added just 29,000 jobs last month and unemployment ticked up to 4.2%.</description>
+    <category>UST10Y</category>
+  </item>
   <item>
     <title>Treasury Sec. Bessent, IRS crack down on ETF strategy the wealthy are using to avoid capital gains taxes</title>
     <link>https://www.cnbc.com/2026/10/02/treasury-irs-capital-gains-income-tax-section-351-warning.html</link>
@@ -15,6 +33,15 @@
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>The IRS and Treasury issued a warning this week on an ETF strategy wealthy investors have been using to shield capital gains income from taxes.</description>
     
+  </item>
+  <item>
+    <title>Stock Market Today: Dow Rallies 300 Points On Jobs Report Surprise; Tesla Jumps On Deliveries (Live Coverage)</title>
+    <link>https://finance.yahoo.com/m/94ae67df-681f-315f-b45f-941eaadbc7c6/stock-market-today%3A-dow.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/94ae67df-681f-315f-b45f-941eaadbc7c6/stock-market-today%3A-dow.html?.tsrc=rss</guid>
+    <pubDate>Fri, 02 Oct 2026 13:47:55 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Stock Market Today: The Dow Jones index rallies Friday after a surprise result from the U.S. jobs report. Tesla stock jumps on deliveries.</description>
+    <category>TSLA</category><category>DJI</category>
   </item>
   <item>
     <title>PLAYSTUDIOS Consensus Price Target Increased by 900.00% to $5.10</title>
@@ -26,6 +53,15 @@
     
   </item>
   <item>
+    <title>Jobs Report: Soft Hiring Lifts S&amp;P 500, Sinks Rate-Hike Odds; AI Effect? (Live Coverage)</title>
+    <link>https://finance.yahoo.com/m/3e182634-ed94-3343-806f-8c347a8e5466/jobs-report%3A-soft-hiring.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/3e182634-ed94-3343-806f-8c347a8e5466/jobs-report%3A-soft-hiring.html?.tsrc=rss</guid>
+    <pubDate>Fri, 02 Oct 2026 13:46:11 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>An October Fed rate hike is almost off the table.</description>
+    <category>FED</category><category>SPY</category>
+  </item>
+  <item>
     <title>Labor market faltered in September as jobs increased by just 29,000, unemployment rate rose to 4.2%</title>
     <link>https://www.cnbc.com/2026/10/02/jobs-report-september-2026.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/10/02/jobs-report-september-2026.html</guid>
@@ -35,6 +71,24 @@
     
   </item>
   <item>
+    <title>OpenAI’s Future IPO Keeps Me Buying Microsoft</title>
+    <link>https://247wallst.com/investing/2026/10/02/openais-future-ipo-keeps-me-buying-microsoft/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/investing/2026/10/02/openais-future-ipo-keeps-me-buying-microsoft/?.tsrc=rss</guid>
+    <pubDate>Fri, 02 Oct 2026 13:45:08 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Microsoft holds a stake in OpenAI that no public market has ever priced, and one investor argues that gap between the stock and the business is exactly where the opportunity lives.</description>
+    <category>MSFT</category>
+  </item>
+  <item>
+    <title>EMCOR Group, Inc. Declares Regular Quarterly Dividend</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/emcor-group-inc-declares-regular-134500525.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/emcor-group-inc-declares-regular-134500525.html?.tsrc=rss</guid>
+    <pubDate>Fri, 02 Oct 2026 13:45:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>NORWALK, Conn., October 02, 2026--EMCOR Group, Inc. (NYSE: EME) today announced that its Board of Directors has declared a regular quarterly cash dividend of $0.40 per common share. The dividend will be paid on October 30, 2026 to…</description>
+    <category>EME</category>
+  </item>
+  <item>
     <title>Nike shares tumble after weak revenue outlook and layoff plans underway</title>
     <link>https://www.cnbc.com/2026/10/02/nike-nke-stock-q1-earnings-layoffs.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/10/02/nike-nke-stock-q1-earnings-layoffs.html</guid>
@@ -42,6 +96,15 @@
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>Nike&#x27;s shares dropped for a second straight day of declines after it reported falling revenue and plans to lay off staff.</description>
     <category>NKE</category>
+  </item>
+  <item>
+    <title>Why Amazon is trying to offload $8B of chips from its balance sheet</title>
+    <link>https://finance.yahoo.com/video/why-amazon-trying-offload-8b-134346871.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/video/why-amazon-trying-offload-8b-134346871.html?.tsrc=rss</guid>
+    <pubDate>Fri, 02 Oct 2026 13:43:46 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Amazon (AMZN) is planning to shift $8 billion in AI chips off its balance sheet, according to the Financial Times, by creating a special-purpose vehicle to lease the technology back to companies. The 8:30 Hosts Julie Hyman, Pras…</description>
+    <category>AMZN</category>
   </item>
   <item>
     <title>Wall St opens higher as softer payrolls data, lower yields lift sentiment</title>
@@ -71,6 +134,15 @@
     <category>NKE</category>
   </item>
   <item>
+    <title>2 Energy Stocks to Own for Decades and 1 That Underwhelm</title>
+    <link>https://finance.yahoo.com/energy/articles/2-energy-stocks-own-decades-134203148.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/energy/articles/2-energy-stocks-own-decades-134203148.html?.tsrc=rss</guid>
+    <pubDate>Fri, 02 Oct 2026 13:42:03 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Energy businesses quietly power the physical things we depend on, from cars and homes to e-commerce infrastructure. Still, their generally high capital requirements expose them to the ups and downs of commodity prices and economic…</description>
+    
+  </item>
+  <item>
     <title>David Ellison says combined Paramount and Warner Bros. Discovery will be named Skydance</title>
     <link>https://www.cnbc.com/2026/10/02/paramount-warner-bros-discovery-skydance.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/10/02/paramount-warner-bros-discovery-skydance.html</guid>
@@ -96,6 +168,15 @@
     <source url="https://pulsarium.finance/news/feed.xml">Mining.com</source>
     <description>The many new investments from the US Department of Energy have one simple objective: securing the supply chain.</description>
     
+  </item>
+  <item>
+    <title>Alphabet Launches Homegrown AI Tensor Processing Chips Into Orbit On SpaceX Rocket</title>
+    <link>https://www.tikr.com/blog/alphabet-tpu-chips-orbit-spacex-falcon-9-project-suncatcher?ref=yahoofinance&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.tikr.com/blog/alphabet-tpu-chips-orbit-spacex-falcon-9-project-suncatcher?ref=yahoofinance&amp;.tsrc=rss</guid>
+    <pubDate>Fri, 02 Oct 2026 13:37:13 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Key Stats for SpaceX StockPrice change for SpaceX stock in last 1 month: 5%$SPCX Stock Price as of Oct. 1: $14852-Week High: $226$SPCX Stock Price Target: $226What Happened?Alphabet (GOOGL) launched its AI chips into orbit on Thursday…</description>
+    <category>GOOGL</category><category>SPCX</category>
   </item>
   <item>
     <title>U.S. stocks open higher, Nasdaq surges 1% on pared Fed hike bets after jobs report</title>
@@ -159,6 +240,15 @@
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
     <description>The broad market exchange-traded fund SPDR S&amp;P 500 ETF Trust (SPY) was up 0.9% and the actively trad</description>
     <category>SPY</category>
+  </item>
+  <item>
+    <title>Should You Be Worried About Marvell Stock?</title>
+    <link>https://www.trefis.com/articles/617416/should-you-be-worried-about-marvell-stock/2026-10-02?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/articles/617416/should-you-be-worried-about-marvell-stock/2026-10-02?.tsrc=rss</guid>
+    <pubDate>Fri, 02 Oct 2026 13:31:12 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Marvell Technology (MRVL) grew its sales 37% from a year earlier in fiscal Q2 2027. Management has raised its sales forecast for fiscal 2027 and fiscal 2028. Investors pay 91 times the past twelve months of earnings for the stock,…</description>
+    <category>MRVL</category>
   </item>
   <item>
     <title>Rivian Jumps 4% After Delivering 19,248 Vehicles and Reaffirming Full-Year Guidance; Tesla Rises 2%</title>
@@ -278,15 +368,6 @@
     
   </item>
   <item>
-    <title>Stock Market Today: Dow Rallies 500 Points On Surprise Jobs Report; Tesla Jumps On Deliveries (Live Coverage)</title>
-    <link>https://finance.yahoo.com/m/94ae67df-681f-315f-b45f-941eaadbc7c6/stock-market-today%3A-dow.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/94ae67df-681f-315f-b45f-941eaadbc7c6/stock-market-today%3A-dow.html?.tsrc=rss</guid>
-    <pubDate>Fri, 02 Oct 2026 13:21:14 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Stock Market Today: The Dow Jones index rallies 500 points Friday on a surprise jobs report. Tesla stock jumps on Q3 deliveries.</description>
-    <category>TSLA</category><category>DJI</category>
-  </item>
-  <item>
     <title>Chinese state firm financed restricted Nvidia Blackwell chip purchases</title>
     <link>https://qz.com/chinese-state-firm-nvidia-blackwell-chip-purchases-100226?.tsrc=rss</link>
     <guid isPermaLink="false">https://qz.com/chinese-state-firm-nvidia-blackwell-chip-purchases-100226?.tsrc=rss</guid>
@@ -375,87 +456,6 @@
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
     <description>Rising Treasury yields just knocked five pipeline and utility stocks to levels that have income investors asking whether the selloff created a buying window or a warning sign worth heeding.</description>
     <category>UST10Y</category>
-  </item>
-  <item>
-    <title>Ford fends off Hyundai to retain No. 3 U.S. sales position in third quarter</title>
-    <link>https://www.cnbc.com/2026/10/02/ford-q3-sales.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/02/ford-q3-sales.html</guid>
-    <pubDate>Fri, 02 Oct 2026 13:15:05 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Ford on Friday reported a year-over-year sales decline of 6.6% during the third quarter to 507,395 light-duty vehicles.</description>
-    <category>F</category><category>HYMTF</category>
-  </item>
-  <item>
-    <title>Stocks Rebound as Bond Yields Fall from Multi-Decade Highs</title>
-    <link>https://www.nasdaq.com/articles/stocks-rebound-bond-yields-fall-multi-decade-highs</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-rebound-bond-yields-fall-multi-decade-highs</guid>
-    <pubDate>Fri, 02 Oct 2026 13:14:35 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The S&amp;P 500 Index ($SPX ) (SPY ) closed up by +0.19% on Thursday, the Dow Jones Industrial Average ($DOWI ) (DIA ) closed up by +0.04%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) closed up +0.31%. December E-mini S&amp;P futures (ESZ26 ) rose…</description>
-    <category>SPY</category><category>QQQ</category><category>DJI</category>
-  </item>
-  <item>
-    <title>Jim Cramer&#x27;s top 10 things to watch in the stock market Friday</title>
-    <link>https://www.cnbc.com/2026/10/02/jim-cramers-top-10-things-to-watch-in-the-stock-market-friday.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/02/jim-cramers-top-10-things-to-watch-in-the-stock-market-friday.html</guid>
-    <pubDate>Fri, 02 Oct 2026 13:13:28 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The September jobs report was exactly what stock market bulls needed.</description>
-    
-  </item>
-  <item>
-    <title>Sector Update: Tech Stocks Rise Pre-Bell Friday</title>
-    <link>https://finance.yahoo.com/technology/articles/sector-tech-stocks-rise-pre-131302085.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/articles/sector-tech-stocks-rise-pre-131302085.html?.tsrc=rss</guid>
-    <pubDate>Fri, 02 Oct 2026 13:13:02 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Technology stocks were rising pre-bell Friday, with the State Street Technology Select Sector SPDR F</description>
-    
-  </item>
-  <item>
-    <title>Europe weighs new diesel stocks release after US pressure, sources say</title>
-    <link>https://www.investing.com/news/stock-market-news/europe-discussing-plan-for-diesel-stock-releases-after-us-pressure-source-says-4929100</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/europe-discussing-plan-for-diesel-stock-releases-after-us-pressure-source-says-4929100</guid>
-    <pubDate>Fri, 02 Oct 2026 13:13:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Tesla Stock Rises as Third-Quarter Deliveries Smash Estimates</title>
-    <link>https://finance.yahoo.com/m/0a387351-56c1-3305-ab21-7d8b302ab338/tesla-stock-rises-as.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/0a387351-56c1-3305-ab21-7d8b302ab338/tesla-stock-rises-as.html?.tsrc=rss</guid>
-    <pubDate>Fri, 02 Oct 2026 13:13:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Tesla delivers 486,532 cars in the third quarter, up 1% from the second quarter and down 2% year over year.</description>
-    <category>TSLA</category>
-  </item>
-  <item>
-    <title>Tesla posts stronger-than-expected quarterly deliveries</title>
-    <link>https://www.investing.com/news/stock-market-news/tesla-posts-strongerthanexpected-quarterly-deliveries-4929912</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/tesla-posts-strongerthanexpected-quarterly-deliveries-4929912</guid>
-    <pubDate>Fri, 02 Oct 2026 13:12:41 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>TSLA</category>
-  </item>
-  <item>
-    <title>HeartBeam Consensus Price Target Increased by 10.53% to $3.57</title>
-    <link>https://www.nasdaq.com/articles/heartbeam-consensus-price-target-increased-1053-357</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/heartbeam-consensus-price-target-increased-1053-357</guid>
-    <pubDate>Fri, 02 Oct 2026 13:11:31 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for HeartBeam (NASDAQCM:BEAT) has been revised to $3.57 / share. This is an increase of 10.53% from the prior estimate of $3.23 dated September 11, 2026. These figures represent aggregate analyst…</description>
-    
-  </item>
-  <item>
-    <title>Apple (AAPL) Prepares A Siri Powered Smart Home Hub</title>
-    <link>https://finance.yahoo.com/technology/ai/articles/apple-aapl-prepares-siri-powered-131125203.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/apple-aapl-prepares-siri-powered-131125203.html?.tsrc=rss</guid>
-    <pubDate>Fri, 02 Oct 2026 13:11:25 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Apple (NasdaqGS:AAPL) plans a Siri AI-powered smart home hub, a new HomePod mini, and an updated Apple TV to expand its home ecosystem. The new Siri-centric hub is designed as a central controller for connected devices, positioning…</description>
-    <category>AAPL</category>
   </item>
 </channel>
 </rss>
