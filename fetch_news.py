@@ -482,24 +482,32 @@ def is_market_report_ad(title: str) -> bool:
 # Channel / BNK Invest): fund flows, option activity, moving-average
 # crosses, dividend calendars, "movers" ticker lists. They hold no news,
 # and each tags a handful of companies at once ("Notable ETF Outflow
-# Detected - XLE, VLO, EOG, BKR"); about 690 of 2,580 Nasdaq items in the
+# Detected - XLE, VLO, EOG, BKR"); about 960 of 2,580 Nasdaq items in the
 # archive by 2 Oct 2026. Matched on Nasdaq only: the same words in another
 # outlet ("bitcoin ETF inflows of $700 million") are real news.
 TEMPLATED_POST_RE = re.compile("|".join([
     # ETF flows
     r"\b(?:Notable|Noteworthy) ETF (?:Outflows?|Inflows?)\b", r"\bBig ETF (?:Inflows|Outflows)\b",
     r"\bLarge (?:Inflows|Outflows) Detected\b", r"\bETF (?:Outflow|Inflow) Alert\b",
+    r"\bExperiences Big (?:Inflow|Outflow)\b",
     # options
-    r"\bOption Activity\b", r"\bOptions Begin Trading\b", r"\bYieldBoost\b", r"\bPut And Call Options\b",
+    r"\bOption Activity\b", r"\bOptions Begin Trading\b", r"\bOptions Now Available For\b", r"\bYieldBoost\b",
+    r"\bPut And Call Options\b", r"\bImplied Volatility Surging for\b", r"\bOptions Traders (?:Betting|Know)\b",
+    r"\bOptions Market Predicting\b",
     # technical levels
-    r"\b(?:Key|Critical) Moving Average\b", r"\bTwo Hundred Day Moving Average\b", r"\b200 DMA\b",
-    r"\bCritical Technical Indicator\b", r"\b(?:Now|Becomes|Getting Very) Oversold\b", r"\bOversold Conditions\b",
+    r"\b(?:Key|Critical) Moving Average\b", r"\bTwo Hundred Day Moving Average\b", r"\b200-Day Moving Average\b",
+    r"\b200 DMA\b", r"\bCritical Technical Indicator\b", r"\b(?:Now|Becomes|Getting Very) Oversold\b",
+    r"\bOversold Conditions\b", r"\bEnters Oversold Territory\b", r"\bis Oversold\s*$",
     r"\bCrowded With (?:Sellers|Buyers)\b", r"\bwith Unusual Volume\b",
     # holdings, dividends, ranks and ticker lists
     r"\b13F Filers\b", r"\bDividend Run For\b", r"\bDaily Dividend Report\b", r"\bEx-Dividend Reminder\b",
-    r"\bDividend Yield Pushes Past\b", r"\bInsider Buying Report\b", r"\bAnalyst Moves: [A-Z]",
-    r"\bCrosses (?:Above|Below) Average Analyst Target\b", r"\bAchieves #\d+ Analyst Rank\b",
-    r"\bNew Strong (?:Buy|Sell) Stocks for\b",
+    r"\bEx-Div Reminder\b", r"\bGoes Ex-Dividend Soon\b", r"\bCash Dividend On The Way From\b",
+    r"\bDividend Yield Pushes Past\b", r"\bCross(?:es)? [\d.]+% Yield Mark\b", r"\bTop 10 [\w ]*Dividend Stock\b",
+    r"\bTo The Top 10\b", r"\bInsider Buying Report\b", r"\bAnalyst Moves: [A-Z]",
+    r"\bCrosses (?:Above|Below) Average Analyst Target\b", r"\bReaches Analyst Target Price\b",
+    r"\bAchieves #\d+ Analyst Rank\b", r"\bMoves Up In Analyst Rankings\b", r"\bAnalyst Favorites:",
+    r"\bRanks Among Analysts' Top\b", r"\bBroker Darlings of\b", r"\bGains Ahead For The Holdings of\b",
+    r"\bNew Strong (?:Buy|Sell) Stocks for\b", r"\bSector (?:Leaders|Laggards):",
     r"\bMovers: [A-Z]{1,5}(?:\.[A-Z])?(?:, ?[A-Z]{1,5}(?:\.[A-Z])?)*\s*$",
 ]), flags=re.IGNORECASE)
 
