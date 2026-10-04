@@ -175,7 +175,7 @@
 :root[data-color-theme='calm'] .ph-source { text-shadow: none; }
 :root[data-color-theme='calm'] .ph-radar { background: linear-gradient(180deg, transparent, rgba(74, 71, 214, .06) 45%, transparent); mix-blend-mode: multiply; }
 :root[data-color-theme='calm'] .spark-svg line { stroke: rgba(27, 31, 59, .08); }
-:root[data-color-theme='calm'] :is(.breaking-badge, .badge-breaking) { background: rgba(183, 59, 176, .08); color: var(--magenta); box-shadow: none; }
+:root[data-color-theme='calm'] :is(.breaking-badge, .badge-breaking, .live-badge) { background: rgba(183, 59, 176, .08); color: var(--magenta); box-shadow: none; }
 :root[data-color-theme='calm'] :is(.sb-pos, .mood-meter i.pos) { background: var(--pos); box-shadow: none; }
 :root[data-color-theme='calm'] :is(.sb-neg, .mood-meter i.neg) { background: var(--neg); box-shadow: none; }
 :root[data-color-theme='calm'] .mood-chart .grid { stroke: var(--line); }
@@ -189,6 +189,12 @@
 :root[data-color-theme='calm'] .mood-meter::after { background: rgba(27, 31, 59, .25); }
 :root[data-color-theme='calm'] .embed-code textarea { background: #f6f7fc; }
 :root[data-color-theme='calm'] :is(.calc-presets button, .rb-remove, .calc-table th, .calc-table td) { border-color: var(--line); }
+:root[data-color-theme='calm'] .calc-table th { background: #e9edf6; color: var(--text-mid); }
+:root[data-color-theme='calm'] .calc-table-wrap { border-color: var(--line); }
+:root[data-color-theme='calm'] .calc-results div { background: rgba(74, 71, 214, .06); border-color: rgba(74, 71, 214, .16); }
+:root[data-color-theme='calm'] .calc-results strong { text-shadow: none; }
+:root[data-color-theme='calm'] .calc-presets button:hover { color: var(--accent); border-color: var(--accent); }
+:root[data-color-theme='calm'] .calc-presets button.active { color: var(--accent); border-color: var(--accent); background: rgba(74, 71, 214, .09); }
 :root[data-color-theme='calm'] .calc-warning { color: var(--vix-hot); }
 :root[data-color-theme='calm'] .analytics-consent a { color: var(--accent); }
 :root[data-color-theme='calm'] .analytics-consent button { background: #f3f5fb; color: var(--text); border-color: var(--line); }
