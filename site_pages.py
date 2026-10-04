@@ -133,6 +133,10 @@ def related(current: str) -> str:
 
 
 COMMON_FAQ = {
+    "identity": ("What is Pulsarium?",
+                 "Pulsarium is an independent stock and ETF portfolio tracker and financial news platform. "
+                 "You record transactions manually or import broker export files to follow your holdings, "
+                 "dividends, watchlists and price alerts. Your investments remain with your chosen broker."),
     "free": ("Is Pulsarium free?",
              "Yes. The personal cabinet is free during the public beta: portfolios, dividends, watchlists, "
              "price alerts, broker import and the news feed. Paid plans with an AI research assistant are planned; "
@@ -486,13 +490,13 @@ def import_hub() -> dict:
 
 
 def why_pulsarium() -> dict:
-    faq_section, faq_ld = faq([COMMON_FAQ["broker"], COMMON_FAQ["privacy"], COMMON_FAQ["free"], COMMON_FAQ["delay"]])
+    faq_section, faq_ld = faq([COMMON_FAQ["identity"], COMMON_FAQ["broker"], COMMON_FAQ["privacy"], COMMON_FAQ["free"], COMMON_FAQ["delay"]])
     body = (
         hero("Why Pulsarium",
-             "A portfolio tracker that doesn't need your broker login",
-             "Many portfolio apps sync by connecting to your broker account through a data aggregator. Pulsarium takes "
-             "the other road: you upload the file your broker already gives you, and your holdings, dividends, alerts "
-             "and news live in a private cabinet only you can open.",
+             "A personal tracker for stock and ETF portfolios",
+             "Pulsarium is an independent portfolio tracking and financial news platform for individual investors. "
+             "Add transactions manually or import your broker's export file, then follow your holdings, dividends, "
+             "watchlists, price alerts and company news in your personal account. Your investments remain with your chosen broker.",
              ("/import/", "See supported brokers"))
         + shot("cabinet-overview-sectors", "Pulsarium overview with allocation by sector, performance and news",
                "The overview with allocation by sector, performance and the news about your holdings.", first=True)
@@ -513,9 +517,9 @@ def why_pulsarium() -> dict:
     )
     return {
         "path": "/why-pulsarium/", "crumb": "Why Pulsarium", "og_image": "/assets/shots/cabinet-overview-sectors.jpg",
-        "title": "A private portfolio tracker without broker logins - why Pulsarium | Pulsarium",
-        "description": "Pulsarium tracks your stocks, dividends and price alerts from broker files you upload - no "
-                       "broker credentials, no aggregator, no ads. Free during the public beta.",
+        "title": "About Pulsarium — Stock & ETF Portfolio Tracker and Financial News",
+        "description": "Pulsarium helps individual investors track stock and ETF portfolios, dividends and price alerts "
+                       "using manual entries or broker export files. Free during the public beta.",
         "body": body, "head": faq_ld,
     }
 

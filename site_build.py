@@ -634,8 +634,9 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{SITE}{og_image}">
 <link rel="alternate" type="application/rss+xml" title="Pulsarium market news" href="/news/feed.xml">
-<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="{asset_url('/assets/site.css')}">
