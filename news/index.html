@@ -1013,6 +1013,17 @@
   .analytics-consent-actions { display: flex; justify-content: flex-end; gap: 0.6rem; }
   .analytics-consent button { padding: 0.55rem 0.9rem; color: inherit; background: rgba(10, 18, 40, 0.8); border: 1px solid rgba(120, 220, 255, 0.28); border-radius: 9px; cursor: pointer; font: inherit; }
   .analytics-consent button[data-choice="yes"] { background: var(--gold-1); color: var(--bg-0); border-color: var(--gold-1); font-weight: 700; }
+
+  /* Calm sparkline artwork only; existing card content and Neon stay intact. */
+  .calm-spark { display: none; }
+  :root[data-color-theme='calm'] .card-img-placeholder:not(.ph-macro) .spark-svg,
+  :root[data-color-theme='calm'] .card-img-placeholder:not(.ph-macro) .ph-radar { display: none; }
+  :root[data-color-theme='calm'] .card-img-placeholder .calm-spark { display: block; }
+  .calm-spark { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .calm-spark .calm-comet { animation: calm-comet 3.4s linear infinite; stroke-dasharray: 7 93; }
+  @keyframes calm-comet { from { stroke-dashoffset: 107; } to { stroke-dashoffset: 7; } }
+  @media (prefers-reduced-motion: reduce) { .calm-spark .calm-comet { animation: none; stroke-dashoffset: -46; } }
+
 </style>
 <link rel="stylesheet" href="/assets/themes.css?v=93d5674d60" data-pulsarium-theme="styles">
 </head>
@@ -1523,6 +1534,41 @@
     `;
   }
 
+
+  const CALM_SPARK_PATHS = {
+    positive: 'M8,132 L64,100 L120,108 L176,48 L232,62 L292,28',
+    negative: 'M8,30 L64,66 L120,52 L176,112 L232,100 L292,136',
+    neutral: 'M8,90 L55,72 L102,96 L149,64 L196,90 L243,68 L292,90',
+  };
+  function buildCalmSpark(s, id, delay) {
+    const path = CALM_SPARK_PATHS[s];
+    const colors = {
+      positive: ['#245f9b', '#118c9b', '#087455'],
+      negative: ['#355da2', '#936091', '#b34459'],
+      neutral: ['#456b9a', '#5796ac', '#8b69ad'],
+    }[s];
+    const halo = {positive: '#48d6c7', negative: '#ef92a5', neutral: '#b393eb'}[s];
+    return `<svg class="calm-spark" viewBox="0 0 300 160" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="calm-line-${id}" x1="0" y1="0" x2="1" y2="0">
+          <stop stop-color="${colors[0]}"/><stop offset=".5" stop-color="${colors[1]}"/><stop offset="1" stop-color="${colors[2]}"/>
+        </linearGradient>
+        <linearGradient id="calm-fade-${id}" x1="0" y1="0" x2="0" y2="1">
+          <stop stop-color="white" stop-opacity=".24"/><stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <mask id="calm-area-${id}"><rect width="300" height="160" fill="url(#calm-fade-${id})"/></mask>
+        <filter id="calm-glow-${id}" filterUnits="userSpaceOnUse" x="-10" y="-10" width="320" height="180">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+          <feFlood flood-color="${halo}"/><feComposite in2="blur" operator="in"/>
+          <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <path d="${path} L292,160 L8,160 Z" fill="url(#calm-line-${id})" mask="url(#calm-area-${id})"/>
+      <path d="${path}" fill="none" stroke="url(#calm-line-${id})" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+      <path class="calm-comet" d="${path}" pathLength="100" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" filter="url(#calm-glow-${id})" style="animation-delay:${delay.toFixed(1)}s"/>
+    </svg>`;
+  }
+
   let cometSeq = 0;
 
   function buildPlaceholder(sentiment, source, isMacro) {
@@ -1551,6 +1597,7 @@
                 stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"
                 style="animation-delay: ${delay.toFixed(1)}s" filter="url(#comet-glow-${s})"/>
         </svg>
+        ${buildCalmSpark(s, cometSeq, delay)}
         <span class="ph-source">${escapeHtml(source)}</span>
       </div>
     `;
