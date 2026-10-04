@@ -14,6 +14,15 @@
     try { return window.localStorage.getItem(key); } catch (error) { return null; }
   }
 
+  // Without a choice of their own, visitors get the theme their device uses:
+  // a light system setting opens Calm. The toggle's choice is remembered.
+  var lightQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: light)') : null;
+  function preferredTheme() {
+    var stored = storedTheme();
+    if (stored === 'calm' || stored === 'neon') return stored;
+    return lightQuery && lightQuery.matches ? 'calm' : 'neon';
+  }
+
   function apply(theme) {
     theme = theme === 'calm' ? 'calm' : 'neon';
     root.setAttribute('data-color-theme', theme);
@@ -33,7 +42,10 @@
     }
   }
 
-  apply(storedTheme());
+  apply(preferredTheme());
+  if (lightQuery && lightQuery.addEventListener) {
+    lightQuery.addEventListener('change', function () { if (!storedTheme()) apply(preferredTheme()); });
+  }
 
   function install() {
     var actions = document.querySelector('header .header-actions, .site-header .main-nav, .site-header .site-nav');
@@ -55,10 +67,42 @@
   else install();
 
   window.addEventListener('storage', function (event) {
-    if (event.key === key || event.key === null) apply(storedTheme());
+    if (event.key === key || event.key === null) apply(preferredTheme());
   });
-  window.addEventListener('pageshow', function () {
-    var theme = storedTheme();
-    if (theme === 'neon' || theme === 'calm') apply(theme);
-  });
+  window.addEventListener('pageshow', function () { apply(preferredTheme()); });
+
+  // A soft light follows the pointer across a news card (themes.css draws it
+  // in Calm from --glow-x/--glow-y). Mouse and trackpad only, and never with
+  // reduced motion; one position update per frame.
+  var fine = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (fine && !still) {
+    var lit = null, pending = null, frame = 0;
+    var light = function (card) {
+      if (lit && lit !== card) lit.classList.remove('is-lit');
+      lit = card;
+    };
+    document.addEventListener('pointermove', function (event) {
+      pending = event;
+      if (frame) return;
+      frame = window.requestAnimationFrame(function () {
+        frame = 0;
+        var target = pending.target;
+        var card = target && target.closest ? target.closest('.card, .item') : null;
+        light(card);
+        if (!card) return;
+        if (!card.querySelector(':scope > .card-glow')) {
+          var glow = document.createElement('span');
+          glow.className = 'card-glow';
+          glow.setAttribute('aria-hidden', 'true');
+          card.appendChild(glow);
+        }
+        var box = card.getBoundingClientRect();
+        card.style.setProperty('--glow-x', (pending.clientX - box.left) + 'px');
+        card.style.setProperty('--glow-y', (pending.clientY - box.top) + 'px');
+        card.classList.add('is-lit');
+      });
+    }, { passive: true });
+    document.addEventListener('mouseout', function (event) { if (!event.relatedTarget) light(null); });
+  }
 }());
