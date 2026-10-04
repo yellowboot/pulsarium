@@ -82,8 +82,13 @@
 .theme-toggle:focus-visible { outline: 2px solid var(--theme-button-color); outline-offset: 3px; }
 
 /* Interior pages use a compact title scale and the same footer typography. */
-.page-head h1 { font-size: clamp(24px, 2.8vw, 32px); line-height: 1.22; }
-:root[data-color-theme='calm'] .page-head h1 { font-weight: 600; }
+.page-head h1 { font-size: clamp(21px, 2vw, 24px); line-height: 1.35; }
+:root[data-color-theme='calm'] .page-head h1 { font-weight: 500; letter-spacing: -.025em; }
+.page-head .lead { font-size: 14.5px; line-height: 1.65; }
+.page-head { margin-top: 22px; margin-bottom: 24px; }
+.cta h2 { font-size: 18px; line-height: 1.4; }
+:root[data-color-theme='calm'] .cta h2 { font-weight: 500; }
+:root[data-color-theme='calm'] .calc-results strong { font-family: var(--font-mono); font-size: 20px; font-weight: 500; }
 :is(.site-footer, footer) :is(a, .link-button, .footer-settings) {
   font-family: var(--font-mono);
   font-size: 12.5px;
