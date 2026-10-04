@@ -82,16 +82,15 @@
 .theme-toggle:hover { background: var(--theme-button-hover); border-color: var(--theme-button-color); }
 .theme-toggle:focus-visible { outline: 2px solid var(--theme-button-color); outline-offset: 3px; }
 
-/* Interior pages use a compact title scale and the same footer typography. */
-.page-head h1 { font-size: clamp(21px, 2vw, 24px); line-height: 1.35; }
-:root[data-color-theme='calm'] .page-head h1 { font-weight: 600; letter-spacing: -.02em; }
-.page-head .lead { font-size: 14.5px; line-height: 1.65; }
-.page-head { margin-top: 22px; margin-bottom: 24px; }
-.cta h2 { font-size: 18px; line-height: 1.4; }
-:root[data-color-theme='calm'] .cta h2 { font-weight: 600; }
+/* Calm interior pages use a compact title scale and their own footer
+   typography. Neon keeps its own look: every rule below is Calm-only. */
+:root[data-color-theme='calm'] .page-head h1 { font-size: clamp(21px, 2vw, 24px); line-height: 1.35; font-weight: 600; letter-spacing: -.02em; }
+:root[data-color-theme='calm'] .page-head .lead { font-size: 14.5px; line-height: 1.65; }
+:root[data-color-theme='calm'] .page-head { margin-top: 22px; margin-bottom: 24px; }
+:root[data-color-theme='calm'] .cta h2 { font-size: 18px; line-height: 1.4; font-weight: 600; }
 :root[data-color-theme='calm'] .calc-results strong { font-family: var(--font-mono); font-size: 20px; font-weight: 500; }
 :root[data-color-theme='calm'] .calc-results .calc-placeholder { font-family: var(--font-ui); font-size: 13px; font-weight: 400; line-height: 1.5; color: var(--text-mid); }
-:is(.site-footer, footer) :is(a, .link-button, .footer-settings) {
+:root[data-color-theme='calm'] :is(.site-footer, footer) :is(a, .link-button, .footer-settings) {
   font-family: var(--font-mono);
   font-size: 12.5px;
   font-weight: 500;
@@ -254,20 +253,29 @@
 :root[data-color-theme='calm'] ::-webkit-scrollbar-thumb:hover { background-color: var(--scrollbar-thumb-hover); }
 
 @media (max-width: 1050px) {
-  .main-nav .navlink { display: none; }
-  .header-actions .header-link { display: none; }
+  :root[data-color-theme='calm'] .main-nav .navlink { display: none; }
+  :root[data-color-theme='calm'] .header-actions .header-link { display: none; }
 }
 @media (max-width: 640px) {
   .theme-toggle { margin-left: 4px; border-radius: 10px; }
-  .header-actions { align-items: center; }
-  .header-text { min-width: 0; }
-  .header-text .eyebrow { font-size: 10px; letter-spacing: .14em; }
+  :root[data-color-theme='calm'] .header-actions { align-items: center; }
+  :root[data-color-theme='calm'] .header-text { min-width: 0; }
+  :root[data-color-theme='calm'] .header-text .eyebrow { font-size: 10px; letter-spacing: .14em; }
   :root[data-color-theme='calm'] .header-text h1 { font-size: clamp(34px, 5.2vw, 64px); }
-  .site-header { gap: 8px; padding-left: 16px; padding-right: 16px; }
-  .site-header .brand { gap: 8px; }
-  .site-header .wordmark { font-size: 13px; letter-spacing: .03em; }
-  .site-header .mini-pulsar { width: 24px; height: 24px; }
-  .site-header :is(.main-nav, .site-nav) { gap: 4px; }
-  .site-header :is(.main-nav, .site-nav) .btn { margin-left: 0; padding: 0 12px; font-size: 13px; }
+  :root[data-color-theme='calm'] .site-header { gap: 8px; padding-left: 16px; padding-right: 16px; }
+  :root[data-color-theme='calm'] .site-header .brand { gap: 8px; }
+  :root[data-color-theme='calm'] .site-header .wordmark { font-size: 13px; letter-spacing: .03em; }
+  :root[data-color-theme='calm'] .site-header .mini-pulsar { width: 24px; height: 24px; }
+  :root[data-color-theme='calm'] .site-header :is(.main-nav, .site-nav) { gap: 4px; }
+  :root[data-color-theme='calm'] .site-header :is(.main-nav, .site-nav) .btn { margin-left: 0; padding: 0 12px; font-size: 13px; }
+}
+/* Neon's header stays as it was; on small phones only the switch shrinks to
+   fit beside it, and below 340px it steps aside (the device theme applies). */
+@media (max-width: 400px) {
+  :root:not([data-color-theme='calm']) .theme-toggle { flex-basis: 34px; width: 34px; height: 34px; margin-left: 0; border-radius: 9px; }
+  :root:not([data-color-theme='calm']) .theme-toggle svg { width: 18px; height: 18px; }
+}
+@media (max-width: 340px) {
+  :root:not([data-color-theme='calm']) .theme-toggle { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .theme-toggle { transition: none; } }

@@ -493,7 +493,7 @@ def why_pulsarium() -> dict:
     faq_section, faq_ld = faq([COMMON_FAQ["identity"], COMMON_FAQ["broker"], COMMON_FAQ["privacy"], COMMON_FAQ["free"], COMMON_FAQ["delay"]])
     body = (
         hero("Why Pulsarium",
-             "A personal tracker for stock and ETF portfolios",
+             "A stock and ETF portfolio tracker that doesn't need your broker login",
              "Pulsarium is an independent portfolio tracking and financial news platform for individual investors. "
              "Add transactions manually or import your broker's export file, then follow your holdings, dividends, "
              "watchlists, price alerts and company news in your personal account. Your investments remain with your chosen broker.",
@@ -518,8 +518,8 @@ def why_pulsarium() -> dict:
     return {
         "path": "/why-pulsarium/", "crumb": "Why Pulsarium", "og_image": "/assets/shots/cabinet-overview-sectors.jpg",
         "title": "About Pulsarium — Stock & ETF Portfolio Tracker and Financial News",
-        "description": "Pulsarium helps individual investors track stock and ETF portfolios, dividends and price alerts "
-                       "using manual entries or broker export files. Free during the public beta.",
+        "description": "Track your stocks, ETFs, dividends and price alerts from the files your broker already gives you "
+                       "— no broker credentials, no aggregator, no ads. Free during the public beta.",
         "body": body, "head": faq_ld,
     }
 
