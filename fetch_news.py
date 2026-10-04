@@ -1248,6 +1248,11 @@ def fetch_index_quote(symbol: str, scale: float = 1.0):
             return None
         change_abs = price - prev_close
         change_pct = (change_abs / prev_close) * 100
+        # Yahoo now often quotes ^TNX as the yield itself (5.3, not 53), and
+        # scaling that gave "0.53%" on the dashboard (Oct 2026). A 10-year
+        # yield above 20% isn't real, so only a value that high is ×10.
+        if scale != 1.0 and abs(price) < 20:
+            scale = 1.0
 
         closes = result.get("indicators", {}).get("quote", [{}])[0].get("close", []) or []
         # Most recent ~20 candles, not an even spread across all 5 days —
