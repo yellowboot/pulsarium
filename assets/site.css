@@ -342,6 +342,7 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 .calc-results div { padding: 16px 18px; border-radius: 12px; background: rgba(0, 240, 255, 0.06); border: 1px solid rgba(0, 240, 255, 0.18); display: flex; flex-direction: column; gap: 6px; }
 .calc-results span { font-size: 12.5px; color: var(--text-mid); }
 .calc-results strong { font-family: var(--font-display, 'Orbitron', sans-serif); font-size: 22px; color: var(--text-hi); text-shadow: 0 0 14px rgba(0, 240, 255, 0.35); }
+.calc-results .calc-placeholder { font-family: var(--font-ui, 'Chakra Petch', sans-serif); font-size: 13px; font-weight: 400; line-height: 1.5; color: var(--text-mid); text-shadow: none; }
 .calc-note { margin: 12px 0 0; font-size: 12.5px; color: var(--text-low); }
 .calc-table-wrap { max-height: 360px; overflow: auto; border-radius: 12px; border: 1px solid rgba(120, 220, 255, 0.10); }
 .calc-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
