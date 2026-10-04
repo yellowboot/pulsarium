@@ -80,6 +80,7 @@ def dividend_yield() -> dict:
     const annual = dividend * freq;
     out('dy-yield').textContent = price > 0 ? fmt(annual / price * 100) + '%' : '—';
     out('dy-yoc').textContent = cost > 0 ? fmt(annual / cost * 100) + '%' : 'enter a purchase price';
+    out('dy-yoc').classList.toggle('calc-placeholder', !(cost > 0));
     out('dy-year').textContent = fmt(annual * shares);
     out('dy-month').textContent = fmt(annual * shares / 12);
   }}

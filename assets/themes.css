@@ -1,6 +1,5 @@
-/* One theme layer for the landing, live news and every generated site page.
-   Palette and typefaces follow the personal cabinet's Neon / Calm themes. */
-@import url('/fonts/calm.css');
+/* Public site themes: cabinet-inspired palettes with Neon typography in both.
+   This stylesheet is independent of the personal cabinet's themes. */
 
 :root {
   --font-ui: 'Chakra Petch', system-ui, -apple-system, sans-serif;
@@ -14,9 +13,9 @@
 }
 
 :root[data-color-theme='calm'] {
-  --font-ui: 'Sora', system-ui, -apple-system, sans-serif;
-  --font-display: 'Syncopate', sans-serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-ui: 'Chakra Petch', system-ui, -apple-system, sans-serif;
+  --font-display: 'Orbitron', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
   --bg-0: #eef1f7;
   --bg-1: #e6eaf3;
   --bg-2: #e9edf6;
@@ -89,6 +88,7 @@
 .cta h2 { font-size: 18px; line-height: 1.4; }
 :root[data-color-theme='calm'] .cta h2 { font-weight: 500; }
 :root[data-color-theme='calm'] .calc-results strong { font-family: var(--font-mono); font-size: 20px; font-weight: 500; }
+:root[data-color-theme='calm'] .calc-results .calc-placeholder { font-family: var(--font-ui); font-size: 13px; font-weight: 400; line-height: 1.5; color: var(--text-mid); }
 :is(.site-footer, footer) :is(a, .link-button, .footer-settings) {
   font-family: var(--font-mono);
   font-size: 12.5px;
