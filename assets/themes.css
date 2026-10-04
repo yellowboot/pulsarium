@@ -82,12 +82,14 @@
 .theme-toggle:hover { background: var(--theme-button-hover); border-color: var(--theme-button-color); }
 .theme-toggle:focus-visible { outline: 2px solid var(--theme-button-color); outline-offset: 3px; }
 
-/* Calm interior pages use a compact title scale and their own footer
-   typography. Neon keeps its own look: every rule below is Calm-only. */
-:root[data-color-theme='calm'] .page-head h1 { font-size: clamp(21px, 2vw, 24px); line-height: 1.35; font-weight: 600; letter-spacing: -.02em; }
-:root[data-color-theme='calm'] .page-head .lead { font-size: 14.5px; line-height: 1.65; }
-:root[data-color-theme='calm'] .page-head { margin-top: 22px; margin-bottom: 24px; }
-:root[data-color-theme='calm'] .cta h2 { font-size: 18px; line-height: 1.4; font-weight: 600; }
+/* Interior pages use a compact title scale in both themes. Everything else
+   in this block is Calm-only; Neon keeps its own footer and weights. */
+.page-head h1 { font-size: clamp(21px, 2vw, 24px); line-height: 1.35; }
+:root[data-color-theme='calm'] .page-head h1 { font-weight: 600; letter-spacing: -.02em; }
+.page-head .lead { font-size: 14.5px; line-height: 1.65; }
+.page-head { margin-top: 22px; margin-bottom: 24px; }
+.cta h2 { font-size: 18px; line-height: 1.4; }
+:root[data-color-theme='calm'] .cta h2 { font-weight: 600; }
 :root[data-color-theme='calm'] .calc-results strong { font-family: var(--font-mono); font-size: 20px; font-weight: 500; }
 :root[data-color-theme='calm'] .calc-results .calc-placeholder { font-family: var(--font-ui); font-size: 13px; font-weight: 400; line-height: 1.5; color: var(--text-mid); }
 :root[data-color-theme='calm'] :is(.site-footer, footer) :is(a, .link-button, .footer-settings) {
