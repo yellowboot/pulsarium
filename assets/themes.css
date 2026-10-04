@@ -136,7 +136,10 @@
 :root[data-color-theme='calm'] :is(.header-text h1, .panel h2 svg, .feat svg) { filter: none; }
 :root[data-color-theme='calm'] .wordmark { font-family: var(--font-ui); font-size: 14px; font-weight: 600; letter-spacing: .18em; }
 :root[data-color-theme='calm'] .header-text h1 { font-family: var(--font-ui); font-size: 32px; font-weight: 600; letter-spacing: -.02em; line-height: 1.15; }
-:root[data-color-theme='calm'] :is(.panel h2, .block > h2) { font-family: var(--font-label); font-size: 10px; font-weight: 700; letter-spacing: .16em; line-height: 1.5; }
+:root[data-color-theme='calm'] .panel h2 { font-family: var(--font-ui); font-size: 19px; font-weight: 600; letter-spacing: -.01em; line-height: 1.3; text-transform: none; }
+:root[data-color-theme='calm'] :is(.panel-analytics h2, .panel-mentions h2, .quotes-panel h2, .block > h2) { font-family: var(--font-label); font-size: 10px; font-weight: 700; letter-spacing: .16em; line-height: 1.5; text-transform: uppercase; }
+:root[data-color-theme='calm'] .cta h2 { font-size: 18px; line-height: 1.4; }
+:root[data-color-theme='calm'] :is(.site-footer, footer) :is(a, .link-button, .footer-settings) { font-family: var(--font-ui); }
 :root[data-color-theme='calm'] :is(.eyebrow, .stat-label) { font-family: var(--font-label); font-size: 10px; font-weight: 700; letter-spacing: .16em; }
 :root[data-color-theme='calm'] .card-title { font-family: var(--font-ui); font-size: 14px; font-weight: 600; letter-spacing: -.01em; line-height: 1.5; }
 :root[data-color-theme='calm'] .card-img-placeholder .ph-source { font-family: var(--font-ui); font-size: 12.5px; font-weight: 600; letter-spacing: .02em; }
