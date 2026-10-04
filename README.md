@@ -10,4 +10,6 @@
 
 This public repository contains the landing page, news dashboard, and scheduled news feed. The account application is maintained separately.
 
+The public site's Neon and Calm themes share `assets/themes.css` and `assets/theme.js`. The header switch remembers the device's choice in local storage and applies it before the page paints. New pages receive these assets through `site_build.py`; after changing a shared asset, run `python site_theme.py` to refresh all existing pages together. `python site_theme.py --check` verifies that they are up to date. The compact Mood embed keeps its own `?theme=light|dark` setting.
+
 Questions or feedback? Write to [contact@pulsarium.finance](mailto:contact@pulsarium.finance).

@@ -43,6 +43,7 @@ from email.utils import format_datetime
 import fetch_news
 import site_pages
 import site_tools
+import site_theme
 
 SITE ="https://pulsarium.finance"
 APP_URL = "https://app.pulsarium.finance/"
@@ -616,7 +617,7 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
         for n, (name, href) in enumerate(crumbs)
     )
     robots = "index, follow, max-image-preview:large" if indexable else "noindex, follow"
-    return f"""<!DOCTYPE html>
+    return site_theme.add_theme_assets(f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -685,7 +686,7 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
 <script src="{asset_url('/assets/analytics.js')}" defer></script>
 </body>
 </html>
-"""
+""")
 
 
 def fmt_day(day: date) -> str:

@@ -30,7 +30,7 @@ body {
   min-height: 100vh;
   background: linear-gradient(180deg, var(--bg-0), var(--bg-1) 40%, var(--bg-0));
   color: var(--text);
-  font-family: 'Chakra Petch', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-ui, 'Chakra Petch', sans-serif);
   line-height: 1.5;
   overflow-x: hidden;
 }
@@ -88,7 +88,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 @keyframes miniping { from { transform: scale(0.35); opacity: 0.9; } to { transform: scale(1.3); opacity: 0; } }
 .mini-core { position: absolute; left: 50%; top: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50%; background: #fff; box-shadow: 0 0 8px #fff, 0 0 18px var(--accent); }
 .wordmark {
-  font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 17px; letter-spacing: 0.08em;
+  font-family: var(--font-display, 'Orbitron', sans-serif); font-weight: 900; font-size: 17px; letter-spacing: 0.08em;
   background: linear-gradient(110deg, var(--accent-ice), var(--accent) 42%, var(--accent-blue) 78%, var(--magenta));
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
@@ -100,7 +100,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   height: 48px; padding: 0 24px; border-radius: 13px;
-  font-family: 'Chakra Petch', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.02em;
+  font-family: var(--font-ui, 'Chakra Petch', sans-serif); font-size: 15px; font-weight: 700; letter-spacing: 0.02em;
   white-space: nowrap;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -113,11 +113,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .page { max-width: 1268px; margin: 0 auto; padding: 8px var(--pad-x) 64px; }
 .crumbs { font-size: 12.5px; color: var(--text-low); display: flex; flex-wrap: wrap; gap: 6px; }
 .crumbs a:hover { color: #fff; }
-.eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--accent); }
+.eyebrow { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 12px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--accent); }
 .page-head { margin: 26px 0 28px; max-width: 860px; }
 .page-head h1 {
   margin: 12px 0 0;
-  font-family: 'Chakra Petch', sans-serif; font-weight: 700;
+  font-family: var(--font-ui, 'Chakra Petch', sans-serif); font-weight: 700;
   font-size: clamp(30px, 4.2vw, 48px); line-height: 1.08; letter-spacing: -0.01em;
   color: var(--text-hi);
   text-shadow: 0 0 30px rgba(0, 240, 255, 0.22);
@@ -138,9 +138,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
 .stat { padding: 20px 22px; display: flex; flex-direction: column; gap: 8px; }
 .stat-wide { grid-column: span 2; }
-.stat-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-low); }
-.stat strong { font-family: 'Orbitron', sans-serif; font-size: 30px; color: var(--text-hi); }
-.stat strong.stat-text { font-family: 'Chakra Petch', sans-serif; font-size: 18px; }
+.stat-label { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-low); }
+.stat strong { font-family: var(--font-display, 'Orbitron', sans-serif); font-size: 30px; color: var(--text-hi); }
+.stat strong.stat-text { font-family: var(--font-ui, 'Chakra Petch', sans-serif); font-size: 18px; }
 .stat small { color: var(--text-mid); font-size: 13px; }
 .stat small a { color: var(--accent); }
 @media (max-width: 700px) { .stat-wide { grid-column: auto; } }
@@ -170,21 +170,21 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .block { margin-top: 34px; }
 .block > h2 {
   margin: 0 0 16px;
-  font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase;
+  font-family: var(--font-display, 'Orbitron', sans-serif); font-weight: 700; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--text-hi);
   display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
 }
 .block > h2 a:hover { color: var(--accent); }
-.block > h2 small { font-family: 'Chakra Petch', sans-serif; font-size: 12.5px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--text-low); }
+.block > h2 small { font-family: var(--font-ui, 'Chakra Petch', sans-serif); font-size: 12.5px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--text-low); }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .chip {
   display: inline-flex; flex-direction: column; gap: 1px;
   padding: 8px 14px; border-radius: 12px;
   border: 1px solid rgba(120, 220, 255, 0.16); background: rgba(10, 18, 40, 0.55);
-  font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; color: var(--accent);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 13px; font-weight: 700; color: var(--accent);
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.chip small { font-family: 'Chakra Petch', sans-serif; font-size: 11.5px; font-weight: 500; color: var(--text-mid); }
+.chip small { font-family: var(--font-ui, 'Chakra Petch', sans-serif); font-size: 11.5px; font-weight: 500; color: var(--text-mid); }
 a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(0, 240, 255, 0.2); }
 .chip-muted { color: var(--text-low); opacity: 0.7; }
 
@@ -205,13 +205,13 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 .item:hover { border-color: rgba(0, 240, 255, 0.4); box-shadow: 0 0 24px rgba(0, 240, 255, 0.12); }
 .item-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; font-size: 12px; color: var(--text-low); }
 .item-source { color: var(--accent); font-weight: 600; letter-spacing: 0.04em; }
-.item-meta time { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; }
+.item-meta time { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 11.5px; }
 .item h3 { margin: 8px 0 0; font-size: 17px; font-weight: 600; line-height: 1.35; color: var(--text-hi); }
 .item h3 a:hover { color: var(--accent-ice); text-shadow: 0 0 12px rgba(0, 240, 255, 0.4); }
 .item p { margin: 6px 0 0; font-size: 14px; line-height: 1.55; color: var(--text-mid); }
 .item-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
 .tag {
-  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 11px; font-weight: 700;
   padding: 2px 8px; border-radius: 8px;
   background: rgba(0, 240, 255, 0.12); box-shadow: inset 0 0 0 1px rgba(0, 240, 255, 0.25); color: var(--accent);
 }
@@ -260,13 +260,13 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 
 /* ---------- Mood Index (/mood/) ---------- */
 .mood-now strong { display: flex; align-items: baseline; gap: 4px; font-size: 44px; }
-.mood-now strong small { font-family: 'Chakra Petch', sans-serif; font-size: 15px; color: var(--text-low); }
+.mood-now strong small { font-family: var(--font-ui, 'Chakra Petch', sans-serif); font-size: 15px; color: var(--text-low); }
 .mood-label { font-weight: 700; font-size: 16px; color: var(--accent); }
 .chart-panel { padding: 18px 16px 8px; }
 .mood-chart { display: block; width: 100%; height: auto; }
 .mood-chart .grid { stroke: rgba(120, 220, 255, 0.12); stroke-width: 1; }
 .mood-chart .grid.mid { stroke: rgba(120, 220, 255, 0.35); stroke-dasharray: 4 6; }
-.mood-chart .axis { fill: var(--text-low); font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+.mood-chart .axis { fill: var(--text-low); font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 12px; }
 .mood-chart .bar.pos { fill: rgba(61, 255, 162, 0.55); }
 .mood-chart .bar.neg { fill: rgba(255, 107, 142, 0.6); }
 .mood-chart .bar.neu { fill: rgba(157, 178, 214, 0.5); }
@@ -281,7 +281,7 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 }
 .mood-row:hover { border-color: rgba(0, 240, 255, 0.45); }
 .mood-row > span:first-child { color: var(--text-hi); font-weight: 600; }
-.mood-row strong { font-family: 'Orbitron', sans-serif; color: var(--text-hi); text-align: right; }
+.mood-row strong { font-family: var(--font-display, 'Orbitron', sans-serif); color: var(--text-hi); text-align: right; }
 .mood-row small { color: var(--text-mid); font-size: 12.5px; }
 .mood-meter { position: relative; height: 8px; border-radius: 5px; background: var(--bg-0); overflow: hidden; }
 .mood-meter::after { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(255, 255, 255, 0.35); }
@@ -299,11 +299,11 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 .embed-preview iframe { display: block; width: 100%; max-width: 340px; height: 140px; border: 0; }
 .embed-code { padding: 18px; display: grid; gap: 12px; }
 .embed-switch { display: flex; gap: 6px; }
-.embed-switch button, .embed-copy { font: 500 13px/1 'Chakra Petch', sans-serif; padding: 8px 14px; border-radius: 8px; cursor: pointer;
+.embed-switch button, .embed-copy { font: 500 13px/1 var(--font-ui, 'Chakra Petch', sans-serif); padding: 8px 14px; border-radius: 8px; cursor: pointer;
   color: var(--text-mid); background: rgba(10, 18, 40, 0.55); border: 1px solid var(--line); }
 .embed-switch button.active { color: var(--bg-0); background: var(--accent); border-color: var(--accent); }
 .embed-code textarea { width: 100%; box-sizing: border-box; resize: vertical; padding: 12px; border-radius: 10px; border: 1px solid var(--line);
-  background: var(--bg-0); color: var(--accent-ice); font: 12.5px/1.55 'JetBrains Mono', monospace; }
+  background: var(--bg-0); color: var(--accent-ice); font: 12.5px/1.55 var(--font-mono, 'JetBrains Mono', monospace); }
 .embed-copy { justify-self: start; color: var(--bg-0); background: var(--accent); border-color: var(--accent); font-weight: 600; }
 .embed-copy:hover { box-shadow: 0 0 18px rgba(0, 240, 255, 0.45); }
 .embed-code p { margin: 0; color: var(--text-mid); font-size: 13.5px; line-height: 1.6; }
@@ -322,7 +322,7 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 .calc-input:focus-within { border-color: var(--accent); box-shadow: 0 0 16px rgba(0, 240, 255, 0.2); }
 .calc-input input, .calc-input select, .rb-name {
   flex: 1; min-width: 0; height: 42px; border: 0; outline: 0; background: transparent;
-  color: var(--text-hi); font-family: 'JetBrains Mono', monospace; font-size: 15px;
+  color: var(--text-hi); font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 15px;
 }
 .calc-input select option { background: var(--bg-1); }
 .calc-input em { font-style: normal; color: var(--text-low); }
@@ -333,7 +333,7 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 .calc-presets button {
   padding: 3px 9px; border-radius: 7px; cursor: pointer;
   border: 1px solid rgba(120, 220, 255, 0.2); background: rgba(10, 18, 40, 0.6);
-  color: var(--text-mid); font: 600 12px 'Chakra Petch', sans-serif;
+  color: var(--text-mid); font: 600 12px var(--font-ui, 'Chakra Petch', sans-serif);
   transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 .calc-presets button:hover { border-color: rgba(0, 240, 255, 0.5); color: #fff; }
@@ -341,14 +341,14 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 .calc-results { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
 .calc-results div { padding: 16px 18px; border-radius: 12px; background: rgba(0, 240, 255, 0.06); border: 1px solid rgba(0, 240, 255, 0.18); display: flex; flex-direction: column; gap: 6px; }
 .calc-results span { font-size: 12.5px; color: var(--text-mid); }
-.calc-results strong { font-family: 'Orbitron', sans-serif; font-size: 22px; color: var(--text-hi); text-shadow: 0 0 14px rgba(0, 240, 255, 0.35); }
+.calc-results strong { font-family: var(--font-display, 'Orbitron', sans-serif); font-size: 22px; color: var(--text-hi); text-shadow: 0 0 14px rgba(0, 240, 255, 0.35); }
 .calc-note { margin: 12px 0 0; font-size: 12.5px; color: var(--text-low); }
 .calc-table-wrap { max-height: 360px; overflow: auto; border-radius: 12px; border: 1px solid rgba(120, 220, 255, 0.10); }
 .calc-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 .calc-table th { position: sticky; top: 0; background: rgba(8, 12, 30, 0.97); color: var(--text-low); font-weight: 600; text-align: right; padding: 10px 14px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
-.calc-table td { padding: 9px 14px; text-align: right; border-top: 1px solid rgba(120, 220, 255, 0.07); font-family: 'JetBrains Mono', monospace; color: var(--text); white-space: nowrap; }
+.calc-table td { padding: 9px 14px; text-align: right; border-top: 1px solid rgba(120, 220, 255, 0.07); font-family: var(--font-mono, 'JetBrains Mono', monospace); color: var(--text); white-space: nowrap; }
 .calc-table th:first-child, .calc-table td:first-child { text-align: left; }
-.calc-table td:first-child { font-family: 'Chakra Petch', sans-serif; }
+.calc-table td:first-child { font-family: var(--font-ui, 'Chakra Petch', sans-serif); }
 .calc-table small { color: var(--text-low); }
 .calc-table .buy { color: var(--pos); }
 .calc-table .sell { color: var(--neg); }
@@ -357,7 +357,7 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 .rb-row { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 0.8fr) 40px; gap: 10px; align-items: center; }
 .rb-head { margin-bottom: 6px; }
 .rb-head span { font-size: 12px; color: var(--text-low); padding-left: 4px; }
-.rb-name { border: 1px solid rgba(120, 220, 255, 0.2); border-radius: 11px; background: rgba(4, 5, 12, 0.6); padding: 0 12px; font-family: 'Chakra Petch', sans-serif; }
+.rb-name { border: 1px solid rgba(120, 220, 255, 0.2); border-radius: 11px; background: rgba(4, 5, 12, 0.6); padding: 0 12px; font-family: var(--font-ui, 'Chakra Petch', sans-serif); }
 .rb-name:focus { border-color: var(--accent); }
 .rb-remove { height: 40px; border-radius: 10px; border: 1px solid rgba(120, 220, 255, 0.2); background: none; color: var(--text-mid); font-size: 18px; cursor: pointer; }
 .rb-remove:hover { color: var(--neg); border-color: var(--neg); }
@@ -380,7 +380,7 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 /* ---------- Cabinet feature pages (site_pages.py) ---------- */
 .feature-head { max-width: 900px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
-.hero-note { margin: 16px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; color: var(--text-low); }
+.hero-note { margin: 16px 0 0; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 11.5px; letter-spacing: 0.1em; color: var(--text-low); }
 .feature-grid { display: grid; gap: 16px; }
 .feature-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .feature-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -408,7 +408,7 @@ a.feature-link p { color: var(--accent); }
   position: absolute; left: 20px; top: 18px;
   width: 30px; height: 30px; border-radius: 50%;
   display: grid; place-items: center;
-  font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 13px;
+  font-family: var(--font-display, 'Orbitron', sans-serif); font-weight: 700; font-size: 13px;
   color: var(--bg-0); background: var(--accent); box-shadow: 0 0 14px rgba(0, 240, 255, 0.5);
 }
 .steps strong { color: var(--text-hi); font-size: 15.5px; }
@@ -417,7 +417,7 @@ a.feature-link p { color: var(--accent); }
 .faq-item { border-radius: 12px; border: 1px solid rgba(120, 220, 255, 0.12); background: rgba(10, 18, 40, 0.5); }
 .faq-item summary { padding: 14px 18px; cursor: pointer; font-weight: 600; color: var(--text-hi); list-style: none; display: flex; justify-content: space-between; gap: 12px; }
 .faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mono', monospace; }
+.faq-item summary::after { content: "+"; color: var(--accent); font-family: var(--font-mono, 'JetBrains Mono', monospace); }
 .faq-item[open] summary::after { content: "−"; }
 .faq-item p { margin: 0; padding: 0 18px 16px; color: var(--text-mid); font-size: 14.5px; line-height: 1.6; }
 .footer-cabinet { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px; margin-bottom: 16px; font-size: 13.5px; }
