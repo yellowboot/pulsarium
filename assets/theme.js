@@ -71,37 +71,30 @@
   });
   window.addEventListener('pageshow', function () { apply(preferredTheme()); });
 
-  // A soft light follows the pointer across a news card (themes.css draws it
-  // in Calm from --glow-x/--glow-y). Mouse and trackpad only, and never with
-  // reduced motion; one position update per frame.
+  // A light sheen crosses a news card when the pointer comes onto it, as on
+  // the cabinet's cards (themes.css draws it in Calm). Mouse and trackpad
+  // only, and never with reduced motion.
   var fine = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (fine && !still) {
-    var lit = null, pending = null, frame = 0;
+    var lit = null;
     var light = function (card) {
-      if (lit && lit !== card) lit.classList.remove('is-lit');
+      if (card === lit) return;
+      if (lit) lit.classList.remove('is-lit');
       lit = card;
+      if (!card) return;
+      if (!card.querySelector(':scope > .card-glow')) {
+        var glow = document.createElement('span');
+        glow.className = 'card-glow';
+        glow.setAttribute('aria-hidden', 'true');
+        card.appendChild(glow);
+        void glow.offsetWidth; // settle the resting position so the first hover sweeps too
+      }
+      card.classList.add('is-lit');
     };
-    document.addEventListener('pointermove', function (event) {
-      pending = event;
-      if (frame) return;
-      frame = window.requestAnimationFrame(function () {
-        frame = 0;
-        var target = pending.target;
-        var card = target && target.closest ? target.closest('.card, .item') : null;
-        light(card);
-        if (!card) return;
-        if (!card.querySelector(':scope > .card-glow')) {
-          var glow = document.createElement('span');
-          glow.className = 'card-glow';
-          glow.setAttribute('aria-hidden', 'true');
-          card.appendChild(glow);
-        }
-        var box = card.getBoundingClientRect();
-        card.style.setProperty('--glow-x', (pending.clientX - box.left) + 'px');
-        card.style.setProperty('--glow-y', (pending.clientY - box.top) + 'px');
-        card.classList.add('is-lit');
-      });
+    document.addEventListener('pointerover', function (event) {
+      var target = event.target;
+      light(target && target.closest ? target.closest('.card, .item') : null);
     }, { passive: true });
     document.addEventListener('mouseout', function (event) { if (!event.relatedTarget) light(null); });
   }

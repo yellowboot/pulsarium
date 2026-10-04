@@ -129,8 +129,8 @@
   border-color: rgba(74, 71, 214, .28);
   box-shadow: inset 0 1px 0 #fff, 0 12px 32px rgba(74, 71, 214, .1);
 }
-/* Calm: a pearl light follows the pointer across a card (theme.js adds the
-   layer and its position); over the picture as well as the text. */
+/* Calm: a light sheen crosses a card on hover, as in the cabinet (theme.js
+   adds the layer); over the picture as well as the text. */
 .card-glow { display: none; }
 :root[data-color-theme='calm'] .item { position: relative; overflow: hidden; }
 :root[data-color-theme='calm'] .card-glow {
@@ -140,13 +140,12 @@
   z-index: 1;
   border-radius: inherit;
   pointer-events: none;
-  opacity: 0;
-  background: radial-gradient(360px circle at var(--glow-x, 50%) var(--glow-y, 50%),
-    rgba(124, 108, 255, .16), rgba(148, 218, 243, .10) 38%, rgba(246, 183, 221, .05) 58%, transparent 72%);
-  transition: opacity .3s ease;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, .55) 45%, transparent 60%) no-repeat;
+  background-size: 250% 100%;
+  background-position: 120% 0;
+  transition: background-position 1.1s ease;
 }
-:root[data-color-theme='calm'] .is-lit > .card-glow { opacity: 1; }
-:root[data-color-theme='calm'] :is(.card, .item).is-lit { border-color: rgba(74, 71, 214, .34); }
+:root[data-color-theme='calm'] .is-lit > .card-glow { background-position: -20% 0; }
 :root[data-color-theme='calm'] :is(.panel, .card)::before,
 :root[data-color-theme='calm'] :is(.panel, .card)::after { opacity: .3; }
 :root[data-color-theme='calm'] :is(.page-head h1, .headline, .ph-source, .ticker-item .sym) { text-shadow: none; }
