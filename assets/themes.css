@@ -255,6 +255,9 @@
 :root[data-color-theme='calm'] .hero-visual svg [stop-color='#00f0ff'] { stop-color: var(--accent); }
 :root[data-color-theme='calm'] ::-webkit-scrollbar-thumb { background-color: var(--scrollbar-thumb); }
 :root[data-color-theme='calm'] ::-webkit-scrollbar-thumb:hover { background-color: var(--scrollbar-thumb-hover); }
+@supports not selector(::-webkit-scrollbar) {
+  :root[data-color-theme='calm'], :root[data-color-theme='calm'] * { scrollbar-color: var(--scrollbar-thumb) transparent; }
+}
 
 @media (max-width: 1050px) {
   :root[data-color-theme='calm'] .main-nav .navlink { display: none; }

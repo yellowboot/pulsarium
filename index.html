@@ -75,6 +75,15 @@
   }
 
   * { box-sizing: border-box; }
+
+  /* page scrollbar like the rest of the site and the cabinet: slim, rounded, no arrows */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: transparent; }
+  ::-webkit-scrollbar-thumb { border: 3px solid transparent; border-radius: 999px; background: rgba(0, 240, 255, 0.25) padding-box; }
+  ::-webkit-scrollbar-thumb:hover { border-width: 2px; background-color: rgba(0, 240, 255, 0.55); }
+  @supports not selector(::-webkit-scrollbar) {
+    html { scrollbar-width: thin; scrollbar-color: rgba(0, 240, 255, 0.25) transparent; }
+  }
   html { overflow-x: hidden; }
   body {
     margin: 0;
@@ -334,7 +343,7 @@
   .analytics-consent button { padding:.6rem .85rem; color:inherit; background:#30304d; border:1px solid #8580ab; border-radius:7px; cursor:pointer; }
   .analytics-consent button:last-child { background:#554b90; }
 </style>
-<link rel="stylesheet" href="/assets/themes.css?v=3619768fc9" data-pulsarium-theme="styles">
+<link rel="stylesheet" href="/assets/themes.css?v=0661f7f06f" data-pulsarium-theme="styles">
 </head>
 <body>
 

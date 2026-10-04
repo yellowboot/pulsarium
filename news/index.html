@@ -87,6 +87,15 @@
 
   * { box-sizing: border-box; }
 
+  /* page scrollbar like the rest of the site and the cabinet: slim, rounded, no arrows */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: transparent; }
+  ::-webkit-scrollbar-thumb { border: 3px solid transparent; border-radius: 999px; background: rgba(0, 240, 255, 0.25) padding-box; }
+  ::-webkit-scrollbar-thumb:hover { border-width: 2px; background-color: rgba(0, 240, 255, 0.55); }
+  @supports not selector(::-webkit-scrollbar) {
+    html { scrollbar-width: thin; scrollbar-color: rgba(0, 240, 255, 0.25) transparent; }
+  }
+
   body {
     margin: 0;
     background: linear-gradient(180deg, var(--bg-0), var(--bg-1) 40%, var(--bg-0));
@@ -1025,7 +1034,7 @@
   @media (prefers-reduced-motion: reduce) { .calm-spark .calm-comet { animation: none; stroke-dashoffset: -46; } }
 
 </style>
-<link rel="stylesheet" href="/assets/themes.css?v=3619768fc9" data-pulsarium-theme="styles">
+<link rel="stylesheet" href="/assets/themes.css?v=0661f7f06f" data-pulsarium-theme="styles">
 </head>
 <body>
 
