@@ -779,6 +779,23 @@ def cta(title: str, text: str, button: str = "Get started free") -> str:
 </aside>"""
 
 
+def headline_count(n: int) -> str:
+    return f"{n} headline" + ("" if n == 1 else "s")
+
+
+def positive_share(m: dict) -> str:
+    """", 73% positive" over the market-signal headlines in mood(), or ""."""
+    return f", {round(m['positive'] / m['total'] * 100)}% positive" if m["total"] else ""
+
+
+def sentiment_split(m: dict) -> str:
+    """", 73% positive and 9% negative" (the rest is neutral), or ""."""
+    if not m["total"]:
+        return ""
+    share = lambda n: round(n / m["total"] * 100)
+    return f", {share(m['positive'])}% positive and {share(m['negative'])}% negative"
+
+
 def sources_phrase(items: list) -> str:
     counts = {}
     for item in items:
@@ -821,13 +838,17 @@ def ticker_page(company: dict, items: list, companies: dict, sector_counts: dict
     last = (f'{fmt_short_day(items[0]["_time"].date())}, {items[0]["_time"].strftime("%H:%M")} UTC'
             if items else "—")
 
-    title = f"{label} {noun} today: headlines & sentiment | Pulsarium"
+    # The search snippet says what a click gets that the sources beside it in
+    # the results don't: every headline on one page, each one scored.
     if items:
-        pos_share = round(m["positive"] / m["total"] * 100) if m["total"] else 0
-        description = (f"Latest {label} headlines from {sources}, scored for sentiment: "
-                       f"{len(week)} in the last 7 days, {len(items)} in 30 days, {pos_share}% positive. "
-                       f"Updated through the trading day.")
+        recent, span = (week, "past week") if week else (items, "past 30 days")
+        mood_recent = mood(recent)
+        title = f"{label} {noun} today: {headline_count(len(recent))}{positive_share(mood_recent)} | Pulsarium"
+        description = (f"All {label} news from the {span} on one page: "
+                       f"{headline_count(len(recent))}{sentiment_split(mood_recent)}. "
+                       f"Every headline scored, updated through the trading day.")
     else:
+        title = f"{label} {noun} today: headlines & sentiment | Pulsarium"
         description = f"{label} headlines from public financial news, scored for sentiment and importance."
 
     body = f"""<header class="page-head">
@@ -871,9 +892,16 @@ def sector_page(sector: str, items: list, companies: dict, counts: dict, now: da
         f'<span class="chip chip-muted">{esc(c["ticker"])}<small>{esc(c["name"])}</small></span>'
         for c in members
     )
-    title = f"{sector} news today: headlines & sentiment | Pulsarium"
-    description = (f"{sector} headlines from {sources_phrase(items)}: {len(week)} in the last 7 days, "
-                   f"sentiment {m['label']}. Covers {', '.join(c['name'] for c in members[:5])} and more.")
+    covers = f" Covers {', '.join(c['name'] for c in members[:5])} and more." if members else ""
+    if items:
+        recent, span = (week, "past week") if week else (items, "past 30 days")
+        mood_recent = mood(recent)
+        title = f"{sector} news today: {headline_count(len(recent))}{positive_share(mood_recent)} | Pulsarium"
+        description = (f"All {sector} news from the {span} on one page: "
+                       f"{headline_count(len(recent))}{sentiment_split(mood_recent)}.{covers}")
+    else:
+        title = f"{sector} news today: headlines & sentiment | Pulsarium"
+        description = f"{sector} headlines from public financial news, scored for sentiment and importance.{covers}"
     body = f"""<header class="page-head">
   <span class="eyebrow">Sector</span>
   <h1>{esc(sector)} news</h1>
@@ -929,7 +957,9 @@ def daily_page(day: str, items: list, companies: dict, prev_day, next_day, mood_
     pager += "</nav>"
 
     title = f"Stock market news for {d.day} {d.strftime('%B %Y')}: top stories & sentiment | Pulsarium"
-    description = f"Stock market headlines from {fmt_day(d)}: {summary}"
+    most = f" Most mentioned: {', '.join(top_tickers[:3])}." if top_tickers else ""
+    description = (f"{d.day} {d.strftime('%B %Y')} in {headline_count(len(items))}: mood {m['label']} "
+                   f"({m['positive']} positive, {m['negative']} negative).{most} Every story scored on one page.")
     body = f"""<header class="page-head">
   <span class="eyebrow">Daily digest</span>
   <h1>Stock market news — {fmt_day(d)}</h1>
