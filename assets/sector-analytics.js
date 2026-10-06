@@ -255,14 +255,14 @@
   async function load() {
     let cached;
     try { cached = JSON.parse(sessionStorage.getItem(cacheKey)); } catch (_) { /* Storage can be unavailable. */ }
-    if (cached && valid(cached.payload) && Date.now() - cached.saved < ttl) { render(cached.payload); return; }
+    if (cached && valid(cached.payload) && cached.payload.sectors.every(weighted) && Date.now() - cached.saved < ttl) { render(cached.payload); return; }
     try {
       const response = await fetch(endpoint, { headers: { apikey: publishableKey }, signal: AbortSignal.timeout(15000) });
       if (!response.ok) throw new Error('Snapshot unavailable');
       const rows = await response.json(), data = rows?.[0]?.payload;
       if (!valid(data)) throw new Error('Snapshot not ready');
       render(data);
-      try { sessionStorage.setItem(cacheKey, JSON.stringify({ saved: Date.now(), payload: data })); } catch (_) { /* Storage can be unavailable. */ }
+      try { if (data.sectors.every(weighted)) sessionStorage.setItem(cacheKey, JSON.stringify({ saved: Date.now(), payload: data })); } catch (_) { /* Storage can be unavailable. */ }
     } catch (_) {
       if (cached && valid(cached.payload)) {
         render(cached.payload);
