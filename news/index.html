@@ -1154,7 +1154,7 @@
   @media (prefers-reduced-motion: reduce) { .calm-spark .calm-comet { animation: none; stroke-dashoffset: -46; } }
 
 </style>
-<link rel="stylesheet" href="/assets/themes.css?v=7c7f395008" data-pulsarium-theme="styles">
+<link rel="stylesheet" href="/assets/themes.css?v=fc9881e8ae" data-pulsarium-theme="styles">
 </head>
 <body>
 
@@ -1528,15 +1528,19 @@
         const value = list === 'active'
           ? compactVolume(m.volume)
           : m.close.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        // only companies that have had a headline have a news page
+        const open = m.page === false
+          ? '<div class="quote-row mover-row">'
+          : `<a class="quote-row mover-row" href="/news/${encodeURIComponent(m.slug)}/" title="${escapeHtml(m.name)} news">`;
         return `
-          <a class="quote-row mover-row" href="/news/${encodeURIComponent(m.slug)}/" title="${escapeHtml(m.name)} news">
+          ${open}
             <span class="quote-label">
               <span class="quote-name mover-ticker">${escapeHtml(m.ticker)}</span>
               <span class="quote-price">${escapeHtml(m.name)}</span>
             </span>
             <span class="mover-value"${list === 'active' ? ' title="Shares traded"' : ''}>${value}</span>
             <span class="quote-change ${up ? 'quote-up' : 'quote-down'}">${up ? '▲' : '▼'} ${Math.abs(m.change_pct).toFixed(2)}%</span>
-          </a>`;
+          ${m.page === false ? '</div>' : '</a>'}`;
       }).join('') || '<div class="empty-mini">No movers for this session</div>';
       moversListEl.dataset.list = list;
       moversPanel.querySelectorAll('.movers-tab').forEach(tab =>

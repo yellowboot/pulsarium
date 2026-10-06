@@ -71,6 +71,9 @@
     --text-mid: #a9bddf;
     --text-low: #7489b3;
     --line: rgba(120, 220, 255, 0.16);
+    --pos: #3dffa2;
+    --neg: #ff6b8e;
+    --neu: #9db2d6;
     --pad-x: clamp(16px, 6vw, 86px);
   }
 
@@ -187,7 +190,7 @@
 
   /* ---------- Hero ---------- */
   .hero {
-    min-height: 560px;
+    min-height: 500px;
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     align-items: center;
@@ -211,7 +214,7 @@
   .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
   .hero-note { margin-top: 18px; font-size: 11.5px; letter-spacing: 0.12em; color: var(--text-low); }
 
-  .hero-visual { position: relative; height: 480px; display: grid; place-items: center; }
+  .hero-visual { position: relative; height: 430px; display: grid; place-items: center; }
   .pulsar { position: relative; width: 300px; height: 300px; }
   .pulsar svg { position: absolute; left: 0; top: 0; overflow: visible; }
   .orbit-a { transform-box: fill-box; transform-origin: center; animation: spin 40s linear infinite; }
@@ -227,6 +230,41 @@
     animation: throb 3.2s ease-in-out infinite;
   }
   @keyframes throb { 50% { transform: scale(1.18); } }
+
+  /* ---------- Today on the market (site_build.py fills it in) ---------- */
+  .today { margin-top: 8px; display: flex; flex-direction: column; gap: 14px; }
+  .today-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .today-more { font-size: 14px; font-weight: 600; color: var(--accent); transition: color 0.2s, text-shadow 0.2s; }
+  .today-more:hover { color: var(--accent-ice); text-shadow: 0 0 10px var(--accent); }
+  .today-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1.6fr); gap: 14px; }
+  .today-card {
+    display: flex; flex-direction: column; gap: 10px;
+    padding: 18px 20px; border-radius: 16px;
+    border: 1px solid rgba(120,220,255,0.12); background: rgba(8,14,32,0.5);
+  }
+  a.today-card { transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
+  a.today-card:hover { border-color: rgba(0,240,255,0.5); box-shadow: 0 0 24px rgba(0,240,255,0.15); transform: translateY(-2px); }
+  .today-label { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-low); }
+  .today-value { font-size: 40px; font-weight: 700; line-height: 1; color: var(--text-hi); }
+  .today-value small { font-size: 15px; font-weight: 500; color: var(--text-low); }
+  .today-sub { font-size: 14px; font-weight: 600; }
+  .today-change { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 12px; font-weight: 500; color: var(--text-low); }
+  .pos { color: var(--pos); } .neg { color: var(--neg); } .neu { color: var(--neu); }
+  .today-moves { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; }
+  .today-moves ul, .today-headlines { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .today-moves :is(a, span[title]) { display: flex; justify-content: space-between; gap: 8px; font-size: 13.5px; }
+  .today-moves b { color: var(--text-hi); }
+  .today-moves a:hover b { color: var(--accent); }
+  .today-headlines li { display: flex; flex-direction: column; gap: 2px; }
+  .today-headlines a {
+    font-size: 14.5px; font-weight: 600; line-height: 1.35; color: var(--text-hi);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .today-headlines a:hover { color: var(--accent); }
+  .today-headlines small { font-size: 12px; color: var(--text-low); }
+  @media (max-width: 1100px) { .today-grid { grid-template-columns: 1fr 1fr; } .today-news { grid-column: 1 / -1; } }
+  @media (max-width: 900px) { .today { margin-top: 32px; } }
+  @media (max-width: 560px) { .today-grid { grid-template-columns: 1fr; } }
 
   /* ---------- Feature panels ---------- */
   .features { margin-top: 56px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
@@ -343,7 +381,7 @@
   .analytics-consent button { padding:.6rem .85rem; color:inherit; background:#30304d; border:1px solid #8580ab; border-radius:7px; cursor:pointer; }
   .analytics-consent button:last-child { background:#554b90; }
 </style>
-<link rel="stylesheet" href="/assets/themes.css?v=7c7f395008" data-pulsarium-theme="styles">
+<link rel="stylesheet" href="/assets/themes.css?v=fc9881e8ae" data-pulsarium-theme="styles">
 </head>
 <body>
 
@@ -423,6 +461,28 @@
           </div>
         </div>
       </section>
+
+      <!-- today:start -->
+      <section class="today" aria-label="Today on the market">
+        <div class="today-head">
+          <span class="eyebrow">Today on the market</span>
+          <a class="today-more" href="news/">Open the news dashboard →</a>
+        </div>
+        <div class="today-grid">
+        <a class="today-card today-mood" href="/mood/">
+          <span class="today-label">Pulsarium Mood Index</span>
+          <span class="today-value mono">66<small>/100</small></span>
+          <span class="today-sub pos">Leaning optimistic <span class="today-change">▲6 vs Sun 4 Oct</span></span>
+        </a><div class="today-card today-movers">
+          <span class="today-label">Biggest moves · close Fri 2 Oct</span>
+          <div class="today-moves"><ul><li><a href="/news/rtx/" title="RTX news"><b class="mono">RTX</b><span class="mono pos">+12.17%</span></a></li><li><a href="/news/ter/" title="Teradyne news"><b class="mono">TER</b><span class="mono pos">+8.00%</span></a></li><li><a href="/news/hpe/" title="Hewlett Packard Enterprise news"><b class="mono">HPE</b><span class="mono pos">+7.36%</span></a></li></ul><ul><li><a href="/news/wdc/" title="Western Digital news"><b class="mono">WDC</b><span class="mono neg">−10.22%</span></a></li><li><a href="/news/stx/" title="Seagate Technology news"><b class="mono">STX</b><span class="mono neg">−10.21%</span></a></li><li><a href="/news/acn/" title="Accenture news"><b class="mono">ACN</b><span class="mono neg">−6.31%</span></a></li></ul></div>
+        </div><div class="today-card today-news">
+          <span class="today-label">Top headlines</span>
+          <ul class="today-headlines"><li><a href="https://www.investing.com/news/stock-market-news/kkr-to-buy-fund-administrator-gen-ii-in-51-billion-deal-including-debt-4933145" target="_blank" rel="noopener">KKR to buy fund administrator Gen II in $5.1 billion deal including debt</a><small>Investing.com · 00:24 UTC</small></li><li><a href="https://finance.yahoo.com/markets/currencies/articles/euro-slides-concerns-french-debt-155857664.html?.tsrc=rss" target="_blank" rel="noopener">Euro slides as concerns about French debt mount</a><small>Yahoo Finance · 20:54 UTC</small></li><li><a href="https://www.cnbc.com/2026/10/05/brazilian-stocks-jump-bolsonaro-now-heavy-favorite-to-win-presidency.html" target="_blank" rel="noopener">Brazilian stocks jump as Bolsonaro now seen as heavy favorite to win presidency</a><small>CNBC · 20:41 UTC</small></li></ul>
+        </div>
+        </div>
+      </section>
+      <!-- today:end -->
 
       <section class="features">
         <article class="panel" id="news">

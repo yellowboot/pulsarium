@@ -1193,6 +1193,9 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
                                  **({"og_image": spec["og_image"]} if spec.get("og_image") else {})), True),
              None, "monthly")
 
+    import market_movers  # here, not at the top: it reads fetch_news's COMPANY_MAP
+    fill_home_today(home_today(history, window, market_movers.load(), now), changed_files)
+
     write_if_changed(os.path.join("news", "feed.xml"), rss_feed(window, now), changed_files)
     static = [(p, None, f) for p, f in STATIC_PAGES]
     write_if_changed("sitemap.xml", sitemap(static + sorted(sitemap_entries)), changed_files)
@@ -1200,6 +1203,89 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
     print(f"Pages: {len(paged)} of {len(companies)} companies, {len(by_sector)} sectors with news, {len(days)} days; "
           f"{len(changed_files)} files changed, {len(sitemap_entries) + len(static)} URLs in the sitemap")
     return [SITE + p for p in indexable_urls]
+
+
+# The homepage is hand-written; one block of it is today's market, filled in
+# here between these markers on every build: the Mood Index, the biggest
+# moves at the last close and the day's top headlines. A short summary that
+# leads to the dashboard, not a copy of it.
+TODAY_START, TODAY_END = "<!-- today:start -->", "<!-- today:end -->"
+TODAY_HEADLINES = 3
+TODAY_MOVES = 3
+
+
+def home_today(history: list, window: list, movers: dict, now: datetime) -> str:
+    cards = []
+    if history:
+        point = history[-1]
+        prev = history[-2] if len(history) > 1 else None
+        tone = "neg" if point["value"] <= 44 else "neu" if point["value"] <= 55 else "pos"
+        change = ""
+        if prev:
+            diff = point["value"] - prev["value"]
+            arrow = "▲" if diff > 0 else "▼" if diff < 0 else "±"
+            change = (f' <span class="today-change">{arrow}{abs(diff)} vs '
+                      f'{fmt_short_day(date.fromisoformat(prev["date"]))}</span>')
+        cards.append(f"""<a class="today-card today-mood" href="/mood/">
+          <span class="today-label">Pulsarium Mood Index</span>
+          <span class="today-value mono">{point["value"]}<small>/100</small></span>
+          <span class="today-sub {tone}">{esc(point["label"])}{change}</span>
+        </a>""")
+
+    if movers.get("session") and (movers.get("gainers") or movers.get("losers")):
+        def moves(rows):
+            parts = []
+            for m in rows[:TODAY_MOVES]:
+                inner = (f'<b class="mono">{esc(m["ticker"])}</b>'
+                         f'<span class="mono {"pos" if m["change_pct"] >= 0 else "neg"}">'
+                         f'{"+" if m["change_pct"] >= 0 else "−"}{abs(m["change_pct"]):.2f}%</span>')
+                # only companies that have had a headline have a news page
+                if os.path.exists(url_file(f"/news/{m['slug']}/")):
+                    parts.append(f'<li><a href="/news/{esc(m["slug"])}/" title="{esc(m["name"])} news">{inner}</a></li>')
+                else:
+                    parts.append(f'<li><span title="{esc(m["name"])}">{inner}</span></li>')
+            return "".join(parts)
+        session = fmt_short_day(date.fromisoformat(movers["session"]))
+        cards.append(f"""<div class="today-card today-movers">
+          <span class="today-label">Biggest moves · close {session}</span>
+          <div class="today-moves"><ul>{moves(movers.get("gainers") or [])}</ul><ul>{moves(movers.get("losers") or [])}</ul></div>
+        </div>""")
+
+    recent = [i for i in window if i["_time"] >= now - timedelta(hours=24)
+              and (i.get("content_type") or "market_signal") == "market_signal"]
+    top = sorted(recent, key=lambda i: (-(i.get("importance") or 0), -i["_time"].timestamp()))[:TODAY_HEADLINES]
+    if top:
+        rows = "".join(
+            f'<li><a href="{esc(i.get("link") or "#")}" target="_blank" rel="noopener">{esc(i["title"])}</a>'
+            f'<small>{esc(i.get("source") or "")} · {i["_time"].strftime("%H:%M")} UTC</small></li>'
+            for i in top)
+        cards.append(f"""<div class="today-card today-news">
+          <span class="today-label">Top headlines</span>
+          <ul class="today-headlines">{rows}</ul>
+        </div>""")
+
+    if not cards:
+        return ""
+    return f"""<section class="today" aria-label="Today on the market">
+        <div class="today-head">
+          <span class="eyebrow">Today on the market</span>
+          <a class="today-more" href="news/">Open the news dashboard →</a>
+        </div>
+        <div class="today-grid">
+        {"".join(cards)}
+        </div>
+      </section>"""
+
+
+def fill_home_today(block: str, changed: list) -> None:
+    """Writes the block between the markers of index.html (if it has them)."""
+    with open("index.html", encoding="utf-8") as f:
+        page = f.read()
+    start, end = page.find(TODAY_START), page.find(TODAY_END)
+    if start < 0 or end < start:
+        return
+    content = page[:start + len(TODAY_START)] + "\n      " + block + "\n      " + page[end:]
+    write_if_changed("index.html", content, changed)
 
 
 def ping_indexnow(urls_file: str) -> None:

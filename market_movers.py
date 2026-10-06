@@ -111,8 +111,11 @@ def build(rows: dict, names: dict) -> dict:
         change = (float(now_adj) / float(then_adj) - 1) * 100
         if abs(change) > MAX_MOVE_PCT:
             continue
+        slug = names[symbol]["slug"]
         moves.append({
-            "ticker": symbol, "name": names[symbol]["name"], "slug": names[symbol]["slug"],
+            "ticker": symbol, "name": names[symbol]["name"], "slug": slug,
+            # a company has a news page once it has had a headline (site_build.py)
+            "page": os.path.exists(os.path.join("news", slug, "index.html")),
             "close": round(float(close), 2),
             "change_pct": round(change, 2),
             "volume": int(history[0].get("volume") or 0),
