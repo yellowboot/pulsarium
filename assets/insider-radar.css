@@ -38,6 +38,21 @@
 .insider-radar-tabs button:focus-visible, .insider-radar a:focus-visible,
 .insider-radar summary:focus-visible { outline: 2px solid var(--gold-1); outline-offset: 3px; }
 .insider-radar-list { display: grid; gap: 12px; max-height: 420px; overflow-y: auto; }
+/* Match the existing Top Mentions and Main indices scrollbars in both themes. */
+.insider-radar-list, .dash-side {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+.insider-radar-list::-webkit-scrollbar, .dash-side::-webkit-scrollbar { width: 6px; }
+.insider-radar-list::-webkit-scrollbar-track, .dash-side::-webkit-scrollbar-track { background: transparent; }
+.insider-radar-list::-webkit-scrollbar-thumb, .dash-side::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 6px;
+}
+.insider-radar-list::-webkit-scrollbar-thumb:hover, .dash-side::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
 .insider-radar-card + .insider-radar-card { border-top: 1px solid var(--border-soft); padding-top: 12px; }
 .insider-radar-card-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
 .insider-radar-symbol { color: var(--gold-1); font-family: var(--font-mono, monospace); font-weight: 600; text-decoration: none; font-size: 14px; }
