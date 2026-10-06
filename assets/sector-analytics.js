@@ -6,7 +6,7 @@
   if (!overview || !sheet || typeof sheet.showModal !== 'function') return;
   const endpoint = 'https://omkeplyeuxwlsqnblsjm.supabase.co/rest/v1/sec_sector_analytics?id=eq.global&select=payload';
   const publishableKey = 'sb_publishable_Iike5dnuHEuwIIF-qruzzg_WkWJodcF';
-  const cacheKey = 'pulsarium-sector-snapshot-v1';
+  const cacheKey = 'pulsarium-sector-snapshot-v2';
   const ttl = 15 * 60 * 1000;
   const body = sheet.querySelector('.sector-sheet-body');
   let snapshot, selected, view = 'map', more = false, opener, newsY = 0, oldBodyOverflow, oldHtmlOverflow;
@@ -16,6 +16,8 @@
   const count = value => Number.isInteger(value) && value >= 0;
   const signed = (value, suffix = '%') => number(value) ? `${value > 0 ? '+' : ''}${value.toFixed(value !== 0 && Math.abs(value) < .1 ? 2 : 1)}${suffix}` : '—';
   const percent = value => number(value) ? `${value.toFixed(0)}%` : '—';
+  const weighted = s => number(s.revenue_total_yoy);
+  const revenue = s => weighted(s) ? s.revenue_total_yoy : s.revenue_yoy;
   const tone = value => number(value) && value !== 0 ? value > 0 ? 'sector-up' : 'sector-down' : '';
   const money = value => number(value) ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 }).format(value) : '—';
   const date = value => /^\d{4}-\d{2}-\d{2}$/.test(value || '') ? new Date(`${value}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : 'not available';
@@ -30,11 +32,15 @@
     return data?.version === 1 && /^Q[1-4] \d{4}$/.test(data.period) && /^\d{4}$/.test(data.cash_flow_period) &&
       count(data.coverage?.included) && count(data.coverage?.eligible) && count(data.coverage?.classified) &&
       Array.isArray(data.sectors) && data.sectors.length > 0 && data.sectors.every(s =>
-        /^[a-z][a-z-]+$/.test(s.id) && typeof s.name === 'string' && count(s.company_count) && number(s.revenue_yoy) &&
+        /^[a-z][a-z-]+$/.test(s.id) && typeof s.name === 'string' && count(s.company_count) && s.company_count > 0 && number(s.revenue_yoy) &&
         ['growth', 'pressure', 'mixed', 'limited'].includes(s.direction) && count(s.growing_count) && count(s.declining_count) &&
         count(s.flat_count) && count(s.margin_count) && count(s.fcf_count) && count(s.fcf_positive_count) &&
         s.growing_count + s.declining_count + s.flat_count === s.company_count && s.margin_count <= s.company_count &&
-        s.fcf_count <= s.company_count && s.fcf_positive_count <= s.fcf_count && Array.isArray(s.companies));
+        s.fcf_count <= s.company_count && s.fcf_positive_count <= s.fcf_count && Array.isArray(s.companies) &&
+        (s.revenue_total_yoy === undefined || (weighted(s) && number(s.revenue_current) && s.revenue_current > 0 &&
+          number(s.revenue_previous) && s.revenue_previous > 0 && s.companies.every(c =>
+            number(c.revenue_current) && c.revenue_current > 0 && number(c.revenue_previous) && c.revenue_previous > 0 &&
+            typeof c.low_revenue_base === 'boolean'))));
   }
   function selectSector(id, showDetails = true) {
     if (!snapshot.sectors.some(s => s.id === id)) return;
@@ -108,12 +114,12 @@
   }
   function renderSummary() {
     const root = overview.querySelector('[data-sector-summary]');
-    root.replaceChildren(el('p', 'sector-measure', 'Quarterly business signals · median'));
-    const growing = snapshot.sectors.filter(s => s.direction === 'growth').sort((a, b) => b.revenue_yoy - a.revenue_yoy);
-    const pressure = snapshot.sectors.filter(s => s.company_count >= 10 && (s.revenue_yoy < 0 || (s.margin_count >= 10 && s.margin_change < 0)))
+    root.replaceChildren(el('p', 'sector-measure', snapshot.sectors.every(weighted) ? 'Revenue totals · same-company sample' : 'Quarterly business signals · median'));
+    const growing = snapshot.sectors.filter(s => s.direction === 'growth').sort((a, b) => revenue(b) - revenue(a));
+    const pressure = snapshot.sectors.filter(s => s.company_count >= 10 && (revenue(s) < 0 || (s.margin_count >= 10 && s.margin_change < 0)))
       .sort((a, b) => {
-        if ((a.revenue_yoy < 0) !== (b.revenue_yoy < 0)) return a.revenue_yoy < 0 ? -1 : 1;
-        return a.revenue_yoy < 0 ? a.revenue_yoy - b.revenue_yoy : a.margin_change - b.margin_change;
+        if ((revenue(a) < 0) !== (revenue(b) < 0)) return revenue(a) < 0 ? -1 : 1;
+        return revenue(a) < 0 ? revenue(a) - revenue(b) : a.margin_change - b.margin_change;
       });
     const groups = [
       ['Business growth', 'sector-up', growing],
@@ -126,10 +132,10 @@
       if (!visible.length) root.append(el('p', 'sector-caption', 'No industries meet these criteria.'));
       visible.forEach(s => {
         const row = industryButton(s, 'sector-summary-row');
-        const marginPressure = color === 'sector-down' && s.revenue_yoy >= 0;
-        const value = marginPressure ? s.margin_change : s.revenue_yoy;
+        const marginPressure = color === 'sector-down' && revenue(s) >= 0;
+        const value = marginPressure ? s.margin_change : revenue(s);
         const name = el('span', '', s.name);
-        name.append(el('small', 'sector-summary-label', marginPressure ? 'Margin change · YoY' : 'Revenue · YoY'));
+        name.append(el('small', 'sector-summary-label', marginPressure ? 'Margin change · median' : weighted(s) ? 'Total revenue · YoY' : 'Revenue · YoY · median'));
         row.append(name, el('strong', tone(value), signed(value, marginPressure ? ' pp' : '%')));
         root.append(row);
       });
@@ -138,16 +144,20 @@
   function renderMap() {
     const map = query('[data-sector-map]'), table = query('[data-sector-table]');
     map.replaceChildren(); table.replaceChildren();
+    const totals = snapshot.sectors.every(weighted);
+    query('[data-sector-map-measure]').textContent = totals ? 'Total revenue · YoY · same-company sample' : 'Revenue · YoY · median';
+    query('[data-sector-revenue-heading]').textContent = totals ? 'Total revenue YoY' : 'Revenue YoY';
     snapshot.sectors.forEach(s => {
       const tile = industryButton(s, 'sector-tile');
       tile.dataset.direction = s.direction;
-      tile.setAttribute('aria-label', `${s.name}: ${stateName(s)}, median revenue change ${signed(s.revenue_yoy)}, ${s.company_count} companies. Open details.`);
-      tile.append(el('span', 'sector-tile-name', s.name), el('strong', `sector-tile-value ${tone(s.revenue_yoy)}`, signed(s.revenue_yoy)),
+      tile.setAttribute('aria-label', `${s.name}: ${stateName(s)}, ${weighted(s) ? 'total' : 'median'} revenue change ${signed(revenue(s))}, ${s.company_count} companies. Open details.`);
+      tile.append(el('span', 'sector-tile-name', s.name), el('strong', `sector-tile-value ${tone(revenue(s))}`, signed(revenue(s))),
         el('span', 'sector-tile-foot', `${s.company_count} companies · ${stateName(s)}`));
       map.append(tile);
       const row = el('tr'), name = el('td'), button = industryButton(s, '');
       button.textContent = s.name; name.append(button);
-      row.append(name, el('td', '', s.company_count), el('td', tone(s.revenue_yoy), signed(s.revenue_yoy)),
+      row.append(name, el('td', '', s.company_count), el('td', tone(revenue(s)), signed(revenue(s))),
+        el('td', tone(s.revenue_yoy), signed(s.revenue_yoy)), el('td', '', percent(100 * s.growing_count / s.company_count)),
         el('td', tone(s.margin_change), signed(s.margin_change, ' pp')), el('td', '', percent(s.fcf_positive_pct)));
       table.append(row);
     });
@@ -167,8 +177,9 @@
     const title = el('h3', 'sector-detail-title', s.name); title.id = 'sector-detail-title';
     root.replaceChildren(title, el('p', 'sector-detail-description', `${stateName(s)} · ${s.company_count} companies with comparable quarterly revenue · ${snapshot.period}`));
     const metrics = el('div', 'sector-metrics');
-    metrics.append(metric('Revenue change · median', signed(s.revenue_yoy), `${s.company_count} companies · YoY`, tone(s.revenue_yoy)),
-      metric('Operating margin change', signed(s.margin_change, ' pp'), `${s.margin_count} companies · YoY`, tone(s.margin_change)),
+    if (weighted(s)) metrics.append(metric('Total revenue · YoY', signed(s.revenue_total_yoy), `${money(s.revenue_current)} current · ${money(s.revenue_previous)} prior year · ${s.company_count} companies`, tone(s.revenue_total_yoy)));
+    metrics.append(metric('Company revenue · median', signed(s.revenue_yoy), `${s.company_count} companies · YoY · equal company weight`, tone(s.revenue_yoy)),
+      metric('Operating margin change · median', signed(s.margin_change, ' pp'), `${s.margin_count} companies · YoY`, tone(s.margin_change)),
       metric('Positive free cash flow', percent(s.fcf_positive_pct), s.fcf_count ? `${s.fcf_positive_count} of ${s.fcf_count} companies · annual ${snapshot.cash_flow_period}` : ['banks', 'insurance'].includes(s.id) ? 'This cash-flow measure is not comparable for banking and insurance.' : `Comparable cash-flow data unavailable · annual ${snapshot.cash_flow_period}`));
     root.append(metrics);
     const breadth = el('section', 'sector-card');
@@ -178,8 +189,9 @@
       const segment = el('span', cls); segment.style.width = `${100 * value / s.company_count}%`; bar.append(segment);
     });
     const labels = el('div', 'sector-breadth-labels');
-    labels.append(el('span', 'sector-up', `${s.growing_count} growing`), el('span', 'sector-down', `${s.declining_count} declining`), el('span', '', `${s.flat_count} flat`));
-    breadth.append(bar, labels, el('p', 'sector-note', 'Revenue growth and margin improvement together determine the industry signal. Mixed trends can include rising revenue with falling profitability.'));
+    labels.append(el('span', 'sector-up', `${s.growing_count} growing · ${percent(100 * s.growing_count / s.company_count)}`),
+      el('span', 'sector-down', `${s.declining_count} declining · ${percent(100 * s.declining_count / s.company_count)}`), el('span', '', `${s.flat_count} flat`));
+    breadth.append(bar, labels, el('p', 'sector-note', weighted(s) ? 'Each company counts once in this breadth measure. The industry signal combines total revenue growth with the median change in operating margin.' : 'Revenue growth and margin improvement together determine the industry signal. Mixed trends can include rising revenue with falling profitability.'));
     root.append(breadth);
     const insiders = el('section', 'sector-card'), window = snapshot.insider_window || {};
     const amounts = s.insiders, through = window.through;
@@ -195,7 +207,7 @@
     insiders.append(el('p', 'sector-note', `Available disclosures within the last 30 days · through ${date(through)}. ${window.partial ? 'The collection history currently covers part of this window. ' : ''}Classified issuers only; planned purchases are excluded.`));
     root.append(insiders);
     const companies = el('section', 'sector-card');
-    companies.append(el('h3', '', 'Companies behind the trend'), el('p', 'sector-note', 'Highest and lowest revenue changes in the covered sample. Open a ticker to see its SEC filing.'));
+    companies.append(el('h3', '', 'Companies behind the trend'), el('p', 'sector-note', 'Highest and lowest percentage revenue changes in the covered sample. Quarterly revenue shows the scale of each business. Open a ticker to see its SEC filing.'));
     const list = el('div', 'sector-company-list');
     s.companies.forEach(c => {
       const row = el('div', 'sector-company'), info = el('div'), values = el('div');
@@ -203,6 +215,15 @@
       const ticker = el(url ? 'a' : 'span', '', c.symbol);
       if (url) { ticker.href = url; ticker.target = '_blank'; ticker.rel = 'noopener noreferrer'; ticker.setAttribute('aria-label', `${c.symbol}: open SEC filing`); }
       info.append(ticker, el('p', 'sector-company-name', c.name), el('small', '', `Quarter ended ${date(c.period_end)}`));
+      if (number(c.revenue_current) && number(c.revenue_previous)) {
+        info.append(el('p', 'sector-company-revenue', `Revenue: ${money(c.revenue_current)}`));
+        const previous = el('small', '', `Prior-year quarter: ${money(c.revenue_previous)}`);
+        previous.title = `Quarter ended ${date(c.revenue_previous_end)}`; info.append(previous);
+        if (c.low_revenue_base) {
+          const flag = el('span', 'sector-company-flag', 'Low revenue base');
+          flag.title = 'Prior-year quarterly revenue below $1 million.'; info.append(flag);
+        }
+      }
       values.append(el('strong', tone(c.revenue_yoy), signed(c.revenue_yoy)), el('small', '', 'Revenue YoY'));
       row.append(info, values); list.append(row);
     });
@@ -226,7 +247,7 @@
     select.value = selected;
     const methods = query('[data-sector-methodology]'); methods.replaceChildren();
     Object.entries(snapshot.methodology || {}).forEach(([key, text]) => {
-      const p = el('p'), label = el('strong', '', `${({ universe: 'Coverage', revenue: 'Revenue', margin: 'Operating margin', cash_flow: 'Free cash flow', direction: 'Industry signal', insiders: 'Insider activity', cache: 'Updates' })[key] || key}: `);
+      const p = el('p'), label = el('strong', '', `${({ universe: 'Coverage', revenue: 'Revenue', company_values: 'Company context', margin: 'Operating margin', cash_flow: 'Free cash flow', direction: 'Industry signal', insiders: 'Insider activity', cache: 'Updates' })[key] || key}: `);
       p.append(label, document.createTextNode(String(text))); methods.append(p);
     });
     renderSummary(); renderMap(); renderDetails(); setView(view);

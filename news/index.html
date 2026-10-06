@@ -1036,7 +1036,7 @@
 </style>
 <link rel="stylesheet" href="/assets/themes.css?v=995daca531" data-pulsarium-theme="styles">
 <link rel="stylesheet" href="/assets/insider-radar.css?v=5">
-<link rel="stylesheet" href="/assets/sector-analytics.css?v=3">
+<link rel="stylesheet" href="/assets/sector-analytics.css?v=4">
 </head>
 <body>
 
@@ -1286,15 +1286,15 @@
       <button type="button" data-sector-view="details" aria-pressed="false" aria-controls="sector-details-view">Details</button>
     </div>
     <section id="sector-map-view" data-sector-content="map" aria-labelledby="sector-map-title">
-      <div class="sector-section-head"><h3 id="sector-map-title">Sector map</h3><p class="sector-caption">Revenue · YoY · median</p></div>
+      <div class="sector-section-head"><h3 id="sector-map-title">Sector map</h3><p class="sector-caption" data-sector-map-measure>Revenue · YoY</p></div>
       <div class="sector-map-grid" data-sector-map></div>
       <div class="sector-legend"><span class="sector-up"><i aria-hidden="true"></i>Business growth</span><span class="sector-down"><i aria-hidden="true"></i>Under pressure</span><span><i aria-hidden="true"></i>Mixed / limited sample</span></div>
       <div class="sector-section-head"><h3>Compare industries</h3></div>
       <div class="sector-table-wrap"><table class="sector-table">
-        <thead><tr><th scope="col">Industry</th><th scope="col">Companies</th><th scope="col">Revenue YoY</th><th scope="col">Margin change</th><th scope="col">Positive FCF</th></tr></thead>
+        <thead><tr><th scope="col">Industry</th><th scope="col">Companies</th><th scope="col" data-sector-revenue-heading>Total revenue YoY</th><th scope="col">Median YoY</th><th scope="col">Growing</th><th scope="col">Margin change · median</th><th scope="col">Positive FCF</th></tr></thead>
         <tbody data-sector-table></tbody>
       </table></div>
-      <p class="sector-note">Quarterly business performance. Margin change is in percentage points; free cash flow uses the annual reporting window. Open an industry for sample sizes and filing sources.</p>
+      <p class="sector-note">Revenue totals use the same companies in both periods. Growing is the share with increasing revenue; median YoY gives each company equal weight. Margin change is in percentage points; free cash flow uses the annual reporting window. Open an industry for revenue amounts, sample sizes and filing sources.</p>
     </section>
     <section id="sector-details-view" data-sector-content="details" aria-labelledby="sector-detail-title" hidden>
       <div class="sector-detail-controls"><label for="sector-industry">Industry</label><select id="sector-industry" data-sector-select></select></div>
@@ -1303,12 +1303,12 @@
     <details class="sector-method">
       <summary>Data &amp; methodology</summary>
       <div data-sector-methodology></div>
-      <p>The overview highlights revenue growth with stable or improving margins, plus industries with falling revenue or margins. Each highlighted value names its metric. Map labels use the combined revenue and margin signal.</p>
+      <p>The overview highlights revenue growth with stable or improving margins, plus industries with falling revenue or margins. Each highlighted value names its metric. Map labels combine revenue performance with median operating margin changes.</p>
       <a href="https://www.sec.gov/search-filings/edgar-application-programming-interfaces" target="_blank" rel="noopener noreferrer">SEC data documentation ↗</a>
     </details>
   </div>
 </dialog>
-<script src="/assets/sector-analytics.js?v=3" defer></script>
+<script src="/assets/sector-analytics.js?v=4" defer></script>
 <script src="../news_data.js" onerror="window.__NO_DATA_FILE__ = true"></script>
 <script>
 (function () {

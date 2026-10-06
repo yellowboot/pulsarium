@@ -80,7 +80,7 @@
   border-radius: 9px; background: var(--bg-2); color: var(--text-hi); font-size: 13px; }
 .sector-detail-title { margin: 0; color: var(--text-hi); font: 600 24px/1.4 var(--font-ui); }
 .sector-detail-description { margin: 10px 0 20px; color: var(--text-mid); font-size: 13px; }
-.sector-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.sector-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .sector-metric { min-width: 0; padding: 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); }
 .sector-metric h4 { margin: 0 0 10px; font: 500 11px/1.5 var(--font-ui); color: var(--text-mid); }
 .sector-metric strong { display: block; font: 600 21px/1.5 var(--font-mono); color: var(--text-hi); }
@@ -101,6 +101,9 @@
 .sector-company:last-child { border-bottom: 0; padding-bottom: 0; }
 .sector-company a { color: var(--gold-1); font: 600 13px var(--font-mono); text-underline-offset: 3px; }
 .sector-company-name { margin: 4px 0; color: var(--text-hi); font-size: 12px; overflow-wrap: anywhere; }
+.sector-company-revenue { margin: 8px 0 2px; color: var(--text-hi); font: 500 11px/1.6 var(--font-mono); overflow-wrap: anywhere; }
+.sector-company-flag { display: inline-block; max-width: 100%; margin-top: 7px; padding: 2px 7px; border: 1px solid var(--border);
+  border-radius: 999px; background: var(--bg-2); color: var(--text-hi); font: 500 10px/1.6 var(--font-ui); }
 .sector-company strong { font: 600 13px var(--font-mono); color: var(--text-hi); }
 .sector-company small { display: block; color: var(--text-mid); font-size: 10.5px; }
 .sector-method { margin-top: 24px; color: var(--text-mid); font-size: 11.5px; }
