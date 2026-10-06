@@ -36,6 +36,7 @@ import os
 import re
 import subprocess
 import sys
+import urllib.parse
 import urllib.request
 from datetime import date, datetime, timedelta, timezone
 from email.utils import format_datetime
@@ -788,15 +789,30 @@ def item_list(items: list, companies: dict, skip_ticker: str = None, group_by_da
     return body
 
 
-def cta(title: str, text: str, button: str = "Get started free") -> str:
+def cta(title: str, text: str, button: str = "Get started free", href: str = APP_URL) -> str:
     return f"""<aside class="panel cta">
   <div>
     <span class="eyebrow">Personal cabinet</span>
     <h2>{esc(title)}</h2>
     <p>{esc(text)}</p>
   </div>
-  <a class="btn btn-primary" href="{APP_URL}">{esc(button)}</a>
+  <a class="btn btn-primary" href="{esc(href)}">{esc(button)}</a>
 </aside>"""
+
+
+# Market-wide entries and coins the site follows by name have no listing to
+# put on a watchlist; every other company page's cabinet card opens the
+# cabinet's Watchlists with the company looked up (?watch=, investor-platform
+# lib/siteBridge.ts) - by ticker, or by name for a listing abroad (AIR.PA).
+NOT_WATCHABLE = {"BTC", "ETH", "XMR", "OPEC", "FED", "UST10Y", "DJI"}
+
+
+def watch_url(company: dict) -> str | None:
+    ticker = company["ticker"]
+    if ticker in NOT_WATCHABLE:
+        return None
+    query = ticker if re.fullmatch(r"[A-Z0-9]{1,6}(\.[A-Z])?", ticker) else company["name"]
+    return f"{APP_URL}?{urllib.parse.urlencode({'watch': query})}"
 
 
 def headline_count(n: int) -> str:
@@ -871,6 +887,12 @@ def ticker_page(company: dict, items: list, companies: dict, sector_counts: dict
         title = f"{label} {noun} today: headlines & sentiment | Pulsarium"
         description = f"{label} headlines from public financial news, scored for sentiment and importance."
 
+    watch = watch_url(company)
+    cabinet_card = cta(
+        f"Follow {ticker} in your own cabinet",
+        f"Add {company['name']} to a free watchlist, set a price alert and see its headlines next to your portfolio — private, with two-factor sign-in.",
+        **({"button": f"Add {ticker} to my watchlist", "href": watch} if watch else {}))
+
     body = f"""<header class="page-head">
   <span class="eyebrow">{esc(company["sector"])} · {esc(ticker)}</span>
   <h1>{esc(label)} {esc(noun)}</h1>
@@ -883,8 +905,7 @@ def ticker_page(company: dict, items: list, companies: dict, sector_counts: dict
   <div class="panel stat"><span class="stat-label">Latest headline</span><strong class="stat-text">{last}</strong><small><a href="/news/sector/{sector_slug(company["sector"])}/">{esc(company["sector"])}</a></small></div>
 </section>
 
-{cta(f"Follow {ticker} in your own cabinet",
-     f"Add {company['name']} to a free watchlist, set a price alert and see its headlines next to your portfolio — private, with two-factor sign-in.")}
+{cabinet_card}
 
 <section class="block">
   <h2>Latest {esc(ticker)} headlines</h2>
