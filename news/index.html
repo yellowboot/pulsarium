@@ -1035,6 +1035,7 @@
 
 </style>
 <link rel="stylesheet" href="/assets/themes.css?v=995daca531" data-pulsarium-theme="styles">
+<link rel="stylesheet" href="/assets/insider-radar.css?v=1">
 </head>
 <body>
 
@@ -1136,6 +1137,7 @@
   <div class="ticker-track" id="ticker-track"></div>
 </div>
 
+<div class="dash">
 <div class="hero-grid">
   <div class="panel panel-analytics">
     <div class="panel-edge" aria-hidden="true"></div>
@@ -1184,6 +1186,33 @@
   </div>
 </div>
 
+<aside class="dash-side" aria-label="Insider purchases and the personal cabinet">
+  <aside class="panel insider-radar" id="insider-radar" aria-labelledby="insider-radar-title">
+    <div class="panel-edge" aria-hidden="true"></div>
+    <h2 id="insider-radar-title">Insider purchases</h2>
+    <p class="insider-radar-meta" data-radar-meta>Last 7 days · SEC Form 4</p>
+    <div class="insider-radar-tabs" role="group" aria-label="Insider purchase view">
+      <button type="button" data-radar-tab="clusters" aria-pressed="true">Buyer groups</button>
+      <button type="button" data-radar-tab="large" aria-pressed="false">Large buys</button>
+    </div>
+    <p class="insider-radar-state" data-radar-state role="status">Loading SEC disclosures…</p>
+    <div class="insider-radar-list" data-radar-list></div>
+    <details class="insider-radar-method">
+      <summary>Selection rules</summary>
+      <p data-radar-method></p>
+      <p>Purchases total at least $100,000 per company. Reported transaction values. Updated twice daily.</p>
+    </details>
+  </aside>
+  <div class="panel side-cta">
+    <div class="panel-edge" aria-hidden="true"></div>
+    <span class="eyebrow">Personal cabinet</span>
+    <h3>Your portfolio, without a broker login</h3>
+    <p>Upload the file your broker already gives you. See the news about what you hold, SEC figures for each company and price alerts.</p>
+    <a class="header-signin" href="https://app.pulsarium.finance/">Create a free account</a>
+    <small>Free during the public beta</small>
+  </div>
+</aside>
+
 <div class="news-grid" id="news-grid"></div>
 
 <div class="empty-state" id="empty-state" style="display:none">
@@ -1192,6 +1221,7 @@
      Run the news fetcher from the project root folder:</p>
   <pre>python3 fetch_news.py</pre>
   <p>Then refresh the page (F5).</p>
+</div>
 </div>
 
 <footer>
@@ -1214,6 +1244,7 @@
 </footer>
 
 <script src="/assets/analytics.js" defer></script>
+<script src="/assets/insider-radar.js?v=1" defer></script>
 <script src="../news_data.js" onerror="window.__NO_DATA_FILE__ = true"></script>
 <script>
 (function () {
