@@ -14,7 +14,7 @@
   const query = selector => sheet.querySelector(selector);
   const number = value => typeof value === 'number' && Number.isFinite(value);
   const count = value => Number.isInteger(value) && value >= 0;
-  const signed = (value, suffix = '%') => number(value) ? `${value > 0 ? '+' : ''}${value.toFixed(1)}${suffix}` : '—';
+  const signed = (value, suffix = '%') => number(value) ? `${value > 0 ? '+' : ''}${value.toFixed(value !== 0 && Math.abs(value) < .1 ? 2 : 1)}${suffix}` : '—';
   const percent = value => number(value) ? `${value.toFixed(0)}%` : '—';
   const tone = value => number(value) && value !== 0 ? value > 0 ? 'sector-up' : 'sector-down' : '';
   const money = value => number(value) ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 }).format(value) : '—';
