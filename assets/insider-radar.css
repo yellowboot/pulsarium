@@ -17,9 +17,6 @@
   .dash-side { grid-area: side; padding: 36px 0 0; align-self: start; }
 }
 @media (min-width: 1101px) and (max-width: 1399px) { .dash { grid-template-columns: minmax(0, 1fr) 270px; } }
-@media (min-width: 1101px) and (min-height: 760px) {
-  .dash-side { position: sticky; top: 0; max-height: 100vh; overflow-y: auto; }
-}
 .dash .quotes-panel { container-type: inline-size; }
 @container (max-width: 300px) { .dash .quote-row .quote-spark { width: 52px; } .dash .quote-row { gap: 8px; } }
 @container (max-width: 250px) { .dash .quote-row .quote-spark { display: none; } }
