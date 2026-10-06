@@ -1036,6 +1036,7 @@
 </style>
 <link rel="stylesheet" href="/assets/themes.css?v=995daca531" data-pulsarium-theme="styles">
 <link rel="stylesheet" href="/assets/insider-radar.css?v=5">
+<link rel="stylesheet" href="/assets/sector-analytics.css?v=1">
 </head>
 <body>
 
@@ -1186,7 +1187,8 @@
   </div>
 </div>
 
-<aside class="dash-side" aria-label="Insider activity and the personal cabinet">
+<aside class="dash-side" aria-label="Market signals and the personal cabinet">
+  <div class="market-signals">
   <aside class="panel insider-radar" id="insider-radar" aria-labelledby="insider-radar-title">
     <div class="panel-edge" aria-hidden="true"></div>
     <h2 id="insider-radar-title">Insider activity</h2>
@@ -1207,6 +1209,21 @@
       <p data-radar-rules-summary>Purchases total at least $100,000 per company. Reported transaction values. Updated twice daily.</p>
     </details>
   </aside>
+  <section class="panel sector-overview" id="sector-overview" aria-labelledby="sector-overview-title">
+    <div class="panel-edge" aria-hidden="true"></div>
+    <div class="sector-overview-heading">
+      <h2 id="sector-overview-title">Sector overview</h2>
+      <button type="button" class="sector-icon" data-sector-open aria-label="Expand sector analytics" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M21 3l-7 7M9 21H3v-6M3 21l7-7"/></svg>
+      </button>
+    </div>
+    <p class="sector-caption" data-sector-period>SEC company filings</p>
+    <p class="sector-state" data-sector-state role="status">Loading industry fundamentals…</p>
+    <div data-sector-summary hidden></div>
+    <button type="button" class="sector-more" data-sector-more aria-expanded="false" hidden>More sectors</button>
+    <button type="button" class="sector-link" data-sector-open disabled>Sector map &amp; details <span aria-hidden="true">↗</span></button>
+  </section>
+  </div>
   <div class="panel side-cta">
     <div class="panel-edge" aria-hidden="true"></div>
     <span class="eyebrow">Personal cabinet</span>
@@ -1249,6 +1266,49 @@
 
 <script src="/assets/analytics.js" defer></script>
 <script src="/assets/insider-radar.js?v=2" defer></script>
+<dialog class="sector-sheet" id="sector-sheet" aria-labelledby="sector-sheet-title" data-expanded="false">
+  <header class="sector-sheet-header">
+    <div><p class="sector-eyebrow">SEC · Company fundamentals</p><h2 id="sector-sheet-title">Sector Analytics</h2></div>
+    <div class="sector-sheet-actions">
+      <button type="button" class="sector-icon" data-sector-maximize aria-label="Expand to full width" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M8 21H3v-5"/></svg>
+      </button>
+      <button type="button" class="sector-icon" data-sector-close aria-label="Close sector analytics" autofocus>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="sector-sheet-body">
+    <div class="sector-sheet-meta" data-sector-meta></div>
+    <p class="sector-coverage" data-sector-coverage></p>
+    <div class="sector-view-tabs" role="group" aria-label="Sector analytics view">
+      <button type="button" data-sector-view="map" aria-pressed="true" aria-controls="sector-map-view">Sector map</button>
+      <button type="button" data-sector-view="details" aria-pressed="false" aria-controls="sector-details-view">Details</button>
+    </div>
+    <section id="sector-map-view" data-sector-content="map" aria-labelledby="sector-map-title">
+      <div class="sector-section-head"><h3 id="sector-map-title">Sector map</h3><p class="sector-caption">Revenue · YoY · median</p></div>
+      <div class="sector-map-grid" data-sector-map></div>
+      <div class="sector-legend"><span class="sector-up"><i aria-hidden="true"></i>Business growth</span><span class="sector-down"><i aria-hidden="true"></i>Under pressure</span><span><i aria-hidden="true"></i>Mixed / limited sample</span></div>
+      <div class="sector-section-head"><h3>Compare industries</h3></div>
+      <div class="sector-table-wrap"><table class="sector-table">
+        <thead><tr><th scope="col">Industry</th><th scope="col">Companies</th><th scope="col">Revenue YoY</th><th scope="col">Margin change</th><th scope="col">Positive FCF</th></tr></thead>
+        <tbody data-sector-table></tbody>
+      </table></div>
+      <p class="sector-note">Quarterly business performance. Margin change is in percentage points; free cash flow uses the annual reporting window. Open an industry for sample sizes and filing sources.</p>
+    </section>
+    <section id="sector-details-view" data-sector-content="details" aria-labelledby="sector-detail-title" hidden>
+      <div class="sector-detail-controls"><label for="sector-industry">Industry</label><select id="sector-industry" data-sector-select></select></div>
+      <div data-sector-details></div>
+    </section>
+    <details class="sector-method">
+      <summary>Data &amp; methodology</summary>
+      <div data-sector-methodology></div>
+      <p>The overview highlights revenue growth with stable or improving margins, plus industries with falling revenue or margins. Each highlighted value names its metric. Map colours use the combined revenue and margin signal.</p>
+      <a href="https://www.sec.gov/search-filings/edgar-application-programming-interfaces" target="_blank" rel="noopener noreferrer">SEC data documentation ↗</a>
+    </details>
+  </div>
+</dialog>
+<script src="/assets/sector-analytics.js?v=1" defer></script>
 <script src="../news_data.js" onerror="window.__NO_DATA_FILE__ = true"></script>
 <script>
 (function () {
