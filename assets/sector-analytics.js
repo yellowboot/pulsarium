@@ -6,7 +6,7 @@
   if (!overview || !sheet || typeof sheet.showModal !== 'function') return;
   const endpoint = 'https://omkeplyeuxwlsqnblsjm.supabase.co/rest/v1/sec_sector_analytics?id=eq.global&select=payload';
   const publishableKey = 'sb_publishable_Iike5dnuHEuwIIF-qruzzg_WkWJodcF';
-  const cacheKey = 'pulsarium-sector-snapshot-v2';
+  const cacheKey = 'pulsarium-sector-snapshot-v3';
   const ttl = 15 * 60 * 1000;
   const body = sheet.querySelector('.sector-sheet-body');
   let snapshot, selected, view = 'map', more = false, opener, newsY = 0, oldBodyOverflow, oldHtmlOverflow;
@@ -17,6 +17,7 @@
   const signed = (value, suffix = '%') => number(value) ? `${value > 0 ? '+' : ''}${value.toFixed(value !== 0 && Math.abs(value) < .1 ? 2 : 1)}${suffix}` : '—';
   const percent = value => number(value) ? `${value.toFixed(0)}%` : '—';
   const weighted = s => number(s.revenue_total_yoy);
+  const ranked = data => data.company_ranking === 'revenue';
   const revenue = s => weighted(s) ? s.revenue_total_yoy : s.revenue_yoy;
   const tone = value => number(value) && value !== 0 ? value > 0 ? 'sector-up' : 'sector-down' : '';
   const money = value => number(value) ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 }).format(value) : '—';
@@ -29,7 +30,7 @@
     return node;
   };
   function valid(data) {
-    return data?.version === 1 && /^Q[1-4] \d{4}$/.test(data.period) && /^\d{4}$/.test(data.cash_flow_period) &&
+    return data?.version === 1 && (data.company_ranking === undefined || ranked(data)) && /^Q[1-4] \d{4}$/.test(data.period) && /^\d{4}$/.test(data.cash_flow_period) &&
       count(data.coverage?.included) && count(data.coverage?.eligible) && count(data.coverage?.classified) &&
       Array.isArray(data.sectors) && data.sectors.length > 0 && data.sectors.every(s =>
         /^[a-z][a-z-]+$/.test(s.id) && typeof s.name === 'string' && count(s.company_count) && s.company_count > 0 && number(s.revenue_yoy) &&
@@ -207,16 +208,18 @@
     insiders.append(el('p', 'sector-note', `Available disclosures within the last 30 days · through ${date(through)}. ${window.partial ? 'The collection history currently covers part of this window. ' : ''}Classified issuers only; planned purchases are excluded.`));
     root.append(insiders);
     const companies = el('section', 'sector-card');
-    companies.append(el('h3', '', 'Companies behind the trend'), el('p', 'sector-note', 'Highest and lowest percentage revenue changes in the covered sample. Quarterly revenue shows the scale of each business. Open a ticker to see its SEC filing.'));
+    const revenueRanking = ranked(snapshot);
+    companies.append(el('h3', '', revenueRanking ? 'Largest companies by revenue' : 'Companies behind the trend'),
+      el('p', 'sector-note', revenueRanking ? 'Largest quarterly revenue in the covered sample. YoY change in parentheses. Open a ticker for its SEC filing.' : 'Highest and lowest percentage revenue changes in the covered sample. Quarterly revenue shows the scale of each business. Open a ticker to see its SEC filing.'));
     const list = el('div', 'sector-company-list');
     s.companies.forEach(c => {
-      const row = el('div', 'sector-company'), info = el('div'), values = el('div');
+      const row = el('div', 'sector-company'), info = el('div'), values = el('div', 'sector-company-values');
       const url = typeof c.source === 'string' && /^https:\/\/www\.sec\.gov\/Archives\/edgar\/data\/\d+\/\d+\/\d{10}-\d{2}-\d{6}-index\.html$/.test(c.source) ? c.source : null;
       const ticker = el(url ? 'a' : 'span', '', c.symbol);
       if (url) { ticker.href = url; ticker.target = '_blank'; ticker.rel = 'noopener noreferrer'; ticker.setAttribute('aria-label', `${c.symbol}: open SEC filing`); }
       info.append(ticker, el('p', 'sector-company-name', c.name), el('small', '', `Quarter ended ${date(c.period_end)}`));
       if (number(c.revenue_current) && number(c.revenue_previous)) {
-        info.append(el('p', 'sector-company-revenue', `Revenue: ${money(c.revenue_current)}`));
+        if (!revenueRanking) info.append(el('p', 'sector-company-revenue', `Revenue: ${money(c.revenue_current)}`));
         const previous = el('small', '', `Prior-year quarter: ${money(c.revenue_previous)}`);
         previous.title = `Quarter ended ${date(c.revenue_previous_end)}`; info.append(previous);
         if (c.low_revenue_base) {
@@ -224,7 +227,11 @@
           flag.title = 'Prior-year quarterly revenue below $1 million.'; info.append(flag);
         }
       }
-      values.append(el('strong', tone(c.revenue_yoy), signed(c.revenue_yoy)), el('small', '', 'Revenue YoY'));
+      if (revenueRanking) {
+        const value = el('strong', 'sector-company-value');
+        value.append(el('span', 'sector-company-amount', money(c.revenue_current)), el('span', `sector-company-yoy ${tone(c.revenue_yoy)}`, `(${signed(c.revenue_yoy)})`));
+        values.append(value, el('small', '', 'Quarterly revenue · YoY'));
+      } else values.append(el('strong', tone(c.revenue_yoy), signed(c.revenue_yoy)), el('small', '', 'Revenue YoY'));
       row.append(info, values); list.append(row);
     });
     companies.append(list); root.append(companies);
@@ -241,13 +248,13 @@
     meta.replaceChildren(el('strong', '', snapshot.period), el('span', '', `${snapshot.coverage.included.toLocaleString('en-US')} companies · ${snapshot.sectors.length} industries`));
     const coverage = snapshot.coverage;
     const updated = new Date(snapshot.updated_at);
-    query('[data-sector-coverage]').textContent = `SEC coverage: ${coverage.classified.toLocaleString('en-US')} of ${coverage.eligible.toLocaleString('en-US')} eligible issuers classified. ${coverage.complete ? '' : 'Coverage is expanding. '}Annual cash flow: ${snapshot.cash_flow_period}. ${Number.isNaN(updated.getTime()) ? '' : `Updated ${updated.toLocaleDateString('en-US', { timeZone: 'UTC' })}.`}`;
+    query('[data-sector-coverage]').textContent = `Revenue period: ${snapshot.period}. SEC coverage: ${coverage.classified.toLocaleString('en-US')} of ${coverage.eligible.toLocaleString('en-US')} eligible issuers classified. ${coverage.complete ? '' : 'Coverage is expanding. '}Annual cash flow: ${snapshot.cash_flow_period}. ${Number.isNaN(updated.getTime()) ? '' : `Snapshot refreshed ${updated.toLocaleDateString('en-US', { timeZone: 'UTC' })}.`}`;
     const select = query('[data-sector-select]'); select.replaceChildren();
     [...snapshot.sectors].sort((a, b) => a.name.localeCompare(b.name)).forEach(s => { const option = el('option', '', s.name); option.value = s.id; select.append(option); });
     select.value = selected;
     const methods = query('[data-sector-methodology]'); methods.replaceChildren();
     Object.entries(snapshot.methodology || {}).forEach(([key, text]) => {
-      const p = el('p'), label = el('strong', '', `${({ universe: 'Coverage', revenue: 'Revenue', company_values: 'Company context', margin: 'Operating margin', cash_flow: 'Free cash flow', direction: 'Industry signal', insiders: 'Insider activity', cache: 'Updates' })[key] || key}: `);
+      const p = el('p'), label = el('strong', '', `${({ universe: 'Coverage', reporting_period: 'Reporting period', revenue: 'Revenue', company_values: 'Company context', margin: 'Operating margin', cash_flow: 'Free cash flow', direction: 'Industry signal', insiders: 'Insider activity', cache: 'Updates' })[key] || key}: `);
       p.append(label, document.createTextNode(String(text))); methods.append(p);
     });
     renderSummary(); renderMap(); renderDetails(); setView(view);
@@ -255,14 +262,14 @@
   async function load() {
     let cached;
     try { cached = JSON.parse(sessionStorage.getItem(cacheKey)); } catch (_) { /* Storage can be unavailable. */ }
-    if (cached && valid(cached.payload) && cached.payload.sectors.every(weighted) && Date.now() - cached.saved < ttl) { render(cached.payload); return; }
+    if (cached && valid(cached.payload) && ranked(cached.payload) && cached.payload.sectors.every(weighted) && Date.now() - cached.saved < ttl) { render(cached.payload); return; }
     try {
       const response = await fetch(endpoint, { headers: { apikey: publishableKey }, signal: AbortSignal.timeout(15000) });
       if (!response.ok) throw new Error('Snapshot unavailable');
       const rows = await response.json(), data = rows?.[0]?.payload;
       if (!valid(data)) throw new Error('Snapshot not ready');
       render(data);
-      try { if (data.sectors.every(weighted)) sessionStorage.setItem(cacheKey, JSON.stringify({ saved: Date.now(), payload: data })); } catch (_) { /* Storage can be unavailable. */ }
+      try { if (ranked(data) && data.sectors.every(weighted)) sessionStorage.setItem(cacheKey, JSON.stringify({ saved: Date.now(), payload: data })); } catch (_) { /* Storage can be unavailable. */ }
     } catch (_) {
       if (cached && valid(cached.payload)) {
         render(cached.payload);

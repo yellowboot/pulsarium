@@ -105,6 +105,10 @@
 .sector-company-flag { display: inline-block; max-width: 100%; margin-top: 7px; padding: 2px 7px; border: 1px solid var(--border);
   border-radius: 999px; background: var(--bg-2); color: var(--text-hi); font: 500 10px/1.6 var(--font-ui); }
 .sector-company strong { font: 600 13px var(--font-mono); color: var(--text-hi); }
+.sector-company-values { min-width: 0; max-width: 156px; text-align: right; }
+.sector-company-value { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: baseline; gap: 4px 6px; }
+.sector-company-value > span { white-space: nowrap; }
+.sector-company-yoy { font-size: 11px; }
 .sector-company small { display: block; color: var(--text-mid); font-size: 10.5px; }
 .sector-method { margin-top: 24px; color: var(--text-mid); font-size: 11.5px; }
 .sector-method summary { cursor: pointer; color: var(--text-hi); font-weight: 600; }
@@ -141,6 +145,7 @@
   .sector-metric h4 { margin: 0; }
   .sector-metric p { grid-column: 1 / -1; margin: 0; }
   .sector-card { padding: 16px; }
+  .sector-company { grid-template-columns: minmax(0, 1fr) minmax(0, 120px); }
   .sector-insider-values { gap: 10px; }
   .sector-insider-values strong { font-size: 18px; }
 }
