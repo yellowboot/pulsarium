@@ -1354,12 +1354,15 @@ def main():
 
     summary = build_summary(deduped)
     indices = fetch_all_indices()
+    import market_movers  # here, not at the top: it reads this module's COMPANY_MAP
+    movers = market_movers.public(market_movers.refresh())
 
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "generated_at_display": datetime.now().strftime("%d.%m.%Y %H:%M"),
         "summary": summary,
         "indices": indices,
+        "movers": movers,
         "items": deduped,
     }
 
