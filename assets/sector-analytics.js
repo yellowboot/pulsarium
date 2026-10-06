@@ -160,6 +160,9 @@
   function renderDetails() {
     const s = snapshot.sectors.find(item => item.id === selected);
     if (!s) return;
+    sheet.querySelectorAll('[data-sector-map] [data-sector-id]').forEach(button => {
+      button.setAttribute('aria-pressed', String(button.dataset.sectorId === selected));
+    });
     const root = query('[data-sector-details]');
     const title = el('h3', 'sector-detail-title', s.name); title.id = 'sector-detail-title';
     root.replaceChildren(title, el('p', 'sector-detail-description', `${stateName(s)} · ${s.company_count} companies with comparable quarterly revenue · ${snapshot.period}`));

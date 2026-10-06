@@ -61,6 +61,7 @@
 .sector-tile[data-direction='growth'] { background: var(--sector-up-bg); border-color: color-mix(in srgb, var(--sector-up) 25%, transparent); }
 .sector-tile[data-direction='pressure'] { background: var(--sector-down-bg); border-color: color-mix(in srgb, var(--sector-down) 25%, transparent); }
 .sector-tile:hover { border-color: var(--gold-1); background: var(--card-hover); }
+.sector-tile[aria-pressed='true'] { outline: 1px solid var(--gold-1); outline-offset: 1px; }
 .sector-tile-name { color: var(--text-hi); font-size: 13px; font-weight: 600; }
 .sector-tile-value { font: 600 23px/1.4 var(--font-mono); color: var(--text-hi); }
 .sector-tile-foot { margin-top: auto; color: var(--text-mid); font-size: 11px; }
