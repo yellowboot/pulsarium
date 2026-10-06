@@ -133,11 +133,20 @@ def refresh(path: str = STORE, now: datetime | None = None) -> dict:
 
     names = companies()
     since = (now.date() - timedelta(days=10)).isoformat()
+    # A failed read isn't recorded as an attempt: the next run asks again.
     try:
         fresh = build(read_closes(key, sorted(names), since), names)
+    except urllib.error.HTTPError as error:
+        try:
+            problem = json.load(error).get("error") or {}
+        except ValueError:
+            problem = {}
+        print(f"Market movers: Marketstack answered HTTP {error.code} "
+              f"{problem.get('code', '')}: {problem.get('message', '')}; keeping the stored ones")
+        return stored
     except (urllib.error.URLError, TimeoutError, ValueError) as error:
         print(f"Market movers: Marketstack read failed ({type(error).__name__}); keeping the stored ones")
-        fresh = {}
+        return stored
     result = fresh if fresh.get("session", "") > stored.get("session", "") else stored
     result = {**result, "attempted_at": now.isoformat()}
     os.makedirs(os.path.dirname(path), exist_ok=True)
