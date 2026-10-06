@@ -280,6 +280,46 @@ BROKERS = {
                 "No. Nothing connects to Schwab: you export your history as a CSV and upload the file. Your Schwab "
                 "login never leaves your hands."),
     },
+    "etrade": {
+        "region": "us",
+        "name": "E*TRADE",
+        "export": [
+            ("Open your transaction history", "Log in to E*TRADE on the website, open <em>Accounts → Transactions</em>, choose the account, set a custom date range and click <em>Search</em>."),
+            ("Download the spreadsheet", "Click the download icon and choose the spreadsheet (CSV) format. E*TRADE saves the file as <em>DownloadTxnHistory.csv</em>."),
+        ],
+        "notes": [
+            ("Upload it as it is", "The account and total lines above the table are skipped; two-digit years and the “--” in empty cells are read as E*TRADE writes them."),
+            ("Trades and dividends", "Bought, Sold and dividend rows are read; interest and transfers are left out as cash movements, and anything else is flagged so you can exclude it."),
+        ],
+        "faq": [
+            ("Which E*TRADE file do I need?",
+             "The transaction history downloaded as a spreadsheet (<em>DownloadTxnHistory.csv</em>). No need to "
+             "delete the lines above the table — Pulsarium finds the table itself."),
+            ("Are my E*TRADE dividends imported too?",
+             "Yes. Dividend and qualified dividend rows come in with the trades and are recorded as received "
+             "dividends of the position that paid them."),
+        ],
+    },
+    "webull": {
+        "region": "us",
+        "name": "Webull",
+        "export": [
+            ("Export your orders", "In the Webull app open <em>Account</em>, pick the account, go to <em>History</em> and tap the export icon at the top right. In the desktop app it is the <em>Orders</em> widget's menu → <em>Export Orders</em>."),
+            ("Save the file from your email", "Confirm your email address: within about 5–10 minutes Webull sends the CSV (<em>Webull_Orders_Records.csv</em>) as an attachment. Save it and upload it."),
+        ],
+        "notes": [
+            ("Only filled orders", "Cancelled and failed orders are skipped on their own; a partly filled order is imported for the shares that were filled, at their average price."),
+            ("The US trading day", "Webull writes order times in New York time (EST/EDT); every trade keeps the date Webull shows, after-hours trades included."),
+        ],
+        "faq": [
+            ("Which Webull file do I need?",
+             "The orders export Webull emails to you (<em>Webull_Orders_Records.csv</em>). Upload it as it is: it "
+             "lists every order, and only the filled ones become trades."),
+            ("Are Webull dividends imported?",
+             "Webull's orders file has no dividends. Pulsarium detects the dividends of the stocks you hold and "
+             "shows them for your confirmation; once confirmed, they are recorded against the position."),
+        ],
+    },
 }
 
 
@@ -287,7 +327,9 @@ def broker_page(slug: str, broker: dict) -> dict:
     name = broker["name"]
     short = broker.get("short", name)
     notes = features(f"What Pulsarium does with a {short} file", broker["notes"])
-    faq_section, faq_ld = faq([broker["faq"], COMMON_FAQ["broker"], COMMON_FAQ["free"]])
+    # one broker question, or a list of them
+    own = broker["faq"] if isinstance(broker["faq"], list) else [broker["faq"]]
+    faq_section, faq_ld = faq([*own, COMMON_FAQ["broker"], COMMON_FAQ["free"]])
     body = (
         hero(f"Broker import · {name}",
              f"Import your {esc(name)} trades into a portfolio tracker",
@@ -350,7 +392,7 @@ def portfolio_tracker() -> dict:
                "notes, its news and, for US-listed companies, key figures and dividend history from SEC filings.")
         + steps("Start in three steps", [
             ("Create a free account", "Sign up with email or Google and turn on two-factor authentication if you like."),
-            ("Add your trades", "Upload your broker's file — <a href=\"/import/\">Revolut, DEGIRO, Trading 212, IBKR, Robinhood, Fidelity, Schwab</a> or any CSV/TSV — or add trades by hand."),
+            ("Add your trades", "Upload your broker's file — <a href=\"/import/\">Revolut, DEGIRO, Trading 212, IBKR, Robinhood, Fidelity, Schwab, E*TRADE, Webull</a> or any CSV/TSV — or add trades by hand."),
             ("Follow along", "Watch weights, dividends and news; set <a href=\"/price-alerts/\">price alerts</a> on the names you are waiting for."),
         ])
         + closing_cta("Put your portfolio in one calm place",
@@ -362,7 +404,7 @@ def portfolio_tracker() -> dict:
         "path": "/portfolio-tracker/", "crumb": "Portfolio tracker", "og_image": "/assets/shots/cabinet-overview.jpg",
         "title": "Free stock portfolio tracker with dividends, alerts and news | Pulsarium",
         "description": "Track several stock portfolios in different currencies: weights, performance, dividends, "
-                       "price alerts and news about your holdings. Import from Revolut, DEGIRO, Trading 212, IBKR, Robinhood, Fidelity or Schwab "
+                       "price alerts and news about your holdings. Import from Revolut, DEGIRO, Trading 212, IBKR, Robinhood, Fidelity, Schwab, E*TRADE or Webull "
                        "files - no broker login. Free during the beta.",
         "body": body, "head": faq_ld,
     }
@@ -465,7 +507,7 @@ def import_hub() -> dict:
         hero("Broker import",
              "Import your trades from a broker file — no broker login",
              "Pulsarium reads the transaction exports of Revolut, DEGIRO, Trading 212, Interactive Brokers, Robinhood, "
-             "Fidelity and Charles Schwab — and CSV or TSV files from other brokers such as E*TRADE, Webull, Saxo or XTB "
+             "Fidelity, Charles Schwab, E*TRADE and Webull — and CSV or TSV files from other brokers such as Saxo or XTB "
              "once you match their columns. Every row is reviewed with you before anything is saved.",
              ("/portfolio-tracker/", "See the portfolio tracker"))
         + f'<section class="block"><h2>Europe and global brokers</h2>{cards("global")}</section>'
@@ -483,7 +525,7 @@ def import_hub() -> dict:
         "path": "/import/", "crumb": "Broker import",
         "title": "Import broker trades into a portfolio tracker: Revolut, DEGIRO, IBKR, Robinhood, Schwab | Pulsarium",
         "description": "Import your broker's transaction export into Pulsarium's free portfolio tracker: Revolut, "
-                       "DEGIRO, Trading 212, Interactive Brokers, Robinhood, Fidelity, Schwab or any CSV/TSV. "
+                       "DEGIRO, Trading 212, Interactive Brokers, Robinhood, Fidelity, Schwab, E*TRADE, Webull or any CSV/TSV. "
                        "No broker login, every row reviewed.",
         "body": body, "head": faq_ld,
     }
