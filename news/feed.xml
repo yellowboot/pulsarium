@@ -6,7 +6,25 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Tue, 06 Oct 2026 00:38:33 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 06 Oct 2026 00:40:24 +0000</lastBuildDate>
+  <item>
+    <title>KKR to buy fund administrator Gen II in $5.1 billion deal including debt</title>
+    <link>https://www.investing.com/news/stock-market-news/kkr-to-buy-fund-administrator-gen-ii-in-51-billion-deal-including-debt-4933145</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/kkr-to-buy-fund-administrator-gen-ii-in-51-billion-deal-including-debt-4933145</guid>
+    <pubDate>Tue, 06 Oct 2026 00:24:59 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>KKR</category>
+  </item>
+  <item>
+    <title>OpenAI in talks with UAE funds to anchor $30 bln funding round - Bloomberg</title>
+    <link>https://www.investing.com/news/stock-market-news/openai-in-talks-with-uae-funds-to-anchor-30-bln-funding-round--bloomberg-4933143</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/openai-in-talks-with-uae-funds-to-anchor-30-bln-funding-round--bloomberg-4933143</guid>
+    <pubDate>Tue, 06 Oct 2026 00:24:16 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
   <item>
     <title>Stock futures are little changed after Nasdaq hits new record: Live updates</title>
     <link>https://www.cnbc.com/2026/10/05/stock-market-today-live-updates.html</link>
@@ -435,24 +453,6 @@
     <link>https://www.investing.com/news/stock-market-news/why-is-vaxcyte-stock-sliding-in-afterhours-trading-today-93CH-4932984</link>
     <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-vaxcyte-stock-sliding-in-afterhours-trading-today-93CH-4932984</guid>
     <pubDate>Mon, 05 Oct 2026 21:43:59 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Why is NeoGenomics stock sliding today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-neogenomics-stock-sliding-today-93CH-4932983</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-neogenomics-stock-sliding-today-93CH-4932983</guid>
-    <pubDate>Mon, 05 Oct 2026 21:43:48 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Why is Option Care Health stock surging today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-option-care-health-stock-surging-today-93CH-4932982</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-option-care-health-stock-surging-today-93CH-4932982</guid>
-    <pubDate>Mon, 05 Oct 2026 21:43:41 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
     <description></description>
     
