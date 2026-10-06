@@ -26,6 +26,10 @@ STORE = "data/movers.json"
 BATCH = 100              # symbols per Marketstack request
 SHOWN = 8                # rows per list
 RETRY_HOURS = 3          # wait this long before asking again for a session not there yet
+# A bigger one-day move among these large companies is nearly always a data
+# slip (a share-ratio change the closes don't reflect), not a market move:
+# América Movil showed -98% on 2026-10-02.
+MAX_MOVE_PCT = 50
 READY_UTC = (22, 30)     # a US session's closes are read after this time (UTC)
 
 # Not US-listed shares: market-wide entries, coins, and listings abroad that
@@ -98,13 +102,19 @@ def build(rows: dict, names: dict) -> dict:
     for symbol, history in rows.items():
         if symbol not in names or latest.get(symbol) != session or len(history) < 2:
             continue
-        close, previous = history[0].get("close"), history[1].get("close")
-        if not close or not previous or close <= 0 or previous <= 0:
+        close = history[0].get("close")
+        # the change from split-adjusted closes where Marketstack has them
+        now_adj = history[0].get("adj_close") or close
+        then_adj = history[1].get("adj_close") or history[1].get("close")
+        if not close or not now_adj or not then_adj or close <= 0 or now_adj <= 0 or then_adj <= 0:
+            continue
+        change = (float(now_adj) / float(then_adj) - 1) * 100
+        if abs(change) > MAX_MOVE_PCT:
             continue
         moves.append({
             "ticker": symbol, "name": names[symbol]["name"], "slug": names[symbol]["slug"],
             "close": round(float(close), 2),
-            "change_pct": round((float(close) / float(previous) - 1) * 100, 2),
+            "change_pct": round(change, 2),
             "volume": int(history[0].get("volume") or 0),
         })
     gainers = sorted((m for m in moves if m["change_pct"] > 0), key=lambda m: -m["change_pct"])

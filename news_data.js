@@ -555,14 +555,6 @@ const NEWS_DATA = {
     ],
     "losers": [
       {
-        "ticker": "AMX",
-        "name": "America Movil",
-        "slug": "amx",
-        "close": 21.29,
-        "change_pct": -98.01,
-        "volume": 3006000
-      },
-      {
         "ticker": "WDC",
         "name": "Western Digital",
         "slug": "wdc",
