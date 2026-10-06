@@ -1,1 +1,203 @@
-{}
+{
+ "session": "2026-10-02",
+ "count": 631,
+ "gainers": [
+  {
+   "ticker": "RTX",
+   "name": "RTX",
+   "slug": "rtx",
+   "close": 184.68,
+   "change_pct": 12.17,
+   "volume": 3808734
+  },
+  {
+   "ticker": "TER",
+   "name": "Teradyne",
+   "slug": "ter",
+   "close": 449.04,
+   "change_pct": 8.0,
+   "volume": 3399000
+  },
+  {
+   "ticker": "HPE",
+   "name": "Hewlett Packard Enterprise",
+   "slug": "hpe",
+   "close": 69.33,
+   "change_pct": 7.36,
+   "volume": 29049700
+  },
+  {
+   "ticker": "SPCX",
+   "name": "SpaceX",
+   "slug": "spcx",
+   "close": 158.96,
+   "change_pct": 7.35,
+   "volume": 119446900
+  },
+  {
+   "ticker": "STM",
+   "name": "STMicroelectronics",
+   "slug": "stm",
+   "close": 57.26,
+   "change_pct": 7.03,
+   "volume": 16335100
+  },
+  {
+   "ticker": "ECHO",
+   "name": "EchoStar",
+   "slug": "echo",
+   "close": 94.25,
+   "change_pct": 6.8,
+   "volume": 4943800
+  },
+  {
+   "ticker": "MTSI",
+   "name": "MACOM",
+   "slug": "mtsi",
+   "close": 321.6,
+   "change_pct": 6.62,
+   "volume": 1351200
+  },
+  {
+   "ticker": "ASX",
+   "name": "ASE Technology",
+   "slug": "asx",
+   "close": 47.45,
+   "change_pct": 6.08,
+   "volume": 8074200
+  }
+ ],
+ "losers": [
+  {
+   "ticker": "AMX",
+   "name": "America Movil",
+   "slug": "amx",
+   "close": 21.29,
+   "change_pct": -98.01,
+   "volume": 3006000
+  },
+  {
+   "ticker": "WDC",
+   "name": "Western Digital",
+   "slug": "wdc",
+   "close": 415.29,
+   "change_pct": -10.22,
+   "volume": 24717300
+  },
+  {
+   "ticker": "STX",
+   "name": "Seagate Technology",
+   "slug": "stx",
+   "close": 848.99,
+   "change_pct": -10.21,
+   "volume": 13556700
+  },
+  {
+   "ticker": "ACN",
+   "name": "Accenture",
+   "slug": "acn",
+   "close": 198.9,
+   "change_pct": -6.31,
+   "volume": 10032300
+  },
+  {
+   "ticker": "STLA",
+   "name": "Stellantis",
+   "slug": "stla",
+   "close": 4.4,
+   "change_pct": -6.18,
+   "volume": 42841500
+  },
+  {
+   "ticker": "UTHR",
+   "name": "United Therapeutics",
+   "slug": "uthr",
+   "close": 541.7,
+   "change_pct": -5.19,
+   "volume": 996700
+  },
+  {
+   "ticker": "CTVA",
+   "name": "Corteva",
+   "slug": "ctva",
+   "close": 11.92,
+   "change_pct": -5.17,
+   "volume": 78723800
+  },
+  {
+   "ticker": "ALNY",
+   "name": "Alnylam",
+   "slug": "alny",
+   "close": 219.72,
+   "change_pct": -4.96,
+   "volume": 1661700
+  }
+ ],
+ "active": [
+  {
+   "ticker": "NKE",
+   "name": "Nike",
+   "slug": "nke",
+   "close": 33.87,
+   "change_pct": -3.64,
+   "volume": 142567700
+  },
+  {
+   "ticker": "NVDA",
+   "name": "Nvidia",
+   "slug": "nvda",
+   "close": 233.95,
+   "change_pct": 1.34,
+   "volume": 135167812
+  },
+  {
+   "ticker": "SPCX",
+   "name": "SpaceX",
+   "slug": "spcx",
+   "close": 158.96,
+   "change_pct": 7.35,
+   "volume": 119446900
+  },
+  {
+   "ticker": "INTC",
+   "name": "Intel",
+   "slug": "intc",
+   "close": 119.33,
+   "change_pct": -0.56,
+   "volume": 95139500
+  },
+  {
+   "ticker": "CTVA",
+   "name": "Corteva",
+   "slug": "ctva",
+   "close": 11.92,
+   "change_pct": -5.17,
+   "volume": 78723800
+  },
+  {
+   "ticker": "NU",
+   "name": "Nu Holdings",
+   "slug": "nu",
+   "close": 13.43,
+   "change_pct": 1.05,
+   "volume": 77988600
+  },
+  {
+   "ticker": "NOK",
+   "name": "Nokia",
+   "slug": "nok",
+   "close": 10.6,
+   "change_pct": 2.22,
+   "volume": 75814932
+  },
+  {
+   "ticker": "AAL",
+   "name": "American Airlines",
+   "slug": "aal",
+   "close": 12.94,
+   "change_pct": -1.45,
+   "volume": 73046700
+  }
+ ],
+ "attempted_at": "2026-10-06T00:38:18.655235+00:00"
+}
