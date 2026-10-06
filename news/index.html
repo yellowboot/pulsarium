@@ -1137,6 +1137,7 @@
   <div class="ticker-track" id="ticker-track"></div>
 </div>
 
+<div class="dash">
 <div class="hero-grid">
   <div class="panel panel-analytics">
     <div class="panel-edge" aria-hidden="true"></div>
@@ -1185,8 +1186,7 @@
   </div>
 </div>
 
-<div class="news-radar-layout">
-  <div class="news-grid" id="news-grid"></div>
+<aside class="dash-side" aria-label="Insider purchases and the personal cabinet">
   <aside class="panel insider-radar" id="insider-radar" aria-labelledby="insider-radar-title">
     <div class="panel-edge" aria-hidden="true"></div>
     <h2 id="insider-radar-title">Insider purchases</h2>
@@ -1203,7 +1203,17 @@
       <p>Purchases total at least $100,000 per company. Reported transaction values. Updated twice daily.</p>
     </details>
   </aside>
-</div>
+  <div class="panel side-cta">
+    <div class="panel-edge" aria-hidden="true"></div>
+    <span class="eyebrow">Personal cabinet</span>
+    <h3>Your portfolio, without a broker login</h3>
+    <p>Upload the file your broker already gives you. See the news about what you hold, SEC figures for each company and price alerts.</p>
+    <a class="header-signin" href="https://app.pulsarium.finance/">Create a free account</a>
+    <small>Free during the public beta</small>
+  </div>
+</aside>
+
+<div class="news-grid" id="news-grid"></div>
 
 <div class="empty-state" id="empty-state" style="display:none">
   <h3>No news yet</h3>
@@ -1211,6 +1221,7 @@
      Run the news fetcher from the project root folder:</p>
   <pre>python3 fetch_news.py</pre>
   <p>Then refresh the page (F5).</p>
+</div>
 </div>
 
 <footer>

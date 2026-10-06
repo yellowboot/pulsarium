@@ -10,6 +10,10 @@
   const method = root.querySelector('[data-radar-method]');
   const buttons = [...root.querySelectorAll('[data-radar-tab]')];
   let data, tab = 'clusters';
+  // A recent headline guarantees that the existing site builder writes a
+  // company page. SEC also covers companies that the news site has not met.
+  const news = typeof NEWS_DATA !== 'undefined' ? NEWS_DATA : null;
+  const companyPages = new Set((news?.items || []).flatMap(item => item.tickers || []));
   const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD',
     notation: 'compact', maximumFractionDigits: 1 });
   const date = value => {
@@ -51,12 +55,14 @@
       cards.forEach(card => {
         const article = element('article', 'insider-radar-card');
         const head = element('div', 'insider-radar-card-head');
-        const ticker = element('a', 'insider-radar-symbol', card.symbol);
-        ticker.href = '/news/' + String(card.symbol).toLowerCase().replace(/[^a-z0-9]+/g, '-') + '/';
+        const ticker = element(companyPages.has(card.symbol) ? 'a' : 'span', 'insider-radar-symbol', card.symbol);
+        if (ticker.tagName === 'A') ticker.href = '/news/' + String(card.symbol).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '/';
         head.append(ticker, element('span', 'insider-radar-value', money.format(Number(card.amount) || 0)));
         article.append(head, element('p', 'insider-radar-company', card.name));
         const people = Array.isArray(card.people) ? card.people : [];
-        const title = card.buyers > 1 ? card.buyers + ' officers / directors' : (people[0]?.title || 'Officer / director');
+        const personTitle = people[0]?.title;
+        const title = card.buyers > 1 ? card.buyers + ' officers / directors' :
+          (personTitle && !/^see remarks$/i.test(personTitle) ? personTitle : 'Officer / director');
         article.append(element('p', 'insider-radar-detail', title + ' · direct purchases'));
         article.append(element('p', 'insider-radar-detail', 'Traded ' + date(card.start) +
           (card.end !== card.start ? '–' + date(card.end) : '') + ' · Filed ' + date(card.disclosed)));
