@@ -63,8 +63,50 @@
     apply(root.getAttribute('data-color-theme'));
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', install, { once: true });
-  else install();
+  // Signed in to the cabinet? It leaves a plain cookie on .pulsarium.finance
+  // (lib/siteBridge.ts there): the first letter of the name and the address
+  // of an uploaded photo, no token. The header's "Sign in" then becomes that
+  // avatar, still opening the cabinet.
+  var APP = 'https://app.pulsarium.finance/';
+  var OWN_PHOTO = /^https:\/\/omkeplyeuxwlsqnblsjm\.supabase\.co\/storage\/v1\/object\/public\/avatars\//;
+  function member() {
+    var pair = document.cookie.split('; ').filter(function (item) { return item.indexOf('pulsarium_member=') === 0; })[0];
+    if (!pair) return null;
+    try {
+      var value = JSON.parse(decodeURIComponent(pair.slice('pulsarium_member='.length)));
+      return value && typeof value.i === 'string' ? value : null;
+    } catch (error) { return null; }
+  }
+
+  function showMember() {
+    var who = member();
+    var signIn = document.querySelector('header a.btn-primary[href^="' + APP + '"], header a.header-signin');
+    if (!who || !signIn) return;
+    var avatar = document.createElement('a');
+    avatar.className = 'header-avatar';
+    avatar.href = APP;
+    avatar.title = 'Your Pulsarium cabinet';
+    avatar.setAttribute('aria-label', 'Open your Pulsarium cabinet');
+    var letter = document.createElement('span');
+    letter.textContent = (who.i || '?').charAt(0).toUpperCase();
+    avatar.appendChild(letter);
+    if (typeof who.a === 'string' && OWN_PHOTO.test(who.a)) {
+      var photo = document.createElement('img');
+      photo.alt = '';
+      photo.addEventListener('error', function () { photo.remove(); });
+      photo.src = who.a;
+      avatar.appendChild(photo);
+    }
+    signIn.replaceWith(avatar);
+  }
+
+  function ready() {
+    install();
+    showMember();
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready, { once: true });
+  else ready();
 
   window.addEventListener('storage', function (event) {
     if (event.key === key || event.key === null) apply(preferredTheme());

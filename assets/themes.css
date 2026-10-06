@@ -181,6 +181,46 @@
   box-shadow: 0 5px 18px rgba(74, 71, 214, .16);
   border-color: var(--accent);
 }
+
+/* Signed in to the cabinet: its avatar in place of "Sign in" (theme.js),
+   drawn as in the cabinet's sidebar - a glowing cyan disc in Neon, the
+   violet-teal gradient in Calm - with an uploaded photo on top. As strong
+   as the header's ".site-nav a:not(.btn)" and later, so the menu's link
+   padding doesn't apply; the letter has its own color and font. */
+a.header-avatar:not(.btn) {
+  flex: none;
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #00f0ff 55%, #0a4a66);
+  box-shadow: 0 0 16px rgba(0, 240, 255, .45);
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.header-avatar > span {
+  color: #04050c;
+  font: 700 14px/1 var(--font-display, 'Orbitron', sans-serif);
+  letter-spacing: 0;
+  text-transform: none;
+  text-shadow: none;
+}
+.header-avatar > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+a.header-avatar:not(.btn):hover { transform: translateY(-2px); box-shadow: 0 0 24px rgba(0, 240, 255, .7); }
+a.header-avatar:not(.btn):focus-visible { outline: 2px solid #00f0ff; outline-offset: 3px; }
+:root[data-color-theme='calm'] a.header-avatar:not(.btn) {
+  background: linear-gradient(135deg, #4a47d6, #0b7f93 60%, #8a33c4);
+  box-shadow: 0 6px 18px rgba(52, 60, 120, .18);
+}
+:root[data-color-theme='calm'] .header-avatar > span { color: #fff; font-family: var(--font-ui); font-weight: 600; }
+:root[data-color-theme='calm'] a.header-avatar:not(.btn):hover { box-shadow: 0 8px 22px rgba(74, 71, 214, .3); }
+:root[data-color-theme='calm'] a.header-avatar:not(.btn):focus-visible { outline-color: var(--accent); }
 :root[data-color-theme='calm'] :is(.btn-ghost, .chip, .trust, .tool, .day-row, .mood-row, .steps li, .faq-item, .embed-switch button, .calc-presets button) {
   color: var(--text);
   background: rgba(255, 255, 255, .78);
