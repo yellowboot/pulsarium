@@ -1213,8 +1213,7 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
                                  **({"og_image": spec["og_image"]} if spec.get("og_image") else {})), True),
              None, "monthly")
 
-    import market_movers  # here, not at the top: it reads fetch_news's COMPANY_MAP
-    fill_home_today(home_today(history, window, market_movers.load(), now), changed_files)
+    fill_home_today(home_today(history, window, now), changed_files)
 
     write_if_changed(os.path.join("news", "feed.xml"), rss_feed(window, now), changed_files)
     static = [(p, None, f) for p, f in STATIC_PAGES]
@@ -1226,15 +1225,13 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
 
 
 # The homepage is hand-written; one block of it is today's market, filled in
-# here between these markers on every build: the Mood Index, the biggest
-# moves at the last close and the day's top headlines. A short summary that
-# leads to the dashboard, not a copy of it.
+# here between these markers on every build: the Mood Index and the day's
+# top headlines. A short summary that leads to the dashboard, not a copy of it.
 TODAY_START, TODAY_END = "<!-- today:start -->", "<!-- today:end -->"
 TODAY_HEADLINES = 3
-TODAY_MOVES = 7
 
 
-def home_today(history: list, window: list, movers: dict, now: datetime) -> str:
+def home_today(history: list, window: list, now: datetime) -> str:
     # the Mood Index is the embeddable widget itself (mood_widget), which
     # follows the page's Neon/Calm switch; its text is here for readers
     # without frames and for search engines
@@ -1243,26 +1240,7 @@ def home_today(history: list, window: list, movers: dict, now: datetime) -> str:
         point = history[-1]
         cards.append(f"""<iframe class="today-mood" src="/mood/widget/" title="Pulsarium Mood Index: {point["value"]}/100, {esc(point["label"].lower())}" loading="lazy"></iframe>""")
 
-    if movers.get("session") and (movers.get("gainers") or movers.get("losers")):
-        def moves(rows):
-            parts = []
-            for m in rows[:TODAY_MOVES]:
-                inner = (f'<b class="mono">{esc(m["ticker"])}</b>'
-                         f'<span class="mono {"pos" if m["change_pct"] >= 0 else "neg"}">'
-                         f'{"+" if m["change_pct"] >= 0 else "−"}{abs(m["change_pct"]):.2f}%</span>')
-                # only companies that have had a headline have a news page
-                if os.path.exists(url_file(f"/news/{m['slug']}/")):
-                    parts.append(f'<li><a href="/news/{esc(m["slug"])}/" title="{esc(m["name"])} news">{inner}</a></li>')
-                else:
-                    parts.append(f'<li><span title="{esc(m["name"])}">{inner}</span></li>')
-            return "".join(parts)
-        session = fmt_short_day(date.fromisoformat(movers["session"]))
-        cards.append(f"""<div class="today-card today-movers">
-          <span class="today-label">Biggest moves · close {session}</span>
-          <div class="today-moves"><ul>{moves(movers.get("gainers") or [])}</ul><ul>{moves(movers.get("losers") or [])}</ul></div>
-        </div>""")
-
-    recent = [i for i in window if i["_time"] >= now - timedelta(hours=24)
+    recent =[i for i in window if i["_time"] >= now - timedelta(hours=24)
               and (i.get("content_type") or "market_signal") == "market_signal"]
     top = sorted(recent, key=lambda i: (-(i.get("importance") or 0), -i["_time"].timestamp()))[:TODAY_HEADLINES]
     if top:

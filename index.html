@@ -71,8 +71,6 @@
     --text-mid: #a9bddf;
     --text-low: #7489b3;
     --line: rgba(120, 220, 255, 0.16);
-    --pos: #3dffa2;
-    --neg: #ff6b8e;
     --pad-x: clamp(16px, 6vw, 86px);
   }
 
@@ -235,7 +233,7 @@
   .today-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .today-more { font-size: 14px; font-weight: 600; color: var(--accent); transition: color 0.2s, text-shadow 0.2s; }
   .today-more:hover { color: var(--accent-ice); text-shadow: 0 0 10px var(--accent); }
-  .today-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.4fr); gap: 14px; }
+  .today-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); gap: 14px; }
   .today-card {
     display: flex; flex-direction: column; gap: 10px;
     padding: 18px 20px; border-radius: 16px;
@@ -246,12 +244,7 @@
      frame stays transparent instead of getting an opaque backdrop. */
   .today-mood { display: block; width: 100%; height: 100%; min-height: 140px; border: 0; border-radius: 12px; background: transparent; color-scheme: normal; }
   .today-label { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-low); }
-  .pos { color: var(--pos); } .neg { color: var(--neg); }
-  .today-moves { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; }
-  .today-moves ul, .today-headlines { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
-  .today-moves :is(a, span[title]) { display: flex; justify-content: space-between; gap: 8px; font-size: 13.5px; }
-  .today-moves b { color: var(--text-hi); }
-  .today-moves a:hover b { color: var(--accent); }
+  .today-headlines { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
   .today-headlines li { display: flex; flex-direction: column; gap: 2px; }
   .today-headlines a {
     font-size: 14.5px; font-weight: 600; line-height: 1.35; color: var(--text-hi);
@@ -259,7 +252,7 @@
   }
   .today-headlines a:hover { color: var(--accent); }
   .today-headlines small { font-size: 12px; color: var(--text-low); }
-  @media (max-width: 1100px) { .today-grid { grid-template-columns: 1fr 1fr; } .today-news { grid-column: 1 / -1; } }
+  @media (max-width: 1100px) { .today-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); } }
   @media (max-width: 900px) { .today { margin-top: 32px; } }
   @media (max-width: 560px) { .today-grid { grid-template-columns: 1fr; } }
 
@@ -378,7 +371,7 @@
   .analytics-consent button { padding:.6rem .85rem; color:inherit; background:#30304d; border:1px solid #8580ab; border-radius:7px; cursor:pointer; }
   .analytics-consent button:last-child { background:#554b90; }
 </style>
-<link rel="stylesheet" href="/assets/themes.css?v=16e63d2cb5" data-pulsarium-theme="styles">
+<link rel="stylesheet" href="/assets/themes.css?v=45595e9005" data-pulsarium-theme="styles">
 </head>
 <body class="home">
 
@@ -466,10 +459,7 @@
           <a class="today-more" href="news/">Open the news dashboard →</a>
         </div>
         <div class="today-grid">
-        <iframe class="today-mood" src="/mood/widget/" title="Pulsarium Mood Index: 70/100, optimistic" loading="lazy"></iframe><div class="today-card today-movers">
-          <span class="today-label">Biggest moves · close Fri 2 Oct</span>
-          <div class="today-moves"><ul><li><a href="/news/rtx/" title="RTX news"><b class="mono">RTX</b><span class="mono pos">+12.17%</span></a></li><li><a href="/news/ter/" title="Teradyne news"><b class="mono">TER</b><span class="mono pos">+8.00%</span></a></li><li><a href="/news/hpe/" title="Hewlett Packard Enterprise news"><b class="mono">HPE</b><span class="mono pos">+7.36%</span></a></li><li><a href="/news/spcx/" title="SpaceX news"><b class="mono">SPCX</b><span class="mono pos">+7.35%</span></a></li><li><span title="STMicroelectronics"><b class="mono">STM</b><span class="mono pos">+7.03%</span></span></li><li><a href="/news/echo/" title="EchoStar news"><b class="mono">ECHO</b><span class="mono pos">+6.80%</span></a></li><li><a href="/news/mtsi/" title="MACOM news"><b class="mono">MTSI</b><span class="mono pos">+6.62%</span></a></li></ul><ul><li><a href="/news/wdc/" title="Western Digital news"><b class="mono">WDC</b><span class="mono neg">−10.22%</span></a></li><li><a href="/news/stx/" title="Seagate Technology news"><b class="mono">STX</b><span class="mono neg">−10.21%</span></a></li><li><a href="/news/acn/" title="Accenture news"><b class="mono">ACN</b><span class="mono neg">−6.31%</span></a></li><li><a href="/news/stla/" title="Stellantis news"><b class="mono">STLA</b><span class="mono neg">−6.18%</span></a></li><li><a href="/news/uthr/" title="United Therapeutics news"><b class="mono">UTHR</b><span class="mono neg">−5.19%</span></a></li><li><a href="/news/ctva/" title="Corteva news"><b class="mono">CTVA</b><span class="mono neg">−5.17%</span></a></li><li><a href="/news/alny/" title="Alnylam news"><b class="mono">ALNY</b><span class="mono neg">−4.96%</span></a></li></ul></div>
-        </div><div class="today-card today-news">
+        <iframe class="today-mood" src="/mood/widget/" title="Pulsarium Mood Index: 70/100, optimistic" loading="lazy"></iframe><div class="today-card today-news">
           <span class="today-label">Top headlines</span>
           <ul class="today-headlines"><li><a href="https://www.investing.com/news/stock-market-news/uber-to-buy-us-catering-platform-ezcater-for-23-billion-4934424" target="_blank" rel="noopener">Uber to buy US catering platform ezCater for $2.3 billion</a><small>Investing.com · 12:55 UTC</small></li><li><a href="https://www.cnbc.com/2026/10/06/iran-war-yemen-saudi-arabia-mokha-oil.html" target="_blank" rel="noopener">Yemen forces reclaim key Red Sea port city from Iran-backed Houthis in major counteroffensive</a><small>CNBC · 08:53 UTC</small></li><li><a href="https://www.investing.com/news/stock-market-news/kkr-to-buy-fund-administrator-gen-ii-in-51-billion-deal-including-debt-4933145" target="_blank" rel="noopener">KKR to buy fund administrator Gen II in $5.1 billion deal including debt</a><small>Investing.com · 00:24 UTC</small></li></ul>
         </div>

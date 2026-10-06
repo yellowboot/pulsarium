@@ -350,18 +350,9 @@
     align-self: start;
   }
   @media (min-width: 1101px) {
-    /* grows when narrow panels need more room than 440px for their text */
-    .hero-grid { min-height: 440px; }
-    .hero-grid > .panel { display: flex; flex-direction: column; height: 100%; }
-    /* the indices list scrolls inside whatever height the row gets */
-    .hero-grid > .quotes-panel { contain: size; }
+    .hero-grid { height: 440px; }
+    .panel, .quotes-panel { display: flex; flex-direction: column; height: 100%; }
   }
-  /* Beside the right column the three panels are narrower: in a tight Main
-     indices panel each row's sparkline shrinks, then steps aside, so the
-     name and the change keep their room. */
-  .quotes-panel { container-type: inline-size; }
-  @container (max-width: 300px) { .quote-row .quote-spark { width: 52px; } .quote-row { gap: 8px; } }
-  @container (max-width: 250px) { .quote-row .quote-spark { display: none; } }
   @media (max-width: 1100px) {
     .hero-grid {
       grid-template-columns: 1fr 1fr;
@@ -388,117 +379,6 @@
         "indices";
     }
   }
-
-  /* ---------- Dashboard: news on the left, a market column on the right ---------- */
-  /* The right column (market movers, the cabinet) runs from the top beside
-     the panels and the cards and stays in view while the cards scroll; on
-     narrower screens it sits between the panels and the cards. */
-  .dash { display: grid; grid-template-columns: minmax(0, 1fr); }
-  .dash-side {
-    padding: 18px 6vw 0;
-    display: grid;
-    gap: 18px;
-    align-content: start;
-  }
-  @media (min-width: 701px) and (max-width: 1100px) {
-    .dash-side { grid-template-columns: 1fr 1fr; align-items: start; }
-  }
-  @media (min-width: 1101px) {
-    .dash {
-      grid-template-columns: minmax(0, 1fr) 300px;
-      grid-template-rows: auto auto 1fr;
-      grid-template-areas: "hero side" "cards side" "empty side";
-      column-gap: 18px;
-      padding-right: 6vw;
-    }
-    .dash > .hero-grid { grid-area: hero; padding-right: 0; }
-    .dash > .news-grid { grid-area: cards; padding-right: 0; }
-    .dash > .empty-state { grid-area: empty; }
-    .dash-side { grid-area: side; padding: 36px 0 0; align-self: start; }
-  }
-  @media (min-width: 1101px) and (max-width: 1399px) {
-    .dash { grid-template-columns: minmax(0, 1fr) 270px; }
-  }
-  @media (min-width: 1101px) and (min-height: 760px) {
-    .dash-side { position: sticky; top: 0; }
-  }
-
-  .movers-panel h2 { justify-content: space-between; }
-  .movers-session {
-    font-family: var(--font-mono, 'JetBrains Mono', monospace);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    text-transform: none;
-    color: var(--text-low);
-  }
-  .movers-tabs { display: flex; gap: 6px; margin-bottom: 8px; }
-  .movers-tab {
-    flex: 1 1 0;
-    height: 30px;
-    padding: 0 6px;
-    border-radius: 9px;
-    border: 1px solid var(--border);
-    background: rgba(10, 18, 40, 0.55);
-    color: var(--text-mid);
-    font-family: var(--font-ui, 'Chakra Petch', sans-serif);
-    font-size: 12.5px;
-    font-weight: 600;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: color 0.2s, border-color 0.2s, background 0.2s;
-  }
-  .movers-tab:hover { color: var(--text-hi); border-color: rgba(0, 240, 255, 0.45); }
-  .movers-tab[aria-selected="true"] { color: var(--bg-0); background: var(--gold-1); border-color: var(--gold-1); }
-  .movers-tab:focus-visible { outline: 2px solid var(--gold-1); outline-offset: 2px; }
-  .movers-list { display: flex; flex-direction: column; gap: 2px; }
-  .mover-row { color: inherit; text-decoration: none; }
-  .mover-row .quote-label { min-width: 0; }
-  .mover-row .quote-price { overflow: hidden; text-overflow: ellipsis; font-family: var(--font-ui, 'Chakra Petch', sans-serif); font-size: 11px; }
-  .mover-ticker { font-family: var(--font-mono, 'JetBrains Mono', monospace); }
-  .mover-row:hover .mover-ticker { color: var(--gold-1); }
-  .mover-value {
-    font-family: var(--font-mono, 'JetBrains Mono', monospace);
-    font-size: 12px;
-    color: var(--text-hi);
-    white-space: nowrap;
-  }
-  .movers-note { margin: 8px 0 0; font-size: 11.5px; color: var(--text-low); }
-  /* On a phone the movers are small tiles, four to a row: the ticker and
-     the change (shares traded for Most active), as banking apps show them. */
-  @media (max-width: 700px) {
-    .movers-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
-    .movers-list .mover-row {
-      flex-direction: column;
-      gap: 3px;
-      padding: 9px 4px;
-      border: 1px solid var(--border-soft);
-      border-radius: 10px;
-      background: var(--card-solid);
-      text-align: center;
-    }
-    .movers-list .mover-row:last-child { border-bottom: 1px solid var(--border-soft); }
-    .movers-list .quote-label { align-items: center; width: 100%; }
-    .movers-list .quote-price { display: none; }
-    .movers-list .quote-change { padding: 0; background: none; font-size: 11.5px; }
-    .movers-list .mover-value { display: none; }
-    .movers-list[data-list="active"] .mover-value { display: block; font-size: 11.5px; color: var(--text-mid); }
-    .movers-list[data-list="active"] .quote-change { display: none; }
-  }
-
-  .side-cta { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
-  .side-cta .eyebrow { font-size: 10.5px; }
-  .side-cta h3 {
-    margin: 0;
-    font-family: var(--font-ui, 'Chakra Petch', sans-serif);
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.3;
-    color: var(--text-hi);
-  }
-  .side-cta p { margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--text-mid); }
-  .side-cta .header-signin { margin: 6px 0 0; }
-  .side-cta small { font-size: 11.5px; color: var(--text-low); }
 
 
   .panel {
@@ -1154,7 +1034,7 @@
   @media (prefers-reduced-motion: reduce) { .calm-spark .calm-comet { animation: none; stroke-dashoffset: -46; } }
 
 </style>
-<link rel="stylesheet" href="/assets/themes.css?v=16e63d2cb5" data-pulsarium-theme="styles">
+<link rel="stylesheet" href="/assets/themes.css?v=45595e9005" data-pulsarium-theme="styles">
 </head>
 <body>
 
@@ -1256,7 +1136,6 @@
   <div class="ticker-track" id="ticker-track"></div>
 </div>
 
-<div class="dash">
 <div class="hero-grid">
   <div class="panel panel-analytics">
     <div class="panel-edge" aria-hidden="true"></div>
@@ -1305,28 +1184,6 @@
   </div>
 </div>
 
-<aside class="dash-side" aria-label="Market movers and the personal cabinet">
-  <div class="panel movers-panel" id="movers-panel" hidden>
-    <div class="panel-edge" aria-hidden="true"></div>
-    <h2>Market movers <span class="movers-session" id="movers-session"></span></h2>
-    <div class="movers-tabs" role="tablist" aria-label="Market movers">
-      <button type="button" class="movers-tab" role="tab" data-list="gainers" aria-selected="true">Gainers</button>
-      <button type="button" class="movers-tab" role="tab" data-list="losers" aria-selected="false">Losers</button>
-      <button type="button" class="movers-tab" role="tab" data-list="active" aria-selected="false">Most active</button>
-    </div>
-    <div class="movers-list" id="movers-list" role="tabpanel"></div>
-    <p class="movers-note">US shares Pulsarium follows · end-of-day prices</p>
-  </div>
-  <div class="panel side-cta">
-    <div class="panel-edge" aria-hidden="true"></div>
-    <span class="eyebrow">Personal cabinet</span>
-    <h3>Your portfolio, without a broker login</h3>
-    <p>Upload the file your broker already gives you. See the news about what you hold, SEC figures for each company and price alerts.</p>
-    <a class="header-signin" href="https://app.pulsarium.finance/">Create a free account</a>
-    <small>Free during the public beta</small>
-  </div>
-</aside>
-
 <div class="news-grid" id="news-grid"></div>
 
 <div class="empty-state" id="empty-state" style="display:none">
@@ -1335,7 +1192,6 @@
      Run the news fetcher from the project root folder:</p>
   <pre>python3 fetch_news.py</pre>
   <p>Then refresh the page (F5).</p>
-</div>
 </div>
 
 <footer>
@@ -1508,47 +1364,6 @@
         </div>
       `;
     }).join('');
-  }
-
-  // ---- Market movers (market_movers.py: end-of-day closes, read once a trading day) ----
-  const movers = data.movers || {};
-  const moversPanel = document.getElementById('movers-panel');
-  if (movers.session && (movers.gainers || movers.losers || movers.active)) {
-    moversPanel.hidden = false;
-    const sessionDay = new Date(movers.session + 'T12:00:00Z');
-    document.getElementById('movers-session').textContent =
-      'Close ' + sessionDay.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
-    const moversListEl = document.getElementById('movers-list');
-    const compactVolume = v => v >= 1e9 ? (v / 1e9).toFixed(2) + 'B'
-      : v >= 1e6 ? (v / 1e6).toFixed(1) + 'M'
-      : v >= 1e3 ? Math.round(v / 1e3) + 'K' : String(v);
-    const showMovers = list => {
-      moversListEl.innerHTML = (movers[list] || []).map(m => {
-        const up = m.change_pct >= 0;
-        const value = list === 'active'
-          ? compactVolume(m.volume)
-          : m.close.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-        // only companies that have had a headline have a news page
-        const open = m.page === false
-          ? '<div class="quote-row mover-row">'
-          : `<a class="quote-row mover-row" href="/news/${encodeURIComponent(m.slug)}/" title="${escapeHtml(m.name)} news">`;
-        return `
-          ${open}
-            <span class="quote-label">
-              <span class="quote-name mover-ticker">${escapeHtml(m.ticker)}</span>
-              <span class="quote-price">${escapeHtml(m.name)}</span>
-            </span>
-            <span class="mover-value"${list === 'active' ? ' title="Shares traded"' : ''}>${value}</span>
-            <span class="quote-change ${up ? 'quote-up' : 'quote-down'}">${up ? '▲' : '▼'} ${Math.abs(m.change_pct).toFixed(2)}%</span>
-          ${m.page === false ? '</div>' : '</a>'}`;
-      }).join('') || '<div class="empty-mini">No movers for this session</div>';
-      moversListEl.dataset.list = list;
-      moversPanel.querySelectorAll('.movers-tab').forEach(tab =>
-        tab.setAttribute('aria-selected', String(tab.dataset.list === list)));
-    };
-    moversPanel.querySelectorAll('.movers-tab').forEach(tab =>
-      tab.addEventListener('click', () => showMovers(tab.dataset.list)));
-    showMovers('gainers');
   }
 
   // ---- Filters ----

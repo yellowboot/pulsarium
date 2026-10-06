@@ -1354,15 +1354,16 @@ def main():
 
     summary = build_summary(deduped)
     indices = fetch_all_indices()
-    import market_movers  # here, not at the top: it reads this module's COMPANY_MAP
-    movers = market_movers.public(market_movers.refresh())
+    # market_movers.py (gainers / losers from Marketstack closes) is off until
+    # the Marketstack Professional plan: on Basic every symbol of a request
+    # counts, ~630 a trading day. To bring it back: payload["movers"] =
+    # market_movers.public(market_movers.refresh()) and the panel on /news/.
 
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "generated_at_display": datetime.now().strftime("%d.%m.%Y %H:%M"),
         "summary": summary,
         "indices": indices,
-        "movers": movers,
         "items": deduped,
     }
 
