@@ -8,8 +8,11 @@
   const meta = root.querySelector('[data-radar-meta]');
   const state = root.querySelector('[data-radar-state]');
   const method = root.querySelector('[data-radar-method]');
+  const rulesSummary = root.querySelector('[data-radar-rules-summary]');
   const buttons = [...root.querySelectorAll('[data-radar-tab]')];
-  let data, tab = 'clusters';
+  const modeButtons = [...root.querySelectorAll('[data-radar-mode]')];
+  const tabs = { purchases: 'clusters', sales: 'large' };
+  let data, mode = 'purchases';
   // A recent headline guarantees that the existing site builder writes a
   // company page. SEC also covers companies that the news site has not met.
   const news = typeof NEWS_DATA !== 'undefined' ? NEWS_DATA : null;
@@ -34,22 +37,39 @@
     } catch (_) { return null; }
   }
   function render() {
+    const selling = mode === 'sales';
+    const tab = tabs[mode];
+    modeButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.radarMode === mode)));
     buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.radarTab === tab)));
+    buttons.forEach(button => {
+      button.textContent = button.dataset.radarTab === 'clusters' ?
+        (selling ? 'Seller groups' : 'Buyer groups') : (selling ? 'Large sales' : 'Large buys');
+    });
+    rulesSummary.textContent = (selling ? 'Sales' : 'Purchases') +
+      ' total at least $100,000 per company. Reported transaction values. Updated twice daily.';
     list.replaceChildren();
     if (!data) return;
-    const coverage = data.coverage || {};
+    const view = selling ? data.sales : data;
+    const coverage = view?.coverage || {};
     const through = data.through ? ' · Disclosures through ' + date(data.through) : '';
-    meta.textContent = 'Last ' + data.window_days + ' days' + through;
+    meta.textContent = 'Last ' + data.window_days + ' days' + through +
+      (selling && view?.history_from ? ' · Sales collected since ' + date(view.history_from) : '');
     state.hidden = false;
     if (!coverage.complete) {
       state.textContent = 'History is updating · ' + Number(coverage.processed || 0).toLocaleString('en-US') +
         ' of ' + Number(coverage.discovered || 0).toLocaleString('en-US') + ' filings processed.';
     }
-    const cards = Array.isArray(data[tab]) ? data[tab].slice(0, 5) : [];
+    const cards = Array.isArray(view?.[tab]) ? view[tab].slice(0, 5) : [];
     if (!cards.length) {
-      state.textContent = coverage.complete ? (tab === 'clusters' ?
-        'No qualifying groups of buyers in this window.' : 'No qualifying purchases above $100,000 in this window.') :
-        state.textContent + ' Results appear as filings are processed.';
+      if (selling && !coverage.complete && !coverage.discovered) {
+        state.textContent = 'Sales collection ' + (view?.history_from ? 'started ' + date(view.history_from) : 'is starting') +
+          '. Results will appear after the next completed SEC disclosure update.';
+      } else {
+        state.textContent = coverage.complete ? (tab === 'clusters' ?
+          'No qualifying groups of ' + (selling ? 'sellers' : 'buyers') + ' in this window.' :
+          'No qualifying ' + (selling ? 'sales' : 'purchases') + ' above $100,000 in this window.') :
+          state.textContent + ' Results appear as filings are processed.';
+      }
     } else {
       if (coverage.complete) state.hidden = true;
       cards.forEach(card => {
@@ -61,9 +81,23 @@
         article.append(head, element('p', 'insider-radar-company', card.name));
         const people = Array.isArray(card.people) ? card.people : [];
         const personTitle = people[0]?.title;
-        const title = card.buyers > 1 ? card.buyers + ' officers / directors' :
+        const count = selling ? card.sellers : card.buyers;
+        const title = count > 1 ? count + ' officers / directors' :
           (personTitle && !/^see remarks$/i.test(personTitle) ? personTitle : 'Officer / director');
-        article.append(element('p', 'insider-radar-detail', title + ' · direct purchases'));
+        article.append(element('p', 'insider-radar-detail', title + (selling ? ' · direct sales' : ' · direct purchases')));
+        if (selling) {
+          const names = people.slice(0, 2).map(person => person.name).filter(Boolean).join(' · ');
+          if (names) article.append(element('p', 'insider-radar-detail', names + (people.length > 2 ? ' · +' + (people.length - 2) : '')));
+          if (Number(card.planned_amount) > 0) {
+            article.append(element('p', 'insider-radar-detail', '10b5-1 indicated' +
+              (Number(card.planned_amount) < Number(card.amount) - 0.01 ? ' · ' + money.format(Number(card.planned_amount)) + ' of reported sales' : '')));
+          }
+          const reduction = card.holding_reduction;
+          if (reduction && Number.isFinite(reduction.percent)) {
+            article.append(element('p', 'insider-radar-detail', 'One filing: ' + reduction.percent +
+              '% of reported direct ' + reduction.security + ' holding · ' + reduction.person));
+          }
+        }
         article.append(element('p', 'insider-radar-detail', 'Traded ' + date(card.start) +
           (card.end !== card.start ? '–' + date(card.end) : '') + ' · Filed ' + date(card.disclosed)));
         const sources = element('p', 'insider-radar-sources');
@@ -78,16 +112,19 @@
         list.append(article);
       });
     }
-    method.textContent = data.methodology || '';
+    method.textContent = view?.methodology || (selling ? 'Sales are collected from new SEC disclosures.' : '');
   }
   buttons.forEach(button => button.addEventListener('click', function () {
-    tab = this.dataset.radarTab; render();
+    tabs[mode] = this.dataset.radarTab; render();
   }));
-  const cacheKey = 'pulsarium:insider-radar:v1';
+  modeButtons.forEach(button => button.addEventListener('click', function () {
+    mode = this.dataset.radarMode; render();
+  }));
+  const cacheKey = 'pulsarium:insider-radar:v2';
   function accept(payload) {
     if (!payload || payload.version !== 1 || !Array.isArray(payload.clusters) || !Array.isArray(payload.large)) return false;
     data = payload;
-    if (!data.clusters.length && data.large.length) tab = 'large';
+    if (!data.clusters.length && data.large.length) tabs.purchases = 'large';
     render();
     return true;
   }

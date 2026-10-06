@@ -1035,7 +1035,7 @@
 
 </style>
 <link rel="stylesheet" href="/assets/themes.css?v=995daca531" data-pulsarium-theme="styles">
-<link rel="stylesheet" href="/assets/insider-radar.css?v=3">
+<link rel="stylesheet" href="/assets/insider-radar.css?v=4">
 </head>
 <body>
 
@@ -1186,12 +1186,16 @@
   </div>
 </div>
 
-<aside class="dash-side" aria-label="Insider purchases and the personal cabinet">
+<aside class="dash-side" aria-label="Insider activity and the personal cabinet">
   <aside class="panel insider-radar" id="insider-radar" aria-labelledby="insider-radar-title">
     <div class="panel-edge" aria-hidden="true"></div>
-    <h2 id="insider-radar-title">Insider purchases</h2>
+    <h2 id="insider-radar-title">Insider activity</h2>
+    <div class="insider-radar-tabs insider-radar-mode" role="group" aria-label="Insider transaction direction">
+      <button type="button" data-radar-mode="purchases" aria-pressed="true">Purchases</button>
+      <button type="button" data-radar-mode="sales" aria-pressed="false">Sales</button>
+    </div>
     <p class="insider-radar-meta" data-radar-meta>Last 7 days · SEC Form 4</p>
-    <div class="insider-radar-tabs" role="group" aria-label="Insider purchase view">
+    <div class="insider-radar-tabs" role="group" aria-label="Insider activity view">
       <button type="button" data-radar-tab="clusters" aria-pressed="true">Buyer groups</button>
       <button type="button" data-radar-tab="large" aria-pressed="false">Large buys</button>
     </div>
@@ -1200,7 +1204,7 @@
     <details class="insider-radar-method">
       <summary>Selection rules</summary>
       <p data-radar-method></p>
-      <p>Purchases total at least $100,000 per company. Reported transaction values. Updated twice daily.</p>
+      <p data-radar-rules-summary>Purchases total at least $100,000 per company. Reported transaction values. Updated twice daily.</p>
     </details>
   </aside>
   <div class="panel side-cta">
@@ -1244,7 +1248,7 @@
 </footer>
 
 <script src="/assets/analytics.js" defer></script>
-<script src="/assets/insider-radar.js?v=1" defer></script>
+<script src="/assets/insider-radar.js?v=2" defer></script>
 <script src="../news_data.js" onerror="window.__NO_DATA_FILE__ = true"></script>
 <script>
 (function () {
