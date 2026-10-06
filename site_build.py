@@ -516,8 +516,10 @@ def mood_widget(history: list) -> str:
     """/mood/widget/: the card other sites embed. Today's value on the 0-100
     scale, its label, the change from the previous reading and the 7-day
     average; the whole card links to /mood/. ?theme=light for light pages
-    (dark Neon by default). Fonts come from this site, so embedding it sends
-    no visitor data to anyone else; not indexed, not in the sitemap."""
+    (dark Neon by default); on this site's own pages (the homepage) it
+    follows the page's Neon/Calm switch instead. Fonts come from
+    this site, so embedding it sends no visitor data to anyone else; not
+    indexed, not in the sitemap."""
     today = history[-1] if history else None
     prev = history[-2] if len(history) > 1 else None
     if today:
@@ -546,7 +548,25 @@ def mood_widget(history: list) -> str:
 <meta name="robots" content="noindex">
 <title>{esc(summary)} · Pulsarium</title>
 <link rel="stylesheet" href="/fonts/fonts.css">
-<script>try {{ var t = new URLSearchParams(location.search).get('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; }} catch (e) {{}}</script>
+<script>
+// ?theme=light|dark wins; on this site's own pages the card follows the
+// page's Neon/Calm switch and opens the Mood Index in the same tab.
+(function () {{
+  var root = document.documentElement, forced = null;
+  try {{ forced = new URLSearchParams(location.search).get('theme'); }} catch (e) {{}}
+  if (forced === 'light' || forced === 'dark') {{ root.dataset.theme = forced; return; }}
+  var host = null;
+  try {{ if (window.parent !== window && window.parent.location.host === location.host) host = window.parent.document.documentElement; }} catch (e) {{}}
+  if (!host) return;
+  var follow = function () {{ root.dataset.theme = host.getAttribute('data-color-theme') === 'calm' ? 'light' : 'dark'; }};
+  follow();
+  new MutationObserver(follow).observe(host, {{ attributes: true, attributeFilter: ['data-color-theme'] }});
+  document.addEventListener('DOMContentLoaded', function () {{
+    var card = document.querySelector('.card');
+    if (card) card.target = '_top';
+  }});
+}})();
+</script>
 <style>
 :root {{ --card: linear-gradient(160deg, #0b1024, #05070f); --ring: #05070f; --line: rgba(120, 220, 255, .22); --text: #e6f1ff; --mid: #a9bddf; --low: #7489b3;
   --accent: #00f0ff; --pos: #3dffa2; --neg: #ff6b8e; --neu: #9db2d6; --track: linear-gradient(90deg, #ff6b8e, #56627f 50%, #3dffa2); --glow: 0 0 12px rgba(0, 240, 255, .6); }}
@@ -1211,26 +1231,17 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
 # leads to the dashboard, not a copy of it.
 TODAY_START, TODAY_END = "<!-- today:start -->", "<!-- today:end -->"
 TODAY_HEADLINES = 3
-TODAY_MOVES = 3
+TODAY_MOVES = 7
 
 
 def home_today(history: list, window: list, movers: dict, now: datetime) -> str:
+    # the Mood Index is the embeddable widget itself (mood_widget), which
+    # follows the page's Neon/Calm switch; its text is here for readers
+    # without frames and for search engines
     cards = []
     if history:
         point = history[-1]
-        prev = history[-2] if len(history) > 1 else None
-        tone = "neg" if point["value"] <= 44 else "neu" if point["value"] <= 55 else "pos"
-        change = ""
-        if prev:
-            diff = point["value"] - prev["value"]
-            arrow = "▲" if diff > 0 else "▼" if diff < 0 else "±"
-            change = (f' <span class="today-change">{arrow}{abs(diff)} vs '
-                      f'{fmt_short_day(date.fromisoformat(prev["date"]))}</span>')
-        cards.append(f"""<a class="today-card today-mood" href="/mood/">
-          <span class="today-label">Pulsarium Mood Index</span>
-          <span class="today-value mono">{point["value"]}<small>/100</small></span>
-          <span class="today-sub {tone}">{esc(point["label"])}{change}</span>
-        </a>""")
+        cards.append(f"""<iframe class="today-mood" src="/mood/widget/" title="Pulsarium Mood Index: {point["value"]}/100, {esc(point["label"].lower())}" loading="lazy"></iframe>""")
 
     if movers.get("session") and (movers.get("gainers") or movers.get("losers")):
         def moves(rows):
