@@ -21,6 +21,7 @@ from datetime import datetime, timedelta, timezone
 import fetch_news
 
 EOD_URL = "https://api.marketstack.com/v1/eod"
+USER_AGENT = "Pulsarium/1.0 (+https://pulsarium.finance)"
 STORE = "data/movers.json"
 BATCH = 100              # symbols per Marketstack request
 SHOWN = 8                # rows per list
@@ -72,7 +73,9 @@ def read_closes(key: str, symbols: list, since: str) -> dict:
             "access_key": key, "symbols": ",".join(symbols[start:start + BATCH]),
             "date_from": since, "limit": 1000,
         })
-        with urllib.request.urlopen(f"{EOD_URL}?{query}", timeout=30) as response:
+        # Python's default "Python-urllib" agent gets a bare 403 in front of the API
+        request = urllib.request.Request(f"{EOD_URL}?{query}", headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(request, timeout=30) as response:
             payload = json.load(response)
         for row in payload.get("data") or []:
             rows.setdefault(row.get("symbol"), []).append(row)
