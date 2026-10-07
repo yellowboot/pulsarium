@@ -390,10 +390,17 @@
   },
   {
    "date": "2026-10-06",
-   "value": 74,
+   "value": 75,
    "label": "Optimistic",
-   "headlines": 339,
-   "avg7": 65.1
+   "headlines": 343,
+   "avg7": 65.3
+  },
+  {
+   "date": "2026-10-07",
+   "value": 82,
+   "label": "Optimistic",
+   "headlines": 22,
+   "avg7": 67.7
   }
  ]
 }
