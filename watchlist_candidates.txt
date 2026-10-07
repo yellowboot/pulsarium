@@ -6,24 +6,33 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 07.10.2026 17:55
+Generated: 07.10.2026 19:08
 32 of 80 news items unmatched this run
 
-- [Yahoo Finance] Sector Update: Healthcare Stocks Rise in Afternoon Trading
-- [Nasdaq] Coffee Prices Tumble on Larger Coffee Supplies from Brazil
+- [Nasdaq] Wheat Falling Lower on Wednesday
+- [Nasdaq] Cotton Slipping Lower on Wednesday
+- [Nasdaq] Hogs Falling Lower on Wednesday
+- [Nasdaq] Cattle Facing Midweek Pressure
+- [Nasdaq] Corn Correcting Lower on Wednesday
+- [Nasdaq] Soybeans Fading Lower on Wednesday
+- [CNBC] Supertanker chartered from Gulf Coast to China for $76 million, 10 times higher than pre-war level
+- [Nasdaq] Sugar Prices Erase Early Gains as Dollar Strength Spurs Long Liquidation
 - [Nasdaq] Rising ICE Inventories and Demand Fears Undercut Cocoa Prices
-- [Yahoo Finance] Sector Update: Tech Stocks Decline Wednesday Afternoon
-- [Yahoo Finance] Update: Equities Fall Intraday Ahead of Fed Minutes
-- [Yahoo Finance] Prediction: Here's What a $5,000 Investment in Joby Aviation Will Be Worth in 3 Years
-- [Yahoo Finance] Strong 10-Year Auction Doesn't Do Much for Stocks
-- [Investing.com] Webull stock drops after congressional report flags China ties as security risk
-- [Investing.com] FireFly Robotics files for Nasdaq direct listing
-- [Nasdaq] Dollar Firms and Gold Falls as T-Note Yields Jump
-- [Nasdaq] Corn Getting a Wednesday AM Correction
-- [Nasdaq] Soybeans Showing Modest Wednesday Morning Pullback
-- [Investing.com] Applied Digital earnings preview: loss expected as market discounts beat streak
-- [Investing.com] Levi Strauss fiscal Q3 earnings preview: guidance and tariffs in focus
 - [Nasdaq] Crude Prices Supported by Middle East Supply Concerns
+- [Nasdaq] Cotton Correcting Lower on Wednesday Morning
+- [Nasdaq] Corn Getting a Wednesday AM Correction
+- [MarketWatch] Fed’s minutes show no appetite for a series of interest-rate hikes
+- [Nasdaq] Coffee Prices Tumble on Larger Coffee Supplies from Brazil
+- [Investing.com] Why is QXO stock sliding today?
+- [Investing.com] Why is Black Hills stock surging today?
+- [Yahoo Finance] SCWorx Announces Resumption of Nasdaq Trading and Highlights Improved Operating Performance and Growth Strategy
+- [Nasdaq] Barclays Initiates Coverage of Humacyte at Equal-Weight
+- [Investing.com] Lucid Group bull and bear case: upside potential against deep execution risk
+- [Yahoo Finance] 5 Stocks to Buy That Have Raised Their Dividends Every Year Since 2000
+- [CNBC] Oil prices fall as IEA members agree to prioritize release of diesel stocks
+- [Investing.com] Anthropic launches third Claude 5.5 model, expanding AI lineup before planned IPO
+- [Investing.com] U.S. stocks cut losses as oil turns lower, yields pare gains on strong auction
+- [Investing.com] Why is Americas Gold and Silver stock sliding today?
 - [Mining.com] Namibia diamond mine revival draws $50M investment
 - [CoinDesk] Polygon taps TRON’s $94 billion stablecoin supply for seamless cross-border transfers
 - [CNBC] Used car prices fall in Q3, while demand for fuel-efficient vehicles grows
@@ -32,12 +41,3 @@ Generated: 07.10.2026 17:55
 - [Mining.com] Gold Mountain weighs revival of wartime Brazil tungsten mine
 - [CoinDesk] Tether tapped by Kazakhstan’s central bank to explore stablecoin and tokenization
 - [Mining.com] Copper, nickel prices could double by 2035: report
-- [Mining.com] NioBay seeks partners to advance Crevier project in Quebec
-- [Mining.com] Gold ETF rush defies 8.5% gold price slide
-- [CNBC] Trading platform Webull's China ties create national security risk, congressional panel finds; stock drops 18%
-- [CNBC] Refinance demand is now half what it was a year ago, as mortgage rates rise again
-- [CNBC] Home heating oil prices are soaring — and users' winter bills could rise 21%, federal outlook shows
-- [CoinDesk] Crypto trading giant GSR's new vault business is a $100M bet on onchain credit
-- [CNBC] Oil edges higher as concerns over Houthi attacks on Saudi Arabia eclipse supply recovery
-- [Mining.com] Antofagasta’s Centinela strike adds copper supply risk
-- [Retail Dive] Bed Bath & Beyond parent company calls off another deal
