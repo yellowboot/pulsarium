@@ -1246,10 +1246,93 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
 
 
 # The homepage is hand-written; one block of it is today's market, filled in
-# here between these markers on every build: the Mood Index and the day's
-# top headlines. A short summary that leads to the dashboard, not a copy of it.
+# here between these markers on every build: the Mood Index, the week in SEC
+# filings and the day's top headlines. A short summary that leads to the
+# dashboard, not a copy of it.
 TODAY_START, TODAY_END = "<!-- today:start -->", "<!-- today:end -->"
 TODAY_HEADLINES = 3
+
+# The SEC analytics of the news dashboard's panels (insider buying, sector
+# fundamentals, report highlights) are prepared as public snapshots in the
+# cabinet's database, read with the publishable key the panels use; read at
+# build time, the homepage card's text is in the page for search engines.
+SEC_SNAPSHOT = "https://omkeplyeuxwlsqnblsjm.supabase.co/rest/v1/{table}?id=eq.global&select=payload"
+SEC_PUBLIC_KEY = "sb_publishable_Iike5dnuHEuwIIF-qruzzg_WkWJodcF"
+
+
+def sec_snapshot(table: str) -> dict:
+    request = urllib.request.Request(SEC_SNAPSHOT.format(table=table),
+                                     headers={"apikey": SEC_PUBLIC_KEY, "User-Agent": "pulsarium-site-build"})
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            rows = json.load(response)
+        return rows[0]["payload"] if rows and isinstance(rows[0].get("payload"), dict) else {}
+    except Exception as error:  # the card is left out, the build goes on
+        print(f"SEC snapshot {table} unavailable: {error}")
+        return {}
+
+
+def short_money(value: float) -> str:
+    for size, unit in ((1e9, "B"), (1e6, "M"), (1e3, "K")):
+        if abs(value) >= size:
+            return f"${value / size:.1f}{unit}"
+    return f"${value:,.0f}"
+
+
+def day_span(start: str, end: str) -> str:
+    first, last = date.fromisoformat(start[:10]), date.fromisoformat(end[:10])
+    day = lambda d: f"{d.strftime('%b')} {d.day}"
+    return day(first) if first == last else f"{day(first)} – {day(last)}"
+
+
+def company_case(name: str) -> str:
+    """SEC writes many names in capitals ("INTEL CORP")."""
+    if name != name.upper():
+        return name
+    kept = {"INC": "Inc", "CORP": "Corp", "CO": "Co", "LTD": "Ltd", "PLC": "plc", "LLC": "LLC", "LP": "LP",
+            "NV": "NV", "SA": "SA", "AG": "AG", "SE": "SE", "ADR": "ADR"}
+    return " ".join(kept.get(word.strip(".,"), word.capitalize()) for word in name.split())
+
+
+def sec_week_card() -> str:
+    """Three tiles: the week's largest insider buying, the fastest-growing
+    sector and the first report turnaround, as the dashboard ranks them."""
+    insider, analytics = sec_snapshot("sec_insider_radar"), sec_snapshot("sec_sector_analytics")
+    number = lambda value: isinstance(value, (int, float)) and not isinstance(value, bool)
+    tiles = []
+    groups = sorted((c for c in insider.get("clusters") or [] if number(c.get("amount")) and c.get("symbol")),
+                    key=lambda c: -c["amount"])
+    if groups:
+        top = groups[0]
+        span = f' · {day_span(top["start"], top["end"])}' if top.get("start") and top.get("end") else ""
+        tiles.append(("insider-radar", "Insider buying", short_money(top["amount"]), "",
+                      f'{esc(top["symbol"])} · {top.get("buyers") or len(top.get("people") or [])} insiders{span}'))
+    growing = sorted((s for s in analytics.get("sectors") or []
+                      if s.get("direction") == "growth" and number(s.get("revenue_total_yoy"))),
+                     key=lambda s: -s["revenue_total_yoy"])
+    if growing:
+        sector = growing[0]
+        tiles.append(("sector-overview", "Fastest-growing sector", f'+{sector["revenue_total_yoy"]:.1f}%', "up",
+                      f'{esc(sector["name"])} · revenue, 12 months'))
+    turnarounds = ((analytics.get("financial_signals") or {}).get("groups") or {}).get("turnaround") or []
+    if turnarounds and turnarounds[0].get("signals") and turnarounds[0].get("symbol"):
+        company, signal = turnarounds[0], turnarounds[0]["signals"][0]
+        operating = signal.get("code") == "operating_turnaround"
+        tiles.append(("financial-signals", "Profit turnaround" if operating else "Cash-flow turnaround",
+                      f'+{short_money(signal["swing_amount"])}' if number(signal.get("swing_amount")) else esc(company["symbol"]),
+                      "up", f'{esc(company["symbol"])} · {esc(company_case(company["name"]))} · '
+                      + ("loss → profit" if operating else "cash flow up")))
+    if len(tiles) < 2:
+        return ""
+    cells = "".join(
+        f'<a class="sec-tile" href="news/#{anchor}" title="{line}"><span class="sec-tile-label">{label}</span>'
+        f'<strong class="sec-value{" up" if tone else ""}">{value}</strong>'
+        f'<span class="sec-line">{line}</span></a>'
+        for anchor, label, value, tone, line in tiles)
+    return f"""<div class="today-card today-sec">
+          <div class="sec-head"><span class="today-label">SEC filings · this week</span><a class="sec-more" href="news/#insider-radar">More →</a></div>
+          <div class="sec-tiles">{cells}</div>
+        </div>"""
 
 
 def home_today(history: list, window: list, now: datetime) -> str:
@@ -1260,6 +1343,9 @@ def home_today(history: list, window: list, now: datetime) -> str:
     if history:
         point = history[-1]
         cards.append(f"""<iframe class="today-mood" src="/mood/widget/" title="Pulsarium Mood Index: {point["value"]}/100, {esc(point["label"].lower())}" loading="lazy"></iframe>""")
+    sec_card = sec_week_card()
+    if sec_card:
+        cards.append(sec_card)
 
     recent =[i for i in window if i["_time"] >= now - timedelta(hours=24)
               and (i.get("content_type") or "market_signal") == "market_signal"]
@@ -1281,7 +1367,7 @@ def home_today(history: list, window: list, now: datetime) -> str:
           <span class="eyebrow">Today on the market</span>
           <a class="today-more" href="news/">Open the news dashboard →</a>
         </div>
-        <div class="today-grid">
+        <div class="today-grid{" has-sec" if sec_card else ""}">
         {"".join(cards)}
         </div>
       </section>"""

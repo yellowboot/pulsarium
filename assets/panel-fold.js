@@ -13,6 +13,11 @@
   try { open = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch { open = []; }
   if (!Array.isArray(open)) open = [];
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(open)); } catch { /* private mode */ } };
+  // a link to a panel (the homepage's SEC card: news/#insider-radar) opens it
+  const linked = [];
+  const openLinked = () => {
+    for (const { panel, show } of linked) if (panel.id && location.hash === `#${panel.id}`) show(true);
+  };
 
   for (const [selector, name] of PANELS) {
     const panel = document.querySelector(selector);
@@ -30,6 +35,7 @@
       toggle.setAttribute('aria-expanded', String(isOpen));
     };
     show(open.includes(name));
+    linked.push({ panel, show });
     heading.addEventListener('click', (event) => {
       // the sector and report expand icons keep their own job
       if (!phone.matches || event.target.closest('a, button:not(.panel-fold)')) return;
@@ -39,4 +45,6 @@
       save();
     });
   }
+  openLinked();
+  window.addEventListener('hashchange', openLinked);
 })();
