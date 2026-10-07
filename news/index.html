@@ -732,6 +732,8 @@
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 22px;
   }
+  .news-more { display: flex; justify-content: center; padding: 26px 6vw 0; }
+  .news-more[hidden] { display: none; }
 
   .card {
     /* no backdrop-filter here: with dozens of cards over an animated
@@ -1237,6 +1239,7 @@
 </aside>
 
 <div class="news-grid" id="news-grid"></div>
+<div class="news-more" id="news-more" hidden><button type="button" class="chip">Show more</button></div>
 
 <div class="empty-state" id="empty-state" style="display:none">
   <h3>No news yet</h3>
@@ -1804,7 +1807,20 @@
     return haystack.includes(q.toLowerCase());
   }
 
-  function renderGrid() {
+  // The list starts with four lines of cards (eight cards on a phone, where
+  // a line holds one) and "Show more" adds as many again; a new filter, sort
+  // or search starts from the first four lines.
+  const moreWrap = document.getElementById('news-more');
+  const moreButton = moreWrap.querySelector('button');
+  let shownSteps = 1;
+  function cardsPerStep() {
+    const columns = getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length || 1;
+    return columns === 1 ? 8 : columns * 4;
+  }
+  moreButton.addEventListener('click', () => { shownSteps += 1; renderGrid(true); });
+
+  function renderGrid(keepShown = false) {
+    if (!keepShown) shownSteps = 1;
     const query = searchQuery.trim().toLowerCase();
     const items = data.items.filter(i =>
       (activeSource === 'all' || i.source === activeSource) &&
@@ -1821,7 +1837,11 @@
     const countEl = document.getElementById('search-result-count');
     countEl.textContent = query ? `Found: ${items.length}` : '';
 
-    grid.innerHTML = items.map(item => {
+    const limit = cardsPerStep() * shownSteps;
+    moreWrap.hidden = items.length <= limit;
+    moreButton.textContent = `Show more · ${items.length - limit} left`;
+
+    grid.innerHTML = items.slice(0, limit).map(item => {
       const isMacro = item.content_type === 'macro_context';
       // for contextual/geopolitical news the placeholder is always neutral —
       // no point visually implying a "market direction" where there
