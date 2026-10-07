@@ -6,37 +6,29 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 07.10.2026 00:56
-31 of 80 news items unmatched this run
+Generated: 07.10.2026 13:43
+23 of 80 news items unmatched this run
 
-- [CNBC] Trillions are being ‘wasted’ on the AI boom, Arthur Hayes says. He’s betting on what comes next
-- [Investing.com] Why is Tower stock gaining today?
-- [Investing.com] Why is Dicker Data stock surging today?
-- [Nasdaq] Wheat Joins in on the Grain Rally on Friday
-- [Nasdaq] Corn Rallies on Tuesday
-- [Nasdaq] Cattle Rally on Tuesday
-- [Nasdaq] Hogs Post Mixed Tuesday Trade
-- [Nasdaq] Cotton Holds onto Tuesday Gains
-- [Nasdaq] Dollar Slips on Lower T-note Yields and Strength in Stocks
-- [Yahoo Finance] Why Boost Run Stock Popped by Nearly 6% Today
-- [Investing.com] Analysis-Japan’s $15 billion Rapidus chip bet hinges on winning customers
-- [Nasdaq] Wheat Pushing Higher As Planting Progress Drags
-- [Yahoo Finance] Review & Preview: Rally Time
-- [Nasdaq] Soybeans Rally into Tuesday’s Close, As Meal Regains Strength
-- [Nasdaq] Raymond James Upgrades Prosperity Bancshares to Outperform from Market Perform
-- [Yahoo Finance] 1 No-Brainer Artificial Intelligence (AI) ETF to Buy With $100 and Hold Forever
-- [Nasdaq] Brazilian Real Strength and El Niño Risks Boost Coffee Prices
-- [Investing.com] Samsung’s Q3 profit seen jumping nine-fold, but chip margins may be flat
-- [Yahoo Finance] 3 Value ETFs Head to Head. One Charges 0.03% and Returned 19% Over the Past Year
-- [Nasdaq] Dollar Retreats as Crude Prices Fall and Stocks Rally
-- [Yahoo Finance] Rezolve AI Targets $500M ARR as Agentic Commerce Platform Scales
-- [Nasdaq] Corn Posting Tuesday Gains
-- [CNBC] Cramer says these blue-chip stocks are among the best ways to invest in the AI boom
-- [CNBC] This photonics stock is already up 600% in one year. Now it's breaking out again
-- [CNBC] Boomers' dividend stocks take beating from bond yields, with retirement income on the line
-- [CNBC] Emmy Awards leave broadcast TV for Prime Video in 2027 under six-year deal
-- [CNBC] Oil prices stable as market weighs supply risks, rising Middle East exports
-- [OilPrice.com] Why $100 Oil Is Hard to Kill
-- [CNBC] Anthropic expands Claude Startups program in bid to snag founders and fast-growing companies
-- [OilPrice.com] 5 Natural Gas Stocks Profiting From the Strait of Hormuz Standoff
-- [Mining.com] Beaver Creek video: Gold gains new role vs bonds
+- [CNBC] Trading platform Webull's China ties create national security risk, congressional panel finds; stock down nearly 30%
+- [CNBC] Used car prices fall in Q3, while demand for fuel-efficient vehicles grows
+- [Yahoo Finance] This Under-the-Radar Growth Stock Is Down 55%, but Wall Street Is Still Bullish. Here's Why.
+- [Yahoo Finance] /C O R R E C T I O N -- Olyzon/
+- [Investing.com] Brookfield commits $444 mln to acquire, develop ESR India’s warehousing portfolio
+- [Investing.com] Why is Filtronic stock surging today?
+- [Investing.com] Deutsche Bank warns SolarEdge recovery may stumble on high interest rates
+- [Investing.com] Up +60% and climbing: This AI-picked tech play keeps landing billion-dollar deals
+- [Investing.com] FTSE 100 today: Stocks fall as gilt yields top 6%, banks, miners slide
+- [Investing.com] Why is US Dollar Silver Spot stock climbing today?
+- [MarketWatch] Kalshi is coming for ‘Dancing with the Stars’ fans
+- [CNBC] Refinance demand is now half what it was a year ago, as mortgage rates rise again
+- [CNBC] Home heating oil prices are soaring — and users' winter bills could rise 21%, federal outlook shows
+- [CoinDesk] Crypto trading giant GSR's new vault business is a $100M bet on onchain credit
+- [CNBC] Oil edges higher as concerns over Houthi attacks on Saudi Arabia eclipse supply recovery
+- [Mining.com] Antofagasta’s Centinela strike adds copper supply risk
+- [MarketWatch] These two hard-hit stocks are poised for a comeback, says fund manager
+- [Mining.com] Sigma Lithium jumps as Brazil court clears Grota mine restart
+- [CoinDesk] Rain is seeking a national trust bank charter to bypass third-party banks
+- [OilPrice.com] IEA Discusses G7's 100 Million-Barrel Oil and Diesel Release
+- [Nasdaq] Bull of the Day: Five Below (FIVE)
+- [Nasdaq] Bear of the Day: Dick's Sporting Goods (DKS)
+- [Nasdaq] Raymond James Upgrades Old National Bancorp - Preferred Stock to Outperform from Market Perform
