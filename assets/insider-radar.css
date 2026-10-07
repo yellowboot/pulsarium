@@ -23,16 +23,35 @@
 .insider-radar h2 { margin-bottom: 8px; }
 .insider-radar-meta, .insider-radar-state, .insider-radar-method { color: var(--text-mid); font-size: 11.5px; line-height: 1.55; }
 .insider-radar-meta { margin: 0 0 10px; }
-.insider-radar-tabs { display: flex; gap: 6px; margin-bottom: 12px; }
+/* Purchases / Sales is a segmented track; the chosen one is lit like the
+   news filter's chosen sector (tinted glass, cyan text and edge), not filled.
+   The views under it (groups / large trades) are plain tabs, a step lower. */
+.insider-radar-tabs {
+  display: flex; gap: 3px; margin-bottom: 12px; padding: 3px;
+  border: 1px solid var(--border-soft); border-radius: 11px; background: rgba(10, 18, 40, .45);
+}
 .insider-radar-mode { margin-bottom: 10px; }
 .insider-radar-tabs button {
-  flex: 1 1 0; height: 30px; padding: 0 6px; border-radius: 9px; border: 1px solid var(--border);
-  background: rgba(10, 18, 40, .55); color: var(--text-mid);
+  flex: 1 1 0; height: 28px; padding: 0 6px; border-radius: 8px; border: 1px solid transparent;
+  background: transparent; color: var(--text-mid);
   font-family: var(--font-ui, 'Chakra Petch', sans-serif); font-size: 12.5px; font-weight: 600;
-  white-space: nowrap; cursor: pointer; transition: color .2s, border-color .2s, background .2s;
+  white-space: nowrap; cursor: pointer; transition: color .2s, border-color .2s, background .2s, box-shadow .2s;
 }
-.insider-radar-tabs button:hover { color: var(--text-hi); border-color: rgba(0, 240, 255, .45); }
-.insider-radar-tabs button[aria-pressed="true"] { color: var(--bg-0); background: var(--gold-1); border-color: var(--gold-1); }
+.insider-radar-tabs button:hover { color: var(--text-hi); background: rgba(0, 240, 255, .05); }
+.insider-radar-tabs button[aria-pressed="true"] {
+  color: var(--gold-1); background: rgba(0, 240, 255, .1); border-color: rgba(0, 240, 255, .45);
+  box-shadow: 0 0 10px rgba(0, 240, 255, .12), inset 0 0 8px rgba(0, 240, 255, .08);
+}
+.insider-radar-tabs:not(.insider-radar-mode) {
+  gap: 0; padding: 0; border: 0; border-bottom: 1px solid var(--border-soft); border-radius: 0; background: none;
+}
+.insider-radar-tabs:not(.insider-radar-mode) button {
+  height: 30px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; margin-bottom: -1px;
+}
+.insider-radar-tabs:not(.insider-radar-mode) button:hover { background: none; }
+.insider-radar-tabs:not(.insider-radar-mode) button[aria-pressed="true"] {
+  background: none; border-bottom-color: var(--gold-1); box-shadow: none; text-shadow: 0 0 10px rgba(0, 240, 255, .35);
+}
 .insider-radar-tabs button:focus-visible, .insider-radar a:focus-visible,
 .insider-radar summary:focus-visible { outline: 2px solid var(--gold-1); outline-offset: 3px; }
 .insider-radar-list { display: grid; gap: 12px; max-height: 420px; overflow-y: auto; }
@@ -62,9 +81,18 @@
 .side-cta .header-signin { margin: 6px 0 0; }
 .side-cta small { font-size: 11.5px; color: var(--text-low); }
 :root[data-color-theme='calm'] .insider-radar h2 { font-family: var(--font-label); font-size: 10px; font-weight: 700; letter-spacing: .16em; line-height: 1.5; text-transform: uppercase; }
-:root[data-color-theme='calm'] .insider-radar-tabs button { color: var(--text); background: rgba(255, 255, 255, .78); border-color: var(--line); }
-:root[data-color-theme='calm'] .insider-radar-tabs button:hover { color: var(--text-hi); border-color: rgba(74, 71, 214, .4); }
-:root[data-color-theme='calm'] .insider-radar-tabs button[aria-pressed='true'] { color: #fff; background: var(--accent); border-color: var(--accent); }
+:root[data-color-theme='calm'] .insider-radar-tabs { background: rgba(255, 255, 255, .55); border-color: var(--line); }
+:root[data-color-theme='calm'] .insider-radar-tabs button { color: var(--text-mid); }
+:root[data-color-theme='calm'] .insider-radar-tabs button:hover { color: var(--text-hi); background: rgba(255, 255, 255, .7); }
+:root[data-color-theme='calm'] .insider-radar-tabs button[aria-pressed='true'] {
+  color: var(--accent); background: #fff; border-color: rgba(74, 71, 214, .3);
+  box-shadow: 0 1px 6px rgba(74, 71, 214, .12);
+}
+:root[data-color-theme='calm'] .insider-radar-tabs:not(.insider-radar-mode) { background: none; }
+:root[data-color-theme='calm'] .insider-radar-tabs:not(.insider-radar-mode) button:hover { background: none; }
+:root[data-color-theme='calm'] .insider-radar-tabs:not(.insider-radar-mode) button[aria-pressed='true'] {
+  background: none; border-color: transparent transparent var(--accent); box-shadow: none; text-shadow: none;
+}
 :root[data-color-theme='calm'] .side-cta { background: linear-gradient(120deg, rgba(185, 168, 255, .22), rgba(255, 255, 255, .9), rgba(148, 218, 243, .18)); border-color: rgba(74, 71, 214, .18); }
 :root[data-color-theme='calm'] .side-cta h3 { font-weight: 600; letter-spacing: -.01em; }
 @media (max-width: 1100px) { .insider-radar-list { max-height: 290px; } }
