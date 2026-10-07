@@ -63,7 +63,7 @@
 .sector-tile[aria-pressed='true'] { outline: 1px solid var(--gold-1); outline-offset: 1px; }
 .sector-tile-name { color: var(--text-hi); font-size: 13px; font-weight: 600; }
 .sector-tile-value { font: 600 23px/1.4 var(--font-mono); color: var(--text-hi); }
-.sector-tile-measure { margin-top: -7px; color: var(--text-mid); font-size: 10px; }
+.sector-tile-measure { margin-top: 0; color: var(--text-mid); font-size: 10px; line-height: 1.6; }
 .sector-tile-margin { display: flex; flex-wrap: wrap; width: 100%; align-items: baseline; gap: 3px 8px; color: var(--text-mid); font-size: 11px; }
 .sector-tile-margin strong { font: 600 11px/1.6 var(--font-mono); white-space: nowrap; }
 .sector-tile-foot { margin-top: auto; color: var(--text-mid); font-size: 11px; }
