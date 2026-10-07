@@ -1416,11 +1416,13 @@
     listEl.innerHTML = '<div class="empty-mini">No known companies/tickers found in recent news</div>';
   } else {
     const maxCount = Math.max(...tt.map(t => t.count));
-    // each name opens its company page (site_build.py writes /news/<slug>/)
-    const tickerSlug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    // each name opens its company page (site_build.py writes /news/<slug>/);
+    // the address is joined here rather than written out in the template,
+    // or Google reads the template itself as a link and reports it as a 404
+    const tickerPage = t => '/news/' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '/';
     listEl.innerHTML = tt.map(t => `
       <div class="ticker-row">
-        <a class="name" href="/news/${tickerSlug(t.ticker)}/" title="${escapeHtml(t.ticker)} news">${escapeHtml(t.ticker)}</a>
+        <a class="name" href="${tickerPage(t.ticker)}" title="${escapeHtml(t.ticker)} news">${escapeHtml(t.ticker)}</a>
         <span class="bar-bg"><span class="bar-fill" style="width:${(t.count / maxCount) * 100}%"></span></span>
         <span class="num">${t.count}</span>
       </div>
