@@ -5,7 +5,7 @@
 ## Personal cabinet (app.pulsarium.finance, free beta)
 - Portfolio tracking: several portfolios in different currencies, positions, weights, performance over time, per-position weight limits.
 - Dividends and stock splits: detected automatically and applied after the investor confirms them; dividend history per holding.
-- Broker file import: transaction exports from Revolut, DEGIRO, Trading 212, Interactive Brokers (IBKR activity statements), Robinhood, Fidelity, Charles Schwab, E*TRADE and Webull, plus CSV or TSV files from other brokers with column mapping (remembered per file format). No broker login or credentials are needed — only the exported file.
+- Broker file import: transaction exports from Revolut, DEGIRO, Trading 212, Interactive Brokers (IBKR activity statements), Robinhood, Fidelity, Charles Schwab, E*TRADE, Webull, Saxo, XTB and Zerodha, plus CSV or TSV files from other brokers with column mapping (remembered per file format). No broker login or credentials are needed — only the exported file.
 - Watchlists with price alerts above or below a level, with email notifications.
 - Signal Feed: news filtered to the investor's holdings and watchlists.
 - Company pages: one page per stock with price history, the investor's position, price alerts, private notes and news; for US-listed companies, key figures from SEC filings (revenue, margins, P/E, balance sheet, cash flow) and dividend per share by year.
@@ -21,7 +21,7 @@
 
 ## Guides and tools
 - Cabinet features: [portfolio tracker](https://pulsarium.finance/portfolio-tracker/), [dividend tracker](https://pulsarium.finance/dividend-tracker/), [price alerts](https://pulsarium.finance/price-alerts/), [why Pulsarium](https://pulsarium.finance/why-pulsarium/).
-- [Broker import guides](https://pulsarium.finance/import/): step by step for Revolut, DEGIRO, Trading 212, Interactive Brokers, Robinhood, Fidelity, Charles Schwab, E*TRADE and Webull.
+- [Broker import guides](https://pulsarium.finance/import/): step by step for Revolut, DEGIRO, Trading 212, Interactive Brokers, Robinhood, Fidelity, Charles Schwab, E*TRADE, Webull, Saxo, XTB and Zerodha.
 - [Free calculators](https://pulsarium.finance/tools/): dividend yield, DCA (monthly investing) and portfolio rebalancing.
 
 ## About

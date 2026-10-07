@@ -232,6 +232,64 @@ BROKERS = {
         "faq": ("Do I need a Flex Query?",
                 "No. A standard Activity statement exported as CSV is enough; Pulsarium reads its Trades section."),
     },
+    "saxo": {
+        "region": "global",
+        "name": "Saxo",
+        "export": [
+            ("Export the Transactions report", "In SaxoTraderGO or SaxoInvestor open your account's <em>Transactions</em> report, choose the period and export it to Excel."),
+            ("Save it as CSV", "Open the file in Excel and save it as CSV. Danish and Dutch exports work too."),
+        ],
+        "notes": [
+            ("Exchange from the symbol", "Saxo writes each listing as “AAPL:xnas”; Pulsarium takes the ticker and its exchange from it, so the right listing is picked."),
+            ("Your account's currency", "Saxo books amounts in your account's currency; Pulsarium turns them back into the stock's currency with the file's conversion rate and finds each trade's commission."),
+        ],
+        "faq": [
+            ("Which Saxo report do I need?",
+             "The Transactions report exported to Excel and saved as CSV. It holds your trades, dividends and cash "
+             "movements; deposits and fees are left out on their own."),
+            ("Are Saxo dividends imported?",
+             "Yes. Dividend rows come in as received dividends, as Saxo booked them."),
+        ],
+    },
+    "xtb": {
+        "region": "global",
+        "name": "XTB",
+        "export": [
+            ("Open the cash operations", "In xStation 5 open <em>History</em>, choose the <em>Cash operations</em> tab and set the period."),
+            ("Export and save as CSV", "Click <em>Export</em> and choose Excel. In the file, open the <em>CASH OPERATION HISTORY</em> sheet and save it as CSV — the lines above the table can stay."),
+        ],
+        "notes": [
+            ("Trades from the comment", "XTB writes each trade as “OPEN BUY 34 @ 11.748”; Pulsarium reads the shares and price from it, and the exchange and currency from the ticker's suffix (.US, .DE, .PL …)."),
+            ("Dividends per share", "XTB lists a dividend per position and per share; Pulsarium adds it up for the shares in your file and applies the withholding rate XTB gives."),
+        ],
+        "faq": [
+            ("Which XTB file do I need?",
+             "The cash operation history from xStation 5 (History → Cash operations → Export), with its sheet "
+             "saved as CSV. Interest, transfers and CFD rows are left out on their own."),
+            ("What if my file starts after my first buy?",
+             "Then a dividend can't be counted from the file's shares: the preview asks you to add it by hand, "
+             "with the amount per share XTB lists."),
+        ],
+    },
+    "zerodha": {
+        "region": "global",
+        "name": "Zerodha",
+        "export": [
+            ("Open the tradebook", "Log in to Zerodha Console, open <em>Reports → Tradebook</em>, choose the Equity segment and a date range (up to a year)."),
+            ("Download as CSV", "Click <em>Download</em> and choose CSV. For a longer history, download one year at a time and upload the files one after another — rows already imported are skipped."),
+        ],
+        "notes": [
+            ("NSE and BSE", "Each trade keeps its exchange (NSE or BSE) and its price in rupees, so it is matched to that listing."),
+            ("Equity trades", "Futures and options rows are marked for you to exclude."),
+        ],
+        "faq": [
+            ("Does the tradebook include charges?",
+             "No. Zerodha's tradebook lists price and quantity only; brokerage, STT and stamp duty are in the "
+             "contract notes, so trades come in without fees."),
+            ("Are dividends in the tradebook?",
+             "No. Add dividends by hand, or confirm the ones Pulsarium detects for your holdings."),
+        ],
+    },
     # US brokers: parsing was checked on sample files in each broker's style;
     # the pages say so and point to the in-app report for anything unread.
     "robinhood": {
@@ -507,7 +565,7 @@ def import_hub() -> dict:
         hero("Broker import",
              "Import your trades from a broker file — no broker login",
              "Pulsarium reads the transaction exports of Revolut, DEGIRO, Trading 212, Interactive Brokers, Robinhood, "
-             "Fidelity, Charles Schwab, E*TRADE and Webull — and CSV or TSV files from other brokers such as Saxo or XTB "
+             "Fidelity, Charles Schwab, E*TRADE, Webull, Saxo, XTB and Zerodha — and CSV or TSV files from other brokers "
              "once you match their columns. Every row is reviewed with you before anything is saved.",
              ("/portfolio-tracker/", "See the portfolio tracker"))
         + f'<section class="block"><h2>Europe and global brokers</h2>{cards("global")}</section>'
@@ -525,7 +583,7 @@ def import_hub() -> dict:
         "path": "/import/", "crumb": "Broker import",
         "title": "Import broker trades into a portfolio tracker: Revolut, DEGIRO, IBKR, Robinhood, Schwab | Pulsarium",
         "description": "Import your broker's transaction export into Pulsarium's free portfolio tracker: Revolut, "
-                       "DEGIRO, Trading 212, Interactive Brokers, Robinhood, Fidelity, Schwab, E*TRADE, Webull or any CSV/TSV. "
+                       "DEGIRO, Trading 212, Interactive Brokers, Robinhood, Fidelity, Schwab, E*TRADE, Webull, Saxo, XTB, Zerodha or any CSV/TSV. "
                        "No broker login, every row reviewed.",
         "body": body, "head": faq_ld,
     }
