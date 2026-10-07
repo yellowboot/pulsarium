@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="/assets/theme.js?v=bc09f56dc2" data-pulsarium-theme="bootstrap"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Import Zerodha trades into a portfolio tracker: step by step | Pulsarium</title>
+<meta name="description" content="How to export your Zerodha transaction history and import it into Pulsarium&#x27;s free portfolio tracker: every trade reviewed before saving, no broker login needed.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://pulsarium.finance/import/zerodha/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pulsarium">
+<meta property="og:title" content="Import Zerodha trades into a portfolio tracker: step by step | Pulsarium">
+<meta property="og:description" content="How to export your Zerodha transaction history and import it into Pulsarium&#x27;s free portfolio tracker: every trade reviewed before saving, no broker login needed.">
+<meta property="og:url" content="https://pulsarium.finance/import/zerodha/">
+<meta property="og:image" content="https://pulsarium.finance/og/pulsarium-og-v2.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pulsarium.finance/og/pulsarium-og-v2.jpg">
+<link rel="alternate" type="application/rss+xml" title="Pulsarium market news" href="/news/feed.xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/site.css?v=241c5fafb9">
+<link rel="stylesheet" href="/assets/footer.css?v=27843acd5d">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pulsarium.finance/"}, {"@type": "ListItem", "position": 2, "name": "Broker import", "item": "https://pulsarium.finance/import/"}, {"@type": "ListItem", "position": 3, "name": "Zerodha", "item": "https://pulsarium.finance/import/zerodha/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does the tradebook include charges?", "acceptedAnswer": {"@type": "Answer", "text": "No. Zerodha's tradebook lists price and quantity only; brokerage, STT and stamp duty are in the contract notes, so trades come in without fees."}}, {"@type": "Question", "name": "Are dividends in the tradebook?", "acceptedAnswer": {"@type": "Answer", "text": "No. Add dividends by hand, or confirm the ones Pulsarium detects for your holdings."}}, {"@type": "Question", "name": "Do I have to connect my broker account?", "acceptedAnswer": {"@type": "Answer", "text": "No. Pulsarium never asks for broker logins. You export a transaction file from your broker and upload it, or add trades by hand. Nothing reaches your broker account."}}, {"@type": "Question", "name": "Is Pulsarium free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The personal cabinet is free during the public beta: portfolios, dividends, watchlists, price alerts, broker import and the news feed. Paid plans with an AI research assistant are planned; the free features stay available."}}]}</script>
+<link rel="stylesheet" href="/assets/themes.css?v=995daca531" data-pulsarium-theme="styles">
+</head>
+<body>
+<div class="bg-layer bg-nebula" aria-hidden="true"></div>
+<div class="bg-layer bg-stars" aria-hidden="true"></div>
+<div class="bg-scan" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Pulsarium home">
+    <span class="mini-pulsar" aria-hidden="true"><span class="mini-ping"></span><span class="mini-ping late"></span><span class="mini-core"></span></span>
+    <span class="wordmark">PULSARIUM</span>
+  </a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="/portfolio-tracker/">Portfolio tracker</a>
+    <a href="/news/">Live news</a>
+    <a href="/mood/">Mood Index</a>
+    <a href="/tools/">Calculators</a>
+    <a class="nav-secondary" href="/news/companies/">Companies</a>
+    <a class="nav-secondary" href="/news/daily/">Daily digest</a>
+    <a class="btn btn-primary" href="https://app.pulsarium.finance/">Sign in</a>
+  </nav>
+</header>
+
+<main class="page">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">›</span> <a href="/import/">Broker import</a> <span aria-hidden="true">›</span> <span aria-current="page">Zerodha</span></nav>
+<header class="page-head feature-head">
+  <span class="eyebrow">Broker import · Zerodha</span>
+  <h1>Import your Zerodha trades into a portfolio tracker</h1>
+  <p class="lead">Export your transaction history from Zerodha and upload the file to Pulsarium's free cabinet: every trade is checked with you before it is saved, and your broker login never leaves your hands.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="https://app.pulsarium.finance/">Create a free account</a>
+    <a class="btn btn-ghost" href="/import/">All supported brokers</a>
+  </div>
+  <p class="hero-note">Free during the public beta · No broker login needed · Two-factor sign-in</p>
+</header><section class="block"><h2>1. Export the file from Zerodha</h2><ol class="steps"><li><strong>Open the tradebook</strong><span>Log in to Zerodha Console, open <em>Reports → Tradebook</em>, choose the Equity segment and a date range (up to a year).</span></li><li><strong>Download as CSV</strong><span>Click <em>Download</em> and choose CSV. For a longer history, download one year at a time and upload the files one after another — rows already imported are skipped.</span></li></ol></section><section class="block"><h2>2. Import it into Pulsarium</h2><ol class="steps"><li><strong>Upload the file</strong><span>In the cabinet open <em>Account → Export / Import CSV → Import from a broker</em> and choose the file. CSV and TSV work; save an Excel file as CSV first.</span></li><li><strong>Check the columns</strong><span>Pick the target portfolio. Pulsarium suggests the broker from the file name and pre-selects the date, operation, instrument, quantity, price and fee columns — check them and whether dates are day- or month-first. After a successful import the column choices for that file format are remembered on your device.</span></li><li><strong>Review every row</strong><span>Click <em>Review rows</em>. Each trade is matched to a listing (the exchange is named, the most likely one is marked <em>best match</em>), already imported rows are skipped and possible duplicates are flagged. Nothing is saved until you confirm.</span></li></ol></section><figure class="panel shot"><img src="/assets/shots/cabinet-portfolio.webp" alt="Imported trades shown as positions in the Pulsarium portfolio table" width="1600" height="780" loading="lazy" decoding="async"><figcaption>After the import: every position with its average cost, P&amp;L, dividends and weight. <span>Demo account with sample data.</span></figcaption></figure><section class="block"><h2>What Pulsarium does with a Zerodha file</h2><div class="feature-grid cols-2"><article class="panel feature"><h3>NSE and BSE</h3><p>Each trade keeps its exchange (NSE or BSE) and its price in rupees, so it is matched to that listing.</p></article><article class="panel feature"><h3>Equity trades</h3><p>Futures and options rows are marked for you to exclude.</p></article></div></section><aside class="panel cta">
+  <div>
+    <span class="eyebrow">Personal cabinet</span>
+    <h2>Track your Zerodha portfolio in one place</h2>
+    <p>Positions, dividends, price alerts and news about what you hold — free during the beta.</p>
+  </div>
+  <a class="btn btn-primary" href="https://app.pulsarium.finance/">Get started free</a>
+</aside><section class="block"><h2>Questions</h2><div class="faq"><details class="faq-item"><summary>Does the tradebook include charges?</summary><p>No. Zerodha's tradebook lists price and quantity only; brokerage, STT and stamp duty are in the contract notes, so trades come in without fees.</p></details><details class="faq-item"><summary>Are dividends in the tradebook?</summary><p>No. Add dividends by hand, or confirm the ones Pulsarium detects for your holdings.</p></details><details class="faq-item"><summary>Do I have to connect my broker account?</summary><p>No. Pulsarium never asks for broker logins. You export a transaction file from your broker and upload it, or add trades by hand. Nothing reaches your broker account.</p></details><details class="faq-item"><summary>Is Pulsarium free?</summary><p>Yes. The personal cabinet is free during the public beta: portfolios, dividends, watchlists, price alerts, broker import and the news feed. Paid plans with an AI research assistant are planned; the free features stay available.</p></details></div></section><section class="block"><h2>More in the cabinet</h2><div class="chips"><a class="chip" href="/portfolio-tracker/">Portfolio tracker</a><a class="chip" href="/dividend-tracker/">Dividend tracker</a><a class="chip" href="/price-alerts/">Price alerts</a><a class="chip" href="/why-pulsarium/">Why Pulsarium</a></div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-cols"><nav class="footer-col" aria-label="Portfolio"><span class="footer-col-title">Portfolio</span><ul><li><a href="/portfolio-tracker/">Portfolio tracker</a></li><li><a href="/dividend-tracker/">Dividend tracker</a></li><li><a href="/price-alerts/">Price alerts</a></li><li><a href="/import/">Broker import</a></li><li><a href="/why-pulsarium/">Why Pulsarium</a></li></ul></nav><nav class="footer-col" aria-label="Market news"><span class="footer-col-title">Market news</span><ul><li><a href="/news/">Live news</a></li><li><a href="/news/companies/">News by company</a></li><li><a href="/news/daily/">Daily digest</a></li><li><a href="/mood/">Mood Index</a></li><li><a href="/news/feed.xml">RSS feed</a></li></ul></nav><nav class="footer-col" aria-label="SEC data &amp; tools"><span class="footer-col-title">SEC data &amp; tools</span><ul><li><a href="/insider-buying/">Insider buying</a></li><li><a href="/insider-selling/">Insider selling</a></li><li><a href="/news/#sector-overview">Sector analytics</a></li><li><a href="/tools/">Calculators</a></li></ul></nav><nav class="footer-col" aria-label="About"><span class="footer-col-title">About</span><ul><li><a href="https://app.pulsarium.finance/?legal=faq">FAQ</a></li><li><a href="https://app.pulsarium.finance/?legal=disclaimer">Financial notice</a></li><li><a href="https://app.pulsarium.finance/?legal=imprint">Imprint</a></li><li><a href="https://app.pulsarium.finance/?legal=privacy">Privacy</a></li><li><a href="https://app.pulsarium.finance/?legal=terms">Terms</a></li><li><button type="button" data-analytics-settings>Analytics settings</button></li></ul></nav></div>
+  <p class="footer-note">Headlines come from public RSS feeds and link to their original publishers. Sentiment and importance are automated scores, not investment advice. Market data may be delayed.</p>
+</footer>
+<script src="/assets/analytics.js?v=d1521d62ee" defer></script>
+</body>
+</html>
