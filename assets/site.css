@@ -191,7 +191,8 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 /* ---------- Headlines ---------- */
 .day-head { margin: 26px 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-low); }
 .day-head a:hover { color: var(--accent); }
-.items { display: flex; flex-direction: column; gap: 12px; }
+/* headlines are cards side by side, not rows across the page */
+.items { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 12px; }
 /* a company page's first headlines; the rest wait behind "Show more" (SHOW_MORE_SCRIPT) */
 .show-more.is-collapsed [data-more] { display: none; }
 .show-more-button { margin-top: 18px; height: 42px; padding: 0 20px; font-size: 14px; }
@@ -225,21 +226,20 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 .empty { color: var(--text-mid); }
 
 /* ---------- Daily index, pager ---------- */
-.day-list { display: flex; flex-direction: column; gap: 8px; }
+.day-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 8px; }
 .day-row {
-  display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 18px; align-items: center;
-  padding: 14px 18px; border-radius: 12px;
+  display: flex; flex-direction: column; gap: 3px;
+  padding: 12px 16px; border-radius: 12px;
   border: 1px solid rgba(120, 220, 255, 0.10); background: rgba(10, 18, 40, 0.5);
   transition: border-color 0.2s;
 }
 .day-row:hover { border-color: rgba(0, 240, 255, 0.45); }
-.day-row strong { color: var(--text-hi); font-weight: 600; }
+.day-row strong { color: var(--text-hi); font-size: 14px; font-weight: 600; }
 .day-row span { font-size: 13px; color: var(--text-mid); }
 .mood-optimistic { color: var(--pos) !important; }
 .mood-cautious { color: var(--neg) !important; }
 .pager { margin-top: 34px; display: flex; justify-content: space-between; gap: 12px; }
 .pager a { color: var(--accent); font-weight: 600; }
-@media (max-width: 560px) { .day-row { grid-template-columns: 1fr; gap: 4px; } }
 
 /* ---------- Footer ---------- */
 .site-footer { max-width: 1268px; margin: 0 auto; padding: 32px var(--pad-x) 56px; border-top: 1px solid rgba(120, 220, 255, 0.08); color: var(--text-low); font-size: 12.5px; text-align: center; }
@@ -271,10 +271,10 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 .mood-chart .bar.neg { fill: rgba(255, 107, 142, 0.6); }
 .mood-chart .bar.neu { fill: rgba(157, 178, 214, 0.5); }
 .mood-chart .avg { fill: none; stroke: url(#mood-line); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.6)); }
-.mood-list { display: flex; flex-direction: column; gap: 8px; }
+.mood-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 460px), 1fr)); gap: 8px; }
 .mood-row {
-  display: grid; grid-template-columns: minmax(140px, 220px) minmax(0, 1fr) 44px minmax(0, 240px);
-  gap: 16px; align-items: center;
+  display: grid; grid-template-columns: minmax(96px, 150px) minmax(50px, 1fr) 36px minmax(0, 170px);
+  gap: 12px; align-items: center;
   padding: 12px 18px; border-radius: 12px;
   border: 1px solid rgba(120, 220, 255, 0.10); background: rgba(10, 18, 40, 0.5);
   transition: border-color 0.2s;

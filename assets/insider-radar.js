@@ -11,6 +11,8 @@
   const rulesSummary = root.querySelector('[data-radar-rules-summary]');
   const buttons = [...root.querySelectorAll('[data-radar-tab]')];
   const modeButtons = [...root.querySelectorAll('[data-radar-mode]')];
+  // the weekly list page for the side on screen (/insider-buying/ or /insider-selling/)
+  const pageLink = root.querySelector('[data-radar-page]');
   const tabs = { purchases: 'clusters', sales: 'large' };
   let data, mode = 'purchases';
   // A recent headline guarantees that the existing site builder writes a
@@ -47,6 +49,10 @@
     });
     rulesSummary.textContent = (selling ? 'Sales' : 'Purchases') +
       ' total at least $100,000 per company. Reported transaction values. Updated twice daily.';
+    if (pageLink) {
+      pageLink.href = selling ? '/insider-selling/' : '/insider-buying/';
+      pageLink.firstChild.textContent = (selling ? 'Insider selling' : 'Insider buying') + ' this week ';
+    }
     list.replaceChildren();
     if (!data) return;
     const view = selling ? data.sales : data;

@@ -453,14 +453,20 @@ def mood_page(history: list, window: list, now: datetime) -> tuple:
     return path, page(path=path, title=title, description=description, body=body, crumbs=crumbs), True
 
 
-# Long lists show their first rows (four, or data-rows) and scroll the rest.
-# Measured rather than a fixed height, because rows wrap on phones.
+# Long lists show their first lines (four, or data-rows) and scroll the rest.
+# Measured rather than a fixed height, because rows wrap on phones; a line
+# of a grid holds several tiles on wide screens and one on phones.
 FIT_ROWS_SCRIPT = """<script>
 (function () {
   var lists = document.querySelectorAll('.fit-rows');
   function fit(list) {
-    var count = Number(list.dataset.rows) || 4, rows = list.children, last = rows[count - 1];
-    list.style.maxHeight = rows.length > count && last ? (last.offsetTop + last.offsetHeight) + 'px' : '';
+    var lines = Number(list.dataset.rows) || 4, rows = list.children, top = null, seen = 0, last = null;
+    for (var i = 0; i < rows.length; i++) {
+      if (rows[i].offsetTop !== top) { top = rows[i].offsetTop; seen++; }
+      if (seen > lines) break;
+      last = rows[i];
+    }
+    list.style.maxHeight = last && last !== rows[rows.length - 1] ? (last.offsetTop + last.offsetHeight) + 'px' : '';
   }
   lists.forEach(fit);
   if (window.ResizeObserver) {
@@ -1055,7 +1061,7 @@ def daily_index(days: list, per_day: dict) -> tuple:
   <h1>Stock market news, day by day</h1>
   <p class="lead">Every trading day's headlines in one place: top stories by importance, the day's sentiment and the most mentioned companies.</p>
 </header>
-<section class="block day-list fit-rows" data-rows="7">{"".join(rows)}</section>
+<section class="block day-list fit-rows" data-rows="5">{"".join(rows)}</section>
 {FIT_ROWS_SCRIPT}
 """
     title = "Daily stock market news digest: top stories by day | Pulsarium"
@@ -1390,7 +1396,7 @@ INSIDER_STYLE = """<style>
 .insider-stats .stat { padding: 14px 18px; gap: 4px; }
 .insider-stats .stat strong { font-size: 20px; }
 .insider-stats .stat small { font-size: 12.5px; }
-.insider-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); align-items: start; }
+.insider-cards { align-items: start; }
 .insider-cards .item h3 { font-size: 16px; }
 </style>
 """
