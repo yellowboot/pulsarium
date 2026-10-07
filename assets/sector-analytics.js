@@ -151,8 +151,8 @@
     map.replaceChildren(); table.replaceChildren();
     const totals = snapshot.sectors.every(weighted);
     query('[data-sector-map-measure]').textContent = `${totals ? ttm(snapshot) ? 'Total revenue · TTM YoY' : 'Total revenue · YoY' : 'Revenue · YoY · median'} · margin change below`;
-    query('[data-sector-revenue-heading]').textContent = totals ? ttm(snapshot) ? 'Total revenue TTM YoY' : 'Total revenue YoY' : 'Revenue YoY';
-    query('[data-sector-median-heading]').textContent = ttm(snapshot) ? 'Median TTM YoY' : 'Median YoY';
+    query('[data-sector-revenue-heading]').replaceChildren(document.createTextNode(totals ? 'Total revenue' : 'Revenue'), el('br'), document.createTextNode(ttm(snapshot) ? 'TTM YoY' : 'YoY'));
+    query('[data-sector-median-heading]').replaceChildren(document.createTextNode('Median'), el('br'), document.createTextNode(ttm(snapshot) ? 'TTM YoY' : 'YoY'));
     query('[data-sector-comparison-note]').textContent = ttm(snapshot) ? 'Revenue and margin figures cover the latest four reported fiscal quarters. Revenue totals use the same companies in both periods; each company counts once in the median and growing share. Margin change is in percentage points. Free cash flow uses each issuer’s latest annual report. Open an industry for reporting dates, amounts, sample sizes and filing sources.' : 'Revenue totals use the same companies in both periods. Growing is the share with increasing revenue; median YoY gives each company equal weight. Margin change is in percentage points; free cash flow uses the annual reporting window. Open an industry for revenue amounts, sample sizes and filing sources.';
     snapshot.sectors.forEach(s => {
       const tile = industryButton(s, 'sector-tile');
