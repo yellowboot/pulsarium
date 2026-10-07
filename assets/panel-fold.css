@@ -1,0 +1,19 @@
+/* On phones the news page's side panels fold to their headings
+   (panel-fold.js), so the news comes sooner; desktops are untouched. */
+.panel-fold { display: none; }
+@media (max-width: 700px) {
+  .panel-fold-head { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+  .panel-fold {
+    display: inline-grid; place-items: center; flex: none; margin-left: auto; width: 30px; height: 30px; padding: 0;
+    border: 1px solid var(--border-soft, var(--border)); border-radius: 8px; background: transparent;
+    color: var(--text-mid); cursor: pointer;
+  }
+  .panel-fold::before {
+    content: ''; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+    transform: translateY(-2px) rotate(45deg); transition: transform .2s;
+  }
+  [data-folded='false'] > .panel-fold-head .panel-fold::before { transform: translateY(2px) rotate(-135deg); }
+  .panel-fold:focus-visible { outline: 2px solid var(--gold-1); outline-offset: 2px; }
+  [data-folded='true'] > :not(.panel-edge):not(.panel-fold-head) { display: none !important; }
+  [data-folded='true'] > .panel-fold-head { margin-bottom: 0 !important; }
+}
