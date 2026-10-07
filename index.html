@@ -347,16 +347,7 @@
 
   /* ---------- Footer ---------- */
   .site-footer { position: relative; z-index: 1; padding: 26px var(--pad-x); border-top: 1px solid rgba(120,220,255,0.10); }
-  .site-footer .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
   .site-footer .wordmark { font-size: 14px; }
-  .legal-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; font-size: 12px; color: var(--text-low); }
-  .legal-nav a { transition: color 0.2s, text-shadow 0.2s; }
-  .legal-nav a:hover { color: #ffffff; text-shadow: 0 0 10px var(--accent); }
-  .legal-nav .faq { color: var(--accent); font-weight: 600; font-size: 13px; }
-  .legal-nav .notice { color: var(--text-mid); font-size: 13px; }
-  .site-links { justify-content: flex-start !important; gap: 6px 22px !important; margin-bottom: 18px; font-size: 13px; }
-  .site-links a { color: var(--accent); font-weight: 600; transition: color 0.2s, text-shadow 0.2s; }
-  .site-links a:hover { color: var(--accent-ice); text-shadow: 0 0 10px var(--accent); }
   .panel-more { margin: 0; font-size: 13px; line-height: 1.6; color: var(--text-low); }
   .panel-more a { color: var(--accent); }
   .panel-more a:hover { color: var(--accent-ice); }
@@ -399,6 +390,7 @@
   .analytics-consent button:last-child { background:#554b90; }
 </style>
 <link rel="stylesheet" href="/assets/themes.css?v=995daca531" data-pulsarium-theme="styles">
+<link rel="stylesheet" href="/assets/footer.css?v=1">
 </head>
 <body class="home">
 
@@ -581,29 +573,49 @@
 </div>
 
 <footer class="site-footer">
-  <nav class="wrap site-links" aria-label="Explore">
-    <a href="/portfolio-tracker/">Portfolio tracker</a>
-    <a href="/dividend-tracker/">Dividend tracker</a>
-    <a href="/price-alerts/">Price alerts</a>
-    <a href="/import/">Broker import</a>
-    <a href="/why-pulsarium/">Why Pulsarium</a>
-    <a href="/news/companies/">News by company</a>
-    <a href="/news/daily/">Daily digest</a>
-    <a href="/mood/">Mood Index</a>
-    <a href="/tools/">Calculators</a>
-  </nav>
-  <div class="wrap">
-    <span class="wordmark">PULSARIUM</span>
-    <nav class="legal-nav" aria-label="Legal">
-      <a class="faq" href="https://app.pulsarium.finance/?legal=faq">FAQ</a>
-      <a class="notice" href="https://app.pulsarium.finance/?legal=disclaimer">Financial notice</a>
-      <a href="https://app.pulsarium.finance/?legal=imprint">Imprint</a>
-      <a href="https://app.pulsarium.finance/?legal=privacy">Privacy</a>
-      <a href="https://app.pulsarium.finance/?legal=terms">Terms</a>
-      <button type="button" id="analytics-settings" style="color:inherit;background:none;border:0;text-decoration:underline;cursor:pointer">Analytics settings</button>
-      <span>Market data may be delayed.</span>
+  <div class="footer-cols">
+    <nav class="footer-col" aria-label="Portfolio">
+      <span class="footer-col-title">Portfolio</span>
+      <ul>
+        <li><a href="/portfolio-tracker/">Portfolio tracker</a></li>
+        <li><a href="/dividend-tracker/">Dividend tracker</a></li>
+        <li><a href="/price-alerts/">Price alerts</a></li>
+        <li><a href="/import/">Broker import</a></li>
+        <li><a href="/why-pulsarium/">Why Pulsarium</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Market news">
+      <span class="footer-col-title">Market news</span>
+      <ul>
+        <li><a href="/news/">Live news</a></li>
+        <li><a href="/news/companies/">News by company</a></li>
+        <li><a href="/news/daily/">Daily digest</a></li>
+        <li><a href="/mood/">Mood Index</a></li>
+        <li><a href="/news/feed.xml">RSS feed</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="SEC data &amp; tools">
+      <span class="footer-col-title">SEC data &amp; tools</span>
+      <ul>
+        <li><a href="/insider-buying/">Insider buying</a></li>
+        <li><a href="/insider-selling/">Insider selling</a></li>
+        <li><a href="/news/#sector-overview">Sector analytics</a></li>
+        <li><a href="/tools/">Calculators</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="About">
+      <span class="footer-col-title">About</span>
+      <ul>
+        <li><a href="https://app.pulsarium.finance/?legal=faq">FAQ</a></li>
+        <li><a href="https://app.pulsarium.finance/?legal=disclaimer">Financial notice</a></li>
+        <li><a href="https://app.pulsarium.finance/?legal=imprint">Imprint</a></li>
+        <li><a href="https://app.pulsarium.finance/?legal=privacy">Privacy</a></li>
+        <li><a href="https://app.pulsarium.finance/?legal=terms">Terms</a></li>
+        <li><button type="button" id="analytics-settings">Analytics settings</button></li>
+      </ul>
     </nav>
   </div>
+  <p class="footer-note"><span class="wordmark">PULSARIUM</span> Not investment advice. Market data may be delayed.</p>
 </footer>
 
 <aside id="analytics-consent" class="analytics-consent" aria-label="Analytics preference" hidden>

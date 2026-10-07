@@ -69,13 +69,31 @@ STATIC_PAGES = [
     ("/news/", "hourly"),
 ]
 
-NEWS_LINKS = [
-    ("/news/", "Live news"),
-    ("/news/companies/", "News by company"),
-    ("/news/daily/", "Daily digest"),
-    ("/mood/", "Mood Index"),
-    ("/tools/", "Calculators"),
+# The footer of every page (also the homepage's and the news dashboard's,
+# written in by hand): links in columns by topic.
+FOOTER_COLUMNS = [
+    ("Portfolio", site_pages.CABINET_LINKS),
+    ("Market news", [("/news/", "Live news"), ("/news/companies/", "News by company"), ("/news/daily/", "Daily digest"),
+                     ("/mood/", "Mood Index"), ("/news/feed.xml", "RSS feed")]),
+    ("SEC data & tools", [("/insider-buying/", "Insider buying"), ("/insider-selling/", "Insider selling"),
+                          ("/news/#sector-overview", "Sector analytics"), ("/tools/", "Calculators")]),
+    ("About", [(f"{APP_URL}?legal=faq", "FAQ"), (f"{APP_URL}?legal=disclaimer", "Financial notice"),
+               (f"{APP_URL}?legal=imprint", "Imprint"), (f"{APP_URL}?legal=privacy", "Privacy"),
+               (f"{APP_URL}?legal=terms", "Terms")]),
 ]
+FOOTER_NOTE = ("Headlines come from public RSS feeds and link to their original publishers. Sentiment and "
+               "importance are automated scores, not investment advice. Market data may be delayed.")
+
+
+def footer_html() -> str:
+    columns = []
+    for title, links in FOOTER_COLUMNS:
+        items = "".join(f'<li><a href="{esc(href)}">{esc(name)}</a></li>' for href, name in links)
+        if title == "About":
+            items += '<li><button type="button" data-analytics-settings>Analytics settings</button></li>'
+        columns.append(f'<nav class="footer-col" aria-label="{esc(title)}"><span class="footer-col-title">{esc(title)}</span>'
+                       f'<ul>{items}</ul></nav>')
+    return f'<div class="footer-cols">{"".join(columns)}</div>\n  <p class="footer-note">{esc(FOOTER_NOTE)}</p>'
 
 esc = html.escape
 
@@ -662,6 +680,7 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="{asset_url('/assets/site.css')}">
+<link rel="stylesheet" href="{asset_url('/assets/footer.css')}">
 <script type="application/ld+json">{json.dumps(crumb_ld, ensure_ascii=False)}</script>
 {extra_head}</head>
 <body>
@@ -691,18 +710,7 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
 </main>
 
 <footer class="site-footer">
-  <nav class="footer-cabinet" aria-label="Personal cabinet">{"".join(f'<a href="{href}">{esc(name)}</a>' for href, name in site_pages.CABINET_LINKS)}</nav>
-  <nav class="footer-cabinet footer-news" aria-label="News">{"".join(f'<a href="{href}">{esc(name)}</a>' for href, name in NEWS_LINKS)}</nav>
-  <p>Headlines come from public RSS feeds and link to their original publishers. Sentiment and importance are automated scores, not investment advice.</p>
-  <nav class="footer-legal" aria-label="Legal">
-    <a class="footer-faq" href="{APP_URL}?legal=faq">FAQ</a>
-    <a href="{APP_URL}?legal=disclaimer">Financial notice</a>
-    <a href="{APP_URL}?legal=imprint">Imprint</a>
-    <a href="{APP_URL}?legal=privacy">Privacy</a>
-    <a href="{APP_URL}?legal=terms">Terms</a>
-    <a href="/news/feed.xml">RSS</a>
-    <button type="button" class="link-button" data-analytics-settings>Analytics settings</button>
-  </nav>
+  {footer_html()}
 </footer>
 <script src="{asset_url('/assets/analytics.js')}" defer></script>
 </body>
@@ -1219,6 +1227,13 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
         emit(daily_index(days, per_day), days[-1], "daily")
     emit(companies_hub(companies, counts, sector_totals), today.isoformat(), "daily")
     emit(mood_page(history, window, now), history[-1]["date"] if history else None, "daily")
+    # the insider panel's weekly lists; without the snapshot a page stays as last built
+    for side, (insider_path, *_rest) in INSIDER_PAGES.items():
+        result = insider_page(side, companies)
+        if result:
+            emit(result, (sec_snapshot("sec_insider_radar").get("through") or "")[:10] or None, "daily")
+        elif os.path.exists(url_file(insider_path)):
+            sitemap_entries.append((insider_path, None, "daily"))
     write_if_changed(url_file("/mood/widget/"), mood_widget(history), changed_files)
     write_if_changed(os.path.join("mood", "history.json"),
                      json.dumps({"index": "Pulsarium Mood Index", "scale": "0-100, 50 = neutral",
@@ -1260,6 +1275,7 @@ SEC_SNAPSHOT = "https://omkeplyeuxwlsqnblsjm.supabase.co/rest/v1/{table}?id=eq.g
 SEC_PUBLIC_KEY = "sb_publishable_Iike5dnuHEuwIIF-qruzzg_WkWJodcF"
 
 
+@functools.lru_cache(maxsize=None)
 def sec_snapshot(table: str) -> dict:
     request = urllib.request.Request(SEC_SNAPSHOT.format(table=table),
                                      headers={"apikey": SEC_PUBLIC_KEY, "User-Agent": "pulsarium-site-build"})
@@ -1286,7 +1302,9 @@ def day_span(start: str, end: str) -> str:
 
 
 def company_case(name: str) -> str:
-    """SEC writes many names in capitals ("INTEL CORP")."""
+    """SEC writes many names in capitals ("INTEL CORP"), some with their
+    state of incorporation ("Hormel Foods Corp /de/")."""
+    name = re.sub(r"\s*/[a-z]{2}/?\s*$", "", name, flags=re.I)
     if name != name.upper():
         return name
     kept = {"INC": "Inc", "CORP": "Corp", "CO": "Co", "LTD": "Ltd", "PLC": "plc", "LLC": "LLC", "LP": "LP",
@@ -1333,6 +1351,159 @@ def sec_week_card() -> str:
           <div class="sec-head"><span class="today-label">SEC filings · this week</span><a class="sec-more" href="news/#insider-radar">More →</a></div>
           <div class="sec-tiles">{cells}</div>
         </div>"""
+
+
+# The insider panel of the news dashboard loads by script, so search engines
+# see only "Loading…": its weekly lists are pages of their own, built from the
+# same snapshot. path, name, the people's word, the trades' word, FAQ.
+INSIDER_PAGES = {
+    "buying": ("/insider-buying/", "Insider buying", "buyers", "purchases", [
+        ("What is insider buying?",
+         "When a company's officers or directors buy its shares with their own money on the open market, they "
+         "must report it to the SEC on Form 4, usually within two business days. This page lists those purchases "
+         "from the last seven days."),
+        ("Why look at several insiders buying the same stock?",
+         "Several officers or directors buying within days is watched more closely than a single purchase. It is "
+         "still not a recommendation: insiders buy for many reasons, and the list says nothing about the price "
+         "you would pay today."),
+        ("How often is the list updated?",
+         "Twice a day, from SEC EDGAR filings. Amounts are the reported transaction values; no current price is "
+         "used."),
+    ]),
+    "selling": ("/insider-selling/", "Insider selling", "sellers", "sales", [
+        ("What is insider selling?",
+         "Officers and directors who sell their company's shares report it to the SEC on Form 4, usually within "
+         "two business days. This page lists those sales from the last seven days."),
+        ("What does “10b5-1 plan” mean?",
+         "A trading plan set up in advance that sells shares on a schedule. Sales under such a plan are marked: "
+         "they say less about an insider's current view than a sale decided at the moment."),
+        ("How often is the list updated?",
+         "Twice a day, from SEC EDGAR filings. Amounts are the reported transaction values; no current price is "
+         "used."),
+    ]),
+}
+
+
+# The insider pages' numbers are smaller than the site's stat panels, and
+# their trades sit as cards side by side, not rows across the page.
+INSIDER_STYLE = """<style>
+.insider-stats .stat { padding: 14px 18px; gap: 4px; }
+.insider-stats .stat strong { font-size: 20px; }
+.insider-stats .stat small { font-size: 12.5px; }
+.insider-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); align-items: start; }
+.insider-cards .item h3 { font-size: 16px; }
+</style>
+"""
+
+
+def person_case(name: str) -> str:
+    """Form 4 often writes names in capitals ("MELOCHE HAROLD J")."""
+    return name if name != name.upper() else " ".join(word.capitalize() for word in name.split())
+
+
+def insider_entry(trade: dict, side: str, companies: dict) -> str:
+    people = [p for p in trade.get("people") or [] if isinstance(p, dict) and p.get("name")]
+    count = trade.get("buyers" if side == "buying" else "sellers") or len(people)
+    who = ", ".join(f'{esc(person_case(p["name"]))} ({esc(p["title"])})' if p.get("title") else esc(person_case(p["name"]))
+                    for p in people)
+    company = companies.get(trade["symbol"])
+    ticker = (f'<a class="item-source" href="/news/{company["slug"]}/">{esc(trade["symbol"])}</a>'
+              if company and company.get("paged", True) else f'<span class="item-source">{esc(trade["symbol"])}</span>')
+    notes = []
+    if side == "selling":
+        planned = trade.get("planned_amount")
+        if isinstance(planned, (int, float)) and planned > 0:
+            notes.append("Sold under a 10b5-1 trading plan." if planned >= trade["amount"] - 1
+                         else f"{short_money(planned)} of it sold under a 10b5-1 trading plan.")
+        held = trade.get("holding_reduction")
+        if isinstance(held, dict) and isinstance(held.get("percent"), (int, float)):
+            notes.append(f'{esc(person_case(held.get("person") or "One seller"))} sold {held["percent"]:g}% of the direct '
+                         f'holding of {esc(held.get("security") or "that class")}.')
+    # one link to the source: the company's Form 4 filings on SEC EDGAR
+    filed = next((s["url"] for s in trade.get("sources") or [] if isinstance(s, dict) and s.get("url")), "")
+    cik = re.search(r"/edgar/data/(\d+)/", filed)
+    source = (f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik.group(1)}&type=4&owner=include&count=40"
+              if cik else filed)
+    link = (f' · <a href="{esc(source)}" target="_blank" rel="noopener nofollow" style="color: var(--accent)">'
+            f'SEC filing{"s" if cik else ""} ↗</a>' if source else "")
+    return f"""<article class="item">
+  <div class="item-meta">{ticker}<span>{count} {"insider" if count == 1 else "insiders"}</span><time datetime="{esc(trade["end"])}">traded {day_span(trade["start"], trade["end"])}</time></div>
+  <h3>{esc(company_case(trade["name"]))} · {short_money(trade["amount"])}</h3>
+  {f"<p>{who}{link}</p>" if who or link else ""}
+  {f'<p>{" ".join(notes)}</p>' if notes else ""}
+</article>"""
+
+
+def insider_page(side: str, companies: dict):
+    """The week's insider buying or selling as a page, or None without the snapshot."""
+    path, name, people_word, trades_word, questions = INSIDER_PAGES[side]
+    data = sec_snapshot("sec_insider_radar")
+    part = data if side == "buying" else data.get("sales") or {}
+    if not data or not part:
+        return None
+    usable = lambda t: (isinstance(t, dict) and isinstance(t.get("symbol"), str) and isinstance(t.get("name"), str)
+                        and isinstance(t.get("amount"), (int, float)) and t.get("start") and t.get("end"))
+    groups = [t for t in part.get("clusters") or [] if usable(t) and (t.get(people_word) or 0) >= 2]
+    largest = sorted((t for t in part.get("large") or [] if usable(t)), key=lambda t: -t["amount"])
+    # a stock shown among the groups isn't repeated under the largest trades
+    grouped = {t["symbol"] for t in groups}
+    others = [t for t in largest if t["symbol"] not in grouped]
+    through = data.get("through") or ""
+    window = data.get("window_days") or 7
+    verb = "bought" if side == "buying" else "sold"
+    other = "selling" if side == "buying" else "buying"
+    other_path, other_name = INSIDER_PAGES[other][0], INSIDER_PAGES[other][1]
+    until = f" through {fmt_short_day(date.fromisoformat(through[:10]))}" if through else ""
+
+    since = part.get("history_from") or data.get("history_from")
+    stats = ""
+    if largest:
+        top = largest[0]
+        covered = (part.get("coverage") or {}).get("processed")
+        read_since = f" since {day_span(since, since)}" if since else f" in {window} days"
+        stats = f"""<section class="stats insider-stats">
+  <div class="panel stat"><span class="stat-label">Companies</span><strong>{part.get("qualifying_companies") or len(largest)}</strong><small>with qualifying {trades_word} in {window} days</small></div>
+  <div class="panel stat"><span class="stat-label">Largest</span><strong>{short_money(top["amount"])}</strong><small>{esc(top["symbol"])} · {esc(company_case(top["name"]))}</small></div>
+  {f'<div class="panel stat"><span class="stat-label">Filings read</span><strong>{covered:,}</strong><small>SEC Form 4 filings read{read_since}</small></div>' if isinstance(covered, int) else ""}
+</section>"""
+    sections = ""
+    if groups:
+        sections += (f'<section class="block"><h2>Several insiders {side} the same stock <small>two or more officers or '
+                     f'directors within the window</small></h2><div class="items insider-cards">'
+                     + "".join(insider_entry(t, side, companies) for t in groups) + "</div></section>")
+    if others:
+        heading = f"Other large {trades_word}" if groups else f"Largest {trades_word}"
+        sections += (f'<section class="block"><h2>{heading} <small>by reported value</small></h2><div class="items insider-cards">'
+                     + "".join(insider_entry(t, side, companies) for t in others) + "</div></section>")
+    if not sections:
+        sections = f'<p class="empty">No qualifying insider {trades_word} in the last {window} days yet. This page updates twice a day.</p>'
+    method = part.get("methodology") if isinstance(part.get("methodology"), str) else ""
+    faq_section, faq_ld = site_pages.faq(questions)
+    body = f"""<header class="page-head">
+  <span class="eyebrow">SEC Form 4 · last {window} days</span>
+  <h1>{name} this week</h1>
+  <p class="lead">Stock {trades_word} by company officers and directors, as they reported them to the SEC on Form 4{until}: the largest {trades_word}, and the stocks several insiders {verb}. Updated twice a day, free.</p>
+</header>
+{stats}
+{sections}
+{cta("Follow the companies you own",
+     "The free cabinet tracks your portfolio from your broker's file and shows the news, SEC figures and price alerts for each holding.")}
+<section class="block method">
+  <h2>How this list is made</h2>
+  {f"<p>{esc(method)}</p>" if method else ""}
+  <p>Filings come from SEC EDGAR and are read twice a day{f"; this list is collected since {day_span(since, since)}" if since else ""}. Each entry links to the company's Form 4 filings on SEC EDGAR. The list describes reported trades, not prices, and is not investment advice.</p>
+  <p class="chips"><a class="chip" href="{other_path}">{other_name} this week</a><a class="chip" href="/news/#insider-radar">Live panel on the news dashboard</a><a class="chip" href="/news/#sector-overview">Sector analytics</a></p>
+</section>
+{faq_section}
+"""
+    title = (f"{name} this week: stocks executives and directors {verb} (SEC Form 4) | Pulsarium")
+    description = (f"Stock {trades_word} by company officers and directors in the last {window} days, from SEC Form 4 "
+                   f"filings: the largest {trades_word} and the stocks several insiders {verb}"
+                   f"{', 10b5-1 plan sales marked' if side == 'selling' else ''}. Updated twice a day.")
+    crumbs = [("Home", "/"), ("News", "/news/"), (name, path)]
+    indexable = bool(groups or largest)
+    return path, page(path=path, title=title, description=description, body=body, crumbs=crumbs,
+                      indexable=indexable, extra_head=INSIDER_STYLE + faq_ld), indexable
 
 
 def home_today(history: list, window: list, now: datetime) -> str:
