@@ -173,7 +173,7 @@ IMPORT_REVIEW_STEPS = [
 
 BROKERS = {
     "revolut": {
-        "region": "global",
+        "region": "europe",
         "name": "Revolut",
         "export": [
             ("Open the statements", "In the Revolut app go to <em>Invest</em> (Stocks), tap <em>More</em> and then <em>Statements</em>."),
@@ -188,7 +188,7 @@ BROKERS = {
                 "Revolut's order types such as “BUY - MARKET” and “SELL - LIMIT”."),
     },
     "degiro": {
-        "region": "global",
+        "region": "europe",
         "name": "DEGIRO",
         "export": [
             ("Open Transactions on the web", "Log in to DEGIRO in a browser (the app can't export). Hover the <em>Inbox</em> icon in the left menu and open <em>Transactions</em>."),
@@ -203,7 +203,7 @@ BROKERS = {
                 "quantity, price and currency."),
     },
     "trading-212": {
-        "region": "global",
+        "region": "europe",
         "name": "Trading 212",
         "export": [
             ("Open History", "In Trading 212 open the menu, go to <em>History</em> and tap the export icon at the top right."),
@@ -218,7 +218,7 @@ BROKERS = {
                 "one by one; overlapping rows are recognised and skipped."),
     },
     "interactive-brokers": {
-        "region": "global",
+        "region": "us",
         "name": "Interactive Brokers",
         "short": "IBKR",
         "export": [
@@ -233,7 +233,7 @@ BROKERS = {
                 "No. A standard Activity statement exported as CSV is enough; Pulsarium reads its Trades section."),
     },
     "saxo": {
-        "region": "global",
+        "region": "europe",
         "name": "Saxo",
         "export": [
             ("Export the Transactions report", "In SaxoTraderGO or SaxoInvestor open your account's <em>Transactions</em> report, choose the period and export it to Excel."),
@@ -252,7 +252,7 @@ BROKERS = {
         ],
     },
     "xtb": {
-        "region": "global",
+        "region": "europe",
         "name": "XTB",
         "export": [
             ("Open the cash operations", "In xStation 5 open <em>History</em>, choose the <em>Cash operations</em> tab and set the period."),
@@ -272,7 +272,7 @@ BROKERS = {
         ],
     },
     "zerodha": {
-        "region": "global",
+        "region": "india",
         "name": "Zerodha",
         "export": [
             ("Open the tradebook", "Log in to Zerodha Console, open <em>Reports → Tradebook</em>, choose the Equity segment and a date range (up to a year)."),
@@ -378,6 +378,45 @@ BROKERS = {
              "shows them for your confirmation; once confirmed, they are recorded against the position."),
         ],
     },
+    "vanguard": {
+        "region": "us",
+        "name": "Vanguard",
+        "export": [
+            ("Open the Download center", "Log in to Vanguard and open the <em>Download center</em> (under your accounts' balances and holdings)."),
+            ("Download a CSV file", "Choose the spreadsheet-compatible CSV format, your accounts and a date range, and download the file — Vanguard names it <em>OfxDownload.csv</em>."),
+        ],
+        "notes": [
+            ("Holdings table skipped", "The file starts with your current holdings; Pulsarium finds the transactions below them by itself."),
+            ("Settlement fund is cash", "Moves in and out of your settlement fund (VMFXX and the like) are left out on their own; your funds' dividends and capital gains distributions come in, their reinvestments as buys."),
+        ],
+        "faq": [
+            ("Which Vanguard file do I need?",
+             "The transaction history from the Download center as a CSV file (<em>OfxDownload.csv</em>). Upload it "
+             "as it is — there's no need to delete the holdings at the top."),
+            ("My file has several Vanguard accounts — what then?",
+             "The preview asks you to pick one account per import, so you can bring each into its own portfolio. "
+             "Shares moved between your accounts are flagged for you to add by hand."),
+        ],
+    },
+    "merrill-edge": {
+        "region": "us",
+        "name": "Merrill Edge",
+        "export": [
+            ("Open your account activity", "Log in to Merrill Edge, open the account and go to its <em>Activity</em> (transaction history); set the date range."),
+            ("Download as CSV", "Use the download option and choose CSV, then save the file."),
+        ],
+        "notes": [
+            ("Operations read by name", "Merrill names each operation in its description (Purchase, Sale, Dividend, Foreign Dividend …); Pulsarium reads them as buys, sells and dividends, with foreign tax withholding added to its dividend."),
+            ("Splits and cash left out", "A split booked as a dividend of shares is left out, because splits are applied automatically; so are deposits and bank interest. Options are marked for you to exclude."),
+        ],
+        "faq": [
+            ("Which Merrill Edge file do I need?",
+             "The account activity downloaded as CSV for the period you want. Upload it as it is."),
+            ("What about shares transferred in?",
+             "Shares that arrived from another broker or a share plan are flagged: add them by hand with your "
+             "average price, then exclude that row."),
+        ],
+    },
 }
 
 
@@ -450,7 +489,7 @@ def portfolio_tracker() -> dict:
                "notes, its news and, for US-listed companies, key figures and dividend history from SEC filings.")
         + steps("Start in three steps", [
             ("Create a free account", "Sign up with email or Google and turn on two-factor authentication if you like."),
-            ("Add your trades", "Upload your broker's file — <a href=\"/import/\">Revolut, DEGIRO, Trading 212, IBKR, Robinhood, Fidelity, Schwab, E*TRADE, Webull</a> or any CSV/TSV — or add trades by hand."),
+            ("Add your trades", "Upload your broker's file — <a href=\"/import/\">Fidelity, Schwab, Vanguard, Robinhood, E*TRADE, Webull, IBKR, Trading 212, Revolut, DEGIRO</a> or any CSV/TSV — or add trades by hand."),
             ("Follow along", "Watch weights, dividends and news; set <a href=\"/price-alerts/\">price alerts</a> on the names you are waiting for."),
         ])
         + closing_cta("Put your portfolio in one calm place",
@@ -462,7 +501,7 @@ def portfolio_tracker() -> dict:
         "path": "/portfolio-tracker/", "crumb": "Portfolio tracker", "og_image": "/assets/shots/cabinet-overview.jpg",
         "title": "Free stock portfolio tracker with dividends, alerts and news | Pulsarium",
         "description": "Track several stock portfolios in different currencies: weights, performance, dividends, "
-                       "price alerts and news about your holdings. Import from Revolut, DEGIRO, Trading 212, IBKR, Robinhood, Fidelity, Schwab, E*TRADE or Webull "
+                       "price alerts and news about your holdings. Import from Fidelity, Schwab, Vanguard, Robinhood, E*TRADE, IBKR, Trading 212 or Revolut "
                        "files - no broker login. Free during the beta.",
         "body": body, "head": faq_ld,
     }
@@ -545,9 +584,16 @@ def price_alerts() -> dict:
     }
 
 
+# The hub lists brokers by our audience: the US first, then the UK and
+# Europe, then India.
+HUB_ORDER = ["fidelity", "charles-schwab", "vanguard", "robinhood", "etrade", "merrill-edge", "webull",
+             "interactive-brokers", "trading-212", "revolut", "degiro", "saxo", "xtb", "zerodha"]
+
+
 def import_hub() -> dict:
     def cards(region: str) -> str:
-        chosen = [(slug, b) for slug, b in BROKERS.items() if b["region"] == region]
+        chosen = sorted(((slug, b) for slug, b in BROKERS.items() if b["region"] == region),
+                        key=lambda item: HUB_ORDER.index(item[0]))
         items = "".join(
             f'<a class="panel feature feature-link" href="/import/{slug}/"><h3>{esc(b["name"])}</h3>'
             f'<p>How to export your {esc(b["name"])} history and import it, step by step →</p></a>'
@@ -564,12 +610,13 @@ def import_hub() -> dict:
     body = (
         hero("Broker import",
              "Import your trades from a broker file — no broker login",
-             "Pulsarium reads the transaction exports of Revolut, DEGIRO, Trading 212, Interactive Brokers, Robinhood, "
-             "Fidelity, Charles Schwab, E*TRADE, Webull, Saxo, XTB and Zerodha — and CSV or TSV files from other brokers "
-             "once you match their columns. Every row is reviewed with you before anything is saved.",
+             "Pulsarium reads the transaction exports of Fidelity, Charles Schwab, Vanguard, Robinhood, E*TRADE, "
+             "Merrill Edge, Webull and Interactive Brokers in the US, Trading 212, Revolut, DEGIRO, Saxo and XTB in the "
+             "UK and Europe, and Zerodha in India — and CSV or TSV files from other brokers once you match their columns. Every row is reviewed with you before anything is saved.",
              ("/portfolio-tracker/", "See the portfolio tracker"))
-        + f'<section class="block"><h2>Europe and global brokers</h2>{cards("global")}</section>'
         + f'<section class="block"><h2>US brokers</h2>{cards("us")}</section>'
+        + f'<section class="block"><h2>UK and European brokers</h2>{cards("europe")}</section>'
+        + f'<section class="block"><h2>India</h2>{cards("india")}</section>'
         + steps("How the import works", IMPORT_REVIEW_STEPS)
         + features("Why file import instead of a broker connection", [
             ("Your login stays with you", "Pulsarium never asks for broker credentials and no third-party aggregator gets access to your account."),
@@ -581,9 +628,9 @@ def import_hub() -> dict:
     )
     return {
         "path": "/import/", "crumb": "Broker import",
-        "title": "Import broker trades into a portfolio tracker: Revolut, DEGIRO, IBKR, Robinhood, Schwab | Pulsarium",
-        "description": "Import your broker's transaction export into Pulsarium's free portfolio tracker: Revolut, "
-                       "DEGIRO, Trading 212, Interactive Brokers, Robinhood, Fidelity, Schwab, E*TRADE, Webull, Saxo, XTB, Zerodha or any CSV/TSV. "
+        "title": "Import broker trades into a portfolio tracker: Fidelity, Schwab, Vanguard, Robinhood | Pulsarium",
+        "description": "Import your broker's transaction export into Pulsarium's free portfolio tracker: Fidelity, "
+                       "Schwab, Vanguard, Robinhood, E*TRADE, Merrill Edge, Webull, IBKR, Trading 212, Revolut, DEGIRO, Saxo, XTB, Zerodha or any CSV/TSV. "
                        "No broker login, every row reviewed.",
         "body": body, "head": faq_ld,
     }
