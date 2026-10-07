@@ -539,23 +539,17 @@ MOOD_EMBED = f"""<section class="block" id="embed">
 
 def mood_widget(history: list) -> str:
     """/mood/widget/: the card other sites embed. Today's value on the 0-100
-    scale, its label, the change from the previous reading and the 7-day
-    average; the whole card links to /mood/. ?theme=light for light pages
+    scale, its label and the 7-day average; the whole card links to /mood/. ?theme=light for light pages
     (dark Neon by default); on this site's own pages (the homepage) it
     follows the page's Neon/Calm switch instead. Fonts come from
     this site, so embedding it sends no visitor data to anyone else; not
     indexed, not in the sitemap."""
     today = history[-1] if history else None
-    prev = history[-2] if len(history) > 1 else None
     if today:
         tone = "neg" if today["value"] <= 44 else "neu" if today["value"] <= 55 else "pos"
-        diff = today["value"] - prev["value"] if prev else None
-        change = "" if diff is None else (
-            f'<span class="change {"pos" if diff > 0 else "neg" if diff < 0 else "neu"}" title="vs previous day">'
-            f'{"▲" if diff > 0 else "▼" if diff < 0 else "±"}{abs(diff)}</span>')
         day = date.fromisoformat(today["date"])
         content = f"""<div class="top"><span>Market mood</span><time datetime="{today["date"]}">{fmt_short_day(day)}<span class="count"> · {today["headlines"]} headlines</span></time></div>
-  <div class="main"><span class="value">{today["value"]}<small>/100</small></span><span class="label {tone}">{esc(today["label"])}</span>{change}</div>
+  <div class="main"><span class="value">{today["value"]}<small>/100</small></span><span class="label {tone}">{esc(today["label"])}</span></div>
   <div class="scale" aria-hidden="true"><i style="left:{today["value"]}%"></i></div>
   <div class="ticks" aria-hidden="true"><span>0 · cautious</span><span>50</span><span>optimistic · 100</span></div>
   <div class="foot"><span>7-day average {today["avg7"]:g}</span><b>Pulsarium Mood Index ↗</b></div>"""
@@ -609,7 +603,6 @@ html, body {{ margin: 0; height: 100%; background: transparent; }}
 .value {{ font: 700 30px/1 'JetBrains Mono', ui-monospace, monospace; }}
 .value small {{ font-size: 12px; font-weight: 400; color: var(--low); }}
 .label {{ font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
-.change {{ margin-left: auto; font: 600 12px/1 'JetBrains Mono', ui-monospace, monospace; }}
 .pos {{ color: var(--pos); }} .neg {{ color: var(--neg); }} .neu {{ color: var(--neu); }}
 .scale {{ position: relative; height: 6px; margin: 3px 6px 0; border-radius: 99px; background: var(--track); }}
 .scale i {{ position: absolute; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; box-sizing: border-box; border-radius: 50%;
