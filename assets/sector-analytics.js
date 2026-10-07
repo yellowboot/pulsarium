@@ -6,7 +6,7 @@
   if (!overview || !sheet || typeof sheet.showModal !== 'function') return;
   const endpoint = 'https://omkeplyeuxwlsqnblsjm.supabase.co/rest/v1/sec_sector_analytics?id=eq.global&select=payload';
   const publishableKey = 'sb_publishable_Iike5dnuHEuwIIF-qruzzg_WkWJodcF';
-  const cacheKey = 'pulsarium-sector-snapshot-v3';
+  const cacheKey = 'pulsarium-sector-snapshot-v4';
   const ttl = 15 * 60 * 1000;
   const body = sheet.querySelector('.sector-sheet-body');
   let snapshot, selected, view = 'map', more = false, opener, newsY = 0, oldBodyOverflow, oldHtmlOverflow;
@@ -17,6 +17,9 @@
   const signed = (value, suffix = '%') => number(value) ? `${value > 0 ? '+' : ''}${value.toFixed(value !== 0 && Math.abs(value) < .1 ? 2 : 1)}${suffix}` : '—';
   const percent = value => number(value) ? `${value.toFixed(0)}%` : '—';
   const weighted = s => number(s.revenue_total_yoy);
+  const ttm = data => data?.version === 2 && data.revenue_basis === "ttm";
+  const range = (first, last) => first === last ? date(last) : `${date(first)} – ${date(last)}`;
+  const reporting = (c, total) => `${c.reporting_target} or later: ${c.latest_report_count.toLocaleString("en-US")} of ${total.toLocaleString("en-US")} companies · ${percent(c.latest_report_revenue_pct)} of prior-year TTM revenue.`;
   const ranked = data => data.company_ranking === 'revenue';
   const revenue = s => weighted(s) ? s.revenue_total_yoy : s.revenue_yoy;
   const tone = value => number(value) && value !== 0 ? value > 0 ? 'sector-up' : 'sector-down' : '';
@@ -30,7 +33,7 @@
     return node;
   };
   function valid(data) {
-    return data?.version === 1 && (data.company_ranking === undefined || ranked(data)) && /^Q[1-4] \d{4}$/.test(data.period) && /^\d{4}$/.test(data.cash_flow_period) &&
+    return (data?.version === 1 && /^Q[1-4] \d{4}$/.test(data.period) && /^\d{4}$/.test(data.cash_flow_period) || ttm(data) && data.period === "Latest reported" && data.cash_flow_period === "Latest annual" && count(data.coverage?.latest_report_count) && number(data.coverage?.latest_report_revenue_pct)) && (data.company_ranking === undefined || ranked(data)) &&
       count(data.coverage?.included) && count(data.coverage?.eligible) && count(data.coverage?.classified) &&
       Array.isArray(data.sectors) && data.sectors.length > 0 && data.sectors.every(s =>
         /^[a-z][a-z-]+$/.test(s.id) && typeof s.name === 'string' && count(s.company_count) && s.company_count > 0 && number(s.revenue_yoy) &&
@@ -136,7 +139,7 @@
         const marginPressure = color === 'sector-down' && revenue(s) >= 0;
         const value = marginPressure ? s.margin_change : revenue(s);
         const name = el('span', '', s.name);
-        name.append(el('small', 'sector-summary-label', marginPressure ? 'Margin change · median' : weighted(s) ? 'Total revenue · YoY' : 'Revenue · YoY · median'));
+        name.append(el('small', 'sector-summary-label', marginPressure ? ttm(snapshot) ? 'Margin change · TTM median' : 'Margin change · median' : weighted(s) ? ttm(snapshot) ? 'Total revenue · TTM YoY' : 'Total revenue · YoY' : 'Revenue · YoY · median'));
         row.append(name, el('strong', tone(value), signed(value, marginPressure ? ' pp' : '%')));
         root.append(row);
       });
@@ -146,8 +149,10 @@
     const map = query('[data-sector-map]'), table = query('[data-sector-table]');
     map.replaceChildren(); table.replaceChildren();
     const totals = snapshot.sectors.every(weighted);
-    query('[data-sector-map-measure]').textContent = totals ? 'Total revenue · YoY · same-company sample' : 'Revenue · YoY · median';
-    query('[data-sector-revenue-heading]').textContent = totals ? 'Total revenue YoY' : 'Revenue YoY';
+    query('[data-sector-map-measure]').textContent = totals ? ttm(snapshot) ? 'Total revenue · TTM YoY · same-company sample' : 'Total revenue · YoY · same-company sample' : 'Revenue · YoY · median';
+    query('[data-sector-revenue-heading]').textContent = totals ? ttm(snapshot) ? 'Total revenue TTM YoY' : 'Total revenue YoY' : 'Revenue YoY';
+    query('[data-sector-median-heading]').textContent = ttm(snapshot) ? 'Median TTM YoY' : 'Median YoY';
+    query('[data-sector-comparison-note]').textContent = ttm(snapshot) ? 'Revenue and margin figures cover the latest four reported fiscal quarters. Revenue totals use the same companies in both periods; each company counts once in the median and growing share. Margin change is in percentage points. Free cash flow uses each issuer’s latest annual report. Open an industry for reporting dates, amounts, sample sizes and filing sources.' : 'Revenue totals use the same companies in both periods. Growing is the share with increasing revenue; median YoY gives each company equal weight. Margin change is in percentage points; free cash flow uses the annual reporting window. Open an industry for revenue amounts, sample sizes and filing sources.';
     snapshot.sectors.forEach(s => {
       const tile = industryButton(s, 'sector-tile');
       tile.dataset.direction = s.direction;
@@ -176,13 +181,19 @@
     });
     const root = query('[data-sector-details]');
     const title = el('h3', 'sector-detail-title', s.name); title.id = 'sector-detail-title';
-    root.replaceChildren(title, el('p', 'sector-detail-description', `${stateName(s)} · ${s.company_count} companies with comparable quarterly revenue · ${snapshot.period}`));
+    root.replaceChildren(title, el('p', 'sector-detail-description', `${stateName(s)} · ${s.company_count} companies with comparable ${ttm(snapshot) ? "TTM" : "quarterly"} revenue · ${snapshot.period}`));
     const metrics = el('div', 'sector-metrics');
-    if (weighted(s)) metrics.append(metric('Total revenue · YoY', signed(s.revenue_total_yoy), `${money(s.revenue_current)} current · ${money(s.revenue_previous)} prior year · ${s.company_count} companies`, tone(s.revenue_total_yoy)));
-    metrics.append(metric('Company revenue · median', signed(s.revenue_yoy), `${s.company_count} companies · YoY · equal company weight`, tone(s.revenue_yoy)),
-      metric('Operating margin change · median', signed(s.margin_change, ' pp'), `${s.margin_count} companies · YoY`, tone(s.margin_change)),
-      metric('Positive free cash flow', percent(s.fcf_positive_pct), s.fcf_count ? `${s.fcf_positive_count} of ${s.fcf_count} companies · annual ${snapshot.cash_flow_period}` : ['banks', 'insurance'].includes(s.id) ? 'This cash-flow measure is not comparable for banking and insurance.' : `Comparable cash-flow data unavailable · annual ${snapshot.cash_flow_period}`));
+    if (weighted(s)) metrics.append(metric(ttm(snapshot) ? 'Total revenue · TTM YoY' : 'Total revenue · YoY', signed(s.revenue_total_yoy), `${money(s.revenue_current)} current · ${money(s.revenue_previous)} prior year · ${s.company_count} companies`, tone(s.revenue_total_yoy)));
+    metrics.append(metric(ttm(snapshot) ? 'Company revenue · TTM median' : 'Company revenue · median', signed(s.revenue_yoy), `${s.company_count} companies · ${ttm(snapshot) ? "TTM YoY" : "YoY"} · equal company weight`, tone(s.revenue_yoy)),
+      metric('Operating margin change · median', signed(s.margin_change, ' pp'), `${s.margin_count} companies · ${ttm(snapshot) ? "TTM YoY" : "YoY"}`, tone(s.margin_change)),
+      metric('Positive free cash flow', percent(s.fcf_positive_pct), s.fcf_count ? `${s.fcf_positive_count} of ${s.fcf_count} companies · ${ttm(snapshot) ? `latest annual · years ended ${range(s.cash_flow_end_min, s.cash_flow_end_max)}` : `annual ${snapshot.cash_flow_period}`}` : ['banks', 'insurance'].includes(s.id) ? 'This cash-flow measure is not comparable for banking and insurance.' : `Comparable cash-flow data unavailable · annual ${snapshot.cash_flow_period}`));
     root.append(metrics);
+    if (ttm(snapshot)) {
+      const reports = el('section', 'sector-card sector-reporting');
+      reports.append(el('h3', '', 'Reporting coverage'), el('p', '', reporting(s, s.company_count)),
+        el('p', 'sector-note', `Latest quarters ended ${range(s.period_end_min, s.period_end_max)}. Each company uses its latest available four-quarter revenue; fiscal calendars differ.`));
+      root.append(reports);
+    }
     const breadth = el('section', 'sector-card');
     breadth.append(el('h3', '', 'How broad is the trend?'));
     const bar = el('div', 'sector-breadth'); bar.setAttribute('aria-hidden', 'true');
@@ -239,16 +250,22 @@
   function render(data) {
     snapshot = data;
     selected = snapshot.sectors.some(s => s.id === selected) ? selected : snapshot.sectors.find(s => s.direction === 'pressure')?.id || snapshot.sectors[0].id;
-    overview.querySelector('[data-sector-state]').hidden = true;
+    const status = overview.querySelector('[data-sector-state]');
+    const stale = Date.now() - Date.parse(snapshot.updated_at) > 36 * 60 * 60 * 1000;
+    status.hidden = !stale;
+    if (stale) status.textContent = 'Update delayed. Showing the last available snapshot.';
     overview.querySelector('[data-sector-summary]').hidden = false;
-    overview.querySelector('[data-sector-period]').textContent = `Company filings · ${snapshot.period}`;
+    overview.querySelector('[data-sector-period]').textContent = `Company filings · ${ttm(snapshot) ? "Latest reported · TTM" : snapshot.period}`;
     overview.querySelector('[data-sector-more]').hidden = false;
     overview.querySelectorAll('[data-sector-open]').forEach(button => { button.disabled = false; });
     const meta = query('[data-sector-meta]');
     meta.replaceChildren(el('strong', '', snapshot.period), el('span', '', `${snapshot.coverage.included.toLocaleString('en-US')} companies · ${snapshot.sectors.length} industries`));
     const coverage = snapshot.coverage;
     const updated = new Date(snapshot.updated_at);
-    query('[data-sector-coverage]').textContent = `Revenue period: ${snapshot.period}. SEC coverage: ${coverage.classified.toLocaleString('en-US')} of ${coverage.eligible.toLocaleString('en-US')} eligible issuers classified. ${coverage.complete ? '' : 'Coverage is expanding. '}Annual cash flow: ${snapshot.cash_flow_period}. ${Number.isNaN(updated.getTime()) ? '' : `Snapshot refreshed ${updated.toLocaleDateString('en-US', { timeZone: 'UTC' })}.`}`;
+    const refreshed = Number.isNaN(updated.getTime()) ? '' : `Snapshot refreshed ${updated.toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'UTC' })} UTC.`;
+    query('[data-sector-coverage]').textContent = ttm(snapshot)
+      ? `Revenue: latest reported TTM. ${reporting(coverage, coverage.included)} Latest quarters ended ${range(coverage.period_end_min, coverage.period_end_max)}. ${coverage.complete ? '' : 'Coverage is expanding. '}${refreshed}`
+      : `Revenue period: ${snapshot.period}. SEC coverage: ${coverage.classified.toLocaleString('en-US')} of ${coverage.eligible.toLocaleString('en-US')} eligible issuers classified. ${coverage.complete ? '' : 'Coverage is expanding. '}Annual cash flow: ${snapshot.cash_flow_period}. ${refreshed}`;
     const select = query('[data-sector-select]'); select.replaceChildren();
     [...snapshot.sectors].sort((a, b) => a.name.localeCompare(b.name)).forEach(s => { const option = el('option', '', s.name); option.value = s.id; select.append(option); });
     select.value = selected;
@@ -262,14 +279,14 @@
   async function load() {
     let cached;
     try { cached = JSON.parse(sessionStorage.getItem(cacheKey)); } catch (_) { /* Storage can be unavailable. */ }
-    if (cached && valid(cached.payload) && ranked(cached.payload) && cached.payload.sectors.every(weighted) && Date.now() - cached.saved < ttl) { render(cached.payload); return; }
+    if (cached && valid(cached.payload) && ttm(cached.payload) && ranked(cached.payload) && cached.payload.sectors.every(weighted) && Date.now() - cached.saved < ttl) { render(cached.payload); return; }
     try {
       const response = await fetch(endpoint, { headers: { apikey: publishableKey }, signal: AbortSignal.timeout(15000) });
       if (!response.ok) throw new Error('Snapshot unavailable');
       const rows = await response.json(), data = rows?.[0]?.payload;
       if (!valid(data)) throw new Error('Snapshot not ready');
       render(data);
-      try { if (ranked(data) && data.sectors.every(weighted)) sessionStorage.setItem(cacheKey, JSON.stringify({ saved: Date.now(), payload: data })); } catch (_) { /* Storage can be unavailable. */ }
+      try { if (ttm(data) && ranked(data) && data.sectors.every(weighted)) sessionStorage.setItem(cacheKey, JSON.stringify({ saved: Date.now(), payload: data })); } catch (_) { /* Storage can be unavailable. */ }
     } catch (_) {
       if (cached && valid(cached.payload)) {
         render(cached.payload);
