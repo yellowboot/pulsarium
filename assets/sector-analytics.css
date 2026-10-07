@@ -55,7 +55,7 @@
 .sector-section-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 14px; }
 .sector-section-head h3 { margin: 0; font: 600 17px/1.5 var(--font-ui); color: var(--text-hi); }
 .sector-section-head .sector-caption { margin: 0; }
-.sector-map-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 10px; }
+.sector-map-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 10px; }
 .sector-tile { min-width: 0; position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
   min-height: 132px; padding: 17px; border: 1px solid var(--border); border-radius: 12px; text-align: left;
   background: var(--sector-tile-background); color: var(--text-hi); transition: border-color .15s, background .15s; }
@@ -63,6 +63,9 @@
 .sector-tile[aria-pressed='true'] { outline: 1px solid var(--gold-1); outline-offset: 1px; }
 .sector-tile-name { color: var(--text-hi); font-size: 13px; font-weight: 600; }
 .sector-tile-value { font: 600 23px/1.4 var(--font-mono); color: var(--text-hi); }
+.sector-tile-measure { margin-top: -7px; color: var(--text-mid); font-size: 10px; }
+.sector-tile-margin { display: flex; flex-wrap: wrap; width: 100%; align-items: baseline; gap: 3px 8px; color: var(--text-mid); font-size: 11px; }
+.sector-tile-margin strong { font: 600 11px/1.6 var(--font-mono); white-space: nowrap; }
 .sector-tile-foot { margin-top: auto; color: var(--text-mid); font-size: 11px; }
 .sector-legend { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 15px 0 28px; color: var(--text-mid); font-size: 11.5px; }
 .sector-legend i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: currentColor; margin-right: 6px; }
@@ -100,7 +103,7 @@
 .sector-company-list { display: grid; gap: 0; }
 .sector-company { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--border-soft); }
 .sector-company:last-child { border-bottom: 0; padding-bottom: 0; }
-.sector-company a { color: var(--gold-1); font: 600 13px var(--font-mono); text-underline-offset: 3px; }
+.sector-company-ticker { color: var(--text-hi); font: 600 13px var(--font-mono); }
 .sector-company-name { margin: 4px 0; color: var(--text-hi); font-size: 12px; overflow-wrap: anywhere; }
 .sector-company-revenue { margin: 8px 0 2px; color: var(--text-hi); font: 500 11px/1.6 var(--font-mono); overflow-wrap: anywhere; }
 .sector-company-flag { display: inline-block; max-width: 100%; margin-top: 7px; padding: 2px 7px; border: 1px solid var(--border);
@@ -130,6 +133,7 @@
 @media (min-width: 1101px) { .sector-sheet[data-expanded='true'] .sector-map-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .sector-sheet[data-expanded='true'] .sector-sheet-body { padding-inline: max(32px, calc((100vw - 1120px) / 2)); } }
 @media (max-width: 640px) {
+  .sector-map-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sector-sheet { width: 100vw; border: 0; border-radius: 0; }
   .sector-sheet-header { padding: 16px; gap: 10px; }
   .sector-sheet-header h2 { font-size: 13px; }

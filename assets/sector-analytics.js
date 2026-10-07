@@ -25,7 +25,8 @@
   const tone = value => number(value) && value !== 0 ? value > 0 ? 'sector-up' : 'sector-down' : '';
   const money = value => number(value) ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 }).format(value) : '—';
   const date = value => /^\d{4}-\d{2}-\d{2}$/.test(value || '') ? new Date(`${value}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : 'not available';
-  const stateName = s => ({ growth: 'Business growth', pressure: 'Under pressure', mixed: 'Mixed trends', limited: 'Limited sample' })[s.direction];
+  const marginPressure = s => s.company_count >= 10 && revenue(s) >= 0 && s.margin_count >= 10 && s.margin_change < 0;
+  const stateName = s => marginPressure(s) ? 'Margin pressure' : ({ growth: 'Business growth', pressure: 'Under pressure', mixed: 'Mixed trends', limited: 'Limited sample' })[s.direction];
   const el = (tag, className = '', text) => {
     const node = document.createElement(tag);
     if (className) node.className = className;
@@ -149,16 +150,19 @@
     const map = query('[data-sector-map]'), table = query('[data-sector-table]');
     map.replaceChildren(); table.replaceChildren();
     const totals = snapshot.sectors.every(weighted);
-    query('[data-sector-map-measure]').textContent = totals ? ttm(snapshot) ? 'Total revenue · TTM YoY · same-company sample' : 'Total revenue · YoY · same-company sample' : 'Revenue · YoY · median';
+    query('[data-sector-map-measure]').textContent = `${totals ? ttm(snapshot) ? 'Total revenue · TTM YoY' : 'Total revenue · YoY' : 'Revenue · YoY · median'} · margin change below`;
     query('[data-sector-revenue-heading]').textContent = totals ? ttm(snapshot) ? 'Total revenue TTM YoY' : 'Total revenue YoY' : 'Revenue YoY';
     query('[data-sector-median-heading]').textContent = ttm(snapshot) ? 'Median TTM YoY' : 'Median YoY';
     query('[data-sector-comparison-note]').textContent = ttm(snapshot) ? 'Revenue and margin figures cover the latest four reported fiscal quarters. Revenue totals use the same companies in both periods; each company counts once in the median and growing share. Margin change is in percentage points. Free cash flow uses each issuer’s latest annual report. Open an industry for reporting dates, amounts, sample sizes and filing sources.' : 'Revenue totals use the same companies in both periods. Growing is the share with increasing revenue; median YoY gives each company equal weight. Margin change is in percentage points; free cash flow uses the annual reporting window. Open an industry for revenue amounts, sample sizes and filing sources.';
     snapshot.sectors.forEach(s => {
       const tile = industryButton(s, 'sector-tile');
       tile.dataset.direction = s.direction;
-      tile.setAttribute('aria-label', `${s.name}: ${stateName(s)}, ${weighted(s) ? 'total' : 'median'} revenue change ${signed(revenue(s))}, ${s.company_count} companies. Open details.`);
+      tile.setAttribute('aria-label', `${s.name}: ${stateName(s)}, ${weighted(s) ? 'total' : 'median'} revenue change ${signed(revenue(s))}, median margin change ${signed(s.margin_change, ' pp')}, ${s.company_count} companies. Open details.`);
       tile.append(el('span', 'sector-tile-name', s.name), el('strong', `sector-tile-value ${tone(revenue(s))}`, signed(revenue(s))),
-        el('span', 'sector-tile-foot', `${s.company_count} companies · ${stateName(s)}`));
+        el('span', 'sector-tile-measure', ttm(snapshot) ? 'Revenue · TTM YoY' : 'Revenue · YoY'));
+      const margin = el('span', 'sector-tile-margin');
+      margin.append(el('span', '', 'Margin change'), el('strong', tone(s.margin_change), signed(s.margin_change, ' pp')));
+      tile.append(margin, el('span', 'sector-tile-foot', `${s.company_count} companies · ${stateName(s)}`));
       map.append(tile);
       const row = el('tr'), name = el('td'), button = industryButton(s, '');
       button.textContent = s.name; name.append(button);
@@ -221,13 +225,11 @@
     const companies = el('section', 'sector-card');
     const revenueRanking = ranked(snapshot);
     companies.append(el('h3', '', revenueRanking ? 'Largest companies by revenue' : 'Companies behind the trend'),
-      el('p', 'sector-note', revenueRanking ? 'Largest quarterly revenue in the covered sample. YoY change in parentheses. Open a ticker for its SEC filing.' : 'Highest and lowest percentage revenue changes in the covered sample. Quarterly revenue shows the scale of each business. Open a ticker to see its SEC filing.'));
+      el('p', 'sector-note', revenueRanking ? 'Largest quarterly revenue in the covered sample. YoY change in parentheses.' : 'Highest and lowest percentage revenue changes in the covered sample. Quarterly revenue shows the scale of each business.'));
     const list = el('div', 'sector-company-list');
     s.companies.forEach(c => {
       const row = el('div', 'sector-company'), info = el('div'), values = el('div', 'sector-company-values');
-      const url = typeof c.source === 'string' && /^https:\/\/www\.sec\.gov\/Archives\/edgar\/data\/\d+\/\d+\/\d{10}-\d{2}-\d{6}-index\.html$/.test(c.source) ? c.source : null;
-      const ticker = el(url ? 'a' : 'span', '', c.symbol);
-      if (url) { ticker.href = url; ticker.target = '_blank'; ticker.rel = 'noopener noreferrer'; ticker.setAttribute('aria-label', `${c.symbol}: open SEC filing`); }
+      const ticker = el('span', 'sector-company-ticker', c.symbol);
       info.append(ticker, el('p', 'sector-company-name', c.name), el('small', '', `Quarter ended ${date(c.period_end)}`));
       if (number(c.revenue_current) && number(c.revenue_previous)) {
         if (!revenueRanking) info.append(el('p', 'sector-company-revenue', `Revenue: ${money(c.revenue_current)}`));
