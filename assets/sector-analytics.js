@@ -6,7 +6,7 @@
   if (!overview || !sheet || typeof sheet.showModal !== 'function') return;
   const endpoint = 'https://omkeplyeuxwlsqnblsjm.supabase.co/rest/v1/sec_sector_analytics?id=eq.global&select=payload';
   const publishableKey = 'sb_publishable_Iike5dnuHEuwIIF-qruzzg_WkWJodcF';
-  const cacheKey = 'pulsarium-sector-snapshot-v4';
+  const cacheKey = 'pulsarium-sector-snapshot-v5';
   const ttl = 15 * 60 * 1000;
   const body = sheet.querySelector('.sector-sheet-body');
   let snapshot, selected, view = 'map', more = false, opener, newsY = 0, oldBodyOverflow, oldHtmlOverflow;
@@ -277,6 +277,8 @@
       p.append(label, document.createTextNode(String(text))); methods.append(p);
     });
     renderSummary(); renderMap(); renderDetails(); setView(view);
+    window.pulsariumSectorSnapshot = data;
+    window.dispatchEvent(new CustomEvent('pulsarium:sector-snapshot', { detail: data }));
   }
   async function load() {
     let cached;
@@ -296,6 +298,7 @@
       } else {
         const state = overview.querySelector('[data-sector-state]');
         state.textContent = 'Industry data is temporarily unavailable.';
+        window.dispatchEvent(new CustomEvent('pulsarium:sector-unavailable'));
         const retry = el('button', 'sector-more', 'Retry'); retry.type = 'button';
         retry.addEventListener('click', () => { retry.remove(); state.textContent = 'Loading industry fundamentals…'; load(); });
         state.after(retry);
