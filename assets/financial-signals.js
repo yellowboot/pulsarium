@@ -3,7 +3,7 @@
   'use strict';
   const overview=document.getElementById('financial-signals'), sheet=document.getElementById('financial-sheet');
   if(!overview||!sheet||typeof sheet.showModal!=='function') return;
-  const titles={turnaround:'Financial turnaround',shares:'Buybacks & share growth',stress:'Financial stress'};
+  const titles={turnaround:'Operating & cash-flow turnarounds',shares:'Buybacks & dilution',stress:'Financial stress'};
   const names={operating_turnaround:'Quarterly operating profit',cash_flow_improvement:'Quarterly operating cash flow',share_reduction:'Average basic common shares',share_increase:'Average basic common shares',buyback_cash:'Reported buyback cash',option_cash:'Option-exercise cash',issue_cash:'Share-issuance cash',negative_operating_cash:'Operating cash flow · TTM',cash_decline:'Cash and cash equivalents',debt_increase:'Current + noncurrent reported debt'};
   const q=s=>sheet.querySelector(s), body=q('.sector-sheet-body'), state=overview.querySelector('[data-financial-state]'), list=overview.querySelector('[data-financial-list]');
   const num=n=>typeof n==='number'&&Number.isFinite(n), count=n=>Number.isInteger(n)&&n>=0;
@@ -12,19 +12,33 @@
   const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:1}).format(n);
   const amount=(s,n)=>s.unit==='shares'?new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:1}).format(n):money(n);
   const signed=n=>`${n>0?'+':''}${n.toFixed(1)}%`;
+  const points=n=>`${n>0?'+':''}${n.toFixed(1)} pp`;
+  const companyName=s=>s.replace(/\s+/g,' ').trim().replace(/[A-Za-z][A-Za-z0-9]*(?:['’.-][A-Za-z0-9]+)*/g,(w,at)=>{
+    if(w!==w.toUpperCase())return w;
+    const lower=w.toLowerCase();
+    if(['and','of','the','for','in','to'].includes(lower))return at?lower:lower[0].toUpperCase()+lower.slice(1);
+    if(!['inc','corp','co','ltd','group'].includes(lower)&&(w.replace(/[^A-Z]/g,'').length<=3||['HSBC','NVIDIA'].includes(w)))return w;
+    return lower[0].toUpperCase()+lower.slice(1);
+  }).replace(/\bpepsico\b/gi,'PepsiCo').replace(/\bmckesson\b/gi,'McKesson').replace(/\bechostar\b/gi,'EchoStar');
+  const shareCategory=r=>r.signals[0].code==='share_increase'?'dilution':r.signals.some(s=>s.code==='buyback_cash')?'buybacks':'share_reduction';
+  const category=r=>{const kind=shareCategory(r),n=el('span','financial-category',({buybacks:'Buybacks',dilution:'Dilution',share_reduction:'Share reduction'})[kind]);n.dataset.kind=kind;return n;};
+  const ratioLabel=s=>s.code==='operating_turnaround'?'Operating margin':'Cash flow / revenue';
   const tone=s=>['operating_turnaround','cash_flow_improvement','share_reduction'].includes(s.code)?'sector-up':['share_increase','negative_operating_cash','cash_decline','debt_increase'].includes(s.code)?'sector-down':'';
   const el=(tag,cls='',text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=String(text);return n;};
   const source=s=>typeof s==='string'&&/^https:\/\/www\.sec\.gov\/Archives\/edgar\/data\/\d+\/\d{18}\/\d{10}-\d{2}-\d{6}-index\.html$/.test(s);
   let snapshot,industries={},group='turnaround',selected,opener,newsY,oldBody,oldHtml;
   function valid(data){return data?.version===1&&Number.isFinite(Date.parse(data.updated_at))&&['eligible','operating','cash_flow','shares','stress','full_histories'].every(k=>count(data.coverage?.[k]))&&Object.keys(titles).every(k=>count(data.counts?.[k])&&Array.isArray(data.groups?.[k])&&data.groups[k].every(r=>/^\d+$/.test(r.cik)&&typeof r.symbol==='string'&&typeof r.name==='string'&&typeof r.sector==='string'&&num(r.revenue_current)&&validDate(r.period_end)&&Array.isArray(r.signals)&&r.signals.length&&r.signals.every(s=>Object.hasOwn(names,s.code)&&typeof s.label==='string'&&['USD','shares'].includes(s.unit)&&num(s.current)&&(s.previous===undefined||num(s.previous))&&validDate(s.period_end)&&(s.change_pct===undefined||num(s.change_pct)))));}
-  function setGroup(next){if(!titles[next])return;group=next;for(const root of[overview,sheet])root.querySelectorAll('[data-financial-tab]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.financialTab===group)));if(snapshot){renderSummary();renderDetails();}body.scrollTop=0;}
+  function setGroup(next){if(!titles[next]||snapshot&&!snapshot.groups[next].length)return;group=next;for(const root of[overview,sheet])root.querySelectorAll('[data-financial-tab]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.financialTab===group)));if(snapshot){renderSummary();if(sheet.open)renderDetails();}body.scrollTop=0;}
   function renderSummary(){
     list.replaceChildren();const rows=snapshot.groups[group];
     if(!rows.length){list.append(el('p','financial-empty','No companies meet this screen in the covered data.'));return;}
     rows.slice(0,3).forEach(r=>{
       const b=el('button','financial-row'),s=r.signals[0];b.type='button';b.dataset.financialCompany=r.cik;b.setAttribute('aria-label',`Details for ${r.symbol}: ${s.label}`);
-      const head=el('span','financial-row-head');head.append(el('span','financial-symbol',r.symbol),el('span',`financial-value ${tone(s)}`,s.unit==='shares'?signed(s.change_pct):amount(s,s.current)));
-      b.append(head,el('span','financial-name',r.name),el('span','financial-reason',s.label),el('span','financial-date',`Quarter ended ${date(r.period_end)}`));b.addEventListener('click',()=>open(b,r.cik));list.append(b);
+      const head=el('span','financial-row-head'),id=el('span','financial-row-id');id.append(el('span','financial-symbol',r.symbol));if(group==='shares')id.append(category(r));head.append(id,el('span',`financial-value ${tone(s)}`,s.unit==='shares'?signed(s.change_pct):amount(s,s.current)));
+      b.append(head,el('span','financial-name',companyName(r.name)),el('span','financial-reason',s.label));
+      if(group==='turnaround'&&num(s.swing_amount))b.append(el('span','financial-change',`${s.code==='operating_turnaround'?'Profit':'Cash-flow'} swing ${money(s.swing_amount)}`));
+      if(group==='shares'&&typeof s.contexts?.[0]?.text==='string')b.append(el('span','financial-context',s.contexts[0].text));
+      b.append(el('span','financial-date',`Quarter ended ${date(r.period_end)}`));b.addEventListener('click',()=>open(b,r.cik));list.append(b);
     });
   }
   function coverage(){const c=snapshot.coverage;if(group==='turnaround')return`${c.operating.toLocaleString('en-US')} companies with comparable operating profit · ${c.cash_flow.toLocaleString('en-US')} with quarterly cash-flow history.`;if(group==='shares')return`${c.shares.toLocaleString('en-US')} companies with comparable basic shares from the same report.`;return`${c.stress.toLocaleString('en-US')} non-financial companies with matching balance sheets and 12-month operating cash flow.`;}
@@ -32,16 +46,18 @@
     const block=el('section','financial-evidence');block.append(el('h4','',s.label));const values=el('div',`financial-evidence-values ${tone(s)}`);
     if(num(s.previous))values.append(el('span','financial-previous',`${amount(s,s.previous)} →`));values.append(el('span','',amount(s,s.current)));if(num(s.change_pct))values.append(el('span','financial-value',`(${signed(s.change_pct)})`));
     block.append(values,el('p','',names[s.code]),el('p','',validDate(s.period_start)?`${date(s.period_start)} – ${date(s.period_end)}`:`As of ${date(s.period_end)}`));
+    if(num(s.strength_pp)&&num(s.current_ratio_pct)&&num(s.previous_ratio_pct))block.append(el('p','',`${ratioLabel(s)}: ${signed(s.previous_ratio_pct)} → ${signed(s.current_ratio_pct)} (${points(s.strength_pp)}).`));
     if(validDate(s.previous_end))block.append(el('p','',`Comparison: ${validDate(s.previous_start)?date(s.previous_start)+' – ':''}${date(s.previous_end)}`));
     if(s.derived)block.append(el('p','',s.code==='negative_operating_cash'?'Sum of four consecutive fiscal quarters.':'Standalone quarter derived from reported cumulative figures.'));
     if(Array.isArray(s.quarters))s.quarters.forEach(r=>{if(num(r.current)&&validDate(r.period_end))block.append(el('p','',`Quarter ended ${date(r.period_end)}: ${num(r.previous)?money(r.previous)+' → ':''}${money(r.current)}${num(r.previous)?' YoY':''}.`));});
     if(validDate(s.filed))block.append(el('p','',`Filed ${date(s.filed)}`));return block;
   }
   function renderDetails(){
-    q('[data-financial-title]').textContent=titles[group];q('[data-financial-count]').textContent=`${snapshot.counts[group].toLocaleString('en-US')} companies match · ranked by TTM revenue`;
+    q('[data-financial-title]').textContent=titles[group];q('[data-financial-count]').textContent=`${snapshot.counts[group].toLocaleString('en-US')} companies match · ${group==='turnaround'?'operating turnarounds first · largest reported swing':'ranked by TTM revenue'}`;
     q('[data-financial-coverage]').textContent=`${coverage()} ${snapshot.coverage.full_histories.toLocaleString('en-US')} full histories verified; ${snapshot.coverage.eligible.toLocaleString('en-US')} eligible operating businesses screened. Refreshed ${new Date(snapshot.updated_at).toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'UTC'})} UTC.`;
     const root=q('[data-financial-details]');root.replaceChildren();snapshot.groups[group].forEach(r=>{
-      const card=el('article','financial-detail-card');card.dataset.financialDetail=r.cik;card.dataset.selected=String(r.cik===selected);card.append(el('h3','',r.symbol),el('p','financial-name',r.name),el('p','financial-industry',`${industries[r.sector]||r.sector} · TTM revenue ${money(r.revenue_current)}`));r.signals.forEach(s=>card.append(evidence(s)));
+      const card=el('article','financial-detail-card');card.dataset.financialDetail=r.cik;card.dataset.selected=String(r.cik===selected);const head=el('div','financial-detail-head');head.append(el('h3','',r.symbol));if(group==='shares')head.append(category(r));card.append(head,el('p','financial-name',companyName(r.name)),el('p','financial-industry',`${industries[r.sector]||r.sector} · TTM revenue ${money(r.revenue_current)}`));r.signals.forEach(s=>card.append(evidence(s)));
+      if(group==='shares'&&Array.isArray(r.signals[0].contexts))r.signals[0].contexts.forEach(c=>{if(typeof c.text!=='string')return;card.append(el('p','financial-context',c.text));if(source(c.source)){const a=el('a','financial-report-link','Acquisition source ↗');a.href=c.source;a.target='_blank';a.rel='noopener noreferrer';card.append(a);}});
       if(source(r.source)){const a=el('a','financial-report-link','SEC report ↗');a.href=r.source;a.target='_blank';a.rel='noopener noreferrer';card.append(a);}root.append(card);
     });
     if(!snapshot.groups[group].length)root.append(el('p','financial-empty','No companies meet this screen in the covered data.'));
@@ -53,7 +69,11 @@
   }
   function receive(data){
     industries=Object.fromEntries((data?.sectors||[]).map(s=>[s.id,s.name]));if(!valid(data?.financial_signals)){state.hidden=false;state.textContent='Report highlights are being prepared from company reports.';return;}
-    snapshot=data.financial_signals;const stale=Date.now()-Date.parse(snapshot.updated_at)>36*60*60*1000;state.hidden=!stale;if(stale)state.textContent='Update delayed. Showing the last available reports.';overview.querySelectorAll('[data-financial-open]').forEach(b=>b.disabled=false);setGroup(group);
+    snapshot=data.financial_signals;const available=Object.keys(titles).filter(k=>snapshot.groups[k].length);
+    overview.hidden=!available.length;if(!available.length){if(sheet.open)sheet.close();return;}
+    for(const root of[overview,sheet]){root.querySelectorAll('[data-financial-tab]').forEach(b=>b.hidden=!available.includes(b.dataset.financialTab));root.querySelector('.financial-tabs').style.setProperty('--financial-tab-count',available.length);}
+    if(!available.includes(group)){group=available[0];selected=undefined;}
+    const stale=Date.now()-Date.parse(snapshot.updated_at)>36*60*60*1000;state.hidden=!stale;if(stale)state.textContent='Update delayed. Showing the last available reports.';overview.querySelectorAll('[data-financial-open]').forEach(b=>b.disabled=false);setGroup(group);
   }
   for(const root of[overview,sheet])root.querySelectorAll('[data-financial-tab]').forEach(b=>b.addEventListener('click',()=>{selected=undefined;setGroup(b.dataset.financialTab);}));
   overview.querySelectorAll('[data-financial-open]').forEach(b=>b.addEventListener('click',()=>open(b)));q('[data-financial-close]').addEventListener('click',()=>sheet.close());

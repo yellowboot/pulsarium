@@ -6,7 +6,7 @@
   if (!overview || !sheet || typeof sheet.showModal !== 'function') return;
   const endpoint = 'https://omkeplyeuxwlsqnblsjm.supabase.co/rest/v1/sec_sector_analytics?id=eq.global&select=payload';
   const publishableKey = 'sb_publishable_Iike5dnuHEuwIIF-qruzzg_WkWJodcF';
-  const cacheKey = 'pulsarium-sector-snapshot-v5';
+  const cacheKey = 'pulsarium-sector-snapshot-v6';
   const ttl = 15 * 60 * 1000;
   const body = sheet.querySelector('.sector-sheet-body');
   let snapshot, selected, view = 'map', more = false, opener, newsY = 0, oldBodyOverflow, oldHtmlOverflow;
