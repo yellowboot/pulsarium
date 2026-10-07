@@ -89,6 +89,9 @@
 .sector-metric strong { display: block; font: 600 21px/1.5 var(--font-mono); color: var(--text-hi); }
 .sector-metric p { margin: 8px 0 0; color: var(--text-mid); font-size: 11px; }
 .sector-card { margin-top: 18px; padding: 20px; border: 1px solid var(--border); border-radius: 13px; background: var(--card); }
+:root:not([data-color-theme='calm']) .sector-sheet :is(.sector-metric, .sector-card) {
+  background: linear-gradient(160deg, rgba(30, 50, 110, .30), rgba(8, 12, 30, .82) 55%);
+}
 .sector-card h3 { margin: 0 0 10px; color: var(--text-hi); font: 600 15px/1.5 var(--font-ui); }
 .sector-reporting > p:not(.sector-note) { margin: 0; color: var(--text-hi); font: 500 13px/1.65 var(--font-ui); }
 .sector-breadth { display: flex; height: 8px; overflow: hidden; border-radius: 999px; background: var(--border); margin: 16px 0 10px; }
