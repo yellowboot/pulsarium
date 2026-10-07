@@ -1488,7 +1488,7 @@ def insider_page(side: str, companies: dict):
     body = f"""<header class="page-head">
   <span class="eyebrow">SEC Form 4 · last {window} days</span>
   <h1>{name} this week</h1>
-  <p class="lead">Stock {trades_word} by company officers and directors, as they reported them to the SEC on Form 4{until}: the largest {trades_word}, and the stocks several insiders {verb}. Updated twice a day, free.</p>
+  <p class="lead">Stock {trades_word} by company officers and directors, as they reported them to the SEC on Form 4{until}: the largest {trades_word}, and the stocks several insiders {verb}. Updated twice a day.</p>
 </header>
 {stats}
 {sections}
