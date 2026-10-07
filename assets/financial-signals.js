@@ -52,7 +52,7 @@
     [...sheet.querySelectorAll('[data-financial-detail]')].find(n=>n.dataset.financialDetail===selected)?.scrollIntoView({block:'start'});
   }
   function receive(data){
-    industries=Object.fromEntries((data?.sectors||[]).map(s=>[s.id,s.name]));if(!valid(data?.financial_signals)){state.hidden=false;state.textContent='Financial signals are being prepared from company reports.';return;}
+    industries=Object.fromEntries((data?.sectors||[]).map(s=>[s.id,s.name]));if(!valid(data?.financial_signals)){state.hidden=false;state.textContent='Report highlights are being prepared from company reports.';return;}
     snapshot=data.financial_signals;const stale=Date.now()-Date.parse(snapshot.updated_at)>36*60*60*1000;state.hidden=!stale;if(stale)state.textContent='Update delayed. Showing the last available reports.';overview.querySelectorAll('[data-financial-open]').forEach(b=>b.disabled=false);setGroup(group);
   }
   for(const root of[overview,sheet])root.querySelectorAll('[data-financial-tab]').forEach(b=>b.addEventListener('click',()=>{selected=undefined;setGroup(b.dataset.financialTab);}));
@@ -60,5 +60,5 @@
   q('[data-financial-maximize]').addEventListener('click',function(){const expanded=sheet.dataset.expanded!=='true';sheet.dataset.expanded=String(expanded);this.setAttribute('aria-pressed',String(expanded));this.setAttribute('aria-label',expanded?'Restore panel width':'Expand to full width');this.querySelector('path').setAttribute('d',expanded?'M3 8h5V3M21 8h-5V3M16 21v-5h5M8 21v-5H3':'M8 3H3v5M16 3h5v5M21 16v5h-5M8 21H3v-5');});
   sheet.addEventListener('close',()=>{document.body.style.overflow=oldBody||'';document.documentElement.style.overflow=oldHtml||'';window.scrollTo({top:newsY,behavior:'instant'});opener?.focus({preventScroll:true});});
   sheet.addEventListener('click',e=>{if(e.target!==sheet)return;const r=sheet.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)sheet.close();});
-  window.addEventListener('pulsarium:sector-snapshot',e=>receive(e.detail));window.addEventListener('pulsarium:sector-unavailable',()=>{if(!snapshot){state.hidden=false;state.textContent='Company-report signals are temporarily unavailable.';}});if(window.pulsariumSectorSnapshot)receive(window.pulsariumSectorSnapshot);
+  window.addEventListener('pulsarium:sector-snapshot',e=>receive(e.detail));window.addEventListener('pulsarium:sector-unavailable',()=>{if(!snapshot){state.hidden=false;state.textContent='Report highlights are temporarily unavailable.';}});if(window.pulsariumSectorSnapshot)receive(window.pulsariumSectorSnapshot);
 })();

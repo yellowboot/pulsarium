@@ -1226,18 +1226,18 @@
   </section>
   <section class="panel financial-signals" id="financial-signals" aria-labelledby="financial-signals-title">
     <div class="panel-edge" aria-hidden="true"></div>
-    <div class="financial-heading"><h2 id="financial-signals-title">Financial signals</h2>
-      <button type="button" class="sector-icon" data-financial-open aria-label="Expand financial signals" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M21 3l-7 7M9 21H3v-6M3 21l7-7"/></svg></button>
+    <div class="financial-heading"><h2 id="financial-signals-title">Report highlights</h2>
+      <button type="button" class="sector-icon" data-financial-open aria-label="Expand report highlights" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M21 3l-7 7M9 21H3v-6M3 21l7-7"/></svg></button>
     </div>
     <p class="financial-meta" data-financial-meta>Latest reported · SEC filings</p>
-    <div class="financial-tabs" role="group" aria-label="Financial signal type">
+    <div class="financial-tabs" role="group" aria-label="Report highlight type">
       <button type="button" data-financial-tab="turnaround" aria-pressed="true">Turnaround</button>
       <button type="button" data-financial-tab="shares" aria-pressed="false">Shares</button>
       <button type="button" data-financial-tab="stress" aria-pressed="false">Stress</button>
     </div>
-    <p class="financial-state" data-financial-state role="status">Loading company-report signals…</p>
+    <p class="financial-state" data-financial-state role="status">Loading report highlights…</p>
     <div class="financial-list" data-financial-list></div>
-    <button type="button" class="sector-link" data-financial-open disabled>Signals &amp; details <span aria-hidden="true">↗</span></button>
+    <button type="button" class="sector-link" data-financial-open disabled>Highlights &amp; details <span aria-hidden="true">↗</span></button>
   </section>
   </div>
   <div class="panel side-cta">
@@ -1327,14 +1327,14 @@
 <script src="/assets/sector-analytics.js?v=10" defer></script>
 <dialog class="sector-sheet financial-sheet" id="financial-sheet" aria-labelledby="financial-sheet-title" data-expanded="false">
   <header class="sector-sheet-header">
-    <div><p class="sector-eyebrow">Company reports · SEC</p><h2 id="financial-sheet-title">Financial signals</h2></div>
+    <div><p class="sector-eyebrow">Company reports · SEC</p><h2 id="financial-sheet-title">Report highlights</h2></div>
     <div class="sector-sheet-actions">
       <button type="button" class="sector-icon" data-financial-maximize aria-label="Expand to full width" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M8 21H3v-5"/></svg></button>
-      <button type="button" class="sector-icon" data-financial-close aria-label="Close financial signals"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <button type="button" class="sector-icon" data-financial-close aria-label="Close report highlights"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
   </header>
   <div class="sector-sheet-body">
-    <div class="financial-tabs" role="group" aria-label="Detailed financial signal type">
+    <div class="financial-tabs" role="group" aria-label="Detailed report highlight type">
       <button type="button" data-financial-tab="turnaround" aria-pressed="true">Turnaround</button>
       <button type="button" data-financial-tab="shares" aria-pressed="false">Buybacks / shares</button>
       <button type="button" data-financial-tab="stress" aria-pressed="false">Financial stress</button>
@@ -1345,7 +1345,7 @@
     <details class="financial-method"><summary>Selection rules &amp; coverage</summary><div data-financial-method></div></details>
   </div>
 </dialog>
-<script src="/assets/financial-signals.js?v=1" defer></script>
+<script src="/assets/financial-signals.js?v=2" defer></script>
 <script src="../news_data.js" onerror="window.__NO_DATA_FILE__ = true"></script>
 <script>
 (function () {
