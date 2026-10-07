@@ -19,7 +19,7 @@
     if(['and','of','the','for','in','to'].includes(lower))return at?lower:lower[0].toUpperCase()+lower.slice(1);
     if(!['inc','corp','co','ltd','group'].includes(lower)&&(w.replace(/[^A-Z]/g,'').length<=3||['HSBC','NVIDIA'].includes(w)))return w;
     return lower[0].toUpperCase()+lower.slice(1);
-  }).replace(/\bpepsico\b/gi,'PepsiCo').replace(/\bmckesson\b/gi,'McKesson').replace(/\bechostar\b/gi,'EchoStar');
+  }).replace(/\bpepsico\b/gi,'PepsiCo').replace(/\bmckesson\b/gi,'McKesson').replace(/\bechostar\b/gi,'EchoStar').replace(/\bjpmorgan\b/gi,'JPMorgan');
   const shareCategory=r=>r.signals[0].code==='share_increase'?'dilution':r.signals.some(s=>s.code==='buyback_cash')?'buybacks':'share_reduction';
   const category=r=>{const kind=shareCategory(r),n=el('span','financial-category',({buybacks:'Buybacks',dilution:'Dilution',share_reduction:'Share reduction'})[kind]);n.dataset.kind=kind;return n;};
   const ratioLabel=s=>s.code==='operating_turnaround'?'Operating margin':'Cash flow / revenue';

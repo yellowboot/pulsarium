@@ -43,7 +43,7 @@
 .financial-evidence-values { display:flex; flex-wrap:wrap; align-items:baseline; gap:5px 9px; color:var(--text-hi); font:600 15px/1.6 var(--font-mono); }
 .financial-previous { font-size:12px; font-weight:400; color:var(--text-mid); }
 .financial-evidence p { margin:6px 0 0; color:var(--text-mid); font-size:11px; line-height:1.6; overflow-wrap:anywhere; }
-.financial-report-link { display:inline-block; margin-top:12px; color:var(--gold-1); font-size:11.5px; text-underline-offset:3px; }
+.financial-report-link { display:inline-block; margin:12px 12px 0 0; color:var(--gold-1); font-size:11.5px; text-underline-offset:3px; }
 .financial-method { margin-top:22px; color:var(--text-mid); font-size:11.5px; line-height:1.65; }
 .financial-method summary { cursor:pointer; color:var(--text-hi); font-weight:500; }
 .financial-method p { margin:12px 0; }
