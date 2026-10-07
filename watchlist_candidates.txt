@@ -6,30 +6,32 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 07.10.2026 20:04
-27 of 80 news items unmatched this run
+Generated: 07.10.2026 21:00
+29 of 80 news items unmatched this run
 
-- [Yahoo Finance] Update: US Equity Indexes Fall After Strong Treasury Auction, Tightening Lean in Fed's September Minutes
-- [Yahoo Finance] Sector Update: Energy Stocks Softer Late Afternoon
-- [Yahoo Finance] Sector Update: Tech Stocks Fall Late Afternoon
-- [Nasdaq] Cotton Slipping Lower on Wednesday
-- [Nasdaq] Crude Prices Supported by Middle East Supply Concerns
-- [MarketWatch] Fed’s minutes show no appetite for a series of interest-rate hikes
-- [Nasdaq] Hogs Falling Lower on Wednesday
-- [Nasdaq] Rising ICE Inventories and Demand Fears Undercut Cocoa Prices
-- [Nasdaq] Cotton Correcting Lower on Wednesday Morning
-- [Investing.com] IEA to accelerate oil reserve release, says 100 million barrels still to come
-- [Nasdaq] Barclays Initiates Coverage of PROCEPT BioRobotics with Overweight Rating
-- [Nasdaq] Coffee Prices Tumble on Larger Coffee Supplies from Brazil
-- [CNBC] Consumer stocks have been hammered. Here are some opportunities among the casualties
-- [Nasdaq] Wheat Falling Lower on Wednesday
-- [Nasdaq] Corn Correcting Lower on Wednesday
-- [Nasdaq] Cattle Facing Midweek Pressure
+- [Investing.com] Centinel Spine Holdco files for IPO
+- [Investing.com] Why is Profound Medical stock surging today?
+- [Yahoo Finance] Stocks slide as oil sees volatile trading day over Iran war fears
+- [Investing.com] MicroVision stock tumbles on reiterated 2026 guidance
+- [Nasdaq] Sugar Prices Supported by Delayed Brazil Harvest
 - [Nasdaq] Sugar Prices Erase Early Gains as Dollar Strength Spurs Long Liquidation
-- [Nasdaq] Corn Getting a Wednesday AM Correction
-- [Yahoo Finance] Why QXO Sank Today
-- [CNBC] Oil prices fall as IEA members agree to prioritize release of diesel stocks
+- [MarketWatch] Options traders are betting on a dramatic drop in interest rates
 - [CNBC] Supertanker chartered from Gulf Coast to China for $76 million, 10 times higher than pre-war level
+- [Investing.com] Canada stocks lower at close of trade; S&P/TSX Composite down 1.70%
+- [Investing.com] Brazil stocks lower at close of trade; Bovespa down 0.74%
+- [CNBC] Levi Strauss hikes profit guidance after tariff refunds, but its sales outlook is less optimistic
+- [Investing.com] Levi Strauss lifts annual profit outlook on tariff refunds, holiday demand
+- [Nasdaq] Larger Supplies from Brazil Pressure Coffee Prices
+- [Nasdaq] Rising ICE Inventories and Demand Fears Undercut Cocoa Prices
+- [Nasdaq] Crude Prices Supported by Middle East Supply Concerns
+- [Yahoo Finance] Aptos moves Shelby into private beta with AI workloads
+- [Yahoo Finance] How major US stock indexes fared Wednesday 10/7/2026
+- [Yahoo Finance] Cardano Built Something Genuinely Useful. Naturally, the Price Went Down.
+- [Yahoo Finance] Bond Yields Kept Climbing And Fed Minutes Showed Another Rate Hike This Year. Stocks Dropped.
+- [Yahoo Finance] MidCap Financial Investment Corporation Schedules Earnings Release and Conference Call for Quarter Ended September 30, 2026
+- [MarketWatch] Fed’s minutes show no appetite for a series of interest-rate hikes
+- [CNBC] Consumer stocks have been hammered. Here are some opportunities among the casualties
+- [CNBC] Oil prices fall as IEA members agree to prioritize release of diesel stocks
 - [Mining.com] Namibia diamond mine revival draws $50M investment
 - [CoinDesk] Polygon taps TRON’s $94 billion stablecoin supply for seamless cross-border transfers
 - [CNBC] Used car prices fall in Q3, while demand for fuel-efficient vehicles grows
