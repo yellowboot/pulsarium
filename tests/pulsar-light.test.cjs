@@ -42,8 +42,10 @@ function setup(options = {}) {
     draws: [], contexts: 0, deletedPrograms: 0, lost: false,
     createShader: () => ({}), shaderSource() {}, compileShader() {}, deleteShader() {},
     getShaderParameter: () => options.compile !== false,
+    getShaderInfoLog: () => 'Test shader failure',
     createProgram: () => ({}), attachShader() {}, linkProgram() {},
     getProgramParameter: () => options.link !== false,
+    getProgramInfoLog: () => 'Test link failure',
     getUniformLocation: (_, name) => name,
     useProgram() {}, viewport() {},
     uniform2f(name, x, y) { this[name] = [x, y]; },
@@ -76,7 +78,7 @@ function setup(options = {}) {
   window.ResizeObserver = SizeObserver;
   window.MutationObserver = MutationObserver;
   const pending = new Map(); let nextId = 0, stamp = 0;
-  const context = { window, document, URLSearchParams, Math,
+  const context = { window, document, URLSearchParams, Math, console: { warn() {} },
     IntersectionObserver, ResizeObserver: SizeObserver, MutationObserver,
     requestAnimationFrame(callback) { pending.set(++nextId, callback); return nextId; },
     cancelAnimationFrame(id) { pending.delete(id); }

@@ -145,6 +145,7 @@ void main(){
     gl.shaderSource(shader, source);
     gl.compileShader(shader);
     if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+      console.warn('[Pulsarium pulsar] Shader compilation failed:', gl.getShaderInfoLog(shader));
       gl.deleteShader(shader);
       throw new Error('Pulsar shader unavailable');
     }
@@ -158,14 +159,20 @@ void main(){
         depth: false, stencil: false, preserveDrawingBuffer: false,
         powerPreference: 'low-power'
       });
-      if (!gl || gl.isContextLost()) return false;
+      if (!gl || gl.isContextLost()) {
+        console.warn('[Pulsarium pulsar] WebGL 2 unavailable; using the original SVG.');
+        return false;
+      }
       vertex = compile(gl.VERTEX_SHADER, vertexSource);
       fragment = compile(gl.FRAGMENT_SHADER, fragmentSource);
       nextProgram = gl.createProgram();
       gl.attachShader(nextProgram, vertex);
       gl.attachShader(nextProgram, fragment);
       gl.linkProgram(nextProgram);
-      if (!gl.getProgramParameter(nextProgram, gl.LINK_STATUS)) throw new Error('Pulsar link unavailable');
+      if (!gl.getProgramParameter(nextProgram, gl.LINK_STATUS)) {
+        console.warn('[Pulsarium pulsar] Program link failed:', gl.getProgramInfoLog(nextProgram));
+        throw new Error('Pulsar link unavailable');
+      }
       program = nextProgram;
       uniforms = {};
       for (const name of ['uResolution', 'uPointer', 'uTime', 'uCalm']) {
@@ -206,7 +213,14 @@ void main(){
       gl.uniform1f(uniforms.uCalm, document.documentElement.getAttribute('data-color-theme') === 'calm' ? 1 : 0);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
       if (gl.isContextLost()) return;
-      if (!host.classList.contains('is-pulsar-ready') && gl.getError() !== gl.NO_ERROR) { dispose(); return; }
+      if (!host.classList.contains('is-pulsar-ready')) {
+        const error = gl.getError();
+        if (error !== gl.NO_ERROR) {
+          console.warn('[Pulsarium pulsar] First draw failed:', error);
+          dispose();
+          return;
+        }
+      }
       dirty = false;
       host.classList.add('is-pulsar-ready');
     }
