@@ -1,0 +1,22 @@
+/* Homepage artwork only. The original SVG stays in the page as the fallback. */
+.hero-visual[data-pulsar-webgl="light"] > .pulsar-light-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  opacity: 0;
+}
+.hero-visual[data-pulsar-webgl="light"].is-pulsar-ready > .pulsar-light-canvas {
+  opacity: 1;
+}
+.hero-visual[data-pulsar-webgl="light"].is-pulsar-ready > .pulsar {
+  visibility: hidden;
+}
+.hero-visual[data-pulsar-webgl="light"].is-pulsar-ready > .pulsar,
+.hero-visual[data-pulsar-webgl="light"].is-pulsar-ready > .pulsar *,
+.hero-visual[data-pulsar-webgl="light"].is-pulsar-idle > .pulsar,
+.hero-visual[data-pulsar-webgl="light"].is-pulsar-idle > .pulsar * {
+  animation-play-state: paused !important;
+}
