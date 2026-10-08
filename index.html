@@ -184,10 +184,21 @@
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px var(--accent), 0 0 42px rgba(0,240,255,0.7); }
   .btn-ghost { color: var(--text); background: rgba(10,18,40,0.55); box-shadow: inset 0 0 0 1px rgba(120,220,255,0.28); }
   .btn-ghost:hover { color: #ffffff; transform: translateY(-2px); box-shadow: inset 0 0 0 1px var(--accent), 0 0 22px rgba(0,240,255,0.25); }
+  /* the hero's and the two panels' buttons are compact; in Neon they are
+     outlined like the news page's switches, Calm keeps its colors (themes.css) */
+  :is(.hero-actions, .panel) .btn { height: 40px; padding: 0 18px; gap: 8px; border-radius: 10px; font-size: 14px; font-weight: 600; }
+  :root:not([data-color-theme='calm']) :is(.hero-actions, .panel) .btn {
+    color: var(--accent); background: rgba(0,240,255,0.1);
+    box-shadow: inset 0 0 0 1px rgba(0,240,255,0.45), inset 0 0 8px rgba(0,240,255,0.08), 0 0 10px rgba(0,240,255,0.12);
+  }
+  :root:not([data-color-theme='calm']) :is(.hero-actions, .panel) .btn:hover {
+    color: #ffffff; background: rgba(0,240,255,0.16); transform: translateY(-1px);
+    box-shadow: inset 0 0 0 1px var(--accent), 0 0 18px rgba(0,240,255,0.3);
+  }
 
   /* ---------- Hero ---------- */
   .hero {
-    min-height: 500px;
+    min-height: 430px;
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     align-items: center;
@@ -207,7 +218,7 @@
     background: linear-gradient(110deg, var(--accent-ice), var(--accent) 55%, var(--accent-blue));
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
-  .hero-lead { max-width: 560px; margin: 24px 0 0; font-size: 18px; line-height: 1.6; color: var(--text-mid); }
+  .hero-lead { max-width: 480px; margin: 22px 0 0; font-size: 13px; line-height: 1.7; color: var(--text-mid); }
   .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
   .hero-note { margin-top: 18px; font-size: 11.5px; letter-spacing: 0.12em; color: var(--text-low); }
 
@@ -368,7 +379,6 @@
     .site-header .wordmark { font-size: 15px; }
     .hero-visual { height: 280px; }
     .pulsar { transform: scale(0.6); }
-    .hero-lead { font-size: 16px; }
     .hero-actions .btn { width: 100%; }
     .panel { padding: 26px 22px; }
     .panel .btn { align-self: stretch; }
@@ -429,7 +439,7 @@
         <div class="hero-copy">
           <span class="eyebrow">Stock &amp; ETF portfolio tracker</span>
           <h1 class="headline">A calmer way to <span class="hl">watch the market.</span></h1>
-          <p class="hero-lead">Free financial news by company and sector, plus a personal account for tracking stock and ETF portfolios, dividends, watchlists and price alerts. Add transactions manually or import your broker's export file.</p>
+          <p class="hero-lead">Financial news by company and sector, plus a personal account for tracking stock and ETF portfolios, dividends, watchlists and price alerts. Add transactions manually or import your broker's export file.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="news/">
               Open the news dashboard
