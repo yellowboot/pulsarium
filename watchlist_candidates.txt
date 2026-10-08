@@ -6,31 +6,34 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 07.10.2026 23:29
-32 of 80 news items unmatched this run
+Generated: 08.10.2026 00:21
+34 of 80 news items unmatched this run
 
-- [Investing.com] Samsung Q3 profit jumps nearly nine-fold as AI memory boom lifts chip earnings
-- [Yahoo Finance] Why NorthWestern Energy Group Stock Soared on Wednesday
-- [Nasdaq] Sugar Prices Supported by Delayed Brazil Harvest
+- [Yahoo Finance] 3 Dividend Growth ETFs That Prioritize Rising Payouts Over Today’s Yield. One Returned 12.53% Over the Past Year, Another Just 5.40%
+- [Nasdaq] SoybeanSoybeans Fall Back on Wednesday As Products Diverge
+- [Nasdaq] Hogs Fall Lower on Wednesday
+- [Nasdaq] Cattle Fall Back on Midweek Pressure
+- [Nasdaq] Corn Falls Back Lower on Wednesday
+- [Nasdaq] Cocoa Prices Settle Sharply Lower on Ample Supplies and Tepid Demand
 - [Nasdaq] Wheat Falling Lower on Wednesday
-- [Nasdaq] Cotton Slipping Lower on Wednesday
 - [Nasdaq] Cattle Facing Midweek Pressure
-- [Nasdaq] Corn Correcting Lower on Wednesday
 - [Nasdaq] Soybeans Fading Lower on Wednesday
 - [Nasdaq] Hogs Falling Lower on Wednesday
+- [Yahoo Finance] Why PJT Partners Stock Withered on Wednesday
+- [Nasdaq] Cotton Falls Back Lower on Wednesday
+- [Nasdaq] Wheat Falls Lower on Wednesday
+- [Nasdaq] Cotton Slipping Lower on Wednesday
+- [Yahoo Finance] Robot data startup Mecka AI nabs $60M from Sequoia
+- [Nasdaq] Sugar Prices Supported by Delayed Brazil Harvest
 - [Nasdaq] Rising ICE Inventories and Demand Fears Undercut Cocoa Prices
+- [Investing.com] Samsung Q3 profit jumps nearly nine-fold as AI memory boom lifts chip earnings
+- [Yahoo Finance] Why NorthWestern Energy Group Stock Soared on Wednesday
 - [CNBC] Samsung forecasts record third-quarter profit of $80 billion on the back of AI boom
-- [Nasdaq] Dollar Gains on Higher T-Note Yields and Hawkish FOMC Minutes
 - [Yahoo Finance] Cathie Wood buys $7.8 million of surging megacap tech stock
 - [Yahoo Finance] Most Investors Misunderstand the Stock Market. Here's the One Sector I'm Buying Now.
-- [Nasdaq] Cocoa Prices Settle Sharply Lower on Ample Supplies and Tepid Demand
 - [CNBC] Anthropic will be 'most ridiculous IPO' of year, analyst says
-- [Yahoo Finance] Rezolve AI (RZLV) Stock May Trade At A Discount After AI Commerce Push
+- [CNBC] Cramer says higher rates are splitting the market in two — and AI stocks have a big advantage
 - [Investing.com] Levi Strauss lifts annual profit outlook on tariff refunds, holiday demand
-- [Nasdaq] Barclays Initiates Coverage of Baxter International at Underweight
-- [Yahoo Finance] Why Black Hills Stock Rocketed Higher Today
-- [Nasdaq] Oppenheimer Initiates Coverage of SailPoint with Outperform Rating
-- [Yahoo Finance] Why Veeco Instruments Stock Crushed it Last Month
 - [Investing.com] Solidigm selects lead banks for blockbuster US IPO, Bloomberg reports
 - [Investing.com] Profound Medical stock surges 20% on raised Q3 revenue outlook
 - [CNBC] Levi Strauss hikes profit guidance after tariff refunds, but its sales outlook is less optimistic
@@ -40,4 +43,3 @@ Generated: 07.10.2026 23:29
 - [CNBC] Supertanker chartered from Gulf Coast to China for $76 million, 10 times higher than pre-war level
 - [MarketWatch] Fed’s minutes show no appetite for a series of interest-rate hikes
 - [CNBC] Consumer stocks have been hammered. Here are some opportunities among the casualties
-- [CNBC] Oil prices fall as IEA members agree to prioritize release of diesel stocks
