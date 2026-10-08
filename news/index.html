@@ -1379,7 +1379,14 @@
     return;
   }
 
-  document.getElementById('updated-at').textContent = 'Updated: ' + data.generated_at_display;
+  // The robot writes times in UTC; each visitor reads them in their own
+  // time zone, as "8 Oct, 14:29" (a day.month date reads as month.day in the US).
+  function localTime(iso, fallback) {
+    const when = iso ? new Date(iso) : null;
+    return when && !isNaN(when) ? when.toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
+      : (fallback || '—');
+  }
+  document.getElementById('updated-at').textContent = 'Updated: ' + localTime(data.generated_at, data.generated_at_display);
   document.getElementById('items-count').textContent = data.items.length + ' articles';
 
   // ---- Summary text (mechanical analytics, no AI) ----
@@ -1869,7 +1876,7 @@
           <div class="card-body">
             <div class="card-top-row">
               <span class="source-badge">${escapeHtml(item.source)}</span>
-              <span class="time-mono">${escapeHtml(item.published_display)}</span>
+              <span class="time-mono">${escapeHtml(localTime(item.published, item.published_display))}</span>
             </div>
             <h3 class="card-title">${escapeHtml(item.title)}</h3>
             <p class="card-desc">${escapeHtml(item.description)}</p>
