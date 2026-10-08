@@ -29,9 +29,9 @@ void main(){
  vec2 uv=(gl_FragCoord.xy-.5*uResolution)/uResolution.y;
  uv-=vec2(uPointer.x*.016,uPointer.y*.012);
  float t=uTime;
- vec3 violet=mix(vec3(.50,.32,1.),vec3(.29,.28,.84),uCalm);
- vec3 blue=mix(vec3(.05,.85,1.),vec3(.24,.48,.88),uCalm);
- vec3 rose=mix(vec3(.80,.28,1.),vec3(.64,.27,.67),uCalm);
+ vec3 violet=mix(vec3(.12,.46,1.),vec3(.29,.28,.84),uCalm);
+ vec3 blue=mix(vec3(.03,.92,1.),vec3(.24,.48,.88),uCalm);
+ vec3 rose=mix(vec3(.54,.28,1.),vec3(.64,.27,.67),uCalm);
  vec3 color=vec3(0.);float alpha=0.;
  float radius=length(uv);
  float pulse=.88+.12*sin(t*2.0);
