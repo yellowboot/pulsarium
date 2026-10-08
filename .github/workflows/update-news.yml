@@ -8,22 +8,24 @@ on:
     #   EST (roughly Nov-Mar): session 14:30-21:00 UTC -> buffer 14:00-21:30
     # i.e. 13:00-21:30 UTC covers the 30-min pre/post buffer year-round
     # (with a bit of extra slack on the side that isn't currently in DST).
-    # 08:30 UTC catches overnight/European news, three hours before the
-    # existing 11:30 UTC pre-market run; 06:30 UTC starts the day two hours
+    # 08:37 UTC catches overnight/European news, three hours before the
+    # 11:37 UTC pre-market run; 06:37 UTC starts the day two hours
     # earlier, since GitHub's queue delays scheduled runs more and more.
-    - cron: '30 6 * * 1-5'
-    - cron: '30 8 * * 1-5'
-    - cron: '30 11 * * 1-5'
-    - cron: '0 13 * * 1-5'
-    - cron: '30 14 * * 1-5'
-    - cron: '0 16 * * 1-5'
-    - cron: '30 17 * * 1-5'
-    - cron: '0 19 * * 1-5'
-    - cron: '30 20 * * 1-5'
-    - cron: '30 21 * * 1-5'
+    # Minutes are off :00/:30 on purpose: GitHub delays or drops scheduled
+    # runs most at the busy top and half of the hour.
+    - cron: '37 6 * * 1-5'
+    - cron: '37 8 * * 1-5'
+    - cron: '37 11 * * 1-5'
+    - cron: '17 13 * * 1-5'
+    - cron: '37 14 * * 1-5'
+    - cron: '17 16 * * 1-5'
+    - cron: '37 17 * * 1-5'
+    - cron: '17 19 * * 1-5'
+    - cron: '37 20 * * 1-5'
+    - cron: '37 21 * * 1-5'
     # Weekends: two sweeps, roughly twelve hours apart.
-    - cron: '30 3 * * 0,6'
-    - cron: '0 15 * * 0,6'
+    - cron: '37 3 * * 0,6'
+    - cron: '17 15 * * 0,6'
   workflow_dispatch:
     inputs:
       provider:
