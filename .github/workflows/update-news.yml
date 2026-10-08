@@ -92,6 +92,9 @@ jobs:
             echo "No changes — skipping commit"
           else
             git commit -m "Auto-update news feed [skip ci]"
+            # someone may have pushed during the run; replay on top of it (a real
+            # conflict still stops here, as before)
+            git pull --rebase
             git push
             echo "pushed=true" >> "$GITHUB_OUTPUT"
           fi
