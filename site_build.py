@@ -752,10 +752,10 @@ def item_html(item: dict, companies: dict, skip_ticker: str = None) -> str:
              else f'<span class="badge badge-{sentiment}">{SENT_LABELS[sentiment]}</span>')
     breaking = ('<span class="badge badge-breaking">Breaking</span>'
                 if (item.get("importance") or 0) >= BREAKING_IMPORTANCE else "")
-    # a ticker links to its page only when it has one (see "paged" in build)
+    # a ticker links to its page only when that page is indexed (see "linked" in build)
     tags = "".join(
         f'<a class="tag" href="/news/{companies[t]["slug"]}/">{esc(t)}</a>'
-        if companies[t].get("paged", True) else f'<span class="tag">{esc(t)}</span>'
+        if companies[t].get("linked", True) else f'<span class="tag">{esc(t)}</span>'
         for t in item["_tickers"] if t in companies and t != skip_ticker
     )
     desc = f'<p>{esc(item["description"])}</p>' if item.get("description") else ""
@@ -870,7 +870,7 @@ def ticker_page(company: dict, items: list, companies: dict, sector_counts: dict
         key=lambda c: (-sector_counts.get(c["ticker"], 0), c["ticker"]),
     )
     # the busiest dozen; the sector page lists the rest
-    active_peers = [c for c in peers if sector_counts.get(c["ticker"], 0) > 0]
+    active_peers = [c for c in peers if sector_counts.get(c["ticker"], 0) > 0 and c.get("linked", True)]
     peer_links = "".join(
         f'<a class="chip" href="/news/{c["slug"]}/">{esc(c["ticker"])}<small>{esc(c["name"])}</small></a>'
         for c in active_peers[:PEERS_SHOWN]
@@ -936,7 +936,7 @@ def sector_page(sector: str, items: list, companies: dict, counts: dict, now: da
                      key=lambda c: (-counts.get(c["ticker"], 0), c["ticker"]))
     member_links = "".join(
         f'<a class="chip" href="/news/{c["slug"]}/">{esc(c["ticker"])}<small>{esc(c["name"])} · {counts.get(c["ticker"], 0)}</small></a>'
-        if counts.get(c["ticker"], 0) else
+        if c.get("linked", True) else
         f'<span class="chip chip-muted">{esc(c["ticker"])}<small>{esc(c["name"])}</small></span>'
         for c in members
     )
@@ -996,6 +996,7 @@ def daily_page(day: str, items: list, companies: dict, prev_day, next_day, mood_
         summary += " Most mentioned: " + ", ".join(top_tickers[:3]) + "."
     ticker_chips = "".join(
         f'<a class="chip" href="/news/{companies[t]["slug"]}/">{esc(t)}<small>{counts[t]} headlines</small></a>'
+        if companies[t].get("linked", True) else f'<span class="chip chip-muted">{esc(t)}<small>{counts[t]} headlines</small></span>'
         for t in top_tickers if t in companies
     )
     pager = '<nav class="pager">'
@@ -1071,7 +1072,7 @@ def companies_hub(companies: dict, counts: dict, sector_totals: dict) -> tuple:
         members = sorted((c for c in listed.values() if c["sector"] == sector), key=lambda c: c["name"].lower())
         links = "".join(
             f'<a class="chip" href="/news/{c["slug"]}/">{esc(c["ticker"])}<small>{esc(c["name"])} · {counts.get(c["ticker"], 0)}</small></a>'
-            if counts.get(c["ticker"], 0) else
+            if c.get("linked", True) else
             f'<span class="chip chip-muted">{esc(c["ticker"])}<small>{esc(c["name"])}</small></span>'
             for c in members
         )
@@ -1193,7 +1194,10 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
     paged = {t for t, c in companies.items()
              if by_ticker.get(t) or os.path.exists(url_file(f"/news/{c['slug']}/"))}
     for ticker, company in companies.items():
-        company["paged"] = ticker in paged  # read by item_html and the chip lists
+        company["paged"] = ticker in paged
+        # pages with too few headlines are noindex; nothing links to them, so
+        # Google spends its visits on the indexed pages instead
+        company["linked"] = company["paged"] and len(by_ticker.get(ticker, [])) >= MIN_INDEXABLE
     for company in companies.values():
         items = by_ticker.get(company["ticker"], [])
         if not company["paged"]:
@@ -1407,7 +1411,7 @@ def insider_entry(trade: dict, side: str, companies: dict) -> str:
                     for p in people)
     company = companies.get(trade["symbol"])
     ticker = (f'<a class="item-source" href="/news/{company["slug"]}/">{esc(trade["symbol"])}</a>'
-              if company and company.get("paged", True) else f'<span class="item-source">{esc(trade["symbol"])}</span>')
+              if company and company.get("linked", True) else f'<span class="item-source">{esc(trade["symbol"])}</span>')
     notes = []
     if side == "selling":
         planned = trade.get("planned_amount")
