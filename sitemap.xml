@@ -88,6 +88,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/aal/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/aapl/</loc>
     <lastmod>2026-10-09</lastmod>
     <changefreq>hourly</changefreq>
@@ -664,7 +669,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/de/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -839,7 +844,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/jpm/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -954,7 +959,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/mrna/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -984,7 +989,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/nbis/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1234,7 +1239,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/metals-mining/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1289,7 +1294,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/shel/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
