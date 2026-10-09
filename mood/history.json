@@ -406,8 +406,15 @@
    "date": "2026-10-08",
    "value": 47,
    "label": "Neutral",
-   "headlines": 291,
+   "headlines": 292,
    "avg7": 62.3
+  },
+  {
+   "date": "2026-10-09",
+   "value": 32,
+   "label": "Leaning cautious",
+   "headlines": 30,
+   "avg7": 57.6
   }
  ]
 }
