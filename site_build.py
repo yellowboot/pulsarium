@@ -76,7 +76,7 @@ FOOTER_COLUMNS = [
     ("Market news", [("/news/", "Live news"), ("/news/companies/", "News by company"), ("/news/daily/", "Daily digest"),
                      ("/mood/", "Mood Index"), ("/news/feed.xml", "RSS feed")]),
     ("SEC data & tools", [("/insider-buying/", "Insider buying"), ("/insider-selling/", "Insider selling"),
-                          ("/news/#sector-overview", "Sector analytics"), ("/tools/", "Calculators")]),
+                          ("/sector-analytics/", "Sector analytics"), ("/tools/", "Calculators")]),
     ("About", [(f"{APP_URL}?legal=faq", "FAQ"), (f"{APP_URL}?legal=disclaimer", "Financial notice"),
                (f"{APP_URL}?legal=imprint", "Imprint"), (f"{APP_URL}?legal=privacy", "Privacy"),
                (f"{APP_URL}?legal=terms", "Terms")]),
@@ -1237,6 +1237,11 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
             emit(result, (sec_snapshot("sec_insider_radar").get("through") or "")[:10] or None, "daily")
         elif os.path.exists(url_file(insider_path)):
             sitemap_entries.append((insider_path, None, "daily"))
+    result = sector_analytics_page(companies)
+    if result:
+        emit(result, (sec_snapshot("sec_sector_analytics").get("updated_at") or "")[:10] or None, "daily")
+    elif os.path.exists(url_file(SECTOR_PATH)):
+        sitemap_entries.append((SECTOR_PATH, None, "daily"))
     write_if_changed(url_file("/mood/widget/"), mood_widget(history), changed_files)
     write_if_changed(os.path.join("mood", "history.json"),
                      json.dumps({"index": "Pulsarium Mood Index", "scale": "0-100, 50 = neutral",
@@ -1395,6 +1400,9 @@ INSIDER_STYLE = """<style>
 .insider-stats .stat small { font-size: 12.5px; }
 .insider-cards { align-items: start; }
 .insider-cards .item h3 { font-size: 16px; }
+.insider-cards .item p a { color: var(--accent); }
+.insider-cards .item p small { color: var(--text-low); }
+.method p { font-size: 13px; line-height: 1.65; color: var(--text-low); }
 </style>
 """
 
@@ -1495,7 +1503,7 @@ def insider_page(side: str, companies: dict):
   <h2>How this list is made</h2>
   {f"<p>{esc(method)}</p>" if method else ""}
   <p>Filings come from SEC EDGAR and are read twice a day{f"; this list is collected since {day_span(since, since)}" if since else ""}. Each entry links to the company's Form 4 filings on SEC EDGAR. The list describes reported trades, not prices, and is not investment advice.</p>
-  <p class="chips"><a class="chip" href="{other_path}">{other_name} this week</a><a class="chip" href="/news/#insider-radar">Live panel on the news dashboard</a><a class="chip" href="/news/#sector-overview">Sector analytics</a></p>
+  <p class="chips"><a class="chip" href="{other_path}">{other_name} this week</a><a class="chip" href="/news/#insider-radar">Live panel on the news dashboard</a><a class="chip" href="/sector-analytics/">Sector analytics</a></p>
 </section>
 {faq_section}
 """
@@ -1507,6 +1515,108 @@ def insider_page(side: str, companies: dict):
     indexable = bool(groups or largest)
     return path, page(path=path, title=title, description=description, body=body, crumbs=crumbs,
                       indexable=indexable, extra_head=INSIDER_STYLE + faq_ld), indexable
+
+
+SECTOR_PATH = "/sector-analytics/"
+SECTOR_STATES = {"growth": ("Business growth", "positive"), "pressure": ("Under pressure", "negative"),
+                 "mixed": ("Mixed trends", "neutral"), "limited": ("Limited sample", "neutral")}
+SECTOR_FAQ = [
+    ("What does the industry signal mean?",
+     "Business growth means the industry's total revenue grew and its median operating margin held or improved. "
+     "Under pressure means revenue fell and margins did not improve. Margin pressure means revenue grew while the "
+     "median margin fell. Other combinations are mixed trends."),
+    ("Where do the numbers come from?",
+     "From the financial statements companies file with the SEC (10-Q and 10-K reports). Each company counts with "
+     "its latest comparable report; revenue is compared with the same period a year earlier."),
+    ("How often is it updated?",
+     "Twice a day, as new reports reach SEC EDGAR. Companies report on different fiscal calendars, so some figures "
+     "are a quarter older than others until their next report is filed."),
+]
+
+
+def sector_revenue(s: dict):
+    """Total revenue growth (the panel's headline), or the median where totals are missing."""
+    total = s.get("revenue_total_yoy")
+    return total if isinstance(total, (int, float)) else s.get("revenue_yoy")
+
+
+def sector_entry(s: dict, companies: dict) -> str:
+    revenue, margin, count = sector_revenue(s), s.get("margin_change"), s.get("company_count") or 0
+    margin_pressure = (count >= 10 and isinstance(revenue, (int, float)) and revenue >= 0
+                       and (s.get("margin_count") or 0) >= 10 and isinstance(margin, (int, float)) and margin < 0)
+    state, tone = ("Margin pressure", "negative") if margin_pressure else SECTOR_STATES.get(s.get("direction"), ("Mixed trends", "neutral"))
+    signed = lambda v, unit: f"{v:+.1f}{unit}" if isinstance(v, (int, float)) else "—"
+    insiders = s.get("insiders") or {}
+    trades = []
+    if insiders.get("purchases"):
+        trades.append(f'bought {short_money(insiders["purchases"])} at {insiders.get("purchase_companies") or 0} companies')
+    if insiders.get("sales"):
+        trades.append(f'sold {short_money(insiders["sales"])} at {insiders.get("sale_companies") or 0} companies')
+    largest = []
+    for c in (s.get("companies") or [])[:4]:
+        symbol, yoy = c.get("symbol"), c.get("revenue_yoy")
+        if not isinstance(symbol, str):
+            continue
+        company = companies.get(symbol)
+        label = (f'<a href="/news/{company["slug"]}/">{esc(symbol)}</a>' if company and company.get("linked", True)
+                 else esc(symbol))
+        largest.append(label + (f" {yoy:+.0f}%" if isinstance(yoy, (int, float)) else ""))
+    news_path = f"/news/sector/{sector_slug(s['name'])}/"
+    news_link = (f'<p><a class="item-more" href="{news_path}">{esc(s["name"])} news →</a></p>'
+                 if os.path.exists(url_file(news_path)) else "")
+    return f"""<article class="item">
+  <div class="item-meta"><span class="item-source">{esc(s["name"])}</span><span class="badge badge-{tone}">{state}</span><span>{count} companies</span></div>
+  <h3>Revenue {signed(revenue, "%")} · margin {signed(margin, " pp")}</h3>
+  <p>{s.get("growing_count") or 0} of {count} companies grew revenue.{f" Insiders in 30 days: {'; '.join(trades)}." if trades else ""}</p>
+  {f'<p>Largest: {", ".join(largest)} <small>(revenue, latest quarter vs a year earlier)</small></p>' if largest else ""}
+  {news_link}
+</article>"""
+
+
+def sector_analytics_page(companies: dict):
+    """Industry revenue and margin trends from SEC reports, or None without the snapshot."""
+    data = sec_snapshot("sec_sector_analytics")
+    sectors = [s for s in data.get("sectors") or [] if isinstance(s, dict) and isinstance(s.get("name"), str)]
+    if not sectors:
+        return None
+    sectors.sort(key=lambda s: -(sector_revenue(s) if isinstance(sector_revenue(s), (int, float)) else -999))
+    coverage = data.get("coverage") or {}
+    growing = sum(1 for s in sectors if s.get("direction") == "growth")
+    target = coverage.get("reporting_target")
+    included = coverage.get("included")
+    methods = data.get("methodology") or {}
+    method = "".join(f"<p>{esc(methods[k])}</p>" for k in ("direction", "revenue", "margin") if isinstance(methods.get(k), str))
+    faq_section, faq_ld = site_pages.faq(SECTOR_FAQ)
+    body = f"""<header class="page-head">
+  <span class="eyebrow">SEC filings · latest reports</span>
+  <h1>US sector analytics: revenue and margins by industry</h1>
+  <p class="lead">How {len(sectors)} US industries are doing in their latest reports to the SEC: total revenue growth over the past twelve months, the change in operating margins, how many companies grew, and what insiders bought or sold. Updated twice a day.</p>
+</header>
+<section class="stats insider-stats">
+  <div class="panel stat"><span class="stat-label">Industries</span><strong>{len(sectors)}</strong><small>{growing} of them in business growth</small></div>
+  {f'<div class="panel stat"><span class="stat-label">Companies</span><strong>{included:,}</strong><small>listed US companies with comparable reports</small></div>' if isinstance(included, int) else ""}
+  {f'<div class="panel stat"><span class="stat-label">Reporting season</span><strong>{esc(target)}</strong><small>each company with its latest report</small></div>' if isinstance(target, str) else ""}
+</section>
+<section class="block"><h2>Industries <small>by total revenue growth, twelve months vs a year earlier</small></h2><div class="items insider-cards">
+{"".join(sector_entry(s, companies) for s in sectors)}
+</div></section>
+{cta("Follow the companies you own",
+     "The free cabinet tracks your portfolio from your broker's file and shows the news, SEC figures and price alerts for each holding.")}
+<section class="block method">
+  <h2>How this is calculated</h2>
+  {method}
+  <p>Figures come from 10-Q and 10-K reports on SEC EDGAR and describe reported results, not prices. This is not investment advice.</p>
+  <p class="chips"><a class="chip" href="/news/#sector-overview">Sector map on the news dashboard</a><a class="chip" href="/insider-buying/">Insider buying this week</a><a class="chip" href="/insider-selling/">Insider selling this week</a></p>
+</section>
+{faq_section}
+"""
+    leader = sectors[0]
+    title = "US sector analytics: revenue growth and margins by industry (SEC filings) | Pulsarium"
+    description = (f"Revenue growth, operating margins and insider trades for {len(sectors)} US industries from the "
+                   f"latest SEC reports; {leader['name']} leads at {sector_revenue(leader) or 0:+.1f}%. Updated twice a day.")
+    crumbs = [("Home", "/"), ("News", "/news/"), ("Sector analytics", SECTOR_PATH)]
+    return SECTOR_PATH, page(path=SECTOR_PATH, title=title, description=description, body=body, crumbs=crumbs,
+                             indexable=True, extra_head=INSIDER_STYLE + faq_ld), True
 
 
 def home_today(history: list, window: list, now: datetime) -> str:

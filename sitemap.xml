@@ -1521,6 +1521,11 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/sector-analytics/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/tools/</loc>
     <changefreq>monthly</changefreq>
   </url>

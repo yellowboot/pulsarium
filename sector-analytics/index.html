@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="/assets/theme.js?v=bc09f56dc2" data-pulsarium-theme="bootstrap"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US sector analytics: revenue growth and margins by industry (SEC filings) | Pulsarium</title>
+<meta name="description" content="Revenue growth, operating margins and insider trades for 19 US industries from the latest SEC reports; Semiconductors leads at +65.2%. Updated twice a day.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://pulsarium.finance/sector-analytics/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pulsarium">
+<meta property="og:title" content="US sector analytics: revenue growth and margins by industry (SEC filings) | Pulsarium">
+<meta property="og:description" content="Revenue growth, operating margins and insider trades for 19 US industries from the latest SEC reports; Semiconductors leads at +65.2%. Updated twice a day.">
+<meta property="og:url" content="https://pulsarium.finance/sector-analytics/">
+<meta property="og:image" content="https://pulsarium.finance/og/pulsarium-og-v2.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pulsarium.finance/og/pulsarium-og-v2.jpg">
+<link rel="alternate" type="application/rss+xml" title="Pulsarium market news" href="/news/feed.xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/site.css?v=c1b46bc48a">
+<link rel="stylesheet" href="/assets/footer.css?v=27843acd5d">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pulsarium.finance/"}, {"@type": "ListItem", "position": 2, "name": "News", "item": "https://pulsarium.finance/news/"}, {"@type": "ListItem", "position": 3, "name": "Sector analytics", "item": "https://pulsarium.finance/sector-analytics/"}]}</script>
+<style>
+.insider-stats .stat { padding: 14px 18px; gap: 4px; }
+.insider-stats .stat strong { font-size: 20px; }
+.insider-stats .stat small { font-size: 12.5px; }
+.insider-cards { align-items: start; }
+.insider-cards .item h3 { font-size: 16px; }
+.insider-cards .item p a { color: var(--accent); }
+.insider-cards .item p small { color: var(--text-low); }
+.method p { font-size: 13px; line-height: 1.65; color: var(--text-low); }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the industry signal mean?", "acceptedAnswer": {"@type": "Answer", "text": "Business growth means the industry's total revenue grew and its median operating margin held or improved. Under pressure means revenue fell and margins did not improve. Margin pressure means revenue grew while the median margin fell. Other combinations are mixed trends."}}, {"@type": "Question", "name": "Where do the numbers come from?", "acceptedAnswer": {"@type": "Answer", "text": "From the financial statements companies file with the SEC (10-Q and 10-K reports). Each company counts with its latest comparable report; revenue is compared with the same period a year earlier."}}, {"@type": "Question", "name": "How often is it updated?", "acceptedAnswer": {"@type": "Answer", "text": "Twice a day, as new reports reach SEC EDGAR. Companies report on different fiscal calendars, so some figures are a quarter older than others until their next report is filed."}}]}</script>
+<link rel="stylesheet" href="/assets/themes.css?v=995daca531" data-pulsarium-theme="styles">
+</head>
+<body>
+<div class="bg-layer bg-nebula" aria-hidden="true"></div>
+<div class="bg-layer bg-stars" aria-hidden="true"></div>
+<div class="bg-scan" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Pulsarium home">
+    <span class="mini-pulsar" aria-hidden="true"><span class="mini-ping"></span><span class="mini-ping late"></span><span class="mini-core"></span></span>
+    <span class="wordmark">PULSARIUM</span>
+  </a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="/portfolio-tracker/">Portfolio tracker</a>
+    <a href="/news/">Live news</a>
+    <a href="/mood/">Mood Index</a>
+    <a href="/tools/">Calculators</a>
+    <a class="nav-secondary" href="/news/companies/">Companies</a>
+    <a class="nav-secondary" href="/news/daily/">Daily digest</a>
+    <a class="btn btn-primary" href="https://app.pulsarium.finance/">Sign in</a>
+  </nav>
+</header>
+
+<main class="page">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">›</span> <a href="/news/">News</a> <span aria-hidden="true">›</span> <span aria-current="page">Sector analytics</span></nav>
+<header class="page-head">
+  <span class="eyebrow">SEC filings · latest reports</span>
+  <h1>US sector analytics: revenue and margins by industry</h1>
+  <p class="lead">How 19 US industries are doing in their latest reports to the SEC: total revenue growth over the past twelve months, the change in operating margins, how many companies grew, and what insiders bought or sold. Updated twice a day.</p>
+</header>
+<section class="stats insider-stats">
+  <div class="panel stat"><span class="stat-label">Industries</span><strong>19</strong><small>15 of them in business growth</small></div>
+  <div class="panel stat"><span class="stat-label">Companies</span><strong>2,881</strong><small>listed US companies with comparable reports</small></div>
+  <div class="panel stat"><span class="stat-label">Reporting season</span><strong>Q3 2026</strong><small>each company with its latest report</small></div>
+</section>
+<section class="block"><h2>Industries <small>by total revenue growth, twelve months vs a year earlier</small></h2><div class="items insider-cards">
+<article class="item">
+  <div class="item-meta"><span class="item-source">Semiconductors</span><span class="badge badge-positive">Business growth</span><span>67 companies</span></div>
+  <h3>Revenue +65.2% · margin +2.8 pp</h3>
+  <p>55 of 67 companies grew revenue. Insiders in 30 days: sold $9.2M at 9 companies.</p>
+  <p>Largest: <a href="/news/nvda/">NVDA</a> +106%, <a href="/news/mu/">MU</a> +379%, <a href="/news/avgo/">AVGO</a> +86%, <a href="/news/intc/">INTC</a> +25% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  <p><a class="item-more" href="/news/sector/semiconductors/">Semiconductors news →</a></p>
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Technology hardware</span><span class="badge badge-positive">Business growth</span><span>125 companies</span></div>
+  <h3>Revenue +21.1% · margin +1.6 pp</h3>
+  <p>99 of 125 companies grew revenue. Insiders in 30 days: bought $6.8K at 1 companies; sold $12.1M at 8 companies.</p>
+  <p>Largest: <a href="/news/aapl/">AAPL</a> +16%, <a href="/news/dell/">DELL</a> +58%, <a href="/news/csco/">CSCO</a> +18%, <a href="/news/ibm/">IBM</a> +1% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Software</span><span class="badge badge-positive">Business growth</span><span>259 companies</span></div>
+  <h3>Revenue +18.1% · margin +2.2 pp</h3>
+  <p>210 of 259 companies grew revenue. Insiders in 30 days: bought $1.8K at 1 companies; sold $142.1M at 38 companies.</p>
+  <p>Largest: <a href="/news/googl/">GOOGL</a> +24%, <a href="/news/msft/">MSFT</a> +18%, <a href="/news/meta/">META</a> +28%, <a href="/news/orcl/">ORCL</a> +30% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Banking &amp; finance</span><span class="badge badge-negative">Margin pressure</span><span>209 companies</span></div>
+  <h3>Revenue +14.7% · margin -1.0 pp</h3>
+  <p>177 of 209 companies grew revenue. Insiders in 30 days: bought $5.4K at 1 companies; sold $44.7M at 5 companies.</p>
+  <p>Largest: <a href="/news/jpm/">JPM</a> +28%, SNEX +15%, <a href="/news/bac/">BAC</a> +15%, <a href="/news/wfc/">WFC</a> +9% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  <p><a class="item-more" href="/news/sector/banking-finance/">Banking &amp; finance news →</a></p>
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Energy</span><span class="badge badge-positive">Business growth</span><span>118 companies</span></div>
+  <h3>Revenue +12.7% · margin +0.1 pp</h3>
+  <p>93 of 118 companies grew revenue. Insiders in 30 days: sold $567.2K at 3 companies.</p>
+  <p>Largest: <a href="/news/cvx/">CVX</a> +51%, <a href="/news/mpc/">MPC</a> +54%, PSX +53%, VLO +49% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Utilities</span><span class="badge badge-positive">Business growth</span><span>81 companies</span></div>
+  <h3>Revenue +11.0% · margin +0.0 pp</h3>
+  <p>69 of 81 companies grew revenue. Insiders in 30 days: sold $3.6M at 1 companies.</p>
+  <p>Largest: DUK +9%, SO +8%, NRG +10%, EXC +8% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  <p><a class="item-more" href="/news/sector/utilities/">Utilities news →</a></p>
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Real estate</span><span class="badge badge-positive">Business growth</span><span>181 companies</span></div>
+  <h3>Revenue +10.2% · margin +0.1 pp</h3>
+  <p>127 of 181 companies grew revenue. Insiders in 30 days: bought $530.3K at 4 companies; sold $2.2B at 2 companies.</p>
+  <p>Largest: CBRE +16%, JLL +11%, COMP +109%, WELL +51% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Pharmaceuticals</span><span class="badge badge-positive">Business growth</span><span>220 companies</span></div>
+  <h3>Revenue +10.1% · margin +4.3 pp</h3>
+  <p>144 of 220 companies grew revenue. Insiders in 30 days: bought $29.5K at 1 companies; sold $16.0M at 23 companies.</p>
+  <p>Largest: <a href="/news/jnj/">JNJ</a> +7%, <a href="/news/lly/">LLY</a> +48%, <a href="/news/abbv/">ABBV</a> +10%, <a href="/news/mrk/">MRK</a> +5% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Consumer products</span><span class="badge badge-positive">Business growth</span><span>71 companies</span></div>
+  <h3>Revenue +9.7% · margin +0.3 pp</h3>
+  <p>44 of 71 companies grew revenue. Insiders in 30 days: bought $11.5K at 1 companies; sold $133.4K at 1 companies.</p>
+  <p>Largest: AMCR +26%, CTAS +11%, MHK +7%, <a href="/news/lulu/">LULU</a> -4% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Industrials</span><span class="badge badge-positive">Business growth</span><span>415 companies</span></div>
+  <h3>Revenue +9.5% · margin +0.9 pp</h3>
+  <p>320 of 415 companies grew revenue. Insiders in 30 days: bought $33.1K at 1 companies; sold $29.0M at 10 companies.</p>
+  <p>Largest: <a href="/news/rtx/">RTX</a> +14%, <a href="/news/ba/">BA</a> +8%, <a href="/news/cat/">CAT</a> +24%, <a href="/news/lmt/">LMT</a> +11% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  <p><a class="item-more" href="/news/sector/industrials/">Industrials news →</a></p>
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Business services</span><span class="badge badge-positive">Business growth</span><span>295 companies</span></div>
+  <h3>Revenue +9.4% · margin +0.1 pp</h3>
+  <p>215 of 295 companies grew revenue. Insiders in 30 days: bought $95.6K at 2 companies; sold $6.3M at 11 companies.</p>
+  <p>Largest: <a href="/news/mck/">MCK</a> +8%, COR +5%, <a href="/news/dis/">DIS</a> +7%, SYY +5% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Healthcare</span><span class="badge badge-positive">Business growth</span><span>218 companies</span></div>
+  <h3>Revenue +8.8% · margin +1.3 pp</h3>
+  <p>171 of 218 companies grew revenue. Insiders in 30 days: bought $12.3K at 1 companies; sold $9.2M at 13 companies.</p>
+  <p>Largest: <a href="/news/unh/">UNH</a> +0%, CI +7%, ELV +1%, CNC +4% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  <p><a class="item-more" href="/news/sector/healthcare/">Healthcare news →</a></p>
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Retail</span><span class="badge badge-positive">Business growth</span><span>168 companies</span></div>
+  <h3>Revenue +7.8% · margin +0.5 pp</h3>
+  <p>119 of 168 companies grew revenue. Insiders in 30 days: bought $29.4M at 3 companies; sold $24.1M at 8 companies.</p>
+  <p>Largest: <a href="/news/amzn/">AMZN</a> +20%, <a href="/news/wmt/">WMT</a> +6%, <a href="/news/cvs/">CVS</a> +7%, <a href="/news/cost/">COST</a> +11% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Insurance</span><span class="badge badge-positive">Business growth</span><span>102 companies</span></div>
+  <h3>Revenue +7.0% · margin +1.0 pp</h3>
+  <p>80 of 102 companies grew revenue. Insiders in 30 days: bought $253.0K at 2 companies; sold $1.6M at 2 companies.</p>
+  <p>Largest: BRK-B +14%, PGR +7%, ALL +12%, CB +7% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Consumer staples</span><span class="badge badge-negative">Margin pressure</span><span>81 companies</span></div>
+  <h3>Revenue +5.1% · margin -1.6 pp</h3>
+  <p>57 of 81 companies grew revenue. Insiders in 30 days: bought $289.2K at 3 companies; sold $1.2M at 1 companies.</p>
+  <p>Largest: <a href="/news/pep/">PEP</a> +6%, PG +2%, TSN -0%, <a href="/news/ko/">KO</a> +7% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Transportation</span><span class="badge badge-negative">Margin pressure</span><span>73 companies</span></div>
+  <h3>Revenue +5.0% · margin -0.2 pp</h3>
+  <p>54 of 73 companies grew revenue.</p>
+  <p>Largest: FDX +13%, UPS +8%, <a href="/news/dal/">DAL</a> +21%, PAA +66% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Media &amp; telecom</span><span class="badge badge-positive">Business growth</span><span>85 companies</span></div>
+  <h3>Revenue +4.2% · margin +0.3 pp</h3>
+  <p>52 of 85 companies grew revenue. Insiders in 30 days: bought $2.6K at 1 companies; sold $3.8M at 3 companies.</p>
+  <p>Largest: <a href="/news/vz/">VZ</a> -1%, <a href="/news/t/">T</a> +2%, <a href="/news/cmcsa/">CMCSA</a> -1%, <a href="/news/tmus/">TMUS</a> +8% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Automotive</span><span class="badge badge-positive">Business growth</span><span>47 companies</span></div>
+  <h3>Revenue +3.3% · margin +0.5 pp</h3>
+  <p>39 of 47 companies grew revenue.</p>
+  <p>Largest: <a href="/news/f/">F</a> -4%, <a href="/news/gm/">GM</a> +2%, <a href="/news/tsla/">TSLA</a> +26%, PCAR +0% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article><article class="item">
+  <div class="item-meta"><span class="item-source">Chemicals</span><span class="badge badge-negative">Margin pressure</span><span>66 companies</span></div>
+  <h3>Revenue +1.5% · margin -0.6 pp</h3>
+  <p>45 of 66 companies grew revenue. Insiders in 30 days: bought $400.8K at 2 companies.</p>
+  <p>Largest: DOW -6%, LIN +9%, LYB +20%, PPG +7% <small>(revenue, latest quarter vs a year earlier)</small></p>
+  
+</article>
+</div></section>
+<aside class="panel cta">
+  <div>
+    <span class="eyebrow">Personal cabinet</span>
+    <h2>Follow the companies you own</h2>
+    <p>The free cabinet tracks your portfolio from your broker&#x27;s file and shows the news, SEC figures and price alerts for each holding.</p>
+  </div>
+  <a class="btn btn-primary" href="https://app.pulsarium.finance/">Get started free</a>
+</aside>
+<section class="block method">
+  <h2>How this is calculated</h2>
+  <p>Growth: positive total revenue change and non-negative median operating margin change. Pressure: negative total revenue change and non-positive median operating margin change. At least 10 companies are required for both metrics. Other combinations are mixed; smaller revenue samples are limited.</p><p>Headline growth is the change in summed TTM revenue of the same issuers in both periods: (current total / prior-year total - 1) × 100. This is equivalent to weighting company growth by prior-year revenue. The median gives each company equal weight; breadth is the share with growing revenue. Totals describe the covered business sample, not stock-market returns or market-capitalization weights. Fiscal-quarter durations must be 70–125 days (including 12/16-week calendars) and corresponding quarters differ by at most 7 days; each TTM span and year-over-year end-date gap must be 350–380 days. Missing quarters are never filled with zeros. Each company pair uses the same revenue concept. Missing standalone quarters can be derived from differences between reported periods of that same concept sharing an exact start or end. Where Q4 is not reported separately, it can also be derived from an annual fact minus three contiguous quarters of the same concept.</p><p>Median change in four-quarter operating income divided by TTM revenue, in percentage points. Operating income and revenue must cover matching periods. Each metric shows its own sample size.</p>
+  <p>Figures come from 10-Q and 10-K reports on SEC EDGAR and describe reported results, not prices. This is not investment advice.</p>
+  <p class="chips"><a class="chip" href="/news/#sector-overview">Sector map on the news dashboard</a><a class="chip" href="/insider-buying/">Insider buying this week</a><a class="chip" href="/insider-selling/">Insider selling this week</a></p>
+</section>
+<section class="block"><h2>Questions</h2><div class="faq"><details class="faq-item"><summary>What does the industry signal mean?</summary><p>Business growth means the industry's total revenue grew and its median operating margin held or improved. Under pressure means revenue fell and margins did not improve. Margin pressure means revenue grew while the median margin fell. Other combinations are mixed trends.</p></details><details class="faq-item"><summary>Where do the numbers come from?</summary><p>From the financial statements companies file with the SEC (10-Q and 10-K reports). Each company counts with its latest comparable report; revenue is compared with the same period a year earlier.</p></details><details class="faq-item"><summary>How often is it updated?</summary><p>Twice a day, as new reports reach SEC EDGAR. Companies report on different fiscal calendars, so some figures are a quarter older than others until their next report is filed.</p></details></div></section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-cols"><nav class="footer-col" aria-label="Portfolio"><span class="footer-col-title">Portfolio</span><ul><li><a href="/portfolio-tracker/">Portfolio tracker</a></li><li><a href="/dividend-tracker/">Dividend tracker</a></li><li><a href="/price-alerts/">Price alerts</a></li><li><a href="/import/">Broker import</a></li><li><a href="/why-pulsarium/">Why Pulsarium</a></li></ul></nav><nav class="footer-col" aria-label="Market news"><span class="footer-col-title">Market news</span><ul><li><a href="/news/">Live news</a></li><li><a href="/news/companies/">News by company</a></li><li><a href="/news/daily/">Daily digest</a></li><li><a href="/mood/">Mood Index</a></li><li><a href="/news/feed.xml">RSS feed</a></li></ul></nav><nav class="footer-col" aria-label="SEC data &amp; tools"><span class="footer-col-title">SEC data &amp; tools</span><ul><li><a href="/insider-buying/">Insider buying</a></li><li><a href="/insider-selling/">Insider selling</a></li><li><a href="/sector-analytics/">Sector analytics</a></li><li><a href="/tools/">Calculators</a></li></ul></nav><nav class="footer-col" aria-label="About"><span class="footer-col-title">About</span><ul><li><a href="https://app.pulsarium.finance/?legal=faq">FAQ</a></li><li><a href="https://app.pulsarium.finance/?legal=disclaimer">Financial notice</a></li><li><a href="https://app.pulsarium.finance/?legal=imprint">Imprint</a></li><li><a href="https://app.pulsarium.finance/?legal=privacy">Privacy</a></li><li><a href="https://app.pulsarium.finance/?legal=terms">Terms</a></li><li><button type="button" data-analytics-settings>Analytics settings</button></li></ul></nav></div>
+  <p class="footer-note">Headlines come from public RSS feeds and link to their original publishers. Sentiment and importance are automated scores, not investment advice. Market data may be delayed.</p>
+</footer>
+<script src="/assets/analytics.js?v=d1521d62ee" defer></script>
+</body>
+</html>
