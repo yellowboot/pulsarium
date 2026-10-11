@@ -76,7 +76,8 @@ FOOTER_COLUMNS = [
     ("Market news", [("/news/", "Live news"), ("/news/companies/", "News by company"), ("/news/daily/", "Daily digest"),
                      ("/mood/", "Mood Index"), ("/news/feed.xml", "RSS feed")]),
     ("SEC data & tools", [("/insider-buying/", "Insider buying"), ("/insider-selling/", "Insider selling"),
-                          ("/sector-analytics/", "Sector analytics"), ("/tools/", "Calculators")]),
+                          ("/sector-analytics/", "Sector analytics"),
+                          ("/report-highlights/", "Report highlights"), ("/tools/", "Calculators")]),
     ("About", [(f"{APP_URL}?legal=faq", "FAQ"), (f"{APP_URL}?legal=disclaimer", "Financial notice"),
                (f"{APP_URL}?legal=imprint", "Imprint"), (f"{APP_URL}?legal=privacy", "Privacy"),
                (f"{APP_URL}?legal=terms", "Terms")]),
@@ -1242,6 +1243,11 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
         emit(result, (sec_snapshot("sec_sector_analytics").get("updated_at") or "")[:10] or None, "daily")
     elif os.path.exists(url_file(SECTOR_PATH)):
         sitemap_entries.append((SECTOR_PATH, None, "daily"))
+    result = report_highlights_page(companies)
+    if result:
+        emit(result, ((sec_snapshot("sec_sector_analytics").get("financial_signals") or {}).get("updated_at") or "")[:10] or None, "daily")
+    elif os.path.exists(url_file(REPORTS_PATH)):
+        sitemap_entries.append((REPORTS_PATH, None, "daily"))
     write_if_changed(url_file("/mood/widget/"), mood_widget(history), changed_files)
     write_if_changed(os.path.join("mood", "history.json"),
                      json.dumps({"index": "Pulsarium Mood Index", "scale": "0-100, 50 = neutral",
@@ -1297,6 +1303,8 @@ def sec_snapshot(table: str) -> dict:
 
 
 def short_money(value: float) -> str:
+    if value < 0:
+        return "−" + short_money(-value)
     for size, unit in ((1e9, "B"), (1e6, "M"), (1e3, "K")):
         if abs(value) >= size:
             return f"${value / size:.1f}{unit}"
@@ -1606,7 +1614,7 @@ def sector_analytics_page(companies: dict):
   <h2>How this is calculated</h2>
   {method}
   <p>Figures come from 10-Q and 10-K reports on SEC EDGAR and describe reported results, not prices. This is not investment advice.</p>
-  <p class="chips"><a class="chip" href="/news/#sector-overview">Sector map on the news dashboard</a><a class="chip" href="/insider-buying/">Insider buying this week</a><a class="chip" href="/insider-selling/">Insider selling this week</a></p>
+  <p class="chips"><a class="chip" href="/report-highlights/">Report highlights</a><a class="chip" href="/news/#sector-overview">Sector map on the news dashboard</a><a class="chip" href="/insider-buying/">Insider buying this week</a><a class="chip" href="/insider-selling/">Insider selling this week</a></p>
 </section>
 {faq_section}
 """
@@ -1617,6 +1625,139 @@ def sector_analytics_page(companies: dict):
     crumbs = [("Home", "/"), ("News", "/news/"), ("Sector analytics", SECTOR_PATH)]
     return SECTOR_PATH, page(path=SECTOR_PATH, title=title, description=description, body=body, crumbs=crumbs,
                              indexable=True, extra_head=INSIDER_STYLE + faq_ld), True
+
+
+REPORTS_PATH = "/report-highlights/"
+REPORT_GROUPS = [
+    ("turnaround", "Profit turnarounds", "operating losses that turned into profit, then cash-flow turnarounds"),
+    ("shares", "Buybacks and dilution", "share count change of at least 2% year over year"),
+    ("stress", "Financial stress", "negative operating cash flow with falling cash or rising debt"),
+]
+REPORTS_FAQ = [
+    ("What is a profit turnaround?",
+     "A company whose quarterly operating income went from a loss a year earlier to a profit now, as reported "
+     "to the SEC. Cash-flow turnarounds, where operating cash flow turned positive, follow them."),
+    ("What do buybacks and dilution mean here?",
+     "Buybacks: fewer average shares than a year earlier, with cash spent on repurchases in the same report. "
+     "Dilution: more shares, which can come from stock compensation, acquisitions or new financing."),
+    ("Is financial stress a prediction?",
+     "No. It flags report-based warning signs, such as twelve months of negative operating cash flow with cash "
+     "down at least 20% or debt up at least 25%. It is not a default probability or investment advice."),
+]
+# A long list is split into pages of this many cards; all of them stay in the
+# page for search engines and readers without scripts.
+PAGED_LIST_SCRIPT = """<script>
+(function () {
+  document.querySelectorAll('.paged-list').forEach(function (list) {
+    var size = Number(list.dataset.perPage) || 18, cards = [].slice.call(list.children), pages = Math.ceil(cards.length / size);
+    if (pages < 2) return;
+    var nav = document.createElement('nav');
+    nav.className = 'pager-numbers';
+    nav.setAttribute('aria-label', 'Pages');
+    list.after(nav);
+    function show(n, scroll) {
+      cards.forEach(function (card, i) { card.hidden = Math.floor(i / size) !== n; });
+      nav.innerHTML = '';
+      for (var p = 0; p < pages; p++) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.textContent = p + 1;
+        if (p === n) b.setAttribute('aria-current', 'page');
+        b.onclick = (function (p) { return function () { show(p, true); }; })(p);
+        nav.appendChild(b);
+      }
+      if (scroll) list.closest('section').scrollIntoView({ block: 'start' });
+    }
+    show(0, false);
+  });
+})();
+</script>"""
+REPORTS_STYLE = """<style>
+.pager-numbers { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 18px; }
+.pager-numbers button { min-width: 34px; height: 34px; padding: 0 8px; border-radius: 9px; border: 1px solid var(--line); background: transparent; color: var(--text-mid); font: inherit; font-size: 13px; cursor: pointer; }
+.pager-numbers button:hover { color: var(--text-hi); border-color: var(--accent); }
+.pager-numbers button[aria-current] { color: var(--accent); border-color: var(--accent); background: rgba(0, 240, 255, .1); }
+:root[data-color-theme='calm'] .pager-numbers button[aria-current] { background: rgba(74, 71, 214, .08); }
+.insider-cards .item[hidden] { display: none; }
+</style>"""
+
+
+def report_entry(r: dict, group: str, companies: dict, industries: dict) -> str:
+    symbol = r.get("symbol") or ""
+    company = companies.get(symbol)
+    ticker = (f'<a href="/news/{company["slug"]}/">{esc(symbol)}</a>' if company and company.get("linked", True)
+              else esc(symbol))
+    lines = []
+    for s in r.get("signals") or []:
+        if not isinstance(s, dict) or not isinstance(s.get("label"), str):
+            continue
+        current, previous, pct = s.get("current"), s.get("previous"), s.get("change_pct")
+        if s.get("unit") == "shares":
+            value = f"{pct:+.1f}%" if isinstance(pct, (int, float)) else ""
+        else:
+            value = (f"{short_money(previous)} → {short_money(current)}" if isinstance(previous, (int, float))
+                     and isinstance(current, (int, float)) else short_money(current) if isinstance(current, (int, float)) else "")
+        lines.append(f'<p>{esc(s["label"])}{f": <strong>{esc(value)}</strong>" if value else ""}</p>')
+    period = r.get("period_end")
+    when = f"Quarter ended {fmt_short_day(date.fromisoformat(period))}" if isinstance(period, str) and len(period) == 10 else ""
+    source = r.get("source") if isinstance(r.get("source"), str) and r["source"].startswith("https://www.sec.gov/") else ""
+    revenue = r.get("revenue_current")
+    return f"""<article class="item">
+  <div class="item-meta"><span class="item-source">{ticker}</span><span>{esc(industries.get(r.get("sector"), ""))}</span>{f"<span>TTM revenue {short_money(revenue)}</span>" if isinstance(revenue, (int, float)) else ""}</div>
+  <h3>{esc(company_case(r.get("name") or symbol))}</h3>
+  {"".join(lines)}
+  <p><small>{when}</small>{f' · <a href="{esc(source)}" target="_blank" rel="noopener">SEC report ↗</a>' if source else ""}</p>
+</article>"""
+
+
+def report_highlights_page(companies: dict):
+    """Turnarounds, share changes and financial stress from SEC reports, or None."""
+    data = sec_snapshot("sec_sector_analytics")
+    signals = data.get("financial_signals") or {}
+    groups = signals.get("groups") or {}
+    industries = {s.get("id"): s.get("name") for s in data.get("sectors") or [] if isinstance(s, dict)}
+    usable = lambda r: isinstance(r, dict) and isinstance(r.get("symbol"), str) and r.get("signals")
+    sections, counts = [], []
+    for key, title, note in REPORT_GROUPS:
+        rows = [r for r in groups.get(key) or [] if usable(r)]
+        if not rows:
+            continue
+        counts.append((title, len(rows)))
+        sections.append(f'<section class="block"><h2>{title} <small>{note} · {len(rows)} companies</small></h2>'
+                        f'<div class="items insider-cards paged-list" data-per-page="18">'
+                        + "".join(report_entry(r, key, companies, industries) for r in rows) + "</div></section>")
+    if not sections:
+        return None
+    coverage = signals.get("coverage") or {}
+    eligible = coverage.get("eligible")
+    methods = signals.get("methodology") or {}
+    method = "".join(f"<p>{esc(methods[k])}</p>" for k in ("universe", "turnaround", "shares", "stress") if isinstance(methods.get(k), str))
+    stats = "".join(f'<div class="panel stat"><span class="stat-label">{title}</span><strong>{n}</strong><small>companies</small></div>'
+                    for title, n in counts)
+    faq_section, faq_ld = site_pages.faq(REPORTS_FAQ)
+    body = f"""<header class="page-head">
+  <span class="eyebrow">SEC filings · latest quarterly reports</span>
+  <h1>Report highlights: profit turnarounds, buybacks and financial stress</h1>
+  <p class="lead">US companies whose latest reports to the SEC show a change worth a look: losses turning into profit, share buybacks or dilution, and early signs of financial stress{f", screened across {eligible:,} listed businesses" if isinstance(eligible, int) else ""}. Updated as new reports are filed.</p>
+</header>
+<section class="stats insider-stats">{stats}</section>
+{"".join(sections)}
+{cta("Follow the companies you own",
+     "The free cabinet tracks your portfolio from your broker's file and shows the news, SEC figures and price alerts for each holding.")}
+<section class="block method">
+  <h2>How this is calculated</h2>
+  {method}
+  <p>Figures come from 10-Q and 10-K reports on SEC EDGAR and describe reported results, not prices. This is not investment advice.</p>
+  <p class="chips"><a class="chip" href="/sector-analytics/">Sector analytics</a><a class="chip" href="/insider-buying/">Insider buying this week</a><a class="chip" href="/news/#financial-signals">Panel on the news dashboard</a></p>
+</section>
+{faq_section}
+{PAGED_LIST_SCRIPT}
+"""
+    title = "Report highlights: profit turnarounds, buybacks and financial stress (SEC filings) | Pulsarium"
+    description = ("US companies whose latest SEC reports show a turn from loss to profit, share buybacks or dilution, "
+                   "or signs of financial stress: " + ", ".join(f"{n} {t.lower()}" for t, n in counts) + ".")
+    crumbs = [("Home", "/"), ("News", "/news/"), ("Report highlights", REPORTS_PATH)]
+    return REPORTS_PATH, page(path=REPORTS_PATH, title=title, description=description, body=body, crumbs=crumbs,
+                              indexable=True, extra_head=INSIDER_STYLE + REPORTS_STYLE + faq_ld), True
 
 
 def home_today(history: list, window: list, now: datetime) -> str:

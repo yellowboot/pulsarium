@@ -87,7 +87,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           # every folder site_build.py writes pages into, or a new page never reaches the site
           git add news_data.js watchlist_candidates.txt data/archive data/movers.json index.html news mood sitemap.xml \
-            insider-buying insider-selling sector-analytics import portfolio-tracker dividend-tracker price-alerts tools why-pulsarium
+            insider-buying insider-selling sector-analytics report-highlights import portfolio-tracker dividend-tracker price-alerts tools why-pulsarium
           if git diff --cached --quiet; then
             echo "No changes — skipping commit"
           else
