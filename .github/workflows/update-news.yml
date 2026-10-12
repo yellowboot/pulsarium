@@ -1,31 +1,12 @@
 name: Update news feed
 
 on:
-  schedule:
-    # Weekdays: early morning sweep, then pre-market and market-hour runs.
-    # This UTC window covers both sides of the US daylight-saving calendar:
-    #   EDT (roughly Mar-Nov): session 13:30-20:00 UTC -> buffer 13:00-20:30
-    #   EST (roughly Nov-Mar): session 14:30-21:00 UTC -> buffer 14:00-21:30
-    # i.e. 13:00-21:30 UTC covers the 30-min pre/post buffer year-round
-    # (with a bit of extra slack on the side that isn't currently in DST).
-    # 08:37 UTC catches overnight/European news, three hours before the
-    # 11:37 UTC pre-market run; 06:37 UTC starts the day two hours
-    # earlier, since GitHub's queue delays scheduled runs more and more.
-    # Minutes are off :00/:30 on purpose: GitHub delays or drops scheduled
-    # runs most at the busy top and half of the hour.
-    - cron: '37 6 * * 1-5'
-    - cron: '37 8 * * 1-5'
-    - cron: '37 11 * * 1-5'
-    - cron: '17 13 * * 1-5'
-    - cron: '37 14 * * 1-5'
-    - cron: '17 16 * * 1-5'
-    - cron: '37 17 * * 1-5'
-    - cron: '17 19 * * 1-5'
-    - cron: '37 20 * * 1-5'
-    - cron: '37 21 * * 1-5'
-    # Weekends: two sweeps, roughly twelve hours apart.
-    - cron: '37 3 * * 0,6'
-    - cron: '17 15 * * 0,6'
+  # Started on the minute by the database scheduler (Supabase pg_cron, migration
+  # 20261013090000_cron_dispatch_github in investor-platform) through
+  # workflow_dispatch: GitHub's own schedule ran 20-100 minutes late on
+  # weekdays, hours late on weekends, and dropped morning runs. Times (UTC):
+  # weekdays 06:37, 08:37, 11:37, 13:17, 14:37, 16:17, 17:37, 19:17, 20:37, 21:37;
+  # weekends 03:37 and 15:17.
   workflow_dispatch:
     inputs:
       provider:
