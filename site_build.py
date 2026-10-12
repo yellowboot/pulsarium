@@ -1632,6 +1632,9 @@ REPORT_GROUPS = [
     ("turnaround", "Profit turnarounds", "operating losses that turned into profit, then cash-flow turnarounds"),
     ("shares", "Buybacks and dilution", "share count change of at least 2% year over year"),
     ("stress", "Financial stress", "negative operating cash flow with falling cash or rising debt"),
+    ("earnings_cash", "Profit and cash flow", "reported profit and cash-flow divergence · ranked by relative gap"),
+    ("payouts", "Payout coverage", "reported dividends and buybacks versus free cash flow · ranked by relative gap"),
+    ("working_capital", "Inventories and receivables", "balance-sheet growth versus quarterly sales · ranked by growth-rate gap"),
 ]
 REPORTS_FAQ = [
     ("What is a profit turnaround?",
@@ -1697,8 +1700,23 @@ def report_entry(r: dict, group: str, companies: dict, industries: dict) -> str:
             value = (f"{short_money(previous)} → {short_money(current)}" if isinstance(previous, (int, float))
                      and isinstance(current, (int, float)) else short_money(current) if isinstance(current, (int, float)) else "")
         lines.append(f'<p>{esc(s["label"])}{f": <strong>{esc(value)}</strong>" if value else ""}</p>')
+        if group in ('earnings_cash', 'payouts', 'working_capital'):
+            start, end, old_end = s.get('period_start'), s.get('period_end'), s.get('previous_end')
+            lines.append(f'<p><small>{esc(start + " – " + end if start else "As of " + end)}'
+                         + (f' · comparison {esc(s.get("previous_start") + " – " if s.get("previous_start") else "")}{esc(old_end)}' if old_end else '') + '</small></p>')
+            if s.get('code') == 'payout_gap':
+                lines.append(f'<p>Gap versus free cash flow: <strong>{short_money(s["gap_amount"])}</strong>. Disclosed components: {esc(" + ".join(s.get("components") or []))}.</p>')
+                if len(s.get('components') or []) == 1:
+                    lines.append('<p><small>The other payout component is unavailable for this exact period.</small></p>')
+            if isinstance(s.get('revenue_growth_pct'), (int, float)):
+                lines.append(f'<p>Revenue growth {s["revenue_growth_pct"]:+.1f}% · growth-rate gap {s["strength"]:+.1f} pp.</p>')
+            old_accn = s.get('previous_accession')
+            if isinstance(old_accn, str) and re.fullmatch(r'\d{10}-\d{2}-\d{6}', old_accn):
+                old_source = f'https://www.sec.gov/Archives/edgar/data/{int(r["cik"])}/{old_accn.replace("-", "")}/{old_accn}-index.html'
+                if old_source != r.get('source'):
+                    lines.append(f'<p><a href="{esc(old_source)}" target="_blank" rel="noopener">Comparison report ↗</a></p>')
     period = r.get("period_end")
-    when = f"Quarter ended {fmt_short_day(date.fromisoformat(period))}" if isinstance(period, str) and len(period) == 10 else ""
+    when = f"{'Report period' if group in ('earnings_cash', 'payouts', 'working_capital') else 'Quarter'} ended {fmt_short_day(date.fromisoformat(period))}" if isinstance(period, str) and len(period) == 10 else ""
     source = r.get("source") if isinstance(r.get("source"), str) and r["source"].startswith("https://www.sec.gov/") else ""
     revenue = r.get("revenue_current")
     return f"""<article class="item">
@@ -1723,21 +1741,22 @@ def report_highlights_page(companies: dict):
             continue
         counts.append((title, len(rows)))
         sections.append(f'<section class="block"><h2>{title} <small>{note} · {len(rows)} companies</small></h2>'
-                        f'<div class="items insider-cards paged-list" data-per-page="18">'
+                        + (f'<p>{(signals.get("coverage") or {}).get(key, 0)} companies with comparable data for this screen.</p>' if key in ('earnings_cash', 'payouts', 'working_capital') else '')
+                        + f'<div class="items insider-cards paged-list" data-per-page="18">'
                         + "".join(report_entry(r, key, companies, industries) for r in rows) + "</div></section>")
     if not sections:
         return None
     coverage = signals.get("coverage") or {}
     eligible = coverage.get("eligible")
     methods = signals.get("methodology") or {}
-    method = "".join(f"<p>{esc(methods[k])}</p>" for k in ("universe", "turnaround", "shares", "stress") if isinstance(methods.get(k), str))
+    method = "".join(f"<p>{esc(methods[k])}</p>" for k in ('universe', *(r[0] for r in REPORT_GROUPS)) if isinstance(methods.get(k), str))
     stats = "".join(f'<div class="panel stat"><span class="stat-label">{title}</span><strong>{n}</strong><small>companies</small></div>'
                     for title, n in counts)
     faq_section, faq_ld = site_pages.faq(REPORTS_FAQ)
     body = f"""<header class="page-head">
-  <span class="eyebrow">SEC filings · latest quarterly reports</span>
-  <h1>Report highlights: profit turnarounds, buybacks and financial stress</h1>
-  <p class="lead">US companies whose latest reports to the SEC show a change worth a look: losses turning into profit, share buybacks or dilution, and early signs of financial stress{f", screened across {eligible:,} listed businesses" if isinstance(eligible, int) else ""}. Updated as new reports are filed.</p>
+  <span class="eyebrow">SEC filings · latest available reports</span>
+  <h1>Report highlights: profit, cash flow and shareholder payouts</h1>
+  <p class="lead">Changes in reported profits, cash flow, shareholder payouts, inventories and receivables, alongside turnarounds, dilution and financial stress. Each screen shows its comparable-data coverage{f" within a universe of {eligible:,} listed businesses" if isinstance(eligible, int) else ""}. Updated as new reports are filed.</p>
 </header>
 <section class="stats insider-stats">{stats}</section>
 {"".join(sections)}
@@ -1752,9 +1771,8 @@ def report_highlights_page(companies: dict):
 {faq_section}
 {PAGED_LIST_SCRIPT}
 """
-    title = "Report highlights: profit turnarounds, buybacks and financial stress (SEC filings) | Pulsarium"
-    description = ("US companies whose latest SEC reports show a turn from loss to profit, share buybacks or dilution, "
-                   "or signs of financial stress: " + ", ".join(f"{n} {t.lower()}" for t, n in counts) + ".")
+    title = 'Report highlights: profit, cash flow and shareholder payouts (SEC filings) | Pulsarium'
+    description = ('Latest SEC report highlights: profit and cash-flow divergence, payout coverage, inventories, receivables, turnarounds and share changes. ' + ', '.join(f'{n} {t.lower()}' for t, n in counts) + '.')
     crumbs = [("Home", "/"), ("News", "/news/"), ("Report highlights", REPORTS_PATH)]
     return REPORTS_PATH, page(path=REPORTS_PATH, title=title, description=description, body=body, crumbs=crumbs,
                               indexable=True, extra_head=INSIDER_STYLE + REPORTS_STYLE + faq_ld), True

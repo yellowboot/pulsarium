@@ -1223,6 +1223,9 @@
       <button type="button" data-financial-tab="turnaround" aria-pressed="true">Turnaround</button>
       <button type="button" data-financial-tab="shares" aria-pressed="false">Shares</button>
       <button type="button" data-financial-tab="stress" aria-pressed="false">Stress</button>
+      <button type="button" data-financial-tab="earnings_cash" aria-pressed="false" hidden>Profit / cash</button>
+      <button type="button" data-financial-tab="payouts" aria-pressed="false" hidden>Payouts</button>
+      <button type="button" data-financial-tab="working_capital" aria-pressed="false" hidden>Working capital</button>
     </div>
     <p class="financial-state" data-financial-state role="status">Loading report highlights…</p>
     <div class="financial-list" data-financial-list></div>
@@ -1343,7 +1346,7 @@
     </details>
   </div>
 </dialog>
-<script src="/assets/sector-analytics.js?v=11" defer></script>
+<script src="/assets/sector-analytics.js?v=12" defer></script>
 <dialog class="sector-sheet financial-sheet" id="financial-sheet" aria-labelledby="financial-sheet-title" data-expanded="false">
   <header class="sector-sheet-header">
     <div><p class="sector-eyebrow">Company reports · SEC</p><h2 id="financial-sheet-title">Report highlights</h2></div>
@@ -1357,6 +1360,9 @@
       <button type="button" data-financial-tab="turnaround" aria-pressed="true">Turnaround</button>
       <button type="button" data-financial-tab="shares" aria-pressed="false">Buybacks / dilution</button>
       <button type="button" data-financial-tab="stress" aria-pressed="false">Financial stress</button>
+      <button type="button" data-financial-tab="earnings_cash" aria-pressed="false" hidden>Profit / cash</button>
+      <button type="button" data-financial-tab="payouts" aria-pressed="false" hidden>Payout coverage</button>
+      <button type="button" data-financial-tab="working_capital" aria-pressed="false" hidden>Inventories / receivables</button>
     </div>
     <div class="sector-section-head"><h3 data-financial-title>Operating &amp; cash-flow turnarounds</h3></div>
     <p class="financial-meta" data-financial-count></p><p class="financial-coverage" data-financial-coverage></p>
@@ -1364,7 +1370,7 @@
     <details class="financial-method"><summary>Selection rules &amp; coverage</summary><div data-financial-method></div></details>
   </div>
 </dialog>
-<script src="/assets/financial-signals.js?v=5" defer></script>
+<script src="/assets/financial-signals.js?v=6" defer></script>
 <script src="/assets/panel-fold.js?v=2" defer></script>
 <script src="../news_data.js" onerror="window.__NO_DATA_FILE__ = true"></script>
 <script>
