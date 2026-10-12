@@ -33,7 +33,15 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/import/firstrade/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/import/interactive-brokers/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/import/m1-finance/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
@@ -309,7 +317,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/companies/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -1378,11 +1386,6 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://pulsarium.finance/news/teva/</loc>
-    <lastmod>2026-10-09</lastmod>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://pulsarium.finance/news/tjx/</loc>
     <lastmod>2026-10-09</lastmod>
     <changefreq>hourly</changefreq>
@@ -1522,12 +1525,12 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/report-highlights/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://pulsarium.finance/sector-analytics/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>

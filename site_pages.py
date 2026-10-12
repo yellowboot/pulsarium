@@ -417,6 +417,47 @@ BROKERS = {
              "average price, then exclude that row."),
         ],
     },
+    "m1-finance": {
+        "region": "us",
+        "name": "M1 Finance",
+        "short": "M1",
+        "export": [
+            ("Open your portfolio's activity", "Log in to M1 on the web, choose the portfolio on the <em>Invest</em> tab and open its <em>Activity</em>."),
+            ("Download the Activity Summary", "Click <em>Activity Summary</em> and save the CSV file. In the iOS app: Accounts → the account's three dots → <em>Download CSV file</em>."),
+        ],
+        "notes": [
+            ("Fractional shares kept exact", "M1 buys in fractions of a share; every fill is imported with its exact units and unit price."),
+            ("Cash left out", "Deposits, withdrawals, transfers and interest hold no shares, so they are skipped on their own; dividends are imported as income."),
+        ],
+        "faq": [
+            ("Which M1 file do I need?",
+             "The Activity Summary of the portfolio, downloaded as CSV. The holdings and tax-lot downloads are a "
+             "snapshot, not a history, so they are not the right file."),
+            ("My pie rebalanced many times — is that a problem?",
+             "No. Each rebalance is a set of small buys and sells; they are all imported and your average price is "
+             "worked out from them."),
+        ],
+    },
+    "firstrade": {
+        "region": "us",
+        "name": "Firstrade",
+        "export": [
+            ("Open the Tax Center", "Log in to Firstrade and open the <em>Tax Center</em>; choose the account information download."),
+            ("Download the history as CSV", "Pick <em>Excel CSV</em>, the account and the date range, then save the file (it is named like FT_CSV_12345678.csv)."),
+        ],
+        "notes": [
+            ("Buys, sells and dividends", "Firstrade's BUY, SELL and DIVIDEND rows are read directly; a non-resident tax withheld on a dividend is added to that dividend."),
+            ("Cash left out", "Interest, wires and other money movements hold no shares and are skipped on their own."),
+        ],
+        "faq": [
+            ("Which Firstrade file do I need?",
+             "The account history from the Tax Center, in Excel CSV format. The gain/loss download is a tax report, "
+             "not your trade history."),
+            ("I'm not a US resident — what about the withholding tax?",
+             "Firstrade books the tax withheld on a dividend as a separate row; Pulsarium adds it to the dividend, "
+             "so you see the gross amount and the tax."),
+        ],
+    },
 }
 
 
@@ -587,7 +628,7 @@ def price_alerts() -> dict:
 # The hub lists brokers by our audience: the US first, then the UK and
 # Europe, then India.
 HUB_ORDER = ["fidelity", "charles-schwab", "vanguard", "robinhood", "etrade", "merrill-edge", "webull",
-             "interactive-brokers", "trading-212", "revolut", "degiro", "saxo", "xtb", "zerodha"]
+             "m1-finance", "firstrade", "interactive-brokers", "trading-212", "revolut", "degiro", "saxo", "xtb", "zerodha"]
 
 
 def import_hub() -> dict:
@@ -611,7 +652,7 @@ def import_hub() -> dict:
         hero("Broker import",
              "Import your trades from a broker file — no broker login",
              "Pulsarium reads the transaction exports of Fidelity, Charles Schwab, Vanguard, Robinhood, E*TRADE, "
-             "Merrill Edge, Webull and Interactive Brokers in the US, Trading 212, Revolut, DEGIRO, Saxo and XTB in the "
+             "Merrill Edge, Webull, M1 Finance, Firstrade and Interactive Brokers in the US, Trading 212, Revolut, DEGIRO, Saxo and XTB in the "
              "UK and Europe, and Zerodha in India — and CSV or TSV files from other brokers once you match their columns. Every row is reviewed with you before anything is saved.",
              ("/portfolio-tracker/", "See the portfolio tracker"))
         + f'<section class="block"><h2>US brokers</h2>{cards("us")}</section>'
@@ -630,7 +671,7 @@ def import_hub() -> dict:
         "path": "/import/", "crumb": "Broker import",
         "title": "Import broker trades into a portfolio tracker: Fidelity, Schwab, Vanguard, Robinhood | Pulsarium",
         "description": "Import your broker's transaction export into Pulsarium's free portfolio tracker: Fidelity, "
-                       "Schwab, Vanguard, Robinhood, E*TRADE, Merrill Edge, Webull, IBKR, Trading 212, Revolut, DEGIRO, Saxo, XTB, Zerodha or any CSV/TSV. "
+                       "Schwab, Vanguard, Robinhood, E*TRADE, Merrill Edge, Webull, M1 Finance, Firstrade, IBKR, Trading 212, Revolut, DEGIRO, Saxo, XTB, Zerodha or any CSV/TSV. "
                        "No broker login, every row reviewed.",
         "body": body, "head": faq_ld,
     }
