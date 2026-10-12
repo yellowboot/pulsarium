@@ -37,6 +37,10 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/import/freetrade/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/import/interactive-brokers/</loc>
     <changefreq>monthly</changefreq>
   </url>

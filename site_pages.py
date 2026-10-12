@@ -202,6 +202,25 @@ BROKERS = {
                 "The Transactions export (Inbox → Transactions → Export → CSV). It holds every buy and sell with "
                 "quantity, price and currency."),
     },
+    "freetrade": {
+        "region": "europe",
+        "name": "Freetrade",
+        "export": [
+            ("Open the activity feed", "In the Freetrade app go to <em>Activity</em> and choose to export it."),
+            ("Export CSV", "Request the CSV export of your activity feed and save the file Freetrade sends you."),
+        ],
+        "notes": [
+            ("UK and US shares together", "Orders in pounds and in dollars are both read, with fractional shares kept exact and stamp duty as the fee."),
+            ("Dividends with the tax withheld", "A US dividend comes with its gross amount and the US tax withheld; free shares are imported as buys; top-ups and interest are skipped."),
+        ],
+        "faq": [
+            ("Which Freetrade file do I need?",
+             "The activity feed exported as CSV. Upload it as it is: Pulsarium recognises its columns."),
+            ("My account is in pounds but I hold US shares — is that a problem?",
+             "No. Each US trade is imported in dollars at the share price you paid; Pulsarium converts values to "
+             "your base currency for the portfolio totals."),
+        ],
+    },
     "trading-212": {
         "region": "europe",
         "name": "Trading 212",
@@ -628,7 +647,7 @@ def price_alerts() -> dict:
 # The hub lists brokers by our audience: the US first, then the UK and
 # Europe, then India.
 HUB_ORDER = ["fidelity", "charles-schwab", "vanguard", "robinhood", "etrade", "merrill-edge", "webull",
-             "m1-finance", "firstrade", "interactive-brokers", "trading-212", "revolut", "degiro", "saxo", "xtb", "zerodha"]
+             "m1-finance", "firstrade", "interactive-brokers", "freetrade", "trading-212", "revolut", "degiro", "saxo", "xtb", "zerodha"]
 
 
 def import_hub() -> dict:
@@ -652,7 +671,7 @@ def import_hub() -> dict:
         hero("Broker import",
              "Import your trades from a broker file — no broker login",
              "Pulsarium reads the transaction exports of Fidelity, Charles Schwab, Vanguard, Robinhood, E*TRADE, "
-             "Merrill Edge, Webull, M1 Finance, Firstrade and Interactive Brokers in the US, Trading 212, Revolut, DEGIRO, Saxo and XTB in the "
+             "Merrill Edge, Webull, M1 Finance, Firstrade and Interactive Brokers in the US, Freetrade, Trading 212, Revolut, DEGIRO, Saxo and XTB in the "
              "UK and Europe, and Zerodha in India — and CSV or TSV files from other brokers once you match their columns. Every row is reviewed with you before anything is saved.",
              ("/portfolio-tracker/", "See the portfolio tracker"))
         + f'<section class="block"><h2>US brokers</h2>{cards("us")}</section>'
@@ -671,7 +690,7 @@ def import_hub() -> dict:
         "path": "/import/", "crumb": "Broker import",
         "title": "Import broker trades into a portfolio tracker: Fidelity, Schwab, Vanguard, Robinhood | Pulsarium",
         "description": "Import your broker's transaction export into Pulsarium's free portfolio tracker: Fidelity, "
-                       "Schwab, Vanguard, Robinhood, E*TRADE, Merrill Edge, Webull, M1 Finance, Firstrade, IBKR, Trading 212, Revolut, DEGIRO, Saxo, XTB, Zerodha or any CSV/TSV. "
+                       "Schwab, Vanguard, Robinhood, E*TRADE, Merrill Edge, Webull, M1 Finance, Firstrade, IBKR, Freetrade, Trading 212, Revolut, DEGIRO, Saxo, XTB, Zerodha or any CSV/TSV. "
                        "No broker login, every row reviewed.",
         "body": body, "head": faq_ld,
     }
