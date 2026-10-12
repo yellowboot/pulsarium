@@ -1146,7 +1146,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/qcom/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1341,7 +1341,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/shop/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1407,6 +1407,11 @@
   <url>
     <loc>https://pulsarium.finance/news/stz/</loc>
     <lastmod>2026-10-09</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/syk/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
