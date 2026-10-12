@@ -734,6 +734,9 @@
   }
   .news-more { display: flex; justify-content: center; padding: 26px 6vw 0; }
   .news-more[hidden] { display: none; }
+  .news-more .chip { padding: 9px 22px; white-space: nowrap; }
+  /* on wide screens the dashboard is a grid (insider-radar.css): the button goes in the row under the cards, full width */
+  @media (min-width: 1101px) { .dash > .news-more { grid-area: empty; padding-right: 0; align-self: start; } }
 
   .card {
     /* no backdrop-filter here: with dozens of cards over an animated
