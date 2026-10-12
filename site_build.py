@@ -1690,8 +1690,31 @@ def report_entry(r: dict, group: str, companies: dict, industries: dict) -> str:
     ticker = (f'<a href="/news/{company["slug"]}/">{esc(symbol)}</a>' if company and company.get("linked", True)
               else esc(symbol))
     lines = []
-    for s in r.get("signals") or []:
-        if not isinstance(s, dict) or not isinstance(s.get("label"), str):
+    signals = [s for s in r.get("signals") or [] if isinstance(s, dict)]
+    by_code = {s.get("code"): s for s in signals}
+    payout = by_code.get("payout_gap") if group == "payouts" else None
+    if payout and isinstance(payout.get("current"), (int, float)):
+        # Payout coverage as one sentence (what was paid, what the business
+        # generated) and one line of meaning, instead of six evidence blocks.
+        amount = lambda key: (by_code.get(key) or {}).get("current")
+        number = lambda value: isinstance(value, (int, float))
+        parts = " + ".join(f"{name} {short_money(amount(key))}" for key, name in
+                           (("report_buyback", "buybacks"), ("report_dividends", "dividends")) if number(amount(key)))
+        fcf, operating, capex = amount("report_free_cash"), amount("report_operating_cash"), amount("report_capex")
+        free = (f" while free cash flow was <strong>{esc(short_money(fcf))}</strong>"
+                + (f" (cash from operations {esc(short_money(operating))} − capital spending {esc(short_money(capex))})"
+                   if number(operating) and number(capex) else "")) if number(fcf) else ""
+        start, end = payout.get("period_start"), payout.get("period_end")
+        span = (f", {day_span(start, end)}" if isinstance(start, str) and isinstance(end, str) else "")
+        lines.append(f"<p>Paid out <strong>{esc(short_money(payout['current']))}</strong>"
+                     f"{f' ({esc(parts)})' if parts else ''}{free}{span}.</p>")
+        lines.append("<p><em>" + ("The payouts came from cash reserves or borrowing, not from this period’s cash."
+                                  if number(fcf) and fcf < 0 else
+                                  f"The payouts were {short_money(payout.get('gap_amount') or 0)} more than this period’s "
+                                  "free cash flow; the rest came from cash reserves or borrowing.") + "</em></p>")
+        signals = []
+    for s in signals:
+        if not isinstance(s.get("label"), str):
             continue
         current, previous, pct = s.get("current"), s.get("previous"), s.get("change_pct")
         if s.get("unit") == "shares":
