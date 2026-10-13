@@ -6,25 +6,28 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 13.10.2026 11:37
-19 of 80 news items unmatched this run
+Generated: 13.10.2026 13:17
+22 of 80 news items unmatched this run
 
-- [MarketWatch] Six Flags’ stock slumps near 52-week lows after fatal accident
+- [Investing.com] Why did investors react so negatively to Schneider-PTC deal? M&A expert weighs in
+- [CNBC] Six Flags shares decline following report of deadly roller coaster incident
+- [Investing.com] European stocks buck tech-led global rout; bank earnings roll in
+- [Investing.com] Top insider buys and sells disclosed for Monday
+- [Investing.com] Goldman highlights two U.S. auto stocks to buy into earnings
+- [Investing.com] Why is Enerflex stock surging today?
+- [Investing.com] Why is Fermi stock surging today?
+- [Yahoo Finance] Update: US Equity Futures Mixed Pre-Bell as Traders Assess Major Bank Earnings
+- [CNBC] Why this little known Chinese chipmaker has caused a global stock rout
+- [CNBC] J&J beats earnings estimates, eyes hip-knee unit spinoff by mid-2027
 - [CNBC] French supermarket fridges get hacked, heating to 122°F and sparking fires
-- [CNBC] J&J beats earnings estimates; Middle East conflict weighs on medical device sales
-- [Investing.com] S&P futures turn negative following bank earnings slate
-- [Yahoo Finance] Bank Bank Earnings, Chip Drama Roil Wall Street Pre-Bell; Asia Mixed, Europe Up
-- [Yahoo Finance] InMode to Report Third Quarter 2026 Financial Results on November 11, 2026, Expects Third Quarter Revenue of $91.8 Million to $92.0 Million, Reiterates FY 2026 Revenue Guidance Between $365M-$375M
-- [MarketWatch] Options traders expect wild stock-market swings beginning later this month. Here are 4 things to watch.
-- [Yahoo Finance] 1 Energy Stock with Exciting Potential and 2 We Turn Down
-- [Yahoo Finance] STARTRADER Adds 48 US Stock CFDs with 24-Hour Weekday Trading
-- [CNBC] Crypto is bouncing back. Citi says Galaxy Digital could too
-- [Yahoo Finance] 1 Energy Stock for Long-Term Investors and 2 Facing Headwinds
-- [Yahoo Finance] 2 Software Stocks to Buy That Are Down More Than 35% From Their Records
-- [CoinDesk] Ledger says 'spy' chip inside CryptoBilis Ledger devices transmitted wallet keys over mobile network
-- [CNBC] Oil prices fall as traders assess Russian diesel supply prospects and Saudi-Houthi conflict
-- [Nasdaq] Bear of the Day: Albemarle Corporation (ALB)
-- [Nasdaq] Corn Gets a Dead Cat Bounce on Monday
+- [CoinDesk] South Korea blocks 27 crypto exchanges, including Bitmart and Kucoin
+- [CoinDesk] Federated Hermes joins Wall Street's tokenization push with plans for first onchain fund shares
+- [Nasdaq] Dollar Rallies on Higher Crude Oil Prices and Hawkish Fed Comments
+- [MarketWatch] The South Korean stock market is in free fall, and these are the reasons
+- [MarketWatch] Six Flags’ stock slumps near 52-week lows after fatal incident
+- [Nasdaq] Sugar Prices Soar on Weather Threats to Sugar Production
+- [Nasdaq] Cocoa Harvest Delays in the Ivory Coast Support Prices
+- [Nasdaq] Coffee Prices Settle Higher on Lower Output in Colombia
 - [Nasdaq] Global Weather Risks Push Sugar Prices Sharply Higher
-- [CNBC] Six Flags shares plunge after-hours following report of deadly roller coaster incident
-- [Nasdaq] Wheat Posts Mixed Monday Trade
+- [MarketWatch] Options traders expect wild stock-market swings beginning later this month. Here are 4 things to watch.
+- [CoinDesk] Ledger says 'spy' chip inside CryptoBilis Ledger devices transmitted wallet keys over mobile network
