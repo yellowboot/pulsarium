@@ -1510,7 +1510,7 @@ def insider_page(side: str, companies: dict):
 <section class="block method">
   <h2>How this list is made</h2>
   {f"<p>{esc(method)}</p>" if method else ""}
-  <p>Filings come from SEC EDGAR and are read twice a day{f"; this list is collected since {day_span(since, since)}" if since else ""}. Each entry links to the company's Form 4 filings on SEC EDGAR. The list describes reported trades, not prices, and is not investment advice.</p>
+  <p>Filings come from SEC EDGAR and are read three times a day. Each entry links to the company's Form 4 filings on SEC EDGAR. The list describes reported trades, not prices, and is not investment advice.</p>
   <p class="chips"><a class="chip" href="{other_path}">{other_name} this week</a><a class="chip" href="/news/#insider-radar">Live panel on the news dashboard</a><a class="chip" href="/sector-analytics/">Sector analytics</a></p>
 </section>
 {faq_section}

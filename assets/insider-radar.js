@@ -58,8 +58,7 @@
     const view = selling ? data.sales : data;
     const coverage = view?.coverage || {};
     const through = data.through ? ' · Disclosures through ' + date(data.through) : '';
-    meta.textContent = 'Last ' + data.window_days + ' days' + through +
-      (selling && view?.history_from ? ' · Sales collected since ' + date(view.history_from) : '');
+    meta.textContent = 'Last ' + data.window_days + ' days' + through;
     state.hidden = false;
     if (!coverage.complete) {
       state.textContent = 'History is updating · ' + Number(coverage.processed || 0).toLocaleString('en-US') +
