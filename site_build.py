@@ -1474,16 +1474,14 @@ def insider_page(side: str, companies: dict):
     other_path, other_name = INSIDER_PAGES[other][0], INSIDER_PAGES[other][1]
     until = f" through {fmt_short_day(date.fromisoformat(through[:10]))}" if through else ""
 
-    since = part.get("history_from") or data.get("history_from")
     stats = ""
     if largest:
         top = largest[0]
         covered = (part.get("coverage") or {}).get("processed")
-        read_since = f" since {day_span(since, since)}" if since else f" in {window} days"
         stats = f"""<section class="stats insider-stats">
   <div class="panel stat"><span class="stat-label">Companies</span><strong>{part.get("qualifying_companies") or len(largest)}</strong><small>with qualifying {trades_word} in {window} days</small></div>
   <div class="panel stat"><span class="stat-label">Largest</span><strong>{short_money(top["amount"])}</strong><small>{esc(top["symbol"])} · {esc(company_case(top["name"]))}</small></div>
-  {f'<div class="panel stat"><span class="stat-label">Filings read</span><strong>{covered:,}</strong><small>SEC Form 4 filings read{read_since}</small></div>' if isinstance(covered, int) else ""}
+  {f'<div class="panel stat"><span class="stat-label">Filings read</span><strong>{covered:,}</strong><small>SEC Form 4 filings read</small></div>' if isinstance(covered, int) else ""}
 </section>"""
     sections = ""
     if groups:
