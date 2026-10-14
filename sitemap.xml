@@ -855,6 +855,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/hon/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/hood/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>hourly</changefreq>
@@ -1356,7 +1361,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/telecom/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1446,7 +1451,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/t/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
