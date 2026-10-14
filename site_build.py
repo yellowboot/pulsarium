@@ -449,7 +449,7 @@ def mood_page(history: list, window: list, now: datetime) -> tuple:
                   else f"{diff:+d} vs previous day")
         headline = f'{today["value"]} — {today["label"]}'
         gauge = f"""<section class="stats">
-  <div class="panel stat mood-now"><span class="stat-label">Latest · {fmt_short_day(date.fromisoformat(today["date"]))}</span><strong>{today["value"]}<small>/100</small></strong><span class="mood-label">{esc(today["label"])}</span><small>{change}</small></div>
+  <div class="panel stat mood-now"><span class="stat-label">Latest · {fmt_short_day(date.fromisoformat(today["date"]))}</span><strong>{today["value"]}<small>/100</small></strong><span class="mood-label {"neg" if today["value"] <= 44 else "neu" if today["value"] <= 55 else "pos"}">{esc(today["label"])}</span><small>{change}</small></div>
   <div class="panel stat"><span class="stat-label">7-day average</span><strong>{today["avg7"]:g}</strong><small>{esc(mood_label(round(today["avg7"])))}</small></div>
   <div class="panel stat"><span class="stat-label">Based on</span><strong>{today["headlines"]}</strong><small>market headlines {esc(today.get("window") or "that day")}</small></div>
 </section>"""

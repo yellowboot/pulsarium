@@ -262,6 +262,9 @@ a.chip:hover { border-color: rgba(0, 240, 255, 0.55); box-shadow: 0 0 16px rgba(
 .mood-now strong { display: flex; align-items: baseline; gap: 4px; font-size: 44px; }
 .mood-now strong small { font-family: var(--font-ui, 'Chakra Petch', sans-serif); font-size: 15px; color: var(--text-low); }
 .mood-label { font-weight: 700; font-size: 16px; color: var(--accent); }
+/* cautious red, optimistic green, like the widget; neutral keeps the accent */
+.mood-label.neg { color: var(--neg); }
+.mood-label.pos { color: var(--pos); }
 .chart-panel { padding: 18px 16px 8px; }
 .mood-chart { display: block; width: 100%; height: auto; }
 .mood-chart .grid { stroke: rgba(120, 220, 255, 0.12); stroke-width: 1; }
