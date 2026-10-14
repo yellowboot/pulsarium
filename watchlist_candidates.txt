@@ -6,23 +6,31 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 14.10.2026 06:37
-35 of 80 news items unmatched this run
+Generated: 14.10.2026 08:37
+40 of 80 news items unmatched this run
 
-- [Investing.com] Standard Chartered gets licence to offer crypto trading in UAE
-- [Investing.com] Taiwan stocks higher at close of trade; Taiwan Weighted up 0.91%
-- [Investing.com] Lonza raises mid-term margin goal, says Q3 in line with expectations
-- [CNBC] Stock futures are mixed as traders await consumer inflation report: Live updates
-- [Investing.com] Galderma to buy US firm ZO Skin Health for $1.5 billion
-- [Investing.com] Krupp Foundation head sees opportunity to spin off Thyssenkrupp steel unit - report
+- [CNBC] Stock futures move higher as traders await consumer inflation report: Live updates
+- [Yahoo Finance] 1 Consumer Stock for Long-Term Investors and 2 Facing Challenges
+- [Yahoo Finance] 3 Industrials Stocks on Our Watchlist
+- [Investing.com] Why is Avio stock surging today?
+- [Yahoo Finance] Vanguard's Value ETF Is Beating Its Growth ETF in 2026. That Has Happened Only 3 Times Since 2012.
+- [Investing.com] DAX trapped in EUR 25350-25600 range: Live levels
+- [Yahoo Finance] 1 Industrials Stock with Promising Prospects and 2 We Find Risky
+- [Investing.com] Big Yellow shares jump 5% as Ancora pushes UK storage firm to explore sale
+- [Investing.com] Swiss Re dips as Jefferies downgrades stock on falling reinsurance prices
+- [Investing.com] FTSE 100 today: Stocks edge up ahead of U.S. CPI; BoE’s Pill doubts hikes
+- [Investing.com] Why is Ørsted stock sliding today?
+- [Investing.com] Why is DiscoverIE stock rallying today?
+- [Investing.com] Auto Partner shares drop 11% after shareholder sells 4 million shares
+- [Yahoo Finance] 2 Bank Stocks to Target This Week and 1 We Ignore
+- [Yahoo Finance] Prediction: These 3 Dividend Stocks Will Raise Their Payouts No Matter What the Market Does
+- [Yahoo Finance] NEURA Robotics Introduces Neuron AI: The Brain of the Physical World
 - [CoinDesk] Ripple adds Stripe-owned wallets to XRP Ledger as AI payments pass 14 million
-- [Investing.com] Kesko reports 4.8% sales increase in September
 - [CoinDesk] Solana sets Oct. 21 for Alpenglow upgrade targeting 150-millisecond finality
-- [Yahoo Finance] Asia stocks edge higher as chipmakers rebound; China trade beats forecasts
-- [CNBC] Oil rises amid growing Mideast tensions between Iran-backed Houthis and Saudi Arabia
-- [Yahoo Finance] Asian shares trade mixed after US stocks edge back from their record after profit reports
+- [OilPrice.com] Taiwan Commits Up to $4.4 Billion to Alaska LNG Megaproject
 - [Nasdaq] Sugar Prices Climb as Brazil Rains Disrupt Cane Crushing
 - [Nasdaq] Chardan Capital Initiates Coverage of Zapata Quantum with Buy
+- [OilPrice.com] Rising Gasoline Prices Fuel Fresh Inflation Fears in the U.S.
 - [CNBC] Anthropic urges court in Washington, D.C. to rehear appeal of Pentagon blacklisting
 - [Nasdaq] Soybeans Showing Slight Weakness on Tuesday
 - [CoinDesk] Largest Philippines crypto exchange, Coins.ph, said to face central bank regulatory action
@@ -40,7 +48,4 @@ Generated: 14.10.2026 06:37
 - [Nasdaq] Corn Holding Steady on Tuesday
 - [CNBC] Here's where Jim Cramer stands on this newly public AI infrastructure stock
 - [Mining.com] Electra Battery Materials partners with WMC to finance Ontario cobalt refinery
-- [CNBC] Six Flags shares decline following deadly roller coaster incident
 - [MarketWatch] Chip stocks suffer worst stretch in 16 months as AI fatigue grips the market
-- [CNBC] Don't let inflation bite — how to hedge with TIPS, commodities and infrastructure funds
-- [MarketWatch] Six Flags’ stock slumps near 17-year low after fatal incident
