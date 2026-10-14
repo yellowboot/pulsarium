@@ -145,8 +145,9 @@ COMMON_FAQ = {
                "No. Pulsarium never asks for broker logins. You export a transaction file from your broker and "
                "upload it, or add trades by hand. Nothing reaches your broker account."),
     "delay": ("How current are the prices?",
-              "Market data may be delayed; the cabinet uses end-of-day and delayed quotes. It is built for "
-              "investors who follow their holdings, not for intraday trading."),
+              "US shares update during US trading hours, up to every 30 minutes; other listings use the latest "
+              "end-of-day price. Prices come from Marketstack and can differ slightly from your broker's. It is built "
+              "for investors who follow their holdings, not for intraday trading."),
     "privacy": ("Who can see my portfolio?",
                 "Only you. Every row is isolated to your account in the database, sign-in supports two-factor "
                 "authentication, and you can export all your data or delete the account yourself at any time."),
@@ -610,8 +611,9 @@ def dividend_tracker() -> dict:
 def price_alerts() -> dict:
     faq_section, faq_ld = faq([
         ("When is an alert checked?",
-         "Once every trading day after the US market closes, against that day's closing prices. Pulsarium is built "
-         "for investors waiting for a level, not for intraday trading."),
+         "Whenever the price updates — for US shares up to every 30 minutes during trading hours — and once every "
+         "trading day after the US close, against that day's high and low. Pulsarium is built for investors waiting "
+         "for a level, not for intraday trading."),
         ("How am I notified?",
          "In the cabinet and by email, if you keep email notifications on. You choose which notifications you get."),
         COMMON_FAQ["free"],
@@ -620,7 +622,7 @@ def price_alerts() -> dict:
         hero("Price alerts",
              "Stock price alerts at the levels you choose",
              "Put the stocks you are waiting for on a watchlist, set an upper or lower price, and get an email when "
-             "the close crosses it — no need to check the market every day.",
+             "the price reaches it — no need to check the market every day.",
              ("/portfolio-tracker/", "See the portfolio tracker"))
         + shot("cabinet-watchlists", "Pulsarium watchlist with upper and lower price alerts per stock",
                "A watchlist with an upper and a lower alert on each name.", first=True)
@@ -631,7 +633,7 @@ def price_alerts() -> dict:
             ("News next to the price", "Watchlist names feed the Signal Feed, so you see why a price is moving."),
         ])
         + closing_cta("Set your first price alert",
-                      "Create a watchlist, add a level and let Pulsarium watch the close for you.")
+                      "Create a watchlist, add a level and let Pulsarium watch the price for you.")
         + faq_section
         + related("/price-alerts/")
     )
