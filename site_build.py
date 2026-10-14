@@ -307,12 +307,48 @@ def mood_label(value: int) -> str:
     return MOOD_LABELS[-1][1]
 
 
+# Headlines that sell rather than report ("Got $5,000? 2 Stocks ...", "3 Reasons
+# to Sell PKG and 1 Stock to Buy Instead"): nearly always "positive", they
+# said nothing about the market's mood.
+MOOD_PROMO = re.compile(
+    r"^(got \$|should you |is it too late|prediction:|\d+ reasons? |\d+ (top |best |unstoppable |magnificent |"
+    r"no-brainer |high-yield |dividend )?[\w\s-]*stocks? (to |that |i'd |you |for ))|stock to buy instead",
+    re.I)
+MOOD_PER_COMPANY = 3
+MOOD_NOW_HOURS = 12
+MOOD_MARKET_SECTORS = {"ETFs / Indices", "Bonds / Macro", "Cryptocurrencies"}
+MOOD_TICKER_SECTOR = {entry["ticker"]: entry["sector"] for entry in fetch_news.COMPANY_MAP}
+
+
+def mood_signal(items: list) -> list:
+    """The headlines the Mood Index weighs: market signals without sales
+    pitches, each story once, and at most MOOD_PER_COMPANY (the most
+    important) per company, so one company's flood of articles can't swing
+    the day. Market-wide news (indices, rates, crypto) is never capped."""
+    signal = [i for i in tag_items(list(items))
+              if (i.get("content_type") or "market_signal") == "market_signal" and not MOOD_PROMO.search(i.get("title") or "")]
+    seen, kept, per_company = set(), [], {}
+    for item in sorted(signal, key=lambda i: -(i.get("importance") or 0)):
+        story = re.sub(r"\W+", " ", (item.get("title") or "").lower()).strip()
+        if story in seen:
+            continue
+        seen.add(story)
+        company = next((t for t in item["_tickers"] if MOOD_TICKER_SECTOR.get(t) not in MOOD_MARKET_SECTORS), None)
+        if company:
+            per_company[company] = per_company.get(company, 0) + 1
+            if per_company[company] > MOOD_PER_COMPANY:
+                continue
+        kept.append(item)
+    return kept
+
+
 def mood_index(items: list, minimum: int = MIN_MOOD_ITEMS):
     """0-100 from the sentiment of market-signal headlines (macro context is
-    left out, like everywhere on the site): positive +1, negative -1,
-    neutral 0, each weighted by 1 + importance/50 so that big stories count
-    more. 50 is neutral. None when there are too few headlines."""
-    signal = [i for i in items if (i.get("content_type") or "market_signal") == "market_signal"]
+    left out, like everywhere on the site; mood_signal filters them):
+    positive +1, negative -1, neutral 0, each weighted by 1 + importance/50 so
+    that big stories count more. 50 is neutral. None when there are too few
+    headlines."""
+    signal = mood_signal(items)
     if len(signal) < minimum:
         return None
     total = score = 0.0
@@ -415,7 +451,7 @@ def mood_page(history: list, window: list, now: datetime) -> tuple:
         gauge = f"""<section class="stats">
   <div class="panel stat mood-now"><span class="stat-label">Latest · {fmt_short_day(date.fromisoformat(today["date"]))}</span><strong>{today["value"]}<small>/100</small></strong><span class="mood-label">{esc(today["label"])}</span><small>{change}</small></div>
   <div class="panel stat"><span class="stat-label">7-day average</span><strong>{today["avg7"]:g}</strong><small>{esc(mood_label(round(today["avg7"])))}</small></div>
-  <div class="panel stat"><span class="stat-label">Based on</span><strong>{today["headlines"]}</strong><small>market headlines that day</small></div>
+  <div class="panel stat"><span class="stat-label">Based on</span><strong>{today["headlines"]}</strong><small>market headlines {esc(today.get("window") or "that day")}</small></div>
 </section>"""
         title = f"Stock market mood today: {today['value']}/100, {today['label'].lower()} | Pulsarium Mood Index"
         description = (f"The Pulsarium Mood Index reads the sentiment of the day's stock market headlines: "
@@ -446,7 +482,7 @@ def mood_page(history: list, window: list, now: datetime) -> tuple:
 {FIT_ROWS_SCRIPT}
 <section class="block method">
   <h2>How the index is made</h2>
-  <p>Every headline Pulsarium collects from public sources is scored as positive, negative or neutral and given an importance from 0 to 100 (by a language model when available, otherwise by keyword rules). Macro and geopolitical context without a direct market target is left out. For each day, positive headlines count +1 and negative −1, each weighted by 1 + importance/50, and the weighted average is mapped to 0–100. Days with fewer than {MIN_MOOD_ITEMS} market headlines get no value.</p>
+  <p>Every headline Pulsarium collects from public sources is scored as positive, negative or neutral and given an importance from 0 to 100 (by a language model when available, otherwise by keyword rules). Macro and geopolitical context without a direct market target is left out, and so are sales pitches ("3 stocks to buy now"). The same story counts once, and one company counts with at most {MOOD_PER_COMPANY} headlines, so a single company's news can't swing the day; market-wide news (indices, rates, crypto) is never capped. Positive headlines count +1 and negative −1, each weighted by 1 + importance/50, and the weighted average is mapped to 0–100. Past days use the whole day; the latest value uses the last {MOOD_NOW_HOURS} hours, so it follows the day as it turns. Days with fewer than {MIN_MOOD_ITEMS} market headlines get no value.</p>
   <p>The index describes the tone of news coverage, not prices, and is not investment advice. The full history is available as <a href="/mood/history.json">JSON</a>; please link to this page if you use it.</p>
 </section>
 """
@@ -1217,6 +1253,17 @@ def build(archive: Archive, now: datetime, full: bool = False) -> list:
     days = archive.all_days()
     per_day = {day: news_only(archive.load(day).values()) for day in days}
     history = mood_history(days, per_day)
+    # Today's value is the last MOOD_NOW_HOURS hours, not the calendar day, so
+    # the index follows the day as it turns (a morning of good news no longer
+    # outweighs a falling afternoon). Past days keep their whole-day value.
+    recent = [i for day in days[-2:] for i in tag_items(per_day[day])
+              if i["_time"] >= now - timedelta(hours=MOOD_NOW_HOURS)]
+    current = mood_index(recent)
+    if current and history and history[-1]["date"] == days[-1]:
+        history[-1].update(current, window=f"in the last {MOOD_NOW_HOURS} hours")
+        start = date.fromisoformat(history[-1]["date"]) - timedelta(days=6)
+        week = [p["value"] for p in history if date.fromisoformat(p["date"]) >= start]
+        history[-1]["avg7"] = round(sum(week) / len(week), 1)
     mood_by_day = {p["date"]: p for p in history}
     for n, day in enumerate(days):
         day_path = f"/news/daily/{day}/"
