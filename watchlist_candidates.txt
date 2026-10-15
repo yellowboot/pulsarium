@@ -6,28 +6,37 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 15.10.2026 19:17
-22 of 80 news items unmatched this run
+Generated: 15.10.2026 20:37
+31 of 80 news items unmatched this run
 
-- [CNBC] Here's our monthly update on our 32 stocks, including 2 more names to buy
-- [Investing.com] AIR Global sets first-ever dividend, $100M buyback amid business, cash strength
-- [Yahoo Finance] First Merchants Corporation Announces Cash Dividend on Its Preferred Stock
-- [Nasdaq] Improving Global Cocoa Demand Boosts Prices
-- [Nasdaq] Wheat Fading Early Gains for Midday Weakness
-- [Nasdaq] Beneficial Growing Conditions in Brazil and Vietnam Weigh on Coffee Prices
-- [Investing.com] Nasdaq cuts losses of over 1% as U.S. bond rally offsets tech softness, hot PPI
-- [Nasdaq] Hogs Showing a Modest Thursday Bounce
-- [Nasdaq] Corn Showing Midday Weakness, as Brazil Production Gets a CONAB Hike
+- [Investing.com] Canada stocks higher at close of trade; S&P/TSX Composite up 1.55%
+- [Investing.com] Brazil stocks lower at close of trade; Bovespa down 1.06%
+- [CNBC] Porsche reveals Mission S concept car that previews new design identity
+- [Investing.com] Varonis stock climbs on $6.3 billion Proofpoint deal
+- [Yahoo Finance] How major US stock indexes fared Thursday 10/15/2026
+- [Yahoo Finance] Chip stocks tumble; Are investors just repositioning?
+- [Investing.com] TSX surges as lower bond yields fuel rebound, index climbs back above 36,000
+- [Yahoo Finance] The RMR Group Fiscal Fourth Quarter 2026 Conference Call Scheduled for Friday, November 13th
+- [Investing.com] Nasdaq ends higher in big rebound as bond rally offsets tech softness, hot PPI
+- [Nasdaq] Sugar Prices Climb on Weather Threats to Global Output
+- [Nasdaq] Cocoa Prices Rise as Chocolate Demand Improves
+- [Nasdaq] Coffee Prices Slide on Optimism Over Global Coffee Crops
 - [Nasdaq] Soybeans Fading Another Round of Chinese Purchases, as Crush Falls in September
-- [Nasdaq] Cattle Rallying on Thursday
-- [Nasdaq] Cotton Fading Off Outside Support for Midday Weakness
-- [Nasdaq] Soybean Weakness Continuing on Thursday
-- [Investing.com] Semtech options activity: call buyers dominate as stock drops 12%
-- [Investing.com] Nasdaq resolves network disruption that caused data gaps, source says
+- [Nasdaq] Wheat Fading Early Gains for Midday Weakness
+- [Nasdaq] Weather Risks Underpin Sugar Prices
+- [Nasdaq] Wheat Showing Green on the Screen Early on Thursday
+- [Yahoo Finance] Producer Price Inflation Was Much Hotter Than Expected. Stocks Still Climbed.
+- [Yahoo Finance] Why International Paper Rallied Today
+- [Yahoo Finance] Frazier Life Sciences Acquisition Corp. II Announces Completion of $75,000,000 Initial Public Offering
+- [Yahoo Finance] Nasdaq Climbs Out of 1.4% Hole in Biggest Comeback Since April
+- [Yahoo Finance] Sector Update: Energy Stocks Decline Late Afternoon
+- [CNBC] Brian Sullivan: Why the 'real' price of oil is likely $30-$40 higher than where it is now
+- [CNBC] Trump administration advances plan for peptide drugs favored by RFK Jr.
+- [CNBC] Here's our monthly update on our 32 stocks, including 2 more names to buy
 - [Mining.com] Tech giants come knocking for a piece of Anglo American as copper scarcity bites, Wanblad tells FT
 - [CNBC] Anduril CEO defends Trump administration contracts: 'We've done incredibly well under Biden'
-- [CNBC] Here are the stocks reporting next week that have a history of earnings beats and big share gains
 - [CNBC] International Energy Agency to release more than 20 million barrels of diesel as soon as possible
 - [CNBC] JetBlue’s new domestic first class, BlueFirst, is now on sale
 - [Mining.com] Copper price falls for third day as US inflation shock, easing Chile strike risk spur selloff
 - [CNBC] Economists: Hot PPI shows Fed's work is not done
+- [OilPrice.com] Ukraine Strikes Major Russian Oil Refinery
