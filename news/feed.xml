@@ -6,147 +6,21 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Thu, 15 Oct 2026 20:37:23 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 15 Oct 2026 21:37:19 +0000</lastBuildDate>
   <item>
-    <title>Nvidia and Cisco confirm multimillion-dollar donations to Trump&#x27;s White House ballroom</title>
-    <link>https://www.cnbc.com/2026/10/15/trump-ballroom-nvidia-cisco-donations.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/trump-ballroom-nvidia-cisco-donations.html</guid>
-    <pubDate>Thu, 15 Oct 2026 20:31:48 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Big Tech gave millions to Trump&#x27;s White House ballroom, documents show</description>
-    <category>NVDA</category><category>CSCO</category>
-  </item>
-  <item>
-    <title>Why is JB Hunt Transport stock sliding today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-jb-hunt-transport-stock-sliding-today-93CH-4952641</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-jb-hunt-transport-stock-sliding-today-93CH-4952641</guid>
-    <pubDate>Thu, 15 Oct 2026 20:31:28 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>JBHT</category>
-  </item>
-  <item>
-    <title>U.S. stocks higher at close of trade; Dow Jones Industrial Average up 1.08%</title>
-    <link>https://www.investing.com/news/stock-market-news/us-stocks-higher-at-close-of-trade-dow-jones-industrial-average-up-108-4952637</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/us-stocks-higher-at-close-of-trade-dow-jones-industrial-average-up-108-4952637</guid>
-    <pubDate>Thu, 15 Oct 2026 20:31:03 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>DJI</category>
-  </item>
-  <item>
-    <title>Canada stocks higher at close of trade; S&amp;P/TSX Composite up 1.55%</title>
-    <link>https://www.investing.com/news/stock-market-news/canada-stocks-higher-at-close-of-trade-sptsx-composite-up-155-4952636</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/canada-stocks-higher-at-close-of-trade-sptsx-composite-up-155-4952636</guid>
-    <pubDate>Thu, 15 Oct 2026 20:30:33 +0000</pubDate>
+    <title>Why is Cohen &amp; Steers stock surging today?</title>
+    <link>https://www.investing.com/news/stock-market-news/why-is-cohen--steers-stock-surging-today-93CH-4952730</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-cohen--steers-stock-surging-today-93CH-4952730</guid>
+    <pubDate>Thu, 15 Oct 2026 21:33:45 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
     <description></description>
     
   </item>
   <item>
-    <title>Retirees can take these steps to shore up income as yields rise and some dividend-paying sectors slip</title>
-    <link>https://www.cnbc.com/2026/10/15/retirees-can-take-these-steps-to-shore-up-income-as-yields-rise.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/retirees-can-take-these-steps-to-shore-up-income-as-yields-rise.html</guid>
-    <pubDate>Thu, 15 Oct 2026 20:30:23 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>A spike in Treasury yields has retirees facing price declines from their bonds, as well as in some of their favorite dividend-paying sectors.</description>
-    <category>UST10Y</category>
-  </item>
-  <item>
-    <title>Brazil stocks lower at close of trade; Bovespa down 1.06%</title>
-    <link>https://www.investing.com/news/stock-market-news/brazil-stocks-lower-at-close-of-trade-bovespa-down-106-4952628</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/brazil-stocks-lower-at-close-of-trade-bovespa-down-106-4952628</guid>
-    <pubDate>Thu, 15 Oct 2026 20:30:05 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Porsche reveals Mission S concept car that previews new design identity</title>
-    <link>https://www.cnbc.com/2026/10/15/porsche-mission-s-concept-car.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/porsche-mission-s-concept-car.html</guid>
-    <pubDate>Thu, 15 Oct 2026 20:30:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Porsche revealed a concept car called Mission S as part of a turnaround plan that includes efforts to boost profits through higher-end products and lower sales.</description>
-    
-  </item>
-  <item>
-    <title>Big pharma stocks close near all-time highs as tech selloff pushes investors toward safer bets</title>
-    <link>https://www.marketwatch.com/story/big-pharma-stocks-near-all-time-highs-as-tech-selloff-pushes-investors-toward-safer-bets-0a5d5d07?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/big-pharma-stocks-near-all-time-highs-as-tech-selloff-pushes-investors-toward-safer-bets-0a5d5d07?mod=mw_rss_topstories</guid>
-    <pubDate>Thu, 15 Oct 2026 20:29:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>Shares of AbbVie, Eli Lilly and Gilead Sciences closed near record highs</description>
-    <category>LLY</category><category>GILD</category><category>ABBV</category>
-  </item>
-  <item>
-    <title>Varonis stock climbs on $6.3 billion Proofpoint deal</title>
-    <link>https://www.investing.com/news/stock-market-news/varonis-stock-climbs-on-63-billion-proofpoint-deal-4952619</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/varonis-stock-climbs-on-63-billion-proofpoint-deal-4952619</guid>
-    <pubDate>Thu, 15 Oct 2026 20:24:25 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>How major US stock indexes fared Thursday 10/15/2026</title>
-    <link>https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-202216834.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-202216834.html?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:22:16 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>stock indexes muscled higher following a shaky day of trading.3% Thursday after erasing an early-morning loss and pulled closer to its all-time high set last week.</description>
-    
-  </item>
-  <item>
-    <title>Diamondback, Expand Energy Named Top Picks at Scotiabank</title>
-    <link>https://www.investing.com/news/stock-market-news/diamondback-expand-energy-named-top-picks-at-scotiabank-4952614</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/diamondback-expand-energy-named-top-picks-at-scotiabank-4952614</guid>
-    <pubDate>Thu, 15 Oct 2026 20:22:09 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>BNS</category><category>EXE</category>
-  </item>
-  <item>
-    <title>Chip stocks tumble; Are investors just repositioning?</title>
-    <link>https://finance.yahoo.com/video/chip-stocks-tumble-are-investors-just-repositioning-202107103.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/video/chip-stocks-tumble-are-investors-just-repositioning-202107103.html?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:21:07 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Rob Haworth, U.S. Bank Senior Investment Strategist, joins Market Domination Overtime to discuss the sell-off in semiconductor stocks and why the pullback could present a buying opportunity. Haworth suggests investors who have been…</description>
-    
-  </item>
-  <item>
-    <title>TSX surges as lower bond yields fuel rebound, index climbs back above 36,000</title>
-    <link>https://www.investing.com/news/stock-market-news/tsx-futures-inch-higher-amid-ai-jitters-ratehike-worries-4951081</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/tsx-futures-inch-higher-amid-ai-jitters-ratehike-worries-4951081</guid>
-    <pubDate>Thu, 15 Oct 2026 20:20:08 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>CoreWeave Contract Structure Limits Financing Risk, Capacity Adds Support Growth, BofA Says</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/coreweave-contract-structure-limits-financing-201944244.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/coreweave-contract-structure-limits-financing-201944244.html?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:19:44 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>CoreWeave&#x27;s (CRWV) ability to bring active power online at scale, combined with higher pricing from</description>
-    <category>CRWV</category>
-  </item>
-  <item>
-    <title>KFC picks Coca-Cola as US soda supplier, ditches longtime partner PepsiCo</title>
-    <link>https://www.investing.com/news/stock-market-news/kfc-to-sign-cocacola-on-as-beverage-partner-ditching-pepsico-wsj-reports-4952509</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/kfc-to-sign-cocacola-on-as-beverage-partner-ditching-pepsico-wsj-reports-4952509</guid>
-    <pubDate>Thu, 15 Oct 2026 20:18:55 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>KO</category><category>PEP</category>
-  </item>
-  <item>
-    <title>UK’s Streeting says he and Hegseth welcomed Starlink restoration in Ukraine</title>
-    <link>https://www.investing.com/news/stock-market-news/uks-streeting-says-he-and-hegseth-welcomed-starlink-restoration-in-ukraine-4952602</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/uks-streeting-says-he-and-hegseth-welcomed-starlink-restoration-in-ukraine-4952602</guid>
-    <pubDate>Thu, 15 Oct 2026 20:18:31 +0000</pubDate>
+    <title>Why is Varonis stock rallying today?</title>
+    <link>https://www.investing.com/news/stock-market-news/why-is-varonis-stock-rallying-today-93CH-4952729</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-varonis-stock-rallying-today-93CH-4952729</guid>
+    <pubDate>Thu, 15 Oct 2026 21:33:31 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
     <description></description>
     
@@ -155,307 +29,433 @@
     <title>CoreWeave credit default swaps hit distress levels as investors sour on AI debt</title>
     <link>https://www.cnbc.com/2026/10/15/coreweave-credit-default-swaps-hit-distress-levels-as-investors-sour-on-ai-debt.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/coreweave-credit-default-swaps-hit-distress-levels-as-investors-sour-on-ai-debt.html</guid>
-    <pubDate>Thu, 15 Oct 2026 20:18:02 +0000</pubDate>
+    <pubDate>Thu, 15 Oct 2026 21:33:24 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>Signs of distressed deepened in CoreWeave on Thursday.</description>
     <category>CRWV</category>
   </item>
   <item>
-    <title>Amazon’s Reinvestment Model Is Dave Ellison’s Market Playbook</title>
-    <link>https://cdn.jwplayer.com/previews/QzAR99SC?.tsrc=rss</link>
-    <guid isPermaLink="false">https://cdn.jwplayer.com/previews/QzAR99SC?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:17:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Hennessy Funds portfolio manager Dave Ellison sees healthy bank credit as support for the economy, but his stock-selection test centers on whether companies are spending profits to build their next business.</description>
-    <category>AMZN</category>
+    <title>Why is Alcoa stock climbing today?</title>
+    <link>https://www.investing.com/news/stock-market-news/why-is-alcoa-stock-climbing-today-93CH-4952728</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-alcoa-stock-climbing-today-93CH-4952728</guid>
+    <pubDate>Thu, 15 Oct 2026 21:33:17 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>AA</category>
   </item>
   <item>
-    <title>The RMR Group Fiscal Fourth Quarter 2026 Conference Call Scheduled for Friday, November 13th</title>
-    <link>https://finance.yahoo.com/real-estate/articles/rmr-group-fiscal-fourth-quarter-201500883.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/real-estate/articles/rmr-group-fiscal-fourth-quarter-201500883.html?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:15:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>NEWTON, Mass., October 15, 2026--The RMR Group (Nasdaq: RMR) today announced that it will issue a press release containing its fiscal fourth quarter 2026 financial results after the Nasdaq closes on Thursday, November 12, 2026. On…</description>
-    
+    <title>Volvo Cars expands automated driving partnership with Nvidia</title>
+    <link>https://www.investing.com/news/stock-market-news/volvo-cars-expands-automated-driving-partnership-with-nvidia-4952421</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/volvo-cars-expands-automated-driving-partnership-with-nvidia-4952421</guid>
+    <pubDate>Thu, 15 Oct 2026 21:30:22 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>NVDA</category>
   </item>
   <item>
-    <title>Nasdaq ends higher in big rebound as bond rally offsets tech softness, hot PPI</title>
-    <link>https://www.investing.com/news/stock-market-news/us-stock-futures-fall-as-hot-inflation-revives-fed-hike-concerns-4950317</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/us-stock-futures-fall-as-hot-inflation-revives-fed-hike-concerns-4950317</guid>
-    <pubDate>Thu, 15 Oct 2026 20:12:30 +0000</pubDate>
+    <title>Mexico stocks higher at close of trade; S&amp;P/BMV IPC up 1.31%</title>
+    <link>https://www.investing.com/news/stock-market-news/mexico-stocks-higher-at-close-of-trade-spbmv-ipc-up-131-4952719</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/mexico-stocks-higher-at-close-of-trade-spbmv-ipc-up-131-4952719</guid>
+    <pubDate>Thu, 15 Oct 2026 21:30:04 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
     <description></description>
     
   </item>
   <item>
-    <title>Sugar Prices Climb on Weather Threats to Global Output</title>
-    <link>https://www.nasdaq.com/articles/sugar-prices-climb-weather-threats-global-output</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/sugar-prices-climb-weather-threats-global-output</guid>
-    <pubDate>Thu, 15 Oct 2026 20:11:29 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>March NY world sugar #11 (SBH27 ) closed up +0.29 (+1.39%) on Thursday, and December London ICE white sugar #5 (SWZ26 ) closed up +6.20 (+1.12%). Sugar prices moved higher on Thursday and are just below recent significant highs. Sugar…</description>
-    
-  </item>
-  <item>
-    <title>Wheat Fading Early Gains for Midday Weakness</title>
-    <link>https://www.nasdaq.com/articles/wheat-fading-early-gains-midday-weakness</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-fading-early-gains-midday-weakness</guid>
-    <pubDate>Thu, 15 Oct 2026 20:11:28 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The wheat complex is fading off the early morning gains on Thursday. Chicago SRW contracts are steady to a penny higher so far. KC HRW futures are fractionally in the red at midday. MPLS spring wheat is showing fractional losses on the…</description>
-    
-  </item>
-  <item>
-    <title>Soybeans Fading Another Round of Chinese Purchases, as Crush Falls in September</title>
-    <link>https://www.nasdaq.com/articles/soybeans-fading-another-round-chinese-purchases-crush-falls-september</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/soybeans-fading-another-round-chinese-purchases-crush-falls-september</guid>
-    <pubDate>Thu, 15 Oct 2026 20:11:28 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Soybeans are down 10 to 12 cents across the front months at midday, as futures fade Chinese purchases and sell a bearish NOPA report. The cmdtyView national average Cash Bean price is down 11 1/4 cents at $12.07 1/2. Soymeal futures are…</description>
-    
-  </item>
-  <item>
-    <title>Cocoa Prices Rise as Chocolate Demand Improves</title>
-    <link>https://www.nasdaq.com/articles/cocoa-prices-rise-chocolate-demand-improves</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cocoa-prices-rise-chocolate-demand-improves</guid>
-    <pubDate>Thu, 15 Oct 2026 20:11:28 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>December ICE NY cocoa (CCZ26 ) closed up +96 (+1.67%) on Thursday, and December ICE London cocoa #7 (CAZ26 ) closed up +45 (+1.04%). Cocoa prices settled higher on Thursday amid signs of stronger global cocoa demand. The Cocoa…</description>
-    
-  </item>
-  <item>
-    <title>Coffee Prices Slide on Optimism Over Global Coffee Crops</title>
-    <link>https://www.nasdaq.com/articles/coffee-prices-slide-optimism-over-global-coffee-crops</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/coffee-prices-slide-optimism-over-global-coffee-crops</guid>
-    <pubDate>Thu, 15 Oct 2026 20:11:28 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>December arabica coffee (KCZ26 ) closed down -3.25 (-1.09%) on Thursday, and November ICE robusta coffee (RMX26 ) closed down -108 (-3.10%). Coffee prices fell sharply on Thursday, with robusta posting a 2-week low. Beneficial growing…</description>
-    
-  </item>
-  <item>
-    <title>Weather Risks Underpin Sugar Prices</title>
-    <link>https://www.nasdaq.com/articles/weather-risks-underpin-sugar-prices</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/weather-risks-underpin-sugar-prices</guid>
-    <pubDate>Thu, 15 Oct 2026 20:11:28 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>March NY world sugar #11 (SBH27 ) is up +0.23 (+1.10%) today, and December London ICE white sugar #5 (SWZ26 ) is up +4.40 (+0.79%). Sugar prices are climbing today and remain just below recent significant highs. Sugar prices have…</description>
-    
-  </item>
-  <item>
-    <title>Stock Indexes Rebound as Investors Rotate Out of Chip Stocks</title>
-    <link>https://www.nasdaq.com/articles/stock-indexes-rebound-investors-rotate-out-chip-stocks</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/stock-indexes-rebound-investors-rotate-out-chip-stocks</guid>
-    <pubDate>Thu, 15 Oct 2026 20:11:27 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is up by +0.13% today, the Dow Jones Industrial Average ($DOWI ) (DIA ) is up by +1.04%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is down -0.57%. December E-mini S&amp;P futures (ESZ26 ) are up +0158%, and…</description>
-    <category>SPY</category><category>QQQ</category><category>DJI</category>
-  </item>
-  <item>
-    <title>Wheat Showing Green on the Screen Early on Thursday</title>
-    <link>https://www.nasdaq.com/articles/wheat-showing-green-screen-early-thursday</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-showing-green-screen-early-thursday</guid>
-    <pubDate>Thu, 15 Oct 2026 20:11:27 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Wheat is higher across the three exchanges on Thursday. The wheat complex was mixed at the Wednesday close. Chicago SRW contracts were steady to 4 cents higher in the front months, with deferreds slightly lower. Open interest was up…</description>
-    
-  </item>
-  <item>
-    <title>Adobe, HubSpot, Workday, Asana, and Workiva Shares Are Soaring, What You Need To Know</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/adobe-hubspot-workday-asana-workiva-201109529.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/adobe-hubspot-workday-asana-workiva-201109529.html?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:11:09 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>A number of stocks jumped in the afternoon session after software-as-a-service and broader technology equities rebounded as falling Treasury yields attracted dip-buyers back into the market following a sharp, AI-driven sell-off in…</description>
-    <category>ADBE</category><category>UST10Y</category><category>WDAY</category>
-  </item>
-  <item>
-    <title>KFC to switch to Coca-Cola beverages in U.S. restaurants for the first time in decades</title>
-    <link>https://www.cnbc.com/2026/10/15/kfc-coca-cola-pepsi-switch.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/kfc-coca-cola-pepsi-switch.html</guid>
-    <pubDate>Thu, 15 Oct 2026 20:10:20 +0000</pubDate>
+    <title>Trump says &#x27;if Ken Paxton loses&#x27; Texas Senate race, blame Cornyn and Karl Rove</title>
+    <link>https://www.cnbc.com/2026/10/15/trump-paxton-texas-talarico.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/trump-paxton-texas-talarico.html</guid>
+    <pubDate>Thu, 15 Oct 2026 21:28:51 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>KFC is switching from PepsiCo to Coca-Cola as its beverage supplier for U.S. restaurants.</description>
-    <category>KO</category><category>PEP</category>
-  </item>
-  <item>
-    <title>What Would You Have Needed To Notice In GM Stock?</title>
-    <link>https://www.trefis.com/articles/618856/what-would-you-have-needed-to-notice-in-gm-stock/2026-10-15?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.trefis.com/articles/618856/what-would-you-have-needed-to-notice-in-gm-stock/2026-10-15?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:08:40 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>General Motors (GM) stock returned 50.6% in the year to October 14, 2026, outpacing the 17.3% gain for the S&amp;P 500. The shares climbed even as the underlying business failed to grow. Over its latest twelve reported months, GM sold about…</description>
-    <category>GM</category><category>SPY</category>
-  </item>
-  <item>
-    <title>Producer Price Inflation Was Much Hotter Than Expected. Stocks Still Climbed.</title>
-    <link>https://www.ibtimes.com/producer-price-inflation-was-much-hotter-expected-stocks-still-climbed-3808644?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.ibtimes.com/producer-price-inflation-was-much-hotter-expected-stocks-still-climbed-3808644?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:07:25 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Investors rotated out of the tech trade during the session. Odds of a rate hike decreased despite the PPI figure.</description>
-    
-  </item>
-  <item>
-    <title>Google’s $180 Fitbit Edge makes a bet on smartwatch fatigue</title>
-    <link>https://www.thestreet.com/investing/google-fitbit-edge-smartwatch-fatigue?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.thestreet.com/investing/google-fitbit-edge-smartwatch-fatigue?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:07:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Google draws a sharper line between Fitbit and Pixel Watch.</description>
-    <category>GOOGL</category>
-  </item>
-  <item>
-    <title>Why International Paper Rallied Today</title>
-    <link>https://www.fool.com/investing/2026/10/15/why-international-paper-rallied-today/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/15/why-international-paper-rallied-today/?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:05:45 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>International Paper may be closing in on a sale of its struggling European segment.</description>
-    
-  </item>
-  <item>
-    <title>Frazier Life Sciences Acquisition Corp. II Announces Completion of $75,000,000 Initial Public Offering</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/frazier-life-sciences-acquisition-corp-200500615.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/frazier-life-sciences-acquisition-corp-200500615.html?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:05:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>PALO ALTO, Calif., October 15, 2026--Frazier Life Sciences Acquisition Corp. II (the &quot;Company&quot;), a special purpose acquisition company, announced today the closing of its initial public offering of 7,500,000 Class A ordinary shares at a…</description>
-    
-  </item>
-  <item>
-    <title>nCino, Appian, Autodesk, The Trade Desk, and AppLovin Stocks Trade Up, What You Need To Know</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/ncino-appian-autodesk-trade-desk-200309682.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/ncino-appian-autodesk-trade-desk-200309682.html?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:03:09 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>A number of stocks jumped in the afternoon session after software-as-a-service and broader technology equities rebounded as falling Treasury yields attracted dip-buyers back into the market following a sharp, AI-driven sell-off in…</description>
-    <category>UST10Y</category><category>APP</category><category>ADSK</category>
-  </item>
-  <item>
-    <title>Nasdaq Climbs Out of 1.4% Hole in Biggest Comeback Since April</title>
-    <link>https://finance.yahoo.com/m/4740321b-9fd6-3d97-b8b6-fbd6334c078a/nasdaq-climbs-out-of-1.4%25.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/4740321b-9fd6-3d97-b8b6-fbd6334c078a/nasdaq-climbs-out-of-1.4%25.html?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:02:47 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The Nasdaq just staged its biggest comeback since the spring.</description>
-    
-  </item>
-  <item>
-    <title>eBay Jumps 5% to a 52-Week High on a Recycled GameStop Rumor</title>
-    <link>https://app.moby.co/home/news/news-ebay-jumps-5-to-a-52-week-high-on-a-recycled-gamestop-rumor?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</link>
-    <guid isPermaLink="false">https://app.moby.co/home/news/news-ebay-jumps-5-to-a-52-week-high-on-a-recycled-gamestop-rumor?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:02:07 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>GameStop still owns nearly 10% of eBay and still has no new offer</description>
-    <category>EBAY</category>
-  </item>
-  <item>
-    <title>Sector Update: Energy Stocks Decline Late Afternoon</title>
-    <link>https://finance.yahoo.com/energy/articles/sector-energy-stocks-decline-afternoon-200204983.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/energy/articles/sector-energy-stocks-decline-afternoon-200204983.html?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:02:04 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Energy stocks were lower late Thursday afternoon, with the NYSE Energy Sector Index falling 1.4% and</description>
-    
-  </item>
-  <item>
-    <title>Elon Musk Could Announce A Tesla-SpaceX Merger In Coming Weeks: Analyst</title>
-    <link>https://finance.yahoo.com/m/32f1294f-e426-3a99-b8d4-22a5a2a00b41/elon-musk-could-announce-a.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/32f1294f-e426-3a99-b8d4-22a5a2a00b41/elon-musk-could-announce-a.html?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 20:01:40 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>SpaceX and Tesla could announce a merger before Tesla&#x27;s annual meeting, likely scheduled for early December, according to Barclays.</description>
-    <category>TSLA</category><category>SPCX</category>
-  </item>
-  <item>
-    <title>6 Countries Pledge Faster Cargo Transfers on Eurasia-Europe Land Bridge</title>
-    <link>https://oilprice.com/Geopolitics/International/6-Countries-Pledge-Faster-Cargo-Transfers-on-Eurasia-Europe-Land-Bridge.html</link>
-    <guid isPermaLink="false">https://oilprice.com/Geopolitics/International/6-Countries-Pledge-Faster-Cargo-Transfers-on-Eurasia-Europe-Land-Bridge.html</guid>
-    <pubDate>Thu, 15 Oct 2026 20:00:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">OilPrice.com</source>
-    <description>Six states participating in an initiative to improve a Eurasia-to-Europe trade corridor have agreed on measures to reduce transit times at intermodal nodes along the route. Meeting in Tashkent on October 11, railway officials from…</description>
-    
-  </item>
-  <item>
-    <title>Commerce, monday.com, DigitalOcean, Sprinklr, and Fastly Shares Are Soaring and Falling, What You Need To Know</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/commerce-monday-com-digitalocean-sprinklr-195509323.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/commerce-monday-com-digitalocean-sprinklr-195509323.html?.tsrc=rss</guid>
-    <pubDate>Thu, 15 Oct 2026 19:55:09 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>A number of stocks traded in opposite directions in the afternoon session after software-as-a-service and broader technology equities rebounded as falling Treasury yields attracted dip-buyers back into the market following a sharp,…</description>
-    <category>UST10Y</category>
-  </item>
-  <item>
-    <title>Harvard’s endowment jumps 27% in fiscal 2026, lifted by SpaceX as top holding</title>
-    <link>https://www.cnbc.com/2026/10/15/harvards-endowment-jumps-27percent-with-spacex-as-top-holding.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/harvards-endowment-jumps-27percent-with-spacex-as-top-holding.html</guid>
-    <pubDate>Thu, 15 Oct 2026 19:53:49 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The latest 12-month period marked the strongest return for the university&#x27;s fund since 2021.</description>
-    <category>SPCX</category>
-  </item>
-  <item>
-    <title>Brian Sullivan: Why the &#x27;real&#x27; price of oil is likely $30-$40 higher than where it is now</title>
-    <link>https://www.cnbc.com/2026/10/15/brian-sullivan-why-the-real-price-of-oil-is-likely-30-40-higher-than-where-it-is-now.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/brian-sullivan-why-the-real-price-of-oil-is-likely-30-40-higher-than-where-it-is-now.html</guid>
-    <pubDate>Thu, 15 Oct 2026 19:53:29 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Physical oil can cost about $38 a barrel more to deliver, as tanker rates surge.</description>
-    
-  </item>
-  <item>
-    <title>Trump administration advances plan for peptide drugs favored by RFK Jr.</title>
-    <link>https://www.cnbc.com/2026/10/15/peptides-trump-rfk-jr-maha.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/peptides-trump-rfk-jr-maha.html</guid>
-    <pubDate>Thu, 15 Oct 2026 19:36:54 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The proposal was quickly praised online by some Kennedy allies who sell peptides.</description>
-    
-  </item>
-  <item>
-    <title>Defense Business Brief: Wrapping up AUSA</title>
-    <link>https://www.defenseone.com/business/2026/10/defense-business-brief-wrapping-ausa/416628/</link>
-    <guid isPermaLink="false">https://www.defenseone.com/business/2026/10/defense-business-brief-wrapping-ausa/416628/</guid>
-    <pubDate>Thu, 15 Oct 2026 19:31:35 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Defense One</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Some &#x27;classic&#x27; money advice is actually pretty new—and not all of it is worthwhile, says historian</title>
-    <link>https://www.cnbc.com/make-it/2026/10/15/money-advice-history-joseph-moore.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/make-it/2026/10/15/money-advice-history-joseph-moore.html</guid>
-    <pubDate>Thu, 15 Oct 2026 19:30:53 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>A historian explains why housing, investing and budgeting advice has changed over time — and what that can teach you about money today.</description>
-    
-  </item>
-  <item>
-    <title>Ukraine Strikes Major Russian Oil Refinery</title>
-    <link>https://oilprice.com/Latest-Energy-News/World-News/Ukraine-Strikes-Major-Russian-Oil-Refinery.html</link>
-    <guid isPermaLink="false">https://oilprice.com/Latest-Energy-News/World-News/Ukraine-Strikes-Major-Russian-Oil-Refinery.html</guid>
-    <pubDate>Thu, 15 Oct 2026 19:30:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">OilPrice.com</source>
-    <description>It took Ukraine just hours to turn President Volodymyr Zelenskyy’s “we’re done” into a refinery fire. Ukrainian drones struck Russia’s Ryazan refinery on Thursday, ending Kyiv’s brief pause in attacks on Russian energy infrastructure…</description>
+    <description>Polls show GOP Attorney General Ken Paxton trailing Democratic Rep. James Talarico in the Texas Senate race.</description>
     
   </item>
   <item>
     <title>Tesla plans next-generation Roadster reveal after almost a decade of delays</title>
     <link>https://www.cnbc.com/2026/10/15/tesla-roadster-reveal-what-to-know-about-the-delayed-ev.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/tesla-roadster-reveal-what-to-know-about-the-delayed-ev.html</guid>
-    <pubDate>Thu, 15 Oct 2026 19:29:21 +0000</pubDate>
+    <pubDate>Thu, 15 Oct 2026 21:26:05 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>Elon Musk first debuted the Roadster refresh concept in 2017 but Tesla has since missed every targeted delivery date.</description>
     <category>TSLA</category>
   </item>
   <item>
+    <title>Colombia stocks lower at close of trade; COLCAP down 0.07%</title>
+    <link>https://www.investing.com/news/stock-market-news/colombia-stocks-lower-at-close-of-trade-colcap-down-007-4952714</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/colombia-stocks-lower-at-close-of-trade-colcap-down-007-4952714</guid>
+    <pubDate>Thu, 15 Oct 2026 21:25:03 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Boeing Fell Back Below $200 Ahead of a Strike Deadline. Here&#x27;s Why I&#x27;d Buy the Fear After New Contracts Were Signed</title>
+    <link>https://www.fool.com/investing/2026/10/15/boeing-fell-back-below-200-ahead-of-a-strike-deadl/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/15/boeing-fell-back-below-200-ahead-of-a-strike-deadl/?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:25:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Boeing stock is losing altitude, but the pullback may be a buying opportunity for intrepid investors.</description>
+    <category>BA</category>
+  </item>
+  <item>
+    <title>Smaller-Than-Expected Weekly Storage Build Lifts Nat-Gas Prices</title>
+    <link>https://www.nasdaq.com/articles/smaller-expected-weekly-storage-build-lifts-nat-gas-prices</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/smaller-expected-weekly-storage-build-lifts-nat-gas-prices</guid>
+    <pubDate>Thu, 15 Oct 2026 21:25:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>November Nymex natural gas (NGX26 ) on Thursday closed up +0.038 (+1.19%). Nat-gas prices settled higher on Thursday after weekly US nat-gas storage levels rose less than expected. The EIA reported Thursday that nat-gas inventories rose…</description>
+    
+  </item>
+  <item>
+    <title>Coffee Prices Slide on Optimism Over Global Coffee Crops</title>
+    <link>https://www.nasdaq.com/articles/coffee-prices-slide-optimism-over-global-coffee-crops</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/coffee-prices-slide-optimism-over-global-coffee-crops</guid>
+    <pubDate>Thu, 15 Oct 2026 21:24:59 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>December arabica coffee (KCZ26 ) closed down -3.25 (-1.09%) on Thursday, and November ICE robusta coffee (RMX26 ) closed down -108 (-3.10%). Coffee prices fell sharply on Thursday, with robusta posting a 2-week low. Beneficial growing…</description>
+    
+  </item>
+  <item>
+    <title>Update: US Equity Indexes Rise as Technology Partially Recovers After Fed Tightening Bets Slump Amid Surging Producer Prices</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-rise-technology-212459361.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-rise-technology-212459361.html?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:24:59 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>(Updates with index/price moves, macroeconomic/CME data, and company news from the first paragraph.)</description>
+    
+  </item>
+  <item>
     <title>U.S. sues California in fight over checking citizenship of mail voters</title>
     <link>https://www.cnbc.com/2026/10/15/california-mail-ballots-voting-lawsuit.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/california-mail-ballots-voting-lawsuit.html</guid>
-    <pubDate>Thu, 15 Oct 2026 19:26:13 +0000</pubDate>
+    <pubDate>Thu, 15 Oct 2026 21:24:57 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>The lawsuit by the Trump administration comes less than a month before the midterm election that will determine which party controls both chambers of Congress.</description>
     
+  </item>
+  <item>
+    <title>Meta releases open-weight Muse Spark model for coding, agentic tasks</title>
+    <link>https://www.investing.com/news/stock-market-news/meta-releases-openweight-muse-spark-model-for-coding-agentic-tasks-4952713</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/meta-releases-openweight-muse-spark-model-for-coding-agentic-tasks-4952713</guid>
+    <pubDate>Thu, 15 Oct 2026 21:24:26 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>META</category>
+  </item>
+  <item>
+    <title>Stock Market Today, Oct. 15: Iren Stock Recovers, but Still Slides on Concerns Over Neocloud Provider Viability</title>
+    <link>https://www.fool.com/coverage/stock-market-today/2026/10/15/stock-market-today-oct-15-iren-stock-recovers-but-still-slides-on-concerns-over-neocloud-provider-viability/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/coverage/stock-market-today/2026/10/15/stock-market-today-oct-15-iren-stock-recovers-but-still-slides-on-concerns-over-neocloud-provider-viability/?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:23:36 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Today, Oct. 15, 2026, Gartner&#x27;s forecast that 80% of neocloud operators could lose independence by 2030 rattled AI infrastructure investors.</description>
+    
+  </item>
+  <item>
+    <title>Nvidia and other chip stocks face renewed pressure as AI fears swell</title>
+    <link>https://www.marketwatch.com/story/micron-nvidia-and-other-chip-stocks-face-renewed-pressure-as-ai-fears-swell-4e0dc989?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/micron-nvidia-and-other-chip-stocks-face-renewed-pressure-as-ai-fears-swell-4e0dc989?mod=mw_rss_topstories</guid>
+    <pubDate>Thu, 15 Oct 2026 21:23:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>Reported details about Anthropic’s financial progress are adding to concerns about the health of the AI ecosystem.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Don’t ditch tech stocks just yet. Make these moves to take advantage of the latest AI reset.</title>
+    <link>https://www.marketwatch.com/story/dont-ditch-tech-stocks-just-yet-make-these-moves-to-take-advantage-of-the-latest-ai-reset-cb70c7b2?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/dont-ditch-tech-stocks-just-yet-make-these-moves-to-take-advantage-of-the-latest-ai-reset-cb70c7b2?mod=mw_rss_topstories</guid>
+    <pubDate>Thu, 15 Oct 2026 21:21:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>Investors have a ‘love-hate relationship’ with tech stocks now — and experts recommend selectively hunting for bargains while also betting on the major cloud companies.</description>
+    
+  </item>
+  <item>
+    <title>Russia stocks lower at close of trade; MOEX Russia Index down 1.22%</title>
+    <link>https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-down-122-4952710</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-down-122-4952710</guid>
+    <pubDate>Thu, 15 Oct 2026 21:20:03 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Dollar Pressured by Lower T-Note Yields</title>
+    <link>https://www.nasdaq.com/articles/dollar-pressured-lower-t-note-yields</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/dollar-pressured-lower-t-note-yields</guid>
+    <pubDate>Thu, 15 Oct 2026 21:19:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The dollar index (DXY00 ) fell to a 1-week low on Thursday and finished down by -0.49%. The dollar slid on Thursday on weaker T-note yields after the 10-year T-note yield fell to a 3-week low of 5.035%, narrowing the dollar’s…</description>
+    
+  </item>
+  <item>
+    <title>Sugar Prices Climb on Weather Threats to Global Output</title>
+    <link>https://www.nasdaq.com/articles/sugar-prices-climb-weather-threats-global-output</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/sugar-prices-climb-weather-threats-global-output</guid>
+    <pubDate>Thu, 15 Oct 2026 21:19:13 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>March NY world sugar #11 (SBH27 ) closed up +0.29 (+1.39%) on Thursday, and December London ICE white sugar #5 (SWZ26 ) closed up +6.20 (+1.12%). Sugar prices moved higher on Thursday and are just below recent significant highs. Sugar…</description>
+    
+  </item>
+  <item>
+    <title>Crude Prices Jump as Middle East Hostilities Disrupt Global Supplies</title>
+    <link>https://www.nasdaq.com/articles/crude-prices-jump-middle-east-hostilities-disrupt-global-supplies</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/crude-prices-jump-middle-east-hostilities-disrupt-global-supplies</guid>
+    <pubDate>Thu, 15 Oct 2026 21:19:13 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>November WTI crude oil (CLX26 ) closed up +2.88 (+3.03%) on Thursday, and November RBOB gasoline (RBX26 ) closed down -0.793 (-2.43%). Crude oil and gasoline prices settled mixed on Thursday, with crude up sharply at a 3-week high and…</description>
+    
+  </item>
+  <item>
+    <title>CTRI Trading Below Director&#x27;s Recent Buy Price</title>
+    <link>https://www.nasdaq.com/articles/ctri-trading-below-directors-recent-buy-price</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/ctri-trading-below-directors-recent-buy-price</guid>
+    <pubDate>Thu, 15 Oct 2026 21:18:49 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>There&#x27;s an old saying on Wall Street about insider buying: there are many possible reasons to sell a stock, but only one reason to buy. Back on September 18, Centuri Holdings Inc&#x27;s Director, Dustin Demaria, invested $100,204.00 into…</description>
+    
+  </item>
+  <item>
+    <title>Exclusive-Investors temper Anthropic IPO valuation expectations over revenue growth slowdown, sources say</title>
+    <link>https://www.investing.com/news/stock-market-news/exclusiveinvestors-temper-anthropic-ipo-valuation-expectations-over-revenue-growth-slowdown-sources-say-4952698</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/exclusiveinvestors-temper-anthropic-ipo-valuation-expectations-over-revenue-growth-slowdown-sources-say-4952698</guid>
+    <pubDate>Thu, 15 Oct 2026 21:18:40 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Relative Strength Alert For Dillards Capital Trust I</title>
+    <link>https://www.nasdaq.com/articles/relative-strength-alert-dillards-capital-trust-i</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/relative-strength-alert-dillards-capital-trust-i</guid>
+    <pubDate>Thu, 15 Oct 2026 21:17:57 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Legendary investor Warren Buffett advises to be fearful when others are greedy, and be greedy when others are fearful. One way we can try to measure the level of fear in a given stock is through a technical analysis indicator called the…</description>
+    
+  </item>
+  <item>
+    <title>Dow Jones Futures: Techs Fall After Wild, Positive Market Day As Disney, Salesforce Lead New Buys. Watch Out For This.</title>
+    <link>https://finance.yahoo.com/m/2cd5e2a7-a743-35dd-994e-11a2ba3c6d46/dow-jones-futures%3A-techs-fall.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/2cd5e2a7-a743-35dd-994e-11a2ba3c6d46/dow-jones-futures%3A-techs-fall.html?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:17:51 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The S&amp;P 500 and Nasdaq rose at a key level, led by consumer and software stocks like Disney and Salesforce. AI names came off lows.</description>
+    <category>CRM</category><category>DIS</category><category>SPY</category><category>DJI</category>
+  </item>
+  <item>
+    <title>Trimble Takes Over #432 Spot From Invesco</title>
+    <link>https://www.nasdaq.com/articles/trimble-takes-over-432-spot-invesco</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/trimble-takes-over-432-spot-invesco</guid>
+    <pubDate>Thu, 15 Oct 2026 21:17:34 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>In the latest look at the underlying components of the S&amp;P 500 ordered by largest market capitalization, Trimble Inc (Symbol: TRMB) has taken over the #432 spot from Invesco Ltd (Symbol: IVZ), according to The Online Investor. Market…</description>
+    <category>SPY</category>
+  </item>
+  <item>
+    <title>Cisco (CSCO) Backs A New 400G Optical Standard For AI Data Centers</title>
+    <link>https://finance.yahoo.com/technology/ai/articles/cisco-csco-backs-400g-optical-211653476.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/cisco-csco-backs-400g-optical-211653476.html?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:16:53 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Cisco Systems (NasdaqGS:CSCO) and NVIDIA announced a collaboration to introduce next generation 400G optical technology for AI data centers. The partners plan to commercialize a new ultra small form factor pluggable, or USFP, standard…</description>
+    <category>NVDA</category><category>CSCO</category>
+  </item>
+  <item>
+    <title>Update: CoreWeave Execution Outweighs Financing Worries, BofA Says</title>
+    <link>https://finance.yahoo.com/technology/ai/articles/coreweave-execution-outweighs-financing-worries-211401274.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/coreweave-execution-outweighs-financing-worries-211401274.html?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:14:01 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>(Updates to add background in second paragraph, estimates in paragraph five and six and updates head</description>
+    <category>CRWV</category>
+  </item>
+  <item>
+    <title>Soybeans Fading Another Round of Chinese Purchases, as Crush Falls in September</title>
+    <link>https://www.nasdaq.com/articles/soybeans-fading-another-round-chinese-purchases-crush-falls-september</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/soybeans-fading-another-round-chinese-purchases-crush-falls-september</guid>
+    <pubDate>Thu, 15 Oct 2026 21:13:49 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Soybeans are down 10 to 12 cents across the front months at midday, as futures fade Chinese purchases and sell a bearish NOPA report. The cmdtyView national average Cash Bean price is down 11 1/4 cents at $12.07 1/2. Soymeal futures are…</description>
+    
+  </item>
+  <item>
+    <title>Stock Indexes Rebound as Investors Rotate Out of Chip Stocks</title>
+    <link>https://www.nasdaq.com/articles/stock-indexes-rebound-investors-rotate-out-chip-stocks</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/stock-indexes-rebound-investors-rotate-out-chip-stocks</guid>
+    <pubDate>Thu, 15 Oct 2026 21:13:49 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is up by +0.13% today, the Dow Jones Industrial Average ($DOWI ) (DIA ) is up by +1.04%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is down -0.57%. December E-mini S&amp;P futures (ESZ26 ) are up +0158%, and…</description>
+    <category>SPY</category><category>QQQ</category><category>DJI</category>
+  </item>
+  <item>
+    <title>TCGX Acquisition Corp. II Announces Pricing of $100,000,000 Initial Public Offering</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/tcgx-acquisition-corp-ii-announces-211300867.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/tcgx-acquisition-corp-ii-announces-211300867.html?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:13:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>PALO ALTO, Calif., October 15, 2026--TCGX Acquisition Corp. II (the &quot;Company&quot;) announced today that it priced its initial public offering of 10,000,000 Class A ordinary shares at a price of $10.00 per share, for gross proceeds of…</description>
+    
+  </item>
+  <item>
+    <title>Penske Automotive agrees to be taken private by Penske, Mitsui</title>
+    <link>https://www.cnbc.com/2026/10/15/penske-automotive-agrees-to-be-taken-private-by-penske-mitsui.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/penske-automotive-agrees-to-be-taken-private-by-penske-mitsui.html</guid>
+    <pubDate>Thu, 15 Oct 2026 21:08:24 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Penske Automotive will be taken private by its two largest shareholders at a value of $16.3 billion, the company announced Thursday.</description>
+    
+  </item>
+  <item>
+    <title>SITE Centers stock surges on $3 special dividend</title>
+    <link>https://www.investing.com/news/stock-market-news/site-centers-stock-surges-on-3-special-dividend-4952700</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/site-centers-stock-surges-on-3-special-dividend-4952700</guid>
+    <pubDate>Thu, 15 Oct 2026 21:06:56 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Stock Market Today, Oct. 15: Rocket Lab Pushes Neutron Launch to 2027, Stock Falls 7%</title>
+    <link>https://www.fool.com/coverage/stock-market-today/2026/10/15/stock-market-today-oct-15-rocket-lab-pushes-neutron-launch-to-2027-stock-falls-7/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/coverage/stock-market-today/2026/10/15/stock-market-today-oct-15-rocket-lab-pushes-neutron-launch-to-2027-stock-falls-7/?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:04:53 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Shares fell 6.64% as the company delayed its next-generation rocket, shifting investor focus to manufacturing progress and flight cadence, today, Oct. 15, 2026.</description>
+    <category>RKLB</category>
+  </item>
+  <item>
+    <title>KFC to switch to Coca-Cola beverages in U.S. restaurants for the first time in decades</title>
+    <link>https://www.cnbc.com/2026/10/15/kfc-coca-cola-pepsi-switch.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/kfc-coca-cola-pepsi-switch.html</guid>
+    <pubDate>Thu, 15 Oct 2026 21:03:50 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>KFC is switching from PepsiCo to Coca-Cola as its beverage supplier for U.S. restaurants.</description>
+    <category>KO</category><category>PEP</category>
+  </item>
+  <item>
+    <title>SCHD Pays $8,384 More a Year Than SCHG. Over Five Years SCHG Returned $121,800 More</title>
+    <link>https://247wallst.com/investing/etf/2026/10/15/schd-pays-8384-more-a-year-than-schg-over-five-years-schg-returned-121800-more/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/investing/etf/2026/10/15/schd-pays-8384-more-a-year-than-schg-over-five-years-schg-returned-121800-more/?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:03:17 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>SCHD and SCHG split the same $300,000 in opposite directions depending on which measuring stick you pick, and the one most investors grab first may be the wrong one for their situation.</description>
+    
+  </item>
+  <item>
+    <title>CoreWeave’s polarizing stock rebounds as Wall Street squares off about AI spending</title>
+    <link>https://www.marketwatch.com/story/coreweave-investors-are-feeling-spooked-as-the-companys-stock-and-bonds-see-fresh-pressure-ba39a931?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/coreweave-investors-are-feeling-spooked-as-the-companys-stock-and-bonds-see-fresh-pressure-ba39a931?mod=mw_rss_topstories</guid>
+    <pubDate>Thu, 15 Oct 2026 21:03:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>Wall Street’s views on CoreWeave are starkly divisive as investors pay more attention to the financial details of big artificial-intelligence companies.</description>
+    <category>CRWV</category>
+  </item>
+  <item>
+    <title>Is Medtronic Stock A Buy Now That Sales Growth Has Picked Up?</title>
+    <link>https://www.trefis.com/articles/618844/is-medtronic-stock-a-buy-now-that-sales-growth-has-picked-up/2026-10-15?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/articles/618844/is-medtronic-stock-a-buy-now-that-sales-growth-has-picked-up/2026-10-15?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:01:11 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Investors considering Medtronic (MDT) stock face an immediate concern: the shares returned 1.9% over the past year, trailing the 17.3% gain for the S&amp;P 500. Yet Medtronic raised its outlook for the year in September, following higher…</description>
+    <category>SPY</category><category>MDT</category>
+  </item>
+  <item>
+    <title>3 Chip Stocks to Buy Before Big Tech Reports Its Spending Plans</title>
+    <link>https://www.fool.com/investing/2026/10/15/3-chip-stocks-to-buy-before-big-tech-reports-its-spending-plans/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/15/3-chip-stocks-to-buy-before-big-tech-reports-its-spending-plans/?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:01:03 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Four of the largest data center spenders have budgeted over $700 billion for 2026. Microsoft&#x27;s update comes Oct. 28.</description>
+    <category>MSFT</category>
+  </item>
+  <item>
+    <title>The PNC Financial Services Group, Inc. Q3 2026 Earnings Call Summary</title>
+    <link>https://app.moby.co/home/research/tools/earningsCalendar/earnings-the-pnc-financial-services-group-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://app.moby.co/home/research/tools/earningsCalendar/earnings-the-pnc-financial-services-group-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:00:18 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Moby summary of The PNC Financial Services Group, Inc.&#x27;s Q3 2026 earnings call</description>
+    <category>PNC</category>
+  </item>
+  <item>
+    <title>First Horizon Corporation Q3 2026 Earnings Call Summary</title>
+    <link>https://app.moby.co/home/research/tools/earningsCalendar/earnings-first-horizon-corporation-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://app.moby.co/home/research/tools/earningsCalendar/earnings-first-horizon-corporation-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:00:17 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Moby summary of First Horizon Corporation&#x27;s Q3 2026 earnings call</description>
+    
+  </item>
+  <item>
+    <title>Think the iPhone Duo is expensive? Skip Apple&#x27;s insurance plan and 1 mishap could send your real cost soaring</title>
+    <link>https://finance.yahoo.com/technology/articles/think-iphone-duo-expensive-skip-210000823.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/technology/articles/think-iphone-duo-expensive-skip-210000823.html?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:00:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>New insights into Apple’s first foldable device and its potential repair costs pose a threat to another foldable accessory: your wallet.</description>
+    <category>AAPL</category>
+  </item>
+  <item>
+    <title>Alliant Energy Corporation Declares Quarterly Common Stock Dividend</title>
+    <link>https://finance.yahoo.com/energy/articles/alliant-energy-corporation-declares-quarterly-210000780.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/energy/articles/alliant-energy-corporation-declares-quarterly-210000780.html?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 21:00:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>MADISON, Wis., October 15, 2026--The Alliant Energy Corporation (NASDAQ: LNT) Board of Directors today declared a quarterly cash dividend of $0.5350 per share payable on November 16, 2026, to shareowners of record as of the close of…</description>
+    
+  </item>
+  <item>
+    <title>U.S. Nuclear Fuel Independence Edges Closer as Urenco Expansion Hits 75%</title>
+    <link>https://oilprice.com/Alternative-Energy/Nuclear-Power/US-Nuclear-Fuel-Independence-Edges-Closer-as-Urenco-Expansion-Hits-75.html</link>
+    <guid isPermaLink="false">https://oilprice.com/Alternative-Energy/Nuclear-Power/US-Nuclear-Fuel-Independence-Edges-Closer-as-Urenco-Expansion-Hits-75.html</guid>
+    <pubDate>Thu, 15 Oct 2026 21:00:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">OilPrice.com</source>
+    <description>The only commercial-scale uranium enrichment plant in the United States is now three-quarters of the way through its latest expansion, a milestone for the country&#x27;s push to build out a domestic nuclear fuel supply chain. Urenco USA said…</description>
+    
+  </item>
+  <item>
+    <title>Commercial Metals Company Q4 2026 Earnings Call Summary</title>
+    <link>https://app.moby.co/home/research/tools/earningsCalendar/earnings-commercial-metals-company-q4-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://app.moby.co/home/research/tools/earningsCalendar/earnings-commercial-metals-company-q4-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 20:59:42 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Moby summary of Commercial Metals Company&#x27;s Q4 2026 earnings call</description>
+    
+  </item>
+  <item>
+    <title>NVIDIA Is The Foundational AI Company To Own</title>
+    <link>https://cdn.jwplayer.com/previews/CBjDao1Q?.tsrc=rss</link>
+    <guid isPermaLink="false">https://cdn.jwplayer.com/previews/CBjDao1Q?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 20:56:06 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Motley Fool Asset Management&#x27;s Bill Mann sees long-term potential in AI, but says investors should weigh debt, cash-flow timing, and business quality before treating a sell-off as a bargain.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Did The Market Read Vistra Stock Right?</title>
+    <link>https://www.trefis.com/articles/618850/did-the-market-read-vistra-stock-right/2026-10-15?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/articles/618850/did-the-market-read-vistra-stock-right/2026-10-15?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 20:52:31 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Vistra (VST) stock fell 6.5% on Wednesday, October 14, 2026, compared with a 1.1% loss for the S&amp;P 500. The company had not reported results since its August 7 earnings call. The move followed a week of sharp swings in both directions…</description>
+    <category>SPY</category><category>VST</category>
+  </item>
+  <item>
+    <title>Update: Dow Snaps 2-Day Fall as Wall Street Rebounds Despite Inflation Worries</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/dow-snaps-2-day-fall-204819134.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/dow-snaps-2-day-fall-204819134.html?.tsrc=rss</guid>
+    <pubDate>Thu, 15 Oct 2026 20:48:19 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>(Updates with market moves at the end of the day, and other changes, if any.) The Dow Jones Indus</description>
+    <category>DJI</category>
+  </item>
+  <item>
+    <title>Nvidia and Cisco confirm multimillion-dollar donations to Trump&#x27;s White House ballroom</title>
+    <link>https://www.cnbc.com/2026/10/15/trump-ballroom-nvidia-cisco-donations.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/15/trump-ballroom-nvidia-cisco-donations.html</guid>
+    <pubDate>Thu, 15 Oct 2026 20:44:46 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Big Tech gave millions to Trump&#x27;s White House ballroom, documents show</description>
+    <category>NVDA</category><category>CSCO</category>
   </item>
 </channel>
 </rss>
