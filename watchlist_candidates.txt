@@ -6,26 +6,30 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 16.10.2026 20:37
-26 of 80 news items unmatched this run
+Generated: 16.10.2026 21:37
+30 of 80 news items unmatched this run
 
-- [Yahoo Finance] GreenPower Announces Receipt of Letter from NASDAQ
-- [Nasdaq] Sugar Prices Decline on Drier Weather Forecasts for Brazil
-- [Nasdaq] Cotton Posting Modest Gains
-- [Nasdaq] Soybeans Finding Some Buyers at Midday, Still Facing Weaker
-- [Nasdaq] William Blair initiates coverage of IDEAYA Biosciences with Outperform
-- [Yahoo Finance] Energy ETF Investing in Focus: AMLP's 7.7% Dividend or NLR's Nuclear Power Promise?
-- [Investing.com] Nasdaq notches worst week since late June with a 4.5% slide as AI trade suffers
-- [Nasdaq] Cotton Popping Higher on Friday Morning
-- [Investing.com] SoftBank weighs $18 billion acquisition of Allied Universal, Bloomberg News reports
-- [Nasdaq] Macquarie Initiates Coverage of FTAI Aviation at Outperform
-- [Investing.com] Moody’s upgrades CVR Energy to B1 on improved balance sheet and liquidity
-- [Yahoo Finance] Tech stocks tumble as AI debt fears rattle Wall Street
-- [Yahoo Finance] Investors Rotated Out of the AI Trade and Geopolitical Tensions Soared. The Nasdaq Saw Its Worst Week in Months.
-- [Investing.com] Compass sues California listing service in fight over private home marketing
+- [Investing.com] SoftBank weighs $18 billion acquisition of Allied Universal, source says
+- [Investing.com] Colombia stocks lower at close of trade; COLCAP down 0.55%
+- [Investing.com] As AI rally wobbles, stock market’s spotlight turns to earnings
+- [Investing.com] Russia stocks higher at close of trade; MOEX Russia Index up 1.70%
+- [Nasdaq] Crude Oil Prices Surge as Global Supply Risks Multiply
+- [Nasdaq] Warm US Autumn Temps Weigh on Nat-Gas Prices
 - [Nasdaq] Weak North American Cocoa Demand Hammers Prices
+- [Nasdaq] Wheat Bears Pushing Losses into Friday’s Midday
+- [Nasdaq] Macquarie Initiates Coverage of Kratos Defense & Security Solutions at Outperform
+- [Yahoo Finance] Update: Nasdaq Falls to End Four-Week Winning Streak Amid Tech Sell-Off
+- [Yahoo Finance] Chip Stocks Continue Downward Streak, 'Pricing In A Crash'
+- [Yahoo Finance] Stocks struggle to bounce back from AI angst-fueled rout
+- [Investing.com] Sound Inpatient nears $1 billion refinancing with existing lenders - Bloomberg
+- [Yahoo Finance] Ladder Capital Corp Q3 2026 Earnings Call Summary
 - [Nasdaq] Global Weather Risks Push Coffee Prices Sharply Higher
-- [Yahoo Finance] 4DMT Announces New Employment Inducement Grants
+- [Nasdaq] Soybeans Finding Some Buyers at Midday, Still Facing Weaker
+- [Nasdaq] Cocoa Prices Retreat as North American Cocoa Demand Unexpectedly Falters
+- [Nasdaq] Dollar Pressured as Fed Chair Powell Refrains from Forward Guidance
+- [Nasdaq] Cotton Popping Higher on Friday Morning
+- [Yahoo Finance] Update: US Equity Indexes Retreat Amid Rotation Out of High-Growth Sectors, Surge in Crude Oil
+- [Investing.com] Celanese stock falls after raising LCP prices globally
 - [CNBC] Brent oil touches $110 as Iran escalates Hormuz attacks, Ukraine vows to hit Russian refineries
 - [CNBC] Wall Street's fear gauge is ripping. Traders see it going even higher
 - [CNBC] NBA tightens betting rules, develops AI to flag suspicious wagers
