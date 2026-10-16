@@ -453,10 +453,17 @@
   },
   {
    "date": "2026-10-15",
-   "value": 53,
+   "value": 47,
    "label": "Neutral",
-   "headlines": 238,
-   "avg7": 56.4,
+   "headlines": 303,
+   "avg7": 55.6
+  },
+  {
+   "date": "2026-10-16",
+   "value": 58,
+   "label": "Leaning optimistic",
+   "headlines": 144,
+   "avg7": 55.3,
    "window": "in the last 12 hours"
   }
  ]
