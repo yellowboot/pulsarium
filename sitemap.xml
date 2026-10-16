@@ -1085,6 +1085,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/msci/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/msft/</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
@@ -1561,7 +1566,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/ual/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1641,7 +1646,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/xom/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
