@@ -306,7 +306,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/c/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -940,6 +940,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/jbht/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/jbl/</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
@@ -1011,7 +1016,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/ma/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1110,6 +1115,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/ni/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/nke/</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
@@ -1166,7 +1176,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/opec/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1291,7 +1301,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/airlines-travel/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1492,6 +1502,11 @@
   <url>
     <loc>https://pulsarium.finance/news/t/</loc>
     <lastmod>2026-10-14</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/tfc/</loc>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
