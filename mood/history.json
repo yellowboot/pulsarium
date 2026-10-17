@@ -460,17 +460,17 @@
   },
   {
    "date": "2026-10-16",
-   "value": 54,
+   "value": 53,
    "label": "Neutral",
    "headlines": 300,
-   "avg7": 54.7
+   "avg7": 54.6
   },
   {
    "date": "2026-10-17",
-   "value": 48,
+   "value": 52,
    "label": "Neutral",
-   "headlines": 181,
-   "avg7": 53.3,
+   "headlines": 37,
+   "avg7": 53.7,
    "window": "in the last 12 hours"
   }
  ]

@@ -6,26 +6,30 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 17.10.2026 03:37
-20 of 80 news items unmatched this run
+Generated: 17.10.2026 15:17
+24 of 80 news items unmatched this run
 
-- [Investing.com] Jio’s $3.2 billion IPO tests investor appetite as Ambani legacy faces scrutiny
-- [Nasdaq] Cattle Rally into the Weekend, as Cash Firms
-- [Nasdaq] Wheat Weakness Extends into the Weekend
-- [Nasdaq] Hog Bulls Find Footing on Friday, as Pork Sees Strength
+- [CoinDesk] Citrini sees a tokenization boom. The harder question is who profits
+- [Investing.com] DeepSeek releases AI model update, opens search APIs to all users
+- [Yahoo Finance] September Inflation Came In at 3.9%, Helping to Set Social Security's 2027 Cost-of-Living Adjustment (COLA)
+- [Yahoo Finance] Which company has the world’s highest earnings? The answer may surprise you
+- [Yahoo Finance] The Nasdaq-100's 6 Best Stocks This Year, and Whether They Can Keep Going
+- [MarketWatch] Silver’s recent 50% drop from a record high hints that an economic slowdown looms
+- [Investing.com] Chip index SOX posts longest losing streak since 2008 as AI worries deepen
+- [CoinDesk] Banks could slow stablecoin growth by paying savers more, BIS paper finds
+- [Nasdaq] Raymond James Upgrades Greif to Outperform from Market Perform
+- [Investing.com] Citi sees resilient demand for Chinese AI IPOs despite valuation concerns
 - [Nasdaq] Corn Falls on Friday as Spec Longs Continue Exit
-- [Nasdaq] Scotiabank Initiates Coverage of SM Energy at Sector Perform
+- [Nasdaq] Wheat Weakness Extends into the Weekend
 - [Nasdaq] Cotton Closes the Week with Mixed Trade
 - [Nasdaq] Soybeans Slip Lower into the Weekend as Export Buying Continues
 - [Nasdaq] Sugar Prices Decline on Drier Weather Forecasts for Brazil
+- [Nasdaq] Cattle Rally into the Weekend, as Cash Firms
+- [Nasdaq] Hog Bulls Find Footing on Friday, as Pork Sees Strength
+- [Nasdaq] Baird Upgrades Zions Bancorporation, National Association - Preferred Stock to Outperform from Neutral
+- [Investing.com] Jio’s $3.2 billion IPO tests investor appetite as Ambani legacy faces scrutiny
+- [Nasdaq] Scotiabank Initiates Coverage of SM Energy at Sector Perform
 - [Nasdaq] Needham Initiates Coverage of Urban Outfitters with Buy Rating
-- [Nasdaq] William Blair Initiates Coverage of Immunome at Outperform
-- [Investing.com] Anthropic signs lease for first Canadian data center
 - [Mining.com] Buffalo clears potash permit hurdle in Saskatchewan
 - [MarketWatch] Nowhere to hide: Tech selloff hits software and chip stocks alike
-- [Investing.com] LA restaurant group used $60,000 Dodgers bet to hedge playoff risk, Kalshi says
-- [MarketWatch] Could an Anthropic IPO put your 401(k) at risk? The AI safety debate hits a new dimension.
-- [Investing.com] Novavax shareholder Shah Capital to step back from activist role
-- [CNBC] Brent oil touches $110 as Iran escalates Hormuz attacks, Ukraine vows to hit Russian refineries
-- [CNBC] Wall Street's fear gauge is ripping. Traders see it going even higher
-- [CNBC] NBA tightens betting rules, develops AI to flag suspicious wagers
+- [CNBC] Nasdaq slides 2% Friday to post worst week since June, pressured by AI sell-off and oil prices: Live updates
