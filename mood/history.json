@@ -476,15 +476,15 @@
    "date": "2026-10-18",
    "value": 46,
    "label": "Neutral",
-   "headlines": 66,
+   "headlines": 67,
    "avg7": 52.6
   },
   {
    "date": "2026-10-19",
-   "value": 44,
-   "label": "Leaning cautious",
-   "headlines": 69,
-   "avg7": 50.3,
+   "value": 54,
+   "label": "Neutral",
+   "headlines": 89,
+   "avg7": 51.7,
    "window": "in the last 12 hours"
   }
  ]
