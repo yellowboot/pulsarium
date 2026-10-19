@@ -6,30 +6,28 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 19.10.2026 19:17
+Generated: 19.10.2026 20:37
 30 of 80 news items unmatched this run
 
-- [Investing.com] Cleveland-Cliffs earnings analysis: questions answered and next catalysts
-- [Nasdaq] Cattle Mostly Higher to Start the Week
-- [Nasdaq] Soybeans Fading Export Business and Shipments
-- [Nasdaq] Wheat Falling at Monday’s Midday
-- [Nasdaq] Hogs Slipping Back on Monday’s Midday
-- [Nasdaq] Sugar Prices Pressured as India Curbs Ethanol Output
-- [Nasdaq] Supply Risks Support Coffee Prices
-- [Nasdaq] Hog Bulls Find Footing on Friday, as Pork Sees Strength
-- [Nasdaq] Wheat Holding Steady on Monday Morning Trade
-- [Nasdaq] Cattle Look to Monday, Following Late Week Gains
+- [Nasdaq] Cocoa Prices Rebound on Smaller Ivory Coast Deliveries
+- [Nasdaq] Sugar Prices Fall as India Halts Sugar Diversion to Ethanol
+- [Nasdaq] Coffee Prices Jump on El Niño Risks
 - [Nasdaq] Corn Losses Extending to Monday
-- [Nasdaq] Cotton Gains Extending to Midday
-- [Nasdaq] Smaller Ivory Coast Cocoa Deliveries Lift Prices
-- [Nasdaq] Soybeans Starting Monday with Penny Losses
+- [CoinDesk] Tether: Senator's investigation misses positive work that's led to lower Iran volumes
+- [Yahoo Finance] Anthropic's 5% stock pledge raises big questions about who controls AI
+- [Yahoo Finance] European stocks fall on unrest in France as Nasdaq bounces
+- [Yahoo Finance] US Equity Markets Mixed Amid Gains in Technology, Consumer Discretionary Stocks
+- [Investing.com] City Therapeutics raises $230M in upsized Nasdaq IPO
 - [Investing.com] S&P rises and Nasdaq jumps over 1%, rebounding after their worst week since June
-- [Investing.com] Top US building products stocks according to Jefferies
-- [Investing.com] Alexandria Real Estate stock may move 3.4% on earnings report
-- [Investing.com] Amkor Technology options indicate 12% move on Oct. 26 earnings
-- [Yahoo Finance] Why Is Everyone Ignoring Trade Desk Stock's High Cash Yield?
+- [Yahoo Finance] A bad case of when your crypto thesis is based on one guy
+- [Yahoo Finance] Sector Update: Energy Stocks Softer Late Afternoon
+- [Investing.com] Aeromexico eyes new US flights after Washington lifts Mexico City restrictions
+- [Investing.com] Aeromexico eyes US expansion after Washington lifts flight curbs
+- [Investing.com] Fintech Ramp applies for OCC trust bank charter to expand asset services
+- [Investing.com] Nscale, Anthropic in talks for $45 billion cloud computing deal, Bloomberg News reports
+- [Investing.com] LiveRamp stock rises as FTC clears Publicis acquisition
+- [MarketWatch] Why the Treasury’s financing plans are sparking anxiety on Wall Street
 - [Mining.com] Digital gold could triple by 2031, WGC estimates
-- [CNBC] Goldman says play defense with these stocks if you're worried about the AI bull failing
 - [Mining.com] Volvo to launch mining division to meet global equipment demand
 - [CNBC] Anthropic is AI trade's last big hope for a major IPO this year
 - [Mining.com] Americas Gold’s record silver output misses forecasts
@@ -39,3 +37,5 @@ Generated: 19.10.2026 19:17
 - [CNBC] French unrest compounds debt crisis fears. Paris-listed stocks, bonds and the euro fall
 - [CNBC] Boomers are buying into the promise of monthly income from options ETFs, but there's a tax catch
 - [CNBC] Anthropic commits 5% of shares to new public benefit fund that could address AI job disruption
+- [BioPharma Dive] Disc’s once-spurned rare disease drug to get a second chance at approval
+- [CoinDesk] Cardano founder Charles Hoskinson is building a new programming language for the network
