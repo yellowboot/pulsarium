@@ -366,7 +366,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/crm/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1545,6 +1545,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/tm/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/tmus/</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
@@ -1617,6 +1622,11 @@
   <url>
     <loc>https://pulsarium.finance/news/vow3/</loc>
     <lastmod>2026-10-11</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/vrt/</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
