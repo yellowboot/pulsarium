@@ -1,0 +1,10 @@
+.pager-numbers { display:flex; align-items:center; justify-content:center; gap:6px; grid-column:1/-1; margin:14px 0; font-family:var(--font-ui); }
+.pager-numbers[hidden] { display:none; }
+.pager-numbers button { display:inline-flex; align-items:center; justify-content:center; min-width:32px; height:30px; padding:0 7px; border:1px solid var(--border, var(--line)); border-radius:8px; background:transparent; color:var(--text-mid); font:inherit; font-size:12px; cursor:pointer; }
+.pager-numbers button:hover:not(:disabled) { color:var(--text-hi); border-color:var(--accent, var(--gold-1)); }
+.pager-numbers button[aria-current='page'] { color:var(--accent, var(--gold-1)); border-color:var(--accent, var(--gold-1)); background:rgba(0,240,255,.1); }
+.pager-numbers button:disabled { opacity:.3; cursor:default; }
+.pager-numbers button:focus-visible { outline:2px solid var(--accent, var(--gold-1)); outline-offset:3px; }
+.pager-gap { min-width:16px; text-align:center; color:var(--text-low, var(--text-mid)); font-size:12px; }
+:root[data-color-theme='calm'] .pager-numbers button[aria-current='page'] { background:rgba(74,71,214,.08); }
+@media(max-width:400px) { .pager-numbers { gap:4px; } .pager-numbers button { min-width:28px; height:30px; padding:0 5px; } .pager-gap { min-width:12px; } }

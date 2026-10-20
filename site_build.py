@@ -1694,39 +1694,9 @@ REPORTS_FAQ = [
 ]
 # A long list is split into pages of this many cards; all of them stay in the
 # page for search engines and readers without scripts.
-PAGED_LIST_SCRIPT = """<script>
-(function () {
-  document.querySelectorAll('.paged-list').forEach(function (list) {
-    var size = Number(list.dataset.perPage) || 18, cards = [].slice.call(list.children), pages = Math.ceil(cards.length / size);
-    if (pages < 2) return;
-    var nav = document.createElement('nav');
-    nav.className = 'pager-numbers';
-    nav.setAttribute('aria-label', 'Pages');
-    list.after(nav);
-    function show(n, scroll) {
-      cards.forEach(function (card, i) { card.hidden = Math.floor(i / size) !== n; });
-      nav.innerHTML = '';
-      for (var p = 0; p < pages; p++) {
-        var b = document.createElement('button');
-        b.type = 'button'; b.textContent = p + 1;
-        if (p === n) b.setAttribute('aria-current', 'page');
-        b.onclick = (function (p) { return function () { show(p, true); }; })(p);
-        nav.appendChild(b);
-      }
-      if (scroll) list.closest('section').scrollIntoView({ block: 'start' });
-    }
-    show(0, false);
-  });
-})();
-</script>"""
-REPORTS_STYLE = """<style>
-.pager-numbers { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 18px; }
-.pager-numbers button { min-width: 34px; height: 34px; padding: 0 8px; border-radius: 9px; border: 1px solid var(--line); background: transparent; color: var(--text-mid); font: inherit; font-size: 13px; cursor: pointer; }
-.pager-numbers button:hover { color: var(--text-hi); border-color: var(--accent); }
-.pager-numbers button[aria-current] { color: var(--accent); border-color: var(--accent); background: rgba(0, 240, 255, .1); }
-:root[data-color-theme='calm'] .pager-numbers button[aria-current] { background: rgba(74, 71, 214, .08); }
-.insider-cards .item[hidden] { display: none; }
-</style>"""
+PAGED_LIST_SCRIPT = f'<script src="{site_theme.asset_url("/assets/pagination.js")}" defer></script>'
+REPORTS_STYLE = (f'<link rel="stylesheet" href="{site_theme.asset_url("/assets/pagination.css")}">'
+                 '<style>.insider-cards .item[hidden] { display: none; }</style>')
 
 
 def report_entry(r: dict, group: str, companies: dict, industries: dict) -> str:
@@ -1810,7 +1780,7 @@ def report_highlights_page(companies: dict):
         counts.append((title, len(rows)))
         sections.append(f'<section class="block"><h2>{title} <small>{note} · {len(rows)} companies</small></h2>'
                         + (f'<p>{(signals.get("coverage") or {}).get(key, 0)} companies with comparable data for this screen.</p>' if key in ('earnings_cash', 'payouts', 'working_capital') else '')
-                        + f'<div class="items insider-cards paged-list" data-per-page="18">'
+                        + f'<div class="items insider-cards paged-list" data-per-page="10">'
                         + "".join(report_entry(r, key, companies, industries) for r in rows) + "</div></section>")
     if not sections:
         return None

@@ -35,14 +35,7 @@
 .insider-cards .item p small { color: var(--text-low); }
 .method p { font-size: 13px; line-height: 1.65; color: var(--text-low); }
 </style>
-<style>
-.pager-numbers { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 18px; }
-.pager-numbers button { min-width: 34px; height: 34px; padding: 0 8px; border-radius: 9px; border: 1px solid var(--line); background: transparent; color: var(--text-mid); font: inherit; font-size: 13px; cursor: pointer; }
-.pager-numbers button:hover { color: var(--text-hi); border-color: var(--accent); }
-.pager-numbers button[aria-current] { color: var(--accent); border-color: var(--accent); background: rgba(0, 240, 255, .1); }
-:root[data-color-theme='calm'] .pager-numbers button[aria-current] { background: rgba(74, 71, 214, .08); }
-.insider-cards .item[hidden] { display: none; }
-</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a profit turnaround?", "acceptedAnswer": {"@type": "Answer", "text": "A company whose quarterly operating income went from a loss a year earlier to a profit now, as reported to the SEC. Cash-flow turnarounds, where operating cash flow turned positive, follow them."}}, {"@type": "Question", "name": "What do buybacks and dilution mean here?", "acceptedAnswer": {"@type": "Answer", "text": "Buybacks: fewer average shares than a year earlier, with cash spent on repurchases in the same report. Dilution: more shares, which can come from stock compensation, acquisitions or new financing."}}, {"@type": "Question", "name": "Is financial stress a prediction?", "acceptedAnswer": {"@type": "Answer", "text": "No. It flags report-based warning signs, such as twelve months of negative operating cash flow with cash down at least 20% or debt up at least 25%. It is not a default probability or investment advice."}}]}</script>
+<link rel="stylesheet" href="/assets/pagination.css?v=c4867b50d3"><style>.insider-cards .item[hidden] { display: none; }</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a profit turnaround?", "acceptedAnswer": {"@type": "Answer", "text": "A company whose quarterly operating income went from a loss a year earlier to a profit now, as reported to the SEC. Cash-flow turnarounds, where operating cash flow turned positive, follow them."}}, {"@type": "Question", "name": "What do buybacks and dilution mean here?", "acceptedAnswer": {"@type": "Answer", "text": "Buybacks: fewer average shares than a year earlier, with cash spent on repurchases in the same report. Dilution: more shares, which can come from stock compensation, acquisitions or new financing."}}, {"@type": "Question", "name": "Is financial stress a prediction?", "acceptedAnswer": {"@type": "Answer", "text": "No. It flags report-based warning signs, such as twelve months of negative operating cash flow with cash down at least 20% or debt up at least 25%. It is not a default probability or investment advice."}}]}</script>
 <link rel="stylesheet" href="/assets/themes.css?v=995daca531" data-pulsarium-theme="styles">
 </head>
 <body>
@@ -74,7 +67,7 @@
   <p class="lead">Changes in reported profits, cash flow, shareholder payouts, inventories and receivables, alongside turnarounds, dilution and financial stress. Each screen shows its comparable-data coverage within a universe of 2,225 listed businesses. Updated as new reports are filed.</p>
 </header>
 <section class="stats insider-stats"><div class="panel stat"><span class="stat-label">Profit turnarounds</span><strong>151</strong><small>companies</small></div><div class="panel stat"><span class="stat-label">Buybacks and dilution</span><strong>24</strong><small>companies</small></div><div class="panel stat"><span class="stat-label">Financial stress</span><strong>19</strong><small>companies</small></div><div class="panel stat"><span class="stat-label">Profit and cash flow</span><strong>12</strong><small>companies</small></div><div class="panel stat"><span class="stat-label">Payout coverage</span><strong>34</strong><small>companies</small></div><div class="panel stat"><span class="stat-label">Inventories and receivables</span><strong>27</strong><small>companies</small></div></section>
-<section class="block"><h2>Profit turnarounds <small>operating losses that turned into profit, then cash-flow turnarounds · 151 companies</small></h2><div class="items insider-cards paged-list" data-per-page="18"><article class="item">
+<section class="block"><h2>Profit turnarounds <small>operating losses that turned into profit, then cash-flow turnarounds · 151 companies</small></h2><div class="items insider-cards paged-list" data-per-page="10"><article class="item">
   <div class="item-meta"><span class="item-source"><a href="/news/intc/">INTC</a></span><span>Semiconductors</span><span>TTM revenue $57.0B</span></div>
   <h3>Intel Corp</h3>
   <p>Operating loss turned into profit YoY: <strong>−$3.2B → $1.8B</strong></p>
@@ -829,7 +822,7 @@
   <h3>E.W. SCRIPPS Co</h3>
   <p>Operating cash flow turned positive YoY: <strong>−$10.5M → $13.6M</strong></p>
   <p><small>Quarter ended Tue 30 Jun</small> · <a href="https://www.sec.gov/Archives/edgar/data/832428/000083242826000034/0000832428-26-000034-index.html" target="_blank" rel="noopener">SEC report ↗</a></p>
-</article></div></section><section class="block"><h2>Buybacks and dilution <small>share count change of at least 2% year over year · 24 companies</small></h2><div class="items insider-cards paged-list" data-per-page="18"><article class="item">
+</article></div></section><section class="block"><h2>Buybacks and dilution <small>share count change of at least 2% year over year · 24 companies</small></h2><div class="items insider-cards paged-list" data-per-page="10"><article class="item">
   <div class="item-meta"><span class="item-source"><a href="/news/mck/">MCK</a></span><span>Business services</span><span>TTM revenue $411.0B</span></div>
   <h3>Mckesson Corp</h3>
   <p>Average basic shares fell year over year: <strong>-5.0%</strong></p><p>Cash paid for common-share buybacks: <strong>$2.5B</strong></p>
@@ -949,7 +942,7 @@
   <h3>Galaxy Digital Inc.</h3>
   <p>Average basic shares rose year over year: <strong>+34.8%</strong></p>
   <p><small>Quarter ended Tue 30 Jun</small> · <a href="https://www.sec.gov/Archives/edgar/data/1859392/000185939226000091/0001859392-26-000091-index.html" target="_blank" rel="noopener">SEC report ↗</a></p>
-</article></div></section><section class="block"><h2>Financial stress <small>negative operating cash flow with falling cash or rising debt · 19 companies</small></h2><div class="items insider-cards paged-list" data-per-page="18"><article class="item">
+</article></div></section><section class="block"><h2>Financial stress <small>negative operating cash flow with falling cash or rising debt · 19 companies</small></h2><div class="items insider-cards paged-list" data-per-page="10"><article class="item">
   <div class="item-meta"><span class="item-source">SNX</span><span>Business services</span><span>TTM revenue $75.7B</span></div>
   <h3>Td Synnex Corp</h3>
   <p>Operating cash flow negative over 12 months: <strong>−$617.8M</strong></p><p>Cash reserves fell at least 20%: <strong>$2.4B → $749.3M</strong></p>
@@ -1044,7 +1037,7 @@
   <h3>DocGo Inc.</h3>
   <p>Operating cash flow negative over 12 months: <strong>−$22.7M</strong></p><p>Cash reserves fell at least 20%: <strong>$51.0M → $25.2M</strong></p>
   <p><small>Quarter ended Tue 30 Jun</small> · <a href="https://www.sec.gov/Archives/edgar/data/1822359/000162828026057394/0001628280-26-057394-index.html" target="_blank" rel="noopener">SEC report ↗</a></p>
-</article></div></section><section class="block"><h2>Profit and cash flow <small>reported profit and cash-flow divergence · ranked by relative gap · 12 companies</small></h2><p>194 companies with comparable data for this screen.</p><div class="items insider-cards paged-list" data-per-page="18"><article class="item">
+</article></div></section><section class="block"><h2>Profit and cash flow <small>reported profit and cash-flow divergence · ranked by relative gap · 12 companies</small></h2><p>194 companies with comparable data for this screen.</p><div class="items insider-cards paged-list" data-per-page="10"><article class="item">
   <div class="item-meta"><span class="item-source">TR</span><span>Consumer staples</span><span>TTM revenue $734.7M</span></div>
   <h3>Tootsie Roll Industries Inc</h3>
   <p>Positive profit with negative operating cash flow: <strong>$35.6M → $31.0M</strong></p><p><small>2026-01-01 – 2026-06-30 · comparison 2025-01-01 – 2025-06-30</small></p><p>Operating cash flow: <strong>−$4.9M → −$10.9M</strong></p><p><small>2026-01-01 – 2026-06-30 · comparison 2025-01-01 – 2025-06-30</small></p>
@@ -1104,7 +1097,7 @@
   <h3>World Kinect Corp</h3>
   <p>Positive profit with negative operating cash flow: <strong>−$360.4M → $75.3M</strong></p><p><small>2026-01-01 – 2026-06-30 · comparison 2025-01-01 – 2025-06-30</small></p><p>Operating cash flow: <strong>$142.6M → −$67.7M</strong></p><p><small>2026-01-01 – 2026-06-30 · comparison 2025-01-01 – 2025-06-30</small></p>
   <p><small>Report period ended Tue 30 Jun</small> · <a href="https://www.sec.gov/Archives/edgar/data/789460/000078946026000040/0000789460-26-000040-index.html" target="_blank" rel="noopener">SEC report ↗</a></p>
-</article></div></section><section class="block"><h2>Payout coverage <small>reported dividends and buybacks versus free cash flow · ranked by relative gap · 34 companies</small></h2><p>105 companies with comparable data for this screen.</p><div class="items insider-cards paged-list" data-per-page="18"><article class="item">
+</article></div></section><section class="block"><h2>Payout coverage <small>reported dividends and buybacks versus free cash flow · ranked by relative gap · 34 companies</small></h2><p>105 companies with comparable data for this screen.</p><div class="items insider-cards paged-list" data-per-page="10"><article class="item">
   <div class="item-meta"><span class="item-source">BBIO</span><span>Pharmaceuticals</span><span>TTM revenue $713.1M</span></div>
   <h3>BridgeBio Pharma, Inc.</h3>
   <p>Paid out <strong>$210.0M</strong> (buybacks $210.0M) while free cash flow was <strong>−$268.9M</strong> (cash from operations −$268.4M − capital spending $512.0K), Jan 1 – Jun 30.</p><p><em>The payouts came from cash reserves or borrowing, not from this period’s cash.</em></p>
@@ -1274,7 +1267,7 @@
   <h3>Boeing Co</h3>
   <p>Paid out <strong>$172.0M</strong> (dividends $172.0M) while free cash flow was <strong>−$823.0M</strong> (cash from operations $1.2B − capital spending $2.0B), Jan 1 – Jun 30.</p><p><em>The payouts came from cash reserves or borrowing, not from this period’s cash.</em></p>
   <p><small>Report period ended Tue 30 Jun</small> · <a href="https://www.sec.gov/Archives/edgar/data/12927/000162828026050038/0001628280-26-050038-index.html" target="_blank" rel="noopener">SEC report ↗</a></p>
-</article></div></section><section class="block"><h2>Inventories and receivables <small>balance-sheet growth versus quarterly sales · ranked by growth-rate gap · 27 companies</small></h2><p>166 companies with comparable data for this screen.</p><div class="items insider-cards paged-list" data-per-page="18"><article class="item">
+</article></div></section><section class="block"><h2>Inventories and receivables <small>balance-sheet growth versus quarterly sales · ranked by growth-rate gap · 27 companies</small></h2><p>166 companies with comparable data for this screen.</p><div class="items insider-cards paged-list" data-per-page="10"><article class="item">
   <div class="item-meta"><span class="item-source"><a href="/news/alab/">ALAB</a></span><span>Semiconductors</span><span>TTM revenue $1.2B</span></div>
   <h3>Astera Labs, Inc.</h3>
   <p>Receivables grew faster than revenue YoY: <strong>$24.3M → $192.5M</strong></p><p><small>As of 2026-06-30 · comparison 2025-06-30</small></p><p>Revenue growth +104.5% · growth-rate gap +587.0 pp.</p><p><a href="https://www.sec.gov/Archives/edgar/data/1736297/000173629725000098/0001736297-25-000098-index.html" target="_blank" rel="noopener">Comparison report ↗</a></p><p>Comparable quarterly revenue: <strong>$191.9M → $392.4M</strong></p><p><small>2026-04-01 – 2026-06-30 · comparison 2025-04-01 – 2025-06-30</small></p>
@@ -1425,31 +1418,7 @@
   <p class="chips"><a class="chip" href="/sector-analytics/">Sector analytics</a><a class="chip" href="/insider-buying/">Insider buying this week</a><a class="chip" href="/news/#financial-signals">Panel on the news dashboard</a></p>
 </section>
 <section class="block"><h2>Questions</h2><div class="faq"><details class="faq-item"><summary>What is a profit turnaround?</summary><p>A company whose quarterly operating income went from a loss a year earlier to a profit now, as reported to the SEC. Cash-flow turnarounds, where operating cash flow turned positive, follow them.</p></details><details class="faq-item"><summary>What do buybacks and dilution mean here?</summary><p>Buybacks: fewer average shares than a year earlier, with cash spent on repurchases in the same report. Dilution: more shares, which can come from stock compensation, acquisitions or new financing.</p></details><details class="faq-item"><summary>Is financial stress a prediction?</summary><p>No. It flags report-based warning signs, such as twelve months of negative operating cash flow with cash down at least 20% or debt up at least 25%. It is not a default probability or investment advice.</p></details></div></section>
-<script>
-(function () {
-  document.querySelectorAll('.paged-list').forEach(function (list) {
-    var size = Number(list.dataset.perPage) || 18, cards = [].slice.call(list.children), pages = Math.ceil(cards.length / size);
-    if (pages < 2) return;
-    var nav = document.createElement('nav');
-    nav.className = 'pager-numbers';
-    nav.setAttribute('aria-label', 'Pages');
-    list.after(nav);
-    function show(n, scroll) {
-      cards.forEach(function (card, i) { card.hidden = Math.floor(i / size) !== n; });
-      nav.innerHTML = '';
-      for (var p = 0; p < pages; p++) {
-        var b = document.createElement('button');
-        b.type = 'button'; b.textContent = p + 1;
-        if (p === n) b.setAttribute('aria-current', 'page');
-        b.onclick = (function (p) { return function () { show(p, true); }; })(p);
-        nav.appendChild(b);
-      }
-      if (scroll) list.closest('section').scrollIntoView({ block: 'start' });
-    }
-    show(0, false);
-  });
-})();
-</script>
+<script src="/assets/pagination.js?v=2bb35c1197" defer></script>
 
 </main>
 
