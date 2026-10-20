@@ -156,7 +156,12 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/amd/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/amgn/</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -371,7 +376,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/crwd/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1421,7 +1426,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/real-estate-homebuilders/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
