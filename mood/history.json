@@ -483,15 +483,15 @@
    "date": "2026-10-19",
    "value": 58,
    "label": "Leaning optimistic",
-   "headlines": 286,
+   "headlines": 287,
    "avg7": 52.3
   },
   {
    "date": "2026-10-20",
-   "value": 59,
-   "label": "Leaning optimistic",
-   "headlines": 106,
-   "avg7": 53.0,
+   "value": 52,
+   "label": "Neutral",
+   "headlines": 102,
+   "avg7": 52.0,
    "window": "in the last 12 hours"
   }
  ]
