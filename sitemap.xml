@@ -350,6 +350,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/cof/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/coin/</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
@@ -965,6 +970,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/isrg/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/jbht/</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
@@ -1476,7 +1486,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/smci/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
