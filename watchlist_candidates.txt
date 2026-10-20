@@ -6,35 +6,34 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 20.10.2026 11:37
-29 of 80 news items unmatched this run
+Generated: 20.10.2026 13:17
+28 of 80 news items unmatched this run
 
-- [Yahoo Finance] 2 Revolutionary AI Stocks With 241% and 324% Upside, According to Select Wall Street Analysts
-- [Yahoo Finance] AI Jitters, Oil, France Turmoil Damp Wall Street Pre-Bell; Asia, Europe Off
-- [Yahoo Finance] Tech in focus as stock markets retreat; oil surges
-- [Yahoo Finance] Should You Buy the iShares Semiconductor ETF After Its 25% Plunge? The Answer Might Surprise You.
-- [Investing.com] Hertz shares jump 5% as subsidiary Oro Mobility secures $80M strategic investment
-- [CNBC] U.S. oil surges to top $109, Brent crude at five-month high amid Mideast tensions
-- [Investing.com] TSX futures inch down as traders eye Bank of Canada rate path
-- [Yahoo Finance] Stocks Mostly Down Pre-Bell as Earnings Take Center Stage
-- [Investing.com] US holds Nevada geothermal auction amid soaring industry interest
-- [Investing.com] Brazil’s Azul sees longer recovery as fuel costs squeeze margins after Chapter 11
+- [CNBC] U.S. crude oil tops $105, Brent crude at five-month highs amid Mideast tensions
+- [Investing.com] Why is Myriad Genetics stock surging today?
+- [Yahoo Finance] Chip stocks decline as AI-trade rebound fizzles
+- [CNBC] Data center stocks slide as Korea IPO plunges 30%, pressuring tech sentiment
+- [CNBC] Former OpenAI exec has quietly built $1.5 billion startup, betting AI can revive U.S. manufacturing
+- [Investing.com] Why is Klaviyo stock surging today?
+- [Investing.com] Monday’s insider activity: Big buys at Applied Digital, sells at Wayfair
+- [Investing.com] Arcus stock tumbles 6% after unveiling casdatifan trial data
+- [Investing.com] Waymo to launch autonomous ride-hailing in Madrid next year
+- [Investing.com] Why is Arhaus stock rallying today?
+- [Investing.com] Why is Lyntris stock rallying today?
+- [Investing.com] Top Aerospace & Defense Stocks According to Macquarie Research
+- [Investing.com] Why is Arcus Biosciences stock sliding today?
+- [Yahoo Finance] Update: US Equity Futures Lower Pre-Bell as Trump Unveils $8 Billion Plan to Help US Farmers Offset Diesel Costs
+- [Investing.com] Lyntris stock rises on $6.5M Navy drone contract extension
+- [Yahoo Finance] Will Interest Rates or Chips Decide the AI Trade?
+- [Yahoo Finance] XLK vs. SOXX: Broad Tech Exposure or Semiconductor Bet?
+- [Yahoo Finance] OpenAI Is Racing to Raise $30 Billion Before Anthropic Goes Public
 - [Nasdaq] Dollar Gains on Euro Weakness and Higher Crude Prices
-- [Yahoo Finance] 10,000 Hours of Continuous Cook Time and a New Standard for Home Cooking: Anova Unveils the New Precision® Cooker Pro 3.0
-- [Investing.com] Why is Genuine Parts stock sliding today?
+- [Nasdaq] This Stock Has A 12.00% Yield And Sells For Less Than Book
+- [CoinDesk] France's parliament approves vote to hit stablecoin trades with 31% capital gains tax
 - [CoinDesk] Live updates: Market nervousness persists as the AI selloff deepens
 - [CoinDesk] South Korean IPO slump adds to AI market jitters as Brent crude tops $111
 - [Nasdaq] Bear of the Day: Cardinal Infrastructure (CDNL)
-- [CNBC] U.S. bans DeepSeek from government agency systems amid AI rift with China
+- [OilPrice.com] Asia’s Coal Prices To Stay High as Supply Drops and Demand Firms
 - [OilPrice.com] Copper Needs $332 Billion in New Mines to Avoid Deficit, BloombergNEF Says
 - [CNBC] Copper is outshining gold this year. Investors say the rally can survive an AI correction
 - [OilPrice.com] China Moves to Rein In Its Booming Hydrogen Industry
-- [OilPrice.com] Asian LNG Prices Surge Past $30 as Middle East Shipping Risks Escalate
-- [Nasdaq] Corn Falls Out of Bed on Monday as Exports Disappoint
-- [Nasdaq] Cotton Starts the Week with Modest Gains
-- [Nasdaq] Wheat Faces Monday Weakness
-- [Nasdaq] Cocoa Prices Rebound on Smaller Ivory Coast Deliveries
-- [OilPrice.com] Brent Tops $110 as Tanker Attacks Threaten Persian Gulf Supply
-- [Mining.com] Westwin Elements, Traxys eye $3.9 billion, 22 year nickel offtake extension
-- [Mining.com] Study nearly doubles value, lifts resource for Aclara’s Penco rare earths project
-- [Mining.com] Brazil survey plan could give big miners first pick of claims

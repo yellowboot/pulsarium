@@ -366,7 +366,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/crm/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -836,7 +836,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/f/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1091,7 +1091,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/mrvl/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1141,12 +1141,12 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/nke/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://pulsarium.finance/news/noc/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1176,7 +1176,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/nvo/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1381,7 +1381,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/healthcare/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1396,7 +1396,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/metals-mining/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1507,6 +1507,11 @@
   <url>
     <loc>https://pulsarium.finance/news/stla/</loc>
     <lastmod>2026-10-15</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/stld/</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
