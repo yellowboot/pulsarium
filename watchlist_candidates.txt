@@ -6,36 +6,37 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 19.10.2026 21:37
-30 of 80 news items unmatched this run
+Generated: 20.10.2026 06:37
+31 of 80 news items unmatched this run
 
-- [Yahoo Finance] 2 Stocks Down About 70% to Buy Now and Hold for the Next Decade
-- [Investing.com] Why is Crown stock sliding after-hours today?
-- [Nasdaq] Dollar Gains on Euro Weakness and Higher Crude Prices
-- [Nasdaq] Crude Oil Prices Surge on Global Supply Risks
-- [Nasdaq] Nat-Gas Prices Retreat on Forecasts for Warm US Temps
-- [Nasdaq] Sugar Prices Fall as India Halts Sugar Diversion to Ethanol
-- [Nasdaq] Coffee Prices Jump on El Niño Risks
-- [Nasdaq] Soybeans Fading Export Business and Shipments
-- [Nasdaq] Wheat Falling at Monday’s Midday
-- [Mining.com] Military Metals wins four-year Slovak licence lifeline
-- [Yahoo Finance] Why Berkshire's Latest Move Proves It's Not Really a Warren Buffett Company Anymore
+- [CNBC] U.S. bans DeepSeek from government agency systems amid AI rift with China
+- [CNBC] Brent crude holds near five-month high on Middle East tension
+- [Investing.com] Taiwan stocks lower at close of trade; Taiwan Weighted down 1.26%
+- [CNBC] Copper is outshining gold this year. Investors say the rally can survive an AI correction
+- [Investing.com] SK Hynix RSI hits 19.94 in steep downtrend: Live levels
+- [Investing.com] Nikkei 225 bearish in descending channel at 64,160: Live levels
+- [Investing.com] Sea’s CEO says financial services arm Monee could go public, WSJ reports
+- [Yahoo Finance] If I Could Only Buy 1 Quantum Computing Stock With $1,000, It Would Be This One.
+- [Investing.com] Software upgrades eat nearly a third of companies’ IT budgets, survey finds
+- [Yahoo Finance] Asia stocks slump as AI jitters hammer Korean chipmakers ahead of tech earnings
+- [Investing.com] Elice shares plunge 28% on debut as investor doubts over AI trade deepen
+- [Yahoo Finance] Asian shares mostly decline after AI stocks lead a rebound on Wall Street
+- [Nasdaq] Corn Falls Out of Bed on Monday as Exports Disappoint
+- [Nasdaq] Cotton Starts the Week with Modest Gains
+- [Nasdaq] Wheat Faces Monday Weakness
 - [Nasdaq] Cocoa Prices Rebound on Smaller Ivory Coast Deliveries
-- [Nasdaq] Corn Losses Extending to Monday
-- [Nasdaq] Wheat Holding Steady on Monday Morning Trade
-- [Investing.com] Bitdeer stock jumps on $2.9B AI Cloud revenue backlog
-- [CNBC] Tech stocks had a nice oversold bounce on Monday. Earnings this week will determine if it's for real
-- [Yahoo Finance] Inflation Just Spooked the Market -- But There's Still Good News for Patient Investors
-- [Yahoo Finance] Dario Amodei Predicted at Davos in January 2025 That AI Could Surpass Humans "at Almost Everything" Within Two to Three Years. With Anthropic Now Filing for a $2 Trillion IPO, Is That Timeline Still on Track?
-- [Investing.com] Anthropic, Nscale in talks for new $45 billion AI cloud computing deal, Bloomberg News reports
-- [Yahoo Finance] Cleveland-Cliffs Inc. Q3 2026 Earnings Call Summary
-- [Yahoo Finance] Dynex Capital, Inc. Q3 2026 Earnings Call Summary
-- [Investing.com] Activist Starboard prepares to nominate directors at Knife River, sources say
+- [Nasdaq] Soybeans Fade Lower Despite More Export Business and Near 2 Year high in Shipments
+- [Nasdaq] Cattle See Monday Strength, with Feeders the Leaders
+- [Nasdaq] Hogs Face Monday Losses
+- [Nasdaq] Dollar Gains on Euro Weakness and Higher Crude Prices
+- [Nasdaq] Wheat Falling at Monday’s Midday
+- [Nasdaq] Freedom Capital Markets Initiates Coverage of AIB Data Centers at Buy
+- [OilPrice.com] Brent Tops $110 as Tanker Attacks Threaten Persian Gulf Supply
+- [Mining.com] Westwin Elements, Traxys eye $3.9 billion, 22 year nickel offtake extension
+- [Nasdaq] Dollar Pushes Higher as French Social Unrest Weighs on the Euro
+- [Mining.com] Study nearly doubles value, lifts resource for Aclara’s Penco rare earths project
+- [Mining.com] Brazil survey plan could give big miners first pick of claims
+- [Mining.com] Military Metals wins four-year Slovak licence lifeline
 - [CoinDesk] Tether: Senator's investigation misses positive work that's led to lower Iran volumes
-- [MarketWatch] The Treasury’s financing plans are sparking anxiety on Wall Street
 - [Mining.com] Digital gold could triple by 2031, WGC estimates
 - [Mining.com] Volvo to launch mining division to meet global equipment demand
-- [CNBC] Gartner analyst behind tech rout: AI returns are not yet large enough to justify neocloud build-out
-- [CNBC] Anthropic is AI trade's last big hope for a major IPO this year
-- [Mining.com] Americas Gold’s record silver output misses forecasts
-- [CoinDesk] Zerohash rolls out a new tool to move crypto without copying wallet addresses
