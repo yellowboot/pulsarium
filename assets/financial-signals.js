@@ -40,7 +40,8 @@
       if(group==='turnaround'&&num(s.swing_amount))b.append(el('span','financial-change',`${s.code==='operating_turnaround'?'Profit':'Cash-flow'} swing ${money(s.swing_amount)}`));
       if(group==='shares'&&typeof s.contexts?.[0]?.text==='string')b.append(el('span','financial-context',s.contexts[0].text));
       if(checks.includes(group))b.append(el('span','financial-change',checkSummary(r)));
-      b.append(el('span','financial-date',checks.includes(group)?periodLabel(s):`Quarter ended ${date(r.period_end)}`));b.addEventListener('click',()=>open(b,r.cik));list.append(b);
+      const period=checks.includes(group)?periodLabel(s):`Quarter ended ${date(r.period_end)}`;
+      b.append(el('span','financial-date',`${period}${validDate(s.filed)?` · Filed ${date(s.filed)}`:''}`));b.addEventListener('click',()=>open(b,r.cik));list.append(b);
     });
   }
   function periodLabel(s){return validDate(s.period_start)?`${date(s.period_start)} – ${date(s.period_end)}`:`As of ${date(s.period_end)}`;}
