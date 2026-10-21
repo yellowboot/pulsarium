@@ -378,6 +378,22 @@ function shareCount(dei: Record<string, Concept>, source: Record<string, Concept
   return { now: byDate.get(now)!.sum, now_date: now, year_ago: byDate.get(before)!.sum, year_ago_date: before, method: 'cover page' }
 }
 
+/** One quarter of a year-to-date cash-flow line (10-Qs report six and nine
+ * months): the three-month figure when filed, else the year to date minus the
+ * year to date one quarter earlier with the same start. For companies with
+ * under a year of quarters, where no twelve-month figure exists (Cerebras's
+ * stock-based compensation, Oct 2026). */
+function quarterFromYtd(input: Fact[], end: string): number | null {
+  const items = dedupe(input).filter((i) => i.end === end && i.start)
+  const quarter = items.find((i) => within(days(i), 80, 100))
+  if (quarter) return quarter.val
+  for (const ytd of items.filter((i) => within(days(i), 170, 290))) {
+    const before = dedupe(input).find((i) => i.start === ytd.start && within(diffDays(end, i.end), 80, 100))
+    if (before) return ytd.val - before.val
+  }
+  return null
+}
+
 const SPLIT_FACTORS = [2, 3, 4, 5, 8, 10, 15, 20, 25, 30, 40, 50]
 const round6 = (value: number) => Math.round(value * 1e6) / 1e6
 
@@ -604,6 +620,11 @@ export function summarize(factsDoc: FactsDoc) {
   }
   if (taxonomy === 'us-gaap') balance.shares_outstanding = sharesOutstanding(facts.dei ?? {}, source, basis !== 'quarter')
   result.share_count = shareCount(facts.dei ?? {}, source)
+  // the latest quarter's stock-based compensation, read where no twelve months exist yet
+  const sbcItems = pickConcept(source, cashFlowMap.stock_based_compensation ?? [])?.items ?? []
+  const sbcEnd = result.period_end as string | undefined
+  const sbcQuarter = sbcEnd && sbcItems.length ? quarterFromYtd(sbcItems, sbcEnd) : null
+  result.stock_based_compensation_quarter = sbcQuarter == null ? null : { end: sbcEnd, value: sbcQuarter }
   if (balance.cash_and_short_term_investments == null && balance.cash != null && balance.short_term_investments != null) {
     balance.cash_and_short_term_investments = balance.cash + balance.short_term_investments
   }
