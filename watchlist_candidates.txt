@@ -6,31 +6,31 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 21.10.2026 06:37
-36 of 80 news items unmatched this run
+Generated: 21.10.2026 08:37
+34 of 80 news items unmatched this run
 
-- [CNBC] UK inflation jumps to 3.5% — cementing rate hike expectations
-- [Investing.com] Adidas shares rise after 2026 guidance hike
-- [Investing.com] Australian AI data centre operator NextDC shares shed 42% on revenue delay, future plans on hold
-- [Investing.com] Beauty giants target ’Ozempic face’ as boom in obesity drugs opens new market
-- [Investing.com] MIPS reports third quarter sales of SEK 215m, up 59% year-over-year
-- [Investing.com] Taiwan stocks higher at close of trade; Taiwan Weighted up 0.90%
-- [Investing.com] Swedencare lowers full-year growth ambition after Q3 revenue, EBITDA miss
-- [Investing.com] Neobo Fastigheter earnings capacity drops despite record occupancy
-- [Yahoo Finance] Pigment Raises $250M at $2.3B Valuation
-- [Investing.com] Klepierre raises 2026 guidance after strong third quarter
-- [CNBC] Samsung, SK Hynix upgrading China plants to make more advanced chips, people say: Reuters
+- [Investing.com] Quilter Q3 core net inflows rise 30% on strong platform flows
+- [Investing.com] Why is Pegasystems stock sliding today?
+- [Investing.com] Why is Cipher Digital stock rebounding today?
+- [Investing.com] 3i Group stock tumbles on read-across from Carrefour guidance cut
+- [Investing.com] Why is Michelin stock sliding today?
+- [Yahoo Finance] Is Ares Capital Stock a Buy, Sell, or Hold Below Its Net Asset Value?
+- [CoinDesk] Zcash developers confirm November date for upgrade that triples payment speed
 - [CNBC] Oil prices climb as traders assess Middle East developments
+- [CNBC] UK inflation jumps to 3.5% — cementing rate hike expectations
+- [CNBC] AI's spending boom faces a 'gut check': Who can actually make money?
+- [Yahoo Finance] Stock Market News for Oct 21, 2026
+- [Yahoo Finance] Why Snap Needed an Iron Man Star Before Its $2,195 Glasses Go on Sale
+- [CNBC] Samsung, SK Hynix upgrading China plants to make more advanced chips, people say: Reuters
 - [CoinDesk] Ripple brings Wall Street into 24/7 stock bets, but HSBC warns markets are still thin
-- [Yahoo Finance] WISeQey Issues CEO Letter to Shareholders: Building an Intelligent, Secure Platform for the Intelligence Age
 - [CNBC] U.S. eyes refining muscle of Indian billionaire Ambani's Reliance as Rubio visits Jamnagar plant
 - [CoinDesk] Solana’s Alpenglow, its biggest network overhaul since 2020, goes live Wednesday
 - [CoinDesk] A company that vouches for websites had secret keys so weak that 8 of them were cracked
 - [Nasdaq] Dollar Retreats on Weak US Housing News and Stock Strength
 - [CNBC] Australian data center operator NextDC's shares plunge 40% after it slashes earnings forecast
+- [OilPrice.com] Trump Administration Pushes Refiners to Boost Diesel Output as Prices Soar
 - [Nasdaq] Wheat Losses Push to Tuesday
 - [Nasdaq] Cotton Closes Tuesday with Gains
-- [CNBC] Elice's huge stock swings show AI's spending boom is getting more investor scrutiny
 - [Nasdaq] Hogs Post Mixed Tuesday Trade
 - [Nasdaq] Cattle Gains Extend to Tuesday
 - [Nasdaq] Corn Selling Continues on Tuesday
@@ -43,5 +43,3 @@ Generated: 21.10.2026 06:37
 - [Nasdaq] Cantor Fitzgerald Initiates Coverage of Ensysce Biosciences at Overweight
 - [Nasdaq] Cocoa Prices Climb on Smaller Deliveries from the Ivory Coast
 - [Mining.com] Mauritania’s first uranium mine comes into view despite funding, security issues
-- [CNBC] Housing is flashing warning signs just as the Fed weighs more interest rate hikes
-- [Mining.com] Cornish Metals faces costly financing hurdle
