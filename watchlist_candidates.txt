@@ -6,38 +6,42 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 20.10.2026 21:37
-32 of 80 news items unmatched this run
+Generated: 21.10.2026 06:37
+36 of 80 news items unmatched this run
 
-- [Yahoo Finance] SEGG Media Requests Nasdaq Hearing and Stay Following Staff Determination
+- [CNBC] UK inflation jumps to 3.5% — cementing rate hike expectations
+- [Investing.com] Adidas shares rise after 2026 guidance hike
+- [Investing.com] Australian AI data centre operator NextDC shares shed 42% on revenue delay, future plans on hold
+- [Investing.com] Beauty giants target ’Ozempic face’ as boom in obesity drugs opens new market
+- [Investing.com] MIPS reports third quarter sales of SEK 215m, up 59% year-over-year
+- [Investing.com] Taiwan stocks higher at close of trade; Taiwan Weighted up 0.90%
+- [Investing.com] Swedencare lowers full-year growth ambition after Q3 revenue, EBITDA miss
+- [Investing.com] Neobo Fastigheter earnings capacity drops despite record occupancy
+- [Yahoo Finance] Pigment Raises $250M at $2.3B Valuation
+- [Investing.com] Klepierre raises 2026 guidance after strong third quarter
+- [CNBC] Samsung, SK Hynix upgrading China plants to make more advanced chips, people say: Reuters
+- [CNBC] Oil prices climb as traders assess Middle East developments
+- [CoinDesk] Ripple brings Wall Street into 24/7 stock bets, but HSBC warns markets are still thin
+- [Yahoo Finance] WISeQey Issues CEO Letter to Shareholders: Building an Intelligent, Secure Platform for the Intelligence Age
+- [CNBC] U.S. eyes refining muscle of Indian billionaire Ambani's Reliance as Rubio visits Jamnagar plant
+- [CoinDesk] Solana’s Alpenglow, its biggest network overhaul since 2020, goes live Wednesday
+- [CoinDesk] A company that vouches for websites had secret keys so weak that 8 of them were cracked
 - [Nasdaq] Dollar Retreats on Weak US Housing News and Stock Strength
-- [Nasdaq] Crude Oil Prices Fall on Diplomacy Hopes to End Iran War
-- [Nasdaq] Above-Average US Autumn Temps Weigh on Nat-Gas Prices
+- [CNBC] Australian data center operator NextDC's shares plunge 40% after it slashes earnings forecast
+- [Nasdaq] Wheat Losses Push to Tuesday
+- [Nasdaq] Cotton Closes Tuesday with Gains
+- [CNBC] Elice's huge stock swings show AI's spending boom is getting more investor scrutiny
+- [Nasdaq] Hogs Post Mixed Tuesday Trade
+- [Nasdaq] Cattle Gains Extend to Tuesday
+- [Nasdaq] Corn Selling Continues on Tuesday
+- [Nasdaq] Soybean Weakness Extends to Tuesday
+- [OilPrice.com] Oil Prices Climb Above $110 as Middle East Supply Fears Persist
+- [Mining.com] Vulcan Elements teams up with North Carolina researchers to advance rare earth magnets tech
+- [Nasdaq] Cantor Fitzgerald Initiates Coverage of Modine Manufacturing at Overweight
 - [Nasdaq] Signs of Larger ICE Inventories Weigh on Coffee Prices
-- [Yahoo Finance] The U.S. Army Is Spending $2.2 Billion on Micro Nuclear Reactors. This Stock Could Benefit.
-- [Yahoo Finance] Stock Market Today, Oct. 20: AGNC Investment Rises on Stronger Sector Tone Despite Book-Value Decline
-- [Nasdaq] Sugar Prices Settle Mixed on Signs of a Larger Global Sugar Deficit
-- [Nasdaq] Cocoa Prices Climb on Smaller Deliveries from the Ivory Coast
-- [Nasdaq] Sugar Prices Recover as Green Pool Boosts Its Sugar Deficit Forecast
-- [Nasdaq] Hogs Ticking Higher on Monday as Pork Finds Some Strength
-- [Investing.com] Helsing nears investment in Destinus stock at $6.7 billion valuation - Bloomberg
-- [Yahoo Finance] Archer vs Joby: What's the Better eVTOL Stock to Buy Right Now?
-- [Nasdaq] Corn Facing Continued Pressure on Tuesday
-- [Nasdaq] Coffee Prices Retreat on Possible Boost to Supplies
-- [Yahoo Finance] 2 Dividend Stocks Crushing the Market in 2026 (and Which Ones Can Keep Going)
 - [Nasdaq] Soybeans Facing Tuesday Losses
-- [Nasdaq] Cattle Extending Higher on Tuesday
-- [Nasdaq] Cotton Bulls Pushing Higher on Tuesday
-- [Yahoo Finance] Unretired at 68 and the Paycheck Is Back? These 3 ETFs Decide What the New Money Should Do
-- [Yahoo Finance] Dow boosted as markets rotate from tech shares
-- [CNBC] Dow jumps 500 points as earnings optimism steadies market: Live updates
-- [CNBC] Oil prices fall as traders hope for diplomatic progress in Middle East
-- [MarketWatch] Wall Street researchers just used Claude to design a drug. The experiment has spawned a new investment thesis.
+- [Nasdaq] Cantor Fitzgerald Initiates Coverage of Ensysce Biosciences at Overweight
+- [Nasdaq] Cocoa Prices Climb on Smaller Deliveries from the Ivory Coast
+- [Mining.com] Mauritania’s first uranium mine comes into view despite funding, security issues
 - [CNBC] Housing is flashing warning signs just as the Fed weighs more interest rate hikes
 - [Mining.com] Cornish Metals faces costly financing hurdle
-- [CNBC] The healthcare sector is getting a safe haven boost. This one stock is headed for a long-term breakout
-- [MarketWatch] Investors’ search for safety has made toothpaste stocks more expensive than tech
-- [Mining.com] Phoenix Tailings to build $375M rare earth plant in New York
-- [Mining.com] Lithium Africa weighs $60M offer for Springbok lithium project
-- [OilPrice.com] API: Crude, Product Inventories Continue to Draw
-- [CNBC] Data center stocks remain under pressure after Korea IPO plunges 30%
