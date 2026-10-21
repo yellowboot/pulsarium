@@ -1,10 +1,8 @@
 name: Update SEC data
 
 on:
-  schedule:
-    # Morning follows SEC's overnight index build; two further intraday checks.
-    - cron: '19 0,8,16 * * *'
-      timezone: Europe/Berlin
+  # Supabase pg_cron dispatches at 00:19, 08:19 and 16:19 Europe/Berlin.
+  # GitHub's native schedule can start hours late; do not add a second scheduler.
   workflow_dispatch: {}
 
 permissions:

@@ -2,7 +2,10 @@
 
 `Update SEC data` in this public repository runs at **00:19, 08:19 and 16:19
 Europe/Berlin**, including daylight-saving changes. The morning run follows the
-overnight EDGAR daily-index build. GitHub schedules are best effort.
+overnight EDGAR daily-index build. The existing database dispatcher starts the
+public workflow via `workflow_dispatch`; GitHub has no duplicate native schedule.
+The database checks Berlin's current hour, so winter/summer offsets are automatic.
+Runner availability can still delay job execution.
 
 ## Processing order
 
