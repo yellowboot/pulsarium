@@ -1,0 +1,63 @@
+name: Update SEC data
+
+on:
+  schedule:
+    # Morning follows SEC's overnight index build; two further intraday checks.
+    - cron: '19 0,8,16 * * *'
+      timezone: Europe/Berlin
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  # Serializes SEC processing with news-page publication in this repository.
+  group: update-news
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      SUPABASE_URL: https://omkeplyeuxwlsqnblsjm.supabase.co
+      SEC_INGEST_TOKEN: ${{ secrets.SEC_INGEST_TOKEN }}
+      SEC_CONTACT: ${{ vars.SEC_CONTACT }}
+      DENO_NO_PACKAGE_JSON: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.9.7
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Update existing company histories and shared key figures
+        id: figures
+        continue-on-error: true
+        run: deno run --allow-net --allow-env scripts/sec/refresh.ts
+      - name: Add new insider filings and publish the shared radar
+        id: insiders
+        continue-on-error: true
+        run: python -u scripts/sec/sec-insider-radar.py --max-filings 5000
+      - name: Publish sector analytics and report highlights
+        id: analytics
+        continue-on-error: true
+        run: python -u scripts/sec/sec-sector-analytics.py --max-companies 6000
+      - name: Regenerate SEC landing pages
+        if: steps.insiders.outcome == 'success' || steps.analytics.outcome == 'success'
+        run: python scripts/sec/publish_pages.py
+      - name: Publish changed SEC landing pages
+        if: steps.insiders.outcome == 'success' || steps.analytics.outcome == 'success'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add insider-buying/index.html insider-selling/index.html sector-analytics/index.html report-highlights/index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Update SEC landing pages [skip ci]"
+            git pull --rebase
+            git push
+          fi
+      - name: Report incomplete SEC updates
+        if: steps.figures.outcome == 'failure' || steps.insiders.outcome == 'failure' || steps.analytics.outcome == 'failure'
+        run: exit 1
