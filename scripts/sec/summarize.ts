@@ -54,11 +54,16 @@ const US_CASH_FLOW: Record<string, string[]> = {
   // the cash-flow add-back for stock-based compensation: a real cost paid in
   // shares (dilution), read by research reports and the company page
   stock_based_compensation: ['ShareBasedCompensation', 'AllocatedShareBasedCompensationExpense'],
+  // what moved the share count: cash spent buying shares back, cash raised selling new ones
+  buybacks: ['PaymentsForRepurchaseOfCommonStock'],
+  share_sales: ['ProceedsFromIssuanceOfCommonStock', 'ProceedsFromIssuanceInitialPublicOffering'],
 }
 const IFRS_CASH_FLOW: Record<string, string[]> = {
   operating_cash_flow: ['CashFlowsFromUsedInOperatingActivities'],
   capex: ['PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities', 'PurchaseOfPropertyPlantAndEquipment'],
   stock_based_compensation: ['AdjustmentsForSharebasedPayments'],
+  buybacks: ['PaymentsToAcquireOrRedeemEntitysShares'],
+  share_sales: ['ProceedsFromIssuingShares'],
 }
 const IFRS_INSTANT: Record<string, string[]> = {
   equity: ['EquityAttributableToOwnersOfParent', 'Equity'],
@@ -340,6 +345,39 @@ function sharesOutstanding(dei: Record<string, Concept>, source: Record<string, 
   return rows.filter((i) => (i.filed ?? '') === newestFiling).reduce((sum, i) => sum + i.val, 0)
 }
 
+/** Shares outstanding now and about a year earlier, so the page can tell
+ * buybacks from dilution. First the basic weighted average of the latest
+ * quarter and the same quarter a year earlier, as last filed: the year-ago
+ * figure is then restated for any split. Basic, not diluted: a loss quarter
+ * leaves options and convertible preferred out of the diluted count, so a
+ * profit quarter against a loss one shows a false fall (Cerebras, Oct 2026).
+ * Otherwise the cover-page count (all classes on one date) a year apart,
+ * unless the two differ by about a split factor (CrowdStrike 4-for-1). */
+function shareCount(dei: Record<string, Concept>, source: Record<string, Concept>) {
+  const basic = source.WeightedAverageNumberOfSharesOutstandingBasic ?? source.WeightedAverageShares
+  const quarters = dedupe(basic?.units.shares ?? []).filter((i) => within(days(i), 80, 100))
+    .sort((a, b) => (a.end < b.end ? -1 : a.end > b.end ? 1 : 0))
+  const last = quarters.at(-1)
+  const prior = last ? quarters.filter((i) => within(diffDays(last.end, i.end), 345, 385)).at(-1) : undefined
+  if (last && prior && prior.val > 0 && age(last.end) <= 200) {
+    return { now: last.val, now_date: last.end, year_ago: prior.val, year_ago_date: prior.end, method: 'basic weighted average' }
+  }
+  const byDate = new Map<string, { filed: string; sum: number }>()
+  for (const i of dei.EntityCommonStockSharesOutstanding?.units.shares ?? []) {
+    const filed = i.filed ?? ''
+    const current = byDate.get(i.end)
+    if (!current || filed > current.filed) byDate.set(i.end, { filed, sum: i.val })
+    else if (filed === current.filed) current.sum += i.val
+  }
+  const dates = [...byDate.keys()].sort()
+  const now = dates.at(-1)
+  const before = now ? dates.filter((d) => within(diffDays(now, d), 330, 400)).at(-1) : undefined
+  if (!now || !before || age(now) > 200 || !(byDate.get(before)!.sum > 0)) return null
+  const ratio = byDate.get(now)!.sum / byDate.get(before)!.sum
+  if (SPLIT_FACTORS.some((k) => Math.abs(ratio / k - 1) < 0.05 || Math.abs(ratio * k - 1) < 0.05)) return null
+  return { now: byDate.get(now)!.sum, now_date: now, year_ago: byDate.get(before)!.sum, year_ago_date: before, method: 'cover page' }
+}
+
 const SPLIT_FACTORS = [2, 3, 4, 5, 8, 10, 15, 20, 25, 30, 40, 50]
 const round6 = (value: number) => Math.round(value * 1e6) / 1e6
 
@@ -565,6 +603,7 @@ export function summarize(factsDoc: FactsDoc) {
     }
   }
   if (taxonomy === 'us-gaap') balance.shares_outstanding = sharesOutstanding(facts.dei ?? {}, source, basis !== 'quarter')
+  result.share_count = shareCount(facts.dei ?? {}, source)
   if (balance.cash_and_short_term_investments == null && balance.cash != null && balance.short_term_investments != null) {
     balance.cash_and_short_term_investments = balance.cash + balance.short_term_investments
   }
