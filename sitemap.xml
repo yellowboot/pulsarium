@@ -310,6 +310,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/bx/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/byddy/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>hourly</changefreq>
@@ -920,6 +925,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/hlt/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/hon/</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
@@ -1416,7 +1426,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/industrials/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1496,7 +1506,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sndk/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
