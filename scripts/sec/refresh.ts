@@ -63,6 +63,8 @@ for (const target of targets) {
       data: summary, updated_at: new Date().toISOString(),
     })
   } catch (error) { // one company's odd filing must not stop the run
+    // a fund or trust with a CIK but no company facts (QQQX): no SEC data, not a failure
+    if (error instanceof Error && /^SEC 404 for .*\/companyfacts\//.test(error.message)) { skipped.push(target.symbol); continue }
     const old = existing.get(target.id)
     if (old) { rows.push(old); reused++ } // retain its original update time on failure
     failed.push(target.symbol)
