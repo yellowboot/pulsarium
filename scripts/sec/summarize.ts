@@ -51,10 +51,14 @@ const US_CASH_FLOW: Record<string, string[]> = {
   operating_cash_flow: ['NetCashProvidedByUsedInOperatingActivities',
     'NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'],
   capex: ['PaymentsToAcquirePropertyPlantAndEquipment', 'PaymentsToAcquireProductiveAssets'],
+  // the cash-flow add-back for stock-based compensation: a real cost paid in
+  // shares (dilution), read by research reports and the company page
+  stock_based_compensation: ['ShareBasedCompensation', 'AllocatedShareBasedCompensationExpense'],
 }
 const IFRS_CASH_FLOW: Record<string, string[]> = {
   operating_cash_flow: ['CashFlowsFromUsedInOperatingActivities'],
   capex: ['PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities', 'PurchaseOfPropertyPlantAndEquipment'],
+  stock_based_compensation: ['AdjustmentsForSharebasedPayments'],
 }
 const IFRS_INSTANT: Record<string, string[]> = {
   equity: ['EquityAttributableToOwnersOfParent', 'Equity'],
