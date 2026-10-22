@@ -116,7 +116,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/abbv/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -816,7 +816,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/dis/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1201,6 +1201,11 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/nbis/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/nem/</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>hourly</changefreq>
   </url>
