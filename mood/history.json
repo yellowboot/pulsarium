@@ -495,10 +495,17 @@
   },
   {
    "date": "2026-10-21",
-   "value": 54,
+   "value": 55,
    "label": "Neutral",
-   "headlines": 204,
-   "avg7": 52.9,
+   "headlines": 257,
+   "avg7": 53.0
+  },
+  {
+   "date": "2026-10-22",
+   "value": 53,
+   "label": "Neutral",
+   "headlines": 112,
+   "avg7": 53.9,
    "window": "in the last 12 hours"
   }
  ]
