@@ -6,37 +6,43 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 23.10.2026 11:37
-31 of 80 news items unmatched this run
+Generated: 23.10.2026 13:17
+37 of 80 news items unmatched this run
 
-- [Yahoo Finance] Tech Regains Footing, Undergirds Wall Street Pre-Bell; Asia Mixed, Europe Off
-- [Nasdaq] International Consolidated Airlines Group S.A. - Depositary Receipt Price Target Increased by 12.04% to $14.89
-- [Nasdaq] Nam Tai Property Inc. Closes RMB 700 Million Inno Park Refinancing at 3.5% Fixed Rate
-- [Yahoo Finance] Even With SOXX and DRAM Down Between 24% and 42% From Their Highs, I'd Still Rather Buy This Vanguard ETF for Semiconductor Stock Exposure
-- [Yahoo Finance] The 10-Year Yield Just Fell Below 5% as Investors Fled AI Stocks
-- [Nasdaq] Autoliv, Inc. Reports Q3 2026 Net Sales of $2,693 million and Diluted EPS of $2.13
-- [Nasdaq] QIAGEN N.V. Enters Business Combination Agreement for Planned Tender Offer by Crown NL Bidco B.V. at €46.50 Per Share
-- [Nasdaq] Evaxion Announces 89% Vaccine Target Precision and Sustained T-Cell and Clinical Responses at Three-Year Follow-Up in Phase 2 Trial with Personalized Cancer Vaccine EVX-01
-- [Nasdaq] CVR Energy Consensus Price Target Increased by 34.11% to $44.49
-- [Nasdaq] Lithia Motors Consensus Price Target Cut by 11% to $413.53
-- [Investing.com] European shares slip as French fiscal turmoil drives weekly loss
-- [Nasdaq] Ganfeng Lithium Group Co., - Depositary Receipt Price Target Decreased by 42.68% to $5.23
-- [Nasdaq] Sweetgreen Consensus Price Target Raised by 12.50% to $8.35
-- [Nasdaq] Zai Lab Limited Announces $250 Million Private Placement
-- [Investing.com] TSX futures drop amid gold price fall, AI anxieties
-- [CNBC] U.S. oil holds above $100, Brent at five-month high as Iran says it’s prepared for warfare
-- [Investing.com] Deutsche Bank upgrades Roche on bullish physician feedback for cancer drug
-- [Investing.com] Wall Street futures dip after AI rout, telecoms slide
-- [Investing.com] Why is Gorman-Rupp stock surging today?
-- [CNBC] Volvo Cars plunges 27% as CEO says China sales slump came 'faster than we thought'
-- [MarketWatch] This market signal just occurred for only the second time since 1999. Here’s what happened and what it means.
-- [CNBC] Defense giant Saab sees orders triple after Gripen fighter jet deal with Ukraine
-- [CNBC] Japan core inflation in September surges to its highest this year at 2.1%
-- [CoinDesk] India's largest exchange denies hack after sleuths pointed to $16 million in suspicious outflows
-- [CNBC] SK Hynix shares jump over 4% after early losses as chipmaker scraps Solidigm IPO plans
-- [OilPrice.com] Oil Prices Hold Near $100 as Middle East Risks Offset Peace Hopes
-- [OilPrice.com] Why Smart Investors Are Selling Oil Stocks and Buying MLPs
-- [OilPrice.com] Renewables Boom Pushes Australia’s Gas Power to Quarter-Century Low
-- [OilPrice.com] European Natural Gas Prices Surge to Highest Level Since 2022
-- [CoinDesk] Polymarket has reportedly fired its marketing chief, also a close friend of the CEO
-- [CoinDesk] Cardano holders are being asked to bet $5 million on copper hitting a new record
+- [Yahoo Finance] OpenAI aiming for new $30 billion funding round at a $1.25 trillion valuation
+- [Yahoo Finance] Lower Fees, Higher Yield: Why XLE Tops XOP
+- [Investing.com] Thursday’s insider activity: Notable buys at Agora and Rapport
+- [Yahoo Finance] Capital Clean Energy Carriers Corp. Schedules Third Quarter 2026 Earnings Release, Conference Call and Webcast
+- [Investing.com] Why is Zymeworks stock surging today?
+- [Investing.com] Why is Cboe Global Markets stock rallying today?
+- [Investing.com] Why is Robert Half stock surging today?
+- [Investing.com] Evercore Highlights 2 Cybersecurity Stocks as Demand Strengthens Into Year-End
+- [Investing.com] Zymeworks stock surges on $813M Roche licensing deal
+- [Yahoo Finance] Update: US Equity Futures Decline Pre-Bell Friday as Traders Assess Rising Oil Prices
+- [CNBC] Stock futures remain under pressure amid AI trade worries, gain in oil above $100: Live updates
+- [Nasdaq] World Acceptance Corporation Reports Fiscal 2027 Second Quarter Results
+- [Nasdaq] Central Puerto S.A. Acquires 120,000 Treasury Shares on BYMA
+- [Nasdaq] Immatics N.V. Announces Updated Phase 1 Data for IMA203CD8 with 51% Objective Response Rate
+- [Yahoo Finance] Want Rising Income in Retirement? Invest in These 4 Dividend Growers Whose Free Cash Flow Covers Every Payout
+- [Nasdaq] American Outdoor Brands Average Price Target Increased 11.11% to $18.70
+- [Nasdaq] Alpha Teknova Consensus Price Target Raised by 19.05% to $10.93
+- [Yahoo Finance] The AI Bottleneck Takes Many Forms. These 7 Stocks Will Benefit.
+- [Nasdaq] WBB Securities Upgrades Turn Therapeutics to Hold from Sell
+- [CNBC] U.S. oil rises above $100, Brent at five-month high as Iran says it’s prepared for warfare
+- [Nasdaq] AGNT Consensus Price Target Raised 11.63% to $6.12
+- [Nasdaq] Liberty Global Consensus Price Target Raised 15.13% to $22.31
+- [Nasdaq] FinecoBank Banca Fineco S.p.A. - Depositary Receipt Price Target Increased by 28.73% to $62.18
+- [Nasdaq] Aozora Bank, - Depositary Receipt Price Target Increased by 38.11% to $5.11
+- [Nasdaq] NGL Energy Partners LP - Preferred Stock Price Target Decreased by 11.91% to $47.08
+- [Yahoo Finance] Cloud AI Update - Military Cloud Market Soars with Advanced Network Solutions
+- [Nasdaq] Whirlpool Consensus Price Target Cut by 18.08% to $35.51
+- [Yahoo Finance] Nasdaq Futures Steady as AI Selloff Pauses
+- [Yahoo Finance] Lake Shore Bancorp, Inc. Declares Dividend
+- [Nasdaq] Storebrand ASA - Depositary Receipt Consensus Price Target Increased by 114.54% to $43.11
+- [Nasdaq] Intelligent Protection Management Corp. Signs Agreement to Acquire Advanced Technology Distributors Business for up to $2.7 million
+- [Nasdaq] Rithm Capital Corp. Announces Third Quarter 2026 Results
+- [CNBC] Fewer people are flying as airfare soars. Here's why airlines aren't worried
+- [CNBC] Volvo Cars plunges 26% as CEO says China sales slump came 'faster than we thought'
+- [Mining.com] Halo Minerals clears key hurdle at Chile copper project
+- [Mining.com] Kodal targets Ghana lithium growth beyond Mali mine
+- [CNBC] Trump invokes Cold War-era Defense Production Act for oil production, refining
