@@ -216,7 +216,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/asx/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -805,6 +805,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/dash/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/db/</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>hourly</changefreq>
@@ -936,7 +941,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/glw/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1726,7 +1731,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/uber/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
