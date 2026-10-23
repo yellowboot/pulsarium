@@ -6,456 +6,456 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 23 Oct 2026 16:17:26 +0000</lastBuildDate>
-  <item>
-    <title>Dow tumbles 500 points as Middle East tensions rise, selling broadens beyond tech: Live updates</title>
-    <link>https://www.cnbc.com/2026/10/22/stock-market-today-live-update.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/22/stock-market-today-live-update.html</guid>
-    <pubDate>Fri, 23 Oct 2026 16:16:33 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The Dow Industrials fell on Friday as Middle East tensions rose.</description>
-    
-  </item>
-  <item>
-    <title>SpaceX earnings, tech selloff lead to rocky week for investors</title>
-    <link>https://finance.yahoo.com/markets/stocks/article/spacex-earnings-tech-selloff-lead-to-rocky-week-for-investors-161556316.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/article/spacex-earnings-tech-selloff-lead-to-rocky-week-for-investors-161556316.html?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 16:15:56 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>SpaceX (SPCX) investors are in the midst of a rocky week. A third-quarter report that beat estimates and Elon Musk&#x27;s open backing of a merger with Tesla (TSLA) sent shares surging Wednesday, but a Thursday selloff erased the gain.</description>
-    <category>TSLA</category><category>SPCX</category>
-  </item>
+  <lastBuildDate>Fri, 23 Oct 2026 17:37:21 +0000</lastBuildDate>
   <item>
     <title>DOJ sues to block Alaska from certifying Senate race winner if Republican narrowly loses</title>
     <link>https://www.cnbc.com/2026/10/23/alaska-senate-election-doj-lawsuit-sullivan.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/10/23/alaska-senate-election-doj-lawsuit-sullivan.html</guid>
-    <pubDate>Fri, 23 Oct 2026 16:15:33 +0000</pubDate>
+    <pubDate>Fri, 23 Oct 2026 17:35:20 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The Alaska race is one of several contests around the United States that could determine whether Republicans retain their slim majority in the Senate</description>
+    <description>There are two Dan Sullivans on the ballot in the Senate race in Alaska. The DOJ says that fact could help Democratic nominee Mary Peltola defeat both of them.</description>
     
   </item>
   <item>
-    <title>Wells Fargo Names Top Pick Ahead of Q3 Earnings</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/wells-fargo-names-top-pick-160959144.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/wells-fargo-names-top-pick-160959144.html?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 16:09:59 +0000</pubDate>
+    <title>10-year Treasury yield drops back to 5% this week as investors seek cover from AI worries</title>
+    <link>https://www.cnbc.com/2026/10/23/bonds-yields-us-treasurys.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/23/bonds-yields-us-treasurys.html</guid>
+    <pubDate>Fri, 23 Oct 2026 17:26:23 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>The 10-year Treasury yield was just below 5% Friday after AI-driven tech selling sent investors into government bonds.</description>
+    <category>UST10Y</category>
+  </item>
+  <item>
+    <title>Texas Senate race: New Talarico ad rips Elon Musk &#x27;dark money&#x27; push</title>
+    <link>https://www.cnbc.com/2026/10/23/james-talarico-campaign-ad-elon-musk-texas-senate-election.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/23/james-talarico-campaign-ad-elon-musk-texas-senate-election.html</guid>
+    <pubDate>Fri, 23 Oct 2026 17:26:12 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>James Talarico hit back at Elon Musk&#x27;s attacks and spending in a new ad by the Democratic nominee for U.S. Senate in Texas.</description>
+    
+  </item>
+  <item>
+    <title>American Express is cutting 5% of its workforce to &#x27;prepare for AI&#x27;</title>
+    <link>https://www.cnbc.com/2026/10/23/american-express-job-cuts.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/23/american-express-job-cuts.html</guid>
+    <pubDate>Fri, 23 Oct 2026 17:21:10 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Amex, which reported third-quarter results earlier Friday, is taking a $336 million restructuring charge in the quarter, CEO Stephen Squeri said Friday.</description>
+    <category>AXP</category>
+  </item>
+  <item>
+    <title>1 software stock worth your attention and 2 we brush off</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/1-software-stock-worth-attention-172039072.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/1-software-stock-worth-attention-172039072.html?.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:20:39 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Investing.com -- Wells Fargo has identified Amazon as its top long idea heading into third-quarter earnings, citing expected positive revisions to Amazon Web Services revenue and operating income.</description>
-    <category>AMZN</category><category>WFC</category>
+    <description>From commerce to culture, software is digitizing every aspect of our lives. This secular theme has materialized in superior earnings growth and stock price performance for most SaaS companies, and over the last six months, the…</description>
+    
   </item>
   <item>
-    <title>Macy’s revamps Santaland, brings back Holiday Square</title>
-    <link>https://www.retaildive.com/news/macys-holiday-revamped-santaland/833826/</link>
-    <guid isPermaLink="false">https://www.retaildive.com/news/macys-holiday-revamped-santaland/833826/</guid>
-    <pubDate>Fri, 23 Oct 2026 16:08:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Retail Dive</source>
-    <description>The department store is leaning into the festive season at its Herald Square flagship in New York with a variety of activations.</description>
-    <category>M</category>
+    <title>Wall Street Thinks the eVTOL Sector Is Ready for Takeoff. Here&#x27;s Why I Don&#x27;t.</title>
+    <link>https://www.fool.com/investing/2026/10/23/wall-street-thinks-the-evtol-sector-is-ready-for/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/23/wall-street-thinks-the-evtol-sector-is-ready-for/?.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:20:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Flying cars and air taxis face a few big roadblocks to becoming a successful, scalable business.</description>
+    
   </item>
   <item>
-    <title>Etsy updates AI use policies to emphasize craftsmanship</title>
-    <link>https://www.retaildive.com/news/etsy-updates-ai-use-policies-emphasize-craftsmanship/833838/</link>
-    <guid isPermaLink="false">https://www.retaildive.com/news/etsy-updates-ai-use-policies-emphasize-craftsmanship/833838/</guid>
-    <pubDate>Fri, 23 Oct 2026 16:08:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Retail Dive</source>
-    <description>While it’s implementing more AI, the online marketplace now requires at least one authentic, non-AI generated image in most seller listings.</description>
+    <title>6 Million Barrels in Two Minutes Draws CFTC Scrutiny</title>
+    <link>https://oilprice.com/Latest-Energy-News/World-News/6-Million-Barrels-in-Two-Minutes-Draws-CFTC-Scrutiny.html</link>
+    <guid isPermaLink="false">https://oilprice.com/Latest-Energy-News/World-News/6-Million-Barrels-in-Two-Minutes-Draws-CFTC-Scrutiny.html</guid>
+    <pubDate>Fri, 23 Oct 2026 17:20:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">OilPrice.com</source>
+    <description>Oil traders sold futures equivalent to at least 6 million barrels of crude in just two minutes on March 23, shortly before President Donald Trump backed away from threats to strike Iranian power plants. Now, the federal regulator…</description>
+    
+  </item>
+  <item>
+    <title>Stocks See Continued Downward Pressure from AI Anxiety and Oil Prices</title>
+    <link>https://www.nasdaq.com/articles/stocks-see-continued-downward-pressure-ai-anxiety-and-oil-prices</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-see-continued-downward-pressure-ai-anxiety-and-oil-prices</guid>
+    <pubDate>Fri, 23 Oct 2026 17:18:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is down -0.45%, the Dow Jones Industrial Average ($DOWI ) (DIA ) is down -1.08%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is down -0.08%. December E-mini S&amp;P futures (ESZ26 ) are down -0.43%, and…</description>
+    <category>SPY</category><category>QQQ</category><category>DJI</category>
+  </item>
+  <item>
+    <title>Cattle Traders Look to Square Up Ahead of USDA Report</title>
+    <link>https://www.nasdaq.com/articles/cattle-traders-look-square-ahead-usda-report</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/cattle-traders-look-square-ahead-usda-report</guid>
+    <pubDate>Fri, 23 Oct 2026 17:18:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Live cattle futures fell back ahead of the Friday report, as contracts were steady to 77 cents in the red at the close. Open interest was down 624 contracts on Thursday. Cash trade has yet to be reported this week. The Thursday Fed…</description>
+    
+  </item>
+  <item>
+    <title>Stocks Undercut by Oil Prices and Continued AI Anxiety</title>
+    <link>https://www.nasdaq.com/articles/stocks-undercut-oil-prices-and-continued-ai-anxiety</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-undercut-oil-prices-and-continued-ai-anxiety</guid>
+    <pubDate>Fri, 23 Oct 2026 17:18:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is down -0.19%, the Dow Jones Industrial Average ($DOWI ) (DIA ) is down -1.02%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is up +0.47%. December E-mini S&amp;P futures (ESZ26 ) are down -0.29%, and December…</description>
+    <category>SPY</category><category>QQQ</category><category>DJI</category>
+  </item>
+  <item>
+    <title>Wheat Kicking off Friday with a Slight Bounce</title>
+    <link>https://www.nasdaq.com/articles/wheat-kicking-friday-slight-bounce</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-kicking-friday-slight-bounce</guid>
+    <pubDate>Fri, 23 Oct 2026 17:17:59 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Wheat is seeing some buying come in on Friday morning, with just marginal gains. The wheat complex saw weakness across the three markets on Thursday. Chicago SRW contracts were down 3 ½ to 6 ½ cents on the day. Open interest was up 940…</description>
+    
+  </item>
+  <item>
+    <title>Soybeans Ticking Higher on Friday Morning</title>
+    <link>https://www.nasdaq.com/articles/soybeans-ticking-higher-friday-morning-0</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/soybeans-ticking-higher-friday-morning-0</guid>
+    <pubDate>Fri, 23 Oct 2026 17:17:59 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Soybeans are trading with contracts 1 to 2 ¼ cents higher in the front months. Futures closed the Thursday session mixed, with front months 1 to 7 ¾ cents higher and deferreds fractionally to 1 ¾ cents lower. November options expire…</description>
+    
+  </item>
+  <item>
+    <title>Corn Slipping Lower on Friday Morning</title>
+    <link>https://www.nasdaq.com/articles/corn-slipping-lower-friday-morning</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/corn-slipping-lower-friday-morning</guid>
+    <pubDate>Fri, 23 Oct 2026 17:17:59 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Corn prices are fractionally to 1 ¼ cents lower early on Friday. Futures fell back weaker on Thursday, after the midweek gains, as contracts were down 2 ¼ to 3 ¾ cents on the session. Open interest was down 9,943 contracts, mainly int…</description>
+    
+  </item>
+  <item>
+    <title>Hogs Looks to Round Out the Week</title>
+    <link>https://www.nasdaq.com/articles/hogs-looks-round-out-week</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/hogs-looks-round-out-week</guid>
+    <pubDate>Fri, 23 Oct 2026 17:17:59 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Lean hog futures posted Thursday losses of 7 to 50 cents across the board on Thursday. Open interest was up 3,505 contracts. USDA’s national base hog price was down $1.22 from the day prior in the Thursday PM report at $66.48. The CME…</description>
+    
+  </item>
+  <item>
+    <title>Corn Fades Back Lower on Thursday</title>
+    <link>https://www.nasdaq.com/articles/corn-fades-back-lower-thursday-0</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/corn-fades-back-lower-thursday-0</guid>
+    <pubDate>Fri, 23 Oct 2026 17:17:59 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Corn futures fell back weaker on Thursday, after the midweek gains, as contracts were down 2 ¼ to 3 ¾ cents on the session. The CmdtyView national average Cash Corn price was down 2 1/2 cents at $4.22 1/2. The average close for December…</description>
+    
+  </item>
+  <item>
+    <title>Broyhill is Upgrading Quality in Software: Moving from Intuit (INTU) to Microsoft</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/broyhill-upgrading-quality-software-moving-171612040.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/broyhill-upgrading-quality-software-moving-171612040.html?.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:16:12 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Broyhill Asset Management, a Charlotte-based firm, issued its third-quarter 2026 investor letter. The letter can be downloaded here. The Broyhill Equity Composite decreased by 0.3% in Q3, underperforming the MSCI All Country World…</description>
+    <category>MSFT</category><category>INTU</category>
+  </item>
+  <item>
+    <title>Rithm Capital Corp. Q3 2026 Earnings Call Summary</title>
+    <link>https://app.moby.co/home/research/tools/earningsCalendar/earnings-rithm-capital-corp-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://app.moby.co/home/research/tools/earningsCalendar/earnings-rithm-capital-corp-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:15:35 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Moby summary of Rithm Capital Corp.&#x27;s Q3 2026 earnings call</description>
+    
+  </item>
+  <item>
+    <title>Doctors call Moderna, Merck cancer vaccine data a major advancement — despite Wall Street reaction</title>
+    <link>https://www.cnbc.com/2026/10/23/moderna-merck-cancer-vaccine-data.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/23/moderna-merck-cancer-vaccine-data.html</guid>
+    <pubDate>Fri, 23 Oct 2026 17:15:08 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Six melanoma specialists said the Moderna and Merck vaccine results represent a clinically meaningful result for melanoma patients who underwent surgery.</description>
+    <category>MRK</category><category>MRNA</category>
+  </item>
+  <item>
+    <title>Newmont prices Red Chris expansion at up to $4.8B</title>
+    <link>https://www.mining.com/newmont-prices-red-chris-expansion-at-up-to-4-8b/</link>
+    <guid isPermaLink="false">https://www.mining.com/newmont-prices-red-chris-expansion-at-up-to-4-8b/</guid>
+    <pubDate>Fri, 23 Oct 2026 17:15:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Mining.com</source>
+    <description>The project in British Columbia would produce an annual average of 275,000–325,000 oz. gold and 65,000–85,000 tonnes copper from 2035 through 2040.</description>
+    <category>NEM</category>
+  </item>
+  <item>
+    <title>Gucci’s China Problem Drags Kering Deeper Into Luxury’s Slump</title>
+    <link>https://app.moby.co/home/news/news-guccis-china-problem-drags-kering-deeper-into-luxurys-slump?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://app.moby.co/home/news/news-guccis-china-problem-drags-kering-deeper-into-luxurys-slump?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:14:29 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The French luxury group plunged around 11% after another disappointing quarter at Gucci showed that its turnaround remains fragile as Chinese demand keeps weakening.</description>
     
   </item>
   <item>
     <title>The S&amp;P 500 is forming a bearish chart pattern. Can it snap out of it?</title>
     <link>https://www.cnbc.com/2026/10/23/the-sp-500-is-forming-a-bearish-chart-pattern-can-it-snap-out-of-it.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/10/23/the-sp-500-is-forming-a-bearish-chart-pattern-can-it-snap-out-of-it.html</guid>
-    <pubDate>Fri, 23 Oct 2026 16:07:00 +0000</pubDate>
+    <pubDate>Fri, 23 Oct 2026 17:14:01 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>The S&amp;P 500 has struggled to break decisively above 7,800 since first reaching that area in late July.</description>
     <category>SPY</category>
   </item>
   <item>
-    <title>As the U.S. Pulls Chip Making Back Home, the Toolmakers Win First</title>
-    <link>https://www.fool.com/investing/2026/10/23/as-the-us-pulls-chip-making-back-home-toolmakers/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/23/as-the-us-pulls-chip-making-back-home-toolmakers/?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 16:05:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>As new U.S. chip fabs get funded, the toolmakers and the chipmakers won&#x27;t be paid at the same time. Here&#x27;s where six chip stocks sit in that line.</description>
-    
-  </item>
-  <item>
-    <title>AI chip sell-off is ‘unmoored from fundamentals,’ LYNX says</title>
-    <link>https://finance.yahoo.com/technology/ai/articles/ai-chip-sell-off-unmoored-160441115.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/ai-chip-sell-off-unmoored-160441115.html?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 16:04:41 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Investing.com -- The Nasdaq Composite plunged 2.6% on Thursday as technology stocks sold off sharply, but the intensity of the decline went beyond fundamentals, according to LYNX Equity Strategies.</description>
-    <category>QQQ</category>
-  </item>
-  <item>
-    <title>Western Digital earnings analysis: questions answered and next catalysts</title>
-    <link>https://www.investing.com/news/stock-market-news/western-digital-earnings-analysis-questions-answered-and-next-catalysts-93CH-4970089</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/western-digital-earnings-analysis-questions-answered-and-next-catalysts-93CH-4970089</guid>
-    <pubDate>Fri, 23 Oct 2026 16:02:16 +0000</pubDate>
+    <title>BP, Louisiana agree to resolve Deepwater Horizon disputes</title>
+    <link>https://www.investing.com/news/stock-market-news/bp-louisiana-agree-to-resolve-deepwater-horizon-disputes-4970169</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/bp-louisiana-agree-to-resolve-deepwater-horizon-disputes-4970169</guid>
+    <pubDate>Fri, 23 Oct 2026 17:12:55 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
     <description></description>
-    <category>WDC</category>
+    <category>BP</category>
   </item>
   <item>
-    <title>Reddit&#x27;s Q3 DAU Pressure Offset by Strong Ad Trends, Wedbush Says</title>
-    <link>https://finance.yahoo.com/media-advertising/articles/reddit-apos-q3-dau-pressure-160204616.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/media-advertising/articles/reddit-apos-q3-dau-pressure-160204616.html?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 16:02:04 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Reddit (RDDT) faces near-term pressure on daily active users heading into its Q3 report on Oct. 29,</description>
-    <category>RDDT</category>
-  </item>
-  <item>
-    <title>Bath &amp; Body Works introduces new store concept</title>
-    <link>https://www.retaildive.com/news/bath-body-works-new-store-concept-feel-good/833827/</link>
-    <guid isPermaLink="false">https://www.retaildive.com/news/bath-body-works-new-store-concept-feel-good/833827/</guid>
-    <pubDate>Fri, 23 Oct 2026 16:02:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Retail Dive</source>
-    <description>The Feel Good concept is now open in Charlotte, North Carolina, and features easy navigation and enhanced testing experiences.</description>
-    
-  </item>
-  <item>
-    <title>Wheat Kicking off Friday with a Slight Bounce</title>
-    <link>https://www.nasdaq.com/articles/wheat-kicking-friday-slight-bounce</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-kicking-friday-slight-bounce</guid>
-    <pubDate>Fri, 23 Oct 2026 16:01:03 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Wheat is seeing some buying come in on Friday morning, with just marginal gains. The wheat complex saw weakness across the three markets on Thursday. Chicago SRW contracts were down 3 ½ to 6 ½ cents on the day. Open interest was up 940…</description>
-    
-  </item>
-  <item>
-    <title>Arm Stock Has a Growth Opportunity That Extends Far Beyond Smartphones</title>
-    <link>https://247wallst.com/investing/2026/10/23/arm-stock-has-a-growth-opportunity-that-extends-far-beyond-smartphones/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://247wallst.com/investing/2026/10/23/arm-stock-has-a-growth-opportunity-that-extends-far-beyond-smartphones/?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 16:00:38 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Arm&#x27;s royalty machine is shifting gears as data centers pull ahead of smartphones, but a 94x forward multiple means the stock needs everything to go right. One upcoming trial and a critical product ramp could decide whether buyers at…</description>
-    
-  </item>
-  <item>
-    <title>Finland stocks lower at close of trade; OMX Helsinki 25 down 0.40%</title>
-    <link>https://www.investing.com/news/stock-market-news/finland-stocks-lower-at-close-of-trade-omx-helsinki-25-down-040-4970078</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/finland-stocks-lower-at-close-of-trade-omx-helsinki-25-down-040-4970078</guid>
-    <pubDate>Fri, 23 Oct 2026 16:00:04 +0000</pubDate>
+    <title>Goldman Sachs sees US stocks dip on tech earnings and macro shifts</title>
+    <link>https://www.investing.com/news/stock-market-news/goldman-sachs-sees-us-stocks-dip-on-tech-earnings-and-macro-shifts-93CH-4970167</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/goldman-sachs-sees-us-stocks-dip-on-tech-earnings-and-macro-shifts-93CH-4970167</guid>
+    <pubDate>Fri, 23 Oct 2026 17:11:27 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
     <description></description>
+    <category>GS</category>
+  </item>
+  <item>
+    <title>Sector Update: Energy</title>
+    <link>https://finance.yahoo.com/energy/articles/sector-energy-170922918.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/energy/articles/sector-energy-170922918.html?.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:09:22 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Energy stocks were higher Friday afternoon, with the NYSE Energy Sector Index rising 2.6% and the St</description>
     
   </item>
   <item>
-    <title>CoreWeave Is Down 13% in a Week. Here&#x27;s the Price at Which I&#x27;d Buy</title>
-    <link>https://www.fool.com/investing/2026/10/23/coreweave-is-down-xx-in-a-week-heres-the-price-at/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/23/coreweave-is-down-xx-in-a-week-heres-the-price-at/?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 16:00:00 +0000</pubDate>
+    <title>Walmart Launches AI Shopping Tools To Drive Customer Transactions</title>
+    <link>https://www.tikr.com/blog/walmart-stock-ai-shopping-agent-tools-customer-transactions?ref=yahoofinance&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.tikr.com/blog/walmart-stock-ai-shopping-agent-tools-customer-transactions?ref=yahoofinance&amp;.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:09:21 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The neocloud stock looks undervalued relative to its growth potential.</description>
-    <category>CRWV</category>
+    <description>Key Stats for Walmart StockPrice change for Walmart stock in last 6 months: -9%$WMT Stock Price as of Oct. 22: $12052-Week High: $135$WMT Stock Price Target: $127__Now Live: Discover how much upside your favorite stocks could have using…</description>
+    <category>WMT</category>
   </item>
   <item>
-    <title>Worthington Steel, Inc. Announces Kloeckner Shareholders Reject Domination and Profit and Loss Transfer Agreement, Retaining 62% Stake</title>
-    <link>https://www.nasdaq.com/articles/worthington-steel-inc-announces-kloeckner-shareholders-reject-domination-and-profit-and</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/worthington-steel-inc-announces-kloeckner-shareholders-reject-domination-and-profit-and</guid>
-    <pubDate>Fri, 23 Oct 2026 15:58:50 +0000</pubDate>
+    <title>Stock Market Today: Dow Tumbles 500 Points As Oil Jumps; Micron, Intel Lead Nasdaq-100 (Live Coverage)</title>
+    <link>https://finance.yahoo.com/m/81c00f86-3a6b-31fa-a8aa-5d5650c74f9c/stock-market-today%3A-dow.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/81c00f86-3a6b-31fa-a8aa-5d5650c74f9c/stock-market-today%3A-dow.html?.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:09:20 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The Dow Jones index drops 500 points Friday as oil prices rally. Bloom, MaxLinear and WDC are big earnings movers.</description>
+    <category>MU</category><category>INTC</category><category>DJI</category><category>WDC</category>
+  </item>
+  <item>
+    <title>Hewlett Packard Enterprise Climbs 4% While AI Server Peers Lag; Dell Rises 2%, Super Micro Unchanged</title>
+    <link>https://247wallst.com/investing/2026/10/23/hewlett-packard-enterprise-climbs-4-while-ai-server-peers-lag-dell-rises-2-super-micro-unchanged/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/investing/2026/10/23/hewlett-packard-enterprise-climbs-4-while-ai-server-peers-lag-dell-rises-2-super-micro-unchanged/?.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:09:16 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Hewlett Packard Enterprise is pulling away from its AI server rivals on a day when the broader market stumbled, and the reasons behind that gap stretch from industrial factory floors all the way to the surface of the Moon.</description>
+    <category>SMCI</category><category>DELL</category><category>HPE</category>
+  </item>
+  <item>
+    <title>Gentex Corporation Q3 2026 Earnings Call Summary</title>
+    <link>https://app.moby.co/home/research/tools/earningsCalendar/earnings-gentex-corporation-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://app.moby.co/home/research/tools/earningsCalendar/earnings-gentex-corporation-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:06:40 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Moby summary of Gentex Corporation&#x27;s Q3 2026 earnings call</description>
+    
+  </item>
+  <item>
+    <title>Dollar Sees Support as T-note Yields Rise</title>
+    <link>https://www.nasdaq.com/articles/dollar-sees-support-t-note-yields-rise</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/dollar-sees-support-t-note-yields-rise</guid>
+    <pubDate>Fri, 23 Oct 2026 17:06:37 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Worthington Steel, Inc. announced that the proposed domination and profit and loss transfer agreement between Kloeckner &amp; Co SE and Worthington Steel GmbH, a wholly owned indirect subsidiary of Worthington Steel, did not receive the…</description>
+    <description>The dollar index (DXY00 ) is up +0.10%, supported by today’s +4 bp rise in the 10-year T-note yield. The dollar also found support from today’s stronger-than-expected US manufacturing PMI and consumer sentiment reports. The dollar has…</description>
+    <category>BP</category>
+  </item>
+  <item>
+    <title>FCC grants Intel waiver to use existing foreign-made robotic devices</title>
+    <link>https://www.investing.com/news/stock-market-news/fcc-grants-intel-waiver-for-foreignmade-robotic-devices-4967773</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/fcc-grants-intel-waiver-for-foreignmade-robotic-devices-4967773</guid>
+    <pubDate>Fri, 23 Oct 2026 17:06:25 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>INTC</category>
+  </item>
+  <item>
+    <title>Dow tumbles 500 points as Middle East tensions rise, selling broadens beyond tech: Live updates</title>
+    <link>https://www.cnbc.com/2026/10/22/stock-market-today-live-update.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/22/stock-market-today-live-update.html</guid>
+    <pubDate>Fri, 23 Oct 2026 17:05:15 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>The Dow Industrials fell on Friday as Middle East tensions rose.</description>
     
   </item>
   <item>
-    <title>Finding Rule Breakers, IRL Investing, and Making Mistakes</title>
-    <link>https://www.fool.com/investing/2026/10/23/finding-rule-breakers-irl-investing-and-making-mistakes/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/23/finding-rule-breakers-irl-investing-and-making-mistakes/?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 15:57:05 +0000</pubDate>
+    <title>Worried About a Stock Market Correction? Here&#x27;s 1 Rock-Solid Stock to Consider.</title>
+    <link>https://www.fool.com/investing/2026/10/23/worried-about-a-stock-market-correction-heres-1/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/23/worried-about-a-stock-market-correction-heres-1/?.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:05:00 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>What separates exceptional long-term investments from the rest?</description>
+    <description>There aren&#x27;t many companies that can do well during an economic downturn. Berkshire Hathaway is one of them.</description>
+    <category>BRK.B</category>
+  </item>
+  <item>
+    <title>3 insurance stocks walking a fine line</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/3-insurance-stocks-walking-fine-170439615.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/3-insurance-stocks-walking-fine-170439615.html?.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:04:39 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Insurance firms play a critical role in the financial system, offering everything from property coverage to life insurance and specialized risk solutions. Furthermore, favorable market conditions have supported premium growth and…</description>
     
   </item>
   <item>
-    <title>SpaceX CEO Elon Musk is &#x27;one of one&#x27;: Will the market give Anthropic&#x27;s Dario Amodei the same leeway?</title>
-    <link>https://finance.yahoo.com/technology/article/spacex-ceo-elon-musk-is-one-of-one-will-the-market-give-anthropics-dario-amodei-the-same-leeway-155650970.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/article/spacex-ceo-elon-musk-is-one-of-one-will-the-market-give-anthropics-dario-amodei-the-same-leeway-155650970.html?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 15:56:50 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Elon Musk&#x27;s companies get the benefit of the doubt. That may not be the case for Dario Amodei&#x27;s Anthropic.</description>
+    <title>Musk&#x27;s SpaceX is still restricting Starlink in Ukraine and the toll is rising</title>
+    <link>https://www.cnbc.com/2026/10/23/ukraine-says-starlink-restrictions-remain-despite-trump-assurances.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/23/ukraine-says-starlink-restrictions-remain-despite-trump-assurances.html</guid>
+    <pubDate>Fri, 23 Oct 2026 17:04:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Since last week, Ukraine has reported restrictions on a version of Starshield, a version of SpaceX&#x27;s Starlink, hampering its military operations against Russia.</description>
     <category>SPCX</category>
   </item>
   <item>
-    <title>Why is CrowdStrike stock surging today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-crowdstrike-stock-surging-today-93CH-4970073</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-crowdstrike-stock-surging-today-93CH-4970073</guid>
-    <pubDate>Fri, 23 Oct 2026 15:56:25 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>CRWD</category>
+    <title>Adobe Stock Has Been Under Pressure. Here’s What Could Spark a Turnaround</title>
+    <link>https://247wallst.com/investing/2026/10/23/adobe-stock-has-been-under-pressure-heres-what-could-spark-a-turnaround/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/investing/2026/10/23/adobe-stock-has-been-under-pressure-heres-what-could-spark-a-turnaround/?.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:00:15 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Adobe keeps beating earnings estimates while the stock keeps sliding, and that contradiction has split Wall Street into two very different camps with very different price targets.</description>
+    <category>ADBE</category>
   </item>
   <item>
-    <title>Retire on 8% a year with little or no risk? How to use annuities the right way.</title>
-    <link>https://www.marketwatch.com/story/retire-on-8-a-year-with-little-or-no-risk-how-to-use-annuities-the-right-way-06ababc5?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/retire-on-8-a-year-with-little-or-no-risk-how-to-use-annuities-the-right-way-06ababc5?mod=mw_rss_topstories</guid>
-    <pubDate>Fri, 23 Oct 2026 15:56:00 +0000</pubDate>
+    <title>World Acceptance Corporation Q2 2027 Earnings Call Summary</title>
+    <link>https://app.moby.co/home/research/tools/earningsCalendar/earnings-world-acceptance-corporation-q2-2027-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://app.moby.co/home/research/tools/earningsCalendar/earnings-world-acceptance-corporation-q2-2027-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 17:00:01 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Moby summary of World Acceptance Corporation&#x27;s Q2 2027 earnings call</description>
+    
+  </item>
+  <item>
+    <title>‘Some people did everything right’: I lost my home in the Great Recession. I rent in my 50s. Why is that judged as failure?</title>
+    <link>https://www.marketwatch.com/story/i-earn-110-000-a-year-i-lost-my-home-in-the-great-recession-im-renting-in-my-50s-why-is-that-judged-as-failure-d1371d67?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/i-earn-110-000-a-year-i-lost-my-home-in-the-great-recession-im-renting-in-my-50s-why-is-that-judged-as-failure-d1371d67?mod=mw_rss_topstories</guid>
+    <pubDate>Fri, 23 Oct 2026 17:00:00 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>Market turmoil has created a remarkable opportunity in recent weeks for retirees and those seeking secure, stable income for life.</description>
+    <description>”I earn $110,000 a year.”</description>
     
   </item>
   <item>
-    <title>The Weekly Closeout: Torrid CFO exits and Belk secures financing</title>
-    <link>https://www.retaildive.com/news/torrid-cfo-exits-belk-financing/833755/</link>
-    <guid isPermaLink="false">https://www.retaildive.com/news/torrid-cfo-exits-belk-financing/833755/</guid>
-    <pubDate>Fri, 23 Oct 2026 15:56:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Retail Dive</source>
-    <description>Paula Dempsey will leave the apparel retailer next month. The department store, meanwhile, will use some of its new funds for seasonal inventory.</description>
-    
-  </item>
-  <item>
-    <title>Why T-Mobile US Stock Dropped Today</title>
-    <link>https://www.fool.com/investing/2026/10/23/why-t-mobile-us-stock-dropped-today/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/23/why-t-mobile-us-stock-dropped-today/?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 15:55:30 +0000</pubDate>
+    <title>Why GE Aerospace Stock Keeps Going Down</title>
+    <link>https://www.fool.com/investing/2026/10/23/why-ge-aerospace-stock-keeps-going-down/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/23/why-ge-aerospace-stock-keeps-going-down/?.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 16:59:44 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>SpaceX got a taste of T-Mobile&#x27;s cellphone profit margins. Now it wants more.</description>
-    <category>SPCX</category><category>TMUS</category>
+    <description>Wall Street worries about GE&#x27;s engine sales. But is it worrying enough?</description>
+    <category>GE</category>
   </item>
   <item>
-    <title>Stocks Fall Sharply on Risk-Off as Meta Slides -7%</title>
-    <link>https://www.nasdaq.com/articles/stocks-fall-sharply-risk-meta-slides-7</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-fall-sharply-risk-meta-slides-7</guid>
-    <pubDate>Fri, 23 Oct 2026 15:54:53 +0000</pubDate>
+    <title>Revelation Biosciences Consensus Price Target Increased by 600% to $126.74</title>
+    <link>https://www.nasdaq.com/articles/revelation-biosciences-consensus-price-target-increased-600-12674</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/revelation-biosciences-consensus-price-target-increased-600-12674</guid>
+    <pubDate>Fri, 23 Oct 2026 16:58:45 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The S&amp;P 500 Index ($SPX ) (SPY ) fell -1.21%, the Dow Jones Industrial Average ($DOWI ) (DIA ) rose +0.02%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) fell -2.90%. December E-mini S&amp;P futures (ESZ26 ) fell -1.18%, and December E-mini…</description>
-    <category>META</category><category>SPY</category><category>QQQ</category><category>DJI</category>
+    <description>The average one-year price target for Revelation Biosciences (NASDAQCM:REVB) has been revised to $126.74 / share. This is an increase of 600.00% from the prior estimate of $18.10 dated September 29, 2026. These figures represent…</description>
+    
   </item>
   <item>
-    <title>SpaceX&#x27;s Launch Business Wasn&#x27;t Profitable Last Quarter, but Here&#x27;s the Hidden Upside</title>
-    <link>https://www.fool.com/investing/2026/10/23/spacexs-launch-business-wasnt-profitable-last-quar/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/23/spacexs-launch-business-wasnt-profitable-last-quar/?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 15:54:00 +0000</pubDate>
+    <title>Porsche Automobil Holding SE - Depositary Receipt Price Target Decreased by 13.33% to $3.72</title>
+    <link>https://www.nasdaq.com/articles/porsche-automobil-holding-se-depositary-receipt-price-target-decreased-1333-372</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/porsche-automobil-holding-se-depositary-receipt-price-target-decreased-1333-372</guid>
+    <pubDate>Fri, 23 Oct 2026 16:58:32 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Porsche Automobil Holding SE - Depositary Receipt (OTCPK:POAHY) (DB:PAHA) has been revised to $3.72 / share. This is a decrease of 13.33% from the prior estimate of $4.30 dated June 8, 2026. These…</description>
+    
+  </item>
+  <item>
+    <title>American Express Company Q3 2026 Earnings Call Summary</title>
+    <link>https://app.moby.co/home/research/tools/earningsCalendar/earnings-american-express-company-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://app.moby.co/home/research/tools/earningsCalendar/earnings-american-express-company-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 16:58:10 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The space segment is doing more for SpaceX than its raw revenue numbers indicate.</description>
-    <category>SPCX</category>
-  </item>
-  <item>
-    <title>Autoliv earnings analysis: questions answered and next catalysts</title>
-    <link>https://www.investing.com/news/stock-market-news/autoliv-earnings-analysis-questions-answered-and-next-catalysts-93CH-4970070</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/autoliv-earnings-analysis-questions-answered-and-next-catalysts-93CH-4970070</guid>
-    <pubDate>Fri, 23 Oct 2026 15:53:14 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Booz Allen Hamilton earnings analysis: questions answered and next catalysts</title>
-    <link>https://www.investing.com/news/stock-market-news/booz-allen-hamilton-earnings-analysis-questions-answered-and-next-catalysts-93CH-4970068</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/booz-allen-hamilton-earnings-analysis-questions-answered-and-next-catalysts-93CH-4970068</guid>
-    <pubDate>Fri, 23 Oct 2026 15:52:28 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Rogers Communications earnings analysis: questions answered and next catalysts</title>
-    <link>https://www.investing.com/news/stock-market-news/rogers-communications-earnings-analysis-questions-answered-and-next-catalysts-93CH-4970066</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/rogers-communications-earnings-analysis-questions-answered-and-next-catalysts-93CH-4970066</guid>
-    <pubDate>Fri, 23 Oct 2026 15:51:32 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>American Express earnings analysis: questions answered and next catalysts</title>
-    <link>https://www.investing.com/news/stock-market-news/american-express-earnings-analysis-questions-answered-and-next-catalysts-93CH-4970065</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/american-express-earnings-analysis-questions-answered-and-next-catalysts-93CH-4970065</guid>
-    <pubDate>Fri, 23 Oct 2026 15:51:09 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
+    <description>Moby summary of American Express Company&#x27;s Q3 2026 earnings call</description>
     <category>AXP</category>
   </item>
   <item>
-    <title>Ambani’s Jio becomes most subscribed Indian IPO with $77 billion in bids</title>
-    <link>https://www.investing.com/news/stock-market-news/ambanis-32-billion-jio-indian-ipo-lures-investors-as-bids-surge-on-final-day-4968087</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/ambanis-32-billion-jio-indian-ipo-lures-investors-as-bids-surge-on-final-day-4968087</guid>
-    <pubDate>Fri, 23 Oct 2026 15:50:31 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
+    <title>Egan-Jones Recommends Ethan Allen Shareholders Vote FOR All Five DGB Nominees</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/egan-jones-recommends-ethan-allen-165800730.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/egan-jones-recommends-ethan-allen-165800730.html?.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 16:58:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Egan-Jones recommends that shareholders of Ethan Allen vote FOR all five dissident nominees put forward by DGB Investment on the WHITE card at the company&#x27;s November 4 annual meeting, according to its commentary on the proxy contest.…</description>
     
   </item>
   <item>
-    <title>Infosys Limited Reports Q2 Revenues of $5,145 million and Revises FY 27 Revenue Guidance</title>
-    <link>https://www.nasdaq.com/articles/infosys-limited-reports-q2-revenues-5145-million-and-revises-fy-27-revenue-guidance</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/infosys-limited-reports-q2-revenues-5145-million-and-revises-fy-27-revenue-guidance</guid>
-    <pubDate>Fri, 23 Oct 2026 15:50:21 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Infosys Limited reported its financial results for the quarter ended September 30, 2026, delivering Q2 revenues of $5,145 million, representing a year-on-year growth of 1.5% and sequential growth of 1.2% in constant currency. The…</description>
-    <category>INFY</category>
-  </item>
-  <item>
-    <title>Onconetix, Inc. Advances Additional $500,000 to Realbotix, LLC</title>
-    <link>https://www.nasdaq.com/articles/onconetix-inc-advances-additional-500000-realbotix-llc</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/onconetix-inc-advances-additional-500000-realbotix-llc</guid>
-    <pubDate>Fri, 23 Oct 2026 15:50:20 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>On October 22, 2026, Onconetix, Inc. made an additional advance of $500,000 to Realbotix, LLC pursuant to that certain Grid Promissory Note, dated September 11, 2026. The Note was previously disclosed in the Company’s Current Report on…</description>
+    <title>More Than 20,000 Parents Nationwide Call For Consistent Youth Safeguards Online</title>
+    <link>https://finance.yahoo.com/media-advertising/articles/more-20-000-parents-nationwide-165600324.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/media-advertising/articles/more-20-000-parents-nationwide-165600324.html?.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 16:56:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The Coalition to Empower our Future (CEF), a growing partnership focused on understanding the complexity of factors and solutions surrounding youth mental health and wellbeing, today announced that 20,088 parents have signed a petition…</description>
     
   </item>
   <item>
-    <title>SK Hynix puts US IPO of chip unit Solidigm on hold after Seoul authorities raise concerns</title>
-    <link>https://www.investing.com/news/stock-market-news/sk-hynix-drops-us-ipo-plan-for-solidigm-newspaper-reports-4967714</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/sk-hynix-drops-us-ipo-plan-for-solidigm-newspaper-reports-4967714</guid>
-    <pubDate>Fri, 23 Oct 2026 15:50:18 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Exclusive-New Mexico’s outside lawyers could collect up to $1.27 billion in Meta case</title>
-    <link>https://www.investing.com/news/stock-market-news/exclusivenew-mexicos-outside-lawyers-could-collect-up-to-127-billion-in-meta-case-4968679</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/exclusivenew-mexicos-outside-lawyers-could-collect-up-to-127-billion-in-meta-case-4968679</guid>
-    <pubDate>Fri, 23 Oct 2026 15:50:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>META</category>
-  </item>
-  <item>
-    <title>Should You Forget the Vanguard S&amp;P 500 ETF (VOO) and Buy the Invesco S&amp;P 500 Equal Weight ETF (RSP) Instead?</title>
-    <link>https://www.fool.com/investing/2026/10/23/should-you-forget-the-vanguard-sp-500-etf-voo-and/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/23/should-you-forget-the-vanguard-sp-500-etf-voo-and/?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 15:50:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The most common investing strategy is typically to buy the S&amp;P 500.</description>
-    <category>SPY</category>
-  </item>
-  <item>
-    <title>Stocks See Continued Downward Pressure from AI Anxiety and Oil Prices</title>
-    <link>https://www.nasdaq.com/articles/stocks-see-continued-downward-pressure-ai-anxiety-and-oil-prices</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-see-continued-downward-pressure-ai-anxiety-and-oil-prices</guid>
-    <pubDate>Fri, 23 Oct 2026 15:49:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is down -0.45%, the Dow Jones Industrial Average ($DOWI ) (DIA ) is down -1.08%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is down -0.08%. December E-mini S&amp;P futures (ESZ26 ) are down -0.43%, and…</description>
-    <category>SPY</category><category>QQQ</category><category>DJI</category>
-  </item>
-  <item>
-    <title>What Changed For Lululemon Stock, And What Did Not?</title>
-    <link>https://www.trefis.com/articles/620211/what-changed-for-lululemon-stock-and-what-did-not/2026-10-23?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.trefis.com/articles/620211/what-changed-for-lululemon-stock-and-what-did-not/2026-10-23?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 15:47:27 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>For questions about this article or underlying research, email help@trefis.com.</description>
-    <category>LULU</category>
-  </item>
-  <item>
-    <title>Prediction: A $10,000 Investment in This Memory Stock Will Double by 2030 (Hint: It’s Not Micron or Sandisk)</title>
-    <link>https://www.fool.com/investing/2026/10/23/prediction-a-usd10-000-investment-in-this-memory-stock-will-double-by-2030-hint-it-s-not-micron-or-sandisk/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/23/prediction-a-usd10-000-investment-in-this-memory-stock-will-double-by-2030-hint-it-s-not-micron-or-sandisk/?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 15:46:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Lam Research&#x27;s accelerating growth suggests that the stock can soar substantially by the end of the decade.</description>
-    <category>MU</category><category>SNDK</category><category>LRCX</category>
-  </item>
-  <item>
-    <title>Stock Market Today: Dow Slumps 500 Points On Rising Oil Prices; 3 Oil Stocks To Watch (Live Coverage)</title>
-    <link>https://finance.yahoo.com/m/81c00f86-3a6b-31fa-a8aa-5d5650c74f9c/stock-market-today%3A-dow.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/81c00f86-3a6b-31fa-a8aa-5d5650c74f9c/stock-market-today%3A-dow.html?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 15:45:51 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The Dow Jones index drops 500 points Friday as oil prices rally. Bloom, MaxLinear and WDC are big earnings movers.</description>
-    <category>DJI</category><category>WDC</category>
-  </item>
-  <item>
-    <title>Meta Plans What Amounts to a 2-for-1 Stock Split. Is the Stock a Buy?</title>
-    <link>https://www.fool.com/investing/2026/10/23/meta-plans-what-amounts-to-a-2-for-1-stock-split-is-the-stock-a-buy/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/23/meta-plans-what-amounts-to-a-2-for-1-stock-split-is-the-stock-a-buy/?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 15:43:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The split itself doesn&#x27;t affect what the business is worth. But why does Meta want a share with no vote?</description>
-    <category>META</category>
-  </item>
-  <item>
-    <title>Top Midday Stories: American Express to Cut 5% of Workforce; Bloom Energy Shares Fall Despite Q3 Beat</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/top-midday-stories-american-express-154132414.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/top-midday-stories-american-express-154132414.html?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 15:41:32 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The Nasdaq Composite rose, while the Dow Jones Industrial Average and S&amp;P 500 Index fell in late-mor</description>
-    <category>BE</category><category>SPY</category><category>QQQ</category><category>DJI</category><category>AXP</category>
-  </item>
-  <item>
-    <title>BancFirst Corporation Announces Acquisition of SpiritBank</title>
-    <link>https://www.nasdaq.com/articles/bancfirst-corporation-announces-acquisition-spiritbank</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/bancfirst-corporation-announces-acquisition-spiritbank</guid>
-    <pubDate>Fri, 23 Oct 2026 15:41:15 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>On October 22, 2026, BancFirst Corporation acquired Spirit BankCorp, Inc., an Oklahoma corporation and SpiritBank (Spirit), a privately held community bank headquartered in Tulsa, Oklahoma.Spirit has approximately $866.8 million in…</description>
-    
-  </item>
-  <item>
-    <title>Harmony Gold Mining Company Limited Publishes Suite of Reports for the Financial Year Ended 30 June 2026</title>
-    <link>https://www.nasdaq.com/articles/harmony-gold-mining-company-limited-publishes-suite-reports-financial-year-ended-30-june</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/harmony-gold-mining-company-limited-publishes-suite-reports-financial-year-ended-30-june</guid>
-    <pubDate>Fri, 23 Oct 2026 15:41:14 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Harmony Gold Mining Company Limited has published and distributed its suite of reports for the financial year ended 30 June 2026, which includes its Integrated Annual Report 2026, Sustainability Report 2026, Operational Report 2026,…</description>
-    
-  </item>
-  <item>
-    <title>Stock Market Week: Chips, AI Sector Dive But Other Sectors Healthy; SpaceX, Tesla, Meta In Focus</title>
-    <link>https://finance.yahoo.com/m/e16c5987-f0fb-3e5d-8394-2c7bc3e4715d/stock-market-week%3A-chips%2C-ai.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/e16c5987-f0fb-3e5d-8394-2c7bc3e4715d/stock-market-week%3A-chips%2C-ai.html?.tsrc=rss</guid>
-    <pubDate>Fri, 23 Oct 2026 15:40:05 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The stock market was divided this week with the AI sector tumbling but many other areas thriving. SpaceX, Tesla, Meta led huge earnings.</description>
-    <category>META</category><category>TSLA</category><category>SPCX</category>
-  </item>
-  <item>
-    <title>Soybeans Ticking Higher on Friday Morning</title>
-    <link>https://www.nasdaq.com/articles/soybeans-ticking-higher-friday-morning-0</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/soybeans-ticking-higher-friday-morning-0</guid>
-    <pubDate>Fri, 23 Oct 2026 15:37:38 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Soybeans are trading with contracts 1 to 2 ¼ cents higher in the front months. Futures closed the Thursday session mixed, with front months 1 to 7 ¾ cents higher and deferreds fractionally to 1 ¾ cents lower. November options expire…</description>
-    
-  </item>
-  <item>
-    <title>Penguin Solutions Consensus Price Target Increased 15.06% to $87.19</title>
-    <link>https://www.nasdaq.com/articles/penguin-solutions-consensus-price-target-increased-1506-8719</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/penguin-solutions-consensus-price-target-increased-1506-8719</guid>
-    <pubDate>Fri, 23 Oct 2026 15:36:51 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Penguin Solutions (NASDAQGS:PENG) (DB:88E) has been revised to $87.19 / share. This is an increase of 15.06% from the prior estimate of $75.78 dated September 29, 2026. These figures represent…</description>
-    
-  </item>
-  <item>
-    <title>TikTok U.S. hunts for multiple gigawatts of computing capacity, sources tell CNBC</title>
-    <link>https://www.cnbc.com/2026/10/23/tiktok-us-compute-capacity.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/23/tiktok-us-compute-capacity.html</guid>
-    <pubDate>Fri, 23 Oct 2026 15:35:36 +0000</pubDate>
+    <title>Stocks making the biggest moves midday: Chevron, CrowdStrike, American Express, SK Hynix &amp; more</title>
+    <link>https://www.cnbc.com/2026/10/23/stocks-making-the-biggest-moves-midday-cvx-crwd-axp-skhy-t.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/23/stocks-making-the-biggest-moves-midday-cvx-crwd-axp-skhy-t.html</guid>
+    <pubDate>Fri, 23 Oct 2026 16:55:44 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The operator of the social media platform in the U.S. has sounded out opportunities to obtain capacity over the coming years.</description>
-    
+    <description>Here are some of the companies making headlines in midday trading.</description>
+    <category>CRWD</category><category>CVX</category><category>AXP</category>
   </item>
   <item>
-    <title>Silicon Valley Democrats demand investigation into Starlink restrictions in Ukraine</title>
-    <link>https://www.cnbc.com/2026/10/23/starlink-ukraine-musk-trump-congress.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/23/starlink-ukraine-musk-trump-congress.html</guid>
-    <pubDate>Fri, 23 Oct 2026 15:33:47 +0000</pubDate>
+    <title>AI&#x27;s &#x27;Black October&#x27;: Critical PHP flaws set off global security scramble</title>
+    <link>https://www.cnbc.com/2026/10/23/php-vulnerabilities-ai-cybersecurity.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/23/php-vulnerabilities-ai-cybersecurity.html</guid>
+    <pubDate>Fri, 23 Oct 2026 16:55:37 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>A letter demanding an investigation indicates Democrats will make investigating Starlink&#x27;s interruption a top priority if they win control of the U.S. House.</description>
+    <description>Governments and businesses around the globe are scrambling to contain the fallout after the PHP vulnerabilities leaked online.</description>
     
   </item>
   <item>
-    <title>This week in charts: a big year for RNAi developers</title>
-    <link>https://www.biopharmadive.com/news/charts-rna-interference-rnai-drug-venture-ipos/833784/</link>
-    <guid isPermaLink="false">https://www.biopharmadive.com/news/charts-rna-interference-rnai-drug-venture-ipos/833784/</guid>
-    <pubDate>Fri, 23 Oct 2026 15:33:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">BioPharma Dive</source>
-    <description>The latest installment in BioPharma Dive’s data visualization series features a look at the emerging popularity of RNAi developers, and the funding that came with it.</description>
+    <title>Booz Allen Hamilton Holding Corporation Q2 2027 Earnings Call Summary</title>
+    <link>https://app.moby.co/home/research/tools/earningsCalendar/earnings-booz-allen-hamilton-holding-corporation-q2-2027-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://app.moby.co/home/research/tools/earningsCalendar/earnings-booz-allen-hamilton-holding-corporation-q2-2027-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</guid>
+    <pubDate>Fri, 23 Oct 2026 16:55:17 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Moby summary of Booz Allen Hamilton Holding Corporation&#x27;s Q2 2027 earnings call</description>
     
   </item>
   <item>
-    <title>RELX PLC Reports Share Transactions by PDMR Henry Udow on 2026-10-23</title>
-    <link>https://www.nasdaq.com/articles/relx-plc-reports-share-transactions-pdmr-henry-udow-2026-10-23</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/relx-plc-reports-share-transactions-pdmr-henry-udow-2026-10-23</guid>
-    <pubDate>Fri, 23 Oct 2026 15:30:22 +0000</pubDate>
+    <title>Cango Consensus Price Target Decreased by 26.41% to $14.45</title>
+    <link>https://www.nasdaq.com/articles/cango-consensus-price-target-decreased-2641-1445</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/cango-consensus-price-target-decreased-2641-1445</guid>
+    <pubDate>Fri, 23 Oct 2026 16:53:06 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>RELX PLC reported transactions in its Ordinary Shares of 14 51/116p each by Henry Udow, a Person Discharging Managerial Responsibilities, on 2026-10-23. The transactions involved the exercise of options under the RELX Group plc…</description>
-    <category>RELX</category>
+    <description>The average one-year price target for Cango (NYSE:CANG) (MUN:9C00) has been revised to $14.45 / share. This is a decrease of 26.41% from the prior estimate of $19.64 dated September 29, 2026. These figures represent aggregate analyst…</description>
+    
+  </item>
+  <item>
+    <title>Fewer people are flying as airfare soars. Here&#x27;s why airlines aren&#x27;t worried</title>
+    <link>https://www.cnbc.com/2026/10/23/airfare-airline-capacity.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/23/airfare-airline-capacity.html</guid>
+    <pubDate>Fri, 23 Oct 2026 16:51:21 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Airlines are reporting fewer people flew in the third quarter as airfare surged on fuel costs, but executives say travelers are mostly swallowing higher fares.</description>
+    
+  </item>
+  <item>
+    <title>Consensus Price Target for Airtel Africa Plc - Depositary Receipt Increased by 173.21% to $47.99</title>
+    <link>https://www.nasdaq.com/articles/consensus-price-target-airtel-africa-plc-depositary-receipt-increased-17321-4799</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/consensus-price-target-airtel-africa-plc-depositary-receipt-increased-17321-4799</guid>
+    <pubDate>Fri, 23 Oct 2026 16:51:12 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Airtel Africa Plc - Depositary Receipt (OTCPK:AARTY) (DB:9AA0) has been revised to $47.99 / share. This is an increase of 173.21% from the prior estimate of $17.57 dated November 20, 2024. These…</description>
+    
+  </item>
+  <item>
+    <title>SMS Co., - Depositary Receipt Price Target Decreased by 25.77% to $5.56</title>
+    <link>https://www.nasdaq.com/articles/sms-co-depositary-receipt-price-target-decreased-2577-556</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/sms-co-depositary-receipt-price-target-decreased-2577-556</guid>
+    <pubDate>Fri, 23 Oct 2026 16:50:47 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for SMS Co., - Depositary Receipt (OTCPK:SMSSY) has been revised to $5.56 / share. This is a decrease of 25.77% from the prior estimate of $7.49 dated June 2, 2025. These figures represent aggregate…</description>
+    
   </item>
 </channel>
 </rss>
