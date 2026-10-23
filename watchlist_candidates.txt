@@ -6,34 +6,47 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 22.10.2026 21:37
-28 of 80 news items unmatched this run
+Generated: 23.10.2026 06:37
+41 of 80 news items unmatched this run
 
-- [Nasdaq] Dollar Fades on Weaker US Interest Rate Differentials
-- [Nasdaq] Coffee Prices Fall as ICE Coffee Inventories Rise
-- [Nasdaq] Corn Bears Fighting Back with Thursday Midday Weakness
-- [Nasdaq] Sugar Prices Continue to Sag From Last Week’s Contract High
-- [Yahoo Finance] Banzai Announces Name Change to Parabolic Technologies, Inc. And Announces Reverse Stock Split
-- [Nasdaq] Crude Oil Prices Rise on Saudi Tensions
-- [Nasdaq] Cocoa Prices Fall Sharply on Rising ICE Inventories
-- [Yahoo Finance] Update: US Equity Indexes Mixed as Investors Rotate From AI Trade to Government Bonds; Crude Oil Surges
-- [Nasdaq] China Coal Energy Company Limited - Depositary Receipt Price Target Increased by 24.70% to $34.64
-- [Nasdaq] Midland States Bancorp, Inc. Reports Net Income of $20.6 million for the Third Quarter of 2026
-- [Yahoo Finance] MLPX vs EMLP: Which Energy Infrastructure ETF Offers Better Yield?
-- [Yahoo Finance] Top 3 Canadian AI Stocks To Watch In October 2026
-- [Yahoo Finance] Lindsay Corporation Q4 2026 Earnings Call Summary
-- [Nasdaq] Weave Communications, Inc. Stockholders Approve Merger Agreement on October 22, 2026
-- [Yahoo Finance] Is IonQ a Millionaire-Maker Stock?
-- [Yahoo Finance] Forget VOO: This Growth ETF Returned 460.49% Over Ten Years to VOO’s 326.29%
-- [Yahoo Finance] Dover Corporation Q3 2026 Earnings Call Summary
-- [Nasdaq] Top Glove Corporation Bhd. - Depositary Receipt Price Target Increased by 49.16% to $0.92
-- [Investing.com] US banks are blocking third-party AI agents access to customer accounts, sources say
+- [Nasdaq] FMC Consensus Price Target Lowered by 35.55% to $8.86
+- [Nasdaq] Arbor Realty Trust Consensus Price Target Cut 35% to $3.32
+- [Nasdaq] Pacira BioSciences Consensus Price Target Increased 17.74% to $35.13
+- [Investing.com] Munters Group reports strong Q3 order intake, margins mixed
+- [Investing.com] Warehouses de Pauw confirms 2026 guidance after solid quarter
+- [Investing.com] Ambani’s $3.2 billion Jio Indian IPO lures investors as bids surge on final day
+- [Nasdaq] Saul Centers, Inc. - Preferred Stock Price Target Increased by 15.16% to $29.22
+- [Nasdaq] Kuaishou Technology - Depositary Receipt Price Target Decreased by 32.57% to $1.17
+- [Nasdaq] Chocoladefabriken Lindt & Sprüngli AG - Depositary Receipt Price Target Decreased by 19.32% to $11.37
+- [Nasdaq] Hysan Development Company Limited - Depositary Receipt Price Target Increased by 11.94% to $5.12
+- [Yahoo Finance] Gold Falls Below $4,000 for the First Time Since July. What’s Next?
+- [CNBC] Defense giant Saab sees orders triple after Gripen fighter jet deal with Ukraine
+- [Investing.com] Exclusive-Heineken document reveals worries over weight-loss drugs and beer sales
+- [Nasdaq] Chiyoda Corporation - Depositary Receipt Consensus Price Target Increased by 59.32% to $4.97
+- [Nasdaq] NSK - Depositary Receipt Price Target Increased by 11.65% to $17.04
+- [Nasdaq] Consensus Price Target for CaixaBank, S.A. - Depositary Receipt Increased 11.17% to $5.08
+- [Nasdaq] Lifetime Brands Consensus Price Target Raised 17.19% to $12.75
+- [Investing.com] Taiwan stocks lower at close of trade; Taiwan Weighted unchanged
+- [Nasdaq] Sphere Entertainment Consensus Price Target Decreased by 10.03% to $167.71
+- [Yahoo Finance] Invesco Pharmaceuticals ETF vs. iShares Biotechnology ETF: Which Is the Better Buy?
+- [Investing.com] Tomra Systems reports Q3 revenue of €366m, beats estimates
+- [Nasdaq] Cotton Fading Lower on Thursday
+- [Investing.com] Volvo Cars to cut 2,500 jobs as third quarter swings to loss
+- [Nasdaq] Fair Isaac Consensus Price Target Decreased by 15.79% to $1,104.66
+- [Yahoo Finance] If the AI Bubble Bursts, These Stocks Will Be Winners
+- [Investing.com] Gjensidige Forsikring reports strong Q3 profit beat
+- [CoinDesk] Polymarket has reportedly fired its marketing chief, also a close friend of the CEO
+- [CoinDesk] Cardano holders are being asked to bet $5 million on copper hitting a new record
+- [Yahoo Finance] Asia stocks fall as AI rout batters S.Korea; Japan spooked by strong CPI
+- [CNBC] Japan core inflation in September surges to its highest this year at 2.1%
+- [OilPrice.com] Brent Hits $114 as Houthi Attacks Threaten Saudi Energy Infrastructure
+- [CNBC] These funds can juice your tax-free portfolio income. Just be sure to mind the risk
+- [CNBC] Etsy bans AI-generated recipes and patterns from its online marketplace
+- [Mining.com] Mining Forum video: Majors are waking up to discoveries, fund manager says
+- [CoinDesk] Senate's top Democratic investigator looking into Tether payments to Bo Hines' firm
+- [Mining.com] Boroo signs $100M deal for Yukon Eagle gold mine
+- [Mining.com] Vivox AI, beSirius partner on mining supply chain compliance
+- [CNBC] Trump invokes Cold War era Defense Production Act for oil production, refining
+- [BioPharma Dive] Protein degrader specialist Lycia prices $318M IPO
 - [MarketWatch] Oil prices approach Iran-war highs as soaring tanker rates trigger a second energy squeeze
 - [CNBC] OpenAI nears up to $30 billion funding round at $1.25 trillion valuation led by UAE investors
-- [Investing.com] Why is RingCentral stock surging today?
-- [CNBC] These funds can juice your tax-free portfolio income. Just be sure to mind the risk
-- [CNBC] Third-party evaluators found vulnerabilities in OpenAI monitoring system during test pilot
-- [Mining.com] US permitting: Environmental review overhaul could speed mine approvals, but hurdles remain
-- [MarketWatch] ‘AI is on trial’: Bond yields sink below 5% as investors look for safety
-- [Mining.com] Ottawa finally matches C$1B Ring of Fire funds
-- [CNBC] Cruise lines chase luxury travelers with suites for up to $25,000 a night

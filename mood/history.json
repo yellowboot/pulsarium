@@ -502,10 +502,17 @@
   },
   {
    "date": "2026-10-22",
-   "value": 48,
+   "value": 47,
    "label": "Neutral",
-   "headlines": 275,
-   "avg7": 53.1,
+   "headlines": 357,
+   "avg7": 53.0
+  },
+  {
+   "date": "2026-10-23",
+   "value": 46,
+   "label": "Neutral",
+   "headlines": 159,
+   "avg7": 52.0,
    "window": "in the last 12 hours"
   }
  ]
