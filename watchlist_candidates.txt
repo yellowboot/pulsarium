@@ -6,40 +6,41 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 23.10.2026 20:37
-34 of 80 news items unmatched this run
+Generated: 23.10.2026 21:37
+35 of 80 news items unmatched this run
 
-- [Investing.com] OpenAI resumes frontier AI training with enhanced security, no internet access
-- [Nasdaq] Conduent Incorporated Completes Refinancing of $357 Million Revolving Credit Facilities and Adds $90 Million in Commitments
-- [Nasdaq] MetroCity Bankshares, Inc. Reports Net Income of $24.3 million for Third Quarter 2026
-- [Nasdaq] ARB IOT Group Limited Announces Resignation of Mr. Liew Kok Leong and Appointment of Mr. (Alfred) Tan Choong Hau as Chief Executive Officer and Chairman
-- [Yahoo Finance] Oil tops $116 with stocks mixed on earnings, AI
-- [Nasdaq] Cocoa Prices Close Mildly Higher Despite 2.5-year High in ICE Inventories
-- [Nasdaq] Coffee Prices Fall Despite Decline in ICE Coffee Inventories to 5-week Low
-- [Nasdaq] Cotton Facing Friday Weakness
-- [Nasdaq] Hogs Posting Mixed Friday Trade
+- [Investing.com] Russia stocks higher at close of trade; MOEX Russia Index up 1.51%
+- [Nasdaq] Crude Oil Prices Rally to 5-month High on Increased Speculation About Possible US Military Strike on Iran
+- [Nasdaq] Soybeans Holding onto Friday Gains
+- [Nasdaq] Cocoa Prices Fall on Rising ICE Inventories and Higher Nigerian Exports
+- [Investing.com] Why is Cumberland Pharmaceuticals stock sliding today?
+- [Nasdaq] Myers Industries, Inc. Adopts Amended and Restated Senior Officer Severance Plan on October 22, 2026
+- [Nasdaq] Applied Industrial Technologies, Inc. Appoints Pamela J. Tomczik to Board Committees on October 20, 2026
+- [Nasdaq] LQR House Inc. Chief Marketing Officer Jaclyn Hoffman Resigns, Effective October 20, 2026
+- [Yahoo Finance] Update: Wall Street Caps Choppy Week Lower as Oil Prices Soar
+- [Yahoo Finance] AN2 Therapeutics, Inc. Reports Inducement Grants Under Listing Rule 5635(c)(4)
+- [Nasdaq] Vera Bradley Consensus Price Target Raised 40% to $7.14
+- [Nasdaq] Raymond James Initiates Coverage of Camp4 Therapeutics with Strong Buy
+- [Nasdaq] PT Astra Agro Lestari Tbk - Depositary Receipt Consensus Price Target Increased by 39.06% to $2.77
+- [Nasdaq] Red Cat Holdings, Inc. Enters Business Combination Agreement to Acquire Steyr Motors AG for EUR 39.00 Per Share
+- [Nasdaq] EdgeMode, Inc. Enters into Securities Purchase Agreement for $159,600 Convertible Promissory Note
+- [Nasdaq] Nathan's Famous, Inc. Stockholders Approve Merger Agreement
 - [Nasdaq] Sugar Prices See Support on Lower Brazil Sugar Production
-- [Nasdaq] Hogs Looks to Round Out the Week
-- [Nasdaq] Cotton Starting Friday with Weaker Trade
+- [Investing.com] Why is Maplebear stock slipping today?
+- [Yahoo Finance] Flagstar Financial, Inc. Q3 2026 Earnings Call Summary
+- [Nasdaq] Nat-Gas Prices Plunge -15% on the Week Due to Warm Forecasts
+- [Yahoo Finance] Preferred Bank Q3 2026 Earnings Call Summary
+- [Investing.com] Cumberland Pharmaceuticals stock tumbles on trial results
+- [Investing.com] Wall Street closes lower to end rocky week
+- [Yahoo Finance] US Equity Indexes Close Mixed This Week as Investors Rotate into Treasury Bonds, Defensives as AI Trade Falters
+- [Investing.com] Canada stocks lower at close of trade; S&P/TSX Composite down 0.52%
+- [Investing.com] Brazil stocks higher at close of trade; Bovespa up 0.47%
 - [MarketWatch] Oil markets are on edge ahead of the weekend, as midterm elections near and fresh U.S. strikes on Iran are predicted
-- [Investing.com] Instacart in talks for sale, The Information reports
 - [CNBC] Dow tumbles more than 600 points as oil prices rise and market sell-off hits most sectors
-- [Yahoo Finance] Big Tech's AI spending has Wall Street worried
-- [Investing.com] Earnings review: AI-driven names rewarded as guidance trumps beats
-- [Investing.com] Analyst market review: upgrades, downgrades and split verdicts for the week of Oct 19–23, 2026
-- [Investing.com] Veritas explores Chromalloy sale after air travel resilience - Bloomberg
-- [Investing.com] Wall Street ends lower as oil surge and AI spending fears weigh on stocks
-- [Yahoo Finance] 2 Growth Stocks to Hold for the Next Decade (Hint: These Aren’t AI Stocks)
-- [Investing.com] After previous day’s slump, trading is quieter among AI shares
-- [Yahoo Finance] 3 consumer stocks we think twice about
-- [Yahoo Finance] Sector Update: Tech Stocks Rise Late Afternoon
-- [Yahoo Finance] Prediction: Robotics Will Be the Biggest Industrials Story of 2027. Here Are 2 Stocks to Buy Before Then.
 - [MarketWatch] Even the wealthy increasingly want all-inclusive resorts
-- [Yahoo Finance] Sector Update: Energy Stocks Gain Late Afternoon
 - [CNBC] Brent crude oil tops $116, a six-month high, as tensions swell in the Middle East
 - [CNBC] Qatar deal to buy U.S. natural gas shows how Iran war has redrawn global energy markets
 - [CNBC] U.S. fines Air France, KLM over flights in prohibited Iraqi airspace
 - [CNBC] Fewer people are flying as airfare soars. Here's why airlines aren't worried
 - [CNBC] TikTok U.S. hunts for multiple gigawatts of computing capacity, sources tell CNBC
 - [OilPrice.com] NASA's Freeze-Resistant Moon Battery Could Eventually Reach EVs
-- [Mining.com] Diesel price surge putting mining profits to test
