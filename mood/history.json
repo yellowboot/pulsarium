@@ -511,8 +511,15 @@
    "date": "2026-10-23",
    "value": 54,
    "label": "Neutral",
-   "headlines": 292,
-   "avg7": 53.1,
+   "headlines": 377,
+   "avg7": 53.1
+  },
+  {
+   "date": "2026-10-24",
+   "value": 50,
+   "label": "Neutral",
+   "headlines": 212,
+   "avg7": 52.1,
    "window": "in the last 12 hours"
   }
  ]
