@@ -33,7 +33,7 @@ jobs:
       - name: Update existing company histories and shared key figures
         id: figures
         continue-on-error: true
-        run: deno run --allow-net --allow-env scripts/sec/refresh.ts
+        run: deno run --allow-net --allow-env --allow-read=scripts/sec scripts/sec/refresh.ts
       - name: Add new insider filings and publish the shared radar
         id: insiders
         continue-on-error: true
