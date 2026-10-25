@@ -24,13 +24,19 @@ def report():
 
 class ReportChecks(unittest.TestCase):
     def test_large_full_histories_are_loaded_in_bounded_pages(self):
+        from sec_read_cache import ReadCache, FRAME_CACHE
+        from urllib.parse import parse_qs, urlsplit
         class Store:
             paths = []
+            def cached_frames(self, prefix):
+                metadata = [{'id': f'companyfacts/{i:010d}', 'fetched_at': 'v1'} for i in range(1, 14)]
+                return ReadCache().rows(self.call, lambda _: metadata, 'sec_market_frames', '',
+                                        FRAME_CACHE, 'id,payload_gzip,fetched_at')
             def call(self, path):
                 self.paths.append(path)
                 self_outer.assertIn('limit=12', path)
-                offset = int(path.split('offset=')[1])
-                return [{'id': f'companyfacts/{i:010d}', 'payload_gzip': i} for i in range(offset + 1, min(offset + 13, 14))]
+                ids = parse_qs(urlsplit(path).query)['id'][0][4:-1].split(',')
+                return [{'id': key, 'payload_gzip': int(key.split('/')[1]), 'fetched_at': 'v1'} for key in ids]
         self_outer = self
         store = Store()
         result = f.histories(store, lambda value: {'doc': {'cik': value}})

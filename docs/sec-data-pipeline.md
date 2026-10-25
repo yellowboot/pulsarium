@@ -56,6 +56,46 @@ The former private SEC workflows and their database dispatch schedule are retire
 the public schedule is the only automatic collection path. Company-page cache misses
 can still use the existing authenticated Edge fallback, without starting Actions.
 
+## Incremental reads and egress
+
+`refresh.ts` retains its change-aware refresh index (`companyfacts:refresh-index`):
+new filings/submissions and code changes trigger reads, with a roughly 20-hour full
+check for catalog companies and a weekly check for supplementary targets. It no
+longer downloads every saved fundamentals row. Its Deno read permission remains
+restricted to `scripts/sec`.
+
+The Python analytics and insider workers use a disposable SQLite cache restored
+between scheduled runs. They first list IDs and source timestamps, then fetch only
+new or changed bodies in bounded batches. Source metadata is checked every run;
+new filings, corrections and failed-filing retries are not delayed by a cache TTL.
+Deleted rows and filings outside the current window are excluded from calculations.
+The same company histories serve the sector supplement and financial screens once
+per run. Newly saved frames/parsed filings also update the local cache.
+
+The insider projection includes parsed transactions, amendments, footnotes and
+coverage fields, but excludes original compressed ownership XML. Full source XML
+remains in Supabase. Intermediate and final radar snapshots reuse this run's saved
+delta rather than rereading the whole filing window.
+
+`fetch_news.py` does not read Supabase. Its page builder reads the two prepared SEC
+snapshots: it checks `updated_at` and transfers a body only when that version has
+changed. An independent small cache prevents news runs downloading the large SEC
+worker cache. Existing per-process snapshot reuse also remains in place.
+
+Both workers use GitHub Actions **cache**, not artifacts/backups. Cache storage has
+a [separate 10 GB free allowance per repository](https://docs.github.com/en/billing/concepts/product-billing/github-actions).
+Each file is bounded to 160 MiB, and each workflow removes older entries in its own
+prefix/ref after a successful save, retaining two. It never removes unrelated
+caches. Cache contents are only public SEC inputs/snapshots, with JSON-compressed
+bodies rather than executable serialization. No tokens or user data are saved.
+On a cold/evicted/corrupt cache, source bodies are fetched again; authoritative
+history and collection checkpoints remain untouched. Cache service failures do not
+prevent data processing. A cold run still incurs a full input read, and real daily
+traffic depends on how many source rows changed. Logs report versions checked and
+bodies read so the next scheduled runs can measure the reduction without a manual
+refresh. These changes do not remove traffic from backups, browser visitors or
+other cabinet jobs.
+
 ## Local verification
 
 From this repository:

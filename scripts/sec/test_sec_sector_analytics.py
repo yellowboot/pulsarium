@@ -177,6 +177,7 @@ class Analytics(unittest.TestCase):
     def test_significant_missing_issuer_uses_one_permanent_company_history(self):
         class HistoryCache:
             def __init__(self): self.records = {}
+            def cached_frames(self, prefix): return list(self.records.values())
             def call(self, path):
                 key = path.split('id=eq.')[1].split('&')[0]
                 return [self.records[key]] if key in self.records else []
@@ -211,6 +212,7 @@ class Analytics(unittest.TestCase):
         class EmptyCache:
             def call(self, path): return []
             def upsert(self, *args): pass
+            def cached_frames(self, prefix): return []
         sec = Source()
         s.supplement_large_issuers(sec, EmptyCache(), {1: {'symbol': 'BIG'}}, pools, eligible, dt.date(2026, 10, 7))
         self.assertEqual(len(sec.requests), 1)

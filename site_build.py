@@ -38,6 +38,7 @@ import subprocess
 import sys
 import urllib.parse
 import urllib.request
+from scripts.sec.sec_read_cache import ReadCache
 from datetime import date, datetime, timedelta, timezone
 from email.utils import format_datetime
 
@@ -1332,21 +1333,35 @@ TODAY_HEADLINES = 3
 # fundamentals, report highlights) are prepared as public snapshots in the
 # cabinet's database, read with the publishable key the panels use; read at
 # build time, the homepage card's text is in the page for search engines.
-SEC_SNAPSHOT = "https://omkeplyeuxwlsqnblsjm.supabase.co/rest/v1/{table}?id=eq.global&select=payload"
+SEC_SNAPSHOT = "https://omkeplyeuxwlsqnblsjm.supabase.co/rest/v1/{table}?id=eq.global&select={fields}"
 SEC_PUBLIC_KEY = "sb_publishable_Iike5dnuHEuwIIF-qruzzg_WkWJodcF"
 
 
 @functools.lru_cache(maxsize=None)
 def sec_snapshot(table: str) -> dict:
-    request = urllib.request.Request(SEC_SNAPSHOT.format(table=table),
-                                     headers={"apikey": SEC_PUBLIC_KEY, "User-Agent": "pulsarium-site-build"})
-    try:
+    cache = ReadCache()
+    def read(fields):
+        request = urllib.request.Request(SEC_SNAPSHOT.format(table=table, fields=fields),
+                                        headers={"apikey": SEC_PUBLIC_KEY, "User-Agent": "pulsarium-site-build"})
         with urllib.request.urlopen(request, timeout=20) as response:
-            rows = json.load(response)
-        return rows[0]["payload"] if rows and isinstance(rows[0].get("payload"), dict) else {}
+            return json.load(response)
+    try:
+        versions = read("updated_at")
+        if not versions:
+            return {}
+        saved = cache.get("site-snapshots-v1", table, versions[0]["updated_at"])
+        if saved is not None:
+            return saved["payload"]
+        rows = read("payload,updated_at")
+        if rows and isinstance(rows[0].get("payload"), dict):
+            cache.put("site-snapshots-v1", [{**rows[0], "id": table}], revision="updated_at")
+            return rows[0]["payload"]
+        return {}
     except Exception as error:  # the card is left out, the build goes on
         print(f"SEC snapshot {table} unavailable: {error}")
         return {}
+    finally:
+        cache.close()
 
 
 def short_money(value: float) -> str:

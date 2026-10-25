@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write # Remove only older caches in this worker's namespace.
 
 concurrency:
   # Serializes SEC processing with news-page publication in this repository.
@@ -22,6 +23,7 @@ jobs:
       SEC_INGEST_TOKEN: ${{ secrets.SEC_INGEST_TOKEN }}
       SEC_CONTACT: ${{ vars.SEC_CONTACT }}
       DENO_NO_PACKAGE_JSON: '1'
+      SEC_READ_CACHE: .cache/sec/read-cache.sqlite3
     steps:
       - uses: actions/checkout@v4
       - uses: denoland/setup-deno@v2
@@ -30,6 +32,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Restore public SEC input cache
+        continue-on-error: true
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/sec/read-cache.sqlite3
+          key: sec-read-v1-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: sec-read-v1-${{ runner.os }}-
       - name: Update existing company histories and shared key figures
         id: figures
         continue-on-error: true
@@ -56,6 +65,24 @@ jobs:
             git pull --rebase
             git push
           fi
+      - name: Bound the disposable SEC cache
+        id: prepare_cache
+        if: always()
+        continue-on-error: true
+        run: python scripts/sec/sec_read_cache.py
+      - name: Save public SEC input cache
+        id: save_cache
+        if: always() && steps.prepare_cache.outcome == 'success'
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/sec/read-cache.sqlite3
+          key: sec-read-v1-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Keep only two SEC input caches
+        if: always() && steps.save_cache.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/sec/prune_read_caches.py sec-read-v1-
       - name: Report incomplete SEC updates
         if: steps.figures.outcome == 'failure' || steps.insiders.outcome == 'failure' || steps.analytics.outcome == 'failure'
         run: exit 1

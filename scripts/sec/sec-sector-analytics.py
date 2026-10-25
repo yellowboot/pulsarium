@@ -24,6 +24,7 @@ import urllib.request
 from collections import defaultdict
 import sys
 import sec_financial_signals
+from sec_read_cache import ReadCache, FRAME_CACHE, INSIDER_CACHE, INSIDER_SELECT, insider_row
 
 REVENUE = ["RevenueFromContractWithCustomerExcludingAssessedTax",
            "Revenues", "SalesRevenueNet", "RevenueFromContractWithCustomerIncludingAssessedTax",
@@ -199,6 +200,7 @@ class SEC:
 
 class Store:
     def __init__(self):
+        self.cache = ReadCache()
         self.url = os.environ["SUPABASE_URL"].rstrip("/") + "/functions/v1/sec-ingest/rest/v1/"
         key = os.environ["SEC_INGEST_TOKEN"]
         self.headers = {"Authorization": "Bearer " + key, "Content-Type": "application/json"}
@@ -224,6 +226,12 @@ class Store:
         if not isinstance(rows, list): rows = [rows]
         for start in range(0, len(rows), 100):
             self.call(f"{table}?on_conflict={key}", "POST", rows[start:start + 100])
+            if table == "sec_market_frames":
+                self.cache.put(FRAME_CACHE, rows[start:start + 100])
+
+    def cached_frames(self, prefix):
+        return self.cache.rows(self.call, self.rows, "sec_market_frames", f"&id=like.{prefix}/*",
+                               FRAME_CACHE, "id,payload_gzip,fetched_at")
 
 
 def load_frame(sec, store, concept, frame, live_frame, now=None, unit="USD"):
@@ -479,14 +487,15 @@ def supplement_large_issuers(sec, store, listed, pools, eligible, today):
     states = store.call("sec_market_sync_state?id=eq.sector:history-targets&select=payload")
     targets = {int(r["cik"]): r for r in states[0]["payload"].get("companies", [])} if states else {}
     selected = {cik for _, cik in sorted(candidates, reverse=True)[:50]} | (set(targets) & set(listed))
+    docs = sec_financial_signals.histories(store, unpack) if selected else {}
     for cik in sorted(selected):
         key = f"companyfacts/{cik:010d}"
-        cached = store.call("sec_market_frames?id=eq." + key + "&select=payload_gzip")
-        if cached: doc = unpack(cached[0]["payload_gzip"])["doc"]
+        if cik in docs: doc = docs[cik]
         else:
             doc = sec.get(f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json")
             if not doc: continue
             store.upsert("sec_market_frames", "id", {"id": key, "payload_gzip": pack({"doc": doc, "through": "", "pending": []}), "fetched_at": stamp()})
+            docs[cik] = doc
         targets[cik] = {"cik": str(cik), "symbol": listed[cik]["symbol"]}
         for concept in REVENUE + ["OperatingIncomeLoss"] + CFO + CAPEX:
             for r in doc.get("facts", {}).get("us-gaap", {}).get(concept, {}).get("units", {}).get("USD", []):
@@ -618,9 +627,9 @@ def run(max_companies):
         if not directory or not directory.get("data"): raise RuntimeError("SEC ticker directory missing")
         store.upsert("sec_market_sync_state", "id", {"id": "directory", "payload": {"date": today.isoformat(), "data": directory}, "updated_at": stamp()})
     listed = listed_issuers(directory, load_listing_directory(store, today, sec.agent))
-    # Read persistent frames in one paginated batch, rather than a DB read
-    # for each concept/window. Old windows never need a new SEC download.
-    store.frame_cache = {r["id"]: r for r in store.rows("sec_market_frames?select=id,payload_gzip,fetched_at&id=like.us-gaap/*&order=id")}
+    # List versions, then transfer only changed bodies. Old windows remain
+    # in the runner cache; Supabase still retains the complete source history.
+    store.frame_cache = {r["id"]: r for r in store.cached_frames("us-gaap")}
     quarters = quarter_frames(today)
     live = refresh_windows(today)
     pools = defaultdict(lambda: defaultdict(list))
@@ -660,8 +669,11 @@ def run(max_companies):
     metrics = [m for m in metrics if m]
     if len(metrics) < 100: raise RuntimeError("Insufficient classified industry metrics; keep previous snapshot")
     start = (today - dt.timedelta(days=29)).isoformat()
-    fields = "accession,filed_date,status,form:payload->>form,issuer_cik:payload->>issuer_cik,owners:payload->owners,purchases:payload->purchases,sales:payload->sales,notes:payload->notes,original_date:payload->>original_date"
-    filings = store.rows(f"sec_insider_filings?select={fields}&filed_date=gte.{start}&order=accession")
+    records = store.cache.rows(store.call, store.rows, "sec_insider_filings", f"&filed_date=gte.{start}",
+                               INSIDER_CACHE, INSIDER_SELECT, key="accession", revision="updated_at",
+                               batch=100, transform=insider_row)
+    filings = [{**(r.get("payload") or {}), "accession": r["accession"],
+                "filed_date": r["filed_date"], "status": r["status"]} for r in records]
     state_rows = store.call("sec_insider_sync_state?id=eq.global&select=payload")
     state = state_rows[0]["payload"] if state_rows else {}
     window_filings = [f for f in filings if f["filed_date"] >= max(start, state.get("sales_history_from", today.isoformat()))]

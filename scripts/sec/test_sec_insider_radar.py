@@ -6,6 +6,7 @@ import importlib.util
 import json
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 spec = importlib.util.spec_from_file_location('radar', Path(__file__).with_name('sec-insider-radar.py'))
@@ -125,7 +126,9 @@ class RadarTests(unittest.TestCase):
             store.save_state({'history_from': '2026-10-05', 'through': '2026-10-05', 'indexes': ['2026-10-05']})
             store.save([record()])
             sec = FakeSEC()
-            radar.run(sec, store, 5000, dt.date(2026, 10, 6))
+            with patch.object(store, 'records', wraps=store.records) as reads:
+                radar.run(sec, store, 5000, dt.date(2026, 10, 6))
+                self.assertEqual(reads.call_count, 1)
             self.assertEqual(len(sec.calls), 1)
             self.assertEqual(store.records()[0]['attempts'], 1)
             self.assertEqual(len(store.records()), 1)

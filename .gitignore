@@ -1,6 +1,7 @@
 # Python
 __pycache__/
 *.pyc
+.cache/
 
 # PyInstaller build artifacts (see README — building the .exe)
 build/

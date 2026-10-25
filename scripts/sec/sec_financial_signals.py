@@ -257,18 +257,17 @@ def full_signals(meta, doc, today, quarter_function):
 
 
 def histories(store, unpack):
+    if hasattr(store, "company_docs"):
+        return store.company_docs
     result = {}
-    # Full histories are large: 500 records can exceed the Data API's
-    # response limits. Use bounded pages independently of the metadata pager.
-    for offset in range(0, 100000, 12):
-        page = store.call(f'sec_market_frames?select=id,payload_gzip&id=like.companyfacts/*&order=id&limit=12&offset={offset}')
-        for row in page:
-            saved = unpack(row["payload_gzip"])
-            if saved.get("doc"):
-                result[int(row["id"].split("/")[1])] = saved["doc"]
-        if len(page) < 12:
-            return result
-    raise RuntimeError('Unexpected full-history cache size')
+    # The same histories feed both the large-issuer supplement and signals.
+    # Reuse unchanged bodies across runs and decoded docs within this run.
+    for row in store.cached_frames("companyfacts"):
+        saved = unpack(row["payload_gzip"])
+        if saved.get("doc"):
+            result[int(row["id"].split("/")[1])] = saved["doc"]
+    store.company_docs = result
+    return result
 
 
 def latest_metrics(meta, pools, docs, today, api):

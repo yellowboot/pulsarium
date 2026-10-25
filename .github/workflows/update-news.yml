@@ -21,6 +21,7 @@ on:
 
 permissions:
   contents: write
+  actions: write # Remove only older news snapshot caches.
 
 concurrency:
   group: update-news
@@ -29,6 +30,8 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    env:
+      SEC_READ_CACHE: .cache/sec/news-snapshots.sqlite3
     # a hung run would hold every later one in the concurrency queue
     timeout-minutes: 20
     steps:
@@ -37,6 +40,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Restore SEC snapshots for the page builder
+        continue-on-error: true
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/sec/news-snapshots.sqlite3
+          key: news-sec-v1-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: news-sec-v1-${{ runner.os }}-
 
       - name: Fetch fresh news
         env:
@@ -61,6 +71,24 @@ jobs:
         continue-on-error: true
         run: python site_build.py --changed-urls "$RUNNER_TEMP/changed-urls.txt" ${{ inputs.full && '--full' || '' }}
 
+      - name: Bound the SEC snapshot cache
+        id: prepare_cache
+        if: always()
+        continue-on-error: true
+        run: python scripts/sec/sec_read_cache.py
+      - name: Save SEC snapshots for the page builder
+        id: save_cache
+        if: always() && steps.prepare_cache.outcome == 'success'
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/sec/news-snapshots.sqlite3
+          key: news-sec-v1-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Keep only two news snapshot caches
+        if: always() && steps.save_cache.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/sec/prune_read_caches.py news-sec-v1-
       - name: Commit updated news_data.js
         id: commit
         run: |

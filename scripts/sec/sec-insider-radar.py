@@ -28,6 +28,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from sec_read_cache import ReadCache, INSIDER_CACHE, INSIDER_SELECT, insider_row, compact_insider
 
 UTC = dt.timezone.utc
 WINDOW_DAYS = 7
@@ -374,6 +375,7 @@ class LocalStore:
 
 class SupabaseStore:
     def __init__(self):
+        self.cache = ReadCache()
         self.url = os.environ["SUPABASE_URL"].rstrip("/") + "/functions/v1/sec-ingest/rest/v1/"
         key = os.environ["SEC_INGEST_TOKEN"]
         self.headers = {"Authorization": "Bearer " + key, "Content-Type": "application/json"}
@@ -396,14 +398,18 @@ class SupabaseStore:
         self.call("sec_insider_sync_state?on_conflict=id", "POST", {"id": "global", "payload": state}, "resolution=merge-duplicates")
 
     def records(self, since=None):
-        rows = []
-        for offset in range(0, 1_000_000, 1000):
-            recent = f"&or=(filed_date.gte.{since},status.neq.parsed)" if since else ""
-            page = self.call(f"sec_insider_filings?select=*&order=accession&limit=1000&offset={offset}{recent}")
-            rows.extend(page)
-            if len(page) < 1000:
-                return rows
-        raise RuntimeError("Unexpected history size")
+        def pager(path):
+            rows = []
+            for offset in range(0, 1_000_000, 1000):
+                page = self.call(path + f"&limit=1000&offset={offset}")
+                rows.extend(page)
+                if len(page) < 1000:
+                    return rows
+            raise RuntimeError("Unexpected history size")
+        recent = f"&or=(filed_date.gte.{since},status.neq.parsed)" if since else ""
+        return self.cache.rows(self.call, pager, "sec_insider_filings", recent,
+                               INSIDER_CACHE, INSIDER_SELECT, key="accession", revision="updated_at",
+                               batch=100, transform=insider_row)
 
     def discover(self, rows):
         for offset in range(0, len(rows), 250):
@@ -412,6 +418,7 @@ class SupabaseStore:
     def save(self, rows):
         if rows:
             self.call("sec_insider_filings?on_conflict=accession", "POST", rows, "resolution=merge-duplicates")
+            self.cache.put(INSIDER_CACHE, [compact_insider(r) for r in rows], "accession", "updated_at")
 
     def publish(self, payload):
         self.call("sec_insider_radar?on_conflict=id", "POST", {"id": "global", "payload": payload,
@@ -460,6 +467,9 @@ def run(sec, store, max_filings, today):
         day += dt.timedelta(days=1)
     recent_start = (today - dt.timedelta(days=WINDOW_DAYS - 1)).isoformat()
     records = store.records(since=recent_start)
+    # Keep this run's successfully saved delta in memory. Publishing progress
+    # and the final snapshot must not download the same window again.
+    current = {r["accession"]: r for r in records}
     def retry_due(record):
         if record["status"] == "parsed":
             return False
@@ -492,16 +502,17 @@ def run(sec, store, max_filings, today):
         for offset in range(0, len(pending), 50):
             batch = list(pool.map(download, pending[offset:offset + 50]))
             store.save(batch)
+            current.update((r["accession"], r) for r in batch)
             processed += len(batch)
             print(f"Saved {processed}/{len(pending)}", flush=True)
             if processed == 50 or processed % 500 == 0:
-                store.publish(snapshot(store.records(since=recent_start), state, today))
+                store.publish(snapshot(list(current.values()), state, today))
             if sum(r["status"] == "failed" for r in batch) >= max(10, len(batch) // 2):
                 outage = True
                 break
     state["last_run_at"] = stamp()
     store.save_state(state)
-    payload = snapshot(store.records(since=recent_start), state, today)
+    payload = snapshot(list(current.values()), state, today)
     store.publish(payload)
     print(json.dumps({"coverage": payload["coverage"], "clusters": len(payload["clusters"]),
         "large": len(payload["large"]), "sales": len(payload["sales"]["large"]),
