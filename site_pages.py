@@ -139,8 +139,8 @@ COMMON_FAQ = {
                  "dividends, watchlists and price alerts. Your investments remain with your chosen broker."),
     "free": ("Is Pulsarium free?",
              "Yes. The personal cabinet is free during the public beta: portfolios, dividends, watchlists, "
-             "price alerts, broker import and the news feed. Paid plans with an AI research assistant are planned; "
-             "the free features stay available."),
+             "price alerts, broker import and the news feed. AI research on any company runs on credits, with one "
+             "free credit a day during the beta. Paid plans are planned."),
     "broker": ("Do I have to connect my broker account?",
                "No. Pulsarium never asks for broker logins. You export a transaction file from your broker and "
                "upload it, or add trades by hand. Nothing reaches your broker account."),
@@ -715,7 +715,7 @@ def why_pulsarium() -> dict:
             ("Risk you can see", "Weight limits per position and alert bands that show how close each name is to your level."),
             ("Calm by design", "No ads, no public portfolios, no leaderboards. Two themes — a neon night mode and a calm light one — in the cabinet and on the news site."),
             ("Privacy you can check", "Two-factor sign-in, data isolated per account, full export and self-service deletion."),
-            ("Free to start", "The cabinet is free during the public beta; paid plans will add an AI research assistant."),
+            ("Free to start", "The cabinet is free during the public beta, AI research included: one free credit a day."),
         ])
         + shot_pair("Two themes, one workspace",
                     ("cabinet-overview", "Pulsarium overview in the dark Neon theme", "Neon — a night mode with glow"),

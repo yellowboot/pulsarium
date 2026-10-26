@@ -98,6 +98,8 @@
       avatar.appendChild(photo);
     }
     signIn.replaceWith(avatar);
+    // signed in: "Personal cabinet" opens the cabinet, not the sign-up section
+    document.querySelectorAll('header a[href="#cabinet"]').forEach(function (link) { link.href = APP; });
   }
 
   function ready() {
