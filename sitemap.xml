@@ -286,12 +286,12 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/blk/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://pulsarium.finance/news/bmy/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -341,7 +341,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/c/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -416,7 +416,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/crwd/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -431,7 +431,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/cvs/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -985,6 +985,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/gsk/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/hal/</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>hourly</changefreq>
@@ -1151,7 +1156,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/mco/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1286,7 +1291,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/nvo/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1592,6 +1597,11 @@
   <url>
     <loc>https://pulsarium.finance/news/sndk/</loc>
     <lastmod>2026-10-24</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/snow/</loc>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
