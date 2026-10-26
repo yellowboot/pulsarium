@@ -6,34 +6,40 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 26.10.2026 11:37
-28 of 80 news items unmatched this run
+Generated: 26.10.2026 13:17
+34 of 80 news items unmatched this run
 
-- [Yahoo Finance] Ocean Power Technologies and Stratum Holdings Sign Letter of Intent for Proposed Strategic Collaboration to Demonstrate Offshore Renewable-Powered Data Center Assets
-- [Yahoo Finance] Warren Buffett Put $10 Billion Into 2 Banks When Their Stocks Were Under Pressure. Here's What Those Deals Teach Today.
-- [Nasdaq] Elme Communities Common Shares Suspended by NYSE; Company Anticipates OTC Trading Under Symbol ELMES
-- [Nasdaq] Stratum Holdings Corp., Formerly La Rosa Holdings Corp., Completes Additional Closing of Series E Preferred Stock for $200,000
-- [Yahoo Finance] Stocks mostly rise before tech earnings, central bank calls
-- [Yahoo Finance] Earnings, Central Bank, Oil Views Lift Wall Street Modestly Pre-Bell; Asia Mixed, Europe Up
-- [Investing.com] European stocks rebound as investors eye ECB, Fed meetings
-- [Nasdaq] Idaho Copper Corporation Files NI 43-101 Technical Report, Plans Subpart 1300 Filing
-- [Investing.com] Owens-Illinois stock rises ahead of earnings as Citi sees low bar
-- [Investing.com] Kone plans to sell up to €5bn in TKE European assets: FT
-- [Nasdaq] Cyber Enviro-Tech, Inc. Enters into Amendment No. 2 to Equity Purchase Agreement
-- [Nasdaq] Pacific Booker Minerals Inc. Upsizes Private Placement to $12.0 Million
-- [Nasdaq] ArriVent BioPharma, Inc. Announces Initial Phase 1 Data for CDH17-Targeted ADC ARR-217
+- [CNBC] Anthropic files SEC prospectus, bringing AI lab a step closer to historic offering: Live updates
+- [CNBC] Oil prices fall as Saudi defense minister travels to Iran for talks to de-escalate conflict
+- [CNBC] Fanatics teams up with OpenAI for new AI-powered shopping suggestion feature
+- [Nasdaq] Wheat Bulls Fail to Find Footing on Friday
+- [Nasdaq] Cattle See Modest Buying Ahead of Bull Friendly Cattle on Feed Report
+- [Nasdaq] Hogs See Modest Strength on Friday, as Pork Hits Lowest Price Since 2020
+- [Nasdaq] Corn Falls Lower into the Weekend, as NASS Issues Correction to September Report
+- [Nasdaq] Soybeans Post Friday Gains
+- [Nasdaq] Hogs Posting Mixed Friday Trade
+- [Nasdaq] Cotton Facing Friday Weakness
+- [Nasdaq] Corn Facing Friday Weakness
+- [Nasdaq] Wheat Bulls Trying to Find Footing on Friday
+- [Nasdaq] Soybeans Holding onto Friday Gains
+- [Nasdaq] Cattle Ticking Higher Ahead of USDA Report
+- [Nasdaq] Getty Images Holdings, Inc. Files for Chapter 11 Bankruptcy and Enters into $143.0 million DIP Credit Agreement
+- [Yahoo Finance] The Better Buy? Why IGSB and SMB Serve Different Purposes
+- [CNBC] Marc Lore’s Wonder bets on Texas, automation and user-built restaurants as it mulls IPO
+- [Nasdaq] HBT Financial, Inc. Reports Net Income of $31.4 million for the third quarter of 2026
+- [CNBC] Neocloud stocks fall as Elon Musk says more than 200 of them face 'guppy-level death'
+- [MarketWatch] A dot-com survivor warns retail investors against buying the tech dip: ‘You’re taking a knife to a gunfight.’
+- [CNBC] Cracking AI trade has Wall Street looking for a hedge. An ex-Citadel quant may have the answer
+- [Investing.com] Anthropic said to plan 9 a.m. S-1 filing as mid-November IPO remains on track
+- [Investing.com] TSX futures climb as oil falls, gold advances amid hopes for cooling Iran tensions
+- [Investing.com] Why is EQT stock sliding today?
+- [Investing.com] Why Ed Yardeni says the best market entry points are still to come
+- [Investing.com] Why is Pics stock plummeting today?
+- [Investing.com] Why is Inter and Co stock plummeting today?
+- [Investing.com] EQT, Range Resources tie up in $50 billion-plus deal to create US gas giant
 - [CNBC] Private equity pours billions into defense tech as investors debate a bubble
 - [MarketWatch] The Kospi index is the leading indicator for the global AI trade — and Goldman just slashed its forecast by 25%
-- [Nasdaq] Mr Price Group Limited - Depositary Receipt Price Target Decreased by 14.17% to $11.62
-- [Nasdaq] XLSR's Underlying Holdings Could Mean 11% Gain Potential
 - [CoinDesk] Calpers pulls back from big tech as AI jitters deepen neocloud sell-off
-- [CNBC] Neocloud stocks fall as Elon Musk says more than 200 of them face 'guppy-level death'
-- [MarketWatch] Cheesecake Factory was just the subject of unflattering headlines. It’s actually one of the hottest stocks around.
+- [OilPrice.com] Saudi Oil Output Jumps 12.2% to 8 Million Bpd in September
 - [OilPrice.com] Houthis Claim Attacks on Saudi Arabia’s East-West Oil Pipeline
 - [CoinDesk] India's largest crypto exchange absorbs $16 million loss from internal process failure tied to retired wallet
-- [CNBC] Oil slides over 2% as traders weigh Saudi attack risks, demand destruction
-- [CNBC] SoftBank reportedly plans $50 billion tech investment in aspiring 'AI nation' Malaysia
-- [OilPrice.com] Europe's Natural Gas Prices Soar to Four-Year High as Winter Looms
-- [OilPrice.com] India's Stock Market Feels the Heat From High Oil Prices
-- [OilPrice.com] Saudi Arabia Turns to Singapore for Oil Storage
-- [OilPrice.com] Oil Prices Dip but Hold Above $100 as Middle East Supply Threats Mount
