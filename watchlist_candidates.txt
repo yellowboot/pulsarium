@@ -6,39 +6,34 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 26.10.2026 08:37
-33 of 80 news items unmatched this run
+Generated: 26.10.2026 11:37
+28 of 80 news items unmatched this run
 
-- [Yahoo Finance] Stock markets mixed ahead of tech earnings, central bank decisions
-- [Investing.com] European shares hold as markets weigh Iran diplomacy, await c.banks
-- [Investing.com] DAX trapped below cloud resistance with bear flag forming: Live
-- [Nasdaq] Kirin Holdings Company, Limited - Depositary Receipt Price Target Increased by 10.13% to $19.13
-- [Investing.com] Japan stocks lower at close of trade; Nikkei 225 down 0.78%
-- [Investing.com] Asia stocks slip as chipmakers retreat; earnings, central bank meetings loom
-- [Nasdaq] Yue Yuen Industrial Consensus Price Target Decreased 12.41% to $8.41
-- [Investing.com] Swiss Prime Site raises 2026 FFO outlook, sets 2030 growth target
-- [Nasdaq] Donegal Group Consensus Price Target Increased 20.45% to $22.44
-- [Investing.com] Why is Unitree Robotics stock surging today?
-- [Nasdaq] Tenaga Nasional Berhad - Depositary Receipt Consensus Price Target Raised 16.75% to $14.67
-- [CNBC] Defense tech investment boom sparks bubble warning as private equity pours in
-- [Yahoo Finance] Aktsiaselts Infortar own share acquisition transactions
+- [Yahoo Finance] Ocean Power Technologies and Stratum Holdings Sign Letter of Intent for Proposed Strategic Collaboration to Demonstrate Offshore Renewable-Powered Data Center Assets
+- [Yahoo Finance] Warren Buffett Put $10 Billion Into 2 Banks When Their Stocks Were Under Pressure. Here's What Those Deals Teach Today.
+- [Nasdaq] Elme Communities Common Shares Suspended by NYSE; Company Anticipates OTC Trading Under Symbol ELMES
+- [Nasdaq] Stratum Holdings Corp., Formerly La Rosa Holdings Corp., Completes Additional Closing of Series E Preferred Stock for $200,000
+- [Yahoo Finance] Stocks mostly rise before tech earnings, central bank calls
+- [Yahoo Finance] Earnings, Central Bank, Oil Views Lift Wall Street Modestly Pre-Bell; Asia Mixed, Europe Up
+- [Investing.com] European stocks rebound as investors eye ECB, Fed meetings
+- [Nasdaq] Idaho Copper Corporation Files NI 43-101 Technical Report, Plans Subpart 1300 Filing
+- [Investing.com] Owens-Illinois stock rises ahead of earnings as Citi sees low bar
+- [Investing.com] Kone plans to sell up to €5bn in TKE European assets: FT
+- [Nasdaq] Cyber Enviro-Tech, Inc. Enters into Amendment No. 2 to Equity Purchase Agreement
+- [Nasdaq] Pacific Booker Minerals Inc. Upsizes Private Placement to $12.0 Million
+- [Nasdaq] ArriVent BioPharma, Inc. Announces Initial Phase 1 Data for CDH17-Targeted ADC ARR-217
+- [CNBC] Private equity pours billions into defense tech as investors debate a bubble
+- [MarketWatch] The Kospi index is the leading indicator for the global AI trade — and Goldman just slashed its forecast by 25%
+- [Nasdaq] Mr Price Group Limited - Depositary Receipt Price Target Decreased by 14.17% to $11.62
+- [Nasdaq] XLSR's Underlying Holdings Could Mean 11% Gain Potential
+- [CoinDesk] Calpers pulls back from big tech as AI jitters deepen neocloud sell-off
+- [CNBC] Neocloud stocks fall as Elon Musk says more than 200 of them face 'guppy-level death'
+- [MarketWatch] Cheesecake Factory was just the subject of unflattering headlines. It’s actually one of the hottest stocks around.
+- [OilPrice.com] Houthis Claim Attacks on Saudi Arabia’s East-West Oil Pipeline
 - [CoinDesk] India's largest crypto exchange absorbs $16 million loss from internal process failure tied to retired wallet
 - [CNBC] Oil slides over 2% as traders weigh Saudi attack risks, demand destruction
-- [Nasdaq] Sachem Capital - Corporate Bond Price Target Increased by 11.58% to $37.53
 - [CNBC] SoftBank reportedly plans $50 billion tech investment in aspiring 'AI nation' Malaysia
-- [Nasdaq] Hang Lung Properties Limited - Depositary Receipt Price Target Decreased by 13.90% to $5.94
+- [OilPrice.com] Europe's Natural Gas Prices Soar to Four-Year High as Winter Looms
 - [OilPrice.com] India's Stock Market Feels the Heat From High Oil Prices
-- [Nasdaq] Sika AG - Depositary Receipt Price Target Increased by 12.38% to $25.23
-- [Nasdaq] Hogs See Modest Strength on Friday, as Pork Hits Lowest Price Since 2020
-- [Nasdaq] Wheat Bulls Trying to Find Footing on Friday
 - [OilPrice.com] Saudi Arabia Turns to Singapore for Oil Storage
-- [Nasdaq] Corn Falls Lower into the Weekend, as NASS Issues Correction to September Report
-- [Nasdaq] Cattle See Modest Buying Ahead of Bull Friendly Cattle on Feed Report
-- [Nasdaq] Sandoz Group AG - Depositary Receipt Consensus Price Target Raised 10.10% to $93.47
 - [OilPrice.com] Oil Prices Dip but Hold Above $100 as Middle East Supply Threats Mount
-- [Nasdaq] Arbor Realty Trust, Inc. - Preferred Stock Price Target Decreased by 48.98% to $17.27
-- [CNBC] More pain may be coming for the AI trade. Why I’m not giving up on it
-- [OilPrice.com] The Pentagon's Rare Earth Deadline Is Almost Here. Is Anyone Ready?
-- [OilPrice.com] Oil Prices Rise Despite Middle East Export Recovery
-- [CNBC] Audi defends plans for a $4 billion Georgia plant amid VW restructuring, tariffs
-- [CNBC] JetBlue creditors are working with restructuring adviser PJT Partners, WSJ reports
