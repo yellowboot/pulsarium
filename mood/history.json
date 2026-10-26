@@ -523,10 +523,17 @@
   },
   {
    "date": "2026-10-25",
+   "value": 56,
+   "label": "Leaning optimistic",
+   "headlines": 72,
+   "avg7": 54.7
+  },
+  {
+   "date": "2026-10-26",
    "value": 52,
    "label": "Neutral",
-   "headlines": 45,
-   "avg7": 54.1,
+   "headlines": 58,
+   "avg7": 53.9,
    "window": "in the last 12 hours"
   }
  ]
