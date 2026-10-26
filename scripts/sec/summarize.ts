@@ -259,6 +259,29 @@ function pickConcept(facts: Record<string, Concept>, names: string[]) {
   return best
 }
 
+/** Revenue under the freshest concept, with the periods it lacks filled
+ * from the company's other revenue concepts (same unit). A company that
+ * switched tags keeps its quarterly history - Applied Digital moved from
+ * RevenueFromContractWithCustomer... to Revenues in 2026 and, with only two
+ * quarters under the new tag, its key figures fell back to the fiscal year
+ * (and research dated its results from the annual report). Periods the
+ * freshest concept has always keep its value. */
+function mergedConcept(facts: Record<string, Concept>, names: string[]) {
+  const picked = pickConcept(facts, names)
+  if (!picked) return null
+  const key = (i: Fact) => `${i.start ?? ''}|${i.end}`
+  const seen = new Set(picked.items.map(key))
+  const extra: Fact[] = []
+  for (const name of names) {
+    const items = facts[name]?.units[picked.unit]
+    if (!items || items === picked.items) continue
+    const added: string[] = []
+    for (const item of items) if (!seen.has(key(item))) { extra.push(item); added.push(key(item)) }
+    for (const k of added) seen.add(k)
+  }
+  return extra.length ? { ...picked, items: [...picked.items, ...extra] } : picked
+}
+
 /** One value per (start, end): the most recently filed one. */
 function dedupe(items: Fact[]) {
   const chosen = new Map<string, Fact>()
@@ -509,7 +532,7 @@ export function summarize(factsDoc: FactsDoc) {
   const series: Record<string, { q: Map<string, number>; y: Map<string, number> }> = {}
   let currency: string | null = null
   for (const [key, names] of Object.entries(flowMap)) {
-    const picked = pickConcept(source, names)
+    const picked = key === 'revenue' ? mergedConcept(source, names) : pickConcept(source, names)
     if (!picked) continue
     if (key === 'revenue') currency = picked.unit
     series[key] = { q: quarterly(picked.items), y: annual(picked.items) }
