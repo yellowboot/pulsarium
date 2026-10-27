@@ -385,6 +385,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/cnp/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/cof/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>hourly</changefreq>
@@ -841,7 +846,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/dash/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1551,7 +1556,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/metals-mining/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1871,7 +1876,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/wmt/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
