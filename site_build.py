@@ -83,8 +83,8 @@ FOOTER_COLUMNS = [
                (f"{APP_URL}?legal=imprint", "Imprint"), (f"{APP_URL}?legal=privacy", "Privacy"),
                (f"{APP_URL}?legal=terms", "Terms")]),
 ]
-# YouTube and X in the About column, with small icons (Oct 2026)
-SOCIAL_LINKS = '<li><a class="footer-social" href="https://www.youtube.com/@pulsariumfinance" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.6 15V9l5.8 3-5.8 3z"/></svg>YouTube</a></li><li><a class="footer-social" href="https://x.com/pulsariumfin" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.2 2.3h3.4l-7.4 8.4 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9L.9 2.3h7l4.8 6.4 5.5-6.4zm-1.2 17.9h1.9L7.1 4.2H5.1L17 20.2z"/></svg>X</a></li>'
+# YouTube and X in a row of their own above the columns (Oct 2026)
+FOLLOW_ROW = '<div class="footer-follow"><span class="footer-follow-title">Follow Pulsarium</span><a href="https://www.youtube.com/@pulsariumfinance" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.6 15V9l5.8 3-5.8 3z"/></svg>Watch on YouTube</a><span class="footer-follow-dot" aria-hidden="true">·</span><a href="https://x.com/pulsariumfin" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.2 2.3h3.4l-7.4 8.4 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9L.9 2.3h7l4.8 6.4 5.5-6.4zm-1.2 17.9h1.9L7.1 4.2H5.1L17 20.2z"/></svg>Follow on X</a></div>'
 FOOTER_NOTE = ("Headlines come from public RSS feeds and link to their original publishers. Sentiment and "
                "importance are automated scores, not investment advice. Market data may be delayed.")
 
@@ -94,10 +94,10 @@ def footer_html() -> str:
     for title, links in FOOTER_COLUMNS:
         items = "".join(f'<li><a href="{esc(href)}">{esc(name)}</a></li>' for href, name in links)
         if title == "About":
-            items += SOCIAL_LINKS + '<li><button type="button" data-analytics-settings>Analytics settings</button></li>'
+            items += '<li><button type="button" data-analytics-settings>Analytics settings</button></li>'
         columns.append(f'<nav class="footer-col" aria-label="{esc(title)}"><span class="footer-col-title">{esc(title)}</span>'
                        f'<ul>{items}</ul></nav>')
-    return f'<div class="footer-cols">{"".join(columns)}</div>\n  <p class="footer-note">{esc(FOOTER_NOTE)}</p>'
+    return FOLLOW_ROW + f'\n  <div class="footer-cols">{"".join(columns)}</div>\n  <p class="footer-note">{esc(FOOTER_NOTE)}</p>'
 
 esc = html.escape
 
