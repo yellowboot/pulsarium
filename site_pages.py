@@ -70,6 +70,34 @@ def shot(name: str, alt: str, caption: str, first: bool = False) -> str:
             f'<figcaption>{esc(caption)} <span>Demo account with sample data.</span></figcaption></figure>')
 
 
+# The research tutorial on YouTube: our own thumbnail first, the no-cookie player only after a click
+# (no third-party request or cookie until the visitor asks for the video). Styles and script inline, so
+# site.css and every page's asset version stay as they are.
+RESEARCH_VIDEO = ("YaPNy9Y2r8k", "Before You Buy a Stock: the full check in one report")
+
+
+def video_block(title: str, text: str) -> str:
+    vid, label = RESEARCH_VIDEO
+    return (
+        '<style>.video-embed{position:relative;display:block;width:100%;max-width:820px;margin:0 auto;aspect-ratio:16/9;padding:0;'
+        'border:1px solid rgba(255,255,255,.14);border-radius:16px;overflow:hidden;cursor:pointer;background:#050816;'
+        'box-shadow:0 14px 40px rgba(0,0,0,.35)}.video-embed img{display:block;width:100%;height:100%;object-fit:cover;'
+        'transition:transform .4s,filter .4s}.video-embed:hover img{transform:scale(1.03);filter:brightness(1.08)}'
+        '.video-embed .play{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;'
+        'display:grid;place-items:center;background:rgba(8,12,30,.6);border:1px solid rgba(255,255,255,.5);backdrop-filter:blur(6px);'
+        'box-shadow:0 0 24px rgba(255,43,214,.45)}.video-embed .play svg{width:28px;height:28px;margin-left:4px;fill:#fff}'
+        '.video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.video-note{margin:0 auto 18px;max-width:820px}</style>'
+        f'<section class="block"><h2>{esc(title)}</h2><p class="video-note">{text}</p>'
+        f'<button type="button" class="video-embed" data-video="{vid}" aria-label="Play the video: {esc(label)}">'
+        '<img src="/assets/shots/research-tutorial.jpg" alt="" width="960" height="540" loading="lazy" decoding="async">'
+        '<span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span></button></section>'
+        "<script>document.querySelectorAll('.video-embed[data-video]').forEach(b=>b.addEventListener('click',()=>{"
+        "const f=document.createElement('iframe');f.src=`https://www.youtube-nocookie.com/embed/${b.dataset.video}?autoplay=1&rel=0`;"
+        "f.title=b.getAttribute('aria-label');f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;"
+        "b.replaceChildren(f)},{once:true}))</script>"
+    )
+
+
 def features(title: str, cards: list) -> str:
     items = "".join(
         f'<article class="panel feature"><h3>{esc(h)}</h3><p>{p}</p></article>' for h, p in cards
@@ -717,6 +745,10 @@ def why_pulsarium() -> dict:
             ("Privacy you can check", "Two-factor sign-in, data isolated per account, full export and self-service deletion."),
             ("Free to start", "The cabinet is free during the public beta, AI research included: one free credit a day."),
         ])
+        + video_block("AI research, step by step",
+                      "One report checks a company the way you would before buying: the latest results, P/E against its "
+                      "own history and its industry, insiders, scenarios and what could prove the idea wrong. "
+                      "One free credit a day during the beta.")
         + shot_pair("Two themes, one workspace",
                     ("cabinet-overview", "Pulsarium overview in the dark Neon theme", "Neon — a night mode with glow"),
                     ("cabinet-overview-calm", "Pulsarium overview in the light Calm theme", "Calm — a quiet light theme"))

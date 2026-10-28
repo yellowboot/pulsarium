@@ -355,6 +355,19 @@
   .later .eyebrow { color: #ff7ae6; }
   .later-title { display: block; margin-top: 8px; font-size: 22px; font-weight: 600; line-height: 1.35; color: var(--text-hi); }
   .later-note { font-size: 11.5px; letter-spacing: 0.14em; color: var(--text-mid); }
+  .later-text { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+  /* the research tutorial: our own thumbnail first; YouTube (no-cookie) loads only on a click */
+  .later-video { position: relative; width: 380px; aspect-ratio: 16 / 9; padding: 0; border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 14px; overflow: hidden; cursor: pointer; background: #050816; box-shadow: 0 14px 40px rgba(0,0,0,0.35); }
+  .later-video img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s, filter 0.4s; }
+  .later-video:hover img { transform: scale(1.03); filter: brightness(1.08); }
+  .later-video .play { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%;
+    display: grid; place-items: center; background: rgba(8,12,30,0.6); border: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(6px); box-shadow: 0 0 24px rgba(255,43,214,0.45); }
+  .later-video .play svg { width: 24px; height: 24px; margin-left: 3px; fill: #fff; }
+  .later-video .len { position: absolute; right: 10px; bottom: 10px; padding: 3px 8px; border-radius: 6px; font-size: 11.5px;
+    letter-spacing: 0.08em; color: #fff; background: rgba(5,8,22,0.75); }
+  .later-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
   /* ---------- Footer ---------- */
   .site-footer { position: relative; z-index: 1; padding: 26px var(--pad-x); border-top: 1px solid rgba(120,220,255,0.10); }
@@ -374,6 +387,7 @@
     .pulsar { transform: scale(0.72); }
     .features { grid-template-columns: 1fr; margin-top: 32px; }
     .later { grid-template-columns: 1fr; gap: 14px; }
+    .later-video { width: 100%; }
   }
   @media (max-width: 560px) {
     .site-header .wordmark { font-size: 15px; }
@@ -578,11 +592,18 @@
       </section>
 
       <section class="later" aria-label="New in the cabinet">
-        <div>
-          <span class="eyebrow">New in the cabinet</span>
-          <span class="later-title">AI research — a quick read or a deep dive on any company.</span>
+        <div class="later-text">
+          <div>
+            <span class="eyebrow">New in the cabinet</span>
+            <span class="later-title">AI research — a quick read or a deep dive on any company.</span>
+          </div>
+          <a class="later-note mono" href="https://app.pulsarium.finance/">1 FREE CREDIT A DAY →</a>
         </div>
-        <a class="later-note mono" href="https://app.pulsarium.finance/">1 FREE CREDIT A DAY →</a>
+        <button type="button" class="later-video" data-video="YaPNy9Y2r8k" aria-label="Play the video: Before You Buy a Stock — the full check in one report">
+          <img src="/assets/shots/research-tutorial.jpg" alt="" width="960" height="540" loading="lazy">
+          <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+          <span class="len mono">WATCH · HOW IT WORKS</span>
+        </button>
       </section>
     </main>
   </div>
@@ -640,6 +661,17 @@
   <p><strong>Help improve Pulsarium?</strong> With your permission, we count visits and signup journeys and save the campaign source for this browser session. No advertising trackers. Read the <a href="https://app.pulsarium.finance/?legal=privacy">Privacy policy</a>.</p>
   <div class="analytics-consent-actions"><button type="button" data-choice="no">Decline</button><button type="button" data-choice="yes">Allow analytics</button></div>
 </aside>
+<script>
+// the research video: swap the thumbnail for the no-cookie YouTube player on a click
+document.querySelectorAll('.later-video[data-video]').forEach(button => button.addEventListener('click', () => {
+  const frame = document.createElement('iframe');
+  frame.src = `https://www.youtube-nocookie.com/embed/${button.dataset.video}?autoplay=1&rel=0`;
+  frame.title = button.getAttribute('aria-label');
+  frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+  frame.allowFullscreen = true;
+  button.replaceChildren(frame);
+}, { once: true }));
+</script>
 <script>
 (() => {
   const consentKey = 'pulsarium.landing-analytics-consent.v1';
