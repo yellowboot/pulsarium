@@ -6,45 +6,48 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 28.10.2026 16:17
-39 of 80 news items unmatched this run
+Generated: 28.10.2026 17:37
+42 of 80 news items unmatched this run
 
-- [MarketWatch] Bullish on Anthropic but don’t want to wait until the IPO? Here’s how you can invest today.
 - [CNBC] Fed meeting live updates: No hike expected, but investors watching Warsh for what's next
-- [Investing.com] Wendy’s gets $1.4 billion take-private offer from Peltz-led group
-- [Investing.com] Supplements brand Rho Nutrition explores sale, sources say
-- [CNBC] Jim Cramer sees buying opportunities in these 2 beaten-down stocks
-- [Investing.com] Norway stocks higher at close of trade; Oslo OBX up 0.01%
-- [Investing.com] Israel stocks lower at close of trade; TA 35 down 1.81%
-- [Yahoo Finance] 2 AI Stocks Down 48% to 70% to Buy Now and Hold for 10 Years
-- [Investing.com] Rolls-Royce secures £2.5bn UK support for jet engine project
+- [Yahoo Finance] Update: US Equity Indexes Gain Moderately Ahead of Fed Policy Moves, Mag-7 Earnings
+- [Yahoo Finance] Update: Equities Rise Intraday as Fed Decision Looms
+- [MarketWatch] Wendy’s buyout offer suggests the burger chain’s overhaul could be very expensive
+- [Yahoo Finance] Exchange-Traded Funds, US Equities Mixed After Midday
+- [Nasdaq] Ballard Power Systems Inc. Launches HPU Agile-H Delivering 80kW of Clean Power
+- [Nasdaq] Fusion Fuel Green PLC Announces Al Shola Gas Contracted Engineering Portfolio of $5.2 million
+- [Nasdaq] Hope Bancorp, Inc. Reports Third Quarter 2026 Net Income of $35.6 million
+- [Yahoo Finance] Blackbaud, Inc. Q3 2026 Earnings Call Summary
+- [Yahoo Finance] Urban Edge Properties Q3 2026 Earnings Call Summary
 - [Investing.com] US bans imports from BGI Genomics, MGI Tech, citing ties to forced labor in Xinjiang
-- [Yahoo Finance] Why Landstar System Stock Crashed After Earnings
-- [Yahoo Finance] What Does Anthropic’s IPO Filing Have to Do With the Copper Price?
-- [Nasdaq] Replimune Group, Inc. Reports Fiscal Second Quarter 2027 Financial Results and TUDRIQEV Launch
-- [Nasdaq] Oatly Group AB Reports Third Quarter 2026 Financial Results
-- [Nasdaq] Bausch + Lomb Reports Third-Quarter 2026 Revenue of $1.375 Billion and Raises Full-Year Guidance
-- [Investing.com] Why is ICON stock surging today?
-- [Investing.com] Why is Diebold Nixdorf stock sliding today?
-- [Investing.com] Why is O-I Glass stock plunging today?
-- [Investing.com] Why is Jones Lang LaSalle stock surging today?
-- [Yahoo Finance] 3 Magnificent Dividend Stocks for Risk-Averse Investors
-- [Nasdaq] Dana Incorporated Reports third-quarter 2026 Sales of $2.04 billion
-- [Nasdaq] GoldMining Inc. Commences Pre-Feasibility Study and 6,000-Metre Infill Drilling at São Jorge
-- [Yahoo Finance] Budget Uncertainty Weighed on Mercury Systems (MRCY) in Q3
-- [Nasdaq] OneSpaWorld Holdings Limited Reports Third Quarter Fiscal 2026 Total Revenues of $276.5 Million and Net Income of $28.2 Million
-- [Nasdaq] Quhuo Limited Affiliate Enters into RMB 10 million Credit Agreement
-- [Nasdaq] Shenandoah Telecommunications Company Reports Third Quarter 2026 Results
-- [Nasdaq] Range Resources Corporation Announces Third Quarter 2026 Results
-- [MarketWatch] These software stocks could be winners as earnings season kicks into high gear
-- [Nasdaq] IDEX Corporation Reports Record Third Quarter 2026 Results and Raises Full Year Guidance
-- [CNBC] MSG just spun off the Knicks and Rangers. How one analyst sees them trading
-- [CNBC] Wendy's shares jump 15% as Nelson Peltz's Trian offers $1.4 billion to buy burger chain
-- [CNBC] DraftKings CEO Jason Robins says parents should talk with kids about responsible gambling
+- [Yahoo Finance] Littelfuse, Inc. Q3 2026 Earnings Call Summary
+- [Yahoo Finance] Stepan Company Q3 2026 Earnings Call Summary
+- [Yahoo Finance] Investors Who Piled Into China’s AI Boom Just Watched About $480 Billion Vanish in Under Four Months. Are America’s AI Bulls Next?
+- [Yahoo Finance] Why F5 Stock Is Getting Crushed Today
+- [Nasdaq] Beneficient Files Motion to Intervene in Delaware Litigation to Invalidate Purported HCLP Debt
+- [Nasdaq] Wingstop Inc. Reports Third Quarter 2026 Revenue of $185.1 million
+- [Nasdaq] Dollar Posts 1.5-week High on Expectations for Hawkish FOMC Commentary
+- [Investing.com] U.K. stocks higher at close of trade; Investing.com United Kingdom 100 up 0.10%
+- [Investing.com] Spain stocks lower at close of trade; IBEX 35 down 1.45%
+- [Investing.com] Portugal stocks lower at close of trade; PSI down 0.08%
+- [Investing.com] Netherlands stocks lower at close of trade; AEX down 0.37%
+- [Investing.com] Italy stocks higher at close of trade; Investing.com Italy 40 up 0.39%
+- [Investing.com] Germany stocks mixed at close of trade; DAX up 0.42%
+- [CNBC] Anthropic is about to go public. Here are the proxies that could benefit
+- [Nasdaq] Weibo Corporation to Hold Board Meeting on Tuesday, November 17, 2026 to Approve Q3 2026 Financial Results
+- [Nasdaq] FuelCell Energy, Inc. Appoints Peter Hopper to Board of Directors
+- [MarketWatch] The U.S. government will no longer penalize American companies for making six popular peptides
+- [Nasdaq] Jones Lang LaSalle Incorporated Reports Third-Quarter 2026 Results and Plans $500 million Accelerated Share Repurchase
+- [Nasdaq] Stock Yards Bancorp Reports Record Third Quarter Earnings of $43.5 Million
+- [Nasdaq] MGP Ingredients, Inc. Reports Third Quarter 2026 Results and Announces Name Change to Sempreon, Inc.
+- [MarketWatch] Healthcare stocks are on their biggest hot streak in a generation. Think twice before chasing the rally.
 - [CNBC] America's largest budget airline reports 71% jump in airfare
+- [Mining.com] US offers Constellation up to $5B nuclear loan
+- [CNBC] Looking for yield? This could be one of the best times in recent market history to buy corporate bonds
+- [MarketWatch] Bullish on Anthropic but don’t want to wait until the IPO? Here’s how you can invest today.
+- [CNBC] Jim Cramer sees buying opportunities in these 2 beaten-down stocks
+- [MarketWatch] These software stocks could be winners as earnings season kicks into high gear
+- [CNBC] MSG just spun off the Knicks and Rangers. How one analyst sees them trading
+- [Mining.com] Gold dip draws Asian buyers as North American funds lose cash
+- [CNBC] Wendy's shares jump 15% as Nelson Peltz's Trian offers $1.4 billion to buy burger chain
 - [Mining.com] Deep Sea Minerals eyes US listing as leasing auction nears
-- [CNBC] The 'Magnificent Seven' is no more. Time to pick winners and losers as group's correlation breaks down
-- [Mining.com] Codelco relocates 74% of workers as Andes Norte remains halted
-- [Retail Dive] Jos. A. Bank puts customer experience at the center of new store concept
-- [CoinDesk] XRP Ledger developers propose creating wallets with zero XRP for stablecoin payments
-- [Retail Dive] Etsy CEO addresses friction of AI vs. human creativity
