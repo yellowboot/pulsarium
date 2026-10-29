@@ -57,9 +57,9 @@
 </header>
 
 <section class="stats">
-  <div class="panel stat"><span class="stat-label">Headlines</span><strong>1</strong><small>last 7 days · 6 in 30 days</small></div>
-  <div class="panel stat stat-wide"><span class="stat-label">Sentiment, 30 days</span><div class="sent-bar" role="img" aria-label="2 positive, 2 neutral, 2 negative"><span class="sb-pos" style="width:33%"></span><span class="sb-neu" style="width:34%"></span><span class="sb-neg" style="width:33%"></span></div><div class="sent-legend"><span><i class="dot pos"></i>2 positive</span><span><i class="dot neu"></i>2 neutral</span><span><i class="dot neg"></i>2 negative</span></div></div>
-  <div class="panel stat"><span class="stat-label">Latest headline</span><strong class="stat-text">Thu 22 Oct, 17:08 UTC</strong><small><a href="/news/sector/airlines-travel/">Airlines / Travel</a></small></div>
+  <div class="panel stat"><span class="stat-label">Headlines</span><strong>1</strong><small>last 7 days · 7 in 30 days</small></div>
+  <div class="panel stat stat-wide"><span class="stat-label">Sentiment, 30 days</span><div class="sent-bar" role="img" aria-label="2 positive, 3 neutral, 2 negative"><span class="sb-pos" style="width:29%"></span><span class="sb-neu" style="width:42%"></span><span class="sb-neg" style="width:29%"></span></div><div class="sent-legend"><span><i class="dot pos"></i>2 positive</span><span><i class="dot neu"></i>3 neutral</span><span><i class="dot neg"></i>2 negative</span></div></div>
+  <div class="panel stat"><span class="stat-label">Latest headline</span><strong class="stat-text">Thu 29 Oct, 17:20 UTC</strong><small><a href="/news/sector/airlines-travel/">Airlines / Travel</a></small></div>
 </section>
 
 <aside class="panel cta">
@@ -73,7 +73,15 @@
 
 <section class="block">
   <h2>Latest AAL headlines</h2>
-  <h3 class="day-head"><a href="/news/daily/2026-10-22/">Thursday, 22 October 2026</a></h3><div class="items">
+  <div class="show-more" data-hidden="1"><h3 class="day-head"><a href="/news/daily/2026-10-29/">Thursday, 29 October 2026</a></h3><div class="items">
+<article class="item">
+  <div class="item-meta"><span class="item-source">Yahoo Finance</span><time datetime="2026-10-29T17:20:55+00:00">Thu 29 Oct, 17:20 UTC</time><span class="badge badge-neutral">Neutral</span></div>
+  <h3><a href="https://www.trefis.com/stock/aal/articles/621326/is-it-too-early-to-buy-american-airlines-stock/2026-10-29?.tsrc=rss" target="_blank" rel="noopener">Is It Too Early To Buy American Airlines Stock?</a></h3>
+  <p>For questions about this article or underlying research, email help@trefis.com.</p>
+  
+</article>
+</div>
+<h3 class="day-head"><a href="/news/daily/2026-10-22/">Thursday, 22 October 2026</a></h3><div class="items">
 <article class="item">
   <div class="item-meta"><span class="item-source">Yahoo Finance</span><time datetime="2026-10-22T17:08:47+00:00">Thu 22 Oct, 17:08 UTC</time><span class="badge badge-neutral">Neutral</span></div>
   <h3><a href="https://app.moby.co/home/research/tools/earningsCalendar/earnings-american-airlines-group-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss" target="_blank" rel="noopener">American Airlines Group Inc. Q3 2026 Earnings Call Summary</a></h3>
@@ -111,14 +119,26 @@
   
 </article>
 </div>
-<h3 class="day-head"><a href="/news/daily/2026-10-08/">Thursday, 8 October 2026</a></h3><div class="items">
-<article class="item">
+<h3 class="day-head" data-more><a href="/news/daily/2026-10-08/">Thursday, 8 October 2026</a></h3><div class="items">
+<article class="item" data-more>
   <div class="item-meta"><span class="item-source">Investing.com</span><time datetime="2026-10-08T16:42:02+00:00">Thu 8 Oct, 16:42 UTC</time><span class="badge badge-positive">Positive</span></div>
   <h3><a href="https://www.investing.com/news/stock-market-news/american-airlines-to-equip-over-1000-aircraft-with-spacexs-starlink-wifi-4939512" target="_blank" rel="noopener">American Airlines to equip over 1,000 aircraft with SpaceX’s Starlink Wi-Fi</a></h3>
   
   <div class="item-tags"><a class="tag" href="/news/spcx/">SPCX</a></div>
 </article>
-</div>
+</div></div><script>
+(function () {
+  var box = document.currentScript.previousElementSibling;
+  if (!box || !box.classList.contains('show-more')) return;
+  box.classList.add('is-collapsed');
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'btn btn-ghost show-more-button';
+  button.textContent = 'Show ' + box.dataset.hidden + ' more';
+  button.addEventListener('click', function () { box.classList.remove('is-collapsed'); button.remove(); });
+  box.after(button);
+})();
+</script>
 </section>
 
 <section class="block"><h2>More in Airlines / Travel</h2><div class="chips"><a class="chip" href="/news/uber/">UBER<small>Uber</small></a><a class="chip" href="/news/ual/">UAL<small>United Airlines</small></a><a class="chip" href="/news/abnb/">ABNB<small>Airbnb</small></a><a class="chip" href="/news/rcl/">RCL<small>Royal Caribbean</small></a><a class="chip" href="/news/dal/">DAL<small>Delta Air Lines</small></a><a class="chip" href="/news/hlt/">HLT<small>Hilton Worldwide</small></a><a class="chip" href="/news/luv/">LUV<small>Southwest Airlines</small></a><a class="chip" href="/news/mar/">MAR<small>Marriott International</small></a></div></section>
