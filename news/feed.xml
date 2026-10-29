@@ -6,456 +6,456 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Thu, 29 Oct 2026 19:17:26 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 29 Oct 2026 20:37:29 +0000</lastBuildDate>
   <item>
-    <title>Some Polymarket user funds stolen by hackers, exchange referring matter to U.K. authorities</title>
+    <title>Reddit shares sink on weak sales guidance and plans login requirement test as Google search traffic shrinks</title>
+    <link>https://www.cnbc.com/2026/10/29/reddit-rddt-q3-2026.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/29/reddit-rddt-q3-2026.html</guid>
+    <pubDate>Thu, 29 Oct 2026 20:35:59 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Reddit posts third-quarter earnings and reveals plans to require all users to create official accounts as Google search traffic shrinks</description>
+    <category>GOOGL</category><category>RDDT</category>
+  </item>
+  <item>
+    <title>Amazon misses on earnings and holds capex steady, adding to AI spending jitters</title>
+    <link>https://www.cnbc.com/2026/10/29/amazon-amzn-q3-earnings-report-2026.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/29/amazon-amzn-q3-earnings-report-2026.html</guid>
+    <pubDate>Thu, 29 Oct 2026 20:35:26 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Amazon reported third-quarter earnings on Thursday after the bell.</description>
+    <category>AMZN</category>
+  </item>
+  <item>
+    <title>Rivian third-quarter earnings beat estimates as software revenue, R2 deliveries rise</title>
+    <link>https://www.cnbc.com/2026/10/29/rivian-rivn-earnings-q3-2026.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/29/rivian-rivn-earnings-q3-2026.html</guid>
+    <pubDate>Thu, 29 Oct 2026 20:35:04 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Rivian also revised its 2026 guidance to mark expected improvements in its vehicle deliveries, pre-tax adjusted earnings and capital expenditures.</description>
+    <category>RIVN</category>
+  </item>
+  <item>
+    <title>Update: Nasdaq, S&amp;P 500 Snap 3-Day Rise on Alphabet Sell-Off, Inflation Anxiety</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/nasdaq-p-500-snap-3-203207418.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/nasdaq-p-500-snap-3-203207418.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:32:07 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>(Updates with market moves at the end of the day, and other changes, if any.) The Nasdaq Composit</description>
+    <category>GOOGL</category><category>SPY</category>
+  </item>
+  <item>
+    <title>All the reasons Marvell investors are ‘freaking out’ as Lumentum deal rumors swirl</title>
+    <link>https://www.marketwatch.com/story/marvell-is-reportedly-close-to-buying-lumentum-analysts-say-they-see-logic-in-a-potential-deal-d7539c59?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/marvell-is-reportedly-close-to-buying-lumentum-analysts-say-they-see-logic-in-a-potential-deal-d7539c59?mod=mw_rss_topstories</guid>
+    <pubDate>Thu, 29 Oct 2026 20:31:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>Investors are nervous that Marvell would have to pay a big premium — and wait a while for China to approve any deal.</description>
+    <category>MRVL</category><category>LITE</category>
+  </item>
+  <item>
+    <title>Some Polymarket user funds stolen by hackers; exchange referring matter to U.K. authorities</title>
     <link>https://www.cnbc.com/2026/10/29/polymarket-reports-outage-on-international-exchange-halts-trading.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/10/29/polymarket-reports-outage-on-international-exchange-halts-trading.html</guid>
-    <pubDate>Thu, 29 Oct 2026 19:16:34 +0000</pubDate>
+    <pubDate>Thu, 29 Oct 2026 20:30:24 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>The outage comes just days before the platform is expected to experience heightened trading during the U.S. midterm elections.</description>
     
   </item>
   <item>
-    <title>Nvidia responds to report Jensen Huang was target of Chinese asset, says diversion allegations were &#x27;investigated and debunked&#x27;</title>
-    <link>https://www.cnbc.com/2026/10/29/nvidia-jensen-huang-chinese-intelligence-asset.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/29/nvidia-jensen-huang-chinese-intelligence-asset.html</guid>
-    <pubDate>Thu, 29 Oct 2026 19:16:32 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Nvidia disputed a New York Times report that U.S. intelligence agencies surveilled a person close to CEO Jensen Huang over concerns she could be a Chinese spy.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Cathie Wood buys $9.1 million of tumbling tech stock</title>
-    <link>https://www.thestreet.com/investing/stocks/cathie-wood-buys-9-1-million-of-tumbling-tech-stock-robinhood-hood?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.thestreet.com/investing/stocks/cathie-wood-buys-9-1-million-of-tumbling-tech-stock-robinhood-hood?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 19:13:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Here are Cathie Wood’s latest moves.</description>
-    
-  </item>
-  <item>
-    <title>3 Dividend Stocks Yielding 3% or More to Buy Right Now for Passive Income</title>
-    <link>https://www.fool.com/investing/2026/10/29/3-dividend-stocks-yielding-3-or-more-to-buy-right/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/29/3-dividend-stocks-yielding-3-or-more-to-buy-right/?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 19:13:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>These consumer staples companies have earned their places in your shopping cart -- and possibly in your income portfolio.</description>
-    
-  </item>
-  <item>
-    <title>‘The $100 level is ours for awhile’: Oil won’t be getting cheap anytime soon, no matter what happens in the Gulf</title>
-    <link>https://www.marketwatch.com/story/the-100-level-is-ours-for-awhile-oil-wont-be-getting-cheap-anytime-soon-no-matter-what-happens-in-the-gulf-99d628bf?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/the-100-level-is-ours-for-awhile-oil-wont-be-getting-cheap-anytime-soon-no-matter-what-happens-in-the-gulf-99d628bf?mod=mw_rss_topstories</guid>
-    <pubDate>Thu, 29 Oct 2026 19:12:00 +0000</pubDate>
+    <title>This is where most people go wrong in their 30s and 40s</title>
+    <link>https://www.marketwatch.com/story/the-house-the-kids-college-and-the-raise-where-people-in-their-30s-and-40s-go-wrong-69ec6c90?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/the-house-the-kids-college-and-the-raise-where-people-in-their-30s-and-40s-go-wrong-69ec6c90?mod=mw_rss_topstories</guid>
+    <pubDate>Thu, 29 Oct 2026 20:30:00 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>The oil market may soon reach a point where the dust finally settles enough to see the true chaos the eight-month-old conflict in the Middle East and its shipping disruptions have wrought upon the global crude sector.</description>
+    <description>These big life decisions will determine just how well you retire.</description>
     
   </item>
   <item>
-    <title>S&amp;P 500 heads for first loss in four days as Alphabet, Caterpillar crack after earnings: Live updates</title>
-    <link>https://www.cnbc.com/2026/10/28/stock-market-today-live-updates.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/28/stock-market-today-live-updates.html</guid>
-    <pubDate>Thu, 29 Oct 2026 19:10:20 +0000</pubDate>
+    <title>Labor Department finalizes sweeping PBM disclosure rule</title>
+    <link>https://www.biopharmadive.com/news/pbm-transparency-final-rule-labor-department-employer/873254/</link>
+    <guid isPermaLink="false">https://www.biopharmadive.com/news/pbm-transparency-final-rule-labor-department-employer/873254/</guid>
+    <pubDate>Thu, 29 Oct 2026 20:30:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">BioPharma Dive</source>
+    <description>Starting in 2027, the controversial drug middlemen will have to share a broad swath of fee and compensation data with self-funded employer clients. Employers cheered the rule, while PBMs slammed it as government overreach.</description>
+    
+  </item>
+  <item>
+    <title>Starbucks sales fall short of expectations, but its U.S. turnaround continues to gain steam</title>
+    <link>https://www.cnbc.com/2026/10/29/starbucks-sbux-q4-2026-earnings.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/29/starbucks-sbux-q4-2026-earnings.html</guid>
+    <pubDate>Thu, 29 Oct 2026 20:29:10 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Alphabet reported a disappointing third quarter, and shares tumbled.</description>
-    <category>GOOGL</category><category>CAT</category><category>SPY</category>
+    <description>Starbucks&#x27; U.S. stores topped Wall Street&#x27;s comparable sales expectations but its international business fell short of estimates.</description>
+    <category>SBUX</category>
   </item>
   <item>
-    <title>Hogs Getting a Thursday Bounce</title>
-    <link>https://www.nasdaq.com/articles/hogs-getting-thursday-bounce</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/hogs-getting-thursday-bounce</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:28 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Lean hog futures are showing gains of 7 cents to $1.45 at midday on Thursday. USDA’s national base hog price was reported at $63.06 in the Thursday AM report, up $7.24 from the day prior. The CME Lean Hog Index was down $1.06 on October…</description>
+    <title>Amazon&#x27;s 3Q results miss analysts&#x27; estimates, but posts solid sales gains in cloud computing unit</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/amazons-3q-results-miss-analysts-202736981.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/amazons-3q-results-miss-analysts-202736981.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:27:36 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>NEW YORK (AP) — Amazon delivered fiscal third-quarter profits and net sales that came below Wall Street analysts&#x27; expectations but posted strong growth in its prominent cloud computing unit.The Seattle-based company also offered on…</description>
+    <category>AMZN</category>
+  </item>
+  <item>
+    <title>Alphabet drops 12% in deepening tech and semiconductor rout</title>
+    <link>https://finance.yahoo.com/video/alphabet-drops-12-in-deepening-tech-and-semiconductor-rout-202605913.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/video/alphabet-drops-12-in-deepening-tech-and-semiconductor-rout-202605913.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:26:05 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>A steep 12.6% sell-off in Alphabet (GOOGL) dragged down the broader market, pulling semiconductor and software names like Micron (MU), Intel (INTC), and Marvell (MRVL) deep into negative territory. Bucking the tech retreat, healthcare…</description>
+    <category>MRVL</category><category>MU</category><category>INTC</category><category>GOOGL</category>
+  </item>
+  <item>
+    <title>The stock market’s best forecasting tool says returns over the next 10 years will be dismal</title>
+    <link>https://www.marketwatch.com/story/the-stock-markets-best-forecasting-tool-says-returns-over-the-next-10-years-will-be-dismal-f94fcd87?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/the-stock-markets-best-forecasting-tool-says-returns-over-the-next-10-years-will-be-dismal-f94fcd87?mod=mw_rss_topstories</guid>
+    <pubDate>Thu, 29 Oct 2026 20:26:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>The average U.S. household’s equity allocation is at an all-time high, and that doesn’t bode well, according to the ‘Single Greatest Predictor’</description>
     
   </item>
   <item>
-    <title>Cattle Look to Thursday Following Wednesday Losses</title>
-    <link>https://www.nasdaq.com/articles/cattle-look-thursday-following-wednesday-losses-0</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cattle-look-thursday-following-wednesday-losses-0</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:28 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Live cattle futures are slipping 97 cents to $1.45 at midday. Cash trade has been quiet this week with a few sales reported by USDA at $224 live in the north and $350-365 dressed. The Thursday morning Fed Cattle Exchange online auction…</description>
+    <title>Coinbase snaps losing streak with third-quarter profit on crypto trading rebound</title>
+    <link>https://www.investing.com/news/stock-market-news/coinbase-snaps-losing-streak-with-thirdquarter-profit-on-crypto-trading-rebound-4985073</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/coinbase-snaps-losing-streak-with-thirdquarter-profit-on-crypto-trading-rebound-4985073</guid>
+    <pubDate>Thu, 29 Oct 2026 20:25:17 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>COIN</category>
+  </item>
+  <item>
+    <title>Walmart commits $6 billion to expand Symbotic deal</title>
+    <link>https://www.investing.com/news/stock-market-news/walmart-commits-6-billion-to-expand-symbotic-deal-4985071</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/walmart-commits-6-billion-to-expand-symbotic-deal-4985071</guid>
+    <pubDate>Thu, 29 Oct 2026 20:24:48 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>WMT</category><category>SYM</category>
+  </item>
+  <item>
+    <title>Google Burned Through $9 Billion in Cash Last Quarter, and Wall Street Shredded Alphabet Stock for It</title>
+    <link>https://247wallst.com/videos/google-burned-through-9-billion-in-cash-last-quarter-and-wall-street-shredded-alphabet-stock-for-it/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/videos/google-burned-through-9-billion-in-cash-last-quarter-and-wall-street-shredded-alphabet-stock-for-it/?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:23:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Alphabet&#x27;s free cash flow came in at negative $9.1 billion as capital spending hit $51.4 billion, and search missed estimates. Eric Bleeker weighs that against Google Cloud&#x27;s 103% growth and why the Microsoft playbook could still reward…</description>
+    <category>MSFT</category><category>GOOGL</category>
+  </item>
+  <item>
+    <title>The midterms are crucial to the future of Social Security — no matter how old you are</title>
+    <link>https://www.marketwatch.com/story/the-midterms-are-crucial-to-the-future-of-social-security-no-matter-how-old-you-are-0f080a9c?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/the-midterms-are-crucial-to-the-future-of-social-security-no-matter-how-old-you-are-0f080a9c?mod=mw_rss_topstories</guid>
+    <pubDate>Thu, 29 Oct 2026 20:22:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>The program is expected to run out of money in the next six years, which is the same amount of time as a senator’s term.</description>
     
   </item>
   <item>
-    <title>Corn Ticking Higher at Thursday’s Midday</title>
-    <link>https://www.nasdaq.com/articles/corn-ticking-higher-thursdays-midday</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/corn-ticking-higher-thursdays-midday</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:28 +0000</pubDate>
+    <title>Lilly raised sales guidance for third time this year as Zepbound sales soar. Its stock closed at a record high.</title>
+    <link>https://www.marketwatch.com/story/lilly-raises-outlook-for-third-time-this-year-as-zepbound-sales-soar-6d987407?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/lilly-raises-outlook-for-third-time-this-year-as-zepbound-sales-soar-6d987407?mod=mw_rss_topstories</guid>
+    <pubDate>Thu, 29 Oct 2026 20:22:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>The drugmaker continues to dominate the market for prescription weight-loss drugs in the U.S.</description>
+    <category>LLY</category>
+  </item>
+  <item>
+    <title>Anheuser-Busch InBev SA/NV Reports Third Quarter 2026 Results with Revenue Up 4.9%</title>
+    <link>https://www.nasdaq.com/articles/anheuser-busch-inbev-sa-nv-reports-third-quarter-2026-results-revenue-49</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/anheuser-busch-inbev-sa-nv-reports-third-quarter-2026-results-revenue-49</guid>
+    <pubDate>Thu, 29 Oct 2026 20:21:55 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Corn futures are trading with fractional gains across most front months at midday on Thursday. The CmdtyView national average Cash Corn price is up 3/4 cents at $4.14 1/2. The average close for December corn futures in October has been…</description>
+    <description>Anheuser-Busch InBev SA/NV reported its third quarter 2026 results, with revenue increasing by 4.9% in 3Q26 and revenue per hl growing by 4.2%. Reported revenue increased by 9.1% in 3Q26 to 16 512 million USD, positively impacted by…</description>
+    <category>BUD</category>
+  </item>
+  <item>
+    <title>Xerox Holdings Corporation Announces Exchange Agreement to Address $174.0 million of 5.500% Senior Notes due 2028</title>
+    <link>https://www.nasdaq.com/articles/xerox-holdings-corporation-announces-exchange-agreement-address-1740-million-5500-senior</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/xerox-holdings-corporation-announces-exchange-agreement-address-1740-million-5500-senior</guid>
+    <pubDate>Thu, 29 Oct 2026 20:21:54 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Xerox Holdings Corporation and its subsidiary Xerox Corporation entered into an Exchange Support Agreement on October 29, 2026, with certain holders of Holdings&#x27; 5.500% Senior Notes due 2028. Under the agreement, the parties agreed to…</description>
     
   </item>
   <item>
-    <title>Sugar Prices Rise as Brazil Reports Reduced Cane Crushing</title>
-    <link>https://www.nasdaq.com/articles/sugar-prices-rise-brazil-reports-reduced-cane-crushing</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/sugar-prices-rise-brazil-reports-reduced-cane-crushing</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:28 +0000</pubDate>
+    <title>Arrow Financial Corporation Reports Third Quarter 2026 Results and Adirondack Bancorp Acquisition</title>
+    <link>https://www.nasdaq.com/articles/arrow-financial-corporation-reports-third-quarter-2026-results-and-adirondack-bancorp</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/arrow-financial-corporation-reports-third-quarter-2026-results-and-adirondack-bancorp</guid>
+    <pubDate>Thu, 29 Oct 2026 20:21:54 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>March NY world sugar #11 (SBH27 ) is up +0.14 (+0.72%), and December London ICE white sugar #5 (SWZ26 ) is up +2.50 (+0.48%). Sugar prices are higher after Brazil’s agricultural ministry reported late Wednesday that Brazilian mills…</description>
+    <description>Arrow Financial Corporation reported net income of $5.7 million and fully diluted earnings per share of $0.31 for the third quarter of 2026, compared to net income of $11.0 million and earnings per share of $0.66 for the second quarter…</description>
     
-  </item>
-  <item>
-    <title>Stocks Trade Lower as Alphabet Disappoints and Chip Stocks Fall</title>
-    <link>https://www.nasdaq.com/articles/stocks-trade-lower-alphabet-disappoints-and-chip-stocks-fall</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-trade-lower-alphabet-disappoints-and-chip-stocks-fall</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:27 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is down -0.43%, the Dow Jones Industrial Average ($DOWI ) (DIA ) is down -0.45%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is down -1.47%. December E-mini S&amp;P futures (ESZ26 ) are down -0.41%, and…</description>
-    <category>GOOGL</category><category>SPY</category><category>QQQ</category><category>DJI</category>
   </item>
   <item>
     <title>Coffee Prices Fall to 1-Month as Concerns Continue About Brazilian Sales</title>
-    <link>https://www.nasdaq.com/articles/coffee-prices-fall-1-month-concerns-continue-about-brazilian-sales</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/coffee-prices-fall-1-month-concerns-continue-about-brazilian-sales</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:27 +0000</pubDate>
+    <link>https://www.nasdaq.com/articles/coffee-prices-fall-1-month-concerns-continue-about-brazilian-sales-0</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/coffee-prices-fall-1-month-concerns-continue-about-brazilian-sales-0</guid>
+    <pubDate>Thu, 29 Oct 2026 20:21:42 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>December arabica coffee (KCZ26 ) is down -0.65 (-0.23%), and January ICE robusta coffee (RMF27 ) is up +4 (+0.13). NY arabica coffee today fell to a new 1-month low, extending this week’s sharp sell-off. Coffee prices have fallen this…</description>
-    
-  </item>
-  <item>
-    <title>Wheat Starting Thursday with Slight Losses</title>
-    <link>https://www.nasdaq.com/articles/wheat-starting-thursday-slight-losses-0</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-starting-thursday-slight-losses-0</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:27 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Wheat is showing fractional to 2 cent losses at midday. The wheat complex extended the weakness to the Wednesday session. Chicago SRW contracts were a penny to 11 1/4 cents in the red at the close. Open interest was up 4,933 contracts…</description>
+    <description>December arabica coffee (KCZ26 ) closed down -1.30 (-0.45%) on Thursday, and January ICE robusta coffee (RMF27 ) closed down -23 (-0.72%). NY arabica coffee fell to a new 1-month low on Thursday, extending this week’s sharp sell-off.…</description>
     
   </item>
   <item>
     <title>Cocoa Remains Weak on Rising ICE Inventories and Potential Brazilian Cocoa Sales</title>
-    <link>https://www.nasdaq.com/articles/cocoa-remains-weak-rising-ice-inventories-and-potential-brazilian-cocoa-sales</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cocoa-remains-weak-rising-ice-inventories-and-potential-brazilian-cocoa-sales</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:27 +0000</pubDate>
+    <link>https://www.nasdaq.com/articles/cocoa-remains-weak-rising-ice-inventories-and-potential-brazilian-cocoa-sales-0</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/cocoa-remains-weak-rising-ice-inventories-and-potential-brazilian-cocoa-sales-0</guid>
+    <pubDate>Thu, 29 Oct 2026 20:21:42 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>December ICE NY cocoa (CCZ26 ) is down -45 (-0.82%), and December ICE London cocoa #7 (CAZ26 ) is down -32 (-0.77%). NY cocoa prices are trading lower today and are consolidating just above Wednesday’s 1-month low. Cocoa prices are…</description>
+    <description>December ICE NY cocoa (CCZ26 ) closed unchanged on Thursday, and December ICE London cocoa #7 (CAZ26 ) closed down -10 (-0.24%). NY cocoa prices on Thursday consolidated just above Wednesday’s 1-month low and closed unchanged. Cocoa…</description>
     
   </item>
   <item>
-    <title>Dollar Sees Some Support on Strong US GDP Report</title>
-    <link>https://www.nasdaq.com/articles/dollar-sees-some-support-strong-us-gdp-report</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/dollar-sees-some-support-strong-us-gdp-report</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:27 +0000</pubDate>
+    <title>Sugar Prices Rise as Brazil Reports Reduced Cane Crushing</title>
+    <link>https://www.nasdaq.com/articles/sugar-prices-rise-brazil-reports-reduced-cane-crushing-0</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/sugar-prices-rise-brazil-reports-reduced-cane-crushing-0</guid>
+    <pubDate>Thu, 29 Oct 2026 20:21:42 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The dollar index (DXY00 ) is trading slightly higher by +0.02% on some safe-haven demand amid today’s sell-off in stocks. The dollar is also seeing support from today’s stronger-than-expected US Q3 GDP report of +3.4%. However, the…</description>
+    <description>March NY world sugar #11 (SBH27 ) closed up +0.13 (+0.67%) on Thursday, and December London ICE white sugar #5 (SWZ26 ) closed up +1.90 (+0.36%). Sugar prices closed higher on Thursday after Brazil’s agricultural ministry reported late…</description>
+    
+  </item>
+  <item>
+    <title>Wheat Getting Some Gains on Export News</title>
+    <link>https://www.nasdaq.com/articles/wheat-getting-some-gains-export-news</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-getting-some-gains-export-news</guid>
+    <pubDate>Thu, 29 Oct 2026 20:21:42 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The wheat complex is finding some strength on Thursday with China rumors and a marketing year high in export business. Chicago SRW contracts are up 4 to 5 cents in the front months. KC HRW futures are up 1 to 2 cents at midday. MPLS…</description>
+    
+  </item>
+  <item>
+    <title>Soybeans On the Lower Side of Unchanged on Thursday</title>
+    <link>https://www.nasdaq.com/articles/soybeans-lower-side-unchanged-thursday</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/soybeans-lower-side-unchanged-thursday</guid>
+    <pubDate>Thu, 29 Oct 2026 20:21:41 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Soybeans are down 1 to 3 cents in the front months on Thursday with some deferreds showing strength. First notice day for November is on Friday. The cmdtyView national average Cash Bean price is down 2 3/4 cents at $11.64 1/4. Soymeal…</description>
     
   </item>
   <item>
     <title>Corn Slipping Back with Fractional Losses on Thursday Morning</title>
     <link>https://www.nasdaq.com/articles/corn-slipping-back-fractional-losses-thursday-morning</link>
     <guid isPermaLink="false">https://www.nasdaq.com/articles/corn-slipping-back-fractional-losses-thursday-morning</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:26 +0000</pubDate>
+    <pubDate>Thu, 29 Oct 2026 20:21:40 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
     <description>Corn prices are fractionally lower to start Thursday. Futures saw steady to 3 cent higher trade across most contracts on Wednesday, as futures got a midweek bounce. Open interest was up 29,205 contracts on Wednesday, suggesting modest…</description>
     
   </item>
   <item>
-    <title>Cotton Starting Thursday with Modest Gains</title>
-    <link>https://www.nasdaq.com/articles/cotton-starting-thursday-modest-gains</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cotton-starting-thursday-modest-gains</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:26 +0000</pubDate>
+    <title>Soybeans Falling Early on Thursday</title>
+    <link>https://www.nasdaq.com/articles/soybeans-falling-early-thursday</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/soybeans-falling-early-thursday</guid>
+    <pubDate>Thu, 29 Oct 2026 20:21:40 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Cotton prices are up 8 to 18 points on Thursday. Futures closed the Wednesday session with contracts 8 to 25 points in the green, with outside factors supportive. Crude oil is up $2.04 per barrel on the session, with the US dollar index…</description>
+    <description>Soybeans are down 5 to 8 cents across the front months to start Thursday trade. Futures faded lower into the midweek close on Wednesday, as contracts were down 4 ¾ to 7 ¼ cents and a couple cents off the lows. Open interest suggested…</description>
     
   </item>
   <item>
-    <title>Hogs Look to Thursday Amid Weak Cash and Cutout</title>
-    <link>https://www.nasdaq.com/articles/hogs-look-thursday-amid-weak-cash-and-cutout</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/hogs-look-thursday-amid-weak-cash-and-cutout</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:26 +0000</pubDate>
+    <title>Stocks Trade Lower as Alphabet Disappoints and Chip Stocks Fall</title>
+    <link>https://www.nasdaq.com/articles/stocks-trade-lower-alphabet-disappoints-and-chip-stocks-fall-0</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-trade-lower-alphabet-disappoints-and-chip-stocks-fall-0</guid>
+    <pubDate>Thu, 29 Oct 2026 20:21:40 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Lean hog futures were mixed, with front months down 75 cents to $3.42 and other contracts up 30 cents to $2.22. Open interest was up 3,383 contracts on Wednesday. USDA’s national base hog price was reported at $56.56 in the Wednesday PM…</description>
-    
+    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is down -0.27%, the Dow Jones Industrial Average ($DOWI ) (DIA ) is down -0.26%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is down -1.20%. December E-mini S&amp;P futures (ESZ26 ) are down -0.34%, and…</description>
+    <category>GOOGL</category><category>SPY</category><category>QQQ</category><category>DJI</category>
   </item>
   <item>
-    <title>Alphabet&#x27;s Cloud Business Just Doubled. The Stock Fell 12%. Is it a Buy?</title>
-    <link>https://www.fool.com/investing/2026/10/29/alphabet-s-cloud-business-just-doubled-the-stock-fell-12-is-it-a-buy/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/29/alphabet-s-cloud-business-just-doubled-the-stock-fell-12-is-it-a-buy/?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:02 +0000</pubDate>
+    <title>How major US stock indexes fared Thursday 10/29/2026</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/major-us-stock-indexes-fared-202131547.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/major-us-stock-indexes-fared-202131547.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:21:31 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Google Cloud&#x27;s revenue more than doubled, but investors focused on slower Search growth and a large paper loss.</description>
+    <description>A historic drop for Alphabet’s stock dragged the U.3% Thursday, its first drop in four days.</description>
     <category>GOOGL</category>
   </item>
   <item>
-    <title>Alphabet’s stock just triggered a ‘death cross.’ Could the worst of the selloff be over?</title>
-    <link>https://www.marketwatch.com/story/alphabets-stock-just-triggered-a-death-cross-could-the-worst-of-the-selloff-be-over-9f70d765?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/alphabets-stock-just-triggered-a-death-cross-could-the-worst-of-the-selloff-be-over-9f70d765?mod=mw_rss_topstories</guid>
-    <pubDate>Thu, 29 Oct 2026 19:09:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>A postearnings skid sent the Google parent’s shares sliding into bearish territory, but some trading signals hint at a turnaround.</description>
-    <category>GOOGL</category>
-  </item>
-  <item>
-    <title>Elon Musk, crypto just placed huge midterm bets, and traders should pay attention</title>
-    <link>https://www.thestreet.com/crypto/markets/elon-musk-crypto-just-placed-huge-midterm-bets-and-traders-should-pay-attention?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.thestreet.com/crypto/markets/elon-musk-crypto-just-placed-huge-midterm-bets-and-traders-should-pay-attention?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 19:06:44 +0000</pubDate>
+    <title>ServiceNow&#x27;s AI boom faces a big test: Can it reassure Wall Street?</title>
+    <link>https://finance.yahoo.com/video/servicenows-ai-boom-faces-a-big-test-can-it-reassure-wall-street-201935436.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/video/servicenows-ai-boom-faces-a-big-test-can-it-reassure-wall-street-201935436.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:19:35 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Musk is the single biggest donor of the 2026 midterms, and three crypto companies rank among the top corporate spenders.</description>
-    
+    <description>ServiceNow President &amp; CFO Gina Mastantuono joins Market Domination to discuss the company&#x27;s growing AI revenue opportunity and its strategy for maintaining investor confidence. Mastantuono addresses concerns surrounding AI governance…</description>
+    <category>NOW</category>
   </item>
   <item>
-    <title>Is Lockheed Martin a Buy After Its Latest Earnings Report?</title>
-    <link>https://www.fool.com/investing/2026/10/29/is-lockheed-martin-a-buy-after-its-latest-earnings-report/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/29/is-lockheed-martin-a-buy-after-its-latest-earnings-report/?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 19:06:24 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>A double-digit post-earnings surge may cool investor enthusiasm amid rising market anxiety -- but over a 3-to-5-year horizon, is that really the right way to view America&#x27;s largest defense contractor?</description>
-    <category>LMT</category>
-  </item>
-  <item>
-    <title>Why Marvell Stock Is Down Today</title>
-    <link>https://www.fool.com/investing/2026/10/29/why-marvell-stock-is-down-today/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/29/why-marvell-stock-is-down-today/?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 19:06:02 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Marvell is reportedly close to a massive optics deal, but investors are worried about what it could cost existing shareholders.</description>
-    <category>MRVL</category>
-  </item>
-  <item>
-    <title>Is SoFi Stock a Buy After Falling 43% in 2026?</title>
-    <link>https://www.fool.com/investing/2026/10/29/is-sofi-stock-a-buy-after-falling-43-in-2026/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/29/is-sofi-stock-a-buy-after-falling-43-in-2026/?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 19:05:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>SoFi stock was up about 15% on Tuesday.</description>
-    <category>SOFI</category>
-  </item>
-  <item>
-    <title>Medline exits bed market after two deaths linked to safety risks</title>
-    <link>https://www.investing.com/news/stock-market-news/medline-exits-bed-market-after-two-deaths-linked-to-safety-risks-93CH-4984905</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/medline-exits-bed-market-after-two-deaths-linked-to-safety-risks-93CH-4984905</guid>
-    <pubDate>Thu, 29 Oct 2026 19:03:47 +0000</pubDate>
+    <title>Starbucks forecasts annual profit above estimates</title>
+    <link>https://www.investing.com/news/stock-market-news/starbucks-beats-quarterly-sales-and-profit-expectations-4984998</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/starbucks-beats-quarterly-sales-and-profit-expectations-4984998</guid>
+    <pubDate>Thu, 29 Oct 2026 20:19:17 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
     <description></description>
-    <category>MDLN</category>
+    <category>SBUX</category>
   </item>
   <item>
-    <title>Linde delivers a good quarter and puts in a fix for an overhang on the stock</title>
-    <link>https://www.cnbc.com/investingclub/2026/10/29/linde-delivers-a-good-quarter-and-puts-in-a-fix-for-an-overhang-on-the-stock.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/investingclub/2026/10/29/linde-delivers-a-good-quarter-and-puts-in-a-fix-for-an-overhang-on-the-stock.html</guid>
-    <pubDate>Thu, 29 Oct 2026 19:02:00 +0000</pubDate>
+    <title>S4 Capital&#x27;s Monks Boosts Media Acceleration Offering with Executive Appointments in North America and Returning Global Partnership Leaders</title>
+    <link>https://finance.yahoo.com/media-advertising/articles/s4-capitals-monks-boosts-media-201900712.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/media-advertising/articles/s4-capitals-monks-boosts-media-201900712.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:19:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Monks, the global, digital-first operating brand of S4Capital plc, today announced a strategic expansion of its Data &amp; Media practice leadership. The agency has appointed Amman Badlani as Senior Vice President, Commerce &amp; Retail Media,…</description>
+    
+  </item>
+  <item>
+    <title>Mondelez misses third-quarter sales estimates</title>
+    <link>https://www.investing.com/news/stock-market-news/mondelez-misses-thirdquarter-sales-estimates-4985036</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/mondelez-misses-thirdquarter-sales-estimates-4985036</guid>
+    <pubDate>Thu, 29 Oct 2026 20:18:46 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>MDLZ</category>
+  </item>
+  <item>
+    <title>Intel forecast disappoints as Israel fab blast, PC weakness weigh</title>
+    <link>https://www.investing.com/news/stock-market-news/intel-signals-slower-growth-as-pc-market-remains-under-pressure-4984967</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/intel-signals-slower-growth-as-pc-market-remains-under-pressure-4984967</guid>
+    <pubDate>Thu, 29 Oct 2026 20:18:28 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>INTC</category>
+  </item>
+  <item>
+    <title>Dow loses 100 points, S&amp;P 500 snaps 3-day advance as Alphabet and Caterpillar tank: Live updates</title>
+    <link>https://www.cnbc.com/2026/10/28/stock-market-today-live-updates.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/28/stock-market-today-live-updates.html</guid>
+    <pubDate>Thu, 29 Oct 2026 20:18:19 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Slicing and dicing by end market for Linde&#x27;s gases also looked solid.</description>
-    <category>LIN</category>
+    <description>Alphabet reported a disappointing third quarter, and shares tumbled.</description>
+    <category>GOOGL</category><category>CAT</category><category>SPY</category>
   </item>
   <item>
-    <title>Monro, Inc. Reports Second Quarter Fiscal 2027 Results and Enters into $375.0 Million Credit Agreement</title>
-    <link>https://www.nasdaq.com/articles/monro-inc-reports-second-quarter-fiscal-2027-results-and-enters-3750-million-credit</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/monro-inc-reports-second-quarter-fiscal-2027-results-and-enters-3750-million-credit</guid>
-    <pubDate>Thu, 29 Oct 2026 19:01:38 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Monro, Inc. announced its financial results for the second quarter ended September 26, 2026, reporting sales of $283.6 million, a decrease of 1.8% compared to sales of $288.9 million for the second quarter of the fiscal year ended March…</description>
-    
-  </item>
-  <item>
-    <title>Explainer-What’s next for law firm Weil Gotshal as it plans dissolution</title>
-    <link>https://www.investing.com/news/stock-market-news/explainerwhats-next-for-law-firm-weil-gotshal-as-it-plans-dissolution-4984886</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/explainerwhats-next-for-law-firm-weil-gotshal-as-it-plans-dissolution-4984886</guid>
-    <pubDate>Thu, 29 Oct 2026 19:01:35 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>FTC, states sue Toast over fees, deceptive subscription practices</title>
-    <link>https://www.investing.com/news/stock-market-news/ftc-states-sue-toast-over-fees-deceptive-subscription-practices-4984736</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/ftc-states-sue-toast-over-fees-deceptive-subscription-practices-4984736</guid>
-    <pubDate>Thu, 29 Oct 2026 19:01:18 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Meta loses appeals against interim measures imposed by French regulators</title>
-    <link>https://www.investing.com/news/stock-market-news/meta-loses-appeals-against-interim-measures-imposed-by-french-regulators-4984447</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/meta-loses-appeals-against-interim-measures-imposed-by-french-regulators-4984447</guid>
-    <pubDate>Thu, 29 Oct 2026 19:00:49 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>META</category>
-  </item>
-  <item>
-    <title>Update: US Equity Indexes Drop as Communication Services Plummets Following Alphabet&#x27;s Disappointing Results</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-drop-communication-190014998.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-drop-communication-190014998.html?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 19:00:14 +0000</pubDate>
+    <title>Amazon: Q3 Earnings Snapshot</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/amazon-q3-earnings-snapshot-201805936.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/amazon-q3-earnings-snapshot-201805936.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:18:05 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>(Updates with index/price moves from the first paragraph.) US equity indexes declined after a sha</description>
-    <category>GOOGL</category>
+    <description>SEATTLE (AP) — SEATTLE (AP) — Amazon. (AMZN) on Thursday reported third-quarter net income of $20.</description>
+    <category>AMZN</category>
   </item>
   <item>
-    <title>Merck Lifts Outlook on a Lower Tax Rate: Rapid Earnings Reaction</title>
-    <link>https://www.fool.com/investing/2026/10/29/merck-lifts-outlook-on-a-lower-tax-rate-rapid-earnings-reaction/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/29/merck-lifts-outlook-on-a-lower-tax-rate-rapid-earnings-reaction/?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 18:59:59 +0000</pubDate>
+    <title>Why Howmet Stock Is Flying Higher Today</title>
+    <link>https://www.fool.com/investing/2026/10/29/why-howmet-stock-is-flying-higher-today/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/29/why-howmet-stock-is-flying-higher-today/?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:16:08 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Merck’s new drugs are growing fast enough to cover generic losses, but part of this quarter’s sales gain won’t last. Here’s what to watch.</description>
-    <category>MRK</category>
+    <description>It&#x27;s not only the company&#x27;s success in beating expectations that is helping the stock to gain altitude today.</description>
+    <category>HWM</category>
   </item>
   <item>
-    <title>Nvidia CEO Huang caught up in reported Chinese spy probe as AI stocks slide</title>
-    <link>https://www.investing.com/news/stock-market-news/nvidia-ceo-huang-caught-up-in-reported-chinese-spy-probe-as-ai-stocks-slide-4983897</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/nvidia-ceo-huang-caught-up-in-reported-chinese-spy-probe-as-ai-stocks-slide-4983897</guid>
-    <pubDate>Thu, 29 Oct 2026 18:58:48 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Stock Market Today: Nasdaq Knocked Into The Red Amid AI Jitters; Amazon Earnings Next (Live Coverage)</title>
-    <link>https://finance.yahoo.com/m/4da37b6f-4b10-3831-ae14-fde89c3f573b/stock-market-today%3A-nasdaq.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/4da37b6f-4b10-3831-ae14-fde89c3f573b/stock-market-today%3A-nasdaq.html?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 18:58:31 +0000</pubDate>
+    <title>Amazon (NASDAQ:AMZN) posts Q3 2026 sales in line with estimates but stock drops</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/amazon-nasdaq-amzn-posts-q3-201546612.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/amazon-nasdaq-amzn-posts-q3-201546612.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:15:46 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The Nasdaq sells off Thursday after a key inflation reading and Q3 GDP. Alphabet stock plunges on earnings.</description>
-    <category>GOOGL</category><category>AMZN</category>
+    <description>Cloud computing and online retailer Amazon (NASDAQ:AMZN) met Wall Street’s revenue expectations in Q3 2026, with revenue rising 12.1% year on year to $201.9 billion. The company expects next quarter’s revenue to be around $243.5…</description>
+    <category>AMZN</category>
   </item>
   <item>
-    <title>70% of UPS Packages Will Be Handled by Machines This Holiday Season</title>
-    <link>https://247wallst.com/investing/2026/10/29/70-of-ups-packages-will-be-handled-by-machines-this-holiday-season/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://247wallst.com/investing/2026/10/29/70-of-ups-packages-will-be-handled-by-machines-this-holiday-season/?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 18:57:22 +0000</pubDate>
+    <title>Amazon&#x27;s Q3 report shows it misses on both sales and earnings</title>
+    <link>https://finance.yahoo.com/video/amazons-q3-report-shows-it-misses-on-both-sales-and-earnings-202013292.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/video/amazons-q3-report-shows-it-misses-on-both-sales-and-earnings-202013292.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:15:29 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>UPS is betting that robots and radio tags can protect its dividend while it deliberately ships fewer boxes, but the math only works if one critical margin target holds during the busiest weeks of the year.</description>
-    <category>UPS</category>
+    <description>Yahoo Finance Breaking Business News Reporter Jake Conley and Yahoo Finance Markets and Data Editor Jared Blikre detail Amazon&#x27;s (AMZN) third-quarter results, which show a double miss on the top and bottom lines.</description>
+    <category>AMZN</category>
   </item>
   <item>
-    <title>Polymarket suspends trading after third-party breach leads to user losses</title>
-    <link>https://www.coindesk.com/markets/2026/10/29/polymarket-suspends-trading-after-third-party-breach-leads-to-user-losses</link>
-    <guid isPermaLink="false">https://www.coindesk.com/markets/2026/10/29/polymarket-suspends-trading-after-third-party-breach-leads-to-user-losses</guid>
-    <pubDate>Thu, 29 Oct 2026 18:55:35 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
-    <description>Polymarket said one of its third-party providers was breached after users reported seeing their accounts drained.</description>
-    
-  </item>
-  <item>
-    <title>Morton Salt ceases operations at Ohio mine after water breach</title>
-    <link>https://www.mining.com/morton-salt-ceases-operations-at-ohio-mine-after-water-breach/</link>
-    <guid isPermaLink="false">https://www.mining.com/morton-salt-ceases-operations-at-ohio-mine-after-water-breach/</guid>
-    <pubDate>Thu, 29 Oct 2026 18:55:16 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Mining.com</source>
-    <description>All employees were evacuated safely, and there were no reported injuries in the incident, the company said.</description>
-    
-  </item>
-  <item>
-    <title>Wall Street Is Done Giving AI Software a Pass</title>
-    <link>https://app.moby.co/home/news/news-wall-street-is-done-giving-ai-software-a-pass?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</link>
-    <guid isPermaLink="false">https://app.moby.co/home/news/news-wall-street-is-done-giving-ai-software-a-pass?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 18:54:15 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Fortinet and ServiceNow plunged 22% and 27%, respectively, as investors punished soft guidance and questioned whether AI hype can deliver real growth.</description>
-    <category>FTNT</category><category>NOW</category>
-  </item>
-  <item>
-    <title>Rare Stanley Druckenmiller post sends crypto-linked stock surging</title>
-    <link>https://www.cnbc.com/2026/10/29/druckenmiller-hyperliquid-surge.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/10/29/druckenmiller-hyperliquid-surge.html</guid>
-    <pubDate>Thu, 29 Oct 2026 18:53:50 +0000</pubDate>
+    <title>Alphabet tanks nearly 13% for worst day ever, losing $500 billion in value</title>
+    <link>https://www.cnbc.com/2026/10/29/alphabet-google-microsoft-msft-shares-today-earnings.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/29/alphabet-google-microsoft-msft-shares-today-earnings.html</guid>
+    <pubDate>Thu, 29 Oct 2026 20:15:19 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Options traders pounced on the closest publicly-traded play to the news.</description>
-    
-  </item>
-  <item>
-    <title>Here&#x27;s Why You Shouldn&#x27;t Chase Innodata&#x27;s 26% Drop</title>
-    <link>https://www.fool.com/investing/2026/10/29/heres-why-you-shouldnt-chase-innodatas-26-drop/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/29/heres-why-you-shouldnt-chase-innodatas-26-drop/?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 18:51:51 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Innodata has plunged by 26% amid reports pointing to layoffs.</description>
-    
-  </item>
-  <item>
-    <title>Why is CRH stock rallying today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-crh-stock-rallying-today-93CH-4984895</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-crh-stock-rallying-today-93CH-4984895</guid>
-    <pubDate>Thu, 29 Oct 2026 18:50:33 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>CRH</category>
-  </item>
-  <item>
-    <title>Why Alphabet’s stock is on track for its worst day ever after the latest results</title>
-    <link>https://www.marketwatch.com/story/why-alphabets-stock-could-see-its-worst-drop-in-years-after-the-latest-results-6b64cf98?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/why-alphabets-stock-could-see-its-worst-drop-in-years-after-the-latest-results-6b64cf98?mod=mw_rss_topstories</guid>
-    <pubDate>Thu, 29 Oct 2026 18:50:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>A doubling of cloud revenue wasn’t enough to appease Wall Street as investors grew more concerned that AI is hurting the company’s ability to make money off search queries.</description>
+    <description>Alphabet reported a larger negative free cash flow than analysts had expected while maintaining its spending gudiance for the year.</description>
     <category>GOOGL</category>
   </item>
   <item>
-    <title>Alphabet Just Lost $500 Billion in Market Value. A Once-in-a-Generation Artificial Intelligence (AI) Opportunity Could Be Hiding in Plain Sight.</title>
-    <link>https://www.fool.com/investing/2026/10/29/alphabet-just-lost-500-billion-in-market-value-a-o/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/29/alphabet-just-lost-500-billion-in-market-value-a-o/?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 18:50:00 +0000</pubDate>
+    <title>US Equity Markets End Lower After Unexpected Drop in Alphabet&#x27;s Earnings Leads Decline in Major Tech Stocks</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/us-equity-markets-end-lower-201509517.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/us-equity-markets-end-lower-201509517.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:15:09 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Alphabet stock is plummeting after reporting third-quarter earnings.</description>
+    <description>US equity indexes ended lower Thursday after a sharp sell-off in Alphabet&#x27;s (GOOG, GOOGL) shares wei</description>
     <category>GOOGL</category>
   </item>
   <item>
-    <title>Constellation Just Signed 20-Year Deals With Amazon and Google. Where Will the Nuclear Energy Stock Be in 10 Years?</title>
-    <link>https://www.fool.com/investing/2026/10/29/constellation-sign-deals-amazon-google-energy/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/29/constellation-sign-deals-amazon-google-energy/?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 18:50:00 +0000</pubDate>
+    <title>Smart Logistics Global Limited Receives Additional 180-Day Nasdaq Compliance Period</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/smart-logistics-global-limited-receives-201500485.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/smart-logistics-global-limited-receives-201500485.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:15:00 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Constellation&#x27;s 20-year deals with Amazon and Alphabet highlight the company&#x27;s transformation into a critical power provider for hyperscalers.</description>
-    <category>GOOGL</category><category>AMZN</category>
-  </item>
-  <item>
-    <title>OpenAI says human intent at center of updated AI model guidelines</title>
-    <link>https://www.investing.com/news/stock-market-news/openai-says-human-intent-at-center-of-updated-ai-model-guidelines-4984893</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/openai-says-human-intent-at-center-of-updated-ai-model-guidelines-4984893</guid>
-    <pubDate>Thu, 29 Oct 2026 18:48:53 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
+    <description>HONG KONG, Oct. 29, 2026 (GLOBE NEWSWIRE) -- Smart Logistics Global Limited (Nasdaq: SLGB) (the &quot;Company&quot;), a China-focused industrial logistics and supply chain company, today announced that it has received written notification from…</description>
     
   </item>
   <item>
-    <title>Why is Hyperliquid Strategies stock surging today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-hyperliquid-strategies-stock-surging-today-93CH-4984890</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-hyperliquid-strategies-stock-surging-today-93CH-4984890</guid>
-    <pubDate>Thu, 29 Oct 2026 18:44:51 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
+    <title>Norwegian shares surge 13% on earnings beat, guidance raise</title>
+    <link>https://www.cnbc.com/2026/10/29/norwegian-earnings-guidance-shares.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/29/norwegian-earnings-guidance-shares.html</guid>
+    <pubDate>Thu, 29 Oct 2026 20:14:15 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Norwegian said the company&#x27;s bookings had &quot;improved modestly&quot; but remain below its optimal range.</description>
     
   </item>
   <item>
-    <title>Why is Trane Technologies stock sliding today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-trane-technologies-stock-sliding-today-93CH-4984889</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-trane-technologies-stock-sliding-today-93CH-4984889</guid>
-    <pubDate>Thu, 29 Oct 2026 18:43:50 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>TT</category>
-  </item>
-  <item>
-    <title>Why is O’Reilly Automotive stock sliding today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-oreilly-automotive-stock-sliding-today-93CH-4984888</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-oreilly-automotive-stock-sliding-today-93CH-4984888</guid>
-    <pubDate>Thu, 29 Oct 2026 18:43:44 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>ORLY</category>
-  </item>
-  <item>
-    <title>It’s the strangest job market the U.S. has ever seen. The low-hire, low-fire economy turns 3 years old.</title>
-    <link>https://www.marketwatch.com/story/its-the-strangest-job-market-the-u-s-has-ever-seen-the-low-hire-low-fire-economy-turns-3-years-old-ce8d0dfe?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/its-the-strangest-job-market-the-u-s-has-ever-seen-the-low-hire-low-fire-economy-turns-3-years-old-ce8d0dfe?mod=mw_rss_topstories</guid>
-    <pubDate>Thu, 29 Oct 2026 18:42:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>America has always been a job-creating machine. It has broken down for three straight years, and the implications could be with us for a long time.</description>
-    
-  </item>
-  <item>
-    <title>Prediction: This Crypto Plunged 50% Overnight. It Could Soar in 2027.</title>
-    <link>https://www.fool.com/investing/2026/10/29/prediction-this-crypto-could-skyrocket-in-2027/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/29/prediction-this-crypto-could-skyrocket-in-2027/?.tsrc=rss</guid>
-    <pubDate>Thu, 29 Oct 2026 18:40:09 +0000</pubDate>
+    <title>Reddit’s Stock Sinks Despite Earnings Beat. Here’s Why.</title>
+    <link>https://finance.yahoo.com/m/bd97b78e-17ae-39a8-a2dd-2a9a5c476b1b/reddit%E2%80%99s-stock-sinks-despite.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/bd97b78e-17ae-39a8-a2dd-2a9a5c476b1b/reddit%E2%80%99s-stock-sinks-despite.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:14:00 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>This year has shown that Zcash is capable of reacting quickly and smartly to major threats, unlike its peers.</description>
+    <description>Reddit reported weaker-than-expected daily active user growth.</description>
+    <category>RDDT</category>
+  </item>
+  <item>
+    <title>Intel plunges 20% as weak Q4 forecast overshadows earnings beat</title>
+    <link>https://www.investing.com/news/stock-market-news/intel-plunges-20-as-weak-q4-forecast-overshadows-earnings-beat-4984988</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/intel-plunges-20-as-weak-q4-forecast-overshadows-earnings-beat-4984988</guid>
+    <pubDate>Thu, 29 Oct 2026 20:13:56 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>INTC</category>
+  </item>
+  <item>
+    <title>Amazon Stock Slides After Q3 Earnings Miss</title>
+    <link>https://finance.yahoo.com/m/e6509de9-7057-30f0-875d-3ca0249bc5d8/amazon-stock-slides-after-q3.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/e6509de9-7057-30f0-875d-3ca0249bc5d8/amazon-stock-slides-after-q3.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:13:25 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Amazon stock slid after the tech giant reported third quarter results late Thursday.</description>
+    <category>AMZN</category>
+  </item>
+  <item>
+    <title>Amazon Stock Tanks After Earnings Miss</title>
+    <link>https://finance.yahoo.com/m/bb88d801-1531-35c7-b240-1916a90d4301/amazon-stock-tanks-after.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/bb88d801-1531-35c7-b240-1916a90d4301/amazon-stock-tanks-after.html?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:13:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The retail and cloud services giant reports weaker-than-expected earnings and revenue in the third quarter.</description>
+    <category>AMZN</category>
+  </item>
+  <item>
+    <title>Anthropic&#x27;s S-1 Packs in More Than 90 Pages of Risk Factors. Here Are the Ones Investors Should Watch.</title>
+    <link>https://www.fool.com/investing/2026/10/29/anthropics-s1-has-more-than-90-pages-of-risks/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/10/29/anthropics-s1-has-more-than-90-pages-of-risks/?.tsrc=rss</guid>
+    <pubDate>Thu, 29 Oct 2026 20:13:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Anthropic&#x27;s IPO filing lists many major risks to the company and its shareholders.</description>
     
+  </item>
+  <item>
+    <title>Aon CEO warns AI data center insurance risks could threaten financing</title>
+    <link>https://www.cnbc.com/2026/10/29/aon-ai-data-center-insurance-financing.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/29/aon-ai-data-center-insurance-financing.html</guid>
+    <pubDate>Thu, 29 Oct 2026 20:12:29 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Aon CEO Greg Case said concentration risk at AI data centers could constrain insurance capacity and alter financing for new projects.</description>
+    <category>AON</category>
+  </item>
+  <item>
+    <title>Nasdaq closes over 1% lower as post-earnings slide in Alphabet weighs on AI trade</title>
+    <link>https://www.investing.com/news/stock-market-news/us-stock-futures-drop-as-alphabet-slides-on-soft-earnings-microsoft-firms-4981271</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/us-stock-futures-drop-as-alphabet-slides-on-soft-earnings-microsoft-firms-4981271</guid>
+    <pubDate>Thu, 29 Oct 2026 20:09:31 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>GOOGL</category>
   </item>
 </channel>
 </rss>
