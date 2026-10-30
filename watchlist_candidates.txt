@@ -6,43 +6,37 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 30.10.2026 08:37
-37 of 80 news items unmatched this run
+Generated: 30.10.2026 11:37
+31 of 80 news items unmatched this run
 
-- [Investing.com] Sparebanken Norge shares fall after net interest income drops
-- [Investing.com] Energy rally lifts FTSE 100 to lone gain in Europe as oil approaches 6-month high
-- [Investing.com] Why is Strategy stock sliding today?
-- [Investing.com] Why is Gerresheimer stock rallying today?
-- [Investing.com] European shares ease as AI-driven tech selloff deepens
-- [Yahoo Finance] Tech firms take fresh hit as earnings misses fan AI fears
+- [CNBC] Some Polymarket user funds stolen by hackers; exchange referring matter to U.K. authorities
+- [Yahoo Finance] The Anthropic IPO Will Be an Epic Failure, Based on What History Tells Us
 - [CNBC] Biggest-ever crypto hack impacts $6.3 billion as Binance works to contain fallout
-- [Nasdaq] Silgan Holdings Inc. Reports Third Quarter 2026 Net Sales of $2.04 billion and Revises Full Year Adjusted Net Income per Diluted Share Guidance to $3.83 to $3.93
-- [Nasdaq] Cullen/Frost Bankers, Inc. to Transfer Listings to Texas Stock Exchange on November 12, 2026
-- [Nasdaq] Cementos Pacasmayo S.A.A. Receives October 28, 2026 Regulator Letter Regarding Valuation Report
-- [Nasdaq] COPT Defense Properties Reports Third Quarter 2026 Results with EPS of $0.41 and FFO per Share of $0.71
+- [Yahoo Finance] Tech Earnings Drive Losses on Wall Street Pre-Bell; Asia Off, Europe Mixed
+- [CNBC] Tech giants need legacy businesses to keep growing as they pour trillions into the AI buildout
+- [Investing.com] Panasonic raises annual profit forecast 20%, sees strong AI demand
+- [Investing.com] Explainer-Gone in 20 minutes: How the biggest heist in crypto history unfolded
+- [Investing.com] European shares drop as AI spending worries hit tech; though best month since June in sight
+- [Investing.com] Bayer wins Roundup weedkiller cancer trial while awaiting settlement ruling
+- [Investing.com] Puma sales, slashed inventory convince investors as Anta partnership advances
+- [Nasdaq] Add Up The Parts: PSTR Could Be Worth $37
+- [Nasdaq] Analysts Anticipate DUKQ To Hit $35
+- [CNBC] Binance's $6.3 billion hack: What we know and what comes next
+- [MarketWatch] Here’s when Binance plans to reopen after what’s believed to be the largest-ever $6.3 billion hack
+- [Nasdaq] NovaBay Pharmaceuticals, Inc. Reports Third Quarter 2026 Financial Results
+- [Nasdaq] Coffee Holding Co., Inc. Reports Voting Results from October 28, 2026 Annual Meeting
+- [Nasdaq] Jefferies Upgrades Chemed to Buy from Hold
+- [Nasdaq] Rhinebeck Bancorp, Inc. Reports Net Income of $3.2 million for the Quarter Ended September 30, 2026
+- [Nasdaq] OFS Capital Corporation Reports Third Quarter 2026 Results and Declares $0.17 Per Share Distribution
 - [CoinDesk] Binance hacker dumps a little-known 2017 token and it crashes 90%
-- [Nasdaq] Hormel Foods Corporation Enters Into Letter Agreement Terminating John F. Ghingo's Employment Agreement Effective October 26, 2026
-- [Nasdaq] Boston Omaha Corporation Files Pro Forma Financials for $84,308,757.68 Sale of General Indemnity Group
-- [Nasdaq] Asure Software, Inc. Reports Third Quarter 2026 Revenues of $40.0 Million
-- [Nasdaq] Silvercrest Asset Management Group Inc. Reports Q3 2026 Results
-- [Nasdaq] CNO Financial Group, Inc. Reports Third Quarter 2026 Results
-- [Nasdaq] World Kinect Corporation Reports Third Quarter 2026 Results
-- [Nasdaq] CervoMed Inc. Announces Publication of Two Peer-Reviewed Research Articles Supporting Neflamapimod
-- [Nasdaq] Cadiz Inc. Enters Agreement for $21 Million Registered Direct Offering of 5,000,000 Shares
-- [Nasdaq] Globant S.A. Enters into Amendment No. 2 to Fourth Amended and Restated Credit Agreement
-- [Nasdaq] Alphatec Holdings, Inc. Reports Third Quarter 2026 Total Revenue of $221 million
+- [CNBC] Foxconn hopes to own 50% of the global AI server market within a couple years
 - [CNBC] Iran claims four tankers struck mines in Hormuz as strike fears grow after U.S. midterms
-- [Yahoo Finance] Selling the map, not the chips: How Gartner is cashing in on AI
-- [Yahoo Finance] As the Nasdaq wobbles on capex, this Buffett strategy went 15-for-15
-- [Yahoo Finance] Anthropic Is a Revolutionary Business, but Its IPO Is Still an Enormous Gamble
+- [OilPrice.com] Oil Markets Caught Between Iran War Risks and Emergency SPR Releases
 - [CoinDesk] XRP Ledger developers tighten the rules for who can hold 'restricted' tokens
 - [CoinDesk] Binance hack bites India's largest crypto exchange as it curbs futures trading
+- [OilPrice.com] Wall Street Banks Raise Oil Price Forecasts as Supply Fears Deepen
 - [CNBC] BOJ holds rates as underlying inflation aligns with 2% target for first time since 2013
 - [CoinDesk] Institutional crypto investors rush to pull funds from exchanges after Binance hack
+- [OilPrice.com] High Oil Prices Set to Trigger New Wave of North Sea Mergers
 - [CoinDesk] Crypto's longtime foe, North Korea's Lazarus Group, likely behind Binance hack: blockchain sleuths
 - [OilPrice.com] Houthis Claim Fresh Strikes on Saudi Oil Refineries and Aramco Facilities
-- [CNBC] Some Polymarket user funds stolen by hackers; exchange referring matter to U.K. authorities
-- [OilPrice.com] Oil Prices Head for Fourth Monthly Gain as Middle East Tensions Escalate
-- [CoinDesk] Binance hack drained wallets backing customer assets, reserve data shows
-- [Mining.com] One World Lithium deploys DLCE equipment to UCI, UBC labs
-- [BioPharma Dive] Aspen raises a $140M IPO in pursuit of a cell therapy for Parkinson’s
