@@ -551,10 +551,17 @@
   },
   {
    "date": "2026-10-29",
-   "value": 53,
+   "value": 52,
    "label": "Neutral",
-   "headlines": 269,
-   "avg7": 57.1,
+   "headlines": 342,
+   "avg7": 57.0
+  },
+  {
+   "date": "2026-10-30",
+   "value": 42,
+   "label": "Leaning cautious",
+   "headlines": 148,
+   "avg7": 55.3,
    "window": "in the last 12 hours"
   }
  ]
