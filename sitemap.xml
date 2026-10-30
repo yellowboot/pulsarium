@@ -1010,6 +1010,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/gd/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/ge/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>hourly</changefreq>
@@ -1246,7 +1251,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/mcd/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1376,7 +1381,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/ntap/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1606,7 +1611,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/defense/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1746,7 +1751,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/spgi/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
