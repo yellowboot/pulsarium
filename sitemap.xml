@@ -426,7 +426,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/crm/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1510,6 +1510,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/rgti/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/rio/</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>hourly</changefreq>
@@ -1626,7 +1631,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/metals-mining/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
