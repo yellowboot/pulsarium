@@ -96,7 +96,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/mood/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -166,7 +166,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/amd/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -176,7 +176,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/amzn/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -226,7 +226,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/avgo/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -406,12 +406,12 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/coin/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://pulsarium.finance/news/companies/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -456,7 +456,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/daily/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -857,6 +857,11 @@
   <url>
     <loc>https://pulsarium.finance/news/daily/2026-10-30/</loc>
     <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/daily/2026-10-31/</loc>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -906,7 +911,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/dji/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -971,7 +976,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/f/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1036,7 +1041,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/glw/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1136,7 +1141,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/intc/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1156,7 +1161,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/jnj/</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1200,6 +1205,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/kvue/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/len/</loc>
     <lastmod>2026-10-30</lastmod>
     <changefreq>hourly</changefreq>
@@ -1216,7 +1226,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/lly/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1255,18 +1265,8 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://pulsarium.finance/news/mck/</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://pulsarium.finance/news/mco/</loc>
     <lastmod>2026-10-26</lastmod>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://pulsarium.finance/news/mdb/</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1296,7 +1296,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/mrk/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1386,7 +1386,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/nvda/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1407,6 +1407,11 @@
   <url>
     <loc>https://pulsarium.finance/news/o/</loc>
     <lastmod>2026-10-28</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/okta/</loc>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1486,7 +1491,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/qqq/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1496,7 +1501,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/rblx/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1507,11 +1512,6 @@
   <url>
     <loc>https://pulsarium.finance/news/rddt/</loc>
     <lastmod>2026-10-30</lastmod>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://pulsarium.finance/news/regn/</loc>
-    <lastmod>2026-10-16</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1526,7 +1526,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/rivn/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1571,7 +1571,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/automotive-ev/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1581,12 +1581,12 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/big-tech/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/bonds-macro/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1601,7 +1601,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/cryptocurrencies/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1616,12 +1616,12 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/etfs-indices/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/healthcare/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1656,7 +1656,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/semiconductors/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1666,7 +1666,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/software-cloud/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1676,7 +1676,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/tech-hardware/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1686,7 +1686,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/utilities/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1761,7 +1761,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/spy/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1815,11 +1815,6 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://pulsarium.finance/news/tm/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://pulsarium.finance/news/tmus/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>hourly</changefreq>
@@ -1831,7 +1826,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/tsla/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1901,7 +1896,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/ust10y/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1912,11 +1907,6 @@
   <url>
     <loc>https://pulsarium.finance/news/vale/</loc>
     <lastmod>2026-10-26</lastmod>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://pulsarium.finance/news/vg/</loc>
-    <lastmod>2026-10-23</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
