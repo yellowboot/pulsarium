@@ -201,7 +201,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/app/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -237,6 +237,11 @@
   <url>
     <loc>https://pulsarium.finance/news/azn/</loc>
     <lastmod>2026-10-27</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/azo/</loc>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -371,7 +376,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/ceg/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1441,7 +1446,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/on/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1557,6 +1562,11 @@
   <url>
     <loc>https://pulsarium.finance/news/rklb/</loc>
     <lastmod>2026-11-01</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/roku/</loc>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
