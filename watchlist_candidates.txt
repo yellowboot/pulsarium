@@ -6,36 +6,41 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 02.11.2026 14:37
-30 of 80 news items unmatched this run
+Generated: 02.11.2026 16:17
+35 of 80 news items unmatched this run
 
-- [Yahoo Finance] Ovintiv Is Quietly Building an AI Advantage That Wall Street May Be Missing
-- [Yahoo Finance] Will AI stocks rebound? A closer look at last week's tech sell-off
-- [Yahoo Finance] Here's Why I Think Every Investor Needs to Invest in These "Miracle" Drugs
+- [CNBC] Stocks jump as oil prices tumble before midterms, tech shares rebound: Live updates
+- [CNBC] Anthropic reports $17 billion in Q3 revenue, purchase commitments of $895.4 billion in revised S-1
+- [MarketWatch] Grand Theft Callout: ‘GTA 6’ fans are missing work on the game’s release day because they ‘don’t want to wait’ anymore
+- [Investing.com] Why is Cardinal Energy stock sliding today?
+- [Investing.com] BayCoast Bank parent Narragansett Bancorp begins trading on Nasdaq at $10.80
+- [Investing.com] Activist investor Oasis cuts its slate of director nominees at Vail in half
+- [CNBC] Fanatics takes bigger NHL design role with all-32 team Hometown Remix jerseys
+- [Investing.com] Norway stocks lower at close of trade; Oslo OBX down 1.24%
 - [CNBC] Crude oil dives to session low on Iran peace talk hopes ahead of midterms
-- [Nasdaq] HBT Financial Consensus Price Target Increased by 10.53% to $42.84
-- [Nasdaq] Wheat Posting Midday Gains Heading into Month End
-- [Yahoo Finance] UK self-driving carmaker running out of cash
-- [Nasdaq] Consensus Price Target for Melco International Development Limited - Depositary Receipt Decreased by 14.22% to $2.53
-- [Nasdaq] Cattle Fall to Close Out October
+- [Investing.com] Israel stocks lower at close of trade; TA 35 down 0.53%
+- [Yahoo Finance] Global Small Language Models (SLM) Market Size, Share, and Growth Forecast, 2026-2036 | Agentic and On-Device AI Fuel 23.5% CAGR to USD 25.59 Billion
+- [Yahoo Finance] Lucid Is Trying to Spend Less. Here's Where It Needs to Spend More.
+- [Yahoo Finance] Here Comes the AI Bounce Back
+- [CNBC] Cyberattack on fridges hits supermarkets across Europe
+- [CNBC] Wall Street's Fear Index is doing something strange. Here's what it means for stocks
+- [CoinDesk] Anthropic swings to third quarter operating loss as compute costs surge ahead of IPO
+- [CoinDesk] Standard Chartered debuts tokenized deposits in Hong Kong for corporate clients
 - [Nasdaq] Wheat Closes Friday with Slight Losses
 - [Nasdaq] Cotton Slipping Lower on Friday
-- [Nasdaq] Corn Fades Lower on Friday
 - [Nasdaq] Hogs Extend Weakness to Close the Month
+- [Nasdaq] Cattle Fall to Close Out October
+- [Nasdaq] Corn Fades Lower on Friday
+- [Nasdaq] Coffee Closes Sharply Lower on the Week Despite a Modest Rebound on Friday
 - [Nasdaq] Corn Holding Lower on Friday
+- [Nasdaq] Wheat Posting Midday Gains Heading into Month End
 - [Nasdaq] Cattle Falling on Friday
-- [Nasdaq] Hogs Falling to Close October
-- [CoinDesk] Tokenization firm tZERO plans to go public in $350 million SPAC deal
-- [Nasdaq] Soybeans Close Friday with Mixed Trade, Falling from Early Highs
 - [Nasdaq] Soybeans Pushing Higher on Friday, Following Export Business
-- [Nasdaq] Arcadis NV - Depositary Receipt Price Target Decreased by 20.38% to $53.01
-- [Investing.com] Once Upon A Farm shares slide further following nationwide product recall
-- [Investing.com] Citi forecasts 65,000 jobs added in October payrolls report
-- [Investing.com] US stocks set for higher open as AI trade steadies; midterms in focus
+- [Nasdaq] Hogs Falling to Close October
+- [Nasdaq] Sugar Prices Resume Weakness on Concern About Brazilian Exporters Selling
+- [Nasdaq] Cocoa Remains Weak on Rising ICE Inventories and Potential Brazilian Cocoa Sales
+- [Nasdaq] This "Generational" 13.4% Dividend Is Only a Bargain Once a Decade (If That)
+- [CoinDesk] Tokenization firm tZERO plans to go public in $350 million SPAC deal
 - [CoinDesk] XRP Ledger set to fix flaw that could let stablecoin partners print new tokens
 - [Mining.com] Friedland takes aim at China’s scandium grip with US-backed mine
 - [CoinDesk] No proof of AI in North Korean hackers move of stolen Binance funds
-- [CoinDesk] Metals.io issues tokens backed by 25 tonnes of physical copper stored in Germany
-- [CoinDesk] Why stealing billions from a crypto exchange can be harder to stop than a bank theft
-- [OilPrice.com] Oil Prices Plunge as Draft Proposal to End U.S.-Iran War is Circulated
-- [OilPrice.com] ADNOC Chief Says World Has “Eroded Its Supply Buffers”
