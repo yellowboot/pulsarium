@@ -6,43 +6,42 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 02.11.2026 06:37
-37 of 80 news items unmatched this run
+Generated: 02.11.2026 08:37
+36 of 80 news items unmatched this run
 
-- [CNBC] Stock futures tick higher ahead of busy week of earnings, jobs data and the midterm elections: Live updates
-- [Nasdaq] Federal National Mortgage Association - Preferred Stock Price Target Decreased by 42.18% to $9.40
-- [Nasdaq] AEVEX Consensus Price Target Decreased by 12.28% to $25.61
-- [Investing.com] Why is Bank of Baroda stock rallying today?
-- [Investing.com] Taiwan stocks lower at close of trade; Taiwan Weighted down 0.43%
-- [Yahoo Finance] Aktsiaselts Infortar own share acquisition transactions
-- [Investing.com] Why is Delhivery stock surging today?
-- [Investing.com] Why is Motherson Sumi Wiring India stock surging today?
-- [Investing.com] Why is Sheng Siong stock sliding to a one-year low today?
-- [Investing.com] Why is LG CNS stock surging today?
-- [Investing.com] Why is Hanwha Ocean stock surging today?
-- [Nasdaq] Federal Home Loan Mortgage Corporation - Preferred Stock Price Target Decreased by 34.56% to $21.20
-- [Yahoo Finance] Asian shares mostly advance but tech stocks remain volatile, while oil sinks 3.3%
-- [Nasdaq] Sify Technologies Limited - Depositary Receipt Price Target Increased by 22.73% to $27.54
-- [Nasdaq] Cadiz Consensus Price Target Increased by 29.17% to $10.54
-- [Nasdaq] Surgery Partners Consensus Price Target Increased by 15.45% to $22.61
-- [CNBC] Binance sees $3.64 billion in net outflows as withdrawals resume after massive hack
-- [Nasdaq] Average Analyst Price Target for Chegg Raised 21.21% to $1.02
-- [Nasdaq] UWM Holdings Consensus Price Target Cut by 30.41% to $1.72
-- [Nasdaq] Robert Half Consensus Price Target Increased by 13.38% to $40.06
-- [Nasdaq] Centrus Energy Consensus Price Target Decreased by 13.62% to $205.19
-- [Nasdaq] Kyowa Kirin Co., - Depositary Receipt Price Target Decreased by 11.34% to $13.35
-- [Nasdaq] Enlivex Consensus Price Target Increased by 1,500% to $1,305.60
-- [Nasdaq] Cheetah Net Supply Chain Service Consensus Price Target Raised by 35,999,900.00% to $1,468,800.00
-- [Nasdaq] Gladstone Land Corporation - Preferred Stock Price Target Increased by 11.42% to $25.66
-- [CNBC] Sam Altman makes surprise South Korea visit as OpenAI builds on chip partnerships
-- [Yahoo Finance] Forget Anthropic, This Is the Best AI Investment to Buy and Hold
+- [CoinDesk] Why stealing billions from a crypto exchange can be harder to stop than a bank theft
+- [Investing.com] FTSE 100 today: Stocks fall as crude slide drags oil majors lower
+- [Investing.com] Why is Alstom stock down 27% today?
+- [Investing.com] Deutsche Bank upgrades US tech, says selloff has gone too far
+- [CNBC] Stock futures rebound ahead of busy week of earnings, jobs data and the midterm elections: Live updates
+- [Investing.com] European shares inch lower as Fitch cuts France’s outlook
+- [Investing.com] DAX trapped between SMA(20) and SuperTrend support: Live levels
+- [Nasdaq] Ready Capital Corporation - Corporate Bond Price Target Decreased by 16.46% to $26.25
+- [Investing.com] Binance says exit rush slowing down as users weigh security risk
+- [Nasdaq] Wilmar International Limited - Depositary Receipt Price Target Decreased by 10.72% to $28.07
+- [Investing.com] Citi initiates Vusion at buy, sees 84% upside on electronic shelf label growth
+- [Nasdaq] Medpace Holdings Consensus Price Target Increased by 11.73% to $664.95
+- [Nasdaq] Cadiz Inc. - Preferred Stock Price Target Increased by 10.05% to $45.17
+- [Nasdaq] Bright Horizons Family Solutions Consensus Price Target Decreased 15.23% to $74.39
+- [Nasdaq] Zedge Consensus Price Target Lowered by 33.33% to $4.08
+- [Nasdaq] Glaukos Consensus Price Target Raised 22.10% to $247.31
+- [Nasdaq] Exponent Consensus Price Target Raised 11.42% to $85.82
+- [Nasdaq] Alector Consensus Price Target Increased by 15.38% to $4.59
+- [Investing.com] China’s top three airlines head for full-year losses as fuel costs weigh
+- [Nasdaq] STRATA Skin Sciences Consensus Price Target Increased by 45.95% to $11.02
+- [Nasdaq] Oxford Lane Capital - Preferred Security Price Target Increased by 11.44% to $42.91
 - [Yahoo Finance] Asian stocks mixed as tech sector struggles to rebound from selloff
-- [Yahoo Finance] Cboe Global Markets: 3 Key Takeaways for Long-Term Investors
-- [CNBC] Goldman raises oil price forecast for December and 2027. Here's why
+- [Investing.com] Barclays downgrades Dr. Martens to underweight, cuts price target
+- [Investing.com] Adnoc signs AI deal with OpenAI as Sam Altman visits Abu Dhabi
+- [Nasdaq] Xencor Consensus Price Target Increased by 34.27% to $44.32
+- [Nasdaq] Sweetgreen Consensus Price Target Increased by 14.89% to $9.59
+- [Nasdaq] Federal National Mortgage Association - Preferred Stock Price Target Decreased by 47.75% to $15.91
+- [Yahoo Finance] Aktsiaselts Infortar own share acquisition transactions
+- [Yahoo Finance] Asian shares are mixed and US futures advance, while oil prices retreat
+- [CNBC] Binance sees $3.64 billion in net outflows as withdrawals resume after massive hack
+- [CNBC] Sam Altman makes surprise South Korea visit as OpenAI builds on chip partnerships
 - [OilPrice.com] Oil Prices Slide 3% as Hopes for Iran Peace Deal Grow
 - [OilPrice.com] Why Is This Rare Earth Metal 346 Times More Expensive In America Than in China?
 - [OilPrice.com] Oil Prices No Longer Follow Headlines
 - [CoinDesk] AI agents bypassed crypto spending limits without human approval, researchers find in a new test
 - [MarketWatch] Grand Theft Callout: ‘GTA 6’ fans are missing work on the game’s release day because they ‘don’t want to wait’ anymore
-- [CoinDesk] Crypto card startups are racking up losses just to buy your loyalty with big rewards
-- [OilPrice.com] Massive AI Data Center Sparks Backlash Despite Clean Energy Promises

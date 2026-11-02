@@ -6,15 +6,420 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Mon, 02 Nov 2026 06:37:31 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 02 Nov 2026 08:37:28 +0000</lastBuildDate>
   <item>
-    <title>Stock futures tick higher ahead of busy week of earnings, jobs data and the midterm elections: Live updates</title>
+    <title>Why stealing billions from a crypto exchange can be harder to stop than a bank theft</title>
+    <link>https://www.coindesk.com/business/2026/11/02/why-crypto-exchange-hacks-can-be-harder-to-contain-versus-global-banks</link>
+    <guid isPermaLink="false">https://www.coindesk.com/business/2026/11/02/why-crypto-exchange-hacks-can-be-harder-to-contain-versus-global-banks</guid>
+    <pubDate>Mon, 02 Nov 2026 08:32:01 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
+    <description>The $6.3 billion Binance breach has revived a debate over whether crypto exchanges are less secure than banks or simply harder to protect once hackers get inside.</description>
+    
+  </item>
+  <item>
+    <title>Stocktwits Retail Therapy: Defensive Bets Extend Streak As Crocs, Wingstop, Carvana Lead Weekly Consumer Gains</title>
+    <link>https://stocktwits.com/news-articles/markets/equity/stocktwits-retail-therapy-defensive-bets-extend-streak-as-crocs-wingstop-carvana-lead-weekly-consumer-gains/cNG9qIfR92q?.tsrc=rss</link>
+    <guid isPermaLink="false">https://stocktwits.com/news-articles/markets/equity/stocktwits-retail-therapy-defensive-bets-extend-streak-as-crocs-wingstop-carvana-lead-weekly-consumer-gains/cNG9qIfR92q?.tsrc=rss</guid>
+    <pubDate>Mon, 02 Nov 2026 08:24:40 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Consumer staples and discretionary ETFs posted weekly gains despite broader market weakness, boosted by earnings and raised outlooks.</description>
+    <category>CVNA</category>
+  </item>
+  <item>
+    <title>FTSE 100 today: Stocks fall as crude slide drags oil majors lower</title>
+    <link>https://www.investing.com/news/stock-market-news/ftse-100-today-stocks-fall-as-crude-slide-drags-oil-majors-lower-4990172</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/ftse-100-today-stocks-fall-as-crude-slide-drags-oil-majors-lower-4990172</guid>
+    <pubDate>Mon, 02 Nov 2026 08:24:08 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Apollo launches $11 billion private credit platform, backed by Abu Dhabi</title>
+    <link>https://www.cnbc.com/2026/11/02/apollo-private-credit-abu-dhabi.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/02/apollo-private-credit-abu-dhabi.html</guid>
+    <pubDate>Mon, 02 Nov 2026 08:22:27 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Apollo has launched a 10 billion euro European private credit platform backed by major global investors.</description>
+    <category>APO</category>
+  </item>
+  <item>
+    <title>Prediction: Nvidia Will Have an Incredible November Thanks to 1 Event</title>
+    <link>https://www.fool.com/investing/2026/11/02/prediction-nvidia-will-have-an-incredible-november/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/02/prediction-nvidia-will-have-an-incredible-november/?.tsrc=rss</guid>
+    <pubDate>Mon, 02 Nov 2026 08:20:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Nvidia&#x27;s Q3 earnings report could send the stock soaring.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Why is Alstom stock down 27% today?</title>
+    <link>https://www.investing.com/news/stock-market-news/why-is-alstom-stock-down-27-today-93CH-4990161</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-alstom-stock-down-27-today-93CH-4990161</guid>
+    <pubDate>Mon, 02 Nov 2026 08:19:48 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Deutsche Bank upgrades US tech, says selloff has gone too far</title>
+    <link>https://www.investing.com/news/stock-market-news/deutsche-bank-upgrades-us-techsays-selloff-has-gone-too-far-4990112</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/deutsche-bank-upgrades-us-techsays-selloff-has-gone-too-far-4990112</guid>
+    <pubDate>Mon, 02 Nov 2026 08:12:18 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Stock futures rebound ahead of busy week of earnings, jobs data and the midterm elections: Live updates</title>
     <link>https://www.cnbc.com/2026/11/01/stock-market-today-live-updates.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/11/01/stock-market-today-live-updates.html</guid>
-    <pubDate>Mon, 02 Nov 2026 06:30:44 +0000</pubDate>
+    <pubDate>Mon, 02 Nov 2026 08:10:48 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>Investors geared up for another batch of earnings results and the upcoming midterm elections.</description>
     
+  </item>
+  <item>
+    <title>European shares inch lower as Fitch cuts France’s outlook</title>
+    <link>https://www.investing.com/news/stock-market-news/european-shares-inch-lower-as-fitch-cuts-frances-outlook-4989985</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/european-shares-inch-lower-as-fitch-cuts-frances-outlook-4989985</guid>
+    <pubDate>Mon, 02 Nov 2026 08:08:11 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>DAX trapped between SMA(20) and SuperTrend support: Live levels</title>
+    <link>https://www.investing.com/news/stock-market-news/dax-trapped-between-sma20-and-supertrend-support-live-levels-93CH-4990105</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/dax-trapped-between-sma20-and-supertrend-support-live-levels-93CH-4990105</guid>
+    <pubDate>Mon, 02 Nov 2026 08:07:27 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Ready Capital Corporation - Corporate Bond Price Target Decreased by 16.46% to $26.25</title>
+    <link>https://www.nasdaq.com/articles/ready-capital-corporation-corporate-bond-price-target-decreased-1646-2625</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/ready-capital-corporation-corporate-bond-price-target-decreased-1646-2625</guid>
+    <pubDate>Mon, 02 Nov 2026 08:06:37 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Ready Capital Corporation - Corporate Bond (NYSE:RCD) has been revised to $26.25 / share. This is a decrease of 16.46% from the prior estimate of $31.42 dated October 22, 2026. These figures…</description>
+    
+  </item>
+  <item>
+    <title>Binance says exit rush slowing down as users weigh security risk</title>
+    <link>https://www.investing.com/news/stock-market-news/binance-sees-outflows-stabilising-as-exchange-returns-online-after-63-billionheist-4989802</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/binance-sees-outflows-stabilising-as-exchange-returns-online-after-63-billionheist-4989802</guid>
+    <pubDate>Mon, 02 Nov 2026 08:06:22 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Ryanair CEO warns fares could rise by up to 20% in 2027 as fuel bill jumps by $2.2 billion</title>
+    <link>https://www.cnbc.com/2026/11/02/ryanair-h1-earnings-iran-war-fuel-costs.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/02/ryanair-h1-earnings-iran-war-fuel-costs.html</guid>
+    <pubDate>Mon, 02 Nov 2026 08:02:34 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Ryanair&#x27;s CEO Michael O&#x27;Leary told CNBC that European airlines may have &quot;significantly higher airfares&quot; of up to 20% next year as fuel costs rise.</description>
+    <category>RYAAY</category>
+  </item>
+  <item>
+    <title>Wilmar International Limited - Depositary Receipt Price Target Decreased by 10.72% to $28.07</title>
+    <link>https://www.nasdaq.com/articles/wilmar-international-limited-depositary-receipt-price-target-decreased-1072-2807</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/wilmar-international-limited-depositary-receipt-price-target-decreased-1072-2807</guid>
+    <pubDate>Mon, 02 Nov 2026 07:59:48 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Wilmar International Limited - Depositary Receipt (OTCPK:WLMIY) (DB:RTH) has been revised to $28.07 / share. This represents a decrease of 10.72% from the prior estimate of $31.44 dated October 22,…</description>
+    
+  </item>
+  <item>
+    <title>Citi initiates Vusion at buy, sees 84% upside on electronic shelf label growth</title>
+    <link>https://www.investing.com/news/stock-market-news/citi-initiates-vusion-at-buy-sees-84-upside-on-electronic-shelf-label-growth-4990084</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/citi-initiates-vusion-at-buy-sees-84-upside-on-electronic-shelf-label-growth-4990084</guid>
+    <pubDate>Mon, 02 Nov 2026 07:52:55 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Medpace Holdings Consensus Price Target Increased by 11.73% to $664.95</title>
+    <link>https://www.nasdaq.com/articles/medpace-holdings-consensus-price-target-increased-1173-66495</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/medpace-holdings-consensus-price-target-increased-1173-66495</guid>
+    <pubDate>Mon, 02 Nov 2026 07:50:34 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Medpace Holdings (NASDAQGS:MEDP) (BMV:MEDP) has been revised to $664.95 / share. This is an increase of 11.73% from the prior estimate of $595.15 dated October 20, 2026. These figures represent the…</description>
+    
+  </item>
+  <item>
+    <title>U.S. Pushes to Restore Russian Gas Flows to Europe</title>
+    <link>https://oilprice.com/Latest-Energy-News/World-News/US-Pushes-to-Restore-Russian-Gas-Flows-to-Europe.html</link>
+    <guid isPermaLink="false">https://oilprice.com/Latest-Energy-News/World-News/US-Pushes-to-Restore-Russian-Gas-Flows-to-Europe.html</guid>
+    <pubDate>Mon, 02 Nov 2026 07:50:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">OilPrice.com</source>
+    <description>The United States has discussed with Russia the possibility of restoring natural gas flows to Europe via pipelines running through Ukraine, the Wall Street Journal has reported, citing unnamed sources involved in the talks. The idea…</description>
+    
+  </item>
+  <item>
+    <title>Cadiz Inc. - Preferred Stock Price Target Increased by 10.05% to $45.17</title>
+    <link>https://www.nasdaq.com/articles/cadiz-inc-preferred-stock-price-target-increased-1005-4517</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/cadiz-inc-preferred-stock-price-target-increased-1005-4517</guid>
+    <pubDate>Mon, 02 Nov 2026 07:48:52 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Cadiz Inc. - Preferred Stock (NASDAQGM:CDZIP) has been revised to $45.17 / share. This is an increase of 10.05% from the prior estimate of $41.05 dated October 22, 2026. These figures represent…</description>
+    
+  </item>
+  <item>
+    <title>SpaceX Could Mirror Nvidia’s Revenue Boom, Sequoia Partner Says — Tesla Influencer Runs Hypothetical Merger Math</title>
+    <link>https://stocktwits.com/news-articles/markets/equity/spacex-mirror-nvidia-revenue-boom-sequoia-partner-tesla-influencer-merger-math/cNG9YeiR92p?.tsrc=rss</link>
+    <guid isPermaLink="false">https://stocktwits.com/news-articles/markets/equity/spacex-mirror-nvidia-revenue-boom-sequoia-partner-tesla-influencer-merger-math/cNG9YeiR92p?.tsrc=rss</guid>
+    <pubDate>Mon, 02 Nov 2026 07:48:21 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Influencer Alexandra Merz’s hypothetical merger math implies Tesla offers values up to $813 per share, using Oct.20 prices and assumed exchange ratios.</description>
+    <category>NVDA</category><category>TSLA</category><category>SPCX</category>
+  </item>
+  <item>
+    <title>Bright Horizons Family Solutions Consensus Price Target Decreased 15.23% to $74.39</title>
+    <link>https://www.nasdaq.com/articles/bright-horizons-family-solutions-consensus-price-target-decreased-1523-7439</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/bright-horizons-family-solutions-consensus-price-target-decreased-1523-7439</guid>
+    <pubDate>Mon, 02 Nov 2026 07:47:29 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Bright Horizons Family Solutions (NYSE:BFAM) (XTRA:BHA) has been revised to $74.39 / share. This is a decrease of 15.23% from the prior estimate of $87.76 dated October 20, 2026. These figures…</description>
+    
+  </item>
+  <item>
+    <title>Strategy Inc - Preferred Stock Price Target Increased by 15.43% to $196.39</title>
+    <link>https://www.nasdaq.com/articles/strategy-inc-preferred-stock-price-target-increased-1543-19639</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/strategy-inc-preferred-stock-price-target-increased-1543-19639</guid>
+    <pubDate>Mon, 02 Nov 2026 07:46:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Strategy Inc - Preferred Stock (NASDAQGS:STRC) (DB:MIG2) has been revised to $196.39 / share. This is an increase of 15.43% from the prior estimate of $170.14 dated October 22, 2026.</description>
+    <category>MSTR</category>
+  </item>
+  <item>
+    <title>Zedge Consensus Price Target Lowered by 33.33% to $4.08</title>
+    <link>https://www.nasdaq.com/articles/zedge-consensus-price-target-lowered-3333-408</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/zedge-consensus-price-target-lowered-3333-408</guid>
+    <pubDate>Mon, 02 Nov 2026 07:46:05 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Zedge (NYSEAM:ZDGE) (DB:34Z) has been revised to $4.08 / share. This is a decrease of 33.33% from the prior estimate of $6.12 dated October 20, 2026. These figures represent aggregate analyst…</description>
+    
+  </item>
+  <item>
+    <title>Apple Q4 Earnings: Holiday Sales Outlook, iPhone Duo Demand And Memory Costs Take Center Stage In First Report Under New CEO</title>
+    <link>https://stocktwits.com/news-articles/markets/equity/apple-q4-earnings-holiday-sales-outlook-i-phone-duo-demand-and-memory-costs-take-center-stage-in-first-report-under-new-ceo/cNG9Y35R92Y?.tsrc=rss</link>
+    <guid isPermaLink="false">https://stocktwits.com/news-articles/markets/equity/apple-q4-earnings-holiday-sales-outlook-i-phone-duo-demand-and-memory-costs-take-center-stage-in-first-report-under-new-ceo/cNG9Y35R92Y?.tsrc=rss</guid>
+    <pubDate>Mon, 02 Nov 2026 07:45:53 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Apple is likely to face questions about hinge and screen issues with its new iPhone Duo, even as the device’s longer wait times point to strong demand.</description>
+    <category>AAPL</category>
+  </item>
+  <item>
+    <title>Glaukos Consensus Price Target Raised 22.10% to $247.31</title>
+    <link>https://www.nasdaq.com/articles/glaukos-consensus-price-target-raised-2210-24731</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/glaukos-consensus-price-target-raised-2210-24731</guid>
+    <pubDate>Mon, 02 Nov 2026 07:45:15 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Glaukos (NYSE:GKOS) (DB:6GJ) has been revised to $247.31 / share. This is an increase of 22.10% from the prior estimate of $202.55 dated October 20, 2026. These figures represent aggregate analyst…</description>
+    
+  </item>
+  <item>
+    <title>Exponent Consensus Price Target Raised 11.42% to $85.82</title>
+    <link>https://www.nasdaq.com/articles/exponent-consensus-price-target-raised-1142-8582</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/exponent-consensus-price-target-raised-1142-8582</guid>
+    <pubDate>Mon, 02 Nov 2026 07:43:48 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Exponent (NASDAQGS:EXPO) (DB:EP5) has been revised to $85.82 / share. This is an increase of 11.42% from the prior estimate of $77.02 dated October 20, 2026. These figures represent aggregate…</description>
+    
+  </item>
+  <item>
+    <title>Alector Consensus Price Target Increased by 15.38% to $4.59</title>
+    <link>https://www.nasdaq.com/articles/alector-consensus-price-target-increased-1538-459</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/alector-consensus-price-target-increased-1538-459</guid>
+    <pubDate>Mon, 02 Nov 2026 07:42:39 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Alector (NASDAQGS:ALEC) (DB:0Z2) has been revised to $4.59 / share. This is an increase of 15.38% from the prior estimate of $3.98 dated October 20, 2026. These figures represent aggregate analyst…</description>
+    
+  </item>
+  <item>
+    <title>China’s top three airlines head for full-year losses as fuel costs weigh</title>
+    <link>https://www.investing.com/news/stock-market-news/chinas-top-three-airlines-head-for-fullyear-losses-as-fuel-costs-weigh-4989803</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/chinas-top-three-airlines-head-for-fullyear-losses-as-fuel-costs-weigh-4989803</guid>
+    <pubDate>Mon, 02 Nov 2026 07:42:23 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>STRATA Skin Sciences Consensus Price Target Increased by 45.95% to $11.02</title>
+    <link>https://www.nasdaq.com/articles/strata-skin-sciences-consensus-price-target-increased-4595-1102</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/strata-skin-sciences-consensus-price-target-increased-4595-1102</guid>
+    <pubDate>Mon, 02 Nov 2026 07:32:03 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>As of February 12, 2026, the average one-year price target for STRATA Skin Sciences (OTCPK:SSKN) (DB:E2O) has been revised to $11.02 / share. This is an increase of 45.95% from the prior estimate of $7.55 dated February 1, 2026. These…</description>
+    
+  </item>
+  <item>
+    <title>Oxford Lane Capital - Preferred Security Price Target Increased by 11.44% to $42.91</title>
+    <link>https://www.nasdaq.com/articles/oxford-lane-capital-preferred-security-price-target-increased-1144-4291</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/oxford-lane-capital-preferred-security-price-target-increased-1144-4291</guid>
+    <pubDate>Mon, 02 Nov 2026 07:31:07 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Oxford Lane Capital - Preferred Security (NASDAQGS:OXLCI) has been revised to $42.91 / share. This is an increase of 11.44% from the prior estimate of $38.50 dated October 22, 2026. These figures…</description>
+    
+  </item>
+  <item>
+    <title>Asian stocks mixed as tech sector struggles to rebound from selloff</title>
+    <link>https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-mixed-tech-sector-024236684.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-mixed-tech-sector-024236684.html?.tsrc=rss</guid>
+    <pubDate>Mon, 02 Nov 2026 07:28:31 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Asian stocks were mixed on Monday as investors struggled to recover from last week&#x27;s tough run fuelled by disappointing earnings from tech titans, while eyes were also turning to the United States ahead of crucial midterm…</description>
+    
+  </item>
+  <item>
+    <title>Barclays downgrades Dr. Martens to underweight, cuts price target</title>
+    <link>https://www.investing.com/news/stock-market-news/barclays-downgrades-dr-martens-to-underweight-cuts-price-target-4990050</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/barclays-downgrades-dr-martens-to-underweight-cuts-price-target-4990050</guid>
+    <pubDate>Mon, 02 Nov 2026 07:27:31 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>How Has Amazon&#x27;s Story Changed?</title>
+    <link>https://www.trefis.com/stock/amzn/articles/621832/how-has-amazons-story-changed/2026-11-02?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/amzn/articles/621832/how-has-amazons-story-changed/2026-11-02?.tsrc=rss</guid>
+    <pubDate>Mon, 02 Nov 2026 07:27:22 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>For questions about this article or underlying research, email help@trefis.com.</description>
+    <category>AMZN</category>
+  </item>
+  <item>
+    <title>Has Mastercard Stock Become A Different Bet?</title>
+    <link>https://www.trefis.com/stock/ma/articles/621835/has-mastercard-stock-become-a-different-bet/2026-11-02?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/ma/articles/621835/has-mastercard-stock-become-a-different-bet/2026-11-02?.tsrc=rss</guid>
+    <pubDate>Mon, 02 Nov 2026 07:27:20 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>For questions about this article or underlying research, email help@trefis.com.</description>
+    <category>MA</category>
+  </item>
+  <item>
+    <title>Adnoc signs AI deal with OpenAI as Sam Altman visits Abu Dhabi</title>
+    <link>https://www.investing.com/news/stock-market-news/adnoc-signs-ai-deal-with-openai-as-sam-altman-visits-abu-dhabi-93CH-4990048</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/adnoc-signs-ai-deal-with-openai-as-sam-altman-visits-abu-dhabi-93CH-4990048</guid>
+    <pubDate>Mon, 02 Nov 2026 07:26:41 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Marine sniper turned macro strategist says this bull market has six to 12 months left. Here’s his playbook.</title>
+    <link>https://www.marketwatch.com/story/marine-sniper-turned-macro-strategist-says-this-bull-market-has-six-to-12-months-left-heres-his-playbook-8b48ce6e?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/marine-sniper-turned-macro-strategist-says-this-bull-market-has-six-to-12-months-left-heres-his-playbook-8b48ce6e?mod=mw_rss_topstories</guid>
+    <pubDate>Mon, 02 Nov 2026 07:25:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>Alex Barrow, founder of Macro Ops, says the bull market is on borrowed time and will ratchet back painfully for investors who aren’t prepared.</description>
+    
+  </item>
+  <item>
+    <title>Xencor Consensus Price Target Increased by 34.27% to $44.32</title>
+    <link>https://www.nasdaq.com/articles/xencor-consensus-price-target-increased-3427-4432</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/xencor-consensus-price-target-increased-3427-4432</guid>
+    <pubDate>Mon, 02 Nov 2026 07:23:34 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Xencor (NASDAQGM:XNCR) (DB:XE9) has been revised to $44.32 / share. This is an increase of 34.27% from the prior estimate of $33.01 dated October 20, 2026. These figures represent aggregate analyst…</description>
+    
+  </item>
+  <item>
+    <title>Sweetgreen Consensus Price Target Increased by 14.89% to $9.59</title>
+    <link>https://www.nasdaq.com/articles/sweetgreen-consensus-price-target-increased-1489-959</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/sweetgreen-consensus-price-target-increased-1489-959</guid>
+    <pubDate>Mon, 02 Nov 2026 07:23:19 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Sweetgreen (NYSE:SG) has been revised to $9.59 / share. This is an increase of 14.89% from the prior estimate of $8.35 dated October 20, 2026. These figures represent aggregate analyst targets…</description>
+    
+  </item>
+  <item>
+    <title>Federal National Mortgage Association - Preferred Stock Price Target Decreased by 47.75% to $15.91</title>
+    <link>https://www.nasdaq.com/articles/federal-national-mortgage-association-preferred-stock-price-target-decreased-4775-1591</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/federal-national-mortgage-association-preferred-stock-price-target-decreased-4775-1591</guid>
+    <pubDate>Mon, 02 Nov 2026 07:21:32 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Federal National Mortgage Association - Preferred Stock (OTCPK:FNMAK) has been revised to $15.91 / share. This is a decrease of 47.75% from the prior estimate of $30.44 dated June 8, 2026. These…</description>
+    
+  </item>
+  <item>
+    <title>What Has Changed About Owning Eli Lilly Stock?</title>
+    <link>https://www.trefis.com/stock/lly/articles/621845/what-has-changed-about-owning-eli-lilly-stock/2026-11-02?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/lly/articles/621845/what-has-changed-about-owning-eli-lilly-stock/2026-11-02?.tsrc=rss</guid>
+    <pubDate>Mon, 02 Nov 2026 07:04:12 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>For questions about this article or underlying research, email help@trefis.com.</description>
+    <category>LLY</category>
+  </item>
+  <item>
+    <title>What Is The Case For Waiting On Rigetti Computing Stock?</title>
+    <link>https://www.trefis.com/stock/rgti/articles/621850/what-is-the-case-for-waiting-on-rigetti-computing-stock/2026-11-02?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/rgti/articles/621850/what-is-the-case-for-waiting-on-rigetti-computing-stock/2026-11-02?.tsrc=rss</guid>
+    <pubDate>Mon, 02 Nov 2026 07:04:09 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>For questions about this article or underlying research, email help@trefis.com.</description>
+    <category>RGTI</category>
+  </item>
+  <item>
+    <title>Why Is Intel Stock Falling?</title>
+    <link>https://www.trefis.com/stock/intc/articles/621871/why-is-intel-stock-falling/2026-11-02?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/intc/articles/621871/why-is-intel-stock-falling/2026-11-02?.tsrc=rss</guid>
+    <pubDate>Mon, 02 Nov 2026 07:04:06 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>For questions about this article or underlying research, email help@trefis.com.</description>
+    <category>INTC</category>
+  </item>
+  <item>
+    <title>Should You Buy Reddit Stock For Its Cash?</title>
+    <link>https://www.trefis.com/stock/rddt/articles/621770/should-you-buy-reddit-stock-for-its-cash/2026-11-01?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/rddt/articles/621770/should-you-buy-reddit-stock-for-its-cash/2026-11-01?.tsrc=rss</guid>
+    <pubDate>Mon, 02 Nov 2026 07:04:01 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>For questions about this article or underlying research, email help@trefis.com.</description>
+    <category>RDDT</category>
+  </item>
+  <item>
+    <title>How Much Downside Is Left In Applied Materials Stock?</title>
+    <link>https://www.trefis.com/stock/amat/articles/621755/how-much-downside-is-left-in-applied-materials-stock/2026-11-01?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/amat/articles/621755/how-much-downside-is-left-in-applied-materials-stock/2026-11-01?.tsrc=rss</guid>
+    <pubDate>Mon, 02 Nov 2026 07:03:56 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>For questions about this article or underlying research, email help@trefis.com.</description>
+    <category>AMAT</category>
+  </item>
+  <item>
+    <title>Can Meta Stock Fall 30%?</title>
+    <link>https://www.trefis.com/stock/meta/articles/621753/can-meta-stock-fall-30/2026-11-01?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/meta/articles/621753/can-meta-stock-fall-30/2026-11-01?.tsrc=rss</guid>
+    <pubDate>Mon, 02 Nov 2026 07:03:53 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>For questions about this article or underlying research, email help@trefis.com.</description>
+    <category>META</category>
+  </item>
+  <item>
+    <title>AI is coming to construction sites. But does it make workers safer?</title>
+    <link>https://www.cnbc.com/2026/10/31/ai-construction-worker-safety.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/10/31/ai-construction-worker-safety.html</guid>
+    <pubDate>Mon, 02 Nov 2026 06:55:19 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>AI is flagging hazards on construction sites, but researchers say evidence that the technology prevents injuries remains limited.</description>
+    
+  </item>
+  <item>
+    <title>Bitcoin ETFs lost $643 million in outflows Friday, and 2026 is barely green now</title>
+    <link>https://www.coindesk.com/markets/2026/11/02/bitcoin-etfs-lost-usd643-million-in-outflows-friday-and-2026-is-barely-green-now</link>
+    <guid isPermaLink="false">https://www.coindesk.com/markets/2026/11/02/bitcoin-etfs-lost-usd643-million-in-outflows-friday-and-2026-is-barely-green-now</guid>
+    <pubDate>Mon, 02 Nov 2026 06:46:41 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
+    <description>The first trading day after the Binance hack saw the biggest ETF outflow since June 25.</description>
+    <category>BTC</category>
   </item>
   <item>
     <title>Oil Prices Slide 3% as Hopes for Iran Peace Deal Grow</title>
@@ -50,411 +455,6 @@
     <pubDate>Mon, 02 Nov 2026 06:12:24 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
     <description>The average one-year price target for AEVEX (NYSE:AVEX) has been revised to $25.61 / share. This is a decrease of 12.28% from the prior estimate of $29.20 dated October 20, 2026. These figures represent aggregate analyst targets…</description>
-    
-  </item>
-  <item>
-    <title>Asia stocks rise as tech gains ahead of Apple results</title>
-    <link>https://www.investing.com/news/stock-market-news/asia-stocks-rise-as-tech-gains-ahead-of-apple-results-4989830</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/asia-stocks-rise-as-tech-gains-ahead-of-apple-results-4989830</guid>
-    <pubDate>Mon, 02 Nov 2026 06:12:09 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>AAPL</category>
-  </item>
-  <item>
-    <title>Why is Bank of Baroda stock rallying today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-bank-of-baroda-stock-rallying-today-93CH-4989930</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-bank-of-baroda-stock-rallying-today-93CH-4989930</guid>
-    <pubDate>Mon, 02 Nov 2026 06:07:26 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>South Korea targets &#x27;world&#x27;s highest performance&#x27; sovereign AI model in record new budget</title>
-    <link>https://www.cnbc.com/2026/11/02/south-korea-ai-spending-budget.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/02/south-korea-ai-spending-budget.html</guid>
-    <pubDate>Mon, 02 Nov 2026 06:02:03 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The 2027 budget will rise 12.8% to 820.9 trillion won, and will include a 21.3 trillion won investment into semiconductors, physical AI and AI data centers.</description>
-    
-  </item>
-  <item>
-    <title>Taiwan stocks lower at close of trade; Taiwan Weighted down 0.43%</title>
-    <link>https://www.investing.com/news/stock-market-news/taiwan-stocks-lower-at-close-of-trade-taiwan-weighted-down-043-4989919</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/taiwan-stocks-lower-at-close-of-trade-taiwan-weighted-down-043-4989919</guid>
-    <pubDate>Mon, 02 Nov 2026 06:00:04 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Aktsiaselts Infortar own share acquisition transactions</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/aktsiaselts-infortar-own-share-acquisition-060000875.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/aktsiaselts-infortar-own-share-acquisition-060000875.html?.tsrc=rss</guid>
-    <pubDate>Mon, 02 Nov 2026 06:00:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Aktsiaselts Infortar acquired its own shares on the Nasdaq Tallinn Stock Exchange during the period of 26 October – 30 October 2026 as follows: DateAggregated volume (pcs)Weighted average price per day…</description>
-    
-  </item>
-  <item>
-    <title>Why is Delhivery stock surging today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-delhivery-stock-surging-today-93CH-4989917</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-delhivery-stock-surging-today-93CH-4989917</guid>
-    <pubDate>Mon, 02 Nov 2026 05:54:50 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Apple’s new CEO Ternus to face first earnings test as memory costs surge</title>
-    <link>https://www.investing.com/news/stock-market-news/apples-new-ceo-ternus-to-face-first-earnings-test-as-memory-costs-surge-4989863</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/apples-new-ceo-ternus-to-face-first-earnings-test-as-memory-costs-surge-4989863</guid>
-    <pubDate>Mon, 02 Nov 2026 05:54:20 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>AAPL</category>
-  </item>
-  <item>
-    <title>Why is Motherson Sumi Wiring India stock surging today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-motherson-sumi-wiring-india-stock-surging-today-93CH-4989916</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-motherson-sumi-wiring-india-stock-surging-today-93CH-4989916</guid>
-    <pubDate>Mon, 02 Nov 2026 05:54:04 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Why is Rio Tinto stock sliding today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-rio-tinto-stock-sliding-today-93CH-4989915</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-rio-tinto-stock-sliding-today-93CH-4989915</guid>
-    <pubDate>Mon, 02 Nov 2026 05:52:51 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>RIO</category>
-  </item>
-  <item>
-    <title>Why is Sheng Siong stock sliding to a one-year low today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-sheng-siong-stock-sliding-to-a-oneyear-low-today-93CH-4989913</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-sheng-siong-stock-sliding-to-a-oneyear-low-today-93CH-4989913</guid>
-    <pubDate>Mon, 02 Nov 2026 05:50:59 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Xylem Consensus Price Target Lowered by 12.92% to $126.34</title>
-    <link>https://www.nasdaq.com/articles/xylem-consensus-price-target-lowered-1292-12634</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/xylem-consensus-price-target-lowered-1292-12634</guid>
-    <pubDate>Mon, 02 Nov 2026 05:47:58 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Xylem (NYSE:XYL) (BIT:1XYL) has been revised to $126.34 / share. This is a decrease of 12.92% from the prior estimate of $145.08 dated October 20, 2026. These figures represent aggregate analyst…</description>
-    <category>XYL</category>
-  </item>
-  <item>
-    <title>Stock Market: Will S&amp;P 500 Open Up or Down Today?</title>
-    <link>https://www.benzinga.com/markets/prediction-markets/26/11/62767926/stock-market-will-sp-500-open-up-or-down-today-70?utm_source=yahooFinance&amp;utm_campaign=partner_feed&amp;utm_medium=referral&amp;.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.benzinga.com/markets/prediction-markets/26/11/62767926/stock-market-will-sp-500-open-up-or-down-today-70?utm_source=yahooFinance&amp;utm_campaign=partner_feed&amp;utm_medium=referral&amp;.tsrc=rss</guid>
-    <pubDate>Mon, 02 Nov 2026 05:47:19 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>U.S. stock futures point to a solid rebound early Monday as Wall Street shakes off a bruising October close. Investors are weighing cooling energy prices after President Donald Trump suggested an impending end to the Iran conflict,…</description>
-    <category>SPY</category>
-  </item>
-  <item>
-    <title>Why is LG CNS stock surging today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-lg-cns-stock-surging-today-93CH-4989910</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-lg-cns-stock-surging-today-93CH-4989910</guid>
-    <pubDate>Mon, 02 Nov 2026 05:44:25 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Why is Hanwha Ocean stock surging today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-hanwha-ocean-stock-surging-today-93CH-4989909</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-hanwha-ocean-stock-surging-today-93CH-4989909</guid>
-    <pubDate>Mon, 02 Nov 2026 05:43:34 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Tesla-SpaceX merger math just shifted in Tesla&#x27;s favor</title>
-    <link>https://www.thestreet.com/markets/tesla-spacex-merger-math-just-shifted-in-teslas-favor?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.thestreet.com/markets/tesla-spacex-merger-math-just-shifted-in-teslas-favor?.tsrc=rss</guid>
-    <pubDate>Mon, 02 Nov 2026 05:37:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Musk sees merit in combining Tesla and SpaceX, but Bank of America says the premium, the vote and China will decide what Tesla holders actually get.</description>
-    <category>TSLA</category><category>SPCX</category><category>BAC</category>
-  </item>
-  <item>
-    <title>Federal Home Loan Mortgage Corporation - Preferred Stock Price Target Decreased by 34.56% to $21.20</title>
-    <link>https://www.nasdaq.com/articles/federal-home-loan-mortgage-corporation-preferred-stock-price-target-decreased-3456-2120</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/federal-home-loan-mortgage-corporation-preferred-stock-price-target-decreased-3456-2120</guid>
-    <pubDate>Mon, 02 Nov 2026 05:35:18 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Federal Home Loan Mortgage Corporation - Preferred Stock (OTCPK:FMCCH) has been revised to $21.20 / share. This is a decrease of 34.56% from the prior estimate of $32.40 dated October 22, 2026.…</description>
-    
-  </item>
-  <item>
-    <title>Asian shares mostly advance but tech stocks remain volatile, while oil sinks 3.3%</title>
-    <link>https://finance.yahoo.com/markets/world-indices/articles/asian-shares-mostly-advance-tech-052925730.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/world-indices/articles/asian-shares-mostly-advance-tech-052925730.html?.tsrc=rss</guid>
-    <pubDate>Mon, 02 Nov 2026 05:29:25 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>HONG KONG (AP) — Asian shares were mostly higher Monday but technology stocks remained volatile, while oil prices fell more than 3%. futures edged higher after Wall Street fell Friday to its worst day since June as investors dumped…</description>
-    
-  </item>
-  <item>
-    <title>Sify Technologies Limited - Depositary Receipt Price Target Increased by 22.73% to $27.54</title>
-    <link>https://www.nasdaq.com/articles/sify-technologies-limited-depositary-receipt-price-target-increased-2273-2754</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/sify-technologies-limited-depositary-receipt-price-target-increased-2273-2754</guid>
-    <pubDate>Mon, 02 Nov 2026 05:27:19 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Sify Technologies Limited - Depositary Receipt (NASDAQCM:SIFY) (DB:IWY) has been revised to $27.54 / share. This is an increase of 22.73% from the prior estimate of $22.44 dated October 20, 2026.…</description>
-    
-  </item>
-  <item>
-    <title>Cadiz Consensus Price Target Increased by 29.17% to $10.54</title>
-    <link>https://www.nasdaq.com/articles/cadiz-consensus-price-target-increased-2917-1054</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cadiz-consensus-price-target-increased-2917-1054</guid>
-    <pubDate>Mon, 02 Nov 2026 05:21:21 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Cadiz (NASDAQGM:CDZI) (LSE:0HS4) has been revised to $10.54 / share, as of October 30, 2026. This is an increase of 29.17% from the prior estimate of $8.16 dated October 20, 2026. These figures…</description>
-    
-  </item>
-  <item>
-    <title>Surgery Partners Consensus Price Target Increased by 15.45% to $22.61</title>
-    <link>https://www.nasdaq.com/articles/surgery-partners-consensus-price-target-increased-1545-2261</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/surgery-partners-consensus-price-target-increased-1545-2261</guid>
-    <pubDate>Mon, 02 Nov 2026 05:20:26 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Surgery Partners (NASDAQGS:SGRY) (DB:1SP) has been revised to $22.61 / share. This is an increase of 15.45% from the prior estimate of $19.58 dated October 20, 2026. These figures represent…</description>
-    
-  </item>
-  <item>
-    <title>Strangers are begging the Binance hacker for bitcoin, one ‘help me bro’ at a time</title>
-    <link>https://www.coindesk.com/tech/2026/11/02/strangers-are-begging-the-binance-hacker-for-bitcoin-one-help-me-bro-at-a-time</link>
-    <guid isPermaLink="false">https://www.coindesk.com/tech/2026/11/02/strangers-are-begging-the-binance-hacker-for-bitcoin-one-help-me-bro-at-a-time</guid>
-    <pubDate>Mon, 02 Nov 2026 05:18:12 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
-    <description>The 19 wallets holding 18,270 stolen BTC have taken in nothing since Thursday except payments worth under a dollar, each carrying a message, from pleas to laundering pitches to a token shill.</description>
-    <category>BTC</category>
-  </item>
-  <item>
-    <title>Binance sees $3.64 billion in net outflows as withdrawals resume after massive hack</title>
-    <link>https://www.cnbc.com/2026/11/02/binance-outflow-hack-bitcoin.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/02/binance-outflow-hack-bitcoin.html</guid>
-    <pubDate>Mon, 02 Nov 2026 05:09:45 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Binance recorded $3.64 billion in net outflows after resuming withdrawals following a $6.3 billion hack, representing 2.1% of its total assets.</description>
-    
-  </item>
-  <item>
-    <title>Average Analyst Price Target for Chegg Raised 21.21% to $1.02</title>
-    <link>https://www.nasdaq.com/articles/average-analyst-price-target-chegg-raised-2121-102</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/average-analyst-price-target-chegg-raised-2121-102</guid>
-    <pubDate>Mon, 02 Nov 2026 05:08:37 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Chegg (NYSE:CHGG) (DB:0CG) has been revised to $1.02 / share. This is an increase of 21.21% from the prior estimate of $0.84 dated May 31, 2025. These figures represent aggregate analyst targets…</description>
-    
-  </item>
-  <item>
-    <title>UWM Holdings Consensus Price Target Cut by 30.41% to $1.72</title>
-    <link>https://www.nasdaq.com/articles/uwm-holdings-consensus-price-target-cut-3041-172</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/uwm-holdings-consensus-price-target-cut-3041-172</guid>
-    <pubDate>Mon, 02 Nov 2026 05:08:12 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for UWM Holdings (NYSE:UWMC) has been revised to $1.72 / share. This is a decrease of 30.41% from the prior estimate of $2.47 dated October 20, 2026. These figures represent aggregate analyst targets…</description>
-    
-  </item>
-  <item>
-    <title>Bitcoin 39% Below Peak, Meme Coins Down Up to 99%, but S&amp;P 500 Near Record</title>
-    <link>https://beincrypto.com/bitcoin-meme-coins-below-peak/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://beincrypto.com/bitcoin-meme-coins-below-peak/?.tsrc=rss</guid>
-    <pubDate>Mon, 02 Nov 2026 05:00:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Bitcoin sits 39% below its high and meme coins up to 99%, while the S&amp;P 500 trails its record by 3%. See the gap.</description>
-    <category>BTC</category><category>SPY</category>
-  </item>
-  <item>
-    <title>Robert Half Consensus Price Target Increased by 13.38% to $40.06</title>
-    <link>https://www.nasdaq.com/articles/robert-half-consensus-price-target-increased-1338-4006</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/robert-half-consensus-price-target-increased-1338-4006</guid>
-    <pubDate>Mon, 02 Nov 2026 04:57:32 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Robert Half (NYSE:RHI) (DB:RHJ) has been revised to $40.06 / share. This is an increase of 13.38% from the prior estimate of $35.34 dated October 20, 2026. These figures represent aggregate analyst…</description>
-    
-  </item>
-  <item>
-    <title>Can SpaceX Overcome the AI Trade Sell-Off?</title>
-    <link>https://www.fool.com/investing/2026/11/01/can-spacex-overcome-the-ai-trade-sell-off/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/01/can-spacex-overcome-the-ai-trade-sell-off/?.tsrc=rss</guid>
-    <pubDate>Mon, 02 Nov 2026 04:50:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>SpaceX stock may struggle to gain ground as long as investors question AI spending.</description>
-    <category>SPCX</category>
-  </item>
-  <item>
-    <title>Centrus Energy Consensus Price Target Decreased by 13.62% to $205.19</title>
-    <link>https://www.nasdaq.com/articles/centrus-energy-consensus-price-target-decreased-1362-20519</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/centrus-energy-consensus-price-target-decreased-1362-20519</guid>
-    <pubDate>Mon, 02 Nov 2026 04:49:35 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Centrus Energy (NYSE:LEU) (DB:4CU) has been revised to $205.19 / share. This is a decrease of 13.62% from the prior estimate of $237.53 dated October 20, 2026. These figures represent aggregate…</description>
-    
-  </item>
-  <item>
-    <title>Is a Stock-Pocalypse Coming This Week? Analysts Share Their Boldest Calls</title>
-    <link>https://beincrypto.com/stock-pocalypse-us-stock-market-crash-this-week/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://beincrypto.com/stock-pocalypse-us-stock-market-crash-this-week/?.tsrc=rss</guid>
-    <pubDate>Mon, 02 Nov 2026 04:48:15 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Is a stock-pocalypse coming? After the Nasdaq’s worst day since June, analysts share their most dramatic forecasts.</description>
-    
-  </item>
-  <item>
-    <title>Kyowa Kirin Co., - Depositary Receipt Price Target Decreased by 11.34% to $13.35</title>
-    <link>https://www.nasdaq.com/articles/kyowa-kirin-co-depositary-receipt-price-target-decreased-1134-1335</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/kyowa-kirin-co-depositary-receipt-price-target-decreased-1134-1335</guid>
-    <pubDate>Mon, 02 Nov 2026 04:44:42 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Kyowa Kirin Co., - Depositary Receipt (OTCPK:KYKOY) has been revised to $13.35 per share. This represents a decrease of 11.34% from the prior estimate of $15.06 dated October 22, 2026. These figures…</description>
-    
-  </item>
-  <item>
-    <title>Bitcoin claws back toward $79,000 as markets shake off crypto&#x27;s biggest hack</title>
-    <link>https://www.coindesk.com/markets/2026/11/02/bitcoin-claws-back-toward-usd79-000-as-markets-shake-off-crypto-s-biggest-hack</link>
-    <guid isPermaLink="false">https://www.coindesk.com/markets/2026/11/02/bitcoin-claws-back-toward-usd79-000-as-markets-shake-off-crypto-s-biggest-hack</guid>
-    <pubDate>Mon, 02 Nov 2026 04:42:22 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
-    <description>ZEC led the majors and oil slid on a report that Trump wants to give Iran diplomacy more time, with U.S. midterm elections on Tuesday.</description>
-    <category>BTC</category>
-  </item>
-  <item>
-    <title>BTCPay, a bitcoin payment tool, tells users to switch off their servers after reports of drained wallets</title>
-    <link>https://www.coindesk.com/tech/2026/11/02/btcpay-a-bitcoin-payment-tool-tells-users-to-switch-off-their-servers-after-reports-of-drained-wallets</link>
-    <guid isPermaLink="false">https://www.coindesk.com/tech/2026/11/02/btcpay-a-bitcoin-payment-tool-tells-users-to-switch-off-their-servers-after-reports-of-drained-wallets</guid>
-    <pubDate>Mon, 02 Nov 2026 04:41:16 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
-    <description>The open-source project says it is still investigating and hasn&#x27;t given a loss figure or announced a fix. Its founder said the reports appear to involve versions older than 2.4.2.</description>
-    <category>BTC</category>
-  </item>
-  <item>
-    <title>The Pentagon’s IT agency wants to bridge network gaps in the Pacific</title>
-    <link>https://www.defenseone.com/technology/2026/11/pentagons-it-agency-wants-bridge-network-gaps-pacific/416963/</link>
-    <guid isPermaLink="false">https://www.defenseone.com/technology/2026/11/pentagons-it-agency-wants-bridge-network-gaps-pacific/416963/</guid>
-    <pubDate>Mon, 02 Nov 2026 04:37:52 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Defense One</source>
-    <description>“The old ways of connecting with partners are simply no longer sufficient,” says INDOPACOM deputy commander.</description>
-    
-  </item>
-  <item>
-    <title>AI Bond Funding Might Change The Case For Investing In Microsoft (MSFT)</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/ai-bond-funding-might-change-042922208.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/ai-bond-funding-might-change-042922208.html?.tsrc=rss</guid>
-    <pubDate>Mon, 02 Nov 2026 04:29:22 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Microsoft has expanded AI driven partnerships and client deployments, including Estée Lauder’s cloud and data overhaul on Azure and broad Copilot rollouts. The company has also completed multi tranche bond issues that form part of a…</description>
-    <category>MSFT</category><category>EL</category>
-  </item>
-  <item>
-    <title>Enlivex Consensus Price Target Increased by 1,500% to $1,305.60</title>
-    <link>https://www.nasdaq.com/articles/enlivex-consensus-price-target-increased-1500-130560</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/enlivex-consensus-price-target-increased-1500-130560</guid>
-    <pubDate>Mon, 02 Nov 2026 04:22:57 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Enlivex (NASDAQCM:ENLV) (DB:1BT) has been revised to $1,305.60 / share. This is an increase of 1,500.00% from the prior estimate of $81.60 dated October 20, 2026. These figures represent aggregate…</description>
-    
-  </item>
-  <item>
-    <title>Cheetah Net Supply Chain Service Consensus Price Target Raised by 35,999,900.00% to $1,468,800.00</title>
-    <link>https://www.nasdaq.com/articles/cheetah-net-supply-chain-service-consensus-price-target-raised-3599990000-146880000</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cheetah-net-supply-chain-service-consensus-price-target-raised-3599990000-146880000</guid>
-    <pubDate>Mon, 02 Nov 2026 04:22:18 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Cheetah Net Supply Chain Service (NASDAQCM:CTNT) has been revised to $1,468,800.00 per share, as of May 14, 2024. This represents an increase of 35,999,900.00% from the prior estimate of $4.08 dated…</description>
-    
-  </item>
-  <item>
-    <title>Gladstone Land Corporation - Preferred Stock Price Target Increased by 11.42% to $25.66</title>
-    <link>https://www.nasdaq.com/articles/gladstone-land-corporation-preferred-stock-price-target-increased-1142-2566</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/gladstone-land-corporation-preferred-stock-price-target-increased-1142-2566</guid>
-    <pubDate>Mon, 02 Nov 2026 04:14:45 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Gladstone Land Corporation - Preferred Stock (NASDAQGM:LANDP) has been revised to $25.66 / share. This is an increase of 11.42% from the prior estimate of $23.03 dated October 22, 2026. Please note…</description>
-    
-  </item>
-  <item>
-    <title>Elon Musk Blinks? Tesla’s Terafab May Reportedly Lean on TSMC After All</title>
-    <link>https://finance.yahoo.com/technology/articles/elon-musk-blinks-tesla-terafab-041311073.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/articles/elon-musk-blinks-tesla-terafab-041311073.html?.tsrc=rss</guid>
-    <pubDate>Mon, 02 Nov 2026 04:13:11 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Tesla Inc. (NASDAQ:TSLA) CEO Elon Musk is reportedly reconsidering how much control to keep over his Terafab chip project in Texas, and may let Taiwan Semiconductor Manufacturing Co. Ltd. (NYSE:TSM) take a bigger role in building and…</description>
-    <category>TSM</category><category>TSLA</category>
-  </item>
-  <item>
-    <title>Canada-India $5.5 billion bank takeover attracts opposition from workers, politicians</title>
-    <link>https://www.cnbc.com/2026/11/02/canada-india-bank-takeover-protest-workers.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/02/canada-india-bank-takeover-protest-workers.html</guid>
-    <pubDate>Mon, 02 Nov 2026 04:09:34 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>IDBI workers demand the government &quot;cancel the privatization process&quot; and work to strengthen the bank while protecting public investment and staff interests.</description>
-    
-  </item>
-  <item>
-    <title>Dow Jones Futures Rise But Market Still Ails; Midterm Elections Ahead</title>
-    <link>https://finance.yahoo.com/m/d0bc23d0-115b-314d-8989-07ca797bebfa/dow-jones-futures-rise-but.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/d0bc23d0-115b-314d-8989-07ca797bebfa/dow-jones-futures-rise-but.html?.tsrc=rss</guid>
-    <pubDate>Mon, 02 Nov 2026 04:01:36 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Techs led another stock market sell-off. It&#x27;s a time to be defensive. Apple, Palantir, jobs and midterm elections loom.</description>
-    <category>PLTR</category><category>AAPL</category><category>DJI</category>
-  </item>
-  <item>
-    <title>The S&amp;P 500&#x27;s Shiller P/E Is Above 40. History Says What Happened the Only Other Time.</title>
-    <link>https://www.fool.com/investing/2026/11/01/the-s-and-p-500-s-shiller-p-e-is-above-40-history-says-what-happened-the-only-other-time/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/01/the-s-and-p-500-s-shiller-p-e-is-above-40-history-says-what-happened-the-only-other-time/?.tsrc=rss</guid>
-    <pubDate>Mon, 02 Nov 2026 04:01:02 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Stocks still had a good year left the last time this valuation gauge broke 40. How did the next decade go?</description>
-    <category>SPY</category>
-  </item>
-  <item>
-    <title>INTC, AMZN, GOOGL Stocks Rise Overnight After Brutal Week: Dan Niles Sees AI Risks Showing Up In Big Tech Earnings</title>
-    <link>https://stocktwits.com/news-articles/markets/equity/intc-amzn-googl-stocks-rise-overnight-after-brutal-week-dan-niles-sees-ai-risks-showing-up-in-big-tech-earnings/cNG9k2DR92h?.tsrc=rss</link>
-    <guid isPermaLink="false">https://stocktwits.com/news-articles/markets/equity/intc-amzn-googl-stocks-rise-overnight-after-brutal-week-dan-niles-sees-ai-risks-showing-up-in-big-tech-earnings/cNG9k2DR92h?.tsrc=rss</guid>
-    <pubDate>Mon, 02 Nov 2026 03:59:13 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Investor Dan Niles said the Big Tech reports clearly reflected AI-related risks, saying that “earnings has been more trick than treat for technology investors.”</description>
-    <category>INTC</category><category>GOOGL</category><category>AMZN</category>
-  </item>
-  <item>
-    <title>Want to help your adult kids and grandkids? Give them money while you’re still alive.</title>
-    <link>https://www.marketwatch.com/story/if-you-really-want-to-help-your-adult-kids-and-grandkids-give-them-money-while-youre-still-alive-bef6b056?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/if-you-really-want-to-help-your-adult-kids-and-grandkids-give-them-money-while-youre-still-alive-bef6b056?mod=mw_rss_topstories</guid>
-    <pubDate>Mon, 02 Nov 2026 03:23:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>How to manage “giving while living” without endangering your own retirement.</description>
-    
-  </item>
-  <item>
-    <title>Midterms, Jobs Data, and Apple Earnings Test Wall Street This Week: Will Stocks Hold?</title>
-    <link>https://beincrypto.com/wall-street-this-week-midterms-jobs/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://beincrypto.com/wall-street-this-week-midterms-jobs/?.tsrc=rss</guid>
-    <pubDate>Mon, 02 Nov 2026 03:16:34 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Midterms, jobs data and Apple earnings test Wall Street this week after the Nasdaq&#x27;s worst month since March 2025.</description>
-    <category>AAPL</category>
-  </item>
-  <item>
-    <title>Sam Altman makes surprise South Korea visit as OpenAI builds on chip partnerships</title>
-    <link>https://www.cnbc.com/2026/11/02/openai-sam-altman-samsung-sk-south-korea.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/02/openai-sam-altman-samsung-sk-south-korea.html</guid>
-    <pubDate>Mon, 02 Nov 2026 02:58:53 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>OpenAI CEO Sam Altman made an unannounced visit to South Korea over the weekend, meeting with Samsung executives and reportedly SK Group executives.</description>
     
   </item>
 </channel>
