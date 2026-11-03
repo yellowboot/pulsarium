@@ -325,6 +325,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/br/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/brk-b/</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>hourly</changefreq>
@@ -1321,7 +1326,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/meta/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1611,7 +1616,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/airlines-travel/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
