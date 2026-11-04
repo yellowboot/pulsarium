@@ -67,6 +67,9 @@ const IFRS_CASH_FLOW: Record<string, string[]> = {
 }
 const IFRS_INSTANT: Record<string, string[]> = {
   equity: ['EquityAttributableToOwnersOfParent', 'Equity'],
+  // IFRS calls debt borrowings (Grab, Dec 2025: 1,680 current + 373 non-current = 2,053 in total)
+  long_term_debt: ['NoncurrentPortionOfNoncurrentBorrowings', 'LongtermBorrowings'],
+  current_debt: ['CurrentBorrowingsAndCurrentPortionOfNoncurrentBorrowings', 'ShorttermBorrowings'],
   cash: ['CashAndCashEquivalents'],
 }
 
