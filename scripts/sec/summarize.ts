@@ -524,8 +524,12 @@ function ttmFromYtd(input: Fact[], end: string): number | null {
 export function summarize(factsDoc: FactsDoc) {
   const facts = factsDoc.facts ?? {}
   let taxonomy: string, flowMap: Record<string, string[]>, instantMap: Record<string, string[]>, cashFlowMap: Record<string, string[]>
-  if (facts['us-gaap']) [taxonomy, flowMap, instantMap, cashFlowMap] = ['us-gaap', US_FLOW, US_INSTANT, US_CASH_FLOW]
-  else if (facts['ifrs-full']) [taxonomy, flowMap, instantMap, cashFlowMap] = ['ifrs-full', IFRS_FLOW, IFRS_INSTANT, IFRS_CASH_FLOW]
+  // an IFRS filer may also carry a stray us-gaap concept or two (Grab: 263 IFRS
+  // concepts and one us-gaap): the taxonomy with more concepts is the filing's own
+  const gaapCount = Object.keys(facts['us-gaap'] ?? {}).length
+  const ifrsCount = Object.keys(facts['ifrs-full'] ?? {}).length
+  if (gaapCount && gaapCount >= ifrsCount) [taxonomy, flowMap, instantMap, cashFlowMap] = ['us-gaap', US_FLOW, US_INSTANT, US_CASH_FLOW]
+  else if (ifrsCount) [taxonomy, flowMap, instantMap, cashFlowMap] = ['ifrs-full', IFRS_FLOW, IFRS_INSTANT, IFRS_CASH_FLOW]
   else return null
   const source = facts[taxonomy]
 
