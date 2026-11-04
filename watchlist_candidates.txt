@@ -6,35 +6,39 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 04.11.2026 20:37
-31 of 80 news items unmatched this run
+Generated: 04.11.2026 21:37
+35 of 80 news items unmatched this run
 
-- [Yahoo Finance] 5 Cheapest AI Data Center Stocks to Buy According to Billionaires
-- [Investing.com] Why is Performance Food Group stock surging today?
-- [Investing.com] Canada stocks higher at close of trade; S&P/TSX Composite up 2.39%
-- [Investing.com] Brazil stocks higher at close of trade; Bovespa up 0.99%
-- [MarketWatch] Oil prices are in freefall now that the Democratic sweep is ‘rewriting the Iran playbook’
-- [Investing.com] Why is Procore Technologies stock surging today?
-- [Nasdaq] Cattle Falling Lower on Wednesday
+- [CNBC] Snap shares fall over 10% on third-quarter revenue miss
+- [CNBC] What was really behind Wednesday's monster rally? Trump quickly making peace
+- [Investing.com] Why is Coherent stock surging today?
+- [Investing.com] Why is Dutch Bros stock tumbling today?
+- [Investing.com] Mexico stocks higher at close of trade; S&P/BMV IPC up 0.87%
+- [MarketWatch] Dow scores its best day in 18 months in a broad relief rally after Democrats sweep to power in Congress
+- [Investing.com] Chime raises annual revenue forecast on robust demand
+- [Investing.com] Colombia stocks lower at close of trade; COLCAP down 0.79%
+- [Yahoo Finance] How major US stock indexes fared Wednesday 11/4/2026
+- [Yahoo Finance] Blue wave sparks Wall Street rally after midterms
+- [Nasdaq] Dollar Weakness Lifts NY Cocoa Prices
 - [Nasdaq] Soybeans Facing Midweek Weakness
-- [Nasdaq] Wheat Posting Modest Midweek Gains
-- [Nasdaq] Corn Popping Higher on Wednesday
-- [Nasdaq] Cattle Look to Midweek Trade Following Tuesday Weakness
-- [Nasdaq] Wheat Holding on the Higher Side on Wednesday Morning
-- [Investing.com] Why is Bruker stock surging today?
-- [Investing.com] Why is Modine Manufacturing stock plunging today?
-- [Nasdaq] Jasper Therapeutics, Inc. Announces 1-for-30 Reverse Stock Split
-- [Nasdaq] Electronic Servitor Publication Network, Inc. Announces Resignation of Thomas Spruce and Interim Appointment of Peter Hager
-- [Nasdaq] Itaú Unibanco Holding S.A. Fiscal Council Issues Unanimous Opinion on Financial Statements for January to September 2026
-- [Nasdaq] Southwest Gas Holdings, Inc. Reports Third Quarter 2026 Financial Results, Reaffirms Full-Year 2026 Guidance
-- [Nasdaq] UroGen Pharma Ltd. Reports Third Quarter 2026 Financial Results and FDA Acceptance of UGN-103 NDA
-- [Nasdaq] Jones Lang LaSalle Incorporated Appoints Nabeel Al-Amudi and Toni Townes-Whitley to Board of Directors
-- [Yahoo Finance] Why Navitas Semiconductor Stock Rocketed Higher Today
+- [Nasdaq] Hogs Post Mixed Trade on Tuesday
+- [Nasdaq] Legend Biotech Announces 7 Presentations at the 68th American Society of Hematology Annual Meeting
+- [Nasdaq] Performance Shipping Inc. Agrees to Repurchase and Cancel 253,500 Series B Warrants
+- [Yahoo Finance] Accuray Announces 1-for-40 Reverse Stock Split
+- [Investing.com] Arm beats second-quarter revenue estimates on AI and data-center demand
+- [Investing.com] Elf sees Q2 sales boost with marketing, Europe expansion
+- [Nasdaq] Arabica Coffee Falls in Expectations of Larger Brazil Coffee Exports
 - [Nasdaq] Expectations of Larger Brazil Coffee Exports Weigh on Prices
-- [Nasdaq] Cotton Rallying on Wednesday Morning
+- [Nasdaq] Wheat Holding on the Higher Side on Wednesday Morning
+- [CNBC] Dow soars 1,500 points for best day since April 2025 on clear-cut Democratic win, falling oil: Live updates
+- [Yahoo Finance] Everest Group Announces Dividend
+- [MarketWatch] Hospital stocks rallied while drugmakers brace for scrutiny. Here’s what the Democratic wave means for healthcare.
+- [Yahoo Finance] Why D-Wave Quantum Stock Led a Quantum Computing Crash in October
+- [CNBC] E.l.f. Beauty posts 51% sales increase, raises full-year guidance
+- [Yahoo Finance] Democrats' Resounding Win in the Midterms Removed Political Uncertainty. Stocks Soared.
+- [Yahoo Finance] Why Fidelity National Information Services Plunged Today
+- [Yahoo Finance] Baird Medical Announces Receipt of Nasdaq Notification Regarding Minimum Bid Price Deficiency
 - [CNBC] New Flutter CEO bets on FanDuel promotions to win customers as profits suffer
-- [Yahoo Finance] Dow Surges After Democrats Sweep Midterm Elections
-- [Yahoo Finance] Elon Musk's $474 Million Election Bet Backfires
 - [CNBC] Voters rebuff data centers in every ballot measure except one during the 2026 midterms
 - [CNBC] A massive trade just happened in a leading mortgage lender: Watch Options Action Live
 - [Mining.com] Rare Earths Norway OKs $27 million Fen pilot plant
