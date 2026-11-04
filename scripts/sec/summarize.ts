@@ -586,6 +586,32 @@ export function summarize(factsDoc: FactsDoc) {
     return index >= 0 ? years[index] : null
   }
 
+  // A quarter filed before a stock split keeps its pre-split EPS until the next
+  // annual report restates it, and a fourth quarter worked out as the year minus
+  // three restated quarters mixes both: Booking's 25-for-1 (April 2026) left Q4
+  // 2025 at $160.69 beside post-split quarters, a trailing EPS of $168 and a P/E
+  // of 1.0. Such a quarter's implied share count (net income / EPS) sits three
+  // times or more away from the latest quarters' median; its EPS is taken as
+  // net income over that median count. A merger that doubles the count stays.
+  if (series.eps_diluted && series.net_income) {
+    const epsQ = series.eps_diluted.q, incomeQ = series.net_income.q
+    const implied = (end: string) => {
+      const eps = epsQ.get(end), income = incomeQ.get(end)
+      return eps != null && income != null && Math.abs(eps) >= 0.01 && income * eps > 0 ? income / eps : null
+    }
+    const recent = [...epsQ.keys()].slice(-4).map(implied).filter((n): n is number => n != null).sort((x, y) => x - y)
+    const median = recent.length >= 2 ? recent[Math.floor(recent.length / 2)] : null
+    if (median) {
+      for (const end of epsQ.keys()) {
+        const shares = implied(end), income = incomeQ.get(end)
+        // a near-zero quarter (Boeing, Q1 2026) gives a meaningless count once preferred dividends come off
+        const revenue = series.revenue.q.get(end)
+        if (revenue && Math.abs(income ?? 0) < 0.01 * revenue) continue
+        if (shares && income != null && (median / shares >= 3 || median / shares <= 1 / 3)) epsQ.set(end, round6(income / median))
+      }
+    }
+  }
+
   const keys = Object.keys(flowMap).filter((k) => k !== 'dividends_per_share')
   const result: Record<string, any> = {
     taxonomy,
