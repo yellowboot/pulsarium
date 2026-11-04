@@ -423,6 +423,64 @@ function quarterFromYtd(input: Fact[], end: string): number | null {
 const SPLIT_FACTORS = [2, 3, 4, 5, 8, 10, 15, 20, 25, 30, 40, 50]
 const round6 = (value: number) => Math.round(value * 1e6) / 1e6
 
+/** Dividends per share as the filings give them, made comparable.
+ * A split restated in a later filing (Booking's 25-for-1, Apr 2026: Q1 2025
+ * filed as $9.60, then as $0.38) also scales the facts filed before that
+ * filing, which no later filing restated (the 2025 year, $9.60). And some
+ * companies tag the quarterly rate on every period, year-to-date and full
+ * year alike (Booking: $9.60 for 2025, $38.40 paid): when the dividends paid
+ * that year come to well over the rate times the share count, each period's
+ * value becomes the rate times its number of quarters. */
+function dividendFacts(source: Record<string, Concept>, items: Fact[]) {
+  const groups = new Map<string, Fact[]>()
+  for (const item of items) {
+    const key = `${item.start ?? ''}|${item.end}`
+    groups.set(key, [...(groups.get(key) ?? []), item])
+  }
+  const events: Array<{ filed: string; factor: number }> = []
+  for (const group of groups.values()) {
+    const byFiled = [...group].filter((i) => i.filed && i.val > 0).sort((a, b) => (a.filed! < b.filed! ? -1 : 1))
+    if (byFiled.length < 2) continue
+    const first = byFiled[0], last = byFiled[byFiled.length - 1]
+    for (const factor of [...SPLIT_FACTORS, ...SPLIT_FACTORS.map((k) => 1 / k)]) {
+      if (Math.abs(first.val / last.val / factor - 1) < 0.04) {
+        const restated = byFiled.find((i) => Math.abs(first.val / i.val / factor - 1) < 0.04)!.filed!
+        // one split is restated filing by filing over a year or more: the first restating filing marks it
+        const same = events.find((e) => e.factor === factor && Math.abs(diffDays(e.filed, restated)) < 500)
+        if (!same) events.push({ filed: restated, factor })
+        else if (restated < same.filed) same.filed = restated
+        break
+      }
+    }
+  }
+  let out = events.length
+    ? items.map((i) => {
+      const factor = events.reduce((f, e) => (i.filed && i.filed < e.filed ? f * e.factor : f), 1)
+      return factor === 1 ? i : { ...i, val: i.val / factor }
+    })
+    : items
+
+  const paidConcept = source.PaymentsOfDividendsCommonStock ?? source.PaymentsOfDividends
+  const sharesConcept = source.WeightedAverageNumberOfDilutedSharesOutstanding
+  const paid = paidConcept?.units.USD ?? [], shares = sharesConcept?.units.shares ?? []
+  let rate = false, checked = false
+  for (const year of items.filter((i) => within(days(i), 350, 380) && i.accn && i.val > 0)) {
+    const sameYear = (f: Fact) => f.accn === year.accn && f.start === year.start && f.end === year.end
+    const cash = paid.find(sameYear)?.val, count = shares.find(sameYear)?.val
+    if (!cash || !count) continue
+    checked = true
+    if (cash > year.val * count * 2.5) rate = true
+    else { rate = false; break }
+  }
+  // the rate also stands for the quarter that ends each longer period (Booking files no 3-month values after Q1)
+  if (checked && rate) out = out.flatMap((i) => {
+    const quarters = Math.max(1, Math.round(days(i) / 91.3))
+    const scaled = { ...i, val: i.val * quarters }
+    return quarters < 2 ? [scaled] : [scaled, { ...i, start: addDays(i.end, -91) }]
+  })
+  return out
+}
+
 /** Dividends per share by fiscal year (the last ten back-to-back years),
  * adjusted for stock splits, with the year the current run of increases
  * began and the year the current run of payments began. Conservative: the
@@ -431,7 +489,7 @@ function dividendHistory(source: Record<string, Concept>) {
   const candidates: Array<Map<string, number>> = []
   for (const name of ['CommonStockDividendsPerShareDeclared', 'CommonStockDividendsPerShareCashPaid']) {
     const concept = source[name]
-    const years = concept ? annual(concept.units['USD/shares'] ?? []) : new Map<string, number>()
+    const years = concept ? annual(dividendFacts(source, concept.units['USD/shares'] ?? [])) : new Map<string, number>()
     if (years.size) candidates.push(years)
   }
   if (!candidates.length) return null
@@ -542,7 +600,8 @@ export function summarize(factsDoc: FactsDoc) {
     const picked = key === 'revenue' ? mergedConcept(source, names) : pickConcept(source, names)
     if (!picked) continue
     if (key === 'revenue') currency = picked.unit
-    series[key] = { q: quarterly(picked.items), y: annual(picked.items) }
+    const items = key === 'dividends_per_share' && taxonomy === 'us-gaap' ? dividendFacts(source, picked.items) : picked.items
+    series[key] = { q: quarterly(items), y: annual(items) }
   }
   if (!series.revenue) return null
 
