@@ -6,45 +6,47 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 05.11.2026 11:37
-39 of 80 news items unmatched this run
+Generated: 05.11.2026 13:17
+41 of 80 news items unmatched this run
 
-- [CNBC] Dow futures surge more than 300 points after monster postelection rally: Live updates
-- [Yahoo Finance] 2 Bank Stocks to Buy After Their Third-Quarter Earnings Reports
-- [Yahoo Finance] The Wait Is Over: 2 Historic Artificial Intelligence (AI) Stock Splits Were Just Announced
-- [Yahoo Finance] 3 High-Yielding Dividend Stocks That Investors Can Safely Buy and Hold for Decades
-- [MarketWatch] Research firm declares ‘end of the AI trade as we know it’ — and Asian tech stocks reflect the shift
-- [Yahoo Finance] REITs Usually Underperform When Interest Rates Are Rising. Not This Year. Here's Why.
-- [CNBC] World's largest olive oil company plummets 19% after rivals agree to takeover deal
-- [Yahoo Finance] Frankie's Organic Snacks Launches Limited-Edition Snickerdoodle Puffcorn
-- [Yahoo Finance] Chip Dip Churns Wall Street Pre-Bell; Asia Off, Europe Up
-- [CNBC] How the midterms could fuel the K-shaped AI trade
-- [Investing.com] Nasdaq futures fall as chip stocks come under pressure amid U.S. midterms fallout
-- [Investing.com] India stocks higher at close of trade; Nifty 50 up 2.40%
-- [Investing.com] Nippon Steel raises FY26 profit forecast by 52% on robust US Steel earnings
-- [Investing.com] Why is Arm stock sliding today?
-- [Investing.com] Why is Dutch Bros stock plunging today?
+- [CNBC] Stocks making the biggest moves premarket: Shake Shack, Wendy's, Peloton, Unity Software & more
+- [CNBC] Wendy's rejects takeover proposal from Nelson Peltz’s Trian
+- [Yahoo Finance] OFA Group Announces 10-for-1 Consolidation of Class A Ordinary Shares
+- [Yahoo Finance] Globalstar Announces Third Quarter 2026 Financial Results
+- [Yahoo Finance] EVgo Opens First Supercharger Site as Part of Network Expansion
+- [Yahoo Finance] US Equity Futures Mixed Pre-Bell as AI Stocks Dip Following Democrats' Midterm Win
+- [Investing.com] Technogym shares rise 4% as Citi sees temporary sales setbacks fading
+- [Yahoo Finance] The Dow Just Jumped 1,569 Points for Its Best Post-Midterm Day in 44 Years
+- [Investing.com] Why is Fastly stock sliding today?
+- [Investing.com] Why is Kontoor Brands stock sliding today?
+- [Investing.com] Why is United Parks & Resorts stock surging today?
+- [CoinDesk] Binance cuts SignalPlus access after security warning, urges users to check accounts
+- [Investing.com] Why is Tapestry stock surging today?
+- [Investing.com] Why is Six Flags Entertainment stock rallying today?
+- [Investing.com] Why is Dorian LPG stock surging today?
+- [Investing.com] Why is Ecovyst stock surging today?
+- [Investing.com] Why is Zillow stock tumbling today?
+- [Yahoo Finance] Stocks Mostly Up Pre-Bell as Traders Weigh Impact of Democrats' Midterm Victory
+- [Yahoo Finance] In Bouncy Market, This Stock Provides One Option For Investors. And Wall Street Is Buying In.
+- [MarketWatch] Robot maker Agility starts trading today — but its steep losses are raising red flags
 - [Nasdaq] NY Cocoa Prices Rebound on Dollar Weakness
+- [CNBC] Bank of England hikes interest rate for the first time since Iran war, warns inflation will near 5%
+- [Nasdaq] Melco Resorts & Entertainment Limited Reports Third Quarter 2026 Results
+- [CNBC] AI is starting to help Booking's business. Its stock should benefit
+- [Nasdaq] HUYA Inc. Amends 2024 Share Incentive Plan to Increase Class A Share Pool to 31,749,372
+- [Nasdaq] Prestige Consumer Healthcare Inc. Reports Q2 Revenue of $336.3 million and Updates Fiscal 2027 Outlook
+- [Nasdaq] Lincoln National Corporation Reports 2026 Third Quarter Results
+- [Nasdaq] 3D Systems Corporation Enters Exchange Agreements for $92,030,000 of 5.875% Convertible Senior Secured Notes due 2030
+- [Nasdaq] Icahn Enterprises L.P. Reports CVR Energy Agreement to Acquire Refineries for approximately $4.2 billion
+- [Nasdaq] Celsius Holdings, Inc. Reports Third Quarter 2026 Revenue of $847.2 Million and Net Income of $127.0 Million
+- [Nasdaq] Arhaus, Inc. Reports Third Quarter 2026 Financial Results and Updates Full-Year Outlook
+- [Nasdaq] ProFrac Holding Corp. Reports Third Quarter 2026 Results
+- [Nasdaq] Studio City International Holdings Limited Announces Unaudited Third Quarter 2026 Earnings
+- [Nasdaq] Haemonetics Corporation Reports Second Quarter Fiscal 2027 Revenue of $357.8 million
+- [CNBC] World's largest olive oil company plummets 18% after rivals agree to takeover deal
+- [CNBC] How the midterms could fuel the K-shaped AI trade
+- [Mining.com] Sibanye cuts US output forecast after five-week strike
 - [CoinDesk] Hong Kong passes law requiring crypto exchanges to report customer transactions to tax authorities
 - [CoinDesk] OpenAI says its AI can break into Linux at scale. Here's what it means for crypto
-- [MarketWatch] Dow scores its best day in 18 months in a broad relief rally after Democrats sweep to power in Congress
-- [CNBC] From tanks to drones: South Korea’s defense firms face a new battlefield test
-- [Nasdaq] Dollar Weakness Lifts NY Cocoa Prices
-- [Nasdaq] Soybeans Facing Midweek Weakness
-- [Nasdaq] HubSpot, Inc. Reports Q3 2026 Revenue Growth of 17%
-- [Nasdaq] Sera Prognostics Reports Third Quarter 2026 Financial Results
-- [CoinDesk] Zcash is about to freeze $16 million in its oldest privacy pool
-- [Nasdaq] Paycom Software, Inc. Reports Third Quarter 2026 Total Revenues of $543.8 million
-- [Nasdaq] Aris Mining Corporation Reports Q3 2026 Results with $287 million in Gold Revenue
-- [Nasdaq] Acadia Healthcare Company, Inc. Reports Third Quarter 2026 Revenue of $895.3 million and Raises Full Year 2026 Financial Guidance
-- [Nasdaq] Vir Biotechnology, Inc. Reports Third Quarter 2026 Financial Results
-- [Nasdaq] Alto Ingredients, Inc. Reports Third Quarter 2026 Net Income of $12.7 Million
-- [CoinDesk] The pile of lawsuits against Kalshi just grew by one
-- [Nasdaq] WesBanco, Inc. Reports $28.5 billion in Assets and Q3 2026 Financial Highlights
-- [CoinDesk] XRP Ledger fixes a disclosed bug that could have led to the creation of new tokens
-- [Nasdaq] QuinStreet, Inc. Reports Record Fiscal First Quarter 2027 Revenue of $416.7 million
-- [Nasdaq] Evolus, Inc. Reports Third Quarter 2026 Global Net Revenue of $78.0 Million and Reaffirms Full-Year Revenue Guidance
-- [OilPrice.com] China’s Diesel Exports Set to Plunge as Domestic Inventories Run Low
-- [CNBC] LIV Golf faces liquidation after BC Partners scraps rescue plan
-- [OilPrice.com] SOCAR Bets $1.65 Billion on U.S. Shale Gas Boom
-- [BioPharma Dive] Alethio raises $90M to target rare blood cancers
+- [OilPrice.com] Pentagon Eyes Unprecedented 75-Year Deal to End China's Rare Earth Stranglehold
+- [OilPrice.com] India to Require State Utilities to Add Energy Storage Capacity
