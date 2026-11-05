@@ -86,12 +86,12 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/insider-buying/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://pulsarium.finance/insider-selling/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -141,7 +141,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/adi/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -246,7 +246,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/ba/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -331,7 +331,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/brk-b/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -401,7 +401,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/cmg/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -426,7 +426,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/cost/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -935,6 +935,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/deo/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/dg/</loc>
     <lastmod>2026-10-26</lastmod>
     <changefreq>hourly</changefreq>
@@ -1106,7 +1111,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/googl/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1406,7 +1411,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/mu/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1461,7 +1466,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/nvda/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1541,7 +1546,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/pru/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1606,7 +1611,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/rklb/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1691,7 +1696,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/defense/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1711,12 +1716,12 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/media-entertainment/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/metals-mining/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1916,7 +1921,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/tsm/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1937,6 +1942,11 @@
   <url>
     <loc>https://pulsarium.finance/news/twlo/</loc>
     <lastmod>2026-11-03</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/txn/</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
