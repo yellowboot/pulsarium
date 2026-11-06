@@ -11,6 +11,7 @@ import calendar
 import csv
 import datetime as dt
 import gzip
+import http.client
 import io
 import json
 import math
@@ -210,9 +211,17 @@ class Store:
         if method == "POST": headers["Prefer"] = "resolution=merge-duplicates"
         req = urllib.request.Request(self.url + path, method=method, headers=headers,
             data=json.dumps(body, allow_nan=False).encode() if body is not None else None)
-        with urllib.request.urlopen(req, timeout=60) as response:
-            data = response.read()
-            return json.loads(data) if data else None
+        # a response cut off mid-way (a 3 MB cache page, 4 Nov 2026) or a brief outage is retried
+        for attempt in range(3):
+            try:
+                with urllib.request.urlopen(req, timeout=60) as response:
+                    data = response.read()
+                    return json.loads(data) if data else None
+            except urllib.error.HTTPError as error:
+                if error.code not in (429, 500, 502, 503, 504) or attempt == 2: raise
+            except (TimeoutError, urllib.error.URLError, json.JSONDecodeError, http.client.HTTPException):
+                if attempt == 2: raise
+            time.sleep(5 * 2 ** attempt)
 
     def rows(self, path):
         result = []

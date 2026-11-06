@@ -334,13 +334,21 @@ class SEC:
     def get(self, url):
         if urllib.parse.urlparse(url).hostname not in ("www.sec.gov", "data.sec.gov"):
             raise ValueError("SEC host required")
-        with self.lock:
-            delay = max(0, self.next_request - time.monotonic())
-            time.sleep(delay)
-            self.next_request = time.monotonic() + 0.3  # <= 3.34 requests/s globally
-        req = urllib.request.Request(url, headers={"User-Agent": self.agent, "Accept-Encoding": "identity"})
-        with urllib.request.urlopen(req, timeout=30) as response:
-            return response.read().decode("utf-8", errors="replace")
+        # SEC has brief outages (a 503 on a daily index failed the run of 5 Nov 2026): retried
+        for attempt in range(4):
+            with self.lock:
+                delay = max(0, self.next_request - time.monotonic())
+                time.sleep(delay)
+                self.next_request = time.monotonic() + 0.3  # <= 3.34 requests/s globally
+            req = urllib.request.Request(url, headers={"User-Agent": self.agent, "Accept-Encoding": "identity"})
+            try:
+                with urllib.request.urlopen(req, timeout=30) as response:
+                    return response.read().decode("utf-8", errors="replace")
+            except urllib.error.HTTPError as error:
+                if error.code not in (429, 500, 502, 503, 504) or attempt == 3: raise
+            except (TimeoutError, urllib.error.URLError):
+                if attempt == 3: raise
+            time.sleep(5 * 2 ** attempt)
 
 
 class LocalStore:
