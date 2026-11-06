@@ -6,192 +6,300 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 06 Nov 2026 16:17:26 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 06 Nov 2026 17:37:30 +0000</lastBuildDate>
   <item>
-    <title>Watch live: Cramer sees no quick fix for this market — but there are still moves to make</title>
-    <link>https://www.cnbc.com/investingclub/2026/11/06/watch-jim-cramer-live.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/investingclub/2026/11/06/watch-jim-cramer-live.html</guid>
-    <pubDate>Fri, 06 Nov 2026 16:16:49 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>At the Investing Club&#x27;s 4th annual meeting, Cramer also reveals his outlook for 2027 and answers questions from the live audience and members at home.</description>
-    
-  </item>
-  <item>
-    <title>Data center double-down: Hassett says blue wave won&#x27;t stop AI build-out</title>
-    <link>https://www.cnbc.com/2026/11/06/data-centers-ai-elections-hassett.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/06/data-centers-ai-elections-hassett.html</guid>
-    <pubDate>Fri, 06 Nov 2026 16:12:33 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Data centers are a crucial part of President Donald Trump&#x27;s push to win the global artificial intelligence race, which he continues despite the midterm results.</description>
-    
-  </item>
-  <item>
-    <title>5 Best Small-Cap Value Stocks to Invest In Now</title>
-    <link>https://finance.yahoo.com/small-business/articles/5-best-small-cap-value-161144840.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/small-business/articles/5-best-small-cap-value-161144840.html?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 16:11:44 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The slide in AI stocks is prompting investors to explore beyond the market’s leading companies. According to Reuters on November 2, more than 70% of S&amp;P 500 constituents increased in October, despite steep drops in AI-related companies,…</description>
+    <title>Europe stocks drop; STOXX 600 overtakes S&amp;P 500 in YTD gains</title>
+    <link>https://www.investing.com/news/stock-market-news/europe-stocks-drop-on-tech-drag--stoxx-600-overtakes-sp-500-in-ytd-gains-5006627</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/europe-stocks-drop-on-tech-drag--stoxx-600-overtakes-sp-500-in-ytd-gains-5006627</guid>
+    <pubDate>Fri, 06 Nov 2026 17:33:49 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
     <category>SPY</category>
   </item>
   <item>
-    <title>Even a Broken Clock Is Right Twice a Day. Is Michael Burry Finally Right About the AI Bubble?</title>
-    <link>https://247wallst.com/investing/2026/11/06/even-a-broken-clock-is-right-twice-a-day-is-michael-burry-finally-right-about-the-ai-bubble/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/06/even-a-broken-clock-is-right-twice-a-day-is-michael-burry-finally-right-about-the-ai-bubble/?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 16:08:43 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Wall Street spent much of the year rewarding companies for building more data centers, buying more chips, and finding enough electricity to run them. On Thursday, investors took a harder look at what all that spending might earn. The…</description>
+    <title>Tesla to pull the plug on Cybertruck after years of poor sales</title>
+    <link>https://www.investing.com/news/stock-market-news/tesla-to-wind-down-cybertruck-production-at-texas-gigafactory-next-year-musk-says-5006624</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/tesla-to-wind-down-cybertruck-production-at-texas-gigafactory-next-year-musk-says-5006624</guid>
+    <pubDate>Fri, 06 Nov 2026 17:31:01 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>TSLA</category>
+  </item>
+  <item>
+    <title>The Children’s Place shakes up leadership amid bankruptcy rumors</title>
+    <link>https://www.retaildive.com/news/the-childrens-place-leadership-shakeup-bankruptcy-rumors/874004/</link>
+    <guid isPermaLink="false">https://www.retaildive.com/news/the-childrens-place-leadership-shakeup-bankruptcy-rumors/874004/</guid>
+    <pubDate>Fri, 06 Nov 2026 17:31:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Retail Dive</source>
+    <description>With various executives and directors out, including the CEO, the children’s apparel retailer’s CFO has taken over as principal executive officer.</description>
     
   </item>
   <item>
-    <title>US midterm results led to tumbling tech stocks. Will they bounce back?</title>
-    <link>https://finance.yahoo.com/video/us-midterm-results-led-tumbling-160806088.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/video/us-midterm-results-led-tumbling-160806088.html?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 16:08:06 +0000</pubDate>
+    <title>What the AI stock crash cost your 401(k) for every $1,000 invested</title>
+    <link>https://finance.yahoo.com/markets/article/what-the-ai-stock-crash-cost-your-401k-for-every-1000-invested-172821837.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/article/what-the-ai-stock-crash-cost-your-401k-for-every-1000-invested-172821837.html?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:28:21 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Chip stocks sank globally amid fears of AI regulation, causing the Nasdaq to end sharply lower just days after the midterms. Experts explain why.</description>
+    <description>Thursday&#x27;s AI stock crash cost a basic S&amp;P 500 index fund about a nickel on the dollar, while chip stocks lost nearly a third of their value.</description>
+    <category>SPY</category>
+  </item>
+  <item>
+    <title>Hims &amp; Hers stock climbs on direct partnership with Eli Lilly for obesity drugs</title>
+    <link>https://www.investing.com/news/stock-market-news/hims--hers-stock-climbs-on-direct-partnership-with-eli-lilly-for-obesity-drugs-5008914</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/hims--hers-stock-climbs-on-direct-partnership-with-eli-lilly-for-obesity-drugs-5008914</guid>
+    <pubDate>Fri, 06 Nov 2026 17:27:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>LLY</category>
+  </item>
+  <item>
+    <title>Nasdaq rebounds as chip stocks recover from steep losses</title>
+    <link>https://www.investing.com/news/stock-market-news/nasdaq-futures-rise-after-steep-ai-selloff-as-chip-stocks-stabilize-5007026</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/nasdaq-futures-rise-after-steep-ai-selloff-as-chip-stocks-stabilize-5007026</guid>
+    <pubDate>Fri, 06 Nov 2026 17:25:39 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
     
   </item>
   <item>
-    <title>Rising GPU prices just might turn Nvidia into a buy</title>
-    <link>https://finance.yahoo.com/video/rising-gpu-prices-just-might-turn-nvidia-into-a-buy-160742850.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/video/rising-gpu-prices-just-might-turn-nvidia-into-a-buy-160742850.html?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 16:07:42 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>In The Loop host Ejaaz Ahamadee compares the rising prices of older GPUs with the drop in crypto tokens, underlining how this can be beneficial for Nvidia (NVDA).</description>
-    <category>NVDA</category>
+    <title>AkzoNobel , Axalta gain conditional EU antitrust approval for $25 billion merger</title>
+    <link>https://www.investing.com/news/stock-market-news/akzonobel--axalta-gain-conditional-eu-antitrust-approval-for-25-billion-merger-5008839</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/akzonobel--axalta-gain-conditional-eu-antitrust-approval-for-25-billion-merger-5008839</guid>
+    <pubDate>Fri, 06 Nov 2026 17:25:12 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
   </item>
   <item>
-    <title>U.S. economy added 165,000 jobs in October, way more than expected; unemployment rate slips to 4.1%</title>
-    <link>https://www.cnbc.com/2026/11/06/jobs-report-october-2026.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/06/jobs-report-october-2026.html</guid>
-    <pubDate>Fri, 06 Nov 2026 16:06:59 +0000</pubDate>
+    <title>Democrats planning flood of AI bills when they take control of Congress</title>
+    <link>https://www.investing.com/news/stock-market-news/democrats-planning-flood-of-ai-bills-when-they-take-control-of-congress-5007213</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/democrats-planning-flood-of-ai-bills-when-they-take-control-of-congress-5007213</guid>
+    <pubDate>Fri, 06 Nov 2026 17:24:59 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>OpenAI will keep investing in AI data centers despite election results, CFO tells CNBC</title>
+    <link>https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html</guid>
+    <pubDate>Fri, 06 Nov 2026 17:24:48 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Nonfarm payrolls were expected to increase by 59,000 in October as the unemployment rate was expected to hold steady at 4.2%.</description>
+    <description>Voters across the country on Tuesday voiced their support for candidates who have pledged to place restrictions on data center development.</description>
     
   </item>
   <item>
-    <title>Oklo Jumps 19% on Narrower-Than-Expected Loss as Nuclear Stocks Rebound; NuScale Power Surges 15%, Nano Nuclear Energy Jumps 9%</title>
-    <link>https://247wallst.com/investing/2026/11/06/oklo-jumps-19-on-narrower-than-expected-loss-as-nuclear-stocks-rebound-nuscale-power-surges-15-nano-nuclear-energy-jumps-9/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/06/oklo-jumps-19-on-narrower-than-expected-loss-as-nuclear-stocks-rebound-nuscale-power-surges-15-nano-nuclear-energy-jumps-9/?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 16:05:38 +0000</pubDate>
+    <title>3 High-Yield Healthcare Stocks to Buy With $1,000 and Hold Through Any Market</title>
+    <link>https://www.fool.com/investing/2026/11/06/3-high-yield-healthcare-stocks-to-buy-with-1000-an/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/06/3-high-yield-healthcare-stocks-to-buy-with-1000-an/?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:24:00 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Oklo is sitting on billions in cash and building in Idaho, yet one missing number and one nonbinding Meta deal keep its rebound on shaky ground. Here is what the nuclear rally is hiding.</description>
-    <category>META</category>
+    <description>They are so much more than just dividend stocks.</description>
+    
   </item>
   <item>
-    <title>Marvell Is Betting $115 Billion on 1 of AI&#x27;s Biggest Bottlenecks</title>
-    <link>https://www.fool.com/investing/2026/11/06/marvell-is-betting-115-billion-on-1-of-ais-biggest/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/06/marvell-is-betting-115-billion-on-1-of-ais-biggest/?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 16:05:00 +0000</pubDate>
+    <title>Apple Is “the Anti-AI Large Cap Tech Trade,” Says Josh Brown. Now It’s Capping AI Spending</title>
+    <link>https://www.tikr.com/blog/apple-is-the-anti-ai-large-cap-tech-trade-says-josh-brown-now-its-capping-ai-spending?ref=yahoofinance&amp;tlnk=yf-261106-5rx9fr6v&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.tikr.com/blog/apple-is-the-anti-ai-large-cap-tech-trade-says-josh-brown-now-its-capping-ai-spending?ref=yahoofinance&amp;tlnk=yf-261106-5rx9fr6v&amp;.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:23:13 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The chipmaker is paying a premium price to protect its biggest business.</description>
-    <category>MRVL</category>
+    <description>Key TakeawaysApple closed at a record on Nov. 4, worth about $5.</description>
+    <category>AAPL</category>
   </item>
   <item>
-    <title>Palantir Grew Revenue 96% and the Stock Still Fell. Here’s Where the Price Target Goes</title>
-    <link>https://247wallst.com/investing/2026/11/06/palantir-grew-revenue-96-and-the-stock-still-fell-heres-where-the-price-target-goes/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/06/palantir-grew-revenue-96-and-the-stock-still-fell-heres-where-the-price-target-goes/?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 16:03:08 +0000</pubDate>
+    <title>Why is CG Oncology stock surging today?</title>
+    <link>https://www.investing.com/news/stock-market-news/why-is-cg-oncology-stock-surging-today-93CH-5008910</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-cg-oncology-stock-surging-today-93CH-5008910</guid>
+    <pubDate>Fri, 06 Nov 2026 17:21:16 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>The S&amp;P 500 could be dangerously exposed to AI. Here are some simple alternatives.</title>
+    <link>https://www.marketwatch.com/story/the-s-p-500-has-become-a-big-ai-bet-here-are-some-simple-alternatives-3c7574a4?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/the-s-p-500-has-become-a-big-ai-bet-here-are-some-simple-alternatives-3c7574a4?mod=mw_rss_topstories</guid>
+    <pubDate>Fri, 06 Nov 2026 17:19:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>The large-cap index is nowhere near as diversified as you think.</description>
+    <category>SPY</category>
+  </item>
+  <item>
+    <title>Why is Globus Medical stock plunging today?</title>
+    <link>https://www.investing.com/news/stock-market-news/why-is-globus-medical-stock-plunging-today-93CH-5008909</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-globus-medical-stock-plunging-today-93CH-5008909</guid>
+    <pubDate>Fri, 06 Nov 2026 17:18:50 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Why Cloudflare Stock Opened 17% Higher Today</title>
+    <link>https://www.fool.com/investing/2026/11/06/why-cloudflare-stock-opened-17-higher-today/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/06/why-cloudflare-stock-opened-17-higher-today/?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:17:02 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Palantir just delivered the fastest revenue growth in its public company history and Wall Street sold the stock off anyway. Understanding why the selloff happened and where the price goes next requires looking past the headline numbers.</description>
+    <description>The web infrastructure giant crushed third-quarter earnings estimates as it begins monetizing the incoming wave of autonomous AI agents.</description>
+    <category>NET</category>
+  </item>
+  <item>
+    <title>Why is Live Nation Entertainment stock sliding today?</title>
+    <link>https://www.investing.com/news/stock-market-news/why-is-live-nation-entertainment-stock-sliding-today-93CH-5008907</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-live-nation-entertainment-stock-sliding-today-93CH-5008907</guid>
+    <pubDate>Fri, 06 Nov 2026 17:16:59 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>LYV</category>
+  </item>
+  <item>
+    <title>Fifth Third Bancorp Eyes Texas Growth and AI Gains After Comerica Integration</title>
+    <link>https://www.marketbeat.com/instant-alerts/event-fifth-third-bancorp-eyes-texas-growth-and-ai-gains-after-comerica-integration-2026-11-06/?utm_source=yahoofinance&amp;utm_medium=yahoofinance&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.marketbeat.com/instant-alerts/event-fifth-third-bancorp-eyes-texas-growth-and-ai-gains-after-comerica-integration-2026-11-06/?utm_source=yahoofinance&amp;utm_medium=yahoofinance&amp;.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:14:57 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Fifth Third Bancorp (NASDAQ:FITB) sees opportunities to grow in Texas and deepen commercial banking relationships following its integration of Comerica, while investing in artificial intelligence to improve employee productivity and…</description>
+    <category>FITB</category>
+  </item>
+  <item>
+    <title>BlackRock’s Larry Fink Says America’s Workers Are Falling Behind Investors — and 25 Years of Data Explains Why</title>
+    <link>https://247wallst.com/investing/2026/11/06/blackrocks-larry-fink-says-americas-workers-are-falling-behind-investors-and-25-years-of-data-explains-why/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/06/blackrocks-larry-fink-says-americas-workers-are-falling-behind-investors-and-25-years-of-data-explains-why/?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:14:23 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Larry Fink started working in his father’s shoe store at age 11. At the Accelerate forum hosted by Ford (NYSE:F) in Detroit on Sept. 30, the CEO of BlackRock (NYSE:BLK) used that memory to describe a split in the economy: “There is a…</description>
+    <category>F</category><category>BLK</category>
+  </item>
+  <item>
+    <title>Why is Revolution Medicines stock surging today?</title>
+    <link>https://www.investing.com/news/stock-market-news/why-is-revolution-medicines-stock-surging-today-93CH-5008903</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-revolution-medicines-stock-surging-today-93CH-5008903</guid>
+    <pubDate>Fri, 06 Nov 2026 17:14:18 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>RVMD</category>
+  </item>
+  <item>
+    <title>‘We’re losing to cottage cheese’: The protein-maxxing craze is hurting cream cheese sales</title>
+    <link>https://www.marketwatch.com/story/were-losing-to-cottage-cheese-the-protein-maxxing-craze-is-hurting-cream-cheese-sales-40ae94f3?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/were-losing-to-cottage-cheese-the-protein-maxxing-craze-is-hurting-cream-cheese-sales-40ae94f3?mod=mw_rss_topstories</guid>
+    <pubDate>Fri, 06 Nov 2026 17:14:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>U.S. cottage cheese sales have more than doubled from levels seen in 2021.</description>
+    
+  </item>
+  <item>
+    <title>IREN Says New AI Cloud Customers Are Prepaying 90% of the Chips</title>
+    <link>https://247wallst.com/investing/2026/11/06/iren-says-new-ai-cloud-customers-are-prepaying-90-of-the-chips/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/06/iren-says-new-ai-cloud-customers-are-prepaying-90-of-the-chips/?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:13:45 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>A customer just agreed to fund nearly all of IREN&#x27;s chips upfront, yet cash is draining and debt is climbing fast. Why would anyone pay that much early, and what does it reveal about the $6 billion gap still unfunded?</description>
+    
+  </item>
+  <item>
+    <title>Under Armour to sell more full-price product at outlet stores</title>
+    <link>https://www.retaildive.com/news/under-armour-q2-earnings-sales-declines-licensed-youth-sports/873996/</link>
+    <guid isPermaLink="false">https://www.retaildive.com/news/under-armour-q2-earnings-sales-declines-licensed-youth-sports/873996/</guid>
+    <pubDate>Fri, 06 Nov 2026 17:13:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Retail Dive</source>
+    <description>The move is part of a broader store revamp and comes as the athletics brand tries to increase its premium positioning in the market.</description>
+    
+  </item>
+  <item>
+    <title>The Biggest Takeaway From Palantir Technologies’ Latest Quarterly Report Is a Potential Warning Sign Investors Shouldn’t Miss</title>
+    <link>https://www.fool.com/investing/2026/11/06/the-biggest-takeaway-from-palantir-technologies-latest-quarterly-report-is-a-potential-warning-sign-investors-shouldn-t-miss/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/06/the-biggest-takeaway-from-palantir-technologies-latest-quarterly-report-is-a-potential-warning-sign-investors-shouldn-t-miss/?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:12:02 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Palantir reported incredible growth last quarter, but the slowdown in contract value growth seems like a red flag.</description>
     <category>PLTR</category>
   </item>
   <item>
-    <title>Wall Street’s Fear Gauge Just Had Its Third-Biggest Jump Since 1990</title>
-    <link>https://247wallst.com/investing/2026/11/06/wall-streets-fear-gauge-just-had-its-third-biggest-jump-since-1990/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/06/wall-streets-fear-gauge-just-had-its-third-biggest-jump-since-1990/?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 16:02:47 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Markets opened calm on Thursday, then an election result sent fear surging past nearly every spike on record, even the pandemic crash. History says stocks often rebound from moments like this, but one warning sign suggests the real…</description>
+    <title>Reformation implements new AI planning tool, helping in-stock rates</title>
+    <link>https://www.retaildive.com/news/reformation-q3-earnings-sales-growth-ai-planning-tool-in-stock-rates/873991/</link>
+    <guid isPermaLink="false">https://www.retaildive.com/news/reformation-q3-earnings-sales-growth-ai-planning-tool-in-stock-rates/873991/</guid>
+    <pubDate>Fri, 06 Nov 2026 17:12:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Retail Dive</source>
+    <description>The apparel brand&#x27;s Q3 net revenue jumped 19% and analysts remarked on its strong performance as a newly public company.</description>
     
   </item>
   <item>
-    <title>Tesla support and resistance levels to watch now</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/tesla-support-resistance-levels-watch-160212344.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/tesla-support-resistance-levels-watch-160212344.html?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 16:02:12 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Investing.com -- Tesla Inc (TSLA) is trading at $359.28, up 4.54%, as of Nov 6, 10:30 AM EST. Near-term levels show a rebound inside a still-fragile daily trend.</description>
-    <category>TSLA</category>
-  </item>
-  <item>
-    <title>Micron, AMD and Nvidia Lead AI Stocks Rebound After Historic Selloff</title>
-    <link>https://finance.yahoo.com/technology/ai/articles/micron-amd-nvidia-lead-ai-160157661.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/micron-amd-nvidia-lead-ai-160157661.html?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 16:01:57 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>AI Stocks Bounce Back Hard. These Five Chipmakers Are Leading The Charge</description>
-    <category>NVDA</category><category>MU</category><category>AMD</category>
-  </item>
-  <item>
-    <title>Backlash Against Data Centers Grows. Protesters Broke Into a Microsoft Construction Site.</title>
-    <link>https://www.ibtimes.com/activists-breach-microsoft-data-center-site-amsterdam-3809501?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.ibtimes.com/activists-breach-microsoft-data-center-site-amsterdam-3809501?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 16:00:13 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>There are 16 protests planned for Friday and Saturday across 16 countries.</description>
-    <category>MSFT</category>
-  </item>
-  <item>
-    <title>Musk Winds Down Cybertruck to Make Room for “Increased Cybercab Production”</title>
-    <link>https://www.tikr.com/blog/musk-winds-down-cybertruck-to-make-room-for-increased-cybercab-production?ref=yahoofinance&amp;tlnk=yf-261106-4hvmg8wj&amp;.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.tikr.com/blog/musk-winds-down-cybertruck-to-make-room-for-increased-cybercab-production?ref=yahoofinance&amp;tlnk=yf-261106-4hvmg8wj&amp;.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 15:59:21 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Key TakeawaysElon Musk said Tesla will wind down Cybertruck production at Gigafactory Texas around mid-2027 to make room for more Cybercab output. The “other models” line that includes the truck was under 2% of third-quarter deliveries.</description>
-    <category>TSLA</category>
-  </item>
-  <item>
-    <title>Anthropic IPO announcement odds drop on Kalshi following midterms and AI sell-off</title>
-    <link>https://www.cnbc.com/2026/11/06/anthropic-ipo-kalshi-post-midterms-ai-sell-off.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/06/anthropic-ipo-kalshi-post-midterms-ai-sell-off.html</guid>
-    <pubDate>Fri, 06 Nov 2026 15:55:32 +0000</pubDate>
+    <title>The AI ‘credit card’ is getting costlier as CoreWeave bond yield tops 16%</title>
+    <link>https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html</guid>
+    <pubDate>Fri, 06 Nov 2026 17:09:53 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Kalshi traders cut the odds of an Anthropic IPO announcement before December as AI stocks sold off after Democrats won control of Congress.</description>
+    <description>Coreweave&#x27;s steep yields reflect stress in the AI debt markets as investors worry about a data center slowdown. What comes next.</description>
+    <category>CRWV</category>
+  </item>
+  <item>
+    <title>Tesla Stocks Rise 3% as Musk Sets Cybertruck Wind-Down for Cybercab</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/tesla-stocks-rise-3-musk-170929676.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/tesla-stocks-rise-3-musk-170929676.html?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:09:29 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Musk says Texas Cybertruck output ends around mid-2027 to free capacity for the Cybercab robotaxi.</description>
+    <category>TSLA</category>
+  </item>
+  <item>
+    <title>Stocks Supported by Chipmaker Strength and a Blowout US Payroll Report</title>
+    <link>https://www.nasdaq.com/articles/stocks-supported-chipmaker-strength-and-blowout-us-payroll-report</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-supported-chipmaker-strength-and-blowout-us-payroll-report</guid>
+    <pubDate>Fri, 06 Nov 2026 17:08:21 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is up +0.89% today, the Dow Jones Industrial Average ($DOWI ) (DIA ) is down -0.42%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is up +2.12%. December E-mini S&amp;P futures (ESZ26 ) are up +0.90%, and…</description>
+    <category>SPY</category><category>QQQ</category><category>DJI</category>
+  </item>
+  <item>
+    <title>Apple Stocks Edge Lower as $7.5 Billion Bond Sale Prices Across Seven Tranches</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/apple-stocks-edge-lower-7-170806326.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/apple-stocks-edge-lower-7-170806326.html?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:08:06 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Apple priced fixed coupons from 4.65% to 5.35%, plus floating notes, its first bond deal since 2025.</description>
+    <category>AAPL</category>
+  </item>
+  <item>
+    <title>As Barbie stumbles, Mattel cuts forecast ahead of the holidays</title>
+    <link>https://www.retaildive.com/news/mattel-cuts-forecast-holidays-barbie-problem/873960/</link>
+    <guid isPermaLink="false">https://www.retaildive.com/news/mattel-cuts-forecast-holidays-barbie-problem/873960/</guid>
+    <pubDate>Fri, 06 Nov 2026 17:07:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Retail Dive</source>
+    <description>When asked if he had a catchphrase or mission statement, CEO Roger Lynch on his first earnings call said, “Oh give me a break, I just got here.”</description>
     
   </item>
   <item>
-    <title>Fox completes $22 billion Roku deal to expand digital reach</title>
-    <link>https://www.investing.com/news/stock-market-news/fox-completes-22-billion-roku-deal-to-expand-digital-reach-5008633</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/fox-completes-22-billion-roku-deal-to-expand-digital-reach-5008633</guid>
-    <pubDate>Fri, 06 Nov 2026 15:54:57 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>ROKU</category>
+    <title>Stock Market Suffers Ugly Losses In Election Week; Apple, Palantir Led Key Earnings: Weekly Review</title>
+    <link>https://finance.yahoo.com/m/802dbe86-5db0-31e8-a3aa-6f0e1336c90e/stock-market-suffers-ugly.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/802dbe86-5db0-31e8-a3aa-6f0e1336c90e/stock-market-suffers-ugly.html?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:06:39 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The stock market suffered ugly losses this past week, especially in Thursday&#x27;s day two election reaction. Apple, Palantir led big earnings.</description>
+    <category>PLTR</category><category>AAPL</category>
   </item>
   <item>
-    <title>Why Micron Stock Bounced Back Friday</title>
-    <link>https://www.fool.com/investing/2026/11/06/why-micron-stock-bounced-back-friday/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/06/why-micron-stock-bounced-back-friday/?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 15:54:39 +0000</pubDate>
+    <title>Is Oklo Stock a Buy in November?</title>
+    <link>https://www.fool.com/investing/2026/11/06/is-oklo-stock-a-buy-in-november/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/06/is-oklo-stock-a-buy-in-november/?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:05:00 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>At 5x forward earnings, Micron stock is too cheap to sell.</description>
-    <category>MU</category>
+    <description>Oklo is in a rut. Should you buy on the dip?</description>
+    
   </item>
   <item>
     <title>Cotton Slipping Lower on Friday Morning</title>
     <link>https://www.nasdaq.com/articles/cotton-slipping-lower-friday-morning</link>
     <guid isPermaLink="false">https://www.nasdaq.com/articles/cotton-slipping-lower-friday-morning</guid>
-    <pubDate>Fri, 06 Nov 2026 15:52:44 +0000</pubDate>
+    <pubDate>Fri, 06 Nov 2026 17:03:50 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
     <description>Cotton prices are down 24 to 29 points early on Friday. Futures posted Thursday gains of 22 to 61 points at the close. Crude oil was up $2.92 per barrel on the session, with the US dollar index $0.065 higher. USDA’s Export Sales report…</description>
-    
-  </item>
-  <item>
-    <title>Wheat Falling on Friday Morning</title>
-    <link>https://www.nasdaq.com/articles/wheat-falling-friday-morning</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-falling-friday-morning</guid>
-    <pubDate>Fri, 06 Nov 2026 15:52:44 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Wheat is facing pressure on Friday morning, with pressure coming from prospects for easing Black Sea conflicts. The wheat complex posted gains across the three markets on Thursday. Chicago SRW contracts were up fractionally in the front…</description>
     
   </item>
   <item>
     <title>Corn Holding Near Unchanged on Friday Morning</title>
     <link>https://www.nasdaq.com/articles/corn-holding-near-unchanged-friday-morning</link>
     <guid isPermaLink="false">https://www.nasdaq.com/articles/corn-holding-near-unchanged-friday-morning</guid>
-    <pubDate>Fri, 06 Nov 2026 15:52:44 +0000</pubDate>
+    <pubDate>Fri, 06 Nov 2026 17:03:50 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
     <description>Corn is trading with contracts steady to fractionally higher on Friday morning. Futures posted losses of 1 to 4 ¼ cents across the board on Thursday, fading early gains. Open interest suggested some new selling, rising 14,127 contracts.…</description>
     
@@ -200,262 +308,154 @@
     <title>Soybeans Ticking Higher Early on Friday</title>
     <link>https://www.nasdaq.com/articles/soybeans-ticking-higher-early-friday</link>
     <guid isPermaLink="false">https://www.nasdaq.com/articles/soybeans-ticking-higher-early-friday</guid>
-    <pubDate>Fri, 06 Nov 2026 15:52:43 +0000</pubDate>
+    <pubDate>Fri, 06 Nov 2026 17:03:50 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
     <description>Soybeans are posting modest 1 to 2 ½ cent gains on Friday morning. Futures close the Thursday session with contracts down 4 ½ to 14 cents in the red. Open interest rose 4,706 contracts on Thursday. There were 2 more deliveries against…</description>
     
   </item>
   <item>
-    <title>Greece stocks lower at close of trade; Athens General Composite down 2.22%</title>
-    <link>https://www.investing.com/news/stock-market-news/greece-stocks-lower-at-close-of-trade-athens-general-composite-down-222-5008787</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/greece-stocks-lower-at-close-of-trade-athens-general-composite-down-222-5008787</guid>
-    <pubDate>Fri, 06 Nov 2026 15:50:03 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
+    <title>Expanding Brazil Coffee Exports Weigh on Arabica Prices</title>
+    <link>https://www.nasdaq.com/articles/expanding-brazil-coffee-exports-weigh-arabica-prices</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/expanding-brazil-coffee-exports-weigh-arabica-prices</guid>
+    <pubDate>Fri, 06 Nov 2026 17:03:50 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>December arabica coffee (KCZ26 ) closed down -2.60 (-0.93%) on Thursday, and January ICE robusta coffee (RMF27 ) closed up +13 (+0.40%). Coffee prices settled mixed on Thursday, with arabica falling to a 5-week low. Expectations that…</description>
     
   </item>
   <item>
-    <title>If a Stock Market Crash Is Coming, Warren Buffett Says This Is the Wisest Move You Can Make</title>
-    <link>https://www.fool.com/investing/2026/11/06/if-a-stock-market-crash-is-coming-warren-buffett/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/06/if-a-stock-market-crash-is-coming-warren-buffett/?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 15:50:00 +0000</pubDate>
+    <title>Forget Nvidia. Here’s the Company Behind the Chips</title>
+    <link>https://247wallst.com/investing/2026/11/06/forget-nvidia-heres-the-company-behind-the-chips/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/06/forget-nvidia-heres-the-company-behind-the-chips/?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:03:01 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>What can we learn from the Oracle of Omaha?</description>
-    <category>ORCL</category>
+    <description>Every AI chip from Nvidia and Broadcom runs through one company&#x27;s fabs, yet that company trades at a fraction of the valuation its customers command. The gap raises a question worth answering before the market closes it.</description>
+    <category>NVDA</category><category>AVGO</category>
   </item>
   <item>
-    <title>Humana lifts annual profit forecast as medical costs ease</title>
-    <link>https://www.investing.com/news/stock-market-news/humana-raises-fullyear-profit-forecast-on-lower-medical-costs-5007329</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/humana-raises-fullyear-profit-forecast-on-lower-medical-costs-5007329</guid>
-    <pubDate>Fri, 06 Nov 2026 15:49:34 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>HUM</category>
-  </item>
-  <item>
-    <title>TSMC considers making advanced memory chips, The Information reports</title>
-    <link>https://www.investing.com/news/stock-market-news/tsmc-considers-making-advanced-memory-chips-the-information-reports-5008786</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/tsmc-considers-making-advanced-memory-chips-the-information-reports-5008786</guid>
-    <pubDate>Fri, 06 Nov 2026 15:49:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>TSM</category>
-  </item>
-  <item>
-    <title>AMD’s Lisa Su Says the Market Is Being “Short-Sighted” About AI</title>
-    <link>https://247wallst.com/investing/2026/11/06/amds-lisa-su-says-the-market-is-being-short-sighted-about-ai/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/06/amds-lisa-su-says-the-market-is-being-short-sighted-about-ai/?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 15:48:31 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Chip stocks cratered while AMD&#x27;s CEO stayed calm and told investors to think in years, not days. Her guidance looks bold, but a few risks, from regulation to a swelling inventory pile, could still prove the market right.</description>
-    <category>AMD</category>
-  </item>
-  <item>
-    <title>S&amp;P 500 warning signal persists as tech stocks weaken</title>
-    <link>https://investorshub.advfn.com/market-news/article/39487/sp500-warning-signal-technology-defensive-stocks?.tsrc=rss</link>
-    <guid isPermaLink="false">https://investorshub.advfn.com/market-news/article/39487/sp500-warning-signal-technology-defensive-stocks?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 15:48:26 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Key TakeawaysTechnology stocks are losing relative momentum, while financials and utilities are beginning to improve. Consumer staples are attracting attention as investors assess signs of a more defensive market environment.</description>
-    <category>SPY</category>
-  </item>
-  <item>
-    <title>Musk says Tesla will end Cybertruck production next year</title>
-    <link>https://www.cbsnews.com/news/tesla-ending-cybertruck-production-next-year/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.cbsnews.com/news/tesla-ending-cybertruck-production-next-year/?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 15:48:15 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Tesla CEO Elon Musk said the electric car maker will halt production of its Cybertruck next year and prioritize self-driving taxis.</description>
-    <category>TSLA</category>
-  </item>
-  <item>
-    <title>What Cybertruck winddown means for Tesla?</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/cybertruck-winddown-means-tesla-154801448.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/cybertruck-winddown-means-tesla-154801448.html?.tsrc=rss</guid>
-    <pubDate>Fri, 06 Nov 2026 15:48:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Investing.com -- Tesla Inc (TSLA) is trading at $359.01, up 4.46%, as of Nov 6, 10:12 AM EST. The Cybertruck winddown means less about lost truck revenue—and more about Tesla abandoning a weak product to accelerate its robotaxi strategy.</description>
-    <category>TSLA</category>
-  </item>
-  <item>
-    <title>Nvidia, AMD and other chip stocks rebound. Is the ‘violent’ AI selloff over?</title>
-    <link>https://www.marketwatch.com/story/nvidia-amd-and-other-chip-stocks-rebound-is-the-violent-ai-selloff-over-8f7df533?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/nvidia-amd-and-other-chip-stocks-rebound-is-the-violent-ai-selloff-over-8f7df533?mod=mw_rss_topstories</guid>
-    <pubDate>Fri, 06 Nov 2026 15:48:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>Analysts warn of further volatility ahead, though there are two new factors that work in the AI trade’s favor.</description>
-    <category>NVDA</category><category>AMD</category>
-  </item>
-  <item>
-    <title>Firefly inks $1.3 billion deal to supply engines for new AST SpaceMobile ’Blacklift’ rocket</title>
-    <link>https://www.investing.com/news/stock-market-news/firefly-inks-13-billion-deal-to-supply-engines-for-new-ast-spacemobile-blacklift-rocket-5008754</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/firefly-inks-13-billion-deal-to-supply-engines-for-new-ast-spacemobile-blacklift-rocket-5008754</guid>
-    <pubDate>Fri, 06 Nov 2026 15:43:18 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>ASTS</category>
-  </item>
-  <item>
-    <title>Trump administration delays meeting of high-profile tech panel</title>
-    <link>https://www.investing.com/news/stock-market-news/trump-administration-scraps-meeting-of-panel-that-includes-metas-zuckerberg-nvidias-huang-5008582</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/trump-administration-scraps-meeting-of-panel-that-includes-metas-zuckerberg-nvidias-huang-5008582</guid>
-    <pubDate>Fri, 06 Nov 2026 15:43:05 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
+    <title>The E.W. Scripps Company Reports Q3 2026 Revenue of $545 million and Income of $20.7 million</title>
+    <link>https://www.nasdaq.com/articles/ew-scripps-company-reports-q3-2026-revenue-545-million-and-income-207-million</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/ew-scripps-company-reports-q3-2026-revenue-545-million-and-income-207-million</guid>
+    <pubDate>Fri, 06 Nov 2026 17:02:06 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The E.W. Scripps Company delivered $545 million in revenue for the third quarter of 2026. Income attributable to the shareholders of Scripps was $20.7 million or 21 cents per share. In the prior-year quarter, loss attributable to…</description>
     
   </item>
   <item>
-    <title>Citi Names Top Stock in Stablecoin and Digital Payments Space</title>
-    <link>https://www.investing.com/news/stock-market-news/citi-names-top-stock-in-stablecoin-and-digital-payments-space-5008780</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/citi-names-top-stock-in-stablecoin-and-digital-payments-space-5008780</guid>
-    <pubDate>Fri, 06 Nov 2026 15:40:48 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
+    <title>TELUS Corporation Reports Third Quarter 2026 Results and Announces $900 million Efficiency Program</title>
+    <link>https://www.nasdaq.com/articles/telus-corporation-reports-third-quarter-2026-results-and-announces-900-million-efficiency</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/telus-corporation-reports-third-quarter-2026-results-and-announces-900-million-efficiency</guid>
+    <pubDate>Fri, 06 Nov 2026 17:02:05 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>TELUS Corporation reported that consolidated operating revenues and other income were $5.0 billion, compared with $5.1 billion in the prior year, reflecting lower other income, a consolidated service revenue decline of 1 per cent, as…</description>
     
   </item>
   <item>
-    <title>Immunome stock may move 9.4% on earnings release</title>
-    <link>https://www.investing.com/news/stock-market-news/immunome-stock-may-move-94-on-earnings-release-93CH-5008779</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/immunome-stock-may-move-94-on-earnings-release-93CH-5008779</guid>
-    <pubDate>Fri, 06 Nov 2026 15:38:34 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Hub Group stock may move 2.2% on earnings release next week</title>
-    <link>https://www.investing.com/news/stock-market-news/hub-group-stock-may-move-22-on-earnings-release-next-week-93CH-5008777</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/hub-group-stock-may-move-22-on-earnings-release-next-week-93CH-5008777</guid>
-    <pubDate>Fri, 06 Nov 2026 15:37:43 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Why is Tesla stock rallying today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-tesla-stock-rallying-today-93CH-5008775</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-tesla-stock-rallying-today-93CH-5008775</guid>
-    <pubDate>Fri, 06 Nov 2026 15:36:57 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>TSLA</category>
+    <title>Ubiquiti Inc. Reports First Quarter Fiscal 2027 Financial Results with Record Revenues of $1,026.2 million</title>
+    <link>https://www.nasdaq.com/articles/ubiquiti-inc-reports-first-quarter-fiscal-2027-financial-results-record-revenues-10262</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/ubiquiti-inc-reports-first-quarter-fiscal-2027-financial-results-record-revenues-10262</guid>
+    <pubDate>Fri, 06 Nov 2026 17:02:05 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Ubiquiti Inc. announced its financial results for the first quarter ended September 30, 2026, reporting revenues of $1,026.2 million, representing an increase of 39.9% from the comparable prior year period. The growth in revenues was…</description>
+    <category>UI</category>
   </item>
   <item>
     <title>Dynasties or Parity? How MLB, the NFL, and the NBA try to find competitive balance</title>
     <link>https://www.cnbc.com/2026/11/06/dynasties-or-parity-how-mlb-nfl-nba-try-to-find-competitive-balance.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/11/06/dynasties-or-parity-how-mlb-nfl-nba-try-to-find-competitive-balance.html</guid>
-    <pubDate>Fri, 06 Nov 2026 15:32:21 +0000</pubDate>
+    <pubDate>Fri, 06 Nov 2026 17:01:52 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>MLB executive tells CNBC dynasties can be &#x27;wonderful&#x27; for a league if spending rules are fair for all teams.</description>
     
   </item>
   <item>
-    <title>‘It seems bizarre’: We’re in our 80s with $950,000 in traditional IRAs. Why is our adviser pushing Roth conversions?</title>
-    <link>https://www.marketwatch.com/story/it-seems-bizarre-were-in-our-80s-with-950-000-in-traditional-iras-why-is-our-adviser-pushing-us-to-do-roth-conversions-a665f990?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/it-seems-bizarre-were-in-our-80s-with-950-000-in-traditional-iras-why-is-our-adviser-pushing-us-to-do-roth-conversions-a665f990?mod=mw_rss_topstories</guid>
-    <pubDate>Fri, 06 Nov 2026 15:30:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>“Our basic living expenses are covered by $110,000 in annual pensions and Social Security.”</description>
-    
+    <title>Bitcoin rebounds after sell-off, and the White House gets crypto broker rules</title>
+    <link>https://finance.yahoo.com/video/bitcoin-rebounds-sell-off-white-170000167.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/video/bitcoin-rebounds-sell-off-white-170000167.html?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 17:00:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Scott Melker discusses bitcoin (BTC-USD) erasing its losses from a sell-off, Trump Media (DJT)moves bitcoin, and the SEC crypto broker rules hitting the White House. &quot;The Daily Wolf with Scott Melker&quot; airs every day at 12:00 p.m. Tune…</description>
+    <category>BTC</category>
   </item>
   <item>
-    <title>‘I have no financial safety net’: I’m 66, rely on Social Security and have just $500 in savings. What hope do I have?</title>
-    <link>https://www.marketwatch.com/story/i-have-no-financial-safety-net-im-66-rely-on-social-security-and-have-500-in-savings-what-politician-speaks-for-me-be2126cb?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/i-have-no-financial-safety-net-im-66-rely-on-social-security-and-have-500-in-savings-what-politician-speaks-for-me-be2126cb?mod=mw_rss_topstories</guid>
-    <pubDate>Fri, 06 Nov 2026 15:30:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>“Sometimes I wonder whether wealthier Americans should trade places with people like me.”</description>
-    
-  </item>
-  <item>
-    <title>Energy Aspects Slashes Forecast of China’s November Diesel Exports</title>
-    <link>https://oilprice.com/Latest-Energy-News/World-News/Energy-Aspects-Slashes-Forecast-of-Chinas-November-Diesel-Exports.html</link>
-    <guid isPermaLink="false">https://oilprice.com/Latest-Energy-News/World-News/Energy-Aspects-Slashes-Forecast-of-Chinas-November-Diesel-Exports.html</guid>
-    <pubDate>Fri, 06 Nov 2026 15:30:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">OilPrice.com</source>
-    <description>Reduced domestic inventories will likely result in significantly lower Chinese exports of diesel in November amid the global diesel crisis, analysts at Energy Aspects say as they slashed their estimates of Chinese shipments this month.…</description>
-    
-  </item>
-  <item>
-    <title>The Iran War Isn&#x27;t Over, but Oil Traders Are Already Pricing In Peace</title>
-    <link>https://oilprice.com/Energy/Energy-General/The-Iran-War-Isnt-Over-but-Oil-Traders-Are-Already-Pricing-In-Peace.html</link>
-    <guid isPermaLink="false">https://oilprice.com/Energy/Energy-General/The-Iran-War-Isnt-Over-but-Oil-Traders-Are-Already-Pricing-In-Peace.html</guid>
-    <pubDate>Fri, 06 Nov 2026 15:28:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">OilPrice.com</source>
-    <description>Oil prices plunged 15% this week as hopes of a U.S.-Iran peace deal fueled bearish sentiment, despite continued attacks in the Strait of Hormuz. Friday, November 06, 2026 Oil prices are set to record one of the steepest weekly losses in…</description>
-    
-  </item>
-  <item>
-    <title>These three stars need to align before investors rush back into stocks, Bank of America strategist says</title>
-    <link>https://www.marketwatch.com/story/these-three-stars-need-to-align-before-investors-rush-back-into-stocks-bank-of-america-strategist-says-52879caa?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/these-three-stars-need-to-align-before-investors-rush-back-into-stocks-bank-of-america-strategist-says-52879caa?mod=mw_rss_topstories</guid>
-    <pubDate>Fri, 06 Nov 2026 15:27:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>Despite the steep drop in equity markets this week, investors should wait for several developments in other asset markets before rushing back into stocks, Michael Hartnett said.</description>
-    <category>BAC</category>
-  </item>
-  <item>
-    <title>The crypto industry has found new ways to grow. Making money from them is another story</title>
-    <link>https://www.coindesk.com/markets/2026/11/05/the-crypto-industry-has-found-new-ways-to-grow-making-money-from-them-is-another-story</link>
-    <guid isPermaLink="false">https://www.coindesk.com/markets/2026/11/05/the-crypto-industry-has-found-new-ways-to-grow-making-money-from-them-is-another-story</guid>
-    <pubDate>Fri, 06 Nov 2026 15:26:38 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
-    <description>Coinbase, Robinhood and Circle are expanding into stablecoins, payments and prediction markets, but their latest earnings show how hard it is to escape crypto&#x27;s boom-and-bust cycles.</description>
-    <category>HOOD</category><category>COIN</category>
-  </item>
-  <item>
-    <title>SpaceX is down big on Dem retribution fears against Musk. Deutsche Bank says buy the dip</title>
-    <link>https://www.cnbc.com/2026/11/06/spacex-is-down-big-on-dem-retribution-fears-against-musk-deutsche-bank-says-buy-the-dip.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/06/spacex-is-down-big-on-dem-retribution-fears-against-musk-deutsche-bank-says-buy-the-dip.html</guid>
-    <pubDate>Fri, 06 Nov 2026 15:26:33 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>SpaceX deals mostly with the executive branch, though frustrations are simmering in Congress.</description>
-    <category>SPCX</category>
-  </item>
-  <item>
-    <title>Moderna raises its revenue outlook — but all eyes are on what happens next with its cancer vaccine</title>
-    <link>https://www.marketwatch.com/story/modernas-stock-jumps-after-biotech-raises-sales-outlook-65363127?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/modernas-stock-jumps-after-biotech-raises-sales-outlook-65363127?mod=mw_rss_topstories</guid>
-    <pubDate>Fri, 06 Nov 2026 15:09:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>The company lifted its sales outlook for the year, saying it expects revenue to grow as much as 25% in 2026.</description>
-    <category>MRNA</category>
-  </item>
-  <item>
-    <title>Tesla to wind down Cybertruck production in Texas next year to ramp Cybercab, Musk says</title>
-    <link>https://www.cnbc.com/2026/11/06/tesla-cybertruck-texas-musk.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/06/tesla-cybertruck-texas-musk.html</guid>
-    <pubDate>Fri, 06 Nov 2026 15:06:11 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The Cybertruck and its polarizing design gained a niche following, but it did not achieve mass-market sales and Tesla has issued several voluntary recalls.</description>
+    <title>Nio Climbs 6%, Tesla and Lucid Rise 5% as EV Stocks Rebound From Election Sell-Off</title>
+    <link>https://247wallst.com/investing/2026/11/06/nio-climbs-6-tesla-and-lucid-rise-5-as-ev-stocks-rebound-from-election-sell-off/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/06/nio-climbs-6-tesla-and-lucid-rise-5-as-ev-stocks-rebound-from-election-sell-off/?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 16:57:50 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>EV stocks are bouncing hard after a post-election beating, but Elon Musk just made a call about Giga Austin that reshapes Tesla&#x27;s plans. Rising yields and Lucid&#x27;s cash burn cloud the picture, so does this rally have legs?</description>
     <category>TSLA</category>
   </item>
   <item>
-    <title>Trump’s Iran Strategy Reaches a Critical Crossroads After Midterm Defeat</title>
-    <link>https://oilprice.com/Geopolitics/Middle-East/Trumps-Iran-Strategy-Reaches-a-Critical-Crossroads-After-Midterm-Defeat.html</link>
-    <guid isPermaLink="false">https://oilprice.com/Geopolitics/Middle-East/Trumps-Iran-Strategy-Reaches-a-Critical-Crossroads-After-Midterm-Defeat.html</guid>
-    <pubDate>Fri, 06 Nov 2026 15:00:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">OilPrice.com</source>
-    <description>President Donald Trump spent the final weeks of the US midterm campaign predicting that the war with Iran would end &quot;right after the election.&quot; With the votes now in, his Republican Party is reeling from losing both chambers of Congress…</description>
+    <title>This pharmaceutical ETF is outperforming. Why it could keep climbing</title>
+    <link>https://www.cnbc.com/2026/11/06/this-pharmaceutical-etf-is-outperforming-why-it-could-keep-climbing.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/06/this-pharmaceutical-etf-is-outperforming-why-it-could-keep-climbing.html</guid>
+    <pubDate>Fri, 06 Nov 2026 16:57:09 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>The Invesco Pharmaceuticals ETF continues to outperform as other areas of the market weaken, making it an investment opportunity worth watching.</description>
     
   </item>
   <item>
-    <title>Trump’s Iran war has changed the future of Social Security</title>
-    <link>https://www.marketwatch.com/story/trumps-iran-war-has-changed-the-future-of-social-security-7a500f9f?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/trumps-iran-war-has-changed-the-future-of-social-security-7a500f9f?mod=mw_rss_topstories</guid>
-    <pubDate>Fri, 06 Nov 2026 14:55:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>It’s a mathematical certainty that the Iran war is going to have an enormous influence on the future of retirement in America.</description>
+    <title>SoFi Stock Is Down 50% From Its High. Here&#x27;s Why I&#x27;d Buy It Right Now</title>
+    <link>https://www.fool.com/investing/2026/11/06/sofi-stock-is-down-50-from-its-high-here-s-why-i-d-buy-it-right-now/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/06/sofi-stock-is-down-50-from-its-high-here-s-why-i-d-buy-it-right-now/?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 16:57:02 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>SoFi&#x27;s business has never looked stronger, but you wouldn&#x27;t know it from the stock price.</description>
+    <category>SOFI</category>
+  </item>
+  <item>
+    <title>Update: US Equity Indexes Rebound, Treasury Yields Rise Following Blowout Jobs Report</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-rebound-treasury-165611154.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-rebound-treasury-165611154.html?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 16:56:11 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>(Updates with index/price moves, macroeconomic data and company/geopolitical news from the first par</description>
+    <category>UST10Y</category>
+  </item>
+  <item>
+    <title>NVIDIA Stocks Rebound 6.78% as Lawmakers Call Jensen Huang to Closed-Door Briefing</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/nvidia-stocks-rebound-6-78-165211819.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/nvidia-stocks-rebound-6-78-165211819.html?.tsrc=rss</guid>
+    <pubDate>Fri, 06 Nov 2026 16:52:11 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Three House chairmen want Huang to explain his ties to a reported Chinese intelligence asset by November 18.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Canopy Growth Corporation Reports Q2 FY2027 Financial Results with 22% Net Revenue Growth</title>
+    <link>https://www.nasdaq.com/articles/canopy-growth-corporation-reports-q2-fy2027-financial-results-22-net-revenue-growth</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/canopy-growth-corporation-reports-q2-fy2027-financial-results-22-net-revenue-growth</guid>
+    <pubDate>Fri, 06 Nov 2026 16:50:47 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Canopy Growth Corporation announced its financial results for the three months ended September 30, 2026, reporting consolidated net revenue of $81.4M, which represents a 22% increase compared to the three months ended September 30,…</description>
     
   </item>
   <item>
-    <title>The S&amp;P 500 has become a big AI bet. Here are some simple alternatives.</title>
-    <link>https://www.marketwatch.com/story/the-s-p-500-has-become-a-big-ai-bet-here-are-some-simple-alternatives-3c7574a4?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/the-s-p-500-has-become-a-big-ai-bet-here-are-some-simple-alternatives-3c7574a4?mod=mw_rss_topstories</guid>
-    <pubDate>Fri, 06 Nov 2026 14:51:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>The large-cap index is nowhere near as diversified as you think.</description>
-    <category>SPY</category>
+    <title>TELUS Corporation Reports Net Loss of 660 Million for the Three Months Ended September 30, 2026</title>
+    <link>https://www.nasdaq.com/articles/telus-corporation-reports-net-loss-660-million-three-months-ended-september-30-2026</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/telus-corporation-reports-net-loss-660-million-three-months-ended-september-30-2026</guid>
+    <pubDate>Fri, 06 Nov 2026 16:50:47 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>TELUS Corporation reported a net loss of $ (660 ) million for the three-month period ended September 30, 2026, compared to net income of $ 431 million for the same period in 2025. Operating revenues and other income for the quarter…</description>
+    
+  </item>
+  <item>
+    <title>Montana votes to ban corporate political money. Next stop? Probably the Supreme Court</title>
+    <link>https://www.cnbc.com/2026/11/06/montana-initiative-194-corporate-spending.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/06/montana-initiative-194-corporate-spending.html</guid>
+    <pubDate>Fri, 06 Nov 2026 16:47:50 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Montana voters approved a novel strategy to restrict corporate political spending, setting up a constitutional fight that could reach the Supreme Court.</description>
+    
+  </item>
+  <item>
+    <title>Data center double-down: Hassett says blue wave won&#x27;t stop AI build-out</title>
+    <link>https://www.cnbc.com/2026/11/06/data-centers-ai-elections-hassett.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/06/data-centers-ai-elections-hassett.html</guid>
+    <pubDate>Fri, 06 Nov 2026 16:34:01 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Data centers are a crucial part of President Donald Trump&#x27;s push to win the global artificial intelligence race, which he continues despite the midterm results.</description>
+    
   </item>
 </channel>
 </rss>
