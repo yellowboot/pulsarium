@@ -609,8 +609,15 @@
    "date": "2026-11-06",
    "value": 52,
    "label": "Neutral",
-   "headlines": 288,
-   "avg7": 51.9,
+   "headlines": 369,
+   "avg7": 51.9
+  },
+  {
+   "date": "2026-11-07",
+   "value": 52,
+   "label": "Neutral",
+   "headlines": 202,
+   "avg7": 53.6,
    "window": "in the last 12 hours"
   }
  ]

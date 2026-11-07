@@ -6,51 +6,48 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 06.11.2026 21:37
-45 of 80 news items unmatched this run
+Generated: 07.11.2026 03:37
+42 of 80 news items unmatched this run
 
-- [Investing.com] Colombia stocks higher at close of trade; COLCAP up 0.07%
-- [Investing.com] US approves potential $1.08 billion Black Hawk helicopter sale to Mexico
-- [CNBC] Nasdaq rebounds 1% following worst session in 18 months as traders snap up tech shares: Live updates
-- [Yahoo Finance] How major US stock indexes fared Friday 11/6/2026
-- [Investing.com] Russia stocks higher at close of trade; MOEX Russia Index up 0.42%
-- [Nasdaq] Cattle Weakness Pushing to Friday
-- [Nasdaq] Wheat Facing Friday Weakness on Black Sea Pressure
-- [Nasdaq] Hogs Extending Losses to Friday’s Midday
-- [Nasdaq] Cotton Fading Lower into the Weekend
-- [Nasdaq] Corn Firming on Friday
-- [Nasdaq] Soybeans Holding onto Friday Losses
-- [Nasdaq] Rising ICE Inventories Pressure Cocoa Prices
-- [Nasdaq] Dollar Climbs on Signs of US Economic Strength
-- [Nasdaq] Cotton Slipping Lower on Friday Morning
-- [Investing.com] OpenAI secures $11 billion funding at $1.25 trillion valuation, Bloomberg News reports
-- [Yahoo Finance] TeraWulf Inc (WULF) (Q3 2026) Earnings Call Highlights: Securing Hyperscaler Backstops and ...
-- [Investing.com] Galapagos cuts 9% of staff as AI push drives efficiency, Bloomberg reports
-- [Yahoo Finance] Lotte Chemical Corp (XKRX:011170) (Q3 2026) Earnings Call Highlights: Swing to Operating Loss ...
-- [Investing.com] Nasdaq rebounds, but AI bloodbath drags index to worst week since mid-October
-- [CNBC] Further turmoil could be in store for tech stocks. What to watch in the week ahead
-- [Yahoo Finance] 5 Latest Jim Cramer Stock Picks on Twitter and Mad Money
-- [Nasdaq] Stronger India Sugar Output Weighs on Prices
-- [Investing.com] OpenAI closes $11 billion funding at $1.25 trillion valuation - report
-- [CNBC] Investors brace for lower Anthropic valuation, calling $1.5 trillion a 'stretch'
+- [Yahoo Finance] Carysil Ltd (BOM:524091) (Q2 2027) Earnings Call Highlights: Record Q2 Revenue of Rs 275. ...
+- [Nasdaq] Coffee Prices Settle Higher on Tight ICE Inventories
+- [Nasdaq] Sugar Prices Retreat on Stronger India Sugar Output
+- [Nasdaq] Wheat Falls into the Weekend
+- [Nasdaq] Soybeans Come Back to Close Mixed on Friday
+- [Yahoo Finance] Think Arm Is Too Expensive? 1 Thing You Need To Understand About the Chip Stock
+- [Yahoo Finance] Warren Buffett’s Berkshire Rose 5% in the Market’s Worst Week Since April 2025
+- [Nasdaq] Knightscope, Inc. Receives Nasdaq Notice Regarding $1.00 Minimum Bid Price Requirement
+- [Nasdaq] Brilliant Acquisition Corp Announces Amendment to Stock Purchase Agreement and Completion of KeepZone AI Inc. Acquisition for $1,539,800
+- [Nasdaq] Quoin Pharmaceuticals, Ltd. Reports Third Quarter 2026 Financial Results
+- [Nasdaq] Auddia Inc. Enters into Warrant Exchange Agreements to Exchange Existing Warrants for Common Stock
+- [Nasdaq] Clean Energy Technologies, Inc. Enters into $2,000,000 Securities Purchase Agreement for Convertible Note
+- [Nasdaq] Greif, Inc. Reports Fiscal Year 2026 Results and Announces Sweetwater Mill Closure
+- [Nasdaq] AMTD IDEA Group Announces Transfer of Hotel Assets to TGE for US$209,766,000
+- [Nasdaq] Safe and Green Development Corporation Enters Exchange Agreement to Restructure $1,022,971.22 of Debt
+- [Nasdaq] Faraday Future Intelligent Electric Inc. Issues Series A Preferred Stock to Executive Chairman Jiawei Wang for $100.00
+- [Nasdaq] Corn Bounces to Close the Week as Specs Flip Short
+- [Nasdaq] BioVie Inc. Announces Pricing of $4.74 Million Registered Direct Offering and Concurrent Private Placement
+- [Yahoo Finance] Why Iren Stock Soared Today
+- [Yahoo Finance] Why Essent Group Stock Slid by Nearly 8% Today
+- [Yahoo Finance] What Sent Quanta Stock Lower?
+- [Yahoo Finance] Lassonde Industries Inc (LSDAF) (Q3 2026) Earnings Call Highlights: Margin Pressure and ...
+- [Yahoo Finance] Why Koppers Holdings Stock Flopped on Friday
 - [Investing.com] Nasdaq rebounds but posts fourth straight weekly decline
-- [Yahoo Finance] TELA Bio Announces Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)
-- [Yahoo Finance] POMDOCTOR LIMITED Regains Compliance with Nasdaq Bid Price Requirement
-- [Yahoo Finance] In Stormy Market, This Stock Provides One Option For Investors. And Wall Street Is Buying In.
-- [Yahoo Finance] Stocks See Slight Rebound After Thursday's Rout But Remain Well Below Highs
+- [Investing.com] Goldman raises global data center capacity forecast to 273 GW by 2030
+- [Investing.com] As tech swoon roils market, US inflation data on tap
+- [Mining.com] Copper faces further slide after US vote: TD
+- [Mining.com] DLA commits $2 billion to acquire critical materials for National Defense Stockpile
+- [Mining.com] Canadian Uranium eyes acquisitions as Rook II exploration takes shape
+- [CNBC] OpenAI will keep investing in AI data centers despite election results, CFO tells CNBC
+- [Investing.com] Mexico stocks higher at close of trade; S&P/BMV IPC up 0.36%
+- [CNBC] Nasdaq rebounds 1% following worst session in 18 months as traders snap up tech shares: Live updates
+- [CNBC] Further turmoil could be in store for tech stocks. What to watch in the week ahead
+- [CNBC] Investors brace for lower Anthropic valuation, calling $1.5 trillion a 'stretch'
 - [CNBC] Nasdaq drops into correction territory — here’s what typically happens next
 - [CNBC] Here's a rapid-fire update on all 31 of our stocks, including 2 to buy now
 - [CNBC] Watch the Annual Meeting: Cramer on the fate of the AI buildout and stocks to buy now
 - [CNBC] Fake job interview scams like the one that hit Binance are getting more sophisticated. Here are the new signs to watch for
 - [MarketWatch] Cybertruck’s run comes to an end as Musk kills off pricey pet project
-- [MarketWatch] DraftKings’ expensive bet on prediction markets is crushing its stock
-- [CNBC] OpenAI will keep investing in AI data centers despite election results, CFO tells CNBC
+- [Mining.com] MP Materials posts surprise adjusted profit
 - [Mining.com] Regis Resources reports fatal accident at Duketon South gold operation in Western Australia
 - [CNBC] This pharmaceutical ETF is outperforming. Why it could keep climbing
-- [CNBC] Wall Street's fear gauge may be flashing a buy sign
-- [Defense One] Blue wave presages a defense-spending showdown
-- [CNBC] Anthropic IPO announcement odds drop on Kalshi following midterms and AI sell-off
-- [OilPrice.com] America’s Nuclear Revival Is Running Into a Fuel Supply Wall
-- [CoinDesk] Thailand moves to block Bitget as crypto exchange's local acquisition faces uncertainty
-- [OilPrice.com] Oil Traders Want U.S. to Release Sanctioned Tankers as Freight Costs Soar
-- [Mining.com] World embraces gold while US resists shift, advisor says
