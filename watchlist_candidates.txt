@@ -6,31 +6,34 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 09.11.2026 11:37
-25 of 80 news items unmatched this run
+Generated: 09.11.2026 13:17
+28 of 80 news items unmatched this run
 
-- [Investing.com] Barclays sees Fresenius Medical Care earnings hit by reimbursement pressures
-- [Investing.com] US opens probe into Waymo vehicles over school bus safety violations
-- [Investing.com] Windward Bio plans Nasdaq IPO to raise up to $185M
-- [CNBC] Stock futures rise as investors eye AI trade, brace for more data and earnings: Live updates
-- [MarketWatch] Until AI sentiment improves, Citi tells investors it’s better to sit out the global tech trade
-- [Nasdaq] Arcadis NV - Depositary Receipt Price Target Increased by 14.38% to $60.64
-- [Nasdaq] Soluna Holdings, Inc. - Preferred Stock Price Target Increased by 21.14% to $63.50
-- [Nasdaq] Consensus Price Target for Kikkoman Corporation - Depositary Receipt Increased by 10.64% to $25.20
+- [CNBC] Dow futures rally 500 points as oil prices drop; traders brace for more data and earnings: Live updates
+- [Investing.com] Citigroup downgrades US equities to ’neutral’ on AI concerns
+- [Investing.com] Why is Goodyear Tire & Rubber stock sliding today?
+- [Investing.com] Goodyear Tire stock falls 7% as CEO Mark Stewart exits abruptly
+- [Yahoo Finance] US Equity Futures Higher Pre-Bell as Traders Assess Oil Price Drop, Await AI-Related Earnings This Week
+- [Nasdaq] QXO, Inc. Announces Preliminary Third Quarter 2026 Financial Information with Net Sales of approximately $4.90 billion
+- [Nasdaq] Corebridge Financial, Inc. Enters Share Repurchase Agreement with Argon Holdco LLC for approximately $110 million
+- [Nasdaq] Sohu.com Limited Reports Third Quarter 2026 Unaudited Financial Results
+- [Nasdaq] Redwire Consensus Price Target Cut by 10.9% to $12.98
+- [Yahoo Finance] Where Will Joby Aviation Stock Be in 5 Years?
+- [Investing.com] Deutz shares gain 5% as Deutsche Bank sees defense-driven upside
+- [Nasdaq] Sugar Prices Retreat on Stronger India Sugar Output
+- [Nasdaq] NuScale Power Average Price Target Decreased by 17.51% to $9.00
+- [Nasdaq] Duolingo Consensus Price Target Increased 10.65% to $150.18
+- [Yahoo Finance] Why Did Karman Stock Jump?
+- [Yahoo Finance] What Did Target Say Before Its Stock Took Off?
+- [Nasdaq] Brookdale Senior Living Consensus Price Target Lowered by 10.04% to $17.51
+- [CoinDesk] Solana set for its first tokenized stock venue under SEC framework, listing Galaxy
+- [Nasdaq] Kyndryl Holdings Consensus Price Target Raised 18.82% to $17.08
+- [Nasdaq] Cabaletta Bio Presents New Rese-cel Phase 1/2 Clinical Data at ACR Convergence 2026
+- [Nasdaq] Tuya Inc. to Hold Board Meeting on November 23, 2026
+- [Nasdaq] CommScope Holding Company, Inc. Announces CEO Chuck Treadway to Step Down on February 1, 2027
+- [Nasdaq] Xometry Consensus Price Target Increased by 11.98% to $127.13
+- [Nasdaq] Consensus Price Target for Nisshinbo Holdings Inc. - Depositary Receipt Increased by 128.24% to $41.36
+- [Nasdaq] Drax Group plc - Depositary Receipt Price Target Increased by 11.60% to $27.81
+- [MarketWatch] Until AI sentiment improves, it’s better to sit out the global tech trade, Citi tells investors
 - [CoinDesk] Zcash developers want 20-second blocks just days after major speed upgrade
-- [Nasdaq] Cable One Consensus Price Target Lowered by 43.47% to $31.28
-- [Nasdaq] ARYZTA AG - Depositary Receipt Price Target Decreased by 74.06% to $6.49
-- [Nasdaq] Consensus Price Target for Turkiye Garanti Bankasi A.S. - Depositary Receipt Decreased by 10.35% to $3.67
-- [Nasdaq] Blaize Holdings Consensus Price Target Raised 34.62% to $1.78
-- [Nasdaq] AvePoint Consensus Price Target Raised 14.97% to $19.89
-- [Nasdaq] Pacific Biosciences of California Consensus Price Target Raised 16.37% to $2.85
-- [Nasdaq] Bentley Systems Consensus Price Target Increased 14.29% to $52.28
-- [Nasdaq] Japan Tobacco Inc. - Depositary Receipt Price Target Decreased by 13.76% to $21.34
-- [Nasdaq] AMC Entertainment Holdings Consensus Price Target Rises 13.19% to $3.99
-- [Nasdaq] Adial Pharmaceuticals Consensus Price Target Increased 29% to $10.96
-- [Nasdaq] Consensus Price Target for American Savings Bank, National Association Increased by 10.53% to $21.42
 - [CoinDesk] Solana moves to scrap the transaction feature used in the $270 million Drift hack
-- [OilPrice.com] Nordic Power Prices Could Soar This Winter as Hydropower Reserves Plunge
-- [OilPrice.com] Iraq Strikes U.S. Deal to Boost Oil Exports Through Hormuz
-- [CNBC] China wholesale inflation hits highest in more than four years as consumer measure slows
-- [OilPrice.com] Oil Prices Fall as Trump Signals No New Attacks on Iran
