@@ -1155,6 +1155,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/hmc/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/hon/</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>hourly</changefreq>
@@ -1346,7 +1351,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/mco/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1761,7 +1766,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/utilities/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1786,7 +1791,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/smci/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
