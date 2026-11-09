@@ -1550,6 +1550,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/psky/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/pypl/</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>hourly</changefreq>
@@ -1796,7 +1801,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sndk/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
