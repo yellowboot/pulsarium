@@ -6,43 +6,42 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 09.11.2026 17:37
-37 of 80 news items unmatched this run
+Generated: 09.11.2026 19:17
+36 of 80 news items unmatched this run
 
-- [Investing.com] Veradermics stock rises on 12-month hair growth trial data
-- [CNBC] Dow rallies 1,000 points, Nasdaq jumps 2% as stocks climb out of postelection slump: Live updates
-- [Investing.com] Mineralys stock gains after drug shows sustained blood pressure cuts
-- [Yahoo Finance] AI Stock Rout Called 'Unwarranted.' Why Wall Street Sees Post-Midterms Edge For Cloud Giants.
-- [Investing.com] US opens probe into Waymo vehicles over school bus safety violations
-- [Yahoo Finance] 3 Beaten-Down Consumer Stocks to Hold for the Next 10 Years
+- [Investing.com] Goldman CEO says AI infrastructure demand remains strong
+- [Yahoo Finance] The Big Winner From the Aurora Cannabis-Organigram Deal: Curaleaf
+- [CNBC] Dow rallies 1,100 points, Nasdaq jumps 2% as stocks climb out of postelection slump: Live updates
+- [Investing.com] Anthropic launches Fable 5.2 and Mythos 5.2 AI models ahead of IPO
+- [Yahoo Finance] 5 Best All-Time High Stocks to Buy According to Wall Street
+- [Nasdaq] Dollar Weakness Induces Short Covering in Sugar Futures
+- [Nasdaq] Soaring Brazil Coffee Exports Weigh on Arabica Prices
+- [Nasdaq] Corn Bounces to Close the Week as Specs Flip Short
+- [Investing.com] CPI data and Fed speakers highlight Tuesday’s economic calendar
+- [Investing.com] Exclusive-UniCredit to win unconditional EU nod for Commerzbank deal, sources say
+- [CNBC] Anthropic releases first frontier models since Amodei's call for slowdown as IPO buzz builds
+- [Nasdaq] NSK - Depositary Receipt Price Target Decreased by 12.39% to $15.62
+- [Yahoo Finance] Top Midday Decliners
+- [Yahoo Finance] American Healthcare REIT (AHR): Here’s Why Wall Street Is Bullish
+- [Yahoo Finance] Janus Living (JAN) Has Analysts’ Attention. Here’s Why They Like It
+- [Nasdaq] CyberAgent, Inc. - Depositary Receipt Price Target Increased by 43.97% to $6.10
+- [Nasdaq] Mentari Therapeutics Completes Merger with InMed Pharmaceuticals Inc. and Closes $490 Million Financing
+- [Nasdaq] Spruce Biosciences Reports Third Quarter 2026 Financial Results and Provides Corporate Updates
+- [Nasdaq] Jasper Therapeutics, Inc. Announces Results of Warrant Purchase Offer
+- [Yahoo Finance] Instagram makes major AI change for millions of teen users
+- [Yahoo Finance] Analysts Still Like Xometry (XMTR) Even After Its Rally, Here’s Why
+- [Nasdaq] Cocoa Prices Sink as Supply Concerns Ease
 - [Nasdaq] Dollar Retreats as Stocks Rally and Crude Oil Tumbles
-- [Nasdaq] Crude Oil Prices Finish Higher as Global Energy Supplies Remain Tight
-- [Nasdaq] Stronger India Sugar Output Weighs on Prices
-- [Nasdaq] Federal Home Loan Mortgage Corporation - Preferred Stock Consensus Price Target Decreased 72.27% to $9.83
-- [Yahoo Finance] Update: US Equity Indexes Jump as Growth Sectors Stage Rally Amid Sliding Crude Oil
-- [Yahoo Finance] Here’s Why Jefferies Upgraded Steven Madden (SHOO) Stock
-- [Investing.com] FTSE 100 today: Stocks rise as miners rally, oil slides on Iran deal hope
-- [Yahoo Finance] Here’s Why William Blair Upgraded Appian (APPN) Stock
-- [Yahoo Finance] AGNC Has a New $1 Billion Buyback. It Only Kicks In If the Stock Falls to Book Value.
-- [Nasdaq] Ready Capital Corporation - Corporate Bond Price Target Increased by 26.35% to $33.17
-- [Nasdaq] Inovio Pharmaceuticals, Inc. Enters Underwriting Agreement for Public Offering Expected to Yield Net Proceeds of Approximately $80.5 million
-- [Nasdaq] Atea Pharmaceuticals, Inc. Enters into $200.0 million Loan and Security Agreement
-- [Nasdaq] Ocular Therapeutix, Inc. Appoints Riad Sherif, M.D. to Board of Directors
-- [Yahoo Finance] Reliance Global Group Announces Nasdaq Ticker Symbol Change from “EZRA” to “XGPU”
-- [Nasdaq] Federal Home Loan Mortgage Corporation - Preferred Stock Price Target Decreased by 54.37% to $9.48
-- [Nasdaq] KLX Energy Services Holdings, Inc. - Equity Right Price Target Increased by 11.62% to $0.00
-- [Nasdaq] Cullinan Therapeutics Announces Velinotamig Clinical Data Presented at ACR Convergence 2026
-- [Nasdaq] Tonix Pharmaceuticals Holding Corp. Reports Third Quarter 2026 Financial Results
-- [Nasdaq] Sensei Biotherapeutics, Inc. Reports Positive Preliminary Phase 2 Topline Results from the PIK-201 Trial
+- [Nasdaq] Soybeans Showing Mixed Monday AM Trade
+- [Nasdaq] Cotton Ticking Higher on Monday Morning
+- [Nasdaq] Wheat Falls into the Weekend
+- [Investing.com] Sable Offshore sinks to record low after warning of going-concern risk
+- [CNBC] Goldman CEO Solomon says AI financing remains strong despite market jitters
+- [MarketWatch] Ozempic, Zepbound and other GLP-1 drugs have a possible risk of vision loss
 - [CNBC] This software stock is bucking the latest tech rout and breaking out
 - [CNBC] These stocks on Josh Brown's list got washed out in last week's sell-off. Where to go from here
 - [Mining.com] Meridian weighs $400 million investment decision for Cabaçal mine
-- [MarketWatch] A failed trial for a heart drug casts shadow over rivals developing similar therapies
 - [CoinDesk] North Korean hackers are creating memecoins to wash loot from $6.3 billion Binance hack
 - [CNBC] Goodyear Tire CEO Mark Stewart steps down as company continues turnaround plan
 - [Mining.com] Vivox AI, beSirius partner on mining supply chain compliance
 - [CoinDesk] NYSE picks Avalanche to settle tokenized stocks amid Wall Street's blockchain race
-- [CNBC] Could supplements be the next big opportunity in the GLP-1 weight-loss drug boom?
-- [Mining.com] $32 billion later, Codelco’s future hinges on private partners
-- [Mining.com] Codelco, Pucobre clear key hurdle for $870 million copper mine
-- [CoinDesk] Solana set for its first tokenized stock venue under SEC framework, listing Galaxy
