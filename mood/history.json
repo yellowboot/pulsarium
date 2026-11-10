@@ -630,15 +630,15 @@
    "date": "2026-11-09",
    "value": 60,
    "label": "Leaning optimistic",
-   "headlines": 330,
+   "headlines": 331,
    "avg7": 50.1
   },
   {
    "date": "2026-11-10",
-   "value": 62,
+   "value": 61,
    "label": "Leaning optimistic",
-   "headlines": 127,
-   "avg7": 52.0,
+   "headlines": 155,
+   "avg7": 51.9,
    "window": "in the last 12 hours"
   }
  ]
