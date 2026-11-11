@@ -6,21 +6,28 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 11.11.2026 13:17
-22 of 80 news items unmatched this run
+Generated: 11.11.2026 14:37
+26 of 80 news items unmatched this run
 
-- [CNBC] Nissan CEO breaks down how it plans to fight back against Chinese companies, after second outlook cut in months
+- [Investing.com] Jefferies calls FormFactor pullback a buying opportunity, shares rise 8%
+- [Investing.com] Why is GoPro stock plunging today?
+- [Investing.com] European shares near record high as earnings absorb tech volatility
+- [Investing.com] Why is Future Fintech stock rallying today?
+- [Investing.com] Why is Riskified stock surging today?
+- [Investing.com] Rising costs will not halt data center construction boom, Citi says
+- [Yahoo Finance] Market Chatter: Anthropic IPO Valuation Could Rise to $1.5 Trillion on Strong Demand
+- [Yahoo Finance] An AI Developer Starts Its IPO Roadshow, and Its Filing Names Chip and Cloud Partners
+- [Yahoo Finance] 2 Stocks I'd Buy Right Now and Hold Through 2035
+- [Investing.com] Why is IMCD stock sliding today?
+- [Mining.com] EverMetal acquires UK critical metals recycler Advanced Alloys
+- [Yahoo Finance] Cineverse Building Upon Social Video Revenue Growth with a First-Time Spanish-Language Dog Whisperer Channel on YouTube + a Yu-Gi-Oh! Live Stream
+- [Yahoo Finance] Plurai raises $13M to build the simulation infrastructure for trustworthy, self-improving AI agents
+- [CNBC] Nissan cuts sales forecast again on China woes as CEO outlines plan to fight back
+- [MarketWatch] One reason Children’s Place is filing for bankruptcy? Not enough children.
 - [CoinDesk] Meet Spiko, the largest tokenized fund in the world you’ve probably never heard about
-- [Investing.com] Barclays sees THG earnings growth as whey costs ease, Nutrition margins recover
-- [Yahoo Finance] If I Were in My 20s, I'd Buy This AI ETF After Its Recent Crash and Hold It Forever
-- [Investing.com] Saudi Arabia stocks higher at close of trade; Tadawul All Share up 1.38%
-- [Investing.com] Why is iShares Semiconductor ETF stock surging today?
-- [CNBC] Mortgage rates jump sharply higher, after easing for four straight weeks. Here's why
-- [Investing.com] Why is Direxion Daily Semiconductor Bull 3X Shares ETF surging today?
-- [Investing.com] Jefferies cuts 2 EU specialty chemical distributors as inflation tailwind fades
-- [Investing.com] Why is Hagerty stock sliding today?
-- [MarketWatch] Market angst is driving investors into low-volatility stocks as AI trade stumbles
+- [Mining.com] Simandou’s 120Mtpa export target faces logistics test
 - [CoinDesk] Kraken's xStocks adds 200 UK and EU shares as its assets top $1.1 billion
+- [OilPrice.com] Ukrainian Drone Attack Sparks Fire at Russia’s Key Baltic Oil Export Hub
 - [OilPrice.com] India Eyes 50% Wind Power Capacity Boost Without Acquiring More Land
 - [CNBC] Investors pivot to defensive stocks as markets enter a ‘state of alert’
 - [OilPrice.com] Siemens Energy More Than Triples Dividend After Record Year
@@ -28,6 +35,3 @@ Generated: 11.11.2026 13:17
 - [OilPrice.com] Poland's Orlen Becomes First Buyer to Cancel Long-Term Qatar LNG Deal
 - [CNBC] Jim Cramer says Anthropic's explosive growth could justify a record-breaking IPO
 - [OilPrice.com] Oil Prices Rise as Iran Peace Optimism Fades
-- [CNBC] Fossil CEO says turnaround is ahead of plan as sales return to growth
-- [CoinDesk] Former NYSE president says stock issuers hold the key to tokenization as Bullish builds its platform
-- [OilPrice.com] Middle East Oil Flows Far from Normal Despite Signs of Oversupply
