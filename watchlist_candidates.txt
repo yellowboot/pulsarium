@@ -6,25 +6,28 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 12.11.2026 08:37
-26 of 80 news items unmatched this run
+Generated: 12.11.2026 11:37
+27 of 80 news items unmatched this run
 
-- [Yahoo Finance] Tech giant Foxconn beats forecasts with third-quarter profit jump
-- [Investing.com] Why is Rolls-Royce stock rallying today?
-- [Investing.com] Citi turns to China Inc.’s global expansion, yuan to grow cross-border business
-- [Investing.com] Why is 3I stock rallying today?
-- [Investing.com] Why is Persimmon stock rallying today?
-- [Investing.com] Why is Siemens stock surging today?
-- [Investing.com] European shares hit record high helped by strong earnings and lower energy prices
-- [Yahoo Finance] The Chip Stock Rebound Is Just Getting Started
-- [Investing.com] Persimmon trading in line with market expectations
-- [Investing.com] Chemring FY26 earnings expected to miss forecasts slightly
-- [Investing.com] OHB SE posts Q3 EBITDA margin above estimates despite sales miss
-- [Yahoo Finance] If You'd Put $10,000 in Gold a Year Ago, Here's What You'd Have Today
-- [Yahoo Finance] MP Gains 2% After Q3 Earnings Beat: Reason Enough to Buy the Stock?
-- [Yahoo Finance] This Is Still A Market You Have To Own Until Proven Otherwise, Says Northern Trust’s Eric Freedman
+- [MarketWatch] Tech stocks may soon enjoy a ‘violent bounce’ — but one strategist warns investors not to take the bait
+- [Yahoo Finance] DEFSEC TECHNOLOGIES INC. ANNOUNCES SHARE CONSOLIDATION
+- [Yahoo Finance] Should You Buy Dogecoin While It's Below $0.10?
+- [Investing.com] Metro Bank opens sale process despite no buyer approaches
+- [Investing.com] Analysis-AI shakeout lands convertible investors better terms
+- [Yahoo Finance] AI-Optimized Server Spending To Reach Nearly $957B In 2027, Says Gartner — Global AI Spending To Cross $4T
+- [Yahoo Finance] Compass Pathways Completes FDA Application for Psilocybin Therapy, Prepares for Launch
+- [Investing.com] How Anthropic stacks up against some of the biggest US IPOs
+- [Investing.com] Talanx lifts 2026 forecast again, targets €3 billion in 2027
+- [Investing.com] As Anthropic’s $1.4T test arrives, these AI-picked tech plays have already doubled
+- [Investing.com] SMA Solar narrows 2026 guidance to upper half of ranges
+- [CoinDesk] Polymarket trims workforce under investor pressure as Kalshi surges ahead
+- [CoinDesk] India’s financial crimes watchdog raids crypto exchanges CoinDCX and Delta over alleged illegal cross-border trades
+- [CNBC] Lutnick should ban Chinese memory maker CXMT from U.S., Sen. Cotton says
+- [CoinDesk] Gemini sells UK and European operations to stablecoin payments firm KAST for under $10 million
+- [CNBC] Ukrainian defense tech startup hits $6 billion valuation as investors bet on battle-tested drones
 - [CoinDesk] Zcash holders to vote on pulling 50,000 ZEC, worth $50 million, from grants treasury
 - [CoinDesk] Ripple’s bank-lending system moves closer to launch on the XRP Ledger
+- [OilPrice.com] China Targets Global Gas Turbine Market as AI Power Demand Explodes
 - [CNBC] CFTC investigates if Kalshi improperly self-certified event contracts
 - [OilPrice.com] Asian Oil Buyers Turn to Africa and Brazil as Tanker Rates Plunge
 - [OilPrice.com] Oil Prices Sink as Iran and Ukraine Peace Optimism Builds
@@ -33,5 +36,3 @@ Generated: 12.11.2026 08:37
 - [OilPrice.com] Who Will Buy Sable’s Oil if California Keeps Closing Refineries?
 - [CNBC] Bouncing Wynn Shares might be primed for the 'wheel strategy'
 - [Mining.com] Minerals 260 lines up A$410M for gold project
-- [Mining.com] Troilus hits gold in Quebec ground marked as waste
-- [Mining.com] USA Rare Earth begins Brazil shipments to Pentagon
