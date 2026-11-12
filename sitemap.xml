@@ -1509,6 +1509,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/nue/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/nvda/</loc>
     <lastmod>2026-11-12</lastmod>
     <changefreq>hourly</changefreq>
@@ -1780,7 +1785,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/metals-mining/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
