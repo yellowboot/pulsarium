@@ -1027,7 +1027,7 @@
 <link rel="stylesheet" href="/assets/financial-signals.css?v=7">
 <link rel="stylesheet" href="/assets/pagination.css?v=1">
 <link rel="stylesheet" href="/assets/panel-fold.css?v=1">
-<link rel="stylesheet" href="/assets/market-map.css?v=4">
+<link rel="stylesheet" href="/assets/market-map.css?v=5">
 <link rel="stylesheet" href="/assets/footer.css?v=d89dd84f32">
 <link rel="stylesheet" href="/assets/themes.css?v=995daca531" data-pulsarium-theme="styles">
 </head>
@@ -1180,12 +1180,21 @@
   </section>
   <section class="panel mm-card mm-wide" id="insider-map" data-insider-map aria-labelledby="insider-map-title" hidden>
     <div class="panel-edge" aria-hidden="true"></div>
-    <div class="mm-head"><h2 id="insider-map-title">Insider trades · this week</h2><p class="mm-cap">What company officers and directors bought and sold</p></div>
-    <div class="mm-stage"><canvas role="img" aria-label="Floating bubbles: companies whose officers and directors bought (green) or sold (red) shares this week; a bigger bubble is more money"></canvas></div>
+    <div class="mm-head"><h2 id="insider-map-title" data-bubbles-title>Insider trades · this week</h2><p class="mm-cap" data-bubbles-cap>What company officers and directors bought and sold</p>
+      <div class="mm-controls mm-switch" role="group" aria-label="What the bubbles show" hidden>
+        <button type="button" class="chip" data-bubbles="insiders">Insiders</button>
+        <button type="button" class="chip" data-bubbles="shares">Buybacks &amp; dilution</button>
+      </div>
+    </div>
+    <div class="mm-stage"><canvas role="img" aria-label="Floating bubbles, one per company: green and red by direction, a bigger bubble is a bigger amount"></canvas></div>
     <div class="mm-info" data-insider-info aria-live="polite"></div>
-    <div class="mm-foot">
+    <div class="mm-foot" data-bubbles-for="insiders">
       <p class="mm-legend"><span><i class="buy"></i>Bought</span><span><i class="sell"></i>Sold</span><span><i class="plan"></i>Planned sale (10b5-1)</span></p>
       <span class="mm-links"><a class="mm-open" href="/insider-buying/">Buying <span aria-hidden="true">↗</span></a><a class="mm-open" href="/insider-selling/">Selling <span aria-hidden="true">↗</span></a></span>
+    </div>
+    <div class="mm-foot" data-bubbles-for="shares" hidden>
+      <p class="mm-legend"><span><i class="buy"></i>Fewer shares (buybacks)</span><span><i class="sell"></i>More shares (dilution)</span></p>
+      <span class="mm-links"><a class="mm-open" href="/report-highlights/">Report highlights <span aria-hidden="true">↗</span></a></span>
     </div>
   </section>
   </div></div>
@@ -1426,7 +1435,7 @@
 <script src="/assets/financial-signals.js?v=11" defer></script>
 <script src="/assets/panel-fold.js?v=4" defer></script>
 <script src="/assets/season-q3-2026.js?v=1" defer></script>
-<script src="/assets/market-map.js?v=3" defer></script>
+<script src="/assets/market-map.js?v=4" defer></script>
 <script src="../news_data.js" onerror="window.__NO_DATA_FILE__ = true"></script>
 <script>
 (function () {

@@ -96,6 +96,26 @@
 .mm-wide .mm-stage { aspect-ratio: auto; height: 320px; }
 .mm-wide .mm-stage canvas { cursor: default; }
 @container (min-width: 900px) { .mm-wide .mm-stage { height: auto; flex: 1 1 auto; min-height: 250px; } .mm-wide .mm-info { min-height: 84px; } }
+/* the switch between the two sets of bubbles sits at the right of the card's heading */
+.mm-foot[hidden], .mm-switch[hidden] { display: none !important; }
+.mm-card .mm-controls .chip.is-on {
+  color: var(--mm-acc); border-color: var(--mm-acc); font-weight: 600;
+  background: color-mix(in srgb, var(--mm-acc) 14%, transparent); box-shadow: none;
+}
+/* beside the heading on a lying-down card, under the caption on a narrower one */
+.mm-card .mm-head .mm-switch { margin-top: 8px; }
+@container (min-width: 640px) and (max-width: 899.98px) {
+  .mm-card .mm-head:has(.mm-switch:not([hidden])) { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; align-items: start; }
+  .mm-card .mm-head .mm-switch { grid-column: 2; grid-row: 1 / span 2; flex-wrap: nowrap; margin-top: 0; }
+}
+@container (min-width: 1300px) {
+  .mm-card .mm-head:has(.mm-switch:not([hidden])) { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; align-items: start; }
+  .mm-card .mm-head .mm-switch { grid-column: 2; grid-row: 1 / span 2; flex-wrap: nowrap; margin-top: 0; }
+}
+@media (max-width: 700px) {
+  .mm-card .mm-head .mm-switch { order: 4; flex-basis: 100%; }
+  .mm-card[data-folded='true'] .mm-switch { display: none; }
+}
 /* A card of 640px or more lies down: the picture on the left, the text and buttons in a column on the right.
    That is one card per row on a medium screen, or two side by side on a very wide one. */
 @container (min-width: 640px) and (max-width: 899.98px) {
