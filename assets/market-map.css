@@ -1,0 +1,128 @@
+/* The news page's compact top row and the earnings-season ring (market-map.js).
+   Colours come from the page's theme variables, so Neon and Calm both apply; the few Calm-only
+   corrections are scoped to :root[data-color-theme='calm'] at the end. */
+.market-map, .mm-compact { --mm-acc: var(--gold-1, var(--accent, #00f0ff)); --mm-mono: var(--font-mono, 'JetBrains Mono', monospace); }
+
+/* ---------- 1. compact top row (wide screens; phones keep the folding headings) ---------- */
+.mm-sum, .mm-toggle { display: none; }
+.mm-pop { display: contents; }
+/* the box that keeps the top-edge light inside the cell */
+.mm-clip { position: absolute; inset: 0; overflow: hidden; border-radius: inherit; pointer-events: none; }
+.panel.mm-compact[data-folded='true'] > .mm-clip { display: block !important; }
+@media (min-width: 701px) {
+  .dash > .hero-grid.mm-row {
+    height: auto; min-height: 0; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.2fr) minmax(0, 1.5fr); grid-template-rows: auto;
+    grid-template-areas: "analytics mentions indices" "map map map" "controls controls controls";
+  }
+  .dash > .hero-grid.mm-row > .mm-compact {
+    display: block; height: auto; min-height: 0; padding: 11px 16px 12px; overflow: visible; contain: none; cursor: pointer;
+  }
+  .dash > .hero-grid.mm-row > .mm-compact::before { top: 7px; left: 7px; width: 9px; height: 9px; }
+  .dash > .hero-grid.mm-row > .mm-compact::after { bottom: 7px; right: 7px; width: 9px; height: 9px; }
+  .mm-compact > h2 { margin: 0 0 8px; font-size: 10.5px; }
+  .mm-compact > h2 svg { width: 14px; height: 14px; }
+  .mm-toggle {
+    display: inline-grid; place-items: center; flex: none; margin-left: auto; width: 22px; height: 22px; padding: 0;
+    border: 0; border-radius: 6px; background: transparent; color: var(--text-low); cursor: pointer;
+  }
+  .mm-toggle::before {
+    content: ''; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+    transform: translateY(-2px) rotate(45deg); transition: transform .2s;
+  }
+  .mm-compact.is-open .mm-toggle::before { transform: translateY(2px) rotate(-135deg); }
+  .mm-toggle:focus-visible { outline: 2px solid var(--mm-acc); outline-offset: 2px; }
+  .mm-compact:hover .mm-toggle { color: var(--mm-acc); }
+  .mm-sum {
+    display: flex; align-items: center; gap: 7px; min-height: 26px; overflow: hidden; white-space: nowrap;
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent);
+  }
+  .mm-title { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mm-sum.mm-mood-row { -webkit-mask-image: none; mask-image: none; flex-wrap: wrap; gap: 7px 10px; }
+  .mm-mood { flex: 1 1 0; min-width: 0; overflow: hidden; text-overflow: ellipsis; font-size: 13px; font-weight: 600; color: var(--text-hi); }
+  .mm-sum .sentiment-bar { flex: 1 0 100%; height: 5px; margin: 0; }
+  .mm-counts { flex: none; display: inline-flex; align-items: center; gap: 4px; font-family: var(--mm-mono); font-size: 11.5px; color: var(--text-mid); }
+  .mm-counts i { width: 6px; height: 6px; border-radius: 50%; margin-left: 2px; }
+  /* a narrow cell keeps the mood in words and the bar; the three counts come back when there is room */
+  .dash > .hero-grid.mm-row > .panel-analytics { container-type: inline-size; }
+  @container (max-width: 250px) { .mm-counts { display: none; } }
+  .mm-chip {
+    flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+    border: 1px solid var(--border); font-family: var(--mm-mono); font-size: 12px; font-weight: 600; color: var(--text-hi); text-decoration: none;
+  }
+  a.mm-chip:hover { border-color: var(--mm-acc); color: var(--mm-acc); }
+  .mm-chip b { font-weight: 600; color: var(--text-low); }
+  .mm-chip b.up { color: var(--pos); } .mm-chip b.down { color: var(--neg); }
+  .mm-chip b.hot { color: var(--vix-hot, var(--neg)); } .mm-chip b.cool { color: var(--vix-cool, var(--pos)); }
+  /* the full panel opens under its cell */
+  .mm-pop {
+    display: none; position: absolute; left: -1px; right: -1px; top: calc(100% + 8px); z-index: 5; min-width: 300px; max-height: 440px;
+    flex-direction: column; padding: 18px 20px; border-radius: 16px; border: 1px solid var(--border); background: var(--bg-1, #070a16);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .55); overflow-x: hidden; overflow-y: auto; cursor: default;
+  }
+  .hero-grid > .mm-compact:last-of-type > .mm-pop, .hero-grid > .quotes-panel > .mm-pop { left: auto; }
+  .mm-compact.is-open { z-index: 30; }
+  .mm-compact.is-open > .mm-pop { display: flex; }
+  .mm-pop .quotes-list, .mm-pop .top-tickers-list { flex: none; max-height: 372px; overflow-y: auto; }
+}
+
+/* ---------- 2. the earnings-season block ---------- */
+.market-map[hidden] { display: none !important; }
+.dash > .hero-grid > .market-map { display: block; height: auto; overflow: hidden; }
+@media (min-width: 701px) { .dash > .hero-grid.mm-row > .market-map { grid-area: map; } }
+.market-map .mm-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin: 0 0 6px; }
+.market-map .mm-head h2 { margin: 0; }
+.market-map .mm-cap { margin: 0; font-size: 12.5px; color: var(--text-low); }
+.mm-body { display: grid; grid-template-columns: minmax(0, 1fr) 236px; gap: 18px; align-items: center; }
+.mm-stage { position: relative; min-width: 0; aspect-ratio: 1.86; max-height: 290px; }
+.mm-stage canvas { display: block; width: 100%; height: 100%; cursor: crosshair; touch-action: pan-y; }
+.mm-side { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.mm-info { min-height: 96px; }
+.mm-info p { margin: 0; }
+.mm-k { font-family: var(--mm-mono); font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text-low); }
+.mm-name { margin-top: 4px !important; font-size: 14px; font-weight: 700; line-height: 1.25; color: var(--text-hi); }
+.mm-big { margin-top: 5px !important; font-family: var(--mm-mono); font-size: 15px; font-weight: 700; line-height: 1.25; }
+.mm-move { margin-top: 3px !important; font-family: var(--mm-mono); font-size: 19px; font-weight: 700; line-height: 1.1; }
+.mm-line { margin-top: 6px !important; font-size: 12.5px; line-height: 1.5; color: var(--text-mid); }
+.mm-line b { font-weight: 600; color: var(--text-hi); }
+.mm-hint { margin-top: 6px !important; font-size: 11.5px; color: var(--text-low); }
+.mm-info .up { color: var(--pos); } .mm-info .down { color: var(--neg); }
+.mm-controls { display: flex; flex-wrap: wrap; gap: 5px; }
+.market-map .mm-controls .chip { padding: 4px 10px; font-size: 11.5px; }
+.market-map .mm-controls .chip.is-on {
+  color: var(--mm-acc); border-color: var(--mm-acc); font-weight: 600;
+  background: color-mix(in srgb, var(--mm-acc) 14%, transparent); box-shadow: none;
+}
+.mm-open { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--mm-acc); text-decoration: none; }
+.mm-open:hover { text-decoration: underline; }
+.mm-note { margin: 10px 0 0; font-size: 12px; line-height: 1.5; color: var(--text-low); }
+@media (max-width: 900px) {
+  .mm-body { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .mm-info { min-height: 0; }
+}
+@media (max-width: 700px) {
+  /* the folded heading stays one row like its neighbours: title and arrow, the caption under them when open */
+  .market-map .mm-head h2 { flex: 1; }
+  .market-map .mm-head .mm-cap { order: 3; flex-basis: 100%; }
+  .market-map[data-folded='true'] .mm-cap { display: none; }
+}
+
+/* the full page (/earnings-season/) */
+.mm-full { padding: 22px 24px 20px; }
+.mm-full .mm-body { grid-template-columns: minmax(0, 1fr) 250px; align-items: start; }
+.mm-full .mm-stage { aspect-ratio: auto; max-height: none; height: clamp(380px, 62vh, 640px); }
+.mm-full .mm-side { padding-top: 10px; }
+.mm-full .mm-info { min-height: 120px; }
+.mm-full .mm-controls { margin: 4px 0 2px; }
+.mm-full .mm-group { display: grid; gap: 7px; }
+.mm-full .mm-group > span { font-family: var(--mm-mono); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-low); }
+@media (max-width: 900px) {
+  .mm-full { padding: 16px 14px; }
+  .mm-full .mm-body { grid-template-columns: minmax(0, 1fr); }
+  .mm-full .mm-stage { aspect-ratio: 1.22; height: auto; }
+  .mm-full .mm-info { min-height: 0; }
+}
+
+/* ---------- Calm (light) ---------- */
+:root[data-color-theme='calm'] .mm-pop { background: #fff; box-shadow: 0 18px 44px rgba(27, 31, 59, .16); }
+:root[data-color-theme='calm'] .market-map .mm-controls .chip { padding: 4px 9px; font-size: 11.5px; }
+:root[data-color-theme='calm'] .market-map .mm-controls .chip.is-on { background: rgba(74, 71, 214, .1); }
