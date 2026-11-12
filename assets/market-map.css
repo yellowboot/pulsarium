@@ -159,6 +159,47 @@
   .mm-card[data-folded='true'] .mm-head { margin-bottom: 0; }
 }
 
+/* ---------- 4. IPO watch: a slim panel beside the search row ---------- */
+.mm-ipo[hidden] { display: none !important; }
+.dash > .hero-grid > .panel.mm-ipo {
+  --mm-acc: var(--gold-1, var(--accent, #00f0ff)); --mm-mono: var(--font-mono, 'JetBrains Mono', monospace);
+  display: flex; flex-flow: row wrap; align-items: center; gap: 10px 28px; height: auto; padding: 12px 18px 10px; overflow: hidden;
+}
+@media (min-width: 900px) {
+  .dash > .hero-grid.mm-row.mm-row.has-ipo {
+    grid-template-areas: "analytics mentions indices indices" "map map map map" "controls controls ipo ipo";
+  }
+  .dash > .hero-grid.has-ipo > .mm-ipo { grid-area: ipo; align-self: start; }
+}
+@media (min-width: 701px) and (max-width: 899.98px) {
+  .dash > .hero-grid.mm-row.has-ipo { grid-template-areas: "analytics mentions indices" "map map map" "ipo ipo ipo" "controls controls controls"; }
+  .dash > .hero-grid.has-ipo > .mm-ipo { grid-area: ipo; }
+}
+.ipo-main { flex: 0 0 auto; }
+.mm-ipo h2 { margin: 0 0 8px; font-size: 10.5px; white-space: nowrap; }
+.ipo-dot { flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--mm-acc); box-shadow: 0 0 8px var(--mm-acc); animation: ipo-pulse 1.8s ease-in-out infinite; }
+.ipo-ticker { margin-left: 2px; padding: 2px 7px; border: 1px solid var(--border); border-radius: 999px; font-family: var(--mm-mono); font-size: 9.5px; font-weight: 600; letter-spacing: .04em; color: var(--text-mid); }
+.ipo-clock { display: flex; gap: 6px; }
+.ipo-unit { display: grid; justify-items: center; min-width: 46px; padding: 6px 6px 4px; border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+  background: color-mix(in srgb, var(--mm-acc) 7%, transparent); }
+.ipo-unit b { display: block; font-family: var(--mm-mono); font-size: 21px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; color: var(--text-hi); }
+.ipo-unit b.tick { animation: ipo-tick .42s ease-out; }
+.ipo-unit i { margin-top: 4px; font-style: normal; font-size: 8.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-low); }
+.ipo-when { margin: 6px 0 0; font-size: 11px; color: var(--text-low); }
+.ipo-facts { flex: 1 1 310px; display: grid; grid-template-columns: repeat(3, auto); justify-content: space-between; gap: 6px 18px; margin: 0; min-width: 0; }
+.ipo-facts dt { font-family: var(--mm-mono); font-size: 9.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-low); }
+.ipo-facts dd { margin: 4px 0 0; font-family: var(--mm-mono); font-size: 15px; font-weight: 700; white-space: nowrap; color: var(--text-hi); }
+.ipo-facts small { display: block; margin-top: 4px; font-size: 10.5px; color: var(--text-low); }
+.ipo-range { position: relative; height: 4px; margin-top: 8px; border-radius: 2px; overflow: hidden; background: color-mix(in srgb, var(--mm-acc) 22%, transparent); }
+.ipo-range i { position: absolute; top: 0; bottom: 0; left: -34%; width: 34%; background: linear-gradient(90deg, transparent, var(--mm-acc), transparent); animation: ipo-sweep 2.6s ease-in-out infinite; }
+.ipo-note { flex: 1 1 100%; margin: 0; font-size: 10.5px; line-height: 1.45; color: var(--text-low); }
+.ipo-note a { color: var(--mm-acc); }
+@keyframes ipo-pulse { 50% { transform: scale(1.5); opacity: .55; } }
+@keyframes ipo-tick { from { transform: translateY(-55%); opacity: 0; } }
+@keyframes ipo-sweep { to { left: 100%; } }
+@media (prefers-reduced-motion: reduce) { .ipo-dot, .ipo-unit b.tick, .ipo-range i { animation: none; } .ipo-range i { left: 33%; } }
+@media (max-width: 700px) { .ipo-facts { grid-template-columns: repeat(2, auto); justify-content: start; gap: 10px 28px; } }
+
 /* the full page (/earnings-season/) */
 .mm-full { padding: 22px 24px 20px; }
 .mm-full .mm-body { grid-template-columns: minmax(0, 1fr) 250px; align-items: start; }

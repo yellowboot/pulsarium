@@ -457,6 +457,33 @@
     });
   }
 
+  // ---------- 4. IPO watch: a countdown to the expected first day of trading ----------
+  // The facts are typed into the page by hand; this only runs the clock (data-ipo-open) and hides the
+  // panel once its date has passed (data-ipo-hide), so a finished IPO never lingers as a stale counter.
+  function ipoWatch(root) {
+    const open = Date.parse(root.dataset.ipoOpen), hide = Date.parse(root.dataset.ipoHide);
+    if (!open || (hide && Date.now() >= hide)) return false;
+    const cells = ['d', 'h', 'm', 's'].map((unit) => root.querySelector(`[data-ipo-${unit}]`)), when = root.querySelector('[data-ipo-when]');
+    if (cells.some((cell) => !cell)) return false;
+    root.hidden = false;
+    const put = (cell, value) => {
+      const text = String(value).padStart(2, '0');
+      if (cell.textContent === text) return;
+      cell.textContent = text;
+      if (!still.matches) { cell.classList.remove('tick'); void cell.offsetWidth; cell.classList.add('tick'); }
+    };
+    let timer = 0;
+    const tick = () => {
+      const left = Math.max(0, open - Date.now()), seconds = Math.floor(left / 1000);
+      [Math.floor(seconds / 86400), Math.floor(seconds % 86400 / 3600), Math.floor(seconds % 3600 / 60), seconds % 60].forEach((value, i) => put(cells[i], value));
+      if (!left && when) when.textContent = 'The expected first day of trading has begun.';
+      if (hide && Date.now() >= hide) { root.hidden = true; clearInterval(timer); }
+    };
+    tick();
+    timer = setInterval(tick, 1000);
+    return true;
+  }
+
   const boot = () => {
     try { compactRow(); } catch (error) { console.error('market-map: compact row', error); }
     const deck = document.querySelector('.mm-deck');
@@ -464,6 +491,7 @@
     $$('[data-season]').forEach((root) => {
       try { if (window.PULSARIUM_SEASON) { root.hidden = false; seasonRing(root); } } catch (error) { console.error('market-map: season ring', error); }
     });
+    $$('[data-ipo]').forEach((root) => { try { if (ipoWatch(root)) { const grid = root.closest('.hero-grid'); if (grid) grid.classList.add('has-ipo'); } } catch (error) { root.hidden = true; console.error('market-map: ipo watch', error); } });
     $$('[data-insider-map]').forEach((root) => { try { insiderMap(root); } catch (error) { root.hidden = true; console.error('market-map: insiders', error); } });
   };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
