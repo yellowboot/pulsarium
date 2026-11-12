@@ -809,8 +809,8 @@ def earnings_season() -> dict:
         "description": "An interactive picture of the Q3 2026 earnings season: 730 companies worth $10 billion or more, "
                        "each stock's move on the first trading day after its report. 78% beat forecasts; 45% of those fell.",
         "body": body,
-        "head": '<link rel="stylesheet" href="/assets/market-map.css?v=1">\n'
-                '<script src="/assets/season-q3-2026.js?v=1" defer></script>\n<script src="/assets/market-map.js?v=1" defer></script>\n',
+        "head": '<link rel="stylesheet" href="/assets/market-map.css?v=2">\n'
+                '<script src="/assets/season-q3-2026.js?v=1" defer></script>\n<script src="/assets/market-map.js?v=2" defer></script>\n',
     }
 
 

@@ -1027,7 +1027,7 @@
 <link rel="stylesheet" href="/assets/financial-signals.css?v=7">
 <link rel="stylesheet" href="/assets/pagination.css?v=1">
 <link rel="stylesheet" href="/assets/panel-fold.css?v=1">
-<link rel="stylesheet" href="/assets/market-map.css?v=1">
+<link rel="stylesheet" href="/assets/market-map.css?v=2">
 <link rel="stylesheet" href="/assets/footer.css?v=d89dd84f32">
 <link rel="stylesheet" href="/assets/themes.css?v=995daca531" data-pulsarium-theme="styles">
 </head>
@@ -1163,23 +1163,32 @@
     </div>
   </div>
 
-  <section class="panel market-map" id="market-map" data-season="mini" aria-labelledby="market-map-title" hidden>
+  <div class="mm-deck" hidden><div class="mm-deck-row">
+  <section class="panel market-map mm-card" id="market-map" data-season="mini" aria-labelledby="market-map-title" hidden>
     <div class="panel-edge" aria-hidden="true"></div>
-    <div class="mm-head"><h2 id="market-map-title">Earnings season · Q3 2026</h2><p class="mm-cap">730 stocks on the first trading day after their reports</p></div>
-    <div class="mm-body">
-      <div class="mm-stage"><canvas role="img" aria-label="One line per company: up if the stock rose after its earnings report, down if it fell"></canvas></div>
-      <div class="mm-side">
-        <div class="mm-info" data-season-info aria-live="polite"></div>
-        <div class="mm-controls" role="group" aria-label="How the companies are grouped">
-          <button type="button" class="chip" data-season-layout="0">By date</button>
-          <button type="button" class="chip" data-season-layout="1">By result</button>
-          <button type="button" class="chip" data-season-layout="2">By sector</button>
-        </div>
-        <a class="mm-open" href="/earnings-season/">Open the full picture <span aria-hidden="true">↗</span></a>
+    <div class="mm-head"><h2 id="market-map-title">Earnings season · Q3 2026</h2><p class="mm-cap">730 stocks on the day after their reports</p></div>
+    <div class="mm-stage"><canvas role="img" aria-label="One line per company: up if the stock rose after its earnings report, down if it fell"></canvas></div>
+    <div class="mm-info" data-season-info aria-live="polite"></div>
+    <div class="mm-foot">
+      <div class="mm-controls" role="group" aria-label="How the companies are grouped">
+        <button type="button" class="chip" data-season-layout="0">By date</button>
+        <button type="button" class="chip" data-season-layout="1">By result</button>
+        <button type="button" class="chip" data-season-layout="2">By sector</button>
       </div>
+      <a class="mm-open" href="/earnings-season/">Full picture <span aria-hidden="true">↗</span></a>
     </div>
-    <p class="mm-note">Up = the stock rose, down = it fell. Companies worth $10B or more, reports from Oct 12 to Nov 11, 2026. Not investment advice.</p>
   </section>
+  <section class="panel mm-card mm-wide" id="insider-map" data-insider-map aria-labelledby="insider-map-title" hidden>
+    <div class="panel-edge" aria-hidden="true"></div>
+    <div class="mm-head"><h2 id="insider-map-title">Insider trades · this week</h2><p class="mm-cap">What company officers and directors bought and sold</p></div>
+    <div class="mm-stage"><canvas role="img" aria-label="Floating bubbles: companies whose officers and directors bought (green) or sold (red) shares this week; a bigger bubble is more money"></canvas></div>
+    <div class="mm-info" data-insider-info aria-live="polite"></div>
+    <div class="mm-foot">
+      <p class="mm-legend"><span><i class="buy"></i>Bought</span><span><i class="sell"></i>Sold</span><span><i class="plan"></i>Planned sale (10b5-1)</span></p>
+      <span class="mm-links"><a class="mm-open" href="/insider-buying/">Buying <span aria-hidden="true">↗</span></a><a class="mm-open" href="/insider-selling/">Selling <span aria-hidden="true">↗</span></a></span>
+    </div>
+  </section>
+  </div></div>
 
   <div class="controls-block">
     <div class="search-row">
@@ -1396,9 +1405,9 @@
 </dialog>
 <script src="/assets/pagination.js?v=1" defer></script>
 <script src="/assets/financial-signals.js?v=11" defer></script>
-<script src="/assets/panel-fold.js?v=3" defer></script>
+<script src="/assets/panel-fold.js?v=4" defer></script>
 <script src="/assets/season-q3-2026.js?v=1" defer></script>
-<script src="/assets/market-map.js?v=1" defer></script>
+<script src="/assets/market-map.js?v=2" defer></script>
 <script src="../news_data.js" onerror="window.__NO_DATA_FILE__ = true"></script>
 <script>
 (function () {

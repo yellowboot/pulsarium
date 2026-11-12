@@ -243,7 +243,7 @@
     const touch = window.matchMedia('(hover: none)').matches;
     function card() {
       if (!hot) {
-        info.innerHTML = `<p class="mm-k">${stats.big} companies worth $10B+</p>` +
+        info.innerHTML = `<p class="mm-k">${stats.big} companies worth $10B+${data.to ? ` · ${dayLabel(data.from)} – ${dayLabel(data.to)}` : ''}</p>` +
           `<p class="mm-big"><span class="up">${Math.round(stats.up)}% rose</span> · <span class="down">${Math.round(stats.down)}% fell</span></p>` +
           `<p class="mm-line">${beatShare}% beat profit forecasts. <b>${Math.round(stats.beatFell)}% of them fell anyway.</b></p>` +
           `<p class="mm-hint">${touch ? 'Tap' : 'Point at'} a line to see the company.</p>`;
@@ -285,11 +285,186 @@
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(readTheme);
   }
 
+  // ---------- 3. insider trades of the week: floating bubbles ----------
+  // One bubble per company whose officers or directors bought (green) or sold (red) its shares, from the
+  // public snapshot the Insider activity panel already reads (its session cache is shared, so normally no
+  // second request). The bubbles drift, push each other apart, move away from the pointer and can be dragged.
+  // A sale made under a 10b5-1 trading plan is an empty dashed ring: only the part of a bubble that was
+  // NOT planned is filled.
+  const RADAR = 'https://omkeplyeuxwlsqnblsjm.supabase.co/rest/v1/sec_insider_radar?id=eq.global&select=payload';
+  const RADAR_KEY = 'sb_publishable_Iike5dnuHEuwIIF-qruzzg_WkWJodcF', RADAR_CACHE = 'pulsarium:insider-radar:v2';
+  const usd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 });
+  const shortDay = (value) => (/^\d{4}-\d{2}-\d{2}$/.test(value || '') ? dayLabel(value) : '—');
+  function radarPayload() {
+    const cached = () => { try { const hit = JSON.parse(sessionStorage.getItem(RADAR_CACHE)); return hit && hit.payload && hit.payload.version === 1 ? hit.payload : null; } catch (_) { return null; } };
+    return new Promise((resolve) => {
+      let tries = 0;
+      const wait = () => {
+        const hit = cached();
+        if (hit) return resolve(hit);
+        if (++tries < 8) return setTimeout(wait, 350);          // the panel is reading the same snapshot right now
+        fetch(RADAR, { headers: { apikey: RADAR_KEY } }).then((response) => (response.ok ? response.json() : []))
+          .then((rows) => resolve(rows[0] && rows[0].payload && rows[0].payload.version === 1 ? rows[0].payload : null)).catch(() => resolve(null));
+      };
+      wait();
+    });
+  }
+
+  function insiderMap(root) {
+    const canvas = root.querySelector('canvas'), info = root.querySelector('[data-insider-info]'), stage = canvas && canvas.parentElement;
+    if (!canvas || !canvas.getContext || !info) return;
+    const ctx = canvas.getContext('2d');
+    root.hidden = false;
+    info.innerHTML = '<p class="mm-hint">Loading SEC disclosures…</p>';
+    radarPayload().then((payload) => {
+      // the wide list (every company of the week from $100K) once the export carries it, the top-five lists until then
+      const side = (wide, lists, kind) => {
+        const bySymbol = new Map();
+        for (const card of (Array.isArray(wide) && wide.length ? wide : lists.flat())) {
+          if (!card || !card.symbol || !(Number(card.amount) > 0)) continue;
+          const old = bySymbol.get(card.symbol);
+          if (!old || Number(card.amount) > Number(old.amount)) bySymbol.set(card.symbol, card);
+        }
+        return [...bySymbol.values()].map((card) => ({ card, side: kind, amount: Number(card.amount),
+          planned: kind === 'sell' ? clamp(Number(card.planned_amount || 0) / Number(card.amount)) : 0 }));
+      };
+      const sales = (payload && payload.sales) || {};
+      const all = payload ? [...side(payload.companies, [payload.large || [], payload.clusters || []], 'buy'),
+        ...side(sales.companies, [sales.large || [], sales.clusters || []], 'sell')].sort((a, b) => b.amount - a.amount) : [];
+      if (!all.length) { root.hidden = true; return; }
+      // sizes on a logarithmic scale: a $100K purchase and an $80M sale both stay readable, the label carries the dollars
+      const low = Math.log(all[all.length - 1].amount), high = Math.log(all[0].amount);
+      let seed = 11;
+      const rnd = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
+      all.forEach((b, i) => { b.u = high > low ? (Math.log(b.amount) - low) / (high - low) : 0.5; b.phase = rnd() * 6.283; b.grow = -i * 0.025; b.x = b.y = b.vx = b.vy = 0; b.fx = rnd(); b.fy = rnd(); });
+
+      let W = 0, H = 0, theme = {}, hot = null, drag = null, raf = 0, visible = false, last = 0, clock = 0, placed = false;
+      const pointer = { in: false, x: 0, y: 0, vx: 0, vy: 0, dx: 0, dy: 0, moved: 0 };
+      const readTheme = () => { const cs = getComputedStyle(root), v = (name, fallback) => cs.getPropertyValue(name).trim() || fallback;
+        theme = { pos: v('--pos', '#3dffa2'), neg: v('--neg', '#ff6b8e'), hi: v('--text-hi', '#e6f1ff'), mid: v('--text-mid', '#a9bddf'), mono: v('--font-mono', "'JetBrains Mono', monospace") }; };
+      const tint = (color, alpha) => (/^#[0-9a-f]{6}$/i.test(color) ? color + Math.round(alpha * 255).toString(16).padStart(2, '0') : color);
+      const home = (b) => (b.side === 'buy' ? W * 0.3 : W * 0.7);
+      const fit = () => {
+        const box = stage.getBoundingClientRect(); if (box.width < 40 || box.height < 40) return false;
+        const oldW = W, oldH = H;
+        W = box.width; H = box.height; const dpr = Math.min(2, window.devicePixelRatio || 1);
+        canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        // the bubbles together cover about a third of the picture: the rest is open water for them to move in
+        const base = all.map((b) => 13 + 42 * Math.pow(b.u, 1.3)), area = base.reduce((sum, r) => sum + Math.PI * r * r, 0);
+        const scale = clamp(Math.sqrt(0.34 * W * H / area), 0.4, 1.7);
+        all.forEach((b, i) => { b.r = Math.max(9, base[i] * scale);
+          if (!placed) { b.x = home(b) + (b.fx - 0.5) * W * 0.34; b.y = H * (0.15 + 0.7 * b.fy); } else { b.x *= W / oldW; b.y *= H / oldH; } });
+        if (!placed) { placed = true; for (let i = 0; i < 160; i++) step(1 / 60, 0, true); }      // settle before the first frame
+        return true;
+      };
+      function step(dt, t, quiet) {
+        const calm = quiet || still.matches, damp = Math.pow(quiet ? 0.9 : 0.945, dt * 60);       // light water: a pushed bubble glides on
+        for (const b of all) {
+          if (b === drag) continue;
+          b.vx += (home(b) - b.x) * (quiet ? 0.3 : 0.1) * dt; b.vy += (H / 2 - b.y) * (quiet ? 0.22 : 0.05) * dt;   // each colour drifts back to its side
+          if (!calm) { b.vx += Math.cos(t * 0.5 + b.phase) * 18 * dt; b.vy += Math.sin(t * 0.43 + b.phase * 1.3) * 18 * dt; }   // slow drift
+          if (pointer.in && !quiet && b !== hot) {                                                 // the pointer parts the bubbles around it
+            const dx = b.x - pointer.x, dy = b.y - pointer.y, d = Math.hypot(dx, dy) || 1, reach = b.r + 78;
+            if (d < reach) { const push = (1 - d / reach); b.vx += (dx / d * 1100 + pointer.vx * 2.4) * push * dt; b.vy += (dy / d * 1100 + pointer.vy * 2.4) * push * dt; }
+          }
+          b.vx *= damp; b.vy *= damp; b.x += b.vx * dt; b.y += b.vy * dt;
+        }
+        for (let pass = 0; pass < 3; pass++) {
+          for (let i = 0; i < all.length; i++) for (let j = i + 1; j < all.length; j++) {
+            const a = all[i], b = all[j], dx = b.x - a.x, dy = b.y - a.y, gap = a.r + b.r + 1.5, d2 = dx * dx + dy * dy;
+            if (d2 >= gap * gap) {
+              // neighbours that are close but not touching ease apart, so the field spreads out instead of clumping
+              const room = gap + 18; if (!pass && !quiet && d2 < room * room) { const d = Math.sqrt(d2), ease = (1 - (d - gap) / 18) * 46 * dt, ma = a.r * a.r, mb = b.r * b.r;
+                a.vx -= dx / d * ease * mb / (ma + mb); a.vy -= dy / d * ease * mb / (ma + mb); b.vx += dx / d * ease * ma / (ma + mb); b.vy += dy / d * ease * ma / (ma + mb); }
+              continue;
+            }
+            const d = Math.sqrt(d2) || 0.01, over = gap - d, nx = dx / d, ny = dy / d, ma = a.r * a.r, mb = b.r * b.r;
+            const sa = a === drag ? 0 : b === drag ? 1 : mb / (ma + mb), sb = 1 - sa;
+            a.x -= nx * over * sa; a.y -= ny * over * sa; b.x += nx * over * sb; b.y += ny * over * sb;
+            if (!pass && !quiet) { const kick = over * 7; a.vx -= nx * kick * sa; a.vy -= ny * kick * sa; b.vx += nx * kick * sb; b.vy += ny * kick * sb; }   // a bump passes the push on
+          }
+          for (const b of all) {
+            if (b.x < b.r + 2) { b.x = b.r + 2; b.vx = Math.abs(b.vx) * 0.3; } else if (b.x > W - b.r - 2) { b.x = W - b.r - 2; b.vx = -Math.abs(b.vx) * 0.3; }
+            if (b.y < b.r + 2) { b.y = b.r + 2; b.vy = Math.abs(b.vy) * 0.3; } else if (b.y > H - b.r - 2) { b.y = H - b.r - 2; b.vy = -Math.abs(b.vy) * 0.3; }
+          }
+        }
+      }
+      const label = (text, x, y, size, color) => { ctx.font = `600 ${size}px ${theme.mono}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = color; ctx.fillText(text, x, y); };
+      const draw = (dt) => {
+        ctx.clearRect(0, 0, W, H);
+        for (const b of all.slice().sort((p, q) => (p === hot) - (q === hot) || q.r - p.r)) {
+          b.grow = Math.min(1, b.grow + dt * 1.6);
+          if (b.grow <= 0) continue;
+          const R = b.r * easeOut(b.grow), color = b.side === 'buy' ? theme.pos : theme.neg, on = hot === b || drag === b;
+          // sold under a trading plan: that share of the bubble stays empty inside a dashed ring
+          const filled = R * Math.sqrt(1 - b.planned);
+          if (filled > 0.6) {
+            const glow = ctx.createRadialGradient(b.x, b.y, filled * 0.2, b.x, b.y, filled);
+            glow.addColorStop(0, tint(color, on ? 0.2 : 0.07)); glow.addColorStop(1, tint(color, on ? 0.6 : 0.42));
+            ctx.beginPath(); ctx.arc(b.x, b.y, filled, 0, 2 * Math.PI); ctx.fillStyle = glow; ctx.fill();
+          }
+          ctx.beginPath(); ctx.arc(b.x, b.y, R, 0, 2 * Math.PI); ctx.setLineDash(b.planned > 0.01 ? [4, 3] : []);
+          ctx.strokeStyle = on ? theme.hi : color; ctx.lineWidth = on ? 1.8 : 1.2; ctx.stroke(); ctx.setLineDash([]);
+          if (R >= 15) { label(b.card.symbol, b.x, b.y - (R >= 27 ? 5 : 0), clamp(R * 0.38, 8.5, 13), theme.hi); if (R >= 27) label(usd.format(b.amount), b.x, b.y + 9, clamp(R * 0.26, 8.5, 10.5), theme.mid); }
+        }
+      };
+      const card = () => {
+        if (!hot) {
+          info.innerHTML = `<p class="mm-k">Last ${Number(payload.window_days) || 7} days · through ${shortDay(payload.through)} · ${all.length} companies</p>` +
+            '<p class="mm-line">Each bubble is a company whose officers or directors bought or sold its shares (SEC Form 4). A bigger bubble is more money.</p>' +
+            `<p class="mm-hint">${window.matchMedia('(hover: none)').matches ? 'Tap a bubble, or drag it.' : 'Point at a bubble, or drag it.'}</p>`;
+          return;
+        }
+        const c = hot.card, count = Number(hot.side === 'buy' ? c.buyers : c.sellers) || 1;
+        const plan = hot.planned > 0.99 ? ' <b>Sold under a 10b5-1 trading plan.</b>' : hot.planned > 0.01 ? ` <b>${usd.format(Number(c.planned_amount))} of it under a 10b5-1 trading plan.</b>` : '';
+        info.innerHTML = `<p class="mm-k">${esc(c.symbol)} · ${hot.side === 'buy' ? 'bought' : 'sold'} · ${shortDay(c.start)}${c.end && c.end !== c.start ? '–' + shortDay(c.end) : ''}</p>` +
+          `<p class="mm-name">${esc(c.name || c.symbol)}</p><p class="mm-move ${hot.side === 'buy' ? 'up' : 'down'}">${usd.format(hot.amount)}</p>` +
+          `<p class="mm-line">${count} officer${count === 1 ? '' : 's'} / director${count === 1 ? '' : 's'}.${plan}</p>`;
+      };
+      const under = () => all.filter((b) => Math.hypot(b.x - pointer.x, b.y - pointer.y) <= b.r + 2).sort((a, b) => a.r - b.r)[0] || null;
+      const tick = (now) => {
+        raf = 0; if (!visible) return;
+        const dt = Math.min(0.05, (now - (last || now)) / 1000); last = now; clock += dt;
+        step(dt, clock, false);
+        pointer.vx *= 0.8; pointer.vy *= 0.8;
+        if (!drag && (pointer.in || hot)) { const hit = pointer.in ? under() : null; if (hit !== hot) { hot = hit; card(); canvas.style.cursor = hot ? 'grab' : ''; } }
+        draw(dt);
+        raf = requestAnimationFrame(tick);
+      };
+      const run = () => { if (visible && !raf && W) { last = 0; raf = requestAnimationFrame(tick); } };
+      const track = (event) => { const box = canvas.getBoundingClientRect(), x = event.clientX - box.left, y = event.clientY - box.top;
+        pointer.vx = (x - pointer.x) * 30; pointer.vy = (y - pointer.y) * 30; pointer.x = x; pointer.y = y; };
+      canvas.addEventListener('pointermove', (event) => {
+        const wasIn = pointer.in; track(event); if (!wasIn) { pointer.vx = pointer.vy = 0; }
+        pointer.in = event.pointerType !== 'touch' || !!drag;
+        if (drag) { pointer.moved += Math.abs(pointer.vx) + Math.abs(pointer.vy); drag.x = pointer.x + pointer.dx; drag.y = pointer.y + pointer.dy; drag.vx = pointer.vx * 0.9; drag.vy = pointer.vy * 0.9; }
+      });
+      canvas.addEventListener('pointerdown', (event) => {
+        track(event); pointer.vx = pointer.vy = 0; pointer.moved = 0;
+        const hit = under(); if (hit !== hot) { hot = hit; card(); }
+        if (hit) { drag = hit; pointer.dx = hit.x - pointer.x; pointer.dy = hit.y - pointer.y; canvas.style.cursor = 'grabbing'; try { canvas.setPointerCapture(event.pointerId); } catch (_) { /* no capture */ } }
+        // a click on open water sends a ripple: everything nearby is thrown outwards
+        else if (!still.matches) for (const b of all) { const dx = b.x - pointer.x, dy = b.y - pointer.y, d = Math.hypot(dx, dy) || 1, reach = b.r + 190; if (d < reach) { const kick = 620 * (1 - d / reach); b.vx += dx / d * kick; b.vy += dy / d * kick; } }
+      });
+      const release = (event) => { if (drag) { drag = null; canvas.style.cursor = hot ? 'grab' : ''; } if (event.pointerType === 'touch') pointer.in = false; };
+      canvas.addEventListener('pointerup', release); canvas.addEventListener('pointercancel', release);
+      canvas.addEventListener('pointerleave', () => { if (!drag) { pointer.in = false; if (hot) { hot = null; card(); } } });
+      readTheme(); card();
+      new MutationObserver(readTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-color-theme', 'class', 'style'] });
+      new ResizeObserver(() => { if (fit()) run(); }).observe(stage);
+      new IntersectionObserver((entries) => { visible = entries.some((entry) => entry.isIntersecting); if (visible) { fit(); run(); } }, { rootMargin: '80px' }).observe(stage);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(readTheme);
+    });
+  }
+
   const boot = () => {
     try { compactRow(); } catch (error) { console.error('market-map: compact row', error); }
+    const deck = document.querySelector('.mm-deck');
+    if (deck) deck.hidden = false;
     $$('[data-season]').forEach((root) => {
       try { if (window.PULSARIUM_SEASON) { root.hidden = false; seasonRing(root); } } catch (error) { console.error('market-map: season ring', error); }
     });
+    $$('[data-insider-map]').forEach((root) => { try { insiderMap(root); } catch (error) { root.hidden = true; console.error('market-map: insiders', error); } });
   };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 })();

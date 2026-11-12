@@ -4,7 +4,7 @@
 // (panel-fold.css applies only to narrow screens).
 (() => {
   const PANELS = [
-    ['.panel-mentions', 'mentions'], ['.quotes-panel', 'indices'], ['#market-map', 'season'],
+    ['.panel-mentions', 'mentions'], ['.quotes-panel', 'indices'], ['#market-map', 'season'], ['#insider-map', 'insider-map'],
     ['#insider-radar', 'insider'], ['#sector-overview', 'sectors'], ['#financial-signals', 'reports'],
   ];
   const phone = window.matchMedia('(max-width: 700px)');

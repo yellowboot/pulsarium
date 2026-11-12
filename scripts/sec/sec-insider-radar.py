@@ -33,6 +33,7 @@ from sec_read_cache import ReadCache, INSIDER_CACHE, INSIDER_SELECT, insider_row
 UTC = dt.timezone.utc
 WINDOW_DAYS = 7
 MIN_PURCHASE = 100_000
+MAP_COMPANIES = 60  # companies per side in the compact list behind the news page's bubble map
 SEC_ROOT = "https://www.sec.gov/Archives/"
 
 
@@ -183,6 +184,16 @@ def parse_filing(text, accession, filed_date, source_path):
         source=SEC_ROOT + source_path)
 
 
+def compact_companies(cards, people_key):
+    """Every company of the window at or above MIN_PURCHASE, largest first, with only what the
+    bubble map draws (the full cards stay in the top-five lists)."""
+    rows = sorted((g for g in cards if g["amount"] >= MIN_PURCHASE), key=lambda g: (-g["amount"], g["symbol"]))
+    return [{"symbol": g["symbol"], "name": g["name"], "amount": g["amount"], people_key: g[people_key],
+             "start": g["start"], "end": g["end"],
+             **({"planned_amount": g["planned_amount"]} if g.get("planned_amount") else {})}
+            for g in rows[:MAP_COMPANIES]]
+
+
 def snapshot(records, state, today):
     earliest = (today - dt.timedelta(days=WINDOW_DAYS - 1)).isoformat()
     eligible = []
@@ -253,6 +264,7 @@ def snapshot(records, state, today):
         coverage=dict(processed=done, discovered=len(relevant),
                       complete=done == len(relevant) and bool(state.get("through"))),
         clusters=clusters, large=large, qualifying_companies=len(cards),
+        companies=compact_companies(cards, "buyers"),
         sales=sale_snapshot(records, state, today),
         methodology="Direct, priced purchases (Form 4 code P) by one officer or director per filing. "
                     "USD only; identified trading plans, dividend reinvestments, IPO programs, "
@@ -316,6 +328,7 @@ def sale_snapshot(records, state, today):
         large=sorted((g for g in cards if g["amount"] >= MIN_PURCHASE),
                      key=lambda g: (-g["amount"], g["symbol"]))[:5],
         qualifying_companies=len(cards),
+        companies=compact_companies(cards, "sellers"),
         methodology="Direct, priced sales (Form 4 code S) by one officer or director per filing. "
             "USD only; private transactions and unresolved amendments are excluded. "
             "Identified 10b5-1 plans are included and marked. "

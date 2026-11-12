@@ -67,14 +67,39 @@
 
 /* ---------- 2. the earnings-season block ---------- */
 .market-map[hidden] { display: none !important; }
-.dash > .hero-grid > .market-map { display: block; height: auto; overflow: hidden; }
-@media (min-width: 701px) { .dash > .hero-grid.mm-row > .market-map { grid-area: map; } }
-.market-map .mm-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin: 0 0 6px; }
-.market-map .mm-head h2 { margin: 0; }
-.market-map .mm-cap { margin: 0; font-size: 12.5px; color: var(--text-low); }
+/* the row of cards on the news page: each card has a fixed width range, up to three in a row,
+   and they wrap to the next row on narrower screens */
+.mm-deck[hidden], .mm-card[hidden] { display: none !important; }
+.mm-deck { container-type: inline-size; min-width: 0; }
+.mm-deck-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; max-width: 1476px; }
+/* two equal cards side by side when each gets at least ~480px; otherwise one under the other, full width */
+@container (min-width: 980px) { .mm-deck-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 701px) { .dash > .hero-grid.mm-row > .mm-deck { grid-area: map; } }
+.mm-card {
+  --mm-acc: var(--gold-1, var(--accent, #00f0ff)); --mm-mono: var(--font-mono, 'JetBrains Mono', monospace);
+  display: flex; flex-direction: column; height: auto; min-width: 0; padding: 16px 18px 14px; overflow: hidden;
+}
+.mm-card .mm-head { display: block; margin: 0 0 8px; }
+.mm-card .mm-head h2 { margin: 0 0 4px; }
+.mm-card .mm-cap { margin: 0; font-size: 12px; line-height: 1.4; color: var(--text-low); }
+.mm-card .mm-stage { aspect-ratio: 1.86; max-height: 310px; }
+.mm-card .mm-info { min-height: 100px; margin-top: 10px; }
+/* the wide card: its picture takes the height the row gives it; on its own row it is a fixed 320px */
+.mm-wide .mm-stage { aspect-ratio: auto; height: 320px; }
+.mm-wide .mm-stage canvas { cursor: default; }
+@container (min-width: 980px) { .mm-wide .mm-stage { height: auto; flex: 1 1 auto; min-height: 250px; } .mm-wide .mm-info { min-height: 84px; } }
+.mm-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; margin-top: auto; padding-top: 10px; }
+.mm-card .mm-controls .chip { padding: 4px 10px; font-size: 11.5px; }
+.mm-legend { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 0; font-size: 11.5px; color: var(--text-mid); }
+.mm-legend i { display: inline-block; width: 9px; height: 9px; margin-right: 5px; border-radius: 50%; vertical-align: -1px; }
+.mm-legend i.buy { background: var(--pos); } .mm-legend i.sell { background: var(--neg); }
+.mm-legend i.plan { border: 1.5px dashed var(--neg); }
+.mm-links { display: flex; gap: 14px; }
+/* shared by the cards and the full page */
 .mm-body { display: grid; grid-template-columns: minmax(0, 1fr) 236px; gap: 18px; align-items: center; }
 .mm-stage { position: relative; min-width: 0; aspect-ratio: 1.86; max-height: 290px; }
-.mm-stage canvas { display: block; width: 100%; height: 100%; cursor: crosshair; touch-action: pan-y; }
+/* the canvas is laid over its stage, so its own pixel size never feeds back into the layout */
+.mm-stage canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; cursor: crosshair; touch-action: pan-y; }
 .mm-side { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
 .mm-info { min-height: 96px; }
 .mm-info p { margin: 0; }
@@ -101,9 +126,11 @@
 }
 @media (max-width: 700px) {
   /* the folded heading stays one row like its neighbours: title and arrow, the caption under them when open */
-  .market-map .mm-head h2 { flex: 1; }
-  .market-map .mm-head .mm-cap { order: 3; flex-basis: 100%; }
-  .market-map[data-folded='true'] .mm-cap { display: none; }
+  .mm-card .mm-head { display: flex; flex-wrap: wrap; }
+  .mm-card .mm-head h2 { flex: 1; margin: 0; }
+  .mm-card .mm-head .mm-cap { order: 3; flex-basis: 100%; }
+  .mm-card[data-folded='true'] .mm-cap { display: none; }
+  .mm-card[data-folded='true'] .mm-head { margin-bottom: 0; }
 }
 
 /* the full page (/earnings-season/) */

@@ -163,6 +163,34 @@ class RadarTests(unittest.TestCase):
             payload = radar.parse_filing(raw, row['accession'], row['filed_date'], row['source_path'])
             self.assertEqual(payload['sales'], [])
 
+    def test_compact_company_list_covers_the_window_beyond_the_top_five(self):
+        # eight companies buy and sell; the top-five lists stop at five, the compact list keeps all of them
+        rows = []
+        for n in range(8):
+            buy = record(accession=f'0000000123-26-0001{n:02d}')
+            buy['payload']['issuer_cik'], buy['payload']['symbol'] = 500 + n, f'B{n}'
+            buy['payload']['purchases'][0]['amount'] = 150000 + n * 1000
+            sale = sale_record(accession=f'0000000123-26-0002{n:02d}')
+            sale['payload']['issuer_cik'], sale['payload']['symbol'] = 700 + n, f'S{n}'
+            sale['payload']['sales'][0]['amount'] = 250000 + n * 1000
+            sale['payload']['sales'][0]['planned'] = n == 7
+            rows += [buy, sale]
+        small = record(accession='0000000123-26-000399')
+        small['payload']['issuer_cik'], small['payload']['symbol'] = 999, 'TINY'
+        small['payload']['purchases'][0]['amount'] = radar.MIN_PURCHASE - 1
+        result = summary(rows + [small])
+        self.assertEqual(len(result['large']), 5)
+        bought, sold = result['companies'], result['sales']['companies']
+        self.assertEqual([c['symbol'] for c in bought], [f'B{n}' for n in range(7, -1, -1)])
+        self.assertEqual(set(bought[0]), {'symbol', 'name', 'amount', 'buyers', 'start', 'end'})
+        self.assertEqual(len(sold), 8)
+        self.assertEqual(sold[0]['symbol'], 'S7')
+        self.assertEqual(sold[0]['planned_amount'], sold[0]['amount'])
+        self.assertNotIn('planned_amount', sold[1])
+        self.assertEqual(sold[0]['sellers'], 1)
+        with patch.object(radar, 'MAP_COMPANIES', 3):
+            self.assertEqual(len(summary(rows)['companies']), 3)
+
     def test_planned_sales_are_included_and_marked(self):
         row = sale_record()
         row['payload']['sales'][0]['planned'] = True
