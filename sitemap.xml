@@ -394,6 +394,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/cm/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/cmcsa/</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>hourly</changefreq>
@@ -455,7 +460,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/csco/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1715,7 +1720,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/airlines-travel/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1990,7 +1995,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/ual/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>

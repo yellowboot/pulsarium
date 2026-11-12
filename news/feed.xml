@@ -6,15 +6,420 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Thu, 12 Nov 2026 20:37:24 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 12 Nov 2026 21:37:24 +0000</lastBuildDate>
   <item>
-    <title>Nasdaq falters as Nvidia shares fall on CEO exit, oil prices rise: Live updates</title>
+    <title>Billionaire investor Bill Ackman on why he&#x27;s staying bullish on Netflix</title>
+    <link>https://finance.yahoo.com/markets/stocks/article/billionaire-investor-bill-ackman-on-why-hes-staying-bullish-on-netflix-213455263.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/article/billionaire-investor-bill-ackman-on-why-hes-staying-bullish-on-netflix-213455263.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:34:55 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>An impassioned defense of Netflix from one of its highest profile investors.</description>
+    <category>NFLX</category>
+  </item>
+  <item>
+    <title>Microsoft outage hits Outlook. AWS and Google users also report issues</title>
+    <link>https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html</guid>
+    <pubDate>Thu, 12 Nov 2026 21:34:33 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Amazon Web Services and Google users also reported outages on Thursday</description>
+    <category>MSFT</category><category>GOOGL</category><category>AMZN</category>
+  </item>
+  <item>
+    <title>Cerebras surges 18% after beating on quarterly revenue and announcing Microsoft deal</title>
+    <link>https://www.cnbc.com/2026/11/12/cerebras-systems-cbrs-q3-earnings-report-2026.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/12/cerebras-systems-cbrs-q3-earnings-report-2026.html</guid>
+    <pubDate>Thu, 12 Nov 2026 21:33:44 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Cerebras announced a new deal with Microsoft after partnering with major cloud providers Amazon and Oracle.</description>
+    <category>ORCL</category><category>MSFT</category><category>AMZN</category><category>CBRS</category>
+  </item>
+  <item>
+    <title>Alice Huang Held Stake in Data Center Network Serving a Chinese Nvidia Rival: Report</title>
+    <link>https://www.ibtimes.com/alice-huang-china-data-center-huawei-links-3809705?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.ibtimes.com/alice-huang-china-data-center-huawei-links-3809705?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:30:39 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>An investigation found that Alice Huang held interests in Chinese companies linked to a data center serving Huawei, but uncovered no evidence of unauthorized Nvidia chip transfers.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Nasdaq Composite slides as Nvidia shares tumble on Jensen Huang’s exit; oil prices jump</title>
     <link>https://www.cnbc.com/2026/11/11/stock-market-today-live-updates.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/11/11/stock-market-today-live-updates.html</guid>
-    <pubDate>Thu, 12 Nov 2026 20:36:30 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 21:30:14 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The Nasdaq Composite fluctuated on Thursday as investors weighed the departure of Nvidia CEO Jensen Huang.</description>
+    <description>The Nasdaq Composite fell on Thursday as investors weighed the departure of Nvidia CEO Jensen Huang.</description>
     <category>NVDA</category><category>QQQ</category>
+  </item>
+  <item>
+    <title>SpaceX Announces $74 Billion AI Data-Center Expansions In Texas, Arizona</title>
+    <link>https://finance.yahoo.com/m/e6bf5c95-76fe-3674-87b1-bc487e070f4f/spacex-announces-%2474-billion.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/e6bf5c95-76fe-3674-87b1-bc487e070f4f/spacex-announces-%2474-billion.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:26:54 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>SpaceX on Thursday announced plans to invest $74 billion to build new AI data center facilities in Texas, Arizona. SPCX stock rises.</description>
+    <category>SPCX</category>
+  </item>
+  <item>
+    <title>“The Hub Was Suddenly Removed”: Nvidia’s CEO Exit Sinks CoreWeave 7%</title>
+    <link>https://www.tikr.com/blog/the-hub-was-suddenly-removed-nvidias-ceo-exit-sinks-coreweave-7?ref=yahoofinance&amp;tlnk=yf-261112-8644h4gq&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.tikr.com/blog/the-hub-was-suddenly-removed-nvidias-ceo-exit-sinks-coreweave-7?ref=yahoofinance&amp;tlnk=yf-261112-8644h4gq&amp;.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:26:17 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Key TakeawaysCoreWeave fell as much as 15% on Thursday after Jensen Huang resigned as Nvidia’s CEO, and CFO Colette Kress took over as interim CEO. CoreWeave has far more to lose than Nvidia if a more cautious Nvidia backs its customers…</description>
+    <category>NVDA</category><category>CRWV</category>
+  </item>
+  <item>
+    <title>Russia stocks higher at close of trade; MOEX Russia Index up 0.05%</title>
+    <link>https://www.investing.com/news/stock-market-news/russia-stocks-higher-at-close-of-trade-moex-russia-index-up-005-5023292</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/russia-stocks-higher-at-close-of-trade-moex-russia-index-up-005-5023292</guid>
+    <pubDate>Thu, 12 Nov 2026 21:25:30 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Colombia stocks lower at close of trade; COLCAP down 1.53%</title>
+    <link>https://www.investing.com/news/stock-market-news/colombia-stocks-lower-at-close-of-trade-colcap-down-153-5023291</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/colombia-stocks-lower-at-close-of-trade-colcap-down-153-5023291</guid>
+    <pubDate>Thu, 12 Nov 2026 21:25:06 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>SpaceX, Tesla merger talks progress, Bloomberg News reports</title>
+    <link>https://www.investing.com/news/stock-market-news/spacex-tesla-merger-talks-progress-bloomberg-news-reports-5023102</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/spacex-tesla-merger-talks-progress-bloomberg-news-reports-5023102</guid>
+    <pubDate>Thu, 12 Nov 2026 21:24:15 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>TSLA</category><category>SPCX</category>
+  </item>
+  <item>
+    <title>Microsoft outage disrupts Outlook, Teams, and Copilot for users &#x27;in any region&#x27;</title>
+    <link>https://finance.yahoo.com/markets/article/microsoft-outage-disrupts-outlook-teams-and-copilot-for-users-in-any-region-212333470.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/article/microsoft-outage-disrupts-outlook-teams-and-copilot-for-users-in-any-region-212333470.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:23:33 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Microsoft (MSFT) said it was working to restore access to its workplace software after customers reported problems connecting to email and other services.</description>
+    <category>MSFT</category>
+  </item>
+  <item>
+    <title>Musk Offers To Hire Huang; Prediction Markets Capitalize On Scandal</title>
+    <link>https://finance.yahoo.com/m/fd39cc0a-7d86-300c-bfea-eea35ddc02a0/musk-offers-to-hire-huang%3B.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/fd39cc0a-7d86-300c-bfea-eea35ddc02a0/musk-offers-to-hire-huang%3B.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:23:01 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Elon Musk shows support for Jensen Huang as pressure mounts on the Nvidia CEO. Prediction markets bet on Huang, Nvidia&#x27;s future.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Sugar Prices Tumble with the Brazilian Real</title>
+    <link>https://www.nasdaq.com/articles/sugar-prices-tumble-brazilian-real</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/sugar-prices-tumble-brazilian-real</guid>
+    <pubDate>Thu, 12 Nov 2026 21:21:05 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>March NY world sugar #11 (SBH27 ) closed down -0.26 (-1.41%) on Thursday, and December London ICE white sugar #5 (SWZ26 ) closed down -1.70 (-0.33%). Sugar prices retreated on Thursday, with NY sugar just above Tuesday’s 6-week low.…</description>
+    
+  </item>
+  <item>
+    <title>Excessive Ivory Coast Rains Disrupt Cocoa Supplies and Boost Prices</title>
+    <link>https://www.nasdaq.com/articles/excessive-ivory-coast-rains-disrupt-cocoa-supplies-and-boost-prices</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/excessive-ivory-coast-rains-disrupt-cocoa-supplies-and-boost-prices</guid>
+    <pubDate>Thu, 12 Nov 2026 21:21:05 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>December ICE NY cocoa (CCZ26 ) closed up +159 (+3.24%) on Thursday, and ICE London cocoa #7 (CAZ26 ) closed up +75 (+2.00%). Cocoa prices rallied sharply for a second day on Thursday as short covering intensified in cocoa futures on…</description>
+    
+  </item>
+  <item>
+    <title>Tightness in ICE Inventories Lifts Arabica Coffee Prices</title>
+    <link>https://www.nasdaq.com/articles/tightness-ice-inventories-lifts-arabica-coffee-prices</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/tightness-ice-inventories-lifts-arabica-coffee-prices</guid>
+    <pubDate>Thu, 12 Nov 2026 21:21:05 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>December arabica coffee (KCZ26 ) closed up +11.20 (+4.16%) on Thursday, and January ICE robusta coffee (RMF27 ) closed down -38 (-1.17%). Coffee prices settled mixed on Thursday, with arabica rebounding from a 4.75-month low and robusta…</description>
+    
+  </item>
+  <item>
+    <title>AI Chipmaker Cerebras Tops Q3 Views, Adds Big Customers</title>
+    <link>https://finance.yahoo.com/m/796c2692-2257-3845-800e-6fe66e2532b9/ai-chipmaker-cerebras-tops-q3.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/796c2692-2257-3845-800e-6fe66e2532b9/ai-chipmaker-cerebras-tops-q3.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:20:49 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>AI chipmaker Cerebras beat expectations for the third quarter and with its Q4 outlook. Cerebras stock jumped.</description>
+    <category>CBRS</category>
+  </item>
+  <item>
+    <title>Cisco beats on earnings, says AI infrastructure revenue will double this fiscal year</title>
+    <link>https://www.cnbc.com/2026/11/12/cisco-csco-q1-2027-earnings.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/12/cisco-csco-q1-2027-earnings.html</guid>
+    <pubDate>Thu, 12 Nov 2026 21:20:35 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Cisco is trying to become a bigger player in AI after missing out on the early years of the boom.</description>
+    <category>CSCO</category>
+  </item>
+  <item>
+    <title>SpaceX, Telsa merger talks begin to take shape</title>
+    <link>https://finance.yahoo.com/video/spacex-telsa-merger-talks-begin-to-take-shape-212004858.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/video/spacex-telsa-merger-talks-begin-to-take-shape-212004858.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:20:04 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Yahoo Finance Executive Editor Brian Sozzi shares the latest Bloomberg report that SpaceX (SPCX) and Tesla (TSLA) are in talks about a potential merger at Yahoo Finance&#x27;s 2026 Invest conference.</description>
+    <category>TSLA</category><category>SPCX</category>
+  </item>
+  <item>
+    <title>Cisco raises annual revenue forecast on strong AI networking demand</title>
+    <link>https://www.investing.com/news/stock-market-news/cisco-raises-annual-revenue-forecast-on-strong-ai-networking-demand-5023256</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/cisco-raises-annual-revenue-forecast-on-strong-ai-networking-demand-5023256</guid>
+    <pubDate>Thu, 12 Nov 2026 21:19:27 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>CSCO</category>
+  </item>
+  <item>
+    <title>Applied Materials forecasts quarterly revenue above estimates on strong AI chip demand</title>
+    <link>https://www.investing.com/news/stock-market-news/applied-materials-forecasts-quarterly-revenue-above-estimates-on-strong-ai-chip-demand-5023205</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/applied-materials-forecasts-quarterly-revenue-above-estimates-on-strong-ai-chip-demand-5023205</guid>
+    <pubDate>Thu, 12 Nov 2026 21:19:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>AMAT</category>
+  </item>
+  <item>
+    <title>Kalshi in talks to raise money at $65 billion valuation, Bloomberg News reports</title>
+    <link>https://www.investing.com/news/stock-market-news/kalshi-in-talks-to-raise-money-at-65-billion-valuation-bloomberg-news-reports-5023255</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/kalshi-in-talks-to-raise-money-at-65-billion-valuation-bloomberg-news-reports-5023255</guid>
+    <pubDate>Thu, 12 Nov 2026 21:18:58 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>How major US stock indexes fared Thursday 11/12/2026</title>
+    <link>https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-211731317.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-211731317.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:17:31 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>stock market shook, but it largely absorbed big swings for Nvidia and oil prices and finished with relatively modest losses. After dropping nearly 1% at the start of Thursday’s trading, the S&amp;P 500 erased all the loss before finishing…</description>
+    <category>NVDA</category><category>SPY</category>
+  </item>
+  <item>
+    <title>Nvidia stock closes down over 4% after CEO Jensen Huang announces resignation</title>
+    <link>https://www.cnbc.com/2026/11/12/nvidia-nvda-jensen-huang-second-affair.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/12/nvidia-nvda-jensen-huang-second-affair.html</guid>
+    <pubDate>Thu, 12 Nov 2026 21:17:21 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Chief Financial Officer Colette Kress will serve as interim CEO until a new leader is appointed.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Anthropic IPO demand jumps to six times available shares</title>
+    <link>https://www.investing.com/news/stock-market-news/anthropic-ipo-demand-jumps-to-six-times-available-shares-5023216</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/anthropic-ipo-demand-jumps-to-six-times-available-shares-5023216</guid>
+    <pubDate>Thu, 12 Nov 2026 21:17:08 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Dollar Rises and Gold Sinks as T-note Yields Climb</title>
+    <link>https://www.nasdaq.com/articles/dollar-rises-and-gold-sinks-t-note-yields-climb</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/dollar-rises-and-gold-sinks-t-note-yields-climb</guid>
+    <pubDate>Thu, 12 Nov 2026 21:16:30 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The dollar index (DXY00 ) climbed to a fresh 1.5-year high today and is up +0.26%. The dollar erased overnight losses and turned higher after crude oil prices and T-note yields rose on hawkish comments from President Trump, who said the…</description>
+    
+  </item>
+  <item>
+    <title>Nvidia Should Call Tim Cook, the One Leader Big Enough to Step Into Jensen Huang’s Empty Chair</title>
+    <link>https://247wallst.com/videos/nvidia-should-call-tim-cook-the-one-leader-big-enough-to-step-into-jensen-huangs-empty-chair/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/videos/nvidia-should-call-tim-cook-the-one-leader-big-enough-to-step-into-jensen-huangs-empty-chair/?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:15:43 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Tim Cook is the logical choice to run Nvidia (NASDAQ: NVDA) after Jensen Huang, says 24/7 Wall St. co-founder Douglas A. McIntyre.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Don&#x27;t major on minors: Why a great flat-rate card is the best way to optimize rewards</title>
+    <link>https://www.cnbc.com/select/why-you-need-a-2-percent-cash-back-card/</link>
+    <guid isPermaLink="false">https://www.cnbc.com/select/why-you-need-a-2-percent-cash-back-card/</guid>
+    <pubDate>Thu, 12 Nov 2026 21:14:50 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>If you struggle to wrap your head around your rewards credit card&#x27;s features, a card that earns 2% cash back everywhere may be the answer.</description>
+    
+  </item>
+  <item>
+    <title>Kalshi in talks for new funding at $65 billion valuation, Bloomberg reports</title>
+    <link>https://www.investing.com/news/stock-market-news/kalshi-in-talks-for-new-funding-at-65-billion-valuation-bloomberg-reports-5023208</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/kalshi-in-talks-for-new-funding-at-65-billion-valuation-bloomberg-reports-5023208</guid>
+    <pubDate>Thu, 12 Nov 2026 21:13:55 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Cisco shares climb 4% on strong earnings beat and raised outlook</title>
+    <link>https://www.investing.com/news/stock-market-news/cisco-shares-climb-4-on-strong-earnings-beat-and-raised-outlook-5023206</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/cisco-shares-climb-4-on-strong-earnings-beat-and-raised-outlook-5023206</guid>
+    <pubDate>Thu, 12 Nov 2026 21:13:47 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>CSCO</category>
+  </item>
+  <item>
+    <title>Alibaba (BABA) Risks A Cloud Setback From New US AI Chip Rules</title>
+    <link>https://finance.yahoo.com/technology/ai/articles/alibaba-baba-risks-cloud-setback-211319606.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/alibaba-baba-risks-cloud-setback-211319606.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:13:19 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Alibaba Group Holding (NYSE:BABA) faces rising scrutiny as US officials prepare new curbs on remote access to advanced AI chips in overseas data centers. The US Commerce Department is finalizing rules that would restrict Chinese AI…</description>
+    <category>BABA</category>
+  </item>
+  <item>
+    <title>3 AI Infrastructure Stocks To Watch As Nvidia Chip Curbs Reshape Cloud Spending</title>
+    <link>https://finance.yahoo.com/technology/ai/articles/3-ai-infrastructure-stocks-watch-211309585.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/3-ai-infrastructure-stocks-watch-211309585.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:13:09 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Washington is turning the screws on advanced AI chips going to China, and that puts Nvidia and the wider AI infrastructure trade under a harsh new spotlight. Power is shifting from chip designers to the cloud and data-center players…</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Martin Marietta Declares Quarterly Cash Dividend</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/martin-marietta-declares-quarterly-cash-211300096.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/martin-marietta-declares-quarterly-cash-211300096.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:13:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>RALEIGH, N.C., Nov. 12, 2026 (GLOBE NEWSWIRE) -- The board of directors of Martin Marietta Materials, Inc. (NYSE: MLM) (“Martin Marietta” or the “Company”) today declared a regular quarterly cash dividend of $0.84 per share on the…</description>
+    <category>MLM</category>
+  </item>
+  <item>
+    <title>Cerebras raises annual sales forecast on strong AI-linked demand</title>
+    <link>https://www.investing.com/news/stock-market-news/cerebras-raises-annual-sales-forecast-on-strong-ailinked-demand-5023203</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/cerebras-raises-annual-sales-forecast-on-strong-ailinked-demand-5023203</guid>
+    <pubDate>Thu, 12 Nov 2026 21:12:27 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>CBRS</category>
+  </item>
+  <item>
+    <title>KBR, Inc. Targets 10%+ Organic Revenue CAGR and Outlines Proposed Spin-off</title>
+    <link>https://www.nasdaq.com/articles/kbr-inc-targets-10-organic-revenue-cagr-and-outlines-proposed-spin</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/kbr-inc-targets-10-organic-revenue-cagr-and-outlines-proposed-spin</guid>
+    <pubDate>Thu, 12 Nov 2026 21:12:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>KBR, Inc. hosted its Investor Day on November 11, 2026, outlining its strategic trajectory following the proposed spin-off of its Mission Technology Solutions business, which is expected to operate as Trinzic, Inc. in 2027. The proposed…</description>
+    
+  </item>
+  <item>
+    <title>OR Royalties Inc. Reports Revenues from Royalties and Streams of $90.2 million</title>
+    <link>https://www.nasdaq.com/articles/or-royalties-inc-reports-revenues-royalties-and-streams-902-million</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/or-royalties-inc-reports-revenues-royalties-and-streams-902-million</guid>
+    <pubDate>Thu, 12 Nov 2026 21:12:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>OR Royalties Inc. reported revenues from royalties and streams of $90.2 million in the third quarter of 2026, compared to $71.6 million in Q3 2025. Net earnings were $55.4 million, $0.30 per basic share, compared to $82.8 million, $0.44…</description>
+    
+  </item>
+  <item>
+    <title>EPR Properties Announces Proposed $500.0 Million Convertible Senior Notes Offering</title>
+    <link>https://www.nasdaq.com/articles/epr-properties-announces-proposed-5000-million-convertible-senior-notes-offering</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/epr-properties-announces-proposed-5000-million-convertible-senior-notes-offering</guid>
+    <pubDate>Thu, 12 Nov 2026 21:12:03 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>EPR Properties announced its intention to offer, subject to market and other conditions, $500.0 million aggregate principal amount of convertible senior notes due 2032 in a private offering to persons reasonably believed to be qualified…</description>
+    
+  </item>
+  <item>
+    <title>Intel (INTC) Could Be 88% Undervalued Following AI Partnerships And Sector Volatility</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/intel-intc-could-88-undervalued-211159635.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/intel-intc-could-88-undervalued-211159635.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:11:59 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Intel (INTC) has been pulled in two directions lately. New collaborations in AI infrastructure and edge computing land alongside sharp sector swings tied to Nvidia’s CEO exit, as well as fresh governance and geopolitical headlines.…</description>
+    <category>NVDA</category><category>INTC</category>
+  </item>
+  <item>
+    <title>US Equity Markets End Lower After Crude Oil Prices Rise, Nvidia CEO Resigns</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/us-equity-markets-end-lower-211137536.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/us-equity-markets-end-lower-211137536.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:11:37 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>US equity indexes ended lower Thursday after government bond yields surged as crude oil prices rose</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Apple (AAPL): A CIBC Pick Riding Record Results and a New iPhone Lineup</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/apple-aapl-cibc-pick-riding-211122586.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/apple-aapl-cibc-pick-riding-211122586.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:11:22 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>We just published the list of the 10 Best Stocks to Buy After Democrats’ Election Sweep, According to CIBC and Apple (NASDAQ:AAPL) ranks 6th on this list. CIBC Capital Markets recommended a list of top stock picks after the Democratic…</description>
+    <category>AAPL</category><category>CM</category>
+  </item>
+  <item>
+    <title>5 Best Stocks to Buy After Democrats’ Election Sweep, According to CIBC</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/5-best-stocks-buy-democrats-211009002.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/5-best-stocks-buy-democrats-211009002.html?.tsrc=rss</guid>
+    <pubDate>Thu, 12 Nov 2026 21:10:09 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>CIBC Capital Markets recommended a list of top stock picks after the Democratic sweep of Congress, according to CNBC, citing a potentially tougher regulatory environment for corporate America. In a report published the day after the…</description>
+    <category>CM</category>
+  </item>
+  <item>
+    <title>The S&amp;P 500 is shrugging off Nvidia’s selloff this week. Here’s what’s keeping the rest of the market afloat.</title>
+    <link>https://www.marketwatch.com/story/the-s-p-500-is-shrugging-off-nvidias-selloff-heres-whats-keeping-the-rest-of-the-market-afloat-7cdf2f05?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/the-s-p-500-is-shrugging-off-nvidias-selloff-heres-whats-keeping-the-rest-of-the-market-afloat-7cdf2f05?mod=mw_rss_topstories</guid>
+    <pubDate>Thu, 12 Nov 2026 21:08:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>Investors have been forced to look up from the poster child of the artificial-intelligence trade and remember the other stocks on the board.</description>
+    <category>NVDA</category><category>SPY</category>
+  </item>
+  <item>
+    <title>Kalshi ends Donald Trump Jr.’s advisory contract over 1789 Capital’s Polymarket investment</title>
+    <link>https://www.coindesk.com/policy/2026/11/12/kalshi-ends-donald-trump-jr-s-advisory-contract-over-1789-capital-s-polymarket-investment</link>
+    <guid isPermaLink="false">https://www.coindesk.com/policy/2026/11/12/kalshi-ends-donald-trump-jr-s-advisory-contract-over-1789-capital-s-polymarket-investment</guid>
+    <pubDate>Thu, 12 Nov 2026 21:07:49 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
+    <description>Trump Jr. joined Kalshi as a strategic adviser in January 2025, helping the prediction market expand its customer base and strengthen its market presence.</description>
+    
+  </item>
+  <item>
+    <title>A natural-gas project off Alaska may be a Russian ploy</title>
+    <link>https://www.defenseone.com/threats/2026/11/natural-gas-project-alaskas-coast-may-be-russian-ploy-intel-arctic/417193/</link>
+    <guid isPermaLink="false">https://www.defenseone.com/threats/2026/11/natural-gas-project-alaskas-coast-may-be-russian-ploy-intel-arctic/417193/</guid>
+    <pubDate>Thu, 12 Nov 2026 21:02:57 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Defense One</source>
+    <description>Surveys for the plant were funded by a UAE company steered by a Russian natural-gas giant under U.S. sanction.</description>
+    
+  </item>
+  <item>
+    <title>Stocks could be in for a rude awakening if the Fed hikes rates more than expected</title>
+    <link>https://www.cnbc.com/2026/11/12/stocks-could-be-in-for-a-rude-awakening-if-the-fed-hikes-rates-more-than-expected.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/12/stocks-could-be-in-for-a-rude-awakening-if-the-fed-hikes-rates-more-than-expected.html</guid>
+    <pubDate>Thu, 12 Nov 2026 21:00:10 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>&quot;The Fed is the real risk going out in the intermediate term,&quot; one strategist said.</description>
+    
+  </item>
+  <item>
+    <title>GOP tries to speed-walk search for GAO&#x27;s next chief</title>
+    <link>https://www.defenseone.com/policy/2026/11/lame-duck-congress-expedites-search-next-gao-leader/417194/</link>
+    <guid isPermaLink="false">https://www.defenseone.com/policy/2026/11/lame-duck-congress-expedites-search-next-gao-leader/417194/</guid>
+    <pubDate>Thu, 12 Nov 2026 21:00:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Defense One</source>
+    <description>Given 24 hours to name candidates, Democrats decry efforts to &quot;ram through another Trump crony.&quot;</description>
+    
+  </item>
+  <item>
+    <title>The bond market now has an even bigger fear than AI fallout</title>
+    <link>https://www.marketwatch.com/story/the-bond-market-now-has-an-even-bigger-fear-than-the-ai-fallout-b6401b54?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/the-bond-market-now-has-an-even-bigger-fear-than-the-ai-fallout-b6401b54?mod=mw_rss_topstories</guid>
+    <pubDate>Thu, 12 Nov 2026 20:44:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>Carnage in tech stocks made Treasurys look more attractive in recent weeks, but fears of more Fed rate hikes are now driving yields higher</description>
+    <category>FED</category>
   </item>
   <item>
     <title>Nvidia live updates: Jensen Huang had ‘intimate relationship’ with second employee, Reuters reports</title>
@@ -50,411 +455,6 @@
     <pubDate>Thu, 12 Nov 2026 20:32:21 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>Nvidia CEO Jensen Huang has been a singular figure in the development of the AI industry, which suddenly has to survive without him.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Nvidia executive Ian Buck emerges as CEO frontrunner on prediction markets</title>
-    <link>https://finance.yahoo.com/technology/article/nvidia-executive-ian-buck-emerges-as-ceo-frontrunner-on-prediction-markets-202512437.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/article/nvidia-executive-ian-buck-emerges-as-ceo-frontrunner-on-prediction-markets-202512437.html?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:25:12 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Prediction markets are pointing to Nvidia VP Ian Buck as a frontrunner for permanent CEO role.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Addex Therapeutics Ltd Spin-out Neurosterix Closes $105 Million Series B Financing</title>
-    <link>https://www.nasdaq.com/articles/addex-therapeutics-ltd-spin-out-neurosterix-closes-105-million-series-b-financing</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/addex-therapeutics-ltd-spin-out-neurosterix-closes-105-million-series-b-financing</guid>
-    <pubDate>Thu, 12 Nov 2026 20:21:10 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Addex Therapeutics Ltd announced that its spin-out company, Neurosterix, has closed a $105 million Series B financing from a syndicate of leading life science investors. Addex did not participate in the financing and its equity interest…</description>
-    
-  </item>
-  <item>
-    <title>New Found Gold Corp. Reports Q3 2026 Financial and Operational Results</title>
-    <link>https://www.nasdaq.com/articles/new-found-gold-corp-reports-q3-2026-financial-and-operational-results</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/new-found-gold-corp-reports-q3-2026-financial-and-operational-results</guid>
-    <pubDate>Thu, 12 Nov 2026 20:21:10 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>New Found Gold Corp. announced its financial and operational results for the three and nine months ended September 30, 2026, highlighting the achievement of commercial production at its 100% owned Hammerdown Gold Mine on August 19,…</description>
-    
-  </item>
-  <item>
-    <title>Invitation Homes Inc. Appoints M. Colin Connolly to Board of Directors, Increasing Board Size to 10</title>
-    <link>https://www.nasdaq.com/articles/invitation-homes-inc-appoints-m-colin-connolly-board-directors-increasing-board-size-10</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/invitation-homes-inc-appoints-m-colin-connolly-board-directors-increasing-board-size-10</guid>
-    <pubDate>Thu, 12 Nov 2026 20:21:09 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>On November 9, 2026, the Board of Directors (the “Board”) of Invitation Homes Inc. (the “Company”) increased the size of the Board from 9 to 10 members and appointed M. Colin Connolly as a director of the Board, effective as of November…</description>
-    
-  </item>
-  <item>
-    <title>Will NuScale Power Stock&#x27;s Jump After Earnings Last?</title>
-    <link>https://www.trefis.com/stock/smr/articles/624576/will-nuscale-power-stocks-jump-after-earnings-last/2026-11-12?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.trefis.com/stock/smr/articles/624576/will-nuscale-power-stocks-jump-after-earnings-last/2026-11-12?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:21:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>For questions about this article or underlying research, email help@trefis.com.</description>
-    
-  </item>
-  <item>
-    <title>Highland Opportunities and Income&#x27;s Series B Preferred Shares Crosses Above 9% Yield Territory</title>
-    <link>https://www.nasdaq.com/articles/highland-opportunities-and-incomes-series-b-preferred-shares-crosses-above-9-yield</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/highland-opportunities-and-incomes-series-b-preferred-shares-crosses-above-9-yield</guid>
-    <pubDate>Thu, 12 Nov 2026 20:19:38 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>In trading on Thursday, shares of Highland Opportunities and Income Fundhar&#x27;s 5.375% Series B Cumulative Preferred Shares (Symbol: HFRO.PRB) were yielding above the 9% mark based on its quarterly dividend (annualized to $1.3438), with…</description>
-    
-  </item>
-  <item>
-    <title>Is There Any Reason To Invest In Nucor Stock?</title>
-    <link>https://www.trefis.com/stock/nue/articles/624579/is-there-any-reason-to-invest-in-nucor-stock/2026-11-12?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.trefis.com/stock/nue/articles/624579/is-there-any-reason-to-invest-in-nucor-stock/2026-11-12?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:16:03 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>For questions about this article or underlying research, email help@trefis.com.</description>
-    <category>NUE</category>
-  </item>
-  <item>
-    <title>Robinhood&#x27;s Prediction Market Bet Is Paying Off. Is the Stock a Buy?</title>
-    <link>https://www.fool.com/investing/2026/11/12/robinhood-s-prediction-market-bet-is-paying-off-is-the-stock-a-buy/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/12/robinhood-s-prediction-market-bet-is-paying-off-is-the-stock-a-buy/?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:15:37 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Robinhood customers traded 5.9 billion event contracts in October, more than double a year ago. That business now brings in more money than crypto or stock trading. But it comes with real legal risk.</description>
-    <category>HOOD</category>
-  </item>
-  <item>
-    <title>Why is HIVE Digital stock sliding today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-hive-digital-stock-sliding-today-93CH-5023084</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-hive-digital-stock-sliding-today-93CH-5023084</guid>
-    <pubDate>Thu, 12 Nov 2026 20:14:35 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Hogs Posting Mixed Trade</title>
-    <link>https://www.nasdaq.com/articles/hogs-posting-mixed-trade</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/hogs-posting-mixed-trade</guid>
-    <pubDate>Thu, 12 Nov 2026 20:13:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Lean hog futures are showing mixed trade, with December down 75 cents and other contracts up 50 to 65 cents. USDA’s national base hog price was reported at $42.34 on Thursday morning. The CME Lean Hog Index was down 21 cents on November…</description>
-    
-  </item>
-  <item>
-    <title>Cattle Posting Mixed Trade as Feeders are the Upside Leaders</title>
-    <link>https://www.nasdaq.com/articles/cattle-posting-mixed-trade-feeders-are-upside-leaders</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cattle-posting-mixed-trade-feeders-are-upside-leaders</guid>
-    <pubDate>Thu, 12 Nov 2026 20:13:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Live cattle futures are trading with slight 10 to 30 cent losses across the front months on Thursday. Cash trade saw some light dressed trade at $330. The Thursday Fed Cattle Exchange online auction showed no sales or bids on the 1,640…</description>
-    
-  </item>
-  <item>
-    <title>Wheat Falling Lower on Thursday</title>
-    <link>https://www.nasdaq.com/articles/wheat-falling-lower-thursday</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-falling-lower-thursday</guid>
-    <pubDate>Thu, 12 Nov 2026 20:13:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The wheat complex is showing weakness on Thursday across the three markets. Chicago SRW futures are posting losses of 8 to 9 cents across the front months on Thursday. KC HRW futures are 12 to 13 cents lower on the session. MPLS spring…</description>
-    
-  </item>
-  <item>
-    <title>Soybeans Pulling Back on Thursday</title>
-    <link>https://www.nasdaq.com/articles/soybeans-pulling-back-thursday-2</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/soybeans-pulling-back-thursday-2</guid>
-    <pubDate>Thu, 12 Nov 2026 20:13:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Soybeans are trading with losses of 10 to 12 cents across the front months on the session. The cmdtyView national average Cash Bean price is up 8 3/4 cents at $11.60 3/4. Soymeal futures are down $3 to $3.70, with Soy Oil futures 50 to…</description>
-    
-  </item>
-  <item>
-    <title>Brazilian Real Weakness Weighs on Sugar Prices</title>
-    <link>https://www.nasdaq.com/articles/brazilian-real-weakness-weighs-sugar-prices-0</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/brazilian-real-weakness-weighs-sugar-prices-0</guid>
-    <pubDate>Thu, 12 Nov 2026 20:13:05 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>March NY world sugar #11 (SBH27 ) is down -0.26 (-1.41%) today, and December London ICE white sugar #5 (SWZ26 ) is down -1.60 (-0.31%). Sugar prices are sliding today, with NY sugar just above Tuesday’s 6-week low. Weakness in the…</description>
-    
-  </item>
-  <item>
-    <title>Cocoa Prices Jump as Excessive Rain in Ivory Coast Disrupts Supplies</title>
-    <link>https://www.nasdaq.com/articles/cocoa-prices-jump-excessive-rain-ivory-coast-disrupts-supplies</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cocoa-prices-jump-excessive-rain-ivory-coast-disrupts-supplies</guid>
-    <pubDate>Thu, 12 Nov 2026 20:13:05 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>December ICE NY cocoa (CCZ26 ) is up +213 (+4.34%) today, and ICE London cocoa #7 (CAZ26 ) is up +105 (+2.79%). Cocoa prices are sharply higher for a second day today as short covering intensified in cocoa futures on reports of heavy…</description>
-    
-  </item>
-  <item>
-    <title>Corn Fading Back Lower on Thursday</title>
-    <link>https://www.nasdaq.com/articles/corn-fading-back-lower-thursday-0</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/corn-fading-back-lower-thursday-0</guid>
-    <pubDate>Thu, 12 Nov 2026 20:13:05 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Corn futures are trading with contracts 4 to 7 cents lower across most months on Thursday’s midday. The CmdtyView national average Cash Corn price is down 4 1/2 cents at $4.10 1/4. EIA’s weekly update showed ethanol production at a…</description>
-    
-  </item>
-  <item>
-    <title>Retail buyers limit Nvidia stock rout</title>
-    <link>https://www.investing.com/news/stock-market-news/retail-buyers-limit-nvidia-stock-rout-5023063</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/retail-buyers-limit-nvidia-stock-rout-5023063</guid>
-    <pubDate>Thu, 12 Nov 2026 20:12:42 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Help wanted: AI firms court ex-spies as Nvidia crisis spotlights security risks</title>
-    <link>https://www.investing.com/news/stock-market-news/help-wanted-ai-firms-court-exspies-as-nvidia-drama-spotlights-security-risks-5021949</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/help-wanted-ai-firms-court-exspies-as-nvidia-drama-spotlights-security-risks-5021949</guid>
-    <pubDate>Thu, 12 Nov 2026 20:12:26 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>VWO vs IXUS: Does Emerging Markets Focus or Broad International Exposure Make for a Better ETF Now?</title>
-    <link>https://www.fool.com/coverage/etfs/2026/11/12/vwo-vs-ixus-emerging-markets-focus-or-broad-international-exposure/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/coverage/etfs/2026/11/12/vwo-vs-ixus-emerging-markets-focus-or-broad-international-exposure/?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:12:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Their 1-year returns and dividend yields tell very different stories for income-focused investors.</description>
-    
-  </item>
-  <item>
-    <title>Why is Capstone Copper stock sliding today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-capstone-copper-stock-sliding-today-93CH-5023080</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-capstone-copper-stock-sliding-today-93CH-5023080</guid>
-    <pubDate>Thu, 12 Nov 2026 20:11:37 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>millionways Introduces Thorsten-4, the Foundation Model That Teaches AI to Read the Room and Understand Human Behavior</title>
-    <link>https://finance.yahoo.com/technology/ai/articles/millionways-introduces-thorsten-4-foundation-141500637.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/millionways-introduces-thorsten-4-foundation-141500637.html?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:09:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>NEW YORK, November 12, 2026--The world’s biggest AI labs have built models that can reason, write and speak, but none of them really understand people. That’s why millionways, a behavioral intelligence frontier lab, today introduces…</description>
-    
-  </item>
-  <item>
-    <title>401(k) Contribution Limits Are Increasing in 2027. Here&#x27;s How Much You Can Save</title>
-    <link>https://www.fool.com/retirement/2026/11/12/401-k-contribution-limits-are-increasing-in-2027-here-s-how-much-you-can-save/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/retirement/2026/11/12/401-k-contribution-limits-are-increasing-in-2027-here-s-how-much-you-can-save/?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:08:02 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>You now have an opportunity to sock away even more money for retirement.</description>
-    
-  </item>
-  <item>
-    <title>Why Broadcom Stock Rallied Thursday Morning</title>
-    <link>https://www.fool.com/investing/2026/11/12/why-broadcom-stock-rallied-thursday-morning/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/12/why-broadcom-stock-rallied-thursday-morning/?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:07:32 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Nvidia&#x27;s CEO is out. That might represent an opportunity for the alternative chipmaker.</description>
-    <category>NVDA</category><category>AVGO</category>
-  </item>
-  <item>
-    <title>Why is MDA Space stock sliding today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-mda-space-stock-sliding-today-93CH-5023077</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-mda-space-stock-sliding-today-93CH-5023077</guid>
-    <pubDate>Thu, 12 Nov 2026 20:06:48 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>What Could Lift Iamgold Stock?</title>
-    <link>https://www.trefis.com/stock/iag/articles/624600/what-could-lift-iamgold-stock/2026-11-12?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.trefis.com/stock/iag/articles/624600/what-could-lift-iamgold-stock/2026-11-12?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:06:39 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>For questions about this article or underlying research, email help@trefis.com.</description>
-    
-  </item>
-  <item>
-    <title>Wall Street lower in choppy trade as Nvidia slips on Huang departure shock</title>
-    <link>https://www.investing.com/news/stock-market-news/wall-st-futures-fall-as-nvidia-slides-on-report-of-possible-ceo-ouster-5020125</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/wall-st-futures-fall-as-nvidia-slides-on-report-of-possible-ceo-ouster-5020125</guid>
-    <pubDate>Thu, 12 Nov 2026 20:06:23 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Why is Mobility Global stock surging today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-mobility-global-stock-surging-today-93CH-5023076</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-mobility-global-stock-surging-today-93CH-5023076</guid>
-    <pubDate>Thu, 12 Nov 2026 20:06:15 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>AMD Is Up 127% in a Year. William Blair Just Upgraded It as Nvidia Loses Its CEO</title>
-    <link>https://www.tikr.com/blog/amd-is-up-127-in-a-year-william-blair-just-upgraded-it-as-nvidia-loses-its-ceo?ref=yahoofinance&amp;tlnk=yf-261112-7jqr74fj&amp;.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.tikr.com/blog/amd-is-up-127-in-a-year-william-blair-just-upgraded-it-as-nvidia-loses-its-ceo?ref=yahoofinance&amp;tlnk=yf-261112-7jqr74fj&amp;.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:05:35 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Key TakeawaysAMD stock rose 6% today after William Blair upgraded it to Outperform, on the same day Nvidia’s CEO Jensen Huang resigned and Nvidia was downgraded by several firms. AMD’s own numbers support the upgrade, and Nvidia’s…</description>
-    <category>NVDA</category><category>AMD</category>
-  </item>
-  <item>
-    <title>BMO names new top pick in e-commerce on growth durability</title>
-    <link>https://www.investing.com/news/stock-market-news/bmo-names-new-top-pick-in-ecommerce-on-growth-durability-5023075</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/bmo-names-new-top-pick-in-ecommerce-on-growth-durability-5023075</guid>
-    <pubDate>Thu, 12 Nov 2026 20:05:31 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Berkshire Hathaway Stock Trades at Record Levels. CEO Greg Abel Clearly Sees More Room to Run.</title>
-    <link>https://www.fool.com/investing/2026/11/12/berkshire-hathaway-stock-trades-at-record-levels-ceo-greg-abel-clearly-sees-more-room-to-run/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/12/berkshire-hathaway-stock-trades-at-record-levels-ceo-greg-abel-clearly-sees-more-room-to-run/?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:05:02 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Berkshire Hathaway recently reported its third-quarter earnings.</description>
-    <category>BRK.B</category>
-  </item>
-  <item>
-    <title>Oracle Is Down 34% in 2026: Is ORCL Stock Dead Money or Due for a Bounce?</title>
-    <link>https://247wallst.com/investing/2026/11/12/oracle-is-down-34-in-2026-is-orcl-stock-dead-money-or-due-for-a-bounce/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/12/oracle-is-down-34-in-2026-is-orcl-stock-dead-money-or-due-for-a-bounce/?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:04:05 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Oracle&#x27;s AI cloud backlog keeps growing, yet so does the bill for building it. With negative free cash flow, mounting debt, and a cheap valuation, the next earnings report may decide whether bulls or bears have been reading the story right.</description>
-    <category>ORCL</category>
-  </item>
-  <item>
-    <title>Donald Trump Jr. exits advisory role at Kalshi prediction market</title>
-    <link>https://www.cnbc.com/2026/11/12/donald-trump-jr-exits-kalshi-advisory-role.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/12/donald-trump-jr-exits-kalshi-advisory-role.html</guid>
-    <pubDate>Thu, 12 Nov 2026 20:03:57 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The president&#x27;s son will no longer serve as an advisor at Kalshi.</description>
-    
-  </item>
-  <item>
-    <title>Why is Hancock Whitney stock sliding today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-hancock-whitney-stock-sliding-today-93CH-5023071</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-hancock-whitney-stock-sliding-today-93CH-5023071</guid>
-    <pubDate>Thu, 12 Nov 2026 20:03:43 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Jensen Huang&#x27;s implosion at Nvidia leaves trail of collateral damage</title>
-    <link>https://www.axios.com/2026/11/12/jensen-huang-nvidia-ceo-ai-resignation#utm_source=yahoo_finance&amp;utm_medium=partner&amp;utm_campaign=subs-partner-yahoo-finance-AI?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.axios.com/2026/11/12/jensen-huang-nvidia-ceo-ai-resignation#utm_source=yahoo_finance&amp;utm_medium=partner&amp;utm_campaign=subs-partner-yahoo-finance-AI?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:02:25 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Jensen Huang&#x27;s self-destruction has left a trail of collateral damage that threatens to ensnare the board of Nvidia and the AI boom itself .</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Jensen Huang is out and Nvidia stock is down—what market pros say about buying dips</title>
-    <link>https://www.cnbc.com/make-it/2026/11/12/nvidia-what-market-pros-say-about-buying-dips.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/make-it/2026/11/12/nvidia-what-market-pros-say-about-buying-dips.html</guid>
-    <pubDate>Thu, 12 Nov 2026 20:01:29 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Nvidia stock fell 5% on Thursday following the departure of CEO Jensen Huang. Some see it as a signal to sell, others an opportunity to buy.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Who will replace Jensen Huang? Here&#x27;s our early thoughts on the search for Nvidia&#x27;s next CEO</title>
-    <link>https://www.cnbc.com/investingclub/2026/11/12/jensen-huang-ceo-replacement-jim-cramer.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/investingclub/2026/11/12/jensen-huang-ceo-replacement-jim-cramer.html</guid>
-    <pubDate>Thu, 12 Nov 2026 20:00:42 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for the last hour of trading.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Equities little changed, Nvidia drop offsets lift in energy shares</title>
-    <link>https://www.investing.com/news/stock-market-news/nasdaq-futures-fall-as-nvidia-turmoil-rattles-ai-stocks-5020761</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/nasdaq-futures-fall-as-nvidia-turmoil-rattles-ai-stocks-5020761</guid>
-    <pubDate>Thu, 12 Nov 2026 20:00:40 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>What Did China Want From Nvidia’s Alleged Megaspeed Spy Link?</title>
-    <link>https://unchainedcrypto.com/what-did-china-want-from-nvidias-alleged-megaspeed-spy-link/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://unchainedcrypto.com/what-did-china-want-from-nvidias-alleged-megaspeed-spy-link/?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:00:26 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>US officials reportedly believe a Megaspeed executive is a Chinese intelligence asset. Patrick McHenry says how Washington will react.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Nvidia Falls From the Top of the AI Pyramid as Jensen Huang’s Exit Takes Its Chief AI Promoter</title>
-    <link>https://247wallst.com/videos/nvidia-falls-from-the-top-of-the-ai-pyramid-as-jensen-huangs-exit-takes-its-chief-ai-promoter/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://247wallst.com/videos/nvidia-falls-from-the-top-of-the-ai-pyramid-as-jensen-huangs-exit-takes-its-chief-ai-promoter/?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 20:00:14 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Nvidia (NASDAQ: NVDA) will survive Jensen Huang&#x27;s exit, yet it has slipped from the top of the AI pyramid, says 24/7 Wall St. co-founder Douglas A. McIntyre.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Nvidia: Ex-prosecutor Joon Kim and Wachtell, Lipton bring big track record to investigation</title>
-    <link>https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-joon-kim-wachtell-china-spy.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-joon-kim-wachtell-china-spy.html</guid>
-    <pubDate>Thu, 12 Nov 2026 19:58:11 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The retention of Wachtell, Lipton for the Nvidia probe comes on the heels of the law firm&#x27;s investigation for the NBA into the Los Angeles Clippers.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>AI industry weighs future without Nvidia&#x27;s Huang</title>
-    <link>https://finance.yahoo.com/technology/ai/articles/ai-industry-reassesses-future-without-190520571.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/ai-industry-reassesses-future-without-190520571.html?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 19:57:46 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>He had rock star status, and now the artificial intelligence industry is weighing who can fill the shoes of Jensen Huang after his forced exit from US chip king Nvidia left the &quot;central bank of AI&quot; without its longtime leader.But expect…</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>5 Retirement Changes Coming in 2027 That Could Put More Money in Your Pocket</title>
-    <link>https://www.fool.com/retirement/2026/11/12/5-retirement-changes-coming-in-2027-that-could-put-more-money-in-your-pocket/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/retirement/2026/11/12/5-retirement-changes-coming-in-2027-that-could-put-more-money-in-your-pocket/?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 19:57:02 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Higher 401(k) limits and a bigger Social Security raise top the list.</description>
-    
-  </item>
-  <item>
-    <title>3 IRA Moves to Make Now if You&#x27;re Planning to Retire in 2027</title>
-    <link>https://www.fool.com/retirement/2026/11/12/3-ira-moves-to-make-now-if-you-re-planning-to-retire-in-2027/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/retirement/2026/11/12/3-ira-moves-to-make-now-if-you-re-planning-to-retire-in-2027/?.tsrc=rss</guid>
-    <pubDate>Thu, 12 Nov 2026 19:56:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Check these items off your list before your time in the workforce ends.</description>
-    
-  </item>
-  <item>
-    <title>The S&amp;P 500 is shrugging off Nvidia’s selloff. Here’s what’s keeping the rest of the market afloat.</title>
-    <link>https://www.marketwatch.com/story/the-s-p-500-is-shrugging-off-nvidias-selloff-heres-whats-keeping-the-rest-of-the-market-afloat-7cdf2f05?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/the-s-p-500-is-shrugging-off-nvidias-selloff-heres-whats-keeping-the-rest-of-the-market-afloat-7cdf2f05?mod=mw_rss_topstories</guid>
-    <pubDate>Thu, 12 Nov 2026 19:52:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>Investors have been forced to look up from the poster child of the artificial-intelligence trade and remember the other stocks on the board.</description>
-    <category>NVDA</category><category>SPY</category>
-  </item>
-  <item>
-    <title>‘A dark day for Nvidia’: Here’s what analysts have been saying about Jensen Huang’s departure</title>
-    <link>https://www.cnbc.com/2026/11/12/jensen-huang-nvidia-affair-ceo.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/12/jensen-huang-nvidia-affair-ceo.html</guid>
-    <pubDate>Thu, 12 Nov 2026 19:47:57 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The company&#x27;s board convened Wednesday evening after reports emerged of Huang engaging in an affair with an employee.</description>
     <category>NVDA</category>
   </item>
 </channel>
