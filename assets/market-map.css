@@ -4,6 +4,14 @@
 .market-map, .mm-compact { --mm-acc: var(--gold-1, var(--accent, #00f0ff)); --mm-mono: var(--font-mono, 'JetBrains Mono', monospace); }
 
 /* ---------- 1. compact top row (wide screens; phones keep the folding headings) ---------- */
+/* From 900px the top row sits on four equal tracks (the indices take two), so its middle line is the
+   same as the line between the two cards under it and both rows end at the same right edge. */
+@media (min-width: 900px) {
+  .dash > .hero-grid.mm-row.mm-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas: "analytics mentions indices indices" "map map map map" "controls controls controls controls";
+  }
+}
 .mm-sum, .mm-toggle { display: none; }
 .mm-pop { display: contents; }
 /* the box that keeps the top-edge light inside the cell */
@@ -71,9 +79,9 @@
    and they wrap to the next row on narrower screens */
 .mm-deck[hidden], .mm-card[hidden] { display: none !important; }
 .mm-deck { container-type: inline-size; min-width: 0; }
-.mm-deck-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; max-width: 1476px; }
-/* two equal cards side by side when each gets at least ~480px; otherwise one under the other, full width */
-@container (min-width: 980px) { .mm-deck-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.mm-deck-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+/* two equal cards side by side when each gets at least ~440px; otherwise one under the other, full width */
+@container (min-width: 900px) { .mm-deck-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 701px) { .dash > .hero-grid.mm-row > .mm-deck { grid-area: map; } }
 .mm-card {
   --mm-acc: var(--gold-1, var(--accent, #00f0ff)); --mm-mono: var(--font-mono, 'JetBrains Mono', monospace);
@@ -82,12 +90,30 @@
 .mm-card .mm-head { display: block; margin: 0 0 8px; }
 .mm-card .mm-head h2 { margin: 0 0 4px; }
 .mm-card .mm-cap { margin: 0; font-size: 12px; line-height: 1.4; color: var(--text-low); }
-.mm-card .mm-stage { aspect-ratio: 1.86; max-height: 310px; }
+.mm-card .mm-stage { aspect-ratio: 1.86; max-height: 340px; }
 .mm-card .mm-info { min-height: 100px; margin-top: 10px; }
 /* the wide card: its picture takes the height the row gives it; on its own row it is a fixed 320px */
 .mm-wide .mm-stage { aspect-ratio: auto; height: 320px; }
 .mm-wide .mm-stage canvas { cursor: default; }
-@container (min-width: 980px) { .mm-wide .mm-stage { height: auto; flex: 1 1 auto; min-height: 250px; } .mm-wide .mm-info { min-height: 84px; } }
+@container (min-width: 900px) { .mm-wide .mm-stage { height: auto; flex: 1 1 auto; min-height: 250px; } .mm-wide .mm-info { min-height: 84px; } }
+/* A card of 640px or more lies down: the picture on the left, the text and buttons in a column on the right.
+   That is one card per row on a medium screen, or two side by side on a very wide one. */
+@container (min-width: 640px) and (max-width: 899.98px) {
+  .mm-card { display: grid; grid-template-columns: minmax(0, 1fr) 244px; grid-template-rows: auto minmax(0, 1fr) auto; column-gap: 22px;
+    grid-template-areas: "head head" "stage info" "stage foot"; }
+  .mm-card > .mm-head { grid-area: head; }
+  .mm-card > .mm-stage, .mm-wide > .mm-stage { grid-area: stage; aspect-ratio: auto; height: 270px; max-height: none; min-height: 0; flex: none; }
+  .mm-card > .mm-info, .mm-wide > .mm-info { grid-area: info; min-height: 0; margin-top: 2px; }
+  .mm-card > .mm-foot { grid-area: foot; flex-direction: column; align-items: flex-start; margin-top: 0; }
+}
+@container (min-width: 1300px) {
+  .mm-card { display: grid; grid-template-columns: minmax(0, 1fr) 244px; grid-template-rows: auto minmax(0, 1fr) auto; column-gap: 22px;
+    grid-template-areas: "head head" "stage info" "stage foot"; }
+  .mm-card > .mm-head { grid-area: head; }
+  .mm-card > .mm-stage, .mm-wide > .mm-stage { grid-area: stage; aspect-ratio: auto; height: 270px; max-height: none; min-height: 0; flex: none; }
+  .mm-card > .mm-info, .mm-wide > .mm-info { grid-area: info; min-height: 0; margin-top: 2px; }
+  .mm-card > .mm-foot { grid-area: foot; flex-direction: column; align-items: flex-start; margin-top: 0; }
+}
 .mm-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; margin-top: auto; padding-top: 10px; }
 .mm-card .mm-controls .chip { padding: 4px 10px; font-size: 11.5px; }
 .mm-legend { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 0; font-size: 11.5px; color: var(--text-mid); }
