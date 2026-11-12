@@ -1080,7 +1080,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/fed/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1161,6 +1161,11 @@
   <url>
     <loc>https://pulsarium.finance/news/gsk/</loc>
     <lastmod>2026-10-30</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/hal/</loc>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1256,6 +1261,11 @@
   <url>
     <loc>https://pulsarium.finance/news/kb/</loc>
     <lastmod>2026-10-29</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/kdp/</loc>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1495,7 +1505,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/ntap/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1645,7 +1655,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/rklb/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1805,7 +1815,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/tech-hardware/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
