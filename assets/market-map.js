@@ -298,6 +298,8 @@
   const compact = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 });
   const shortDay = (value) => (/^\d{4}-\d{2}-\d{2}$/.test(value || '') ? dayLabel(value) : '—');
   const pointerHint = () => (window.matchMedia('(hover: none)').matches ? 'Tap a bubble, or drag it.' : 'Point at a bubble, or drag it.');
+  // her limit for the insider set: up to 10 bubbles each way (the share-count set shows all it has)
+  const PER_SIDE = 10;
   function radarPayload() {
     const cached = () => { try { const hit = JSON.parse(sessionStorage.getItem(RADAR_CACHE)); return hit && hit.payload && hit.payload.version === 1 ? hit.payload : null; } catch (_) { return null; } };
     return new Promise((resolve) => {
@@ -322,7 +324,7 @@
         const old = bySymbol.get(card.symbol);
         if (!old || Number(card.amount) > Number(old.amount)) bySymbol.set(card.symbol, card);
       }
-      return [...bySymbol.values()].map((card) => ({ card, green, symbol: card.symbol, amount: Number(card.amount), note: usd.format(Number(card.amount)),
+      return [...bySymbol.values()].sort((a, b) => Number(b.amount) - Number(a.amount)).slice(0, PER_SIDE).map((card) => ({ card, green, symbol: card.symbol, amount: Number(card.amount), note: usd.format(Number(card.amount)),
         planned: green ? 0 : clamp(Number(card.planned_amount || 0) / Number(card.amount)) }));
     };
     const sales = (payload && payload.sales) || {};
@@ -334,7 +336,7 @@
     items.forEach((b) => { b.u = high > low ? (Math.log(b.amount) - low) / (high - low) : 0.5; });
     return {
       items, title: 'Insider trades · this week', caption: 'What company officers and directors bought and sold',
-      intro: () => `<p class="mm-k">Last ${Number(payload.window_days) || 7} days · through ${shortDay(payload.through)} · ${items.length} companies</p>` +
+      intro: () => `<p class="mm-k">Last ${Number(payload.window_days) || 7} days · through ${shortDay(payload.through)} · the largest ${PER_SIDE} each way</p>` +
         '<p class="mm-line">Each bubble is a company whose officers or directors bought or sold its shares (SEC Form 4). A bigger bubble is more money.</p>' +
         `<p class="mm-hint">${pointerHint()}</p>`,
       describe: (b) => {
@@ -350,13 +352,14 @@
   // buybacks and dilution: the "shares" group of the report-highlights snapshot
   function shareSet(signals) {
     const rows = signals && signals.version === 1 && signals.groups && Array.isArray(signals.groups.shares) ? signals.groups.shares : [];
-    const items = rows.map((row) => {
+    const found = rows.map((row) => {
       const all = Array.isArray(row.signals) ? row.signals : [], change = all.find((s) => s.code === 'share_reduction' || s.code === 'share_increase');
       if (!row.symbol || !change || !Number.isFinite(Number(change.change_pct)) || !Number(change.change_pct)) return null;
       const pct = Number(change.change_pct);
       return { row, change, cash: all.find((s) => s.code === 'buyback_cash' && Number(s.current) > 0), green: pct < 0, symbol: row.symbol, amount: Math.abs(pct), planned: 0,
         note: `${pct < 0 ? '−' : '+'}${Math.abs(pct).toFixed(1)}%` };
-    }).filter(Boolean).sort((a, b) => b.amount - a.amount);
+    }).filter(Boolean);
+    const items = found.sort((a, b) => b.amount - a.amount);
     if (items.length < 3) return null;
     const low = Math.sqrt(items[items.length - 1].amount), high = Math.sqrt(items[0].amount);
     items.forEach((b) => { b.u = high > low ? (Math.sqrt(b.amount) - low) / (high - low) : 0.5; });
@@ -393,7 +396,9 @@
     const home = (b) => (b.green ? W * 0.3 : W * 0.7);
     // the bubbles together cover about a third of the picture: the rest is open water for them to move in
     const sizes = () => { if (!all.length || !W) return;
-      const base = all.map((b) => 13 + 42 * Math.pow(b.u, 1.3)), area = base.reduce((sum, r) => sum + Math.PI * r * r, 0), scale = clamp(Math.sqrt(0.34 * W * H / area), 0.4, 1.7);
+      // a small set covers less, so a handful of bubbles doesn't swell to fill the card
+      const cover = 0.34 * Math.min(1, Math.sqrt(all.length / 20));
+      const base = all.map((b) => 13 + 42 * Math.pow(b.u, 1.3)), area = base.reduce((sum, r) => sum + Math.PI * r * r, 0), scale = clamp(Math.sqrt(cover * W * H / area), 0.4, 1.7);
       all.forEach((b, i) => { b.r = Math.max(9, base[i] * scale); }); };
     const scatter = () => { all.forEach((b) => { b.x = home(b) + (rnd() - 0.5) * W * 0.34; b.y = H * (0.15 + 0.7 * rnd()); b.vx = b.vy = 0; b.phase = rnd() * 6.283; });
       for (let i = 0; i < 160; i++) step(1 / 60, 0, true);                 // settle before the first frame

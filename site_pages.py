@@ -810,7 +810,7 @@ def earnings_season() -> dict:
                        "each stock's move on the first trading day after its report. 78% beat forecasts; 45% of those fell.",
         "body": body,
         "head": '<link rel="stylesheet" href="/assets/market-map.css?v=5">\n'
-                '<script src="/assets/season-q3-2026.js?v=1" defer></script>\n<script src="/assets/market-map.js?v=4" defer></script>\n',
+                '<script src="/assets/season-q3-2026.js?v=1" defer></script>\n<script src="/assets/market-map.js?v=5" defer></script>\n',
     }
 
 
