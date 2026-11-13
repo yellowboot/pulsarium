@@ -651,15 +651,15 @@
    "date": "2026-11-12",
    "value": 54,
    "label": "Neutral",
-   "headlines": 242,
+   "headlines": 243,
    "avg7": 53.1
   },
   {
    "date": "2026-11-13",
-   "value": 55,
+   "value": 51,
    "label": "Neutral",
-   "headlines": 108,
-   "avg7": 53.6,
+   "headlines": 107,
+   "avg7": 53.0,
    "window": "in the last 12 hours"
   }
  ]
