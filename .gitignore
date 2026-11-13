@@ -11,3 +11,7 @@ dist/
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Cosmos backtest: Marketstack prices and results stay local (public repo)
+cosmos/data/
+cosmos/out/
