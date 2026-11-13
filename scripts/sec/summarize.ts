@@ -481,6 +481,40 @@ function dividendFacts(source: Record<string, Concept>, items: Fact[]) {
   return out
 }
 
+/** A company that tags no per-share dividend at all, only the cash it paid
+ * (Danaher: PaymentsOfDividends and nothing per share, Nov 2026), gets one
+ * worked out: the cash over the average share count of the same span. Cash
+ * flows are year-to-date, so a quarter is the difference between a span and
+ * the one a quarter shorter, over that quarter's own share count. Preferred
+ * dividends of the same span come off a generic payments line first. A
+ * company that tags a per-share concept is never touched. */
+function withDerivedDividends(source: Record<string, Concept>): { source: Record<string, Concept>; derived: boolean } {
+  if (source.CommonStockDividendsPerShareDeclared || source.CommonStockDividendsPerShareCashPaid) return { source, derived: false }
+  const commonOnly = source.PaymentsOfDividendsCommonStock
+  const paid = dedupe((commonOnly ?? source.PaymentsOfDividends)?.units.USD ?? []).filter((i) => i.start && i.val > 0)
+  const shares = dedupe((source.WeightedAverageNumberOfSharesOutstandingBasic ?? source.WeightedAverageNumberOfDilutedSharesOutstanding)?.units.shares ?? [])
+    .filter((i) => i.start && i.val > 0)
+  if (!paid.length || !shares.length) return { source, derived: false }
+  const preferred = commonOnly ? [] : dedupe(source.PreferredStockDividendsIncomeStatementImpact?.units.USD ?? [])
+  const common = (cash: Fact) => cash.val - (preferred.find((p) => p.start === cash.start && p.end === cash.end)?.val ?? 0)
+  const items: Fact[] = []
+  for (const cash of paid) {
+    let start = cash.start as string, amount = common(cash)
+    if (!within(days(cash), 80, 100) && !within(days(cash), 350, 380)) {
+      // a year-to-date span longer than a quarter: the quarter that closes it
+      const shorter = paid.find((p) => p.start === cash.start && within(diffDays(cash.end, p.end), 80, 100))
+      if (!shorter) continue
+      start = addDays(shorter.end, 1)
+      amount -= common(shorter)
+    }
+    const count = shares.find((s) => s.end === cash.end && Math.abs(diffDays(s.start as string, start)) <= 3)?.val
+    if (!count || !(amount > 0)) continue
+    items.push({ ...cash, start, val: round6(amount / count) })
+  }
+  if (!items.length) return { source, derived: false }
+  return { source: { ...source, CommonStockDividendsPerShareCashPaid: { units: { 'USD/shares': items } } }, derived: true }
+}
+
 /** Dividends per share by fiscal year (the last ten back-to-back years),
  * adjusted for stock splits, with the year the current run of increases
  * began and the year the current run of payments began. Conservative: the
@@ -592,7 +626,8 @@ export function summarize(factsDoc: FactsDoc) {
   if (gaapCount && gaapCount >= ifrsCount) [taxonomy, flowMap, instantMap, cashFlowMap] = ['us-gaap', US_FLOW, US_INSTANT, US_CASH_FLOW]
   else if (ifrsCount) [taxonomy, flowMap, instantMap, cashFlowMap] = ['ifrs-full', IFRS_FLOW, IFRS_INSTANT, IFRS_CASH_FLOW]
   else return null
-  const source = facts[taxonomy]
+  const { source, derived: dividendsFromCash } = taxonomy === 'us-gaap'
+    ? withDerivedDividends(facts[taxonomy]) : { source: facts[taxonomy], derived: false }
 
   const series: Record<string, { q: Map<string, number>; y: Map<string, number> }> = {}
   let currency: string | null = null
@@ -686,6 +721,8 @@ export function summarize(factsDoc: FactsDoc) {
     })),
   }
   if (series.dividends_per_share && basis !== 'quarter') result.dividends_per_share_ttm = ttm('dividends_per_share')
+  // worked out from the cash paid, not given per share in the filings
+  if (series.dividends_per_share && dividendsFromCash) result.dividends_from_cash = true
   // diluted EPS for the twelve months to each quarter end (up to three
   // years of back-to-back quarters), for P/E against the company's own range
   if (series.eps_diluted && series.net_income && basis === 'quarters') {
@@ -718,7 +755,10 @@ export function summarize(factsDoc: FactsDoc) {
       ...Object.fromEntries(['revenue', 'net_income'].filter((k) => series[k]).map((k) => [k, series[k].y.get(end) ?? null])),
     }))
   }
-  if (taxonomy === 'us-gaap') {
+  // no yearly history from cash paid: payment timing and the average share
+  // count move it a few percent either way, which would show cuts and raises
+  // that never happened (Danaher 2024: $1.05 worked out, $1.08 declared)
+  if (taxonomy === 'us-gaap' && !dividendsFromCash) {
     const history = dividendHistory(source)
     if (history) result.dividend_history = history
   }
