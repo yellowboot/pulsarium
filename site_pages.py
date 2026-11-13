@@ -767,7 +767,7 @@ def why_pulsarium() -> dict:
 
 def earnings_season() -> dict:
     """The Q3 2026 earnings season as one interactive picture: assets/market-map.js draws it from
-    assets/season-q3-2026.js (a fixed snapshot, Oct 12 - Nov 11, 2026); the figures in the text are the same snapshot."""
+    assets/season-q3-2026.js (a dated snapshot, Oct 12 - Nov 13, 2026, refreshed by hand); the figures in the text are the same snapshot."""
     def chips(attr: str, items: list) -> str:
         return "".join(f'<button type="button" class="chip" {attr}="{value}">{esc(label)}</button>' for value, label in items)
     picture = f"""<section class="panel market-map mm-full" data-season="full" aria-label="Interactive picture of the Q3 2026 earnings season" hidden>
@@ -779,38 +779,38 @@ def earnings_season() -> dict:
       <div class="mm-group"><span>Highlight</span><div class="mm-controls" role="group" aria-label="Which companies are lit">{chips("data-season-filter", [("all", "All"), ("beatfell", "Beat and fell"), ("move10", "Moved 10%+"), ("giants", "The six giants")])}</div></div>
     </div>
   </div>
-  <p class="mm-note">Up = the stock rose, down = it fell. The thicker the line, the larger the company. Reports from Oct 12 to Nov 11, 2026.</p>
+  <p class="mm-note">Up = the stock rose, down = it fell. The thicker the line, the larger the company. Reports from Oct 12 to Nov 13, 2026.</p>
 </section>"""
     body = (
         '<header class="page-head feature-head"><span class="eyebrow">Earnings season · Q3 2026</span>'
-        "<h1>730 stocks on the day after their earnings reports</h1>"
+        "<h1>744 stocks on the day after their earnings reports</h1>"
         '<p class="lead">One line is one company worth $10 billion or more. It points up if the stock rose on its first '
         "trading day after the report and down if it fell. Regroup the lines by date, by result or by sector, and point at "
         "any line to see the company.</p></header>"
         + picture
         + features("What the season showed", [
-            ("52% rose, 47% fell", "Of 730 companies worth $10 billion or more, 381 closed higher on the first trading day after their report and 346 closed lower."),
-            ("A beat was almost a coin flip", "571 of 728 companies beat profit forecasts. 310 of them rose and 258 fell anyway. Of the 133 that missed, 60 rose."),
-            ("The six giants all fell", "Apple, Microsoft, Alphabet, Amazon, Meta and Tesla each closed lower the day after reporting. Of 52 companies worth $200 billion or more, 40% rose."),
+            ("52% rose, 47% fell", "Of 744 companies worth $10 billion or more, 389 closed higher on the first trading day after their report and 352 closed lower."),
+            ("A beat was almost a coin flip", "582 of 742 companies beat profit forecasts. 316 of them rose and 263 fell anyway. Of the 135 that missed, 61 rose."),
+            ("The six giants all fell", "Apple, Microsoft, Alphabet, Amazon, Meta and Tesla each closed lower the day after reporting. Of 56 companies worth $200 billion or more, 41% rose."),
             ("Tech and energy took it hardest", "57% of technology companies and 64% of energy companies fell. Utilities did best: 62% rose. Sectors as labelled by Nasdaq."),
             ("One in seven moved 10% or more", "The biggest one-day moves: JFrog +35.3%, Glaukos +33.6%, AppLovin +31.0%; Reddit −29.2%, Intel −28.6%, ServiceNow −26.9%."),
-            ("The market over the same weeks", "The S&amp;P 500 slipped 2.4% between October 12 and November 11, 2026. Nvidia reports on November 17."),
+            ("The market over the same weeks", "The S&amp;P 500 slipped 3.1% between October 12 and November 13, 2026. Nvidia reports on November 17."),
         ])
         + steps("How it was counted", [
-            ("The reports", "3,455 earnings reports on Nasdaq's public earnings calendar between October 12 and November 11, 2026. The picture shows the 730 companies worth $10 billion or more with a known release time."),
+            ("The reports", "4,010 earnings reports on Nasdaq's public earnings calendar between October 12 and November 13, 2026. The picture shows the 744 companies worth $10 billion or more with a known release time."),
             ("The move", "Close to close on the first trading day after the report: the same day for a report before the open, the next day for a report after the close."),
-            ("Beat or missed", "Reported profit per share against the published forecast, as listed in public earnings calendars. This page is a fixed snapshot and is not investment advice."),
+            ("Beat or missed", "Reported profit per share against the published forecast, as listed in public earnings calendars. This page is a dated snapshot and is not investment advice."),
         ])
         + closing_cta("Follow the next season with your own portfolio", "Create a free account: report dates for the companies you hold, their news and SEC figures in one place.")
     )
     return {
         "path": "/earnings-season/", "crumb": "Earnings season",
-        "title": "Q3 2026 Earnings Season in One Picture — 730 Stocks After Their Reports",
-        "description": "An interactive picture of the Q3 2026 earnings season: 730 companies worth $10 billion or more, "
+        "title": "Q3 2026 Earnings Season in One Picture — 744 Stocks After Their Reports",
+        "description": "An interactive picture of the Q3 2026 earnings season: 744 companies worth $10 billion or more, "
                        "each stock's move on the first trading day after its report. 78% beat forecasts; 45% of those fell.",
         "body": body,
         "head": '<link rel="stylesheet" href="/assets/market-map.css?v=5">\n'
-                '<script src="/assets/season-q3-2026.js?v=1" defer></script>\n<script src="/assets/market-map.js?v=5" defer></script>\n',
+                '<script src="/assets/season-q3-2026.js?v=2" defer></script>\n<script src="/assets/market-map.js?v=5" defer></script>\n',
     }
 
 
