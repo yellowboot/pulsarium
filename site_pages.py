@@ -174,7 +174,7 @@ COMMON_FAQ = {
                "upload it, or add trades by hand. Nothing reaches your broker account."),
     "delay": ("How current are the prices?",
               "US shares update during US trading hours, up to every 30 minutes; other listings use the latest "
-              "end-of-day price. Prices come from Marketstack and can differ slightly from your broker's. It is built "
+              "end-of-day price. Prices come from exchange and market-data feeds and can differ slightly from your broker's. It is built "
               "for investors who follow their holdings, not for intraday trading."),
     "privacy": ("Who can see my portfolio?",
                 "Only you. Every row is isolated to your account in the database, sign-in supports two-factor "

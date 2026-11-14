@@ -1,16 +1,15 @@
 """Market movers for the news dashboard: the day's biggest gainers, losers
 and most traded shares among the US-listed companies the site follows.
 
-Prices are Marketstack end-of-day closes (the cabinet's provider; its paid
-plan allows showing them to users), read once per trading day: about 600
-symbols in batches of 100, so a refresh costs ~6 requests of the plan's
-10,000 a month. The result is kept in data/movers.json and only re-read when
-a newer session should exist, at most every few hours while it doesn't.
-
-Without MARKETSTACK_API_KEY (local runs) the stored file is used as it is.
+Prices are end-of-day closes read once per trading day from Yahoo Finance
+(no paid API key required). The result is kept in data/movers.json and only
+re-read when a newer session should exist, at most every few hours while it
+doesn't.
 """
 
+from concurrent.futures import ThreadPoolExecutor
 import json
+import math
 import os
 import re
 import urllib.error
@@ -20,22 +19,13 @@ from datetime import datetime, timedelta, timezone
 
 import fetch_news
 
-EOD_URL = "https://api.marketstack.com/v1/eod"
-USER_AGENT = "Pulsarium/1.0 (+https://pulsarium.finance)"
+BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
 STORE = "data/movers.json"
-BATCH = 100              # symbols per Marketstack request
 SHOWN = 8                # rows per list
 RETRY_HOURS = 3          # wait this long before asking again for a session not there yet
-# A bigger one-day move among these large companies is nearly always a data
-# slip (a share-ratio change the closes don't reflect), not a market move:
-# América Movil showed -98% on 2026-10-02.
 MAX_MOVE_PCT = 50
 READY_UTC = (22, 30)     # a US session's closes are read after this time (UTC)
 
-# Not US-listed shares: market-wide entries, coins, and listings abroad that
-# the site tracks by name. In the hand-made part of the list, OTC foreign
-# shares and ADRs (five letters ending in F or Y) are left out too; the SEC
-# part (entries with a "label") is all Nasdaq/NYSE listings.
 NOT_SHARES = {"BTC", "ETH", "XMR", "OPEC", "FED", "UST10Y", "RHM", "GLEN", "LUG"}
 NOT_SHARE_SECTORS = {"ETFs / Indices", "Bonds / Macro"}
 
@@ -69,22 +59,46 @@ def expected_session(now: datetime) -> str:
     return day.isoformat()
 
 
-def read_closes(key: str, symbols: list, since: str) -> dict:
-    """symbol -> its rows since `since`, newest first."""
+def _fetch_symbol_closes(symbol: str) -> tuple[str, list[dict]]:
+    yh_sym = symbol.replace(".", "-")
+    for host in ("https://query1.finance.yahoo.com", "https://query2.finance.yahoo.com"):
+        url = f"{host}/v8/finance/chart/{urllib.parse.quote(yh_sym)}?range=10d&interval=1d"
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": BROWSER_UA, "Accept": "application/json"})
+            with urllib.request.urlopen(req, timeout=15) as response:
+                payload = json.load(response)
+            result = ((payload.get("chart") or {}).get("result") or [None])[0]
+            if not result:
+                continue
+            timestamps = result.get("timestamp") or []
+            quote = ((result.get("indicators") or {}).get("quote") or [{}])[0]
+            closes = quote.get("close") or []
+            volumes = quote.get("volume") or []
+            history = []
+            for ts, close, vol in zip(timestamps, closes, volumes):
+                if isinstance(close, (int, float)) and math.isfinite(close) and close > 0:
+                    day = datetime.fromtimestamp(int(ts), tz=timezone.utc).strftime("%Y-%m-%d")
+                    history.append({
+                        "symbol": symbol,
+                        "date": day,
+                        "close": float(close),
+                        "adj_close": float(close),
+                        "volume": int(vol) if isinstance(vol, (int, float)) and vol >= 0 else 0,
+                    })
+            history.sort(key=lambda r: r["date"], reverse=True)
+            return symbol, history
+        except Exception:
+            continue
+    return symbol, []
+
+
+def read_closes(symbols: list, since: str = "") -> dict:
+    """symbol -> its recent daily rows, newest first."""
     rows = {}
-    for start in range(0, len(symbols), BATCH):
-        query = urllib.parse.urlencode({
-            "access_key": key, "symbols": ",".join(symbols[start:start + BATCH]),
-            "date_from": since, "limit": 1000,
-        })
-        # Python's default "Python-urllib" agent gets a bare 403 in front of the API
-        request = urllib.request.Request(f"{EOD_URL}?{query}", headers={"User-Agent": USER_AGENT})
-        with urllib.request.urlopen(request, timeout=30) as response:
-            payload = json.load(response)
-        for row in payload.get("data") or []:
-            rows.setdefault(row.get("symbol"), []).append(row)
-    for symbol in rows:
-        rows[symbol].sort(key=lambda row: str(row.get("date")), reverse=True)
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        for sym, history in pool.map(_fetch_symbol_closes, symbols):
+            if history:
+                rows[sym] = [r for r in history if not since or r["date"] >= since]
     return rows
 
 
@@ -103,7 +117,6 @@ def build(rows: dict, names: dict) -> dict:
         if symbol not in names or latest.get(symbol) != session or len(history) < 2:
             continue
         close = history[0].get("close")
-        # the change from split-adjusted closes where Marketstack has them
         now_adj = history[0].get("adj_close") or close
         then_adj = history[1].get("adj_close") or history[1].get("close")
         if not close or not now_adj or not then_adj or close <= 0 or now_adj <= 0 or then_adj <= 0:
@@ -114,7 +127,6 @@ def build(rows: dict, names: dict) -> dict:
         slug = names[symbol]["slug"]
         moves.append({
             "ticker": symbol, "name": names[symbol]["name"], "slug": slug,
-            # a company has a news page once it has had a headline (site_build.py)
             "page": os.path.exists(os.path.join("news", slug, "index.html")),
             "close": round(float(close), 2),
             "change_pct": round(change, 2),
@@ -136,12 +148,11 @@ def load(path: str = STORE) -> dict:
 
 
 def refresh(path: str = STORE, now: datetime | None = None) -> dict:
-    """The stored movers, re-read from Marketstack when a newer session is due."""
+    """The stored movers, re-read when a newer session is due."""
     now = now or datetime.now(timezone.utc)
     stored = load(path)
-    key = os.environ.get("MARKETSTACK_API_KEY", "").strip()
     due = expected_session(now)
-    if not key or stored.get("session", "") >= due:
+    if stored.get("session", "") >= due:
         return stored
     attempted = stored.get("attempted_at")
     if attempted and now - datetime.fromisoformat(attempted) < timedelta(hours=RETRY_HOURS):
@@ -149,19 +160,10 @@ def refresh(path: str = STORE, now: datetime | None = None) -> dict:
 
     names = companies()
     since = (now.date() - timedelta(days=10)).isoformat()
-    # A failed read isn't recorded as an attempt: the next run asks again.
     try:
-        fresh = build(read_closes(key, sorted(names), since), names)
-    except urllib.error.HTTPError as error:
-        try:
-            problem = json.load(error).get("error") or {}
-        except ValueError:
-            problem = {}
-        print(f"Market movers: Marketstack answered HTTP {error.code} "
-              f"{problem.get('code', '')}: {problem.get('message', '')}; keeping the stored ones")
-        return stored
-    except (urllib.error.URLError, TimeoutError, ValueError) as error:
-        print(f"Market movers: Marketstack read failed ({type(error).__name__}); keeping the stored ones")
+        fresh = build(read_closes(sorted(names), since), names)
+    except Exception as error:
+        print(f"Market movers: read failed ({type(error).__name__}); keeping the stored ones")
         return stored
     result = fresh if fresh.get("session", "") > stored.get("session", "") else stored
     result = {**result, "attempted_at": now.isoformat()}
