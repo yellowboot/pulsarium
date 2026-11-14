@@ -814,7 +814,85 @@ def earnings_season() -> dict:
     }
 
 
+def market_cosmos() -> dict:
+    """Interactive SEC Market Cosmos & Gravity Forecast: Sector Galaxies, SEC Risk Black Hole,
+    Supernova Catalysts, and Portfolio Basket X-Ray built from SEC XBRL filings and Form 4 disclosures."""
+    widget = """<section class="panel sec-cosmos" data-sec-cosmos="full" aria-label="Interactive SEC Market Cosmos and Gravity Forecast" hidden>
+  <div class="sec-cosmos-head">
+    <div class="sec-cosmos-title-wrap">
+      <h2>SEC Market Cosmos &amp; Gravity Map</h2>
+      <p class="sec-cosmos-sub">Every star is a US company sized by scale. Switch between <strong>Sector Galaxies</strong>, the <strong>SEC Risk Black Hole</strong>, <strong>Supernova Catalysts</strong>, and <strong>Portfolio Basket X-Ray</strong>.</p>
+    </div>
+    <div class="sec-cosmos-modes" role="tablist" aria-label="Cosmos analytical mode">
+      <button type="button" class="sec-cosmos-mode is-on" data-cosmos-mode="galaxies">🌌 Sector Galaxies <span class="sec-cosmos-count" data-count-galaxies>19</span></button>
+      <button type="button" class="sec-cosmos-mode" data-cosmos-mode="blackhole">🕳️ Risk Black Hole <span class="sec-cosmos-count" data-count-blackhole>—</span></button>
+      <button type="button" class="sec-cosmos-mode" data-cosmos-mode="supernova">🌟 Supernova Leaders <span class="sec-cosmos-count" data-count-supernova>—</span></button>
+      <button type="button" class="sec-cosmos-mode" data-cosmos-mode="portfolio">🛰️ Basket X-Ray</button>
+    </div>
+  </div>
+  <div class="sec-cosmos-toolbar">
+    <div class="sec-cosmos-inputs">
+      <input type="text" class="sec-cosmos-search" data-cosmos-search placeholder="Find ticker or company (e.g. NVDA)…" autocomplete="off">
+      <select class="sec-cosmos-select" data-cosmos-sector aria-label="Filter by SEC sector"><option value="all">All SEC Sectors</option></select>
+      <select class="sec-cosmos-select" data-cosmos-preset aria-label="Select preset basket" hidden>
+        <option value="bigtech">Preset: Big Tech &amp; AI Core</option>
+        <option value="healthcare">Preset: Pharma &amp; Healthcare</option>
+        <option value="value">Preset: Value, Cash &amp; Dividends</option>
+      </select>
+    </div>
+    <div class="sec-cosmos-filters" data-cosmos-filters></div>
+  </div>
+  <div class="sec-cosmos-body">
+    <div class="sec-cosmos-stage">
+      <div class="sec-cosmos-hud">
+        <div class="sec-cosmos-banner" data-cosmos-banner></div>
+        <div class="sec-cosmos-zoom">
+          <button type="button" data-zoom="in" title="Zoom in">+</button>
+          <button type="button" data-zoom="out" title="Zoom out">−</button>
+          <button type="button" data-zoom="reset" title="Reset view">↺</button>
+        </div>
+      </div>
+      <canvas role="img" aria-label="Interactive SEC Market Cosmos visualization"></canvas>
+      <div class="sec-cosmos-legend">
+        <div class="sec-cosmos-legend-items">
+          <span><i style="background:#3dffa2;box-shadow:0 0 6px #3dffa2"></i>Supernova Catalyst (Turnaround / Buybacks / Insider Buy)</span>
+          <span><i style="background:#ff6b8e;box-shadow:0 0 6px #ff6b8e"></i>SEC Red Flag (Profit-Cash Gap / Stress / Bloat / Dilution)</span>
+          <span><i style="background:#7fa8e8"></i>Steady Sector Orbit</span>
+        </div>
+        <span>Scroll to zoom · Drag to pan · Click any star to inspect</span>
+      </div>
+    </div>
+    <aside class="sec-cosmos-side" data-cosmos-side aria-live="polite"></aside>
+  </div>
+</section>"""
+    body = (
+        '<header class="page-head feature-head"><span class="eyebrow">SEC XBRL Filings · Form 4 Insiders · Industry Valuation</span>'
+        "<h1>SEC Market Cosmos &amp; Gravity Forecast</h1>"
+        '<p class="lead">An interactive map where every visual law has a strict financial meaning from official SEC filings: '
+        "industries form galaxies, fundamental red flags pull vulnerable stocks toward the Risk Black Hole, and operating turnarounds, "
+        "buybacks, and insider buying ignite Supernova clusters.</p></header>"
+        + widget
+        + features("How to read the four gravity modes", [
+            ("🌌 Sector Galaxies", "Each of the 19 SEC industries forms a rotating galaxy. Its glow and rotation speed reflect 12-month revenue growth and operating margin shifts across comparable companies."),
+            ("🕳️ SEC Risk Black Hole", "Pulls in companies showing early-warning balance-sheet or cash-flow deterioration in 10-K/10-Q filings: rising net income with falling operating cash flow, negative TTM cash flow with rising debt, bloated inventory/receivables, or uncovered dividend payouts."),
+            ("🌟 Supernova Catalysts", "Highlights companies with forward-looking positive inflection points: operating profit or cash-flow turnarounds, Form 4 insider buying clusters, active share count reductions via buybacks, and P/E discounts to their industry."),
+            ("🛰️ Portfolio & Basket X-Ray", "Separates a tracked basket of stocks into three diagnostic zones at a glance—Supernova Catalysts, Steady Orbit, and SEC Risk Black Hole warnings. In the personal cabinet, this runs automatically on your own portfolios and watchlists."),
+            ("Zero random links", "When you select a company, connecting filaments show its direct peers in the same SEC industry so you can compare sales growth, industry P/E, and filing health side by side."),
+            ("Direct EDGAR verification", "Every risk warning and turnaround catalyst links directly to the underlying SEC Form 10-K, 10-Q, or Form 4 filing on sec.gov."),
+        ])
+        + closing_cta("Run the Gravity X-Ray on your own portfolio", "Open your free Pulsarium cabinet to see your holdings and watchlists mapped against all 3,000+ SEC-covered US companies and industry P/E medians.")
+    )
+    return {
+        "path": "/market-cosmos/", "crumb": "SEC Market Cosmos",
+        "title": "SEC Market Cosmos & Gravity Map — Risk Black Hole & Supernova Stock Screener",
+        "description": "Explore the US stock market through official SEC filings: 19 sector galaxies, the SEC Risk Black Hole for cash-flow and balance-sheet red flags, and Supernova turnaround catalysts.",
+        "body": body,
+        "head": '<link rel="stylesheet" href="/assets/sec-cosmos.css?v=1">\n'
+                '<script src="/assets/season-q3-2026.js?v=2" defer></script>\n<script src="/assets/sec-cosmos.js?v=1" defer></script>\n',
+    }
+
+
 def all_pages() -> list:
-    pages = [portfolio_tracker(), dividend_tracker(), price_alerts(), import_hub(), why_pulsarium(), earnings_season()]
+    pages = [portfolio_tracker(), dividend_tracker(), price_alerts(), import_hub(), why_pulsarium(), earnings_season(), market_cosmos()]
     pages += [broker_page(slug, broker) for slug, broker in BROKERS.items()]
     return pages
