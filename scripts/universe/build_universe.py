@@ -272,6 +272,7 @@ addEventListener('message', (event) => {
   if (!EMBEDDERS.includes(event.origin)) return;
   const m = event.data || {};
   if (m.type === 'universe:fly') flyTo(Number.isInteger(m.to) && m.to >= 0 && m.to < NS ? m.to : m.to === 'bh' ? 'bh' : 'overview', true);
+  if (m.type === 'universe:theme' && (m.theme === 'neon' || m.theme === 'calm') && document.documentElement.dataset.colorTheme !== m.theme) $('#themeBtn').click();
   if (m.type === 'universe:tickers' && Array.isArray(m.tickers)){
     listLabel = 'My Portfolio'; $('#xrayLbl').textContent = 'Portfolio X-Ray';
     window.SEC_COSMOS_ADAPTER.setPortfolioTickers(m.tickers.map(String));
@@ -288,7 +289,7 @@ swap('<h1 class="wordmark">Market Universe</h1>',
 swap("document.body.classList.add('immersive','embed');</script>",
      "document.body.classList.add('immersive','embed');if(parent!==window)document.documentElement.classList.add('framed');</script>")
 swap("body.embed .imm-exit, body.embed .tip { display: none !important; }",
-     "body.embed .imm-exit, body.embed .tip, .framed .nav-back { display: none !important; }")
+     "body.embed .imm-exit, body.embed .tip, .framed .nav-back { display: none !important; } .framed .pz-note a { pointer-events: none; }")
 
 assert "upsidePct" not in html and "Fair-Value" not in html and "Coiled" not in html
 out = os.path.join(ROOT, "universe", "index.html")
