@@ -562,12 +562,39 @@
     return true;
   }
 
+  // The earnings card's second view: the Market Universe page (/universe/) in its picture-only mode. The frame is
+  // made when the view is opened and removed when it is left, so the 3D scene costs nothing until asked for.
+  function universeView(root) {
+    const toggle = root.querySelector('[data-deck-switch]'), holder = root.querySelector('[data-universe]');
+    if (!toggle || !holder) return;
+    const title = root.querySelector('.mm-head h2'), caption = root.querySelector('.mm-head .mm-cap');
+    const texts = { season: [title.textContent, caption.textContent], universe: ['Market Universe', 'Companies as stars, sectors as galaxies'] };
+    function show(which) {
+      const universe = which === 'universe';
+      $$('[data-deck-view]', root).forEach((button) => { const on = button.dataset.deckView === which; button.classList.toggle('is-on', on); button.setAttribute('aria-pressed', String(on)); });
+      $$('[data-view-for]', root).forEach((part) => { part.hidden = part.dataset.viewFor !== which; });
+      title.textContent = texts[which][0]; caption.textContent = texts[which][1];
+      holder.hidden = !universe;
+      if (!universe) { holder.textContent = ''; return; }
+      if (holder.firstChild) return;
+      const frame = document.createElement('iframe');
+      frame.src = '/universe/?embed=1'; frame.title = 'Market Universe: a 3D map of companies and sectors'; frame.loading = 'lazy';
+      const tap = document.createElement('a');
+      tap.className = 'mm-uni-tap'; tap.href = '/universe/'; tap.setAttribute('aria-label', 'Open Market Universe full screen');
+      holder.append(frame, tap);
+    }
+    root.addEventListener('click', (event) => { const button = event.target.closest('[data-deck-view]'); if (button) show(button.dataset.deckView); });
+    toggle.hidden = false;
+    show('season');
+  }
+
   const boot = () => {
     try { compactRow(); } catch (error) { console.error('market-map: compact row', error); }
     const deck = document.querySelector('.mm-deck');
     if (deck) deck.hidden = false;
     $$('[data-season]').forEach((root) => {
       try { if (window.PULSARIUM_SEASON) { root.hidden = false; seasonRing(root); } } catch (error) { console.error('market-map: season ring', error); }
+      try { universeView(root); } catch (error) { console.error('market-map: universe view', error); }
     });
     $$('[data-ipo]').forEach((root) => { try { if (ipoWatch(root)) { const grid = root.closest('.hero-grid'); if (grid) grid.classList.add('has-ipo'); } } catch (error) { root.hidden = true; console.error('market-map: ipo watch', error); } });
     $$('[data-insider-map]').forEach((root) => { try { insiderMap(root); } catch (error) { root.hidden = true; console.error('market-map: insiders', error); } });

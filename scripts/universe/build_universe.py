@@ -246,6 +246,14 @@ swap("bloom.threshold = 0.08 + 0.34 * heat;", "bloom.threshold = 0.13 + 0.33 * g
 # the tour said correlations put the power utilities and Oracle into the AI galaxy; the script places them there by hand
 swap("— real empirical correlations group them together.", "— we placed them here because AI data centers drive their demand.")
 
+# embed mode (/universe/?embed=1) for the small preview on the news page: the picture alone, no panels, and the
+# mouse wheel left to the page it sits in
+swap("<body>", "<body><script>if(/[?&]embed/.test(location.search))document.body.classList.add('immersive','embed');</script>")
+swap("body.immersive .imm-exit { display: inline-block; }",
+     "body.immersive .imm-exit { display: inline-block; } body.embed .imm-exit, body.embed .tip { display: none !important; }")
+swap("const controls = new OrbitControls(camera, canvas);",
+     "const controls = new OrbitControls(camera, canvas); if (document.body.classList.contains('embed')) controls.enableZoom = false;")
+
 assert "upsidePct" not in html and "Fair-Value" not in html and "Coiled" not in html
 out = os.path.join(ROOT, "universe", "index.html")
 os.makedirs(os.path.dirname(out), exist_ok=True)
