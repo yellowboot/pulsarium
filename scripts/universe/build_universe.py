@@ -30,7 +30,11 @@ companies = json.loads(match.group(1))
 # signals worked out from a company's own growth figures; without those figures they cannot stand
 DERIVED = {"SEC Revenue & Margin Breakout", "Operating Leverage Expansion", "Post-Earnings Coiled Spring",
            "Revenue & Margin Compression"}
-WEIGHT = {  # the prototype's weights, used only to re-total a company whose derived signals are dropped
+EXTRA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "extra_figures.json")
+EXTRA = json.load(open(EXTRA_PATH, encoding="utf8")) if os.path.exists(EXTRA_PATH) else {}
+WEIGHT = {  # the prototype's weights, used to re-total these companies
+    "SEC Revenue & Margin Breakout": 36, "Operating Leverage Expansion": 24, "Post-Earnings Coiled Spring": 24,
+    "Revenue & Margin Compression": 28,
     "Liquidity & Cash Burn Stress": 42, "Profit vs. Cash Flow Divergence": 35, "Unfunded Payouts (Payouts > FCF)": 26,
     "Inventory & Receivables Bloat": 22, "SEC Operating Turnaround": 36, "Cannibal Buybacks (Share Reduction)": 28,
     "Form 4 Insider Cluster Buy": 28, "Form 4 Unplanned Insider Selling": 20,
@@ -47,13 +51,39 @@ for c in companies:
     c["earnMove"], c["earnBeat"] = star.get("movePct"), star.get("beat")
     if ticker not in in_sec:
         # not in our SEC sector lists: the prototype showed the sector's growth as the company's own
-        placeholders.append(ticker)
-        c["revYoY"] = c["opMarginDelta"] = c["ttmRevB"] = None
-        if not star.get("secSource"):
-            c["periodEnd"] = None
+        # Its own figures come from its SEC company facts (fill_figures.ts -> extra_figures.json); a figure that
+        # cannot be trusted as a plain number stays empty: a margin change past 40 points (a loss larger than a
+        # tiny revenue) or revenue down by more than half / up more than fourfold in a year (usually a tagging
+        # change or a deal, not the business).
+        own = EXTRA.get(ticker) or {}
+        rev, margin = own.get("revYoY"), own.get("opMarginDelta")
+        if rev is not None and not -50 <= rev <= 300:
+            rev = margin = None
+        if margin is not None and abs(margin) > 40:
+            margin = None
+        c["revYoY"], c["opMarginDelta"] = rev, margin
+        c["ttmRevB"] = own.get("ttmRevB") if rev is not None else None
+        c["periodEnd"] = own.get("periodEnd") if rev is not None else (c.get("periodEnd") if star.get("secSource") else None)
+        if rev is None:
+            placeholders.append(ticker)
         c["signals"] = [s for s in c.get("signals", []) if s["title"] not in DERIVED]
         unknown = [s["title"] for s in c["signals"] if s["title"] not in WEIGHT]
         assert not unknown, (ticker, unknown)
+        # the growth signals, by the prototype's own rules, now from the company's own figures
+        if rev is not None and margin is not None:
+            if rev >= 25 and margin >= 2:
+                c["signals"].insert(0, {"type": "bullish", "title": "SEC Revenue & Margin Breakout",
+                                        "detail": f"SEC 10-Q revenue +{rev:.1f}% YoY with operating margin expanding +{margin:.1f} pp"})
+            elif rev >= 12 and margin >= 0.8:
+                c["signals"].insert(0, {"type": "bullish", "title": "Operating Leverage Expansion",
+                                        "detail": f"SEC revenue +{rev:.1f}% YoY and operating margin +{margin:.1f} pp"})
+            elif rev < -3 and margin < -1:
+                c["signals"].append({"type": "risk", "title": "Revenue & Margin Compression",
+                                     "detail": f"SEC revenue {rev:+.1f}% YoY with operating margin falling {margin:+.1f} pp"})
+        risk_now = sum(WEIGHT[s["title"]] for s in c["signals"] if s.get("type") != "bullish")
+        if rev is not None and rev >= 8 and c["earnBeat"] == 1 and c["earnMove"] is not None and c["earnMove"] <= -2 and risk_now < 25:
+            c["signals"].append({"type": "bullish", "title": "Post-Earnings Coiled Spring",
+                                 "detail": f"Beat Q3 EPS with +{rev:.1f}% revenue growth, yet stock pulled back {c['earnMove']:+.1f}%"})
         good = [s for s in c["signals"] if s.get("type") == "bullish"]
         risk = [s for s in c["signals"] if s.get("type") != "bullish"]
         alpha, pull = min(98, sum(WEIGHT[s["title"]] for s in good)), min(98, sum(WEIGHT[s["title"]] for s in risk))

@@ -1,0 +1,104 @@
+{
+ "UCTT": {
+  "revYoY": 48.8,
+  "opMarginDelta": 5,
+  "ttmRevB": 2.44,
+  "periodEnd": "2026-09-25"
+ },
+ "COLM": {
+  "revYoY": 2,
+  "opMarginDelta": 4.24,
+  "ttmRevB": 3.43,
+  "periodEnd": "2026-09-30"
+ },
+ "BBIO": {
+  "revYoY": 192.6,
+  "opMarginDelta": 117,
+  "ttmRevB": 0.95,
+  "periodEnd": "2026-09-30"
+ },
+ "RIVN": {
+  "revYoY": 38.3,
+  "opMarginDelta": 22.21,
+  "ttmRevB": 6.48,
+  "periodEnd": "2026-09-30"
+ },
+ "ALAB": {
+  "revYoY": 153.7,
+  "opMarginDelta": 6.58,
+  "ttmRevB": 1.56,
+  "periodEnd": "2026-09-30"
+ },
+ "LEN": {
+  "revYoY": -8.7,
+  "opMarginDelta": null,
+  "ttmRevB": 31.97,
+  "periodEnd": "2026-08-31"
+ },
+ "FLR": {
+  "revYoY": 10.5,
+  "opMarginDelta": 20.78,
+  "ttmRevB": 15.89,
+  "periodEnd": "2026-09-30"
+ },
+ "MP": {
+  "revYoY": 175.7,
+  "opMarginDelta": 110.21,
+  "ttmRevB": 0.4,
+  "periodEnd": "2026-09-30"
+ },
+ "PLTR": {
+  "revYoY": 95.9,
+  "opMarginDelta": 13.6,
+  "ttmRevB": 7.29,
+  "periodEnd": "2026-09-30"
+ },
+ "BKNG": {
+  "revYoY": -1.3,
+  "opMarginDelta": -0.23,
+  "ttmRevB": 28.13,
+  "periodEnd": "2026-09-30"
+ },
+ "MA": {
+  "revYoY": 14,
+  "opMarginDelta": 0.94,
+  "ttmRevB": 36.29,
+  "periodEnd": "2026-09-30"
+ },
+ "HUBS": {
+  "revYoY": 17.1,
+  "opMarginDelta": 6.2,
+  "ttmRevB": 3.59,
+  "periodEnd": "2026-09-30"
+ },
+ "LAD": {
+  "revYoY": 2.8,
+  "opMarginDelta": -0.13,
+  "ttmRevB": 38.21,
+  "periodEnd": "2026-09-30"
+ },
+ "PLUG": {
+  "revYoY": 13.3,
+  "opMarginDelta": 159.48,
+  "ttmRevB": 0.77,
+  "periodEnd": "2026-09-30"
+ },
+ "RARE": {
+  "revYoY": 8.1,
+  "opMarginDelta": 43.29,
+  "ttmRevB": 0.73,
+  "periodEnd": "2026-09-30"
+ },
+ "ASTS": {
+  "revYoY": 187.1,
+  "opMarginDelta": null,
+  "ttmRevB": 0.14,
+  "periodEnd": "2026-09-30"
+ },
+ "ECHO": {
+  "revYoY": -68.8,
+  "opMarginDelta": 473.55,
+  "ttmRevB": 12.17,
+  "periodEnd": "2026-09-30"
+ }
+}
