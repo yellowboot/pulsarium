@@ -663,10 +663,17 @@
   },
   {
    "date": "2026-11-14",
-   "value": 47,
+   "value": 55,
    "label": "Neutral",
-   "headlines": 30,
-   "avg7": 54.4,
+   "headlines": 73,
+   "avg7": 55.6
+  },
+  {
+   "date": "2026-11-15",
+   "value": 49,
+   "label": "Neutral",
+   "headlines": 37,
+   "avg7": 56.1,
    "window": "in the last 12 hours"
   }
  ]
