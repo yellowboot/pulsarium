@@ -45,6 +45,10 @@ LABELS = {
 }
 MIN_SAMPLE = 10
 LOW_REVENUE_BASE = 1_000_000  # Prior-year quarterly revenue, USD; context only.
+# The Market Universe page (/universe/) draws more companies than the six per industry the panels list. Its list is
+# published as a row of its own (id "universe"), so the snapshot the site's visitors download stays as small as it was.
+UNIVERSE_PER_SECTOR = 16
+UNIVERSE_MAX = 400
 REFRESH_HOURS = 6
 MAX_REPORT_AGE = 200
 
@@ -571,6 +575,36 @@ def reporting_coverage(rows, today):
             "cash_flow_end_min": cash_ends[0] if cash_ends else None, "cash_flow_end_max": cash_ends[-1] if cash_ends else None}
 
 
+def universe_companies(metrics, signals=None):
+    """Compact rows for the Market Universe page: the largest issuers of each industry by quarterly revenue, then
+    the issuers that carry a financial signal (largest first), at most UNIVERSE_MAX. Same figures as the industry
+    panels; nothing is computed here."""
+    size = lambda r: r.get("quarter_revenue_current", r["revenue_current"])
+    order = lambda r: (-size(r), r["symbol"], r["cik"])
+    grouped = defaultdict(list)
+    for m in metrics: grouped[m["sector"]].append(m)
+    chosen, seen = [], set()
+    for key in sorted(grouped):
+        for row in sorted(grouped[key], key=order)[:UNIVERSE_PER_SECTOR]:
+            chosen.append(row); seen.add(row["cik"])
+    flagged = {str(item.get("cik")) for items in ((signals or {}).get("groups") or {}).values() for item in items if item.get("cik")}
+    flagged_symbols = {str(item.get("symbol") or "").upper() for items in ((signals or {}).get("groups") or {}).values() for item in items}
+    for row in sorted(metrics, key=order):
+        if len(chosen) >= UNIVERSE_MAX: break
+        if row["cik"] not in seen and (row["cik"] in flagged or row["symbol"].upper() in flagged_symbols):
+            chosen.append(row); seen.add(row["cik"])
+    out = []
+    for r in chosen[:UNIVERSE_MAX]:
+        live = "quarter_revenue_current" in r
+        out.append({"cik": r["cik"], "symbol": r["symbol"], "name": r["name"], "sector": r["sector"],
+            "revenue_yoy": round(r["quarter_revenue_yoy"] if live else r["revenue_yoy"], 2),
+            "ttm_revenue_yoy": round(r["revenue_yoy"], 2) if live else None,
+            "ttm_revenue_current": r["revenue_current"] if live else None,
+            "margin_change": None if r["margin_change"] is None else round(r["margin_change"], 2),
+            "period_end": r["period_end"], "source": r.get("source")})
+    return out
+
+
 def aggregate(metrics, insider, coverage, period, annual, state, today):
     grouped = defaultdict(list)
     for m in metrics: grouped[m["sector"]].append(m)
@@ -707,6 +741,13 @@ def run(max_companies):
             payload["financial_signals"] = prior[0]["payload"]["financial_signals"]
         print(f"Financial signals deferred: {type(exc).__name__}; HTTP status {getattr(exc, 'code', 'unavailable')}", flush=True)
     store.upsert("sec_sector_analytics", "id", {"id": "global", "payload": payload, "updated_at": payload["updated_at"]})
+    try:  # an extra for one page: it must never cost the main snapshot
+        wide = universe_companies(metrics, payload.get("financial_signals"))
+        store.upsert("sec_sector_analytics", "id", {"id": "universe", "payload": {"version": 1, "updated_at": payload["updated_at"],
+            "per_sector": UNIVERSE_PER_SECTOR, "companies": wide}, "updated_at": payload["updated_at"]})
+        print(f"Published {len(wide)} companies for the Market Universe page.", flush=True)
+    except Exception as exc:  # noqa: BLE001
+        print(f"Market Universe list deferred: {type(exc).__name__}: {exc}", flush=True)
     print(f"Published {len(metrics)} issuers across {len(payload['sectors'])} industries. Classified {payload['coverage']['classified']}/{len(eligible)}.", flush=True)
     print(f"SEC requests this run: {sec.requests}. Historical frames and successful classifications are retained.", flush=True)
 

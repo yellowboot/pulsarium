@@ -3,10 +3,11 @@
 Everything here comes from sources that are already public:
   - our own snapshots in Supabase (read with the site's publishable key): sec_sector_analytics (sectors, their largest
     companies, financial signals), sec_insider_radar (Form 4 purchases and sales), industry_valuation (P/E medians);
-  - assets/season-q3-2026.js (the move on the first trading day after the Q3 report, beat / missed);
+  - the newest assets/season-q<N>-<year>.js (the move on the first trading day after the report, beat / missed);
   - Yahoo's public chart endpoint: three months of daily closes per company, the S&P 500 and the VIX;
-  - scripts/universe/caps_snapshot.json: market values on one day (Nasdaq's public screener, saved by hand), carried
-    to today by each company's price change since that day;
+  - scripts/universe/caps_snapshot.json: market values on one day (Nasdaq's public screener), carried to today by
+    each company's price change since that day and by the change in its share count (SEC's public frames of the
+    cover-page share count, one request per quarter for all companies), so buybacks and new shares are followed;
   - scripts/universe/extra_figures.json: own SEC figures for the companies our sector snapshot does not list
     (fill_figures.ts).
 
@@ -14,6 +15,11 @@ Nothing is invented: a figure that is missing stays empty and the page shows "n/
 "upside"; the two scores are plain sums of the weights of the signals listed for a company.
 
     python scripts/universe/build_data.py            # writes universe/data.js
+    python scripts/universe/build_data.py --wide     # try the wide list whatever settings.json says
+
+Which companies: settings.json "wide": false = the six largest per industry from the main snapshot plus
+extra_symbols.json (131 in Nov 2026); true = the row "universe" of sec_sector_analytics (up to 400: the 16 largest
+per industry and the companies with financial signals), falling back to the short list while that row is missing.
     python scripts/universe/build_data.py --offline <returns.json>   # prices from a saved file (tests)
 
 A run that cannot get the S&P 500 or prices for most companies stops without touching the published file.
@@ -37,13 +43,13 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 WINDOW = 50  # trading days of returns the page works with
 
 
-def snapshot(table: str) -> dict:
-    request = urllib.request.Request(f"{SUPABASE}{table}?id=eq.global&select=payload",
+def snapshot(table: str, row: str = "global") -> dict:
+    request = urllib.request.Request(f"{SUPABASE}{table}?id=eq.{row}&select=payload",
                                      headers={"apikey": PUBLISHABLE_KEY, "Authorization": f"Bearer {PUBLISHABLE_KEY}"})
     with urllib.request.urlopen(request, timeout=60) as response:
         rows = json.load(response)
     if not rows or not rows[0].get("payload"):
-        raise RuntimeError(f"{table}: empty snapshot")
+        raise RuntimeError(f"{table}/{row}: empty snapshot")
     return rows[0]["payload"]
 
 
@@ -154,7 +160,7 @@ def clean_name(name: str) -> str:
     return text or name
 
 
-def build_companies(sec: dict, radar: dict, valuation: dict, season: dict, extra: dict) -> tuple:
+def build_companies(sec: dict, radar: dict, valuation: dict, season: dict, extra: dict, wide: list | None = None) -> tuple:
     sectors = {sector["id"]: sector for sector in sec.get("sectors", [])}
     industry_of = valuation.get("companies", {})
     season_of = {row[0].upper(): {"name": row[1], "move": float(row[5]), "beat": int(row[6])} for row in season.get("rows", [])}
@@ -183,17 +189,17 @@ def build_companies(sec: dict, radar: dict, valuation: dict, season: dict, extra
             filing_signals.setdefault(symbol, []).append(signal("insider_sell", f"Executives sold ${(amount - planned) / 1e6:.1f}M outside 10b5-1 plans"))
 
     raw = {}
-    for sector in sec.get("sectors", []):
-        for company in sector.get("companies", []):
-            symbol = company["symbol"].upper()
-            rev = company.get("revenue_yoy", company.get("ttm_revenue_yoy"))
-            ttm = company.get("ttm_revenue_current") or company.get("revenue_current")
-            raw[symbol] = dict(sector=sector["id"], sector_name=sector.get("name", sector["id"]), name=company.get("name", symbol),
-                               rev=None if rev is None else round(float(rev), 1),
-                               margin=None if company.get("margin_change") is None else round(float(company["margin_change"]), 2),
-                               ttm=None if not ttm else round(float(ttm) / 1e9, 2),
-                               source=company.get("source"), period_end=company.get("period_end"),
-                               galaxy=GALAXY_OF.get(sector["id"], FALLBACK_GALAXY))
+    listed = wide if wide else [{**company, "sector": sector["id"]} for sector in sec.get("sectors", []) for company in sector.get("companies", [])]
+    for company in listed:
+        symbol, sector_id = company["symbol"].upper(), company["sector"]
+        rev = company.get("revenue_yoy", company.get("ttm_revenue_yoy"))
+        ttm = company.get("ttm_revenue_current") or company.get("revenue_current")
+        raw[symbol] = dict(sector=sector_id, sector_name=(sectors.get(sector_id) or {}).get("name", sector_id), name=company.get("name", symbol),
+                           rev=None if rev is None else round(float(rev), 1),
+                           margin=None if company.get("margin_change") is None else round(float(company["margin_change"]), 2),
+                           ttm=None if not ttm else round(float(ttm) / 1e9, 2),
+                           source=company.get("source"), period_end=company.get("period_end"), cik=str(company.get("cik") or ""),
+                           galaxy=GALAXY_OF.get(sector_id, FALLBACK_GALAXY))
     withheld = []
     for symbol in EXTRA_SYMBOLS:
         if symbol in raw:
@@ -213,7 +219,7 @@ def build_companies(sec: dict, radar: dict, valuation: dict, season: dict, extra
         raw[symbol] = dict(sector=sector_id, sector_name=(sectors.get(sector_id) or {}).get("name") or "Other", name=item.get("name") or symbol,
                            rev=rev, margin=margin, ttm=own.get("ttmRevB") if rev is not None else None,
                            source=item.get("source"), period_end=own.get("periodEnd") if rev is not None else item.get("period_end"),
-                           galaxy=GALAXY_OF.get(sector_id, EXTRA_GALAXY))
+                           cik=str(item.get("cik") or ""), galaxy=GALAXY_OF.get(sector_id, EXTRA_GALAXY))
 
     companies = []
     for symbol, company in raw.items():
@@ -247,7 +253,7 @@ def build_companies(sec: dict, radar: dict, valuation: dict, season: dict, extra
             "supernovaScore": growth_score, "blackHolePull": risk_score, "role": role, "supernovaType": lead, "riskType": lead,
             "periodEnd": company["period_end"], "secUrl": company["source"] or "",
             "signals": [{"type": s["type"], "title": s["title"], "detail": s["detail"]} for s in ordered[:4]],
-            "peers": [], "earnMove": move, "earnBeat": beat,
+            "peers": [], "earnMove": move, "earnBeat": beat, "_cik": company.get("cik") or "",
         })
     return companies, withheld
 
@@ -307,7 +313,41 @@ def fetch_prices(symbols: list) -> dict:
         return dict(pool.map(yahoo_history, symbols + ["^GSPC", "^VIX"]))
 
 
-def market_block(companies: list, series: dict, caps: dict) -> dict:
+def share_drift(as_of: str, today: datetime | None = None) -> dict:
+    """{cik: shares now / shares when the market values were saved}, from SEC's frames of the cover-page share count.
+    Two requests for all companies; any trouble returns {} (market values then follow the price alone)."""
+    try:
+        contact = os.environ.get("SEC_CONTACT", "").strip()
+        agent = "Pulsarium portfolio tracker " + (contact or "https://pulsarium.finance")
+
+        def frame(year: int, quarter: int) -> dict:
+            url = f"https://data.sec.gov/api/xbrl/frames/dei/EntityCommonStockSharesOutstanding/shares/CY{year}Q{quarter}I.json"
+            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": agent}), timeout=60) as response:
+                return {str(row["cik"]): float(row["val"]) for row in json.load(response).get("data", []) if row.get("val")}
+
+        closed = lambda day: (day.year, (day.month - 1) // 3) if day.month > 3 else (day.year - 1, 4)  # noqa: E731
+        base = closed(datetime.strptime(as_of, "%Y-%m-%d"))
+        year, quarter = closed(today or datetime.now(timezone.utc))
+        latest = None
+        while (year, quarter) > base:  # the newest quarter SEC has gathered enough filings for
+            try:
+                candidate = frame(year, quarter)
+                if len(candidate) > 2000:
+                    latest = candidate
+                    break
+            except Exception:  # noqa: BLE001 - a quarter not published yet
+                pass
+            year, quarter = (year, quarter - 1) if quarter > 1 else (year - 1, 4)
+        if not latest:
+            return {}
+        then = frame(*base)
+        return {cik: latest[cik] / then[cik] for cik in latest if then.get(cik)}
+    except Exception as error:  # noqa: BLE001
+        print(f"share counts not followed this run: {type(error).__name__}: {error}")
+        return {}
+
+
+def market_block(companies: list, series: dict, caps: dict, drift: dict | None = None) -> dict:
     index = series.get("^GSPC") or {}
     calendar = sorted(index)[-(WINDOW + 1):]
     if len(calendar) < WINDOW + 1:
@@ -328,6 +368,10 @@ def market_block(companies: list, series: dict, caps: dict) -> dict:
             path.append(last)
         first = next((x for x in path if x is not None), None)
         cap_now = cap_values.get(company["ticker"].replace("-", "/")) or cap_values.get(company["ticker"])
+        # more or fewer shares since the snapshot; a ratio outside 0.75-1.35 is a split or a filing oddity, not followed
+        ratio = (drift or {}).get(company.pop("_cik", ""))
+        if cap_now and ratio and 0.75 <= ratio <= 1.35:
+            cap_now *= ratio
         if first is None:
             matrix.append([0.0] * WINDOW)
             company.update(px=None, r1d=None, r5d=None, r20d=None, r50d=None, volAnn=None, realBeta=None,
@@ -362,15 +406,30 @@ def market_block(companies: list, series: dict, caps: dict) -> dict:
 
 def main() -> None:
     sec, radar, valuation = snapshot("sec_sector_analytics"), snapshot("sec_insider_radar"), snapshot("industry_valuation")
-    season_text = io.open(os.path.join(ROOT, "assets", "season-q3-2026.js"), encoding="utf8").read()
-    season = json.loads(season_text.split("window.PULSARIUM_SEASON = ", 1)[1].rstrip(";\r\n "))
-    companies, withheld = build_companies(sec, radar, valuation, season, load_json("extra_figures.json", {}) or {})
+    # the newest season file by its name (season-q3-2026.js < season-q4-2026.js < season-q1-2027.js)
+    seasons = sorted((int(m.group(2)), int(m.group(1)), name) for name in os.listdir(os.path.join(ROOT, "assets"))
+                     for m in [re.fullmatch(r"season-q([1-4])-(\d{4})\.js", name)] if m)
+    season = {}
+    if seasons:
+        season_text = io.open(os.path.join(ROOT, "assets", seasons[-1][2]), encoding="utf8").read()
+        season = json.loads(season_text.split("window.PULSARIUM_SEASON = ", 1)[1].rstrip(";\r\n "))
+    wide = None
+    if "--wide" in sys.argv or (load_json("settings.json", {}) or {}).get("wide"):
+        try:
+            wide = snapshot("sec_sector_analytics", "universe").get("companies") or None
+        except Exception as error:  # noqa: BLE001 - the row appears with the first SEC run after its migration
+            print(f"wide list not available, using the short one: {error}")
+    extra = {k: v for k, v in (load_json("extra_figures.json", {}) or {}).items() if not k.startswith("_")}
+    companies, withheld = build_companies(sec, radar, valuation, season, extra, wide)
     galaxies = build_galaxies(sec, valuation, companies)
     if "--offline" in sys.argv:
         series = json.load(open(sys.argv[sys.argv.index("--offline") + 1], encoding="utf8"))
     else:
         series = fetch_prices([c["ticker"] for c in companies])
-    market = market_block(companies, series, load_json("caps_snapshot.json", {}) or {})
+    caps = load_json("caps_snapshot.json", {}) or {}
+    market = market_block(companies, series, caps, share_drift(caps["asOf"]) if caps.get("asOf") else {})
+    for company in companies:
+        company.pop("_cik", None)
     data = {"builtAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "secUpdatedAt": sec.get("updated_at"),
             "companies": companies, "galaxies": galaxies, "market": market}
     out = os.path.join(ROOT, "universe", "data.js")

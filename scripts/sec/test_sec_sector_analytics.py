@@ -149,6 +149,21 @@ class Analytics(unittest.TestCase):
         self.assertAlmostEqual(result['sectors'][0]['companies'][0]['revenue_yoy'], 20)
         self.assertEqual(result['sectors'][0]['revenue_current'], 2260)
 
+    def test_universe_list_takes_the_largest_per_industry_then_signal_companies(self):
+        row = lambda cik, sector, revenue: {"cik": str(cik), "symbol": f"S{cik}", "name": f"N{cik}", "sector": sector,
+            "revenue_yoy": 10.0, "margin_change": 1.234, "revenue_current": revenue * 4, "quarter_revenue_current": revenue,
+            "quarter_revenue_yoy": 12.345, "period_end": "2026-09-30", "source": None}
+        metrics = [row(i, "software", 1000 - i) for i in range(1, 31)] + [row(100, "banks", 5)]
+        signals = {"groups": {"stress": [{"cik": "30", "symbol": "S30"}], "shares": [{"symbol": "s29"}]}}
+        out = s.universe_companies(metrics, signals)
+        symbols = [c["symbol"] for c in out]
+        self.assertEqual(len(out), s.UNIVERSE_PER_SECTOR + 1 + 2)       # 16 software, the bank, two signal companies
+        self.assertEqual(symbols[-2:], ["S29", "S30"])                   # signal companies after the largest, largest first
+        self.assertNotIn("S17", symbols)                                 # no signal, below the per-industry cut
+        first = next(c for c in out if c["symbol"] == "S1")
+        self.assertEqual((first["revenue_yoy"], first["ttm_revenue_yoy"], first["ttm_revenue_current"], first["margin_change"]), (12.35, 10.0, 3996, 1.23))
+        self.assertNotIn("fcf", first)
+
     def test_ttm_margin_and_latest_matching_annual_cash_flow(self):
         pools = self.ttm_pools()
         pools['OperatingIncomeLoss'] = {1: [{**r, 'val': r['val'] * (.2 if r['end'].startswith('2026') else .1)} for r in pools[s.REVENUE[0]][1]]}
