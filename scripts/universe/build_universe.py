@@ -1,112 +1,32 @@
-"""Market Universe page (/universe/): the 3D prototype with its invented figures taken out.
+"""Market Universe page (/universe/): the 3D prototype turned into the published page.
 
-Input: the prototype (sec-cosmos-sfx-preview.html: real SEC snapshot figures, real end-of-day prices,
-but hand-typed market values, an "upside" percentage with no valuation behind it and sector averages
-shown as company figures), a symbol -> market value map (Nasdaq public screener) and the prototype's
-dataset (the move after the Q3 report). Output: universe/index.html.
+    python scripts/universe/build_universe.py        # writes universe/index.html
 
-    python scripts/universe/build_universe.py <prototype.html> <caps.json> <cosmos_dataset.json> <raw_sec_dump.json>
-
-Every replacement is asserted: a prototype that changed shape stops the build instead of publishing half a fix.
+Input: scripts/universe/prototype.html, the prototype exactly as it was designed (kept untouched as the source of the
+look and the animation). This script applies the changes on top of it as a list of asserted replacements, so a
+prototype that changed shape stops the build instead of publishing half a fix:
+  - the page no longer carries its data: it reads window.UNIVERSE_DATA from /universe/data.js, which
+    scripts/universe/build_data.py rebuilds from our SEC snapshots and end-of-day prices (the prototype's hand-typed
+    market values, its "upside" percentage with no valuation behind it and sector averages shown as company figures
+    are gone with the embedded data);
+  - labels that read like advice are renamed, simulations are labelled as such;
+  - the look: a darker sky, the black hole (flat shadow, edge-on disk, softened lens edge);
+  - embedding: a picture-only mode for the news page, messages from the cabinet (theme, the user's tickers).
+Run it only when the page itself changes; the data refreshes without it.
 """
 import io
-import json
 import os
 import re
-import sys
 
-proto_path, caps_path, dataset_path, dump_path = sys.argv[1:5]
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-html = io.open(proto_path, encoding="utf8").read()
-caps = json.load(open(caps_path, encoding="utf8"))
-dataset = {s["symbol"]: s for s in json.load(open(dataset_path, encoding="utf8"))["stars"]}
-dump = json.load(open(dump_path, encoding="utf8"))
-in_sec = {c["symbol"].upper() for sector in dump["sec"].get("sectors", []) for c in sector.get("companies", [])}
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(os.path.dirname(HERE))
+html = io.open(os.path.join(HERE, "prototype.html"), encoding="utf8").read()
 
-# ---------- data ----------
-match = re.search(r"const RAW_COMPANIES = (\[.*?\]);\n", html, re.S)
-companies = json.loads(match.group(1))
-
-# signals worked out from a company's own growth figures; without those figures they cannot stand
-DERIVED = {"SEC Revenue & Margin Breakout", "Operating Leverage Expansion", "Post-Earnings Coiled Spring",
-           "Revenue & Margin Compression"}
-EXTRA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "extra_figures.json")
-EXTRA = json.load(open(EXTRA_PATH, encoding="utf8")) if os.path.exists(EXTRA_PATH) else {}
-WEIGHT = {  # the prototype's weights, used to re-total these companies
-    "SEC Revenue & Margin Breakout": 36, "Operating Leverage Expansion": 24, "Post-Earnings Coiled Spring": 24,
-    "Revenue & Margin Compression": 28,
-    "Liquidity & Cash Burn Stress": 42, "Profit vs. Cash Flow Divergence": 35, "Unfunded Payouts (Payouts > FCF)": 26,
-    "Inventory & Receivables Bloat": 22, "SEC Operating Turnaround": 36, "Cannibal Buybacks (Share Reduction)": 28,
-    "Form 4 Insider Cluster Buy": 28, "Form 4 Unplanned Insider Selling": 20,
-}
-RENAME = {"Post-Earnings Coiled Spring": "Beat Forecast, Stock Fell"}
-placeholders = []
-for c in companies:
-    ticker = c["ticker"]
-    cap = caps.get(ticker.replace("-", "/")) or caps.get(ticker)
-    assert cap, f"no market value for {ticker}"
-    c["marketCapB"] = round(cap / 1e9, 1)
-    c.pop("upsidePct", None)
-    star = dataset.get(ticker, {})
-    c["earnMove"], c["earnBeat"] = star.get("movePct"), star.get("beat")
-    if ticker not in in_sec:
-        # not in our SEC sector lists: the prototype showed the sector's growth as the company's own
-        # Its own figures come from its SEC company facts (fill_figures.ts -> extra_figures.json); a figure that
-        # cannot be trusted as a plain number stays empty: a margin change past 40 points (a loss larger than a
-        # tiny revenue) or revenue down by more than half / up more than fourfold in a year (usually a tagging
-        # change or a deal, not the business).
-        own = EXTRA.get(ticker) or {}
-        rev, margin = own.get("revYoY"), own.get("opMarginDelta")
-        if rev is not None and not -50 <= rev <= 300:
-            rev = margin = None
-        if margin is not None and abs(margin) > 40:
-            margin = None
-        c["revYoY"], c["opMarginDelta"] = rev, margin
-        c["ttmRevB"] = own.get("ttmRevB") if rev is not None else None
-        c["periodEnd"] = own.get("periodEnd") if rev is not None else (c.get("periodEnd") if star.get("secSource") else None)
-        if rev is None:
-            placeholders.append(ticker)
-        c["signals"] = [s for s in c.get("signals", []) if s["title"] not in DERIVED]
-        unknown = [s["title"] for s in c["signals"] if s["title"] not in WEIGHT]
-        assert not unknown, (ticker, unknown)
-        # the growth signals, by the prototype's own rules, now from the company's own figures
-        if rev is not None and margin is not None:
-            if rev >= 25 and margin >= 2:
-                c["signals"].insert(0, {"type": "bullish", "title": "SEC Revenue & Margin Breakout",
-                                        "detail": f"SEC 10-Q revenue +{rev:.1f}% YoY with operating margin expanding +{margin:.1f} pp"})
-            elif rev >= 12 and margin >= 0.8:
-                c["signals"].insert(0, {"type": "bullish", "title": "Operating Leverage Expansion",
-                                        "detail": f"SEC revenue +{rev:.1f}% YoY and operating margin +{margin:.1f} pp"})
-            elif rev < -3 and margin < -1:
-                c["signals"].append({"type": "risk", "title": "Revenue & Margin Compression",
-                                     "detail": f"SEC revenue {rev:+.1f}% YoY with operating margin falling {margin:+.1f} pp"})
-        risk_now = sum(WEIGHT[s["title"]] for s in c["signals"] if s.get("type") != "bullish")
-        if rev is not None and rev >= 8 and c["earnBeat"] == 1 and c["earnMove"] is not None and c["earnMove"] <= -2 and risk_now < 25:
-            c["signals"].append({"type": "bullish", "title": "Post-Earnings Coiled Spring",
-                                 "detail": f"Beat Q3 EPS with +{rev:.1f}% revenue growth, yet stock pulled back {c['earnMove']:+.1f}%"})
-        good = [s for s in c["signals"] if s.get("type") == "bullish"]
-        risk = [s for s in c["signals"] if s.get("type") != "bullish"]
-        alpha, pull = min(98, sum(WEIGHT[s["title"]] for s in good)), min(98, sum(WEIGHT[s["title"]] for s in risk))
-        c["supernovaScore"], c["blackHolePull"] = alpha, pull
-        c["role"] = "black_hole_risk" if pull >= 22 and pull > alpha else "supernova" if alpha >= 22 else "core"
-        first = (risk if c["role"] == "black_hole_risk" else good) or c["signals"]
-        c["supernovaType"] = c["riskType"] = first[0]["title"] if first and c["role"] != "core" else "Core Sector Compounder"
-    for key in ("supernovaType", "riskType"):
-        c[key] = RENAME.get(c.get(key), c.get(key))
-    for signal in c.get("signals", []):
-        signal["title"] = RENAME.get(signal["title"], signal["title"])
-html = html[:match.start(1)] + json.dumps(companies, ensure_ascii=False) + html[match.end(1):]
-
-# galaxy counters follow the corrected roles
-gmatch = re.search(r"const RAW_GALAXIES = (\[.*?\]);\n", html, re.S)
-galaxies = json.loads(gmatch.group(1))
-for g in galaxies:
-    mine = [c for c in companies if c["galaxyId"] == g["id"]]
-    g["supernovaCount"] = sum(c["role"] == "supernova" for c in mine)
-    g["riskCount"] = sum(c["role"] == "black_hole_risk" for c in mine)
-html = html[:gmatch.start(1)] + json.dumps(galaxies, ensure_ascii=False) + html[gmatch.end(1):]
-n_sup = sum(c["role"] == "supernova" for c in companies)
-n_risk = sum(c["role"] == "black_hole_risk" for c in companies)
+# ---------- data: out of the page, into /universe/data.js ----------
+for name, field in (("RAW_COMPANIES", "companies"), ("RAW_GALAXIES", "galaxies"), ("REAL_MARKET", "market")):
+    found = re.search(r"const %s = [\[{].*?[\]}];\n" % name, html, re.S)
+    assert found, name
+    html = html[:found.start()] + f"const {name} = window.UNIVERSE_DATA.{field};\n" + html[found.end():]
 
 
 def swap(old: str, new: str, count: int = 1) -> None:
@@ -119,16 +39,14 @@ def swap(old: str, new: str, count: int = 1) -> None:
 # ---------- page head and labels ----------
 swap("<title>SEC Market Gravity (SFX Preview) — 3D WebGL Cosmos & Fundamental Forecasting</title>",
      "<title>Market Universe — SEC Filings as a 3D Map of the Stock Market | Pulsarium</title>\n"
-     '<meta name="description" content="131 large US companies as stars, their sectors as galaxies: revenue growth, '
+     '<meta name="description" content="Large US companies as stars, their sectors as galaxies: revenue growth, '
      'margins and cash-flow signals from SEC filings, with real end-of-day prices and correlations. Free, no account.">\n'
      '<link rel="canonical" href="https://pulsarium.finance/universe/">\n'
-     '<link rel="icon" href="/favicon.ico">')
+     '<link rel="icon" href="/favicon.ico">\n<script src="/universe/data.js"></script>')
 swap('<h1 class="wordmark">SEC Market Gravity</h1>', '<h1 class="wordmark">Market Universe</h1>')
 swap("Portfolio & Watchlist Gravity X-Ray: Separates tracked stocks into Supernova Leaders (left), Fair Orbit (center), and SEC Risk Black Hole (right)",
      "Watchlist X-Ray: separates a list of stocks into growth signals (left), neutral (centre) and SEC risk signals (right)")
 swap("🔬 Portfolio X-Ray <span", "🔬 Watchlist X-Ray <span")
-swap('<span class="cnt" id="cntSup">39</span>', f'<span class="cnt" id="cntSup">{n_sup}</span>')
-swap('<span class="cnt" id="cntRisk">22</span>', f'<span class="cnt" id="cntRisk">{n_risk}</span>')
 swap('<div class="sc-up-lbl">SEC Fair-Value Upside</div>', '<div class="sc-up-lbl">SEC Revenue, Year on Year</div>')
 swap("<span>Alpha</span>", "<span>Growth signals</span>")
 swap("<span>Risk Pull</span>", "<span>Risk signals</span>")
@@ -342,7 +260,5 @@ swap("""<span class="dr-val neg" title="Sum of the risk signals' weights, 0-100"
 
 assert "upsidePct" not in html and "Fair-Value" not in html and "Coiled" not in html
 out = os.path.join(ROOT, "universe", "index.html")
-os.makedirs(os.path.dirname(out), exist_ok=True)
 io.open(out, "w", encoding="utf8", newline="\n").write(html)
-print(f"{out}: {len(html)} chars; {len(companies)} companies, {n_sup} growth, {n_risk} risk; "
-      f"figures withheld for {len(placeholders)}: {' '.join(placeholders)}")
+print(f"{out}: {len(html)} chars")
