@@ -203,9 +203,11 @@ swap("body.immersive .imm-exit { display: inline-block; }",
 # browser is zoomed below 100% (Nov 2026: one wheel click threw her camera to the far limit or into the hole). The
 # controls' own zoom is switched off and the wheel moves the camera here: one click = one even 10% step, at any
 # page zoom and with any mouse. Pinch zoom on touch screens still belongs to the controls (it has no such division).
+# The small preview on the news page zooms by the wheel too (her choice, 15 Nov 2026: the wheel, not buttons), so
+# the page under it does not scroll while the pointer is on the picture.
 swap("const controls = new OrbitControls(camera, canvas);",
      "const controls = new OrbitControls(camera, canvas); "
-     "canvas.addEventListener('wheel', (e) => { if (mode === 'fly' || document.body.classList.contains('embed')) return; e.preventDefault(); e.stopImmediatePropagation(); "
+     "canvas.addEventListener('wheel', (e) => { if (mode === 'fly') return; e.preventDefault(); e.stopImmediatePropagation(); "
      "const unit = e.deltaMode === 1 ? 33 : e.deltaMode === 2 ? 100 : 1, step = Math.max(-1, Math.min(1, e.deltaY * unit / 100)); "
      "const L = camera.position.distanceTo(controls.target), next = Math.max(controls.minDistance, Math.min(controls.maxDistance, L * Math.pow(1.1, step))); "
      "camera.position.sub(controls.target).setLength(next).add(controls.target); if (!nav.tw) nav.userCam = true; }, {capture: true, passive: false});")
@@ -257,6 +259,83 @@ swap("`⚠️ Black Hole Pull — SEC Red Flags (${riskAssets.length})`",
      "`⚠️ SEC Risk Signals: ${riskAssets.filter(a => (a.blackHolePull || 0) >= 40).length} strong · ${riskAssets.filter(a => (a.blackHolePull || 0) < 40).length} light flags`")
 swap("""<span class="dr-val neg" title="Sum of the risk signals' weights, 0-100">risk ${a.blackHolePull||0}</span>""",
      """<span class="dr-val" style="color:${(a.blackHolePull||0)>=40?'var(--negative)':'var(--warning)'}" title="Sum of the risk signals' weights, 0-100. From 40: strong risk; below: a light flag">${(a.blackHolePull||0)>=40?'risk':'flag'} ${a.blackHolePull||0}</span>""")
+
+# ---------- finding companies inside a galaxy (her notes, 15 Nov 2026) ----------
+# 1) Up close, a galaxy showed company names that came and went as it turned (each name needs a wide free box).
+#    Near a galaxy, or when the camera follows one, every star now gets its ticker: a short label that fits, and a
+#    label that was on screen last frame keeps its place before a new one is tried.
+swap("const LPOOL = 26;", "const LPOOL = 70; let shownBefore = new Set();")
+swap("""  } else if (near >= 0 && nd < RG[near]*4.5){
+    for (const i of GAL[near]) if (!seen.has(i)){ seen.add(i); want.push({i, kind: 'near'}); }""",
+     """  } else if (typeof nav.follow === 'number' || (near >= 0 && nd < RG[near]*4.5)){
+    for (const i of GAL[typeof nav.follow === 'number' ? nav.follow : near]) if (!seen.has(i)){ seen.add(i); want.push({i, kind: 'tick'}); }""")
+swap("""  let used = 0;
+  const usedNames = new Set();""",
+     """  let used = 0;
+  const usedNames = new Set(), shownNow = new Set();
+  const turn = (it) => it.kind === 'focus' ? 0 : shownBefore.has(it.i) ? 1 : 2;
+  want.sort((x, y) => turn(x) - turn(y));""")
+swap("if (it.kind !== 'focus' && placed.some(q => Math.abs(q.x-p.x) < 105 && Math.abs(q.y-p.y) < 24)) continue;",
+     "if (it.kind !== 'focus' && placed.some(q => Math.abs(q.x-p.x) < (it.kind === 'tick' ? 62 : 105) && Math.abs(q.y-p.y) < (it.kind === 'tick' ? 18 : 24))) continue;")
+swap("    usedNames.add(a.name);\n    placed.push({x: p.x, y: p.y, f: it.kind === 'focus'});",
+     "    usedNames.add(a.name); shownNow.add(i);\n    placed.push({x: p.x, y: p.y, f: it.kind === 'focus'});")
+swap("               : it.kind === 'near' ? `${rMark}${a.name} ${up}`",
+     "               : it.kind === 'tick' ? `${rMark}<span style=\"font-family:var(--font-mono);font-weight:600;letter-spacing:.02em\" title=\"${a.name}\">${a.ticker}</span>`\n"
+     "               : it.kind === 'near' ? `${rMark}${a.name} ${up}`")
+swap("  for (let k=used; k<LPOOL; k++){\n    sLabels[k].hidden = true;",
+     "  shownBefore = shownNow;\n  for (let k=used; k<LPOOL; k++){\n    sLabels[k].hidden = true;")
+
+# 2) A list on the left: flying to a galaxy opens its companies, largest first; a click flies to the star.
+swap("let activeDrawer = null, activeTab = 'all', activeSecFilter = 'all';",
+     "let activeDrawer = null, activeTab = 'all', activeSecFilter = 'all', drawerGal = 0;")
+swap("""  nav.follow = f;
+  nav.tw = {t0: vis, dur: typeof f === 'number' ? 2.4 : 1.8, fromP: camera.position.clone(), fromT: controls.target.clone()};""",
+     """  nav.follow = f;
+  if (byUser && typeof f === 'number' && !document.body.classList.contains('embed')){
+    activeDrawer = 'galaxy'; drawerGal = f; activeTab = 'all'; activeSecFilter = 'all'; drawerEl.hidden = false;
+    syncModeButtons(); renderDrawer(); measureHud();
+  } else if (byUser && (f === 'overview' || f === 'bh') && activeDrawer === 'galaxy'){
+    activeDrawer = null; drawerEl.hidden = true; syncModeButtons(); measureHud();
+  }
+  nav.tw = {t0: vis, dur: typeof f === 'number' ? 2.4 : 1.8, fromP: camera.position.clone(), fromT: controls.target.clone()};""")
+swap("""  } else if (activeDrawer === 'sectors'){
+    $('#drTitle').textContent = '🌌 Sector Galaxy Rotation (SEC 10-Q / 10-K)';""",
+     """  } else if (activeDrawer === 'galaxy'){
+    const sec = SECTORS[drawerGal];
+    const members = GAL[drawerGal].map(i => ({a: assets[i], i})).sort((x, y) => (y.a.marketCapB || 0) - (x.a.marketCapB || 0));
+    $('#drTitle').textContent = `🌌 ${sec.name} (${members.length})`;
+    tabsEl.hidden = true;
+    listEl.innerHTML = `<div class="dr-row" data-back="1"><div class="dr-row-top"><div class="dr-row-id"><b>← All galaxies</b></div></div></div>` + members.map(({a, i}) => {
+      const cap = a.marketCapB != null ? (a.marketCapB >= 1000 ? '$' + nf2.format(a.marketCapB/1000) + 'T' : '$' + nf1.format(a.marketCapB) + 'B') : '';
+      const sig = (a.signals && a.signals[0]) ? a.signals[0].title : 'No signals flagged';
+      const move = a.r20d != null ? (a.r20d >= 0 ? '+' : '') + nf1.format(a.r20d) + '%' : '';
+      return `<div class="dr-row" data-idx="${i}">
+        <div class="dr-row-top">
+          <div class="dr-row-id">${roleIconHtml(a)}<b>${a.ticker}</b><span>${a.name}</span></div>
+          <span class="dr-val ${(a.r20d||0)>=0?'pos':'neg'}" title="Price change over 20 trading days">${move}</span>
+        </div>
+        <div class="dr-desc">${cap}${cap ? ' · ' : ''}${sig}</div>
+      </div>`;
+    }).join('');
+    listEl.querySelectorAll('.dr-row[data-idx]').forEach(r => r.addEventListener('click', () => selectStar(+r.dataset.idx, true, false)));
+    listEl.querySelector('[data-back]').addEventListener('click', () => { activeDrawer = 'sectors'; renderDrawer(); });
+  } else if (activeDrawer === 'sectors'){
+    $('#drTitle').textContent = '🌌 Sector Galaxy Rotation (SEC 10-Q / 10-K)';""")
+
+# 3) A click that missed a star closed the open list and, in the Supernova / Black Hole views, threw the camera back
+#    to the overview. A miss now only lets go of the selected star; lists close by their own button or Esc. The
+#    area that counts as a hit is wider.
+swap("""      if (selectedIdx >= 0) deselectStar();
+      if (!drawerEl.hidden) closeDrawer();""", """      if (selectedIdx >= 0) deselectStar();""")
+swap("const i = pickAt({x: e.clientX, y: e.clientY}, coarse ? 30 : 18);", "const i = pickAt({x: e.clientX, y: e.clientY}, coarse ? 36 : 26);")
+
+# 4) zoom for the small preview: its page keeps the wheel, so the host asks for a step by message
+swap("  if (m.type === 'universe:theme'",
+     "  if (m.type === 'universe:zoom' && (m.dir === 1 || m.dir === -1)){\n"
+     "    const L = camera.position.distanceTo(controls.target), next = Math.max(controls.minDistance, Math.min(controls.maxDistance, L * Math.pow(1.25, -m.dir)));\n"
+     "    camera.position.sub(controls.target).setLength(next).add(controls.target); if (!nav.tw) nav.userCam = true;\n"
+     "  }\n"
+     "  if (m.type === 'universe:theme'")
 
 assert "upsidePct" not in html and "Fair-Value" not in html and "Coiled" not in html
 out = os.path.join(ROOT, "universe", "index.html")

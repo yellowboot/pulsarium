@@ -1140,7 +1140,7 @@ scene.background = BG_CALM.clone();
 
 const camera = new THREE.PerspectiveCamera(50, 1, 0.5, 9000);
 camera.position.set(0, 175, 570);
-const controls = new OrbitControls(camera, canvas); canvas.addEventListener('wheel', (e) => { if (mode === 'fly' || document.body.classList.contains('embed')) return; e.preventDefault(); e.stopImmediatePropagation(); const unit = e.deltaMode === 1 ? 33 : e.deltaMode === 2 ? 100 : 1, step = Math.max(-1, Math.min(1, e.deltaY * unit / 100)); const L = camera.position.distanceTo(controls.target), next = Math.max(controls.minDistance, Math.min(controls.maxDistance, L * Math.pow(1.1, step))); camera.position.sub(controls.target).setLength(next).add(controls.target); if (!nav.tw) nav.userCam = true; }, {capture: true, passive: false});
+const controls = new OrbitControls(camera, canvas); canvas.addEventListener('wheel', (e) => { if (mode === 'fly') return; e.preventDefault(); e.stopImmediatePropagation(); const unit = e.deltaMode === 1 ? 33 : e.deltaMode === 2 ? 100 : 1, step = Math.max(-1, Math.min(1, e.deltaY * unit / 100)); const L = camera.position.distanceTo(controls.target), next = Math.max(controls.minDistance, Math.min(controls.maxDistance, L * Math.pow(1.1, step))); camera.position.sub(controls.target).setLength(next).add(controls.target); if (!nav.tw) nav.userCam = true; }, {capture: true, passive: false});
 controls.enableDamping = true; controls.dampingFactor = 0.07; controls.enablePan = false;
 controls.minDistance = 12; controls.maxDistance = 2200;
 controls.autoRotate = !reduceMotion; controls.autoRotateSpeed = 0.22; controls.zoomSpeed = 0.9;
@@ -1866,7 +1866,7 @@ function renderReport(){
 }
 
 /* ================= COLLAPSIBLE TRANSLUCENT RADAR DRAWERS ================= */
-let activeDrawer = null, activeTab = 'all', activeSecFilter = 'all';
+let activeDrawer = null, activeTab = 'all', activeSecFilter = 'all', drawerGal = 0;
 const drawerEl = $('#drawer');
 
 function syncModeButtons(){
@@ -2016,6 +2016,25 @@ function renderDrawer(){
       </div>`;
     });
     listEl.querySelectorAll('.dr-row').forEach(r => r.addEventListener('click', () => selectStar(+r.dataset.idx, true, false)));
+  } else if (activeDrawer === 'galaxy'){
+    const sec = SECTORS[drawerGal];
+    const members = GAL[drawerGal].map(i => ({a: assets[i], i})).sort((x, y) => (y.a.marketCapB || 0) - (x.a.marketCapB || 0));
+    $('#drTitle').textContent = `🌌 ${sec.name} (${members.length})`;
+    tabsEl.hidden = true;
+    listEl.innerHTML = `<div class="dr-row" data-back="1"><div class="dr-row-top"><div class="dr-row-id"><b>← All galaxies</b></div></div></div>` + members.map(({a, i}) => {
+      const cap = a.marketCapB != null ? (a.marketCapB >= 1000 ? '$' + nf2.format(a.marketCapB/1000) + 'T' : '$' + nf1.format(a.marketCapB) + 'B') : '';
+      const sig = (a.signals && a.signals[0]) ? a.signals[0].title : 'No signals flagged';
+      const move = a.r20d != null ? (a.r20d >= 0 ? '+' : '') + nf1.format(a.r20d) + '%' : '';
+      return `<div class="dr-row" data-idx="${i}">
+        <div class="dr-row-top">
+          <div class="dr-row-id">${roleIconHtml(a)}<b>${a.ticker}</b><span>${a.name}</span></div>
+          <span class="dr-val ${(a.r20d||0)>=0?'pos':'neg'}" title="Price change over 20 trading days">${move}</span>
+        </div>
+        <div class="dr-desc">${cap}${cap ? ' · ' : ''}${sig}</div>
+      </div>`;
+    }).join('');
+    listEl.querySelectorAll('.dr-row[data-idx]').forEach(r => r.addEventListener('click', () => selectStar(+r.dataset.idx, true, false)));
+    listEl.querySelector('[data-back]').addEventListener('click', () => { activeDrawer = 'sectors'; renderDrawer(); });
   } else if (activeDrawer === 'sectors'){
     $('#drTitle').textContent = '🌌 Sector Galaxy Rotation (SEC 10-Q / 10-K)';
     tabsEl.hidden = true;
@@ -2142,6 +2161,12 @@ function flyTo(f, byUser){
   }
   controls.autoRotate = !reduceMotion && cosmosMode === 'galaxies' && f !== 'xray' && f !== 'supernovas' && f !== 'risks';
   nav.follow = f;
+  if (byUser && typeof f === 'number' && !document.body.classList.contains('embed')){
+    activeDrawer = 'galaxy'; drawerGal = f; activeTab = 'all'; activeSecFilter = 'all'; drawerEl.hidden = false;
+    syncModeButtons(); renderDrawer(); measureHud();
+  } else if (byUser && (f === 'overview' || f === 'bh') && activeDrawer === 'galaxy'){
+    activeDrawer = null; drawerEl.hidden = true; syncModeButtons(); measureHud();
+  }
   nav.tw = {t0: vis, dur: typeof f === 'number' ? 2.4 : 1.8, fromP: camera.position.clone(), fromT: controls.target.clone()};
   if ((byUser || tourOn) && (prevFollow !== f || hadUserCam)) transitionSfx('fly', f);
   updateNavUI();
@@ -2391,7 +2416,7 @@ const gLabels = SECTORS.map((s,i) => {
   labelsEl.appendChild(b);
   return b;
 });
-const LPOOL = 26;
+const LPOOL = 70; let shownBefore = new Set();
 const sLabels = Array.from({length: LPOOL}, () => {
   const d = document.createElement('div'); d.className = 'slab'; d.hidden = true;
   d.addEventListener('click', (e) => {
@@ -2528,13 +2553,15 @@ function placeLabels(){
       return (my - mx) || ((assets[y].blackHolePull||0) - (assets[x].blackHolePull||0));
     });
     for (const i of rsks) if (!seen.has(i)){ seen.add(i); want.push({i, kind: 'near'}); }
-  } else if (near >= 0 && nd < RG[near]*4.5){
-    for (const i of GAL[near]) if (!seen.has(i)){ seen.add(i); want.push({i, kind: 'near'}); }
+  } else if (typeof nav.follow === 'number' || (near >= 0 && nd < RG[near]*4.5)){
+    for (const i of GAL[typeof nav.follow === 'number' ? nav.follow : near]) if (!seen.has(i)){ seen.add(i); want.push({i, kind: 'tick'}); }
   } else {
     for (const i of MEGA) if (!seen.has(i)){ seen.add(i); want.push({i, kind: 'dim'}); }
   }
   let used = 0;
-  const usedNames = new Set();
+  const usedNames = new Set(), shownNow = new Set();
+  const turn = (it) => it.kind === 'focus' ? 0 : shownBefore.has(it.i) ? 1 : 2;
+  want.sort((x, y) => turn(x) - turn(y));
   for (const it of want){
     if (used >= LPOOL) break;
     const i = it.i;
@@ -2542,12 +2569,12 @@ function placeLabels(){
     if (!a || usedNames.has(a.name)) continue;
     const p = scr(SPd[i*3], SPd[i*3+1], SPd[i*3+2]);
     if (!p.ok || p.x < 0 || p.x > w || p.y < 0 || p.y > h || inHud(p.x, p.y)) continue;
-    if (it.kind !== 'focus' && placed.some(q => Math.abs(q.x-p.x) < 105 && Math.abs(q.y-p.y) < 24)) continue;
+    if (it.kind !== 'focus' && placed.some(q => Math.abs(q.x-p.x) < (it.kind === 'tick' ? 62 : 105) && Math.abs(q.y-p.y) < (it.kind === 'tick' ? 18 : 24))) continue;
     if (it.kind === 'focus'){
       let tries = 0;
       while (tries < 6 && placed.some(q => q.f && Math.abs(q.x-p.x) < 150 && Math.abs(q.y-p.y) < 24)){ p.y += 24; tries++; }
     }
-    usedNames.add(a.name);
+    usedNames.add(a.name); shownNow.add(i);
     placed.push({x: p.x, y: p.y, f: it.kind === 'focus'});
     const el = sLabels[used++];
     el.hidden = false;
@@ -2559,11 +2586,13 @@ function placeLabels(){
     const rMark = a.role === 'black_hole_risk' ? ((a.blackHolePull || 0) >= 40 ? `<span class="role-ico risk" title="Strong SEC risk signals">⚠️</span>` : `<span class="role-ico risk" title="Light flag: one mild SEC signal" style="color:var(--warning)">⚑</span>`)
                 : a.role === 'supernova' ? `<span class="role-ico sup" title="Supernova">★</span>` : '';
     const html = it.kind === 'focus' ? `<i title="${SECTORS[a.s].name}"></i>${rMark}${a.name} <small style="font-family:var(--font-mono);color:var(--teal)">${a.ticker}</small> ${up}`
+               : it.kind === 'tick' ? `${rMark}<span style="font-family:var(--font-mono);font-weight:600;letter-spacing:.02em" title="${a.name}">${a.ticker}</span>`
                : it.kind === 'near' ? `${rMark}${a.name} ${up}`
                : `${rMark}${a.name}`;
     if (el.dataset.h !== html){ el.innerHTML = html; el.dataset.h = html; }
     el.style.transform = `translate(${Math.round(p.x+9)}px,${Math.round(p.y)}px) translate(0,-50%)`;
   }
+  shownBefore = shownNow;
   for (let k=used; k<LPOOL; k++){
     sLabels[k].hidden = true;
     sLabels[k].style.display = 'none';
@@ -2627,12 +2656,11 @@ canvas.addEventListener('pointerup', e => {
   const moved = Math.hypot(e.clientX - downAt.x, e.clientY - downAt.y);
   downAt = null;
   if (moved < 7){
-    const i = pickAt({x: e.clientX, y: e.clientY}, coarse ? 30 : 18);
+    const i = pickAt({x: e.clientX, y: e.clientY}, coarse ? 36 : 26);
     if (i >= 0){
       selectStar(i, true, false);
     } else {
       if (selectedIdx >= 0) deselectStar();
-      if (!drawerEl.hidden) closeDrawer();
     }
   }
 });
@@ -2959,6 +2987,10 @@ addEventListener('message', (event) => {
   if (!EMBEDDERS.includes(event.origin)) return;
   const m = event.data || {};
   if (m.type === 'universe:fly') flyTo(Number.isInteger(m.to) && m.to >= 0 && m.to < NS ? m.to : m.to === 'bh' ? 'bh' : 'overview', true);
+  if (m.type === 'universe:zoom' && (m.dir === 1 || m.dir === -1)){
+    const L = camera.position.distanceTo(controls.target), next = Math.max(controls.minDistance, Math.min(controls.maxDistance, L * Math.pow(1.25, -m.dir)));
+    camera.position.sub(controls.target).setLength(next).add(controls.target); if (!nav.tw) nav.userCam = true;
+  }
   if (m.type === 'universe:theme' && (m.theme === 'neon' || m.theme === 'calm') && document.documentElement.dataset.colorTheme !== m.theme) $('#themeBtn').click();
   if (m.type === 'universe:tickers' && Array.isArray(m.tickers)){
     listLabel = 'My Portfolio'; $('#xrayLbl').textContent = 'Portfolio X-Ray';
