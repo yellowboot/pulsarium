@@ -2906,12 +2906,12 @@ function tick(now){
   const sk = reduceMotion ? 0 : shakeKick * 0.7;
   root.position.set(Math.sin(vis*31)*sk, Math.sin(vis*27+1)*sk*0.7, Math.sin(vis*23+2)*sk*0.5);
 
-  const glow = Math.max(heat, cosmosMode === 'risks' || cosmosMode === 'xray' ? 0.8 : 0); bloom.strength = lerp(0.88, 0.52, glow);
-  bloom.threshold = 0.08 + 0.34 * glow;
+  const glow = Math.max(heat, cosmosMode === 'risks' || cosmosMode === 'xray' ? 0.8 : 0); bloom.strength = lerp(0.66, 0.44, glow);
+  bloom.threshold = 0.13 + 0.33 * glow;
   navStep(dt);
 
-  v3.copy(bh.position).add(root.position).project(camera);
-  const d = camera.position.distanceTo(root.position);
+  camera.updateMatrixWorld(); v3.copy(bh.position).add(root.position).project(camera);
+  const d = -pv3.copy(bh.position).add(root.position).applyMatrix4(camera.matrixWorldInverse).z;
   const tanH = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
   lens.uniforms.uOn.value = (v3.z < 1 && bhR > 3.1) ? 1 : 0;
   lens.uniforms.uC.value.set((v3.x+1)/2, (v3.y+1)/2);

@@ -232,13 +232,16 @@ swap("vec4 c=texture2D(tDiffuse,uv); gl_FragColor=vec4(c.rgb*shade,c.a); }`",
 swap("const horizon = new THREE.Mesh(new THREE.SphereGeometry(1, 48, 32),", "const horizon = new THREE.Mesh(new THREE.CircleGeometry(1, 96),")
 swap("multiply(DISK_POSE);", "multiply(DISK_POSE); horizon.quaternion.copy(camera.quaternion);")
 
-# (the lens circle trails the hole for a frame on fast camera moves; she finds that fun, so it stays)
+# the lens circle trailed the hole on fast camera moves: it was projected with last frame's camera matrices, and its
+# radius used the straight-line distance to the scene centre, not the hole's depth along the view axis
+swap("  v3.copy(bh.position).add(root.position).project(camera);", "  camera.updateMatrixWorld(); v3.copy(bh.position).add(root.position).project(camera);")
+swap("  const d = camera.position.distanceTo(root.position);", "  const d = -pv3.copy(bh.position).add(root.position).applyMatrix4(camera.matrixWorldInverse).z;")
 # More stress made the hole dimmer in the risk view: its heat was pinned at 0.92 there while the bloom is strongest
 # when the market is calm. Stress now heats the hole in that view too, and the bloom follows the hole's heat.
 swap("cosmosMode === 'risks' ? 0.92 : heat;", "cosmosMode === 'risks' ? 0.42 + 0.5 * heat : heat;")
 swap("bloom.strength = lerp(0.88, 0.52, heat);",
-     "const glow = Math.max(heat, cosmosMode === 'risks' || cosmosMode === 'xray' ? 0.8 : 0); bloom.strength = lerp(0.88, 0.52, glow);")
-swap("bloom.threshold = 0.08 + 0.34 * heat;", "bloom.threshold = 0.08 + 0.34 * glow;")
+     "const glow = Math.max(heat, cosmosMode === 'risks' || cosmosMode === 'xray' ? 0.8 : 0); bloom.strength = lerp(0.66, 0.44, glow);")
+swap("bloom.threshold = 0.08 + 0.34 * heat;", "bloom.threshold = 0.13 + 0.33 * glow;")
 
 # the tour said correlations put the power utilities and Oracle into the AI galaxy; the script places them there by hand
 swap("— real empirical correlations group them together.", "— we placed them here because AI data centers drive their demand.")
