@@ -252,3 +252,18 @@
 .mm-gal { flex-wrap: wrap; gap: 5px; }
 .mm-card .mm-gal .chip { padding: 3px 8px; font-size: 11px; }
 .mm-gal .chip i { display: inline-block; width: 7px; height: 7px; margin-right: 5px; border-radius: 50%; background: var(--c); vertical-align: 1px; }
+/* the Universe chip asks to be pressed: a small planet and a slow glow, until it is the open view */
+.mm-card .mm-controls .chip.mm-uni-chip { display: inline-flex; align-items: center; gap: 5px; color: var(--teal, #00f0ff);
+  border-color: rgba(0, 240, 255, .5); animation: mm-uni-glow 3.2s ease-in-out infinite; }
+.mm-card .mm-controls .chip.mm-uni-chip.is-on { animation: none; }
+@keyframes mm-uni-glow {
+  0%, 100% { box-shadow: 0 0 0 rgba(0, 240, 255, 0); }
+  50% { box-shadow: 0 0 14px rgba(0, 240, 255, .45), 0 0 26px rgba(255, 43, 214, .18); }
+}
+:root[data-color-theme='calm'] .mm-card .mm-controls .chip.mm-uni-chip { color: #4a47d6; border-color: rgba(74, 71, 214, .45); animation-name: mm-uni-glow-calm; }
+@keyframes mm-uni-glow-calm {
+  0%, 100% { box-shadow: 0 0 0 rgba(74, 71, 214, 0); }
+  50% { box-shadow: 0 0 12px rgba(74, 71, 214, .35); }
+}
+@media (prefers-reduced-motion: reduce) { .mm-card .mm-controls .chip.mm-uni-chip { animation: none; } }
+:root[data-motion='off'] .mm-card .mm-controls .chip.mm-uni-chip { animation: none; }
