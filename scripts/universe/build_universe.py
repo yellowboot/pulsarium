@@ -321,6 +321,25 @@ swap("document.body.classList.add('immersive','embed');</script>",
 swap("body.embed .imm-exit, body.embed .tip { display: none !important; }",
      "body.embed .imm-exit, body.embed .tip, .framed .nav-back { display: none !important; } .framed .pz-note a { pointer-events: none; }")
 
+# strong risks and light flags. One mild signal (payouts above free cash flow at a healthy company that buys back a
+# lot of stock, e.g. Mastercard at 26) stood in the same list, with the same warning sign, as companies running out of
+# cash. From 40 points it is a strong risk; below that a light flag: an amber flag instead of the warning sign, its
+# own label, and in the X-Ray it sits in the neutral group, not at the black hole.
+swap("if (a.role === 'black_hole_risk' || (a.blackHolePull || 0) >= 52) return 2; // Right: SEC risk signals",
+     "if (a.role === 'black_hole_risk' && (a.blackHolePull || 0) >= 40) return 2; // Right: strong SEC risk signals")
+swap("a.role === 'black_hole_risk' ? `🕳️ ${a.riskType || 'Black Hole Risk'}`",
+     "a.role === 'black_hole_risk' ? ((a.blackHolePull || 0) >= 40 ? `🕳️ ${a.riskType || 'Black Hole Risk'}` : `⚑ Light flag: ${a.riskType || 'SEC signal'}`)")
+swap("a.role === 'black_hole_risk' ? `🕳️ ${a.riskType || 'SEC Risk'}`",
+     "a.role === 'black_hole_risk' ? ((a.blackHolePull || 0) >= 40 ? `🕳️ ${a.riskType || 'SEC Risk'}` : `⚑ Light flag: ${a.riskType || 'SEC signal'}`)")
+swap("""if (a.role === 'black_hole_risk') return `<span class="role-ico risk" title="Black Hole SEC Risk">⚠️</span>`;""",
+     """if (a.role === 'black_hole_risk') return (a.blackHolePull || 0) >= 40 ? `<span class="role-ico risk" title="Strong SEC risk signals">⚠️</span>` : `<span class="role-ico risk" title="Light flag: one mild SEC signal" style="color:var(--warning)">⚑</span>`;""")
+swap("""const rMark = a.role === 'black_hole_risk' ? `<span class="role-ico risk" title="SEC Risk">⚠️</span>`""",
+     """const rMark = a.role === 'black_hole_risk' ? ((a.blackHolePull || 0) >= 40 ? `<span class="role-ico risk" title="Strong SEC risk signals">⚠️</span>` : `<span class="role-ico risk" title="Light flag: one mild SEC signal" style="color:var(--warning)">⚑</span>`)""")
+swap("`⚠️ Black Hole Pull — SEC Red Flags (${riskAssets.length})`",
+     "`⚠️ SEC Risk Signals: ${riskAssets.filter(a => (a.blackHolePull || 0) >= 40).length} strong · ${riskAssets.filter(a => (a.blackHolePull || 0) < 40).length} light flags`")
+swap("""<span class="dr-val neg" title="Sum of the risk signals' weights, 0-100">risk ${a.blackHolePull||0}</span>""",
+     """<span class="dr-val" style="color:${(a.blackHolePull||0)>=40?'var(--negative)':'var(--warning)'}" title="Sum of the risk signals' weights, 0-100. From 40: strong risk; below: a light flag">${(a.blackHolePull||0)>=40?'risk':'flag'} ${a.blackHolePull||0}</span>""")
+
 assert "upsidePct" not in html and "Fair-Value" not in html and "Coiled" not in html
 out = os.path.join(ROOT, "universe", "index.html")
 os.makedirs(os.path.dirname(out), exist_ok=True)

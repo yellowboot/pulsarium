@@ -1031,7 +1031,7 @@ function inPortfolio(i){
 }
 function xrayZone(i){
   const a = assets[i];
-  if (a.role === 'black_hole_risk' || (a.blackHolePull || 0) >= 52) return 2; // Right: SEC risk signals
+  if (a.role === 'black_hole_risk' && (a.blackHolePull || 0) >= 40) return 2; // Right: strong SEC risk signals
   if (a.role === 'supernova') return 0; // Left: growth signals
   return 1; // Centre: neutral
 }
@@ -1725,7 +1725,7 @@ function renderStarCard(k){
   const badge = $('#scBadge');
   badge.className = 'sc-role-badge ' + (a.role || 'core');
   badge.textContent = a.role === 'supernova' ? `★ ${a.supernovaType || 'Supernova Inflection'}`
-                    : a.role === 'black_hole_risk' ? `🕳️ ${a.riskType || 'Black Hole Risk'}`
+                    : a.role === 'black_hole_risk' ? ((a.blackHolePull || 0) >= 40 ? `🕳️ ${a.riskType || 'Black Hole Risk'}` : `⚑ Light flag: ${a.riskType || 'SEC signal'}`)
                     : '🪐 Sector Core Leader';
 
   const sup = clamp(Math.round(a.supernovaScore || 0), 0, 100);
@@ -1965,7 +1965,7 @@ function renderGroupedRows(items, rowHtmlFn){
 
 function roleIconHtml(a){
   if (a.role === 'supernova') return `<span class="role-ico sup" title="Supernova Catalyst">★</span>`;
-  if (a.role === 'black_hole_risk') return `<span class="role-ico risk" title="Black Hole SEC Risk">⚠️</span>`;
+  if (a.role === 'black_hole_risk') return (a.blackHolePull || 0) >= 40 ? `<span class="role-ico risk" title="Strong SEC risk signals">⚠️</span>` : `<span class="role-ico risk" title="Light flag: one mild SEC signal" style="color:var(--warning)">⚑</span>`;
   return `<span class="role-ico core" title="Core / Steady Orbit">◆</span>`;
 }
 
@@ -1994,7 +1994,7 @@ function renderDrawer(){
     });
     listEl.querySelectorAll('.dr-row').forEach(r => r.addEventListener('click', () => selectStar(+r.dataset.idx, true, false)));
   } else if (activeDrawer === 'risks'){
-    $('#drTitle').textContent = `⚠️ Black Hole Pull — SEC Red Flags (${riskAssets.length})`;
+    $('#drTitle').textContent = `⚠️ SEC Risk Signals: ${riskAssets.filter(a => (a.blackHolePull || 0) >= 40).length} strong · ${riskAssets.filter(a => (a.blackHolePull || 0) < 40).length} light flags`;
     const cats = ['all', 'Liquidity & Cash Burn Stress', 'Profit vs. Cash Flow Divergence', 'Inventory & Receivables Bloat', 'Unfunded Payouts (Payouts > FCF)'];
     const labels = {'all': `All Risks (${riskAssets.length})`, 'Liquidity & Cash Burn Stress': 'Cash Burn', 'Profit vs. Cash Flow Divergence': 'Profit ≠ OCF', 'Inventory & Receivables Bloat': 'Inventory Bloat', 'Unfunded Payouts (Payouts > FCF)': 'Payout Strain'};
     const catFiltered = activeTab === 'all' ? riskAssets : riskAssets.filter(a => a.riskType === activeTab);
@@ -2009,7 +2009,7 @@ function renderDrawer(){
       return `<div class="dr-row" data-idx="${idx}">
         <div class="dr-row-top">
           <div class="dr-row-id">${roleIconHtml(a)}<b>${a.ticker}</b><span>${a.name}</span><span class="sec-badge" style="--c:${sec.color}">${sec.short}</span><span class="dr-tag bear">${a.riskType || 'SEC Risk'}</span></div>
-          <span class="dr-val neg" title="Sum of the risk signals' weights, 0-100">risk ${a.blackHolePull||0}</span>
+          <span class="dr-val" style="color:${(a.blackHolePull||0)>=40?'var(--negative)':'var(--warning)'}" title="Sum of the risk signals' weights, 0-100. From 40: strong risk; below: a light flag">${(a.blackHolePull||0)>=40?'risk':'flag'} ${a.blackHolePull||0}</span>
         </div>
         <div class="dr-desc">${sig}</div>
       </div>`;
@@ -2555,7 +2555,7 @@ function placeLabels(){
     el.className = 'slab' + (it.kind === 'focus' ? ' focus' : it.kind === 'dim' ? ' dim' : '');
     el.style.setProperty('--c', SECTORS[a.s].color);
     const up = a.r20d != null ? `<em class="${a.r20d>=0?'pos':'neg'}" title="Price change over 20 trading days">${a.r20d>=0?'+':''}${Math.round(a.r20d)}%</em>` : '';
-    const rMark = a.role === 'black_hole_risk' ? `<span class="role-ico risk" title="SEC Risk">⚠️</span>`
+    const rMark = a.role === 'black_hole_risk' ? ((a.blackHolePull || 0) >= 40 ? `<span class="role-ico risk" title="Strong SEC risk signals">⚠️</span>` : `<span class="role-ico risk" title="Light flag: one mild SEC signal" style="color:var(--warning)">⚑</span>`)
                 : a.role === 'supernova' ? `<span class="role-ico sup" title="Supernova">★</span>` : '';
     const html = it.kind === 'focus' ? `<i title="${SECTORS[a.s].name}"></i>${rMark}${a.name} <small style="font-family:var(--font-mono);color:var(--teal)">${a.ticker}</small> ${up}`
                : it.kind === 'near' ? `${rMark}${a.name} ${up}`
@@ -2656,7 +2656,7 @@ function renderTip(){
   const i = hoverIdx, a = assets[i];
   let links = 0; for (let j=0; j<N; j++) if (j!==i && C[i*M+j]>TC) links++;
   const roleTxt = a.role === 'supernova' ? `★ ${a.supernovaType || 'Supernova'}`
-                : a.role === 'black_hole_risk' ? `🕳️ ${a.riskType || 'SEC Risk'}`
+                : a.role === 'black_hole_risk' ? ((a.blackHolePull || 0) >= 40 ? `🕳️ ${a.riskType || 'SEC Risk'}` : `⚑ Light flag: ${a.riskType || 'SEC signal'}`)
                 : SECTORS[a.s].name;
   const pxTxt = a.px != null ? `$${nf2.format(a.px)} (${(a.r20d||0)>=0?'+':''}${nf1.format(a.r20d||0)}% 20D)` : 'N/A';
   tip.innerHTML = `
