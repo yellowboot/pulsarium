@@ -281,6 +281,15 @@ addEventListener('message', (event) => {
 if (parent !== window) parent.postMessage({type: 'universe:ready'}, '*');
 window.SEC_COSMOS_ADAPTER = {""")
 
+# a way back: the page stands alone, so its top bar carries a link to the news page (hidden when the page sits
+# inside another one, where the host page is the way back)
+swap('<h1 class="wordmark">Market Universe</h1>',
+     '<a class="pill-btn nav-back" href="/news/" title="Back to Pulsarium market news" style="text-decoration:none">← News</a><h1 class="wordmark">Market Universe</h1>')
+swap("document.body.classList.add('immersive','embed');</script>",
+     "document.body.classList.add('immersive','embed');if(parent!==window)document.documentElement.classList.add('framed');</script>")
+swap("body.embed .imm-exit, body.embed .tip { display: none !important; }",
+     "body.embed .imm-exit, body.embed .tip, .framed .nav-back { display: none !important; }")
+
 assert "upsidePct" not in html and "Fair-Value" not in html and "Coiled" not in html
 out = os.path.join(ROOT, "universe", "index.html")
 os.makedirs(os.path.dirname(out), exist_ok=True)
