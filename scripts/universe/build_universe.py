@@ -251,8 +251,35 @@ swap("— real empirical correlations group them together.", "— we placed them
 swap("<body>", "<body><script>if(/[?&]embed/.test(location.search))document.body.classList.add('immersive','embed');</script>")
 swap("body.immersive .imm-exit { display: inline-block; }",
      "body.immersive .imm-exit { display: inline-block; } body.embed .imm-exit, body.embed .tip { display: none !important; }")
+# wheel zoom: three r160's OrbitControls divides the wheel step by (devicePixelRatio | 0), which is 0 whenever the
+# browser is zoomed below 100% (Nov 2026: one wheel click threw her camera to the far limit or into the hole). The
+# controls' own zoom is switched off and the wheel moves the camera here: one click = one even 10% step, at any
+# page zoom and with any mouse. Pinch zoom on touch screens still belongs to the controls (it has no such division).
 swap("const controls = new OrbitControls(camera, canvas);",
-     "const controls = new OrbitControls(camera, canvas); if (document.body.classList.contains('embed')) controls.enableZoom = false;")
+     "const controls = new OrbitControls(camera, canvas); "
+     "canvas.addEventListener('wheel', (e) => { if (mode === 'fly' || document.body.classList.contains('embed')) return; e.preventDefault(); e.stopImmediatePropagation(); "
+     "const unit = e.deltaMode === 1 ? 33 : e.deltaMode === 2 ? 100 : 1, step = Math.max(-1, Math.min(1, e.deltaY * unit / 100)); "
+     "const L = camera.position.distanceTo(controls.target), next = Math.max(controls.minDistance, Math.min(controls.maxDistance, L * Math.pow(1.1, step))); "
+     "camera.position.sub(controls.target).setLength(next).add(controls.target); if (!nav.tw) nav.userCam = true; }, {capture: true, passive: false});")
+
+# messages from the pages that embed this one: the news preview (same site) asks the camera to fly to a galaxy,
+# the cabinet hands over the user's own tickers for the X-Ray. Only these origins are listened to.
+swap("{id: 'portfolio', lbl: `Sample Watchlist`}", "{id: 'portfolio', lbl: listLabel}")
+swap("🔬 Watchlist X-Ray <span", "🔬 <span id=\"xrayLbl\">Watchlist X-Ray</span> <span")
+swap("window.SEC_COSMOS_ADAPTER = {", """let listLabel = 'Sample Watchlist';
+const EMBEDDERS = [location.origin, 'https://app.pulsarium.finance', 'http://localhost:5173'];
+addEventListener('message', (event) => {
+  if (!EMBEDDERS.includes(event.origin)) return;
+  const m = event.data || {};
+  if (m.type === 'universe:fly') flyTo(Number.isInteger(m.to) && m.to >= 0 && m.to < NS ? m.to : m.to === 'bh' ? 'bh' : 'overview', true);
+  if (m.type === 'universe:tickers' && Array.isArray(m.tickers)){
+    listLabel = 'My Portfolio'; $('#xrayLbl').textContent = 'Portfolio X-Ray';
+    window.SEC_COSMOS_ADAPTER.setPortfolioTickers(m.tickers.map(String));
+    event.source.postMessage({type: 'universe:matched', matched: customWatchlist.size, total: m.tickers.length}, event.origin);
+  }
+});
+if (parent !== window) parent.postMessage({type: 'universe:ready'}, '*');
+window.SEC_COSMOS_ADAPTER = {""")
 
 assert "upsidePct" not in html and "Fair-Value" not in html and "Coiled" not in html
 out = os.path.join(ROOT, "universe", "index.html")

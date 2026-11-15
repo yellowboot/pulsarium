@@ -1027,7 +1027,7 @@
 <link rel="stylesheet" href="/assets/financial-signals.css?v=7">
 <link rel="stylesheet" href="/assets/pagination.css?v=1">
 <link rel="stylesheet" href="/assets/panel-fold.css?v=1">
-<link rel="stylesheet" href="/assets/market-map.css?v=6">
+<link rel="stylesheet" href="/assets/market-map.css?v=7">
 <link rel="stylesheet" href="/assets/footer.css?v=d89dd84f32">
 <link rel="stylesheet" href="/assets/themes.css?v=995daca531" data-pulsarium-theme="styles">
 </head>
@@ -1179,9 +1179,21 @@
       <p class="mm-k">131 companies · 8 sector galaxies</p>
       <p class="mm-name">The market as a universe</p>
       <p class="mm-line">Each star is a company, each galaxy a sector. <b>Growth and risk signals come from SEC filings.</b></p>
-      <p class="mm-hint">Drag to turn it. Open it full screen for the companies and their signals.</p>
+      <p class="mm-hint">Drag to turn it, or pick a galaxy below.</p>
     </div>
     <div class="mm-foot" data-view-for="universe" hidden>
+      <div class="mm-controls mm-gal" role="group" aria-label="Fly to a sector galaxy">
+        <button type="button" class="chip is-on" data-universe-fly="overview">All</button>
+        <button type="button" class="chip" data-universe-fly="0"><i style="--c:#3987e5"></i>AI &amp; Chips</button>
+        <button type="button" class="chip" data-universe-fly="7"><i style="--c:#e66767"></i>Cloud</button>
+        <button type="button" class="chip" data-universe-fly="1"><i style="--c:#d95926"></i>Energy</button>
+        <button type="button" class="chip" data-universe-fly="2"><i style="--c:#199e70"></i>Healthcare</button>
+        <button type="button" class="chip" data-universe-fly="6"><i style="--c:#9085e9"></i>Financials</button>
+        <button type="button" class="chip" data-universe-fly="5"><i style="--c:#38d9c9"></i>Industrials</button>
+        <button type="button" class="chip" data-universe-fly="4"><i style="--c:#d55181"></i>Consumer</button>
+        <button type="button" class="chip" data-universe-fly="3"><i style="--c:#c98500"></i>Defensives</button>
+        <button type="button" class="chip" data-universe-fly="bh"><i style="--c:#000;box-shadow:0 0 0 1px #ffb27a"></i>Black hole</button>
+      </div>
       <a class="mm-open" href="/universe/">Open full screen <span aria-hidden="true">↗</span></a>
     </div>
     <div class="mm-foot" data-view-for="season">
@@ -1450,7 +1462,7 @@
 <script src="/assets/financial-signals.js?v=11" defer></script>
 <script src="/assets/panel-fold.js?v=4" defer></script>
 <script src="/assets/season-q3-2026.js?v=2" defer></script>
-<script src="/assets/market-map.js?v=6" defer></script>
+<script src="/assets/market-map.js?v=7" defer></script>
 <script src="../news_data.js" onerror="window.__NO_DATA_FILE__ = true"></script>
 <script>
 (function () {

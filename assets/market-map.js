@@ -583,7 +583,16 @@
       tap.className = 'mm-uni-tap'; tap.href = '/universe/'; tap.setAttribute('aria-label', 'Open Market Universe full screen');
       holder.append(frame, tap);
     }
-    root.addEventListener('click', (event) => { const button = event.target.closest('[data-deck-view]'); if (button) show(button.dataset.deckView); });
+    root.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-deck-view]');
+      if (button) { show(button.dataset.deckView); return; }
+      // a galaxy chip: ask the picture to fly there (the page listens to this site's messages only)
+      const fly = event.target.closest('[data-universe-fly]'), frame = holder.querySelector('iframe');
+      if (!fly || !frame || !frame.contentWindow) return;
+      const to = fly.dataset.universeFly;
+      frame.contentWindow.postMessage({ type: 'universe:fly', to: Number.isNaN(Number(to)) ? to : Number(to) }, location.origin);
+      $$('[data-universe-fly]', root).forEach((chip) => chip.classList.toggle('is-on', chip === fly));
+    });
     toggle.hidden = false;
     show('season');
   }

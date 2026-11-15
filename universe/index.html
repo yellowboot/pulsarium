@@ -561,7 +561,7 @@ body.immersive .imm-exit { display: inline-block; } body.embed .imm-exit, body.e
           <span class="dot"></span>🌌 Sector Galaxies <span class="cnt">8</span>
         </button>
         <button class="pill-btn xray" type="button" id="btnXray" aria-expanded="false" title="Watchlist X-Ray: separates a list of stocks into growth signals (left), neutral (centre) and SEC risk signals (right)">
-          <span class="dot"></span>🔬 Watchlist X-Ray <span class="cnt" id="cntXray">42</span>
+          <span class="dot"></span>🔬 <span id="xrayLbl">Watchlist X-Ray</span> <span class="cnt" id="cntXray">42</span>
         </button>
         <div class="search-wrap">
           <span class="search-ico">⌕</span>
@@ -1139,7 +1139,7 @@ scene.background = BG_CALM.clone();
 
 const camera = new THREE.PerspectiveCamera(50, 1, 0.5, 9000);
 camera.position.set(0, 175, 570);
-const controls = new OrbitControls(camera, canvas); if (document.body.classList.contains('embed')) controls.enableZoom = false;
+const controls = new OrbitControls(camera, canvas); canvas.addEventListener('wheel', (e) => { if (mode === 'fly' || document.body.classList.contains('embed')) return; e.preventDefault(); e.stopImmediatePropagation(); const unit = e.deltaMode === 1 ? 33 : e.deltaMode === 2 ? 100 : 1, step = Math.max(-1, Math.min(1, e.deltaY * unit / 100)); const L = camera.position.distanceTo(controls.target), next = Math.max(controls.minDistance, Math.min(controls.maxDistance, L * Math.pow(1.1, step))); camera.position.sub(controls.target).setLength(next).add(controls.target); if (!nav.tw) nav.userCam = true; }, {capture: true, passive: false});
 controls.enableDamping = true; controls.dampingFactor = 0.07; controls.enablePan = false;
 controls.minDistance = 12; controls.maxDistance = 2200;
 controls.autoRotate = !reduceMotion; controls.autoRotateSpeed = 0.22; controls.zoomSpeed = 0.9;
@@ -2042,7 +2042,7 @@ function renderDrawer(){
     $('#drTitle').textContent = `🔬 Watchlist X-Ray (${trackedAssets.length})`;
     tabsEl.hidden = false;
     const presets = [
-      {id: 'portfolio', lbl: `Sample Watchlist`},
+      {id: 'portfolio', lbl: listLabel},
       {id: 'ai_power', lbl: `AI & Power`},
       {id: 'value_buybacks', lbl: `Value`},
       {id: 'all', lbl: `All 131`}
@@ -2952,6 +2952,19 @@ window.secCosmos = {
 };
 
 /* Integration adapter for Pulsarium Supabase Cabinet & Public Market Map */
+let listLabel = 'Sample Watchlist';
+const EMBEDDERS = [location.origin, 'https://app.pulsarium.finance', 'http://localhost:5173'];
+addEventListener('message', (event) => {
+  if (!EMBEDDERS.includes(event.origin)) return;
+  const m = event.data || {};
+  if (m.type === 'universe:fly') flyTo(Number.isInteger(m.to) && m.to >= 0 && m.to < NS ? m.to : m.to === 'bh' ? 'bh' : 'overview', true);
+  if (m.type === 'universe:tickers' && Array.isArray(m.tickers)){
+    listLabel = 'My Portfolio'; $('#xrayLbl').textContent = 'Portfolio X-Ray';
+    window.SEC_COSMOS_ADAPTER.setPortfolioTickers(m.tickers.map(String));
+    event.source.postMessage({type: 'universe:matched', matched: customWatchlist.size, total: m.tickers.length}, event.origin);
+  }
+});
+if (parent !== window) parent.postMessage({type: 'universe:ready'}, '*');
 window.SEC_COSMOS_ADAPTER = {
   setPortfolioTickers(tickers){
     customWatchlist.clear();
