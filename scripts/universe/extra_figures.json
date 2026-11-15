@@ -100,5 +100,24 @@
   "opMarginDelta": 473.55,
   "ttmRevB": 12.17,
   "periodEnd": "2026-09-30"
- }
+ },
+ "SNX": {
+  "revYoY": 37.7,
+  "opMarginDelta": 0.53,
+  "ttmRevB": 75.67,
+  "periodEnd": "2026-08-31"
+ },
+ "CRM": {
+  "revYoY": 10.8,
+  "opMarginDelta": -2.24,
+  "ttmRevB": 43.94,
+  "periodEnd": "2026-07-31"
+ },
+ "LYB": {
+  "revYoY": 10,
+  "opMarginDelta": 22.01,
+  "ttmRevB": 31.96,
+  "periodEnd": "2026-09-30"
+ },
+ "_updated": "2026-11-15"
 }
