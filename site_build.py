@@ -68,6 +68,7 @@ INDEXNOW_KEY = "8dc724623930bde2d9ce70c606857a9e"
 STATIC_PAGES = [
     ("/", "weekly"),  # cabinet feature pages come from site_pages.py
     ("/news/", "hourly"),
+    ("/universe/", "weekly"),  # hand-built 3D page: scripts/universe/build_universe.py
 ]
 
 # The footer of every page (also the homepage's and the news dashboard's,
