@@ -360,6 +360,21 @@ swap("function goStep(i){ tourI = clamp(i, 0, TOUR.length-1); nav.userCam = fals
 swap("if (on){ calmHit = null; panicHit = null; goStep(0); } else {",
      "if (on){ calmHit = null; panicHit = null; goStep(0); } else { if (cosmosMode !== 'galaxies' && !activeDrawer) setCosmosMode('galaxies');")
 
+# ---------- links into the picture (16 Nov 2026) ----------
+# /universe/?ticker=INTC flies to that company's star and opens its card; ?view=supernovas | risks | xray opens a view;
+# ?tickers=NVDA,PFE,KO puts a visitor's own short list through the X-Ray. Unknown names are ignored.
+swap("if (parent !== window) parent.postMessage({type: 'universe:ready'}, '*');",
+     """if (parent !== window) parent.postMessage({type: 'universe:ready'}, '*');
+setTimeout(() => {
+  const q = new URLSearchParams(location.search), clean = (v) => String(v || '').trim().toUpperCase().replace('.', '-').slice(0, 12);
+  const tk = clean(q.get('ticker')), view = q.get('view'), own = (q.get('tickers') || '').split(',').map(clean).filter(Boolean).slice(0, 30);
+  const open = (v) => document.body.classList.contains('embed') ? setCosmosMode(v) : toggleDrawer(v);
+  if (own.length){ listLabel = 'My Tickers'; window.SEC_COSMOS_ADAPTER.setPortfolioTickers(own); open('xray'); }
+  else if (tk && T[tk] !== undefined) selectStar(T[tk], false, true);
+  else if (view === 'supernovas' || view === 'risks' || view === 'xray') open(view);
+}, 700);""")
+swap("${listLabel === 'My Portfolio' ? 'your own portfolio' : 'a sample watchlist'}", "${listLabel === 'Sample Watchlist' ? 'a sample watchlist' : 'your own list'}")
+
 assert "upsidePct" not in html and "Fair-Value" not in html and "Coiled" not in html
 out = os.path.join(ROOT, "universe", "index.html")
 io.open(out, "w", encoding="utf8", newline="\n").write(html)

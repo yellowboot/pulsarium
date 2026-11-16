@@ -2279,7 +2279,7 @@ const TOUR = [
    look: () => 'A risk signal is a reason to open the filing, not a forecast. Click a star to read its flags.',
    go(){ calm(); focus = []; }},
   {t: '8. Watchlist X-Ray', view: 'xray',
-   text: () => `X-Ray sorts one list of stocks into three groups: growth signals on the left, neutral in the centre, strong SEC risk signals on the right, next to the Black Hole. Right now it shows ${listLabel === 'My Portfolio' ? 'your own portfolio' : 'a sample watchlist'}.`,
+   text: () => `X-Ray sorts one list of stocks into three groups: growth signals on the left, neutral in the centre, strong SEC risk signals on the right, next to the Black Hole. Right now it shows ${listLabel === 'Sample Watchlist' ? 'a sample watchlist' : 'your own list'}.`,
    look: () => 'Click Done to explore freely: the Supernovas, Black Hole Risks and X-Ray buttons open each view with its full list.',
    go(){ calm(); focus = []; }},
 ];
@@ -3007,6 +3007,14 @@ addEventListener('message', (event) => {
   }
 });
 if (parent !== window) parent.postMessage({type: 'universe:ready'}, '*');
+setTimeout(() => {
+  const q = new URLSearchParams(location.search), clean = (v) => String(v || '').trim().toUpperCase().replace('.', '-').slice(0, 12);
+  const tk = clean(q.get('ticker')), view = q.get('view'), own = (q.get('tickers') || '').split(',').map(clean).filter(Boolean).slice(0, 30);
+  const open = (v) => document.body.classList.contains('embed') ? setCosmosMode(v) : toggleDrawer(v);
+  if (own.length){ listLabel = 'My Tickers'; window.SEC_COSMOS_ADAPTER.setPortfolioTickers(own); open('xray'); }
+  else if (tk && T[tk] !== undefined) selectStar(T[tk], false, true);
+  else if (view === 'supernovas' || view === 'risks' || view === 'xray') open(view);
+}, 700);
 window.SEC_COSMOS_ADAPTER = {
   setPortfolioTickers(tickers){
     customWatchlist.clear();
