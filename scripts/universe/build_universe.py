@@ -337,6 +337,29 @@ swap("  if (m.type === 'universe:theme'",
      "  }\n"
      "  if (m.type === 'universe:theme'")
 
+# ---------- the tour walks through the three views (her note, 16 Nov 2026) ----------
+# The last step only named Supernovas, Black Hole Risks and X-Ray; each now gets its own step that switches the view.
+swap("""  {t: '6. Supernovas, Risks & X-Ray Modes',
+   text: () => 'Use "Supernovas", "Black Hole Risks", or "Watchlist X-Ray" anytime to rearrange the 3D universe by real SEC catalysts & red flags.',
+   look: () => 'Click Done to explore freely.',
+   go(){ calm(); flyTo('overview'); focus = []; }},""",
+     """  {t: '6. Supernovas: Growth Signals', view: 'supernovas',
+   text: () => `${supAssets.length} of ${N} companies carry growth signals: fast or steady revenue growth in SEC reports, insider buying, or a stock that dipped after beating forecasts. This view pulls them out of their galaxies into bright inner rings; everyone else waits on the far ring.`,
+   look: () => 'Click a star in the inner rings to see which signals it has.',
+   go(){ calm(); focus = []; }},
+  {t: '7. Black Hole Risks: SEC Red Flags', view: 'risks',
+   text: () => `${riskAssets.filter(a => (a.blackHolePull || 0) >= 40).length} companies show strong SEC risk signals (⚠️) and ${riskAssets.filter(a => (a.blackHolePull || 0) < 40).length} carry one light flag (⚑): debt stress, profit not backed by cash, payouts above cash flow, share dilution, shrinking margins, insider selling. Here they circle the Black Hole.`,
+   look: () => 'A risk signal is a reason to open the filing, not a forecast. Click a star to read its flags.',
+   go(){ calm(); focus = []; }},
+  {t: '8. Watchlist X-Ray', view: 'xray',
+   text: () => `X-Ray sorts one list of stocks into three groups: growth signals on the left, neutral in the centre, strong SEC risk signals on the right, next to the Black Hole. Right now it shows ${listLabel === 'My Portfolio' ? 'your own portfolio' : 'a sample watchlist'}.`,
+   look: () => 'Click Done to explore freely: the Supernovas, Black Hole Risks and X-Ray buttons open each view with its full list.',
+   go(){ calm(); focus = []; }},""")
+swap("function goStep(i){ tourI = clamp(i, 0, TOUR.length-1); nav.userCam = false; TOUR[tourI].go();",
+     "function goStep(i){ tourI = clamp(i, 0, TOUR.length-1); nav.userCam = false; const view = TOUR[tourI].view || 'galaxies'; if (activeDrawer) closeDrawer(); if (cosmosMode !== view) setCosmosMode(view); TOUR[tourI].go();")
+swap("if (on){ calmHit = null; panicHit = null; goStep(0); } else {",
+     "if (on){ calmHit = null; panicHit = null; goStep(0); } else { if (cosmosMode !== 'galaxies' && !activeDrawer) setCosmosMode('galaxies');")
+
 assert "upsidePct" not in html and "Fair-Value" not in html and "Coiled" not in html
 out = os.path.join(ROOT, "universe", "index.html")
 io.open(out, "w", encoding="utf8", newline="\n").write(html)
