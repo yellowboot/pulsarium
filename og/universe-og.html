@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Market Universe OG card</title>
+<!--
+  Source of universe-og-v1.jpg, the 1200x630 sharing preview of /universe/. The picture behind the words is the
+  live page itself (/universe/?embed=1), so this file must be opened from a web server, not from disk:
+    msedge --headless=new --hide-scrollbars --force-device-scale-factor=1 --window-size=1200,630
+      --virtual-time-budget=9000 --screenshot=card.png http://localhost:8765/og/universe-og.html
+  Save as JPEG under a NEW file name when it changes - platforms cache previews by URL.
+-->
+<link rel="stylesheet" href="../fonts/fonts.css">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { width: 1200px; height: 630px; overflow: hidden; background: #020308; font-family: 'Chakra Petch', sans-serif; color: #f2f8ff; }
+  iframe { position: absolute; left: 260px; top: -85px; width: 1040px; height: 800px; border: 0; }
+  .scrim { position: absolute; inset: 0; background: linear-gradient(90deg, #020308 0%, rgba(2,3,8,.94) 30%, rgba(2,3,8,.35) 55%, rgba(2,3,8,0) 72%),
+    linear-gradient(0deg, rgba(2,3,8,.85), rgba(2,3,8,0) 26%); }
+  .text { position: absolute; left: 64px; top: 64px; width: 560px; }
+  .wordmark { font: 800 34px 'Orbitron', sans-serif; letter-spacing: .14em;
+    background: linear-gradient(100deg, #d8fbff, #00f0ff 45%, #2f7bff 75%, #ff2bd6); -webkit-background-clip: text; color: transparent; }
+  .eyebrow { margin-top: 74px; font: 600 17px 'JetBrains Mono', monospace; letter-spacing: .3em; color: #00f0ff; }
+  h1 { margin: 14px 0 0; font: 800 68px/1.04 'Orbitron', sans-serif; letter-spacing: .02em; text-shadow: 0 0 34px rgba(0,240,255,.35); }
+  p { margin: 26px 0 0; font-size: 27px; line-height: 1.32; color: #c5d6f2; }
+  .foot { position: absolute; left: 64px; bottom: 44px; font: 600 19px 'JetBrains Mono', monospace; letter-spacing: .08em; color: #a9bddf; }
+  .foot b { color: #00f0ff; font-weight: 600; }
+</style>
+</head>
+<body>
+<iframe src="/universe/?embed=1" title="Market Universe"></iframe>
+<div class="scrim"></div>
+<div class="text">
+  <div class="wordmark">PULSARIUM</div>
+  <div class="eyebrow">FREE · NO ACCOUNT</div>
+  <h1>Market Universe</h1>
+  <p>SEC filings as a 3D map of the stock market: growth signals, red flags and a black hole.</p>
+</div>
+<div class="foot"><b>pulsarium.finance</b>/universe</div>
+</body>
+</html>

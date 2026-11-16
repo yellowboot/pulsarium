@@ -377,6 +377,44 @@ swap("${listLabel === 'My Portfolio' ? 'your own portfolio' : 'a sample watchlis
 
 # the company count comes from the data, not from the text
 swap("{id: 'all', lbl: `All 131`}", "{id: 'all', lbl: `All ${N}`}")
+# ---------- found by search engines and shared with a picture (16 Nov 2026) ----------
+# The page is one canvas, so a robot or a screen reader saw a title and nothing else. A plain-text description of
+# what the picture shows sits in the page (kept out of sight, read by screen readers and robots), and links shared
+# in a messenger or on X get their own picture (og/universe-og.html is its source).
+swap('<link rel="icon" href="/favicon.ico">', """<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pulsarium">
+<meta property="og:url" content="https://pulsarium.finance/universe/">
+<meta property="og:title" content="Market Universe — SEC filings as a 3D map of the stock market">
+<meta property="og:description" content="About 300 large US companies as stars in eight sector galaxies: growth signals, SEC red flags and a black hole that grows under stress. Free, no account.">
+<meta property="og:image" content="https://pulsarium.finance/og/universe-og-v1.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Market Universe by Pulsarium: sector galaxies around a black hole">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Market Universe — SEC filings as a 3D map of the stock market">
+<meta name="twitter:description" content="About 300 large US companies as stars in eight sector galaxies: growth signals, SEC red flags and a black hole that grows under stress.">
+<meta name="twitter:image" content="https://pulsarium.finance/og/universe-og-v1.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Market Universe","url":"https://pulsarium.finance/universe/","applicationCategory":"FinanceApplication","operatingSystem":"Any","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"An interactive 3D map of about 300 large US companies built from SEC filings and end-of-day prices: growth signals, risk signals, sector rotation and stress simulations.","publisher":{"@type":"Organization","name":"Pulsarium","url":"https://pulsarium.finance/"}}</script>
+<style>.about-map{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}</style>
+<link rel="icon" href="/favicon.ico">""")
+swap("</body>", """<section class="about-map" aria-label="About the Market Universe">
+  <h2>What the Market Universe shows</h2>
+  <p>The Market Universe is a free interactive 3D map of the US stock market. About 300 of the largest US-listed companies are drawn as stars, grouped into eight sector galaxies: AI and semiconductors, software and cloud, energy and the power grid, healthcare and pharma, financials and REITs, industrials and defense, consumer and retail, defensive stocks and staples. A star's size follows the company's market value.</p>
+  <p>Every signal on the map comes from public data: quarterly and annual reports filed with the SEC (forms 10-Q and 10-K), insider trades (Form 4), and end-of-day prices. The data is rebuilt automatically several times a day.</p>
+  <h2>Supernovas: companies with growth signals</h2>
+  <p>A star turns into a supernova when its filings show strong growth: revenue rising fast with wider margins, a turn from loss to profit, insiders buying shares on the open market, or a stock that fell after beating forecasts.</p>
+  <h2>Black Hole Risks: SEC red flags</h2>
+  <p>Companies with risk signals in their filings circle the black hole: debt stress, profit that is not backed by cash flow, shareholder payouts above free cash flow, inventories and receivables growing faster than sales, share dilution, shrinking margins, and insider selling outside pre-arranged plans. Strong signals and single light flags are marked differently.</p>
+  <h2>Watchlist X-Ray</h2>
+  <p>X-Ray sorts a list of stocks into three groups: growth signals, neutral, and strong SEC risk signals. In the Pulsarium cabinet it uses your own positions and watchlists.</p>
+  <h2>Stress Shock, sector rotation and contagion</h2>
+  <p>Clicking a star sends a shockwave along its real 50-day price correlations to show which companies move with it. The Stress Shock slider and the crash mode are simulations of a market panic, not forecasts. Nothing on this page is investment advice.</p>
+  <p>More from Pulsarium: <a href="/news/">live market news</a>, <a href="/earnings-season/">earnings season map</a>, <a href="/insider-buying/">insider buying</a>, <a href="/insider-selling/">insider selling</a>, <a href="/sector-analytics/">sector analytics</a>, <a href="/mood/">Mood Index</a>.</p>
+</section>
+</body>""")
+
 assert "upsidePct" not in html and "Fair-Value" not in html and "Coiled" not in html
 out = os.path.join(ROOT, "universe", "index.html")
 io.open(out, "w", encoding="utf8", newline="\n").write(html)

@@ -838,6 +838,17 @@ def item_list(items: list, companies: dict, skip_ticker: str = None, group_by_da
     return body
 
 
+@functools.lru_cache(maxsize=1)
+def universe_tickers() -> frozenset:
+    """Tickers drawn on /universe/ (universe/data.js, rebuilt by the SEC workflow); empty if the file cannot be read."""
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "universe", "data.js"), encoding="utf8") as handle:
+            text = handle.read()
+        return frozenset(c["ticker"].upper() for c in json.loads(text[text.index("{"):text.rindex("}") + 1]).get("companies", []))
+    except Exception:  # noqa: BLE001 - the link is an extra, a page is built without it
+        return frozenset()
+
+
 def cta(title: str, text: str, button: str = "Get started free", href: str = APP_URL) -> str:
     return f"""<aside class="panel cta">
   <div>
@@ -936,6 +947,10 @@ def ticker_page(company: dict, items: list, companies: dict, sector_counts: dict
         title = f"{label} {noun} today: headlines & sentiment | Pulsarium"
         description = f"{label} headlines from public financial news, scored for sentiment and importance."
 
+    # companies drawn on the Market Universe get a link straight to their star (/universe/?ticker=)
+    on_map = ticker.upper().replace(".", "-")
+    universe_link = (f'<div class="chips"><a class="chip" href="/universe/?ticker={esc(on_map)}">See {esc(ticker)} in the Market Universe'
+                     f'<small>SEC signals on a 3D map ↗</small></a></div>') if on_map in universe_tickers() else ""
     watch = watch_url(company)
     cabinet_card = cta(
         f"Follow {ticker} in your own cabinet",
@@ -946,6 +961,7 @@ def ticker_page(company: dict, items: list, companies: dict, sector_counts: dict
   <span class="eyebrow">{esc(company["sector"])} · {esc(ticker)}</span>
   <h1>{esc(label)} {esc(noun)}</h1>
   <p class="lead">Every headline mentioning {esc(company["name"])} from {esc(sources)} over the last 30 days, each scored for sentiment and importance. Updated automatically through the trading day.</p>
+  {universe_link}
 </header>
 
 <section class="stats">
