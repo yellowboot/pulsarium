@@ -15,18 +15,18 @@
 <meta property="og:title" content="Pulsarium — Stock &amp; ETF Portfolio Tracker and Market News">
 <meta property="og:description" content="Track stock and ETF portfolios, dividends and watchlists with Pulsarium. Import broker files, set price alerts and follow financial news by company and sector.">
 <meta property="og:url" content="https://pulsarium.finance/">
-<meta property="og:image" content="https://pulsarium.finance/og/pulsarium-og-v2.jpg">
-<meta property="og:image:secure_url" content="https://pulsarium.finance/og/pulsarium-og-v2.jpg">
+<meta property="og:image" content="https://pulsarium.finance/og/pulsarium-og-v3.jpg">
+<meta property="og:image:secure_url" content="https://pulsarium.finance/og/pulsarium-og-v3.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Pulsarium — A calmer way to watch the market.">
+<meta property="og:image:alt" content="Pulsarium — Read the market through its filings.">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pulsarium — Stock &amp; ETF Portfolio Tracker and Market News">
 <meta name="twitter:description" content="Track stock and ETF portfolios, dividends and watchlists with Pulsarium. Import broker files, set price alerts and follow financial news by company and sector.">
-<meta name="twitter:image" content="https://pulsarium.finance/og/pulsarium-og-v2.jpg">
-<meta name="twitter:image:alt" content="Pulsarium — A calmer way to watch the market.">
+<meta name="twitter:image" content="https://pulsarium.finance/og/pulsarium-og-v3.jpg">
+<meta name="twitter:image:alt" content="Pulsarium — Read the market through its filings.">
 
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -65,6 +65,7 @@
     --magenta: #ff2bd6;
     --bg-0: #04050c;
     --bg-1: #070a16;
+    --pos: #3dffa2; --neg: #ff6b8e; --border: rgba(120, 220, 255, 0.18);
     --text-hi: #f2f8ff;
     --text: #e6f1ff;
     --text-body: #c9d8f2;
@@ -245,6 +246,29 @@
   .today-more { font-size: 14px; font-weight: 600; color: var(--accent); transition: color 0.2s, text-shadow 0.2s; }
   .today-more:hover { color: var(--accent-ice); text-shadow: 0 0 10px var(--accent); }
   .today-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); gap: 14px; }
+  /* the live row (Nov 2026): Mood, the insider bubbles and the earnings ring; the two pictures are the news
+     page's own (assets/market-map.js and .css), with the few page styles they expect given here */
+  .today-grid.today-live { grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.3fr) minmax(0, 1.3fr); }
+  .today-live .mm-card { gap: 0; }
+  .today-live .mm-card .mm-head h2 { margin: 0 0 4px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-low); }
+  .today-live .mm-card { padding: 14px 16px 12px; }
+  .today-live .mm-card .mm-stage, .today-live .mm-wide .mm-stage { aspect-ratio: auto; height: 150px; max-height: none; min-height: 0; flex: none; }
+  .today-live .mm-card .mm-info { min-height: 0; margin-top: 8px; }
+  .today-live .mm-card .mm-hint, .today-live .mm-card .mm-cap { display: none; }
+  .today-live .mm-foot { padding-top: 8px; }
+  .today-col { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .today-col .today-mood { flex: 1 1 150px; height: auto; min-height: 150px; }
+  .today-uni { gap: 8px; text-decoration: none; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+  .today-uni:hover { border-color: rgba(0,240,255,0.5); box-shadow: 0 0 22px rgba(0,240,255,0.14); }
+  .today-uni-nums { display: flex; flex-wrap: wrap; gap: 4px 16px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 11.5px; color: var(--text-mid); }
+  .today-uni-nums b { margin-right: 5px; font-size: 19px; font-weight: 700; color: var(--text-hi); }
+  .today-uni-nums .pos b { color: var(--pos); } .today-uni-nums .neg b { color: var(--neg); }
+  .today-uni-open { font-size: 12.5px; font-weight: 600; color: var(--accent); }
+  .today-live .mm-open { font-size: 12.5px; font-weight: 600; color: var(--accent); white-space: nowrap; }
+  .today-live .chip { font-family: var(--font-ui, 'Chakra Petch', sans-serif); border-radius: 20px; border: 1px solid rgba(120,220,255,0.18); background: transparent; color: var(--text-mid); cursor: pointer; }
+  .today-live .chip:hover { color: var(--text-hi); border-color: var(--accent); }
+  @media (max-width: 1100px) { .today-grid.today-live { grid-template-columns: repeat(2, minmax(0, 1fr)); } .today-live .today-col { grid-column: 1 / -1; flex-direction: row; } .today-col > * { flex: 1 1 0; } }
+  @media (max-width: 700px) { .today-grid.today-live { grid-template-columns: minmax(0, 1fr); } .today-live .today-col { flex-direction: column; } }
   .today-card {
     display: flex; flex-direction: column; gap: 10px;
     padding: 18px 20px; border-radius: 16px;
@@ -330,6 +354,28 @@
   .panel .btn { align-self: flex-start; margin-top: 6px; }
 
   /* ---------- Trust row ---------- */
+  .features-one { grid-template-columns: minmax(0, 1fr); margin-top: 0; }
+  .features-one .feat-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 28px; }
+  .later { margin: 22px 0; }
+  .uni-home { margin-top: 56px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 22px; }
+  .uni-lead { margin: 0; font-size: 14px; line-height: 1.65; color: var(--text-body); }
+  :root[data-color-theme='calm'] .uni-form input { background: #ffffff; border-color: rgba(27,31,59,0.2); color: #1b1f3b; }
+  :root[data-color-theme='calm'] .uni-form input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(74,71,214,0.15); }
+  .uni-form { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+  .uni-form label { font-size: 13px; font-weight: 600; color: var(--text-hi); }
+  .uni-form-row { display: flex; gap: 10px; }
+  .uni-form input { flex: 1; min-width: 0; height: 44px; padding: 0 14px; border-radius: 12px; border: 1px solid rgba(120,220,255,0.3); background: rgba(4,8,20,0.6); color: var(--text-hi); font: 600 14px var(--font-mono, 'JetBrains Mono', monospace); letter-spacing: 0.04em; outline: none; }
+  .uni-form input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,240,255,0.15); }
+  .uni-form .btn { margin-top: 0; align-self: auto; white-space: nowrap; }
+  .uni-form small { font-size: 12px; color: var(--text-low); }
+  .uni-pic { position: relative; display: block; min-height: 300px; border-radius: 22px; overflow: hidden; border: 1px solid var(--line); background: #020308; box-shadow: 0 24px 60px rgba(0,0,0,0.45); transition: border-color 0.35s ease, box-shadow 0.35s ease; }
+  .uni-pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
+  .uni-pic:hover { border-color: rgba(0,240,255,0.55); box-shadow: 0 0 32px rgba(0,240,255,0.2), 0 24px 60px rgba(0,0,0,0.45); }
+  .uni-pic:hover img { transform: scale(1.04); }
+  .uni-open { position: absolute; right: 16px; bottom: 14px; padding: 8px 12px; border-radius: 10px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.14em; color: #d8fbff; background: rgba(4,8,20,0.72); box-shadow: inset 0 0 0 1px rgba(0,240,255,0.5); }
+  @media (max-width: 900px) { .uni-home { grid-template-columns: 1fr; margin-top: 32px; } .uni-pic { min-height: 0; aspect-ratio: 16 / 10; } .features-one .feat-list { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .uni-form-row { flex-direction: column; } }
+  @media (prefers-reduced-motion: reduce) { .uni-pic img { transition: none; } }
   .trust-row { margin-top: 22px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; scroll-margin-top: 20px; }
   .trust { display: flex; align-items: center; gap: 12px; padding: 18px 20px; border-radius: 16px; border: 1px solid rgba(120,220,255,0.12); background: rgba(8,14,32,0.5); font-size: 14px; line-height: 1.4; color: var(--text-body); }
   .trust svg { flex-shrink: 0; color: var(--accent); }
@@ -452,17 +498,17 @@
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <span class="eyebrow">Stock &amp; ETF portfolio tracker</span>
-          <h1 class="headline">A calmer way to <span class="hl">watch the market.</span></h1>
-          <p class="hero-lead">Financial news by company and sector, plus a personal account for tracking stock and ETF portfolios, dividends, watchlists and price alerts. Add transactions manually or import your broker's export file.</p>
+          <span class="eyebrow">Stock analysis &amp; portfolio tracker</span>
+          <h1 class="headline">Read the market <span class="hl">through its filings.</span></h1>
+          <p class="hero-lead">What companies report to the SEC, what their insiders buy and sell, and what the news says about them, in plain numbers. Plus a private cabinet for your stock and ETF portfolios, dividends, watchlists and price alerts.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="news/">
-              Open the news dashboard
+            <a class="btn btn-primary" href="https://app.pulsarium.finance/">
+              Get started free
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a class="btn btn-ghost" href="https://app.pulsarium.finance/">Get started</a>
+            <a class="btn btn-ghost" href="news/">Open the news dashboard</a>
           </div>
-          <span class="hero-note mono">NEWS · PORTFOLIOS · WATCHLISTS · ALERTS</span>
+          <span class="hero-note mono">SEC FILINGS · INSIDERS · NEWS · PORTFOLIOS</span>
         </div>
 
         <div class="hero-visual" aria-hidden="true" data-pulsar-webgl="light">
@@ -500,23 +546,89 @@
 
       <!-- today:start -->
       <section class="today" aria-label="Today on the market">
+        <link rel="stylesheet" href="/assets/market-map.css?v=b3b17ab220">
         <div class="today-head">
           <span class="eyebrow">Today on the market</span>
           <a class="today-more" href="news/">Open the news dashboard →</a>
         </div>
-        <div class="today-grid has-sec">
-        <iframe class="today-mood" src="/mood/widget/" title="Pulsarium Mood Index: 46/100, neutral" loading="lazy"></iframe><div class="today-card today-sec">
-          <div class="sec-head"><span class="today-label">SEC filings · this week</span><a class="sec-more" href="news/#insider-radar">More →</a></div>
-          <div class="sec-tiles"><a class="sec-tile" href="news/#insider-radar" title="MP · 3 insiders · Nov 10 – Nov 11"><span class="sec-tile-label">Insider buying</span><strong class="sec-value">$3.4M</strong><span class="sec-line">MP · 3 insiders · Nov 10 – Nov 11</span></a><a class="sec-tile" href="news/#sector-overview" title="Semiconductors · revenue, 12 months"><span class="sec-tile-label">Fastest-growing sector</span><strong class="sec-value up">+65.9%</strong><span class="sec-line">Semiconductors · revenue, 12 months</span></a><a class="sec-tile" href="news/#financial-signals" title="ECHO · EchoStar CORP · loss → profit"><span class="sec-tile-label">Profit turnaround</span><strong class="sec-value up">+$16.8B</strong><span class="sec-line">ECHO · EchoStar CORP · loss → profit</span></a></div>
-        </div><div class="today-card today-news">
-          <span class="today-label">Top headlines</span>
-          <ul class="today-headlines"><li><a href="https://www.cnbc.com/2026/11/15/anthropic-ipo-is-make-or-break-for-the-technology-industry.html" target="_blank" rel="noopener">Anthropic’s IPO lands as the embattled AI trade looks for a much-needed bright spot</a><small>CNBC · 12:00 UTC</small></li><li><a href="https://www.cnbc.com/2026/11/14/nvidia-investors-jensen-huang-return-board-letter.html" target="_blank" rel="noopener">Nvidia board urged to consider &#x27;potential return of Jensen Huang&#x27; by two major investors</a><small>CNBC · 17:46 UTC</small></li><li><a href="https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst" target="_blank" rel="noopener">Bitcoin crashes to 3-month low below $63,000 as analyst flags fourth capitulation wave</a><small>CoinDesk · 16:33 UTC</small></li></ul>
+        <div class="today-grid today-live">
+        <div class="today-col"><iframe class="today-mood" src="/mood/widget/" title="Pulsarium Mood Index: 46/100, neutral" loading="lazy"></iframe><a class="today-card today-uni" href="/universe/">
+          <span class="today-label">Market Universe</span>
+          <span class="today-uni-nums"><span><b>309</b> companies</span><span class="pos"><b>61</b> growth signals</span><span class="neg"><b>30</b> risk signals</span></span>
+          <span class="today-uni-open">Open the 3D map ↗</span>
+        </a></div><section class="today-card mm-card mm-wide" data-insider-map aria-labelledby="today-insiders" hidden>
+          <div class="mm-head"><h2 id="today-insiders" data-bubbles-title>Insider trades · this week</h2><p class="mm-cap" data-bubbles-cap>What company officers and directors bought and sold</p></div>
+          <div class="mm-stage"><canvas role="img" aria-label="Floating bubbles, one per company: green and red by direction, a bigger bubble is a bigger amount"></canvas></div>
+          <div class="mm-info" data-insider-info aria-live="polite"></div>
+          <div class="mm-foot" data-bubbles-for="insiders">
+            <p class="mm-legend"><span><i class="buy"></i>Bought</span><span><i class="sell"></i>Sold</span><span><i class="plan"></i>Planned sale</span></p>
+            <span class="mm-links"><a class="mm-open" href="/insider-buying/">Buying <span aria-hidden="true">↗</span></a><a class="mm-open" href="/insider-selling/">Selling <span aria-hidden="true">↗</span></a></span>
+          </div>
+        </section><section class="today-card market-map mm-card" data-season="mini" aria-labelledby="today-season" hidden>
+          <div class="mm-head"><h2 id="today-season">Earnings season · Q3 2026</h2><p class="mm-cap">744 stocks on the day after their reports</p></div>
+          <div class="mm-stage"><canvas role="img" aria-label="One line per company: up if the stock rose after its earnings report, down if it fell"></canvas></div>
+          <div class="mm-info" data-season-info aria-live="polite"></div>
+          <div class="mm-foot">
+            <div class="mm-controls" role="group" aria-label="How the companies are grouped">
+              <button type="button" class="chip" data-season-layout="0">By date</button>
+              <button type="button" class="chip" data-season-layout="1">By result</button>
+              <button type="button" class="chip" data-season-layout="2">By sector</button>
+            </div>
+            <a class="mm-open" href="/earnings-season/">Full picture <span aria-hidden="true">↗</span></a>
+          </div>
+        </section>
         </div>
-        </div>
+        <script src="/assets/season-q3-2026.js?v=e7c8afa490" defer></script><script src="/assets/market-map.js?v=a61e23b364" defer></script>
       </section>
       <!-- today:end -->
 
+      <section class="uni-home" aria-label="Market Universe">
+        <article class="panel uni-copy">
+          <div class="panel-edge late"></div>
+          <div class="panel-head">
+            <span class="eyebrow">Market Universe</span>
+            <span class="tag tag-acct">NEW</span>
+          </div>
+          <h2>The whole market as a 3D map of SEC signals.</h2>
+          <p class="uni-lead">The largest US companies are stars in eight sector galaxies. Growth signals turn a star into a supernova; red flags in the filings pull it toward the black hole.</p>
+          <form class="uni-form" data-uni-form>
+            <label for="uni-tickers">Check your own tickers</label>
+            <div class="uni-form-row">
+              <input id="uni-tickers" name="tickers" type="text" placeholder="NVDA, PFE, KO" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="160">
+              <button type="submit" class="btn btn-primary">X-Ray them</button>
+            </div>
+            <small>US tickers, separated by commas. No account needed, nothing is saved.</small>
+          </form>
+        </article>
+        <a class="uni-pic" href="/universe/" aria-label="Open the Market Universe">
+          <img src="/assets/shots/universe-map.jpg" alt="Sector galaxies of the Market Universe around a black hole" width="1280" height="760" loading="lazy">
+          <span class="uni-open mono">OPEN THE LIVE MAP ↗</span>
+        </a>
+      </section>
+
       <section class="features">
+        <article class="panel" id="analysis">
+          <div class="panel-edge"></div>
+          <div class="panel-head">
+            <span class="eyebrow">Company analysis</span>
+            <span class="tag tag-acct">FREE ACCOUNT</span>
+          </div>
+          <h2>The numbers behind a stock, on one page.</h2>
+          <ul class="feat-list">
+            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8M16 17H8M10 9H8"/></svg><span>Key figures for US companies taken straight from their SEC filings</span></li>
+            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg><span>P/E next to the median of the same industry and company size</span></li>
+            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg><span>Insider buying and selling from Form 4, refreshed every day</span></li>
+            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 9 9h-9z"/></svg><span>Earnings season map: who beat, who missed and how the stock reacted</span></li>
+            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg><span>A screener with ready-made presets instead of fifty filters</span></li>
+            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span>AI research: a quick read on any company, one free credit a day</span></li>
+          </ul>
+          <p class="panel-more">Open without an account: <a href="/insider-buying/">insider buying</a> · <a href="/insider-selling/">insider selling</a> · <a href="/sector-analytics/">sector analytics</a> · <a href="/earnings-season/">earnings season</a> · <a href="/report-highlights/">report highlights</a></p>
+          <a class="btn btn-primary" href="https://app.pulsarium.finance/">
+            Get started
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+
         <article class="panel" id="news">
           <div class="panel-edge"></div>
           <div class="panel-head">
@@ -529,7 +641,6 @@
             <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg><span>Refreshed automatically through the trading day</span></li>
             <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg><span>Main indices, commodities and crypto at a glance</span></li>
             <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 14l4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg><span>A daily Mood Index of how upbeat the headlines are</span></li>
-            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg><span>Insider trades and sector trends from SEC filings</span></li>
           </ul>
           <div class="chips" aria-label="News sources">
             <span class="chipx">CNBC</span><span class="chipx">Nasdaq</span><span class="chipx">MarketWatch</span><span class="chipx">Investing.com</span><span class="chipx">CoinDesk</span><span class="chipx">+3</span>
@@ -540,7 +651,24 @@
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </article>
+      </section>
 
+      <section class="later" aria-label="New in the cabinet">
+        <div class="later-text">
+          <div>
+            <span class="eyebrow">New in the cabinet</span>
+            <span class="later-title">AI research — a quick read or a deep dive on any company.</span>
+          </div>
+          <a class="later-note mono" href="https://app.pulsarium.finance/">1 FREE CREDIT A DAY →</a>
+        </div>
+        <button type="button" class="later-video" data-video="YaPNy9Y2r8k" aria-label="Play the video: Before You Buy a Stock — the full check in one report">
+          <img src="/assets/shots/research-tutorial.jpg" alt="" width="960" height="540" loading="lazy">
+          <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+          <span class="len mono">WATCH · HOW IT WORKS</span>
+        </button>
+      </section>
+
+      <section class="features features-one">
         <article class="panel" id="cabinet">
           <div class="panel-edge late"></div>
           <div class="panel-head">
@@ -549,11 +677,14 @@
           </div>
           <h2>Your portfolio, tracked properly.</h2>
           <ul class="feat-list">
+            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg><span>One overview of everything you hold: value, gain, sectors and currencies</span></li>
             <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg><span>Several portfolios, several currencies, one total</span></li>
-            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.4 5-1.4 5 .8 0 2.4-5 1.5-5 3.9 0 2.2 5 2.2 5 .8"/></svg><span>Dividends and splits picked up and adjusted automatically</span></li>
+            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.4 5-1.4 5 .8 0 2.4-5 1.5-5 3.9 0 2.2 5 2.2 5 .8"/></svg><span>Dividends picked up on their own, splits adjusted automatically</span></li>
             <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg><span>Your own weight limit for each position</span></li>
-            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span>Watchlists with price alerts, and news filtered to what you hold</span></li>
-            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8M16 17H8M10 9H8"/></svg><span>A page for every stock, plus SEC financials for US companies</span></li>
+            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span>Watchlists with price alerts, and a bell for news on what you hold</span></li>
+            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-24 12 12)"/></svg><span>Portfolio X-Ray: your own stocks on the Market Universe, sorted by SEC signals</span></li>
+            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8M16 17H8M10 9H8"/></svg><span>A page for every stock: chart, key figures, news and your own trades</span></li>
+            <li class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 21h16"/></svg><span>Import your broker's export file, with no broker login or password</span></li>
           </ul>
           <div class="chips" aria-label="Supported currencies">
             <span class="chipx">EUR</span><span class="chipx">USD</span><span class="chipx">GBP</span><span class="chipx">CHF</span><span class="chipx">JPY</span><span class="chipx">+2</span>
@@ -590,21 +721,6 @@
         <a class="tool" href="/tools/dividend-yield-calculator/"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 19h2M12 19h4"/></svg><span><strong>Dividend yield</strong><small>Yield, yield on cost and your yearly income</small></span></a>
         <a class="tool" href="/tools/dca-calculator/"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 19h2M12 19h4"/></svg><span><strong>Monthly investing (DCA)</strong><small>What regular investing can grow to</small></span></a>
         <a class="tool" href="/tools/rebalancing-calculator/"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 19h2M12 19h4"/></svg><span><strong>Rebalancing</strong><small>What to buy or sell to hit your targets</small></span></a>
-      </section>
-
-      <section class="later" aria-label="New in the cabinet">
-        <div class="later-text">
-          <div>
-            <span class="eyebrow">New in the cabinet</span>
-            <span class="later-title">AI research — a quick read or a deep dive on any company.</span>
-          </div>
-          <a class="later-note mono" href="https://app.pulsarium.finance/">1 FREE CREDIT A DAY →</a>
-        </div>
-        <button type="button" class="later-video" data-video="YaPNy9Y2r8k" aria-label="Play the video: Before You Buy a Stock — the full check in one report">
-          <img src="/assets/shots/research-tutorial.jpg" alt="" width="960" height="540" loading="lazy">
-          <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
-          <span class="len mono">WATCH · HOW IT WORKS</span>
-        </button>
       </section>
     </main>
   </div>
@@ -736,6 +852,17 @@ document.querySelectorAll('.later-video[data-video]').forEach(button => button.a
       link.href = url.toString();
     }, true);
   } catch { banner.hidden = true; }
+})();
+</script>
+<script>
+(() => {
+  // "Check your own tickers": the list travels in the link to the Market Universe, nothing is stored
+  const form = document.querySelector('[data-uni-form]');
+  if (form) form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const list = form.tickers.value.toUpperCase().split(/[^A-Z0-9.-]+/).filter(Boolean).slice(0, 30);
+    location.href = list.length ? '/universe/?tickers=' + encodeURIComponent(list.join(',')) : '/universe/?view=xray';
+  });
 })();
 </script>
 </body>

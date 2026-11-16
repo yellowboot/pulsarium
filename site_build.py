@@ -849,6 +849,18 @@ def universe_tickers() -> frozenset:
         return frozenset()
 
 
+@functools.lru_cache(maxsize=1)
+def universe_counts() -> dict:
+    """How many companies, growth signals and risk signals the Market Universe shows now; {} if its data cannot be read."""
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "universe", "data.js"), encoding="utf8") as handle:
+            text = handle.read()
+        roles = [c.get("role") for c in json.loads(text[text.index("{"):text.rindex("}") + 1]).get("companies", [])]
+        return {"companies": len(roles), "growth": roles.count("supernova"), "risk": roles.count("black_hole_risk")} if roles else {}
+    except Exception:  # noqa: BLE001 - the card is an extra; the row is built without it
+        return {}
+
+
 def cta(title: str, text: str, button: str = "Get started free", href: str = APP_URL) -> str:
     return f"""<aside class="panel cta">
   <div>
@@ -1859,34 +1871,70 @@ def home_today(history: list, window: list, now: datetime) -> str:
     if history:
         point = history[-1]
         cards.append(f"""<iframe class="today-mood" src="/mood/widget/" title="Pulsarium Mood Index: {point["value"]}/100, {esc(point["label"].lower())}" loading="lazy"></iframe>""")
-    sec_card = sec_week_card()
-    if sec_card:
-        cards.append(sec_card)
-
-    recent =[i for i in window if i["_time"] >= now - timedelta(hours=24)
-              and (i.get("content_type") or "market_signal") == "market_signal"]
-    top = sorted(recent, key=lambda i: (-(i.get("importance") or 0), -i["_time"].timestamp()))[:TODAY_HEADLINES]
-    if top:
-        rows = "".join(
-            f'<li><a href="{esc(i.get("link") or "#")}" target="_blank" rel="noopener">{esc(i["title"])}</a>'
-            f'<small>{esc(i.get("source") or "")} · {i["_time"].strftime("%H:%M")} UTC</small></li>'
-            for i in top)
-        cards.append(f"""<div class="today-card today-news">
-          <span class="today-label">Top headlines</span>
-          <ul class="today-headlines">{rows}</ul>
-        </div>""")
-
-    if not cards:
-        return ""
+    # under the Mood Index, in the same column: the Market Universe in three numbers (universe/data.js)
+    counts = universe_counts()
+    if counts:
+        cards.append(f"""<a class="today-card today-uni" href="/universe/">
+          <span class="today-label">Market Universe</span>
+          <span class="today-uni-nums"><span><b>{counts["companies"]}</b> companies</span><span class="pos"><b>{counts["growth"]}</b> growth signals</span><span class="neg"><b>{counts["risk"]}</b> risk signals</span></span>
+          <span class="today-uni-open">Open the 3D map ↗</span>
+        </a>""")
+    if cards:
+        cards = ['<div class="today-col">' + "".join(cards) + '</div>']
+    # two live pictures from the news page instead of tables (Nov 2026): the week's insider trades as bubbles and
+    # the earnings season ring. Both are drawn by assets/market-map.js; each stays hidden until its data arrives.
+    cards.append("""<section class="today-card mm-card mm-wide" data-insider-map aria-labelledby="today-insiders" hidden>
+          <div class="mm-head"><h2 id="today-insiders" data-bubbles-title>Insider trades · this week</h2><p class="mm-cap" data-bubbles-cap>What company officers and directors bought and sold</p></div>
+          <div class="mm-stage"><canvas role="img" aria-label="Floating bubbles, one per company: green and red by direction, a bigger bubble is a bigger amount"></canvas></div>
+          <div class="mm-info" data-insider-info aria-live="polite"></div>
+          <div class="mm-foot" data-bubbles-for="insiders">
+            <p class="mm-legend"><span><i class="buy"></i>Bought</span><span><i class="sell"></i>Sold</span><span><i class="plan"></i>Planned sale</span></p>
+            <span class="mm-links"><a class="mm-open" href="/insider-buying/">Buying <span aria-hidden="true">↗</span></a><a class="mm-open" href="/insider-selling/">Selling <span aria-hidden="true">↗</span></a></span>
+          </div>
+        </section>""")
+    season = newest_season()
+    if season:
+        cards.append(f"""<section class="today-card market-map mm-card" data-season="mini" aria-labelledby="today-season" hidden>
+          <div class="mm-head"><h2 id="today-season">Earnings season · Q{season["quarter"]} {season["year"]}</h2><p class="mm-cap">{season["companies"]} stocks on the day after their reports</p></div>
+          <div class="mm-stage"><canvas role="img" aria-label="One line per company: up if the stock rose after its earnings report, down if it fell"></canvas></div>
+          <div class="mm-info" data-season-info aria-live="polite"></div>
+          <div class="mm-foot">
+            <div class="mm-controls" role="group" aria-label="How the companies are grouped">
+              <button type="button" class="chip" data-season-layout="0">By date</button>
+              <button type="button" class="chip" data-season-layout="1">By result</button>
+              <button type="button" class="chip" data-season-layout="2">By sector</button>
+            </div>
+            <a class="mm-open" href="/earnings-season/">Full picture <span aria-hidden="true">↗</span></a>
+          </div>
+        </section>""")
+    scripts = (f'<script src="{asset_url(season["path"])}" defer></script>' if season else "") + \
+        f'<script src="{asset_url("/assets/market-map.js")}" defer></script>'
     return f"""<section class="today" aria-label="Today on the market">
+        <link rel="stylesheet" href="{asset_url("/assets/market-map.css")}">
         <div class="today-head">
           <span class="eyebrow">Today on the market</span>
           <a class="today-more" href="news/">Open the news dashboard →</a>
         </div>
-        <div class="today-grid{" has-sec" if sec_card else ""}">
+        <div class="today-grid today-live">
         {"".join(cards)}
         </div>
+        {scripts}
       </section>"""
+
+
+def newest_season() -> dict:
+    """The newest assets/season-q<N>-<year>.js (the earnings ring's data): its path, quarter, year and company count."""
+    found = sorted((int(m.group(2)), int(m.group(1)), name) for name in os.listdir("assets")
+                   for m in [re.fullmatch(r"season-q([1-4])-(\d{4})\.js", name)] if m)
+    if not found:
+        return {}
+    year, quarter, name = found[-1]
+    try:
+        with open(os.path.join("assets", name), encoding="utf-8") as f:
+            data = json.loads(f.read().split("window.PULSARIUM_SEASON = ", 1)[1].strip().rstrip(";"))
+        return {"path": f"/assets/{name}", "quarter": quarter, "year": year, "companies": len(data.get("rows") or [])}
+    except Exception:  # noqa: BLE001 - the ring is an extra; the row is built without it
+        return {}
 
 
 def fill_home_today(block: str, changed: list) -> None:
