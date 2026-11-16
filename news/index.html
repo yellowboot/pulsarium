@@ -938,6 +938,8 @@
     color: var(--gold-1);
     letter-spacing: 0.03em;
   }
+  .tag-uni { display: inline-flex; align-items: center; gap: 4px; cursor: pointer; transition: box-shadow 0.2s ease, color 0.2s ease; }
+  .tag-uni:hover, .tag-uni:focus-visible { color: var(--text-hi, #fff); box-shadow: inset 0 0 0 1px var(--gold-1), 0 0 10px rgba(0,240,255,0.3); outline: none; }
   .sent-badge {
     font-size: 11px;
     font-weight: 600;
@@ -1466,7 +1468,18 @@
 <script src="/assets/season-q3-2026.js?v=2" defer></script>
 <script src="/assets/market-map.js?v=7" defer></script>
 <script src="../news_data.js" onerror="window.__NO_DATA_FILE__ = true"></script>
+<script src="/universe/tickers.js"></script>
 <script>
+// tickers drawn on the Market Universe (/universe/tickers.js); a tag with a planet opens that star
+const UNIVERSE_TICKERS = new Set(String(window.UNIVERSE_TICKERS || '').split(',').filter(Boolean));
+function openUniverseTag(event) {
+  const tag = event.target.closest && event.target.closest('[data-universe-ticker]');
+  if (!tag || (event.type === 'keydown' && event.key !== 'Enter')) return;
+  event.preventDefault(); event.stopPropagation();
+  location.href = '/universe/?ticker=' + encodeURIComponent(tag.dataset.universeTicker);
+}
+document.addEventListener('click', openUniverseTag, true);
+document.addEventListener('keydown', openUniverseTag, true);
 (function () {
   const grid = document.getElementById('news-grid');
   const emptyState = document.getElementById('empty-state');
@@ -1965,7 +1978,13 @@
         ? `<div class="live-badge"><span class="live-dot"></span>Breaking</div>`
         : '';
 
-      const tags = (item.tickers || []).map(t => `<span class="tag-ticker">${t}</span>`).join('');
+      // a company drawn on the Market Universe gets a small planet: the tag flies to its star (/universe/?ticker=)
+      const tags = (item.tickers || []).map(t => {
+        const star = String(t).toUpperCase().replace('.', '-');
+        return UNIVERSE_TICKERS.has(star)
+          ? `<span class="tag-ticker tag-uni" data-universe-ticker="${escapeHtml(star)}" role="link" tabindex="0" title="See ${escapeHtml(t)} in the Market Universe">${t}<svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><circle cx="8" cy="8" r="3.1" fill="currentColor"/><ellipse cx="8" cy="8" rx="7" ry="2.6" fill="none" stroke="currentColor" stroke-width="1.2" transform="rotate(-24 8 8)"/></svg></span>`
+          : `<span class="tag-ticker">${t}</span>`;
+      }).join('');
 
       const sentimentTag = isMacro
         ? `<span class="context-badge" title="Geopolitics/macro context — not a direct market signal for a specific stock">Macro context</span>`

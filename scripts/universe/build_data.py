@@ -448,6 +448,10 @@ def main() -> None:
     data = {"builtAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "secUpdatedAt": sec.get("updated_at"),
             "companies": companies, "galaxies": galaxies, "market": market}
     out = os.path.join(ROOT, "universe", "data.js")
+    # the list of tickers alone, for pages that only link to a star (the news feed's ticker tags)
+    io.open(os.path.join(ROOT, "universe", "tickers.js"), "w", encoding="utf8", newline="\n").write(
+        "// Tickers drawn on the Market Universe. Rebuilt by scripts/universe/build_data.py.\n"
+        "window.UNIVERSE_TICKERS = " + json.dumps(",".join(sorted(c["ticker"] for c in companies))) + ";\n")
     io.open(out, "w", encoding="utf8", newline="\n").write(
         "// Market Universe data: SEC snapshots and end-of-day prices. Rebuilt by scripts/universe/build_data.py.\n"
         "window.UNIVERSE_DATA = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n")
