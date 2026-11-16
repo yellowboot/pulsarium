@@ -160,6 +160,12 @@ def clean_name(name: str) -> str:
     return text or name
 
 
+# A star becomes a supernova on one strong growth signal (weight 36) or two ordinary ones; a single "steady growth"
+# stays on the company's card only. With one ordinary signal counted, a third of a wide list turned supernova.
+SUPERNOVA_FROM = 36
+WIDE_KEEP = 300  # of the wide list, the largest by market value on the day the values were saved
+
+
 def build_companies(sec: dict, radar: dict, valuation: dict, season: dict, extra: dict, wide: list | None = None) -> tuple:
     sectors = {sector["id"]: sector for sector in sec.get("sectors", [])}
     industry_of = valuation.get("companies", {})
@@ -194,6 +200,11 @@ def build_companies(sec: dict, radar: dict, valuation: dict, season: dict, extra
         symbol, sector_id = company["symbol"].upper(), company["sector"]
         rev = company.get("revenue_yoy", company.get("ttm_revenue_yoy"))
         ttm = company.get("ttm_revenue_current") or company.get("revenue_current")
+        if wide and rev is not None and not -50 <= float(rev) <= 300:  # the same limits as for the extra companies below
+            company = {**company, "margin_change": None}
+            rev = ttm = None
+        if wide and company.get("margin_change") is not None and abs(float(company["margin_change"])) > 40:
+            company = {**company, "margin_change": None}
         raw[symbol] = dict(sector=sector_id, sector_name=(sectors.get(sector_id) or {}).get("name", sector_id), name=company.get("name", symbol),
                            rev=None if rev is None else round(float(rev), 1),
                            margin=None if company.get("margin_change") is None else round(float(company["margin_change"]), 2),
@@ -240,7 +251,7 @@ def build_companies(sec: dict, radar: dict, valuation: dict, season: dict, extra
         good = [s for s in signals if s["type"] == "bullish"]
         risk = [s for s in signals if s["type"] != "bullish"]
         growth_score, risk_score = min(98, sum(s["weight"] for s in good)), min(98, sum(s["weight"] for s in risk))
-        role = "black_hole_risk" if risk_score >= 22 and risk_score > growth_score else "supernova" if growth_score >= 22 else "core"
+        role = "black_hole_risk" if risk_score >= 22 and risk_score > growth_score else "supernova" if growth_score >= SUPERNOVA_FROM else "core"
         ordered = (risk + good) if role == "black_hole_risk" else (good + risk)
         lead = ordered[0]["title"] if ordered and role != "core" else "Core Sector Compounder"
         galaxy = GALAXIES[company["galaxy"]]
@@ -420,6 +431,10 @@ def main() -> None:
         except Exception as error:  # noqa: BLE001 - the row appears with the first SEC run after its migration
             print(f"wide list not available, using the short one: {error}")
     extra = {k: v for k, v in (load_json("extra_figures.json", {}) or {}).items() if not k.startswith("_")}
+    if wide:
+        saved = (load_json("caps_snapshot.json", {}) or {}).get("caps") or {}
+        value = lambda c: saved.get(c["symbol"].upper().replace("-", "/")) or saved.get(c["symbol"].upper()) or 0  # noqa: E731
+        wide = sorted(wide, key=value, reverse=True)[:WIDE_KEEP]
     companies, withheld = build_companies(sec, radar, valuation, season, extra, wide)
     galaxies = build_galaxies(sec, valuation, companies)
     if "--offline" in sys.argv:

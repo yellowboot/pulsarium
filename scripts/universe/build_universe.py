@@ -375,6 +375,8 @@ setTimeout(() => {
 }, 700);""")
 swap("${listLabel === 'My Portfolio' ? 'your own portfolio' : 'a sample watchlist'}", "${listLabel === 'Sample Watchlist' ? 'a sample watchlist' : 'your own list'}")
 
+# the company count comes from the data, not from the text
+swap("{id: 'all', lbl: `All 131`}", "{id: 'all', lbl: `All ${N}`}")
 assert "upsidePct" not in html and "Fair-Value" not in html and "Coiled" not in html
 out = os.path.join(ROOT, "universe", "index.html")
 io.open(out, "w", encoding="utf8", newline="\n").write(html)
