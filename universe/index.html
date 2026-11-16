@@ -540,6 +540,15 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 13px;
 body.immersive .hud, body.immersive .scrim-top, body.immersive .scrim-bot, body.immersive #labels, body.immersive .flypad { display: none !important; }
 body.immersive .imm-exit { display: inline-block; } body.embed .imm-exit, body.embed .tip, .framed .nav-back { display: none !important; } .framed .pz-note a { pointer-events: none; }
 
+.dock-more { display: none; }
+@media (max-width: 560px) {
+  .hud-top .lbl, .pz-note .lbl, #xrayLbl, .btn kbd, .controls .sep { display: none; }
+  .hud-top .pill-btn { padding-left: 8px; padding-right: 8px; }
+  .hud-top .search-in, .hud-top .search-in:focus { width: 104px; }
+  .drawer, .star-card { max-height: 34% !important; }
+  .dock-more { display: inline-flex; }
+  .controls:not(.open) > .group:not([aria-label="Regime Scenarios"]), .dock:has(.controls:not(.open)) .legend { display: none; }
+}
 @media (max-width: 820px) {
   .hud-mid { flex-direction: column; }
   .drawer, .star-card { width: 100%; max-height: 48%; }
@@ -569,14 +578,14 @@ body.immersive .imm-exit { display: inline-block; } body.embed .imm-exit, body.e
       <span class="badge-sec">10-K · 10-Q · Form 4</span>
 
       <div class="radar-bar">
-        <button class="pill-btn bull" type="button" id="btnSupernovas" aria-expanded="false">
-          <span class="dot"></span>★ Supernovas <span class="cnt" id="cntSup">39</span>
+        <button class="pill-btn bull" type="button" id="btnSupernovas" aria-expanded="false" aria-label="Supernovas">
+          <span class="dot"></span>★<span class="lbl"> Supernovas</span> <span class="cnt" id="cntSup">39</span>
         </button>
-        <button class="pill-btn bear" type="button" id="btnRisks" aria-expanded="false">
-          <span class="dot"></span>🕳️ Black Hole Risks <span class="cnt" id="cntRisk">22</span>
+        <button class="pill-btn bear" type="button" id="btnRisks" aria-expanded="false" aria-label="Black Hole Risks">
+          <span class="dot"></span>🕳️<span class="lbl"> Black Hole Risks</span> <span class="cnt" id="cntRisk">22</span>
         </button>
-        <button class="pill-btn rot" type="button" id="btnSectors" aria-expanded="false">
-          <span class="dot"></span>🌌 Sector Galaxies <span class="cnt">8</span>
+        <button class="pill-btn rot" type="button" id="btnSectors" aria-expanded="false" aria-label="Sector Galaxies">
+          <span class="dot"></span>🌌<span class="lbl"> Sector Galaxies</span> <span class="cnt">8</span>
         </button>
         <button class="pill-btn xray" type="button" id="btnXray" aria-expanded="false" title="Watchlist X-Ray: separates a list of stocks into growth signals (left), neutral (centre) and SEC risk signals (right)">
           <span class="dot"></span>🔬 <span id="xrayLbl">Watchlist X-Ray</span> <span class="cnt" id="cntXray">42</span>
@@ -597,7 +606,7 @@ body.immersive .imm-exit { display: inline-block; } body.embed .imm-exit, body.e
         <span>Regime:</span><strong id="phase">Live Real Market</strong>
       </div>
       <button class="theme-btn" type="button" id="themeBtn" title="Switch between Pulsarium Neon and Calm themes">
-        ✦ Theme: <span id="themeName">Neon</span>
+        ✦<span class="lbl"> Theme:</span> <span id="themeName">Neon</span>
       </button>
     </div>
   </header>
@@ -697,6 +706,7 @@ body.immersive .imm-exit { display: inline-block; } body.embed .imm-exit, body.e
         <button class="btn" type="button" data-scen="rot" aria-pressed="false" title="Highlight real 20-day sector capital outflows &rarr; inflows">Sector Rotation</button>
         <button class="btn" type="button" data-scen="crash" aria-pressed="false" title="A what-if simulation, not a forecast: +95% stress shock on real betas">Crash Simulation</button>
       </div>
+      <button class="btn dock-more" type="button" id="dockMore" aria-expanded="false">More</button>
       <span class="sep"></span>
       <div class="group" role="group" aria-label="Camera Navigation">
         <button class="btn" type="button" id="navAll" aria-pressed="true">Overview<kbd>0</kbd></button>
@@ -713,7 +723,7 @@ body.immersive .imm-exit { display: inline-block; } body.embed .imm-exit, body.e
     </div>
 
     <div class="legend" id="legend" role="group" aria-label="Sector Galaxies: click to fly"></div>
-    <p class="pz-note" style="margin:2px 0 0;font:500 9px/1.4 var(--font-mono);letter-spacing:.03em;color:var(--muted-2);text-align:center;pointer-events:auto">Figures from SEC filings and end-of-day prices. Stress, crash and shockwave modes are simulations, not forecasts. Not investment advice. <a href="/" style="color:var(--teal);text-decoration:none">pulsarium.finance</a></p>
+    <p class="pz-note" style="margin:2px 0 0;font:500 9px/1.4 var(--font-mono);letter-spacing:.03em;color:var(--muted-2);text-align:center;pointer-events:auto"><span class="lbl">Figures from SEC filings and end-of-day prices. </span>Stress, crash and shockwave modes are simulations, not forecasts. Not investment advice.<span class="lbl"> <a href="/" style="color:var(--teal);text-decoration:none">pulsarium.finance</a></span></p>
   </div>
 </div>
 
@@ -2336,6 +2346,11 @@ function onWaveDone(w){
 $('#tourNext').addEventListener('click', () => { if (tourI === TOUR.length-1) setTour(false); else goStep(tourI+1); });
 $('#tourPrev').addEventListener('click', () => goStep(tourI-1));
 $('#tourExit').addEventListener('click', () => setTour(false));
+$('#dockMore').addEventListener('click', (e) => {
+  const open = document.querySelector('.dock .controls').classList.toggle('open');
+  e.currentTarget.setAttribute('aria-expanded', String(open)); e.currentTarget.textContent = open ? 'Less' : 'More';
+  requestAnimationFrame(() => { measureHud(); resize(); });
+});
 $('#tourAct').addEventListener('click', () => { if (T.NVDA !== undefined) strike(T.NVDA); });
 
 /* ================= CONTROLS & KEYBOARD SHORTCUTS ================= */

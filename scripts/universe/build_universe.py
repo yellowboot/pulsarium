@@ -398,6 +398,46 @@ swap("""  if (typeof f === 'number') return out.set(Gd[f*3], Gd[f*3+1], Gd[f*3+2
   return out.set(0, 0, 0);""")
 swap("  nav.follow = f;\n", "  nav.follow = f; if (nav.pan) nav.pan.set(0, 0, 0);\n")
 
+# ---------- small screens: the panels fold (her note, 16 Nov 2026) ----------
+# On a phone the top buttons, an open list and the bottom controls left a strip of the picture between them. Under
+# 560px the top buttons keep their mark and number only, the bottom panel keeps the stress slider and the three
+# scenarios with the rest behind "More", the note is one line, and an open list takes a third of the height.
+swap('<span class="dot"></span>★ Supernovas <span', '<span class="dot"></span>★<span class="lbl"> Supernovas</span> <span')
+swap('<span class="dot"></span>🕳️ Black Hole Risks <span', '<span class="dot"></span>🕳️<span class="lbl"> Black Hole Risks</span> <span')
+swap('<span class="dot"></span>🌌 Sector Galaxies <span', '<span class="dot"></span>🌌<span class="lbl"> Sector Galaxies</span> <span')
+swap('id="btnSupernovas" aria-expanded="false">', 'id="btnSupernovas" aria-expanded="false" aria-label="Supernovas">')
+swap('id="btnRisks" aria-expanded="false">', 'id="btnRisks" aria-expanded="false" aria-label="Black Hole Risks">')
+swap('id="btnSectors" aria-expanded="false">', 'id="btnSectors" aria-expanded="false" aria-label="Sector Galaxies">')
+swap('✦ Theme: <span id="themeName">', '✦<span class="lbl"> Theme:</span> <span id="themeName">')
+swap("""      <span class="sep"></span>
+      <div class="group" role="group" aria-label="Camera Navigation">""",
+     """      <button class="btn dock-more" type="button" id="dockMore" aria-expanded="false">More</button>
+      <span class="sep"></span>
+      <div class="group" role="group" aria-label="Camera Navigation">""")
+swap('Figures from SEC filings and end-of-day prices. Stress, crash and shockwave modes are simulations, not forecasts. Not investment advice. <a href="/"',
+     '<span class="lbl">Figures from SEC filings and end-of-day prices. </span>Stress, crash and shockwave modes are simulations, not forecasts. Not investment advice.<span class="lbl"> <a href="/"')
+swap('>pulsarium.finance</a></p>', '>pulsarium.finance</a></span></p>')
+swap("""@media (max-width: 820px) {
+  .hud-mid { flex-direction: column; }""",
+     """.dock-more { display: none; }
+@media (max-width: 560px) {
+  .hud-top .lbl, .pz-note .lbl, #xrayLbl, .btn kbd, .controls .sep { display: none; }
+  .hud-top .pill-btn { padding-left: 8px; padding-right: 8px; }
+  .hud-top .search-in, .hud-top .search-in:focus { width: 104px; }
+  .drawer, .star-card { max-height: 34% !important; }
+  .dock-more { display: inline-flex; }
+  .controls:not(.open) > .group:not([aria-label="Regime Scenarios"]), .dock:has(.controls:not(.open)) .legend { display: none; }
+}
+@media (max-width: 820px) {
+  .hud-mid { flex-direction: column; }""")
+swap("$('#tourExit').addEventListener('click', () => setTour(false));",
+     """$('#tourExit').addEventListener('click', () => setTour(false));
+$('#dockMore').addEventListener('click', (e) => {
+  const open = document.querySelector('.dock .controls').classList.toggle('open');
+  e.currentTarget.setAttribute('aria-expanded', String(open)); e.currentTarget.textContent = open ? 'Less' : 'More';
+  requestAnimationFrame(() => { measureHud(); resize(); });
+});""")
+
 # the company count comes from the data, not from the text
 swap("{id: 'all', lbl: `All 131`}", "{id: 'all', lbl: `All ${N}`}")
 # ---------- found by search engines and shared with a picture (16 Nov 2026) ----------
