@@ -375,6 +375,29 @@ setTimeout(() => {
 }, 700);""")
 swap("${listLabel === 'My Portfolio' ? 'your own portfolio' : 'a sample watchlist'}", "${listLabel === 'Sample Watchlist' ? 'a sample watchlist' : 'your own list'}")
 
+# ---------- X-Ray: zoom toward the pointer (her note, 16 Nov 2026) ----------
+# The X-Ray lays its three groups out side by side, and the camera always looked at the middle one, so the wheel
+# could only come close to the centre. In this view the wheel now zooms toward the point under the cursor: the
+# place the camera looks at slides there (within the picture), and any flight to another view puts it back.
+swap("camera.position.sub(controls.target).setLength(next).add(controls.target); if (!nav.tw) nav.userCam = true; }, {capture: true, passive: false});",
+     """if (cosmosMode === 'xray' && !nav.tw && L > 0){
+    const box = canvas.getBoundingClientRect(), at = new THREE.Vector3((e.clientX - box.left) / box.width * 2 - 1, -((e.clientY - box.top) / box.height) * 2 + 1, 0.5).unproject(camera);
+    const look = camera.getWorldDirection(new THREE.Vector3()), ray = at.sub(camera.position).normalize(), along = ray.dot(look);
+    if (along > 0.05){
+      const hit = camera.position.clone().addScaledVector(ray, L / along), dir = camera.position.clone().sub(controls.target).normalize();
+      nav.pan = (nav.pan || new THREE.Vector3()).copy(controls.target).lerp(hit, 1 - next / L);
+      nav.pan.set(Math.max(-190, Math.min(190, nav.pan.x)), Math.max(-70, Math.min(70, nav.pan.y)), Math.max(-70, Math.min(70, nav.pan.z)));
+      controls.target.copy(nav.pan); camera.position.copy(nav.pan).addScaledVector(dir, next); nav.userCam = true; return;
+    }
+  }
+  camera.position.sub(controls.target).setLength(next).add(controls.target); if (!nav.tw) nav.userCam = true; }, {capture: true, passive: false});""")
+swap("""  if (typeof f === 'number') return out.set(Gd[f*3], Gd[f*3+1], Gd[f*3+2]);
+  return out.set(0, 0, 0);""",
+     """  if (typeof f === 'number') return out.set(Gd[f*3], Gd[f*3+1], Gd[f*3+2]);
+  if (f === 'xray' && nav.pan) return out.copy(nav.pan);
+  return out.set(0, 0, 0);""")
+swap("  nav.follow = f;\n", "  nav.follow = f; if (nav.pan) nav.pan.set(0, 0, 0);\n")
+
 # the company count comes from the data, not from the text
 swap("{id: 'all', lbl: `All 131`}", "{id: 'all', lbl: `All ${N}`}")
 # ---------- found by search engines and shared with a picture (16 Nov 2026) ----------

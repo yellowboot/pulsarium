@@ -1157,7 +1157,17 @@ scene.background = BG_CALM.clone();
 
 const camera = new THREE.PerspectiveCamera(50, 1, 0.5, 9000);
 camera.position.set(0, 175, 570);
-const controls = new OrbitControls(camera, canvas); canvas.addEventListener('wheel', (e) => { if (mode === 'fly') return; e.preventDefault(); e.stopImmediatePropagation(); const unit = e.deltaMode === 1 ? 33 : e.deltaMode === 2 ? 100 : 1, step = Math.max(-1, Math.min(1, e.deltaY * unit / 100)); const L = camera.position.distanceTo(controls.target), next = Math.max(controls.minDistance, Math.min(controls.maxDistance, L * Math.pow(1.1, step))); camera.position.sub(controls.target).setLength(next).add(controls.target); if (!nav.tw) nav.userCam = true; }, {capture: true, passive: false});
+const controls = new OrbitControls(camera, canvas); canvas.addEventListener('wheel', (e) => { if (mode === 'fly') return; e.preventDefault(); e.stopImmediatePropagation(); const unit = e.deltaMode === 1 ? 33 : e.deltaMode === 2 ? 100 : 1, step = Math.max(-1, Math.min(1, e.deltaY * unit / 100)); const L = camera.position.distanceTo(controls.target), next = Math.max(controls.minDistance, Math.min(controls.maxDistance, L * Math.pow(1.1, step))); if (cosmosMode === 'xray' && !nav.tw && L > 0){
+    const box = canvas.getBoundingClientRect(), at = new THREE.Vector3((e.clientX - box.left) / box.width * 2 - 1, -((e.clientY - box.top) / box.height) * 2 + 1, 0.5).unproject(camera);
+    const look = camera.getWorldDirection(new THREE.Vector3()), ray = at.sub(camera.position).normalize(), along = ray.dot(look);
+    if (along > 0.05){
+      const hit = camera.position.clone().addScaledVector(ray, L / along), dir = camera.position.clone().sub(controls.target).normalize();
+      nav.pan = (nav.pan || new THREE.Vector3()).copy(controls.target).lerp(hit, 1 - next / L);
+      nav.pan.set(Math.max(-190, Math.min(190, nav.pan.x)), Math.max(-70, Math.min(70, nav.pan.y)), Math.max(-70, Math.min(70, nav.pan.z)));
+      controls.target.copy(nav.pan); camera.position.copy(nav.pan).addScaledVector(dir, next); nav.userCam = true; return;
+    }
+  }
+  camera.position.sub(controls.target).setLength(next).add(controls.target); if (!nav.tw) nav.userCam = true; }, {capture: true, passive: false});
 controls.enableDamping = true; controls.dampingFactor = 0.07; controls.enablePan = false;
 controls.minDistance = 12; controls.maxDistance = 2200;
 controls.autoRotate = !reduceMotion; controls.autoRotateSpeed = 0.22; controls.zoomSpeed = 0.9;
@@ -2153,6 +2163,7 @@ function navTarget(out){
     return out.set(SPd[k], SPd[k+1], SPd[k+2]);
   }
   if (typeof f === 'number') return out.set(Gd[f*3], Gd[f*3+1], Gd[f*3+2]);
+  if (f === 'xray' && nav.pan) return out.copy(nav.pan);
   return out.set(0, 0, 0);
 }
 function navDist(){
@@ -2177,7 +2188,7 @@ function flyTo(f, byUser){
     }
   }
   controls.autoRotate = !reduceMotion && cosmosMode === 'galaxies' && f !== 'xray' && f !== 'supernovas' && f !== 'risks';
-  nav.follow = f;
+  nav.follow = f; if (nav.pan) nav.pan.set(0, 0, 0);
   if (byUser && typeof f === 'number' && !document.body.classList.contains('embed')){
     activeDrawer = 'galaxy'; drawerGal = f; activeTab = 'all'; activeSecFilter = 'all'; drawerEl.hidden = false;
     syncModeButtons(); renderDrawer(); measureHud();
