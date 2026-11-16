@@ -438,6 +438,21 @@ $('#dockMore').addEventListener('click', (e) => {
   requestAnimationFrame(() => { measureHud(); resize(); });
 });""")
 
+# ---------- inside the cabinet: from a company's card to its company page (her ask, 16 Nov 2026) ----------
+# Only the cabinet (app.pulsarium.finance, or its local copy) gets this button: it appears once the cabinet itself
+# has written to the page, so the public page and the news-page preview (same site) never show it. A click asks
+# the cabinet to open its own page for the company; the cabinet looks the ticker up itself.
+swap("""<a class="sc-btn" id="scSecLink" href="#" target="_blank" rel="noopener">SEC ↗</a>""",
+     """<a class="sc-btn" id="scSecLink" href="#" target="_blank" rel="noopener">SEC ↗</a>
+        <button class="sc-btn" type="button" id="scCoBtn" hidden>Company page</button>""")
+swap("  $('#scSecLink').href = a.secUrl ||", "  $('#scCoBtn').dataset.ticker = a.ticker;\n  $('#scSecLink').href = a.secUrl ||")
+swap("  if (!EMBEDDERS.includes(event.origin)) return;\n",
+     "  if (!EMBEDDERS.includes(event.origin)) return;\n"
+     "  if (event.origin !== location.origin && event.source === parent){ $('#scCoBtn').dataset.host = event.origin; $('#scCoBtn').hidden = false; }\n")
+swap("if (parent !== window) parent.postMessage({type: 'universe:ready'}, '*');",
+     "$('#scCoBtn').addEventListener('click', () => { const b = $('#scCoBtn'); if (b.dataset.host && b.dataset.ticker) parent.postMessage({type: 'universe:company', ticker: b.dataset.ticker}, b.dataset.host); });\n"
+     "if (parent !== window) parent.postMessage({type: 'universe:ready'}, '*');")
+
 # the company count comes from the data, not from the text
 swap("{id: 'all', lbl: `All 131`}", "{id: 'all', lbl: `All ${N}`}")
 # ---------- found by search engines and shared with a picture (16 Nov 2026) ----------

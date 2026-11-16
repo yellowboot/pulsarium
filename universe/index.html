@@ -674,6 +674,7 @@ body.immersive .imm-exit { display: inline-block; } body.embed .imm-exit, body.e
         <button class="sc-btn shock" type="button" id="scShockBtn">⚡ Shockwave</button>
         <button class="sc-btn" type="button" id="scFlyBtn">🎯 Center</button>
         <a class="sc-btn" id="scSecLink" href="#" target="_blank" rel="noopener">SEC ↗</a>
+        <button class="sc-btn" type="button" id="scCoBtn" hidden>Company page</button>
       </div>
     </aside>
   </div>
@@ -1836,6 +1837,7 @@ function renderStarCard(k){
     b.addEventListener('click', () => selectStar(+b.dataset.idx, true, true));
   });
 
+  $('#scCoBtn').dataset.ticker = a.ticker;
   $('#scSecLink').href = a.secUrl || `https://www.sec.gov/edgar/searchedgar/companysearch?cik=${a.ticker}`;
   renderReport();
   measureHud();
@@ -3036,6 +3038,7 @@ let listLabel = 'Sample Watchlist';
 const EMBEDDERS = [location.origin, 'https://app.pulsarium.finance', 'http://localhost:5173'];
 addEventListener('message', (event) => {
   if (!EMBEDDERS.includes(event.origin)) return;
+  if (event.origin !== location.origin && event.source === parent){ $('#scCoBtn').dataset.host = event.origin; $('#scCoBtn').hidden = false; }
   const m = event.data || {};
   if (m.type === 'universe:fly') flyTo(Number.isInteger(m.to) && m.to >= 0 && m.to < NS ? m.to : m.to === 'bh' ? 'bh' : 'overview', true);
   if (m.type === 'universe:zoom' && (m.dir === 1 || m.dir === -1)){
@@ -3049,6 +3052,7 @@ addEventListener('message', (event) => {
     event.source.postMessage({type: 'universe:matched', matched: customWatchlist.size, total: m.tickers.length}, event.origin);
   }
 });
+$('#scCoBtn').addEventListener('click', () => { const b = $('#scCoBtn'); if (b.dataset.host && b.dataset.ticker) parent.postMessage({type: 'universe:company', ticker: b.dataset.ticker}, b.dataset.host); });
 if (parent !== window) parent.postMessage({type: 'universe:ready'}, '*');
 setTimeout(() => {
   const q = new URLSearchParams(location.search), clean = (v) => String(v || '').trim().toUpperCase().replace('.', '-').slice(0, 12);
