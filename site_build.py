@@ -77,7 +77,7 @@ FOOTER_COLUMNS = [
     ("Portfolio", site_pages.CABINET_LINKS),
     ("Market news", [("/news/", "Live news"), ("/news/companies/", "News by company"), ("/news/daily/", "Daily digest"),
                      ("/mood/", "Mood Index"), ("/news/feed.xml", "RSS feed")]),
-    ("SEC data & tools", [("/insider-buying/", "Insider buying"), ("/insider-selling/", "Insider selling"),
+    ("SEC data & tools", [("/universe/", "Market Universe"), ("/insider-buying/", "Insider buying"), ("/insider-selling/", "Insider selling"),
                           ("/sector-analytics/", "Sector analytics"),
                           ("/report-highlights/", "Report highlights"), ("/tools/", "Calculators")]),
     ("About", [(f"{APP_URL}?legal=faq", "FAQ"), (f"{APP_URL}?legal=disclaimer", "Financial notice"),
@@ -736,6 +736,7 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
   <nav class="site-nav" aria-label="Main">
     <a href="/portfolio-tracker/">Portfolio tracker</a>
     <a href="/news/">Live news</a>
+    <a href="/universe/">Universe</a>
     <a href="/mood/">Mood Index</a>
     <a href="/tools/">Calculators</a>
     <a class="nav-secondary" href="/news/companies/">Companies</a>
