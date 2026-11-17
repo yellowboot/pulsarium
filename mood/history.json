@@ -677,17 +677,17 @@
   },
   {
    "date": "2026-11-16",
-   "value": 43,
+   "value": 44,
    "label": "Leaning cautious",
-   "headlines": 55,
-   "avg7": 54.1
+   "headlines": 57,
+   "avg7": 54.3
   },
   {
    "date": "2026-11-17",
-   "value": 44,
-   "label": "Leaning cautious",
-   "headlines": 124,
-   "avg7": 52.7,
+   "value": 45,
+   "label": "Neutral",
+   "headlines": 122,
+   "avg7": 53.0,
    "window": "in the last 12 hours"
   }
  ]
