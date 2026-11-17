@@ -670,11 +670,17 @@
   },
   {
    "date": "2026-11-15",
-   "value": 46,
+   "value": 52,
    "label": "Neutral",
-   "headlines": 31,
-   "avg7": 55.7,
-   "window": "in the last 12 hours"
+   "headlines": 39,
+   "avg7": 56.6
+  },
+  {
+   "date": "2026-11-16",
+   "value": 42,
+   "label": "Leaning cautious",
+   "headlines": 54,
+   "avg7": 54.0
   }
  ]
 }
