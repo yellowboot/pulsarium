@@ -21,6 +21,10 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/lock-up-calendar/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/import/</loc>
     <changefreq>monthly</changefreq>
   </url>

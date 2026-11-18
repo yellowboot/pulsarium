@@ -976,13 +976,30 @@ def lockup_calendar() -> dict:
         + closing_cta("Track the companies you own", "Create a free account: report dates, SEC filings, insider trades and news "
                       "for your holdings in one place.")
     )
+    names_ld = [c["name"] for c in sorted(companies, key=lambda c: -(c.get("outstanding") or 0) * (c.get("price") or c.get("price_mid") or 0))]
+    dataset = {
+        "@context": "https://schema.org", "@type": "Dataset",
+        "name": "IPO lock-up expiration calendar: US IPOs that raised $1 billion or more",
+        "description": "Lock-up release steps of every US IPO since November 2025 that raised at least $1 billion before the "
+                       "over-allotment option: for each step the first day the shares may be sold, the number of shares and "
+                       "their share of the company, and the trigger, read from the final prospectus (Form 424B4) on SEC EDGAR.",
+        "url": "https://pulsarium.finance/lock-up-calendar/",
+        "keywords": ["IPO lock-up", "lock-up expiration", "lock-up calendar", "insider selling", "IPO"] + names_ld[:6],
+        "dateModified": data["updated"],
+        "creator": {"@type": "Organization", "name": "Pulsarium", "url": "https://pulsarium.finance/"},
+        "isAccessibleForFree": True,
+        "about": [{"@type": "Corporation", "name": n} for n in names_ld],
+        "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json",
+                          "contentUrl": "https://pulsarium.finance/assets/lockups.json"}],
+    }
     return {
         "path": "/lock-up-calendar/", "crumb": "Lock-up calendar",
-        "title": "IPO Lock-up Calendar — When Insiders Can Sell (" + names + ")",
-        "description": "Lock-up expiration dates for every US IPO of the past year that raised $1 billion or more: each release "
-                       "step, its size and the exact terms from the prospectus." + nxt_text,
+        "title": "IPO Lock-up Expiration Calendar: " + ", ".join(names_ld[:2]) + " & More",
+        "description": "When can IPO insiders sell? Lock-up expiration dates for every US IPO since late 2025 that raised $1B+ "
+                       "(" + ", ".join(names_ld[:4]) + "): each release, its size and the prospectus terms.",
         "body": body,
-        "head": '<link rel="stylesheet" href="/assets/lockups.css?v=2">\n<script src="/assets/lockups.js?v=2" defer></script>\n',
+        "head": '<link rel="stylesheet" href="/assets/lockups.css?v=2">\n<script src="/assets/lockups.js?v=2" defer></script>\n'
+                f'<script type="application/ld+json">{json.dumps(dataset, ensure_ascii=False)}</script>\n',
     }
 
 

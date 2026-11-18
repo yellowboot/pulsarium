@@ -19,6 +19,9 @@
 - [RSS feed](https://pulsarium.finance/news/feed.xml) of the latest headlines.
 - [Pulsarium Mood Index](https://pulsarium.finance/mood/): a daily 0-100 score of how positive the day's stock market headlines are (50 = neutral), with history as [JSON](https://pulsarium.finance/mood/history.json) and sector moods.
 
+## Market data pages
+- [IPO lock-up calendar](https://pulsarium.finance/lock-up-calendar/): lock-up expiration dates for every US IPO since November 2025 that raised $1 billion or more (SpaceX, Anthropic, Cerebras, Medline, INNIO, Quantinuum, Bending Spoons and others). For each release step: the first day the shares may be sold, the number of shares, their share of the company and the trigger (fixed day, earnings report or price test), read by hand from each final prospectus (Form 424B4) on SEC EDGAR; the data as [JSON](https://pulsarium.finance/assets/lockups.json). Not investment advice.
+
 ## Guides and tools
 - Cabinet features: [portfolio tracker](https://pulsarium.finance/portfolio-tracker/), [dividend tracker](https://pulsarium.finance/dividend-tracker/), [price alerts](https://pulsarium.finance/price-alerts/), [why Pulsarium](https://pulsarium.finance/why-pulsarium/).
 - [Broker import guides](https://pulsarium.finance/import/): step by step for Fidelity, Charles Schwab, Vanguard, Robinhood, E*TRADE, Merrill Edge, Webull, M1 Finance, Firstrade, Interactive Brokers, Freetrade, Trading 212, Revolut, DEGIRO, Saxo, XTB and Zerodha.
