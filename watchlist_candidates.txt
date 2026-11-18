@@ -6,36 +6,39 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 17.11.2026 21:37
-30 of 80 news items unmatched this run
+Generated: 18.11.2026 06:37
+33 of 80 news items unmatched this run
 
-- [Investing.com] Applied Optoelectronics falls 8% on $550 million stock offering plan
-- [Nasdaq] Lower French Production Boosts Sugar Prices
-- [Nasdaq] Arabica Coffee Settles Higher on Shrinking ICE Inventories
-- [Nasdaq] Corn Posting Tuesday Gains with Spillover Wheat Support
-- [Nasdaq] Sugar Prices Rise on Lower French Sugar Output
-- [Nasdaq] Robusta Coffee Plunges on Improved Supply Outlook
-- [Nasdaq] Crude Oil Prices Climb on Global Supply Threats
-- [Investing.com] Mexico stocks lower at close of trade; S&P/BMV IPC down 1.00%
-- [Investing.com] Canada stocks lower at close of trade; S&P/TSX Composite down 1.14%
-- [Nasdaq] Soaring ICE Inventories Weigh on Cocoa Prices
-- [Nasdaq] Cattle Fading Lower on Tuesday
-- [Nasdaq] Cattle Look to Tuesday Following Weaker Start to the Week
-- [Investing.com] Colombia stocks lower at close of trade; COLCAP down 2.04%
-- [Nasdaq] Wheat Rallying on Tuesday Following Black Sea Strikes
-- [Nasdaq] Sol-Gel Technologies Ltd. Shareholders Approve CEO Appointment and Potential Name Change
-- [Nasdaq] CONX Corp. Enters into Exchange Right Agreement Following Acquisition of approximately 61% of Mobile X Global, Inc.
-- [Investing.com] Russia stocks higher at close of trade; MOEX Russia Index up 1.01%
-- [Yahoo Finance] 3 Undervalued AI Stocks For November 2026
-- [Yahoo Finance] Guerrilla RF Announces Uplisting to The Nasdaq Stock Market
-- [Yahoo Finance] Ibotta Appoints Kamelia Aryafar to Board of Directors
-- [Yahoo Finance] Chime Financial, Stock Of The Day, Eyes A Buy Point As Growth Ramps, Big Debut Looms
-- [MarketWatch] Summit Therapeutics’ stock tumbles again as FDA recommends new trial for lung-cancer drug
+- [Investing.com] BNP Paribas’ BNL targets over 20% return on equity by 2030 in strategy shift
+- [Investing.com] Vow reports mixed Q3 results amid lower equipment deliveries
+- [Yahoo Finance] Anthropic’s IPO price is due today. What should investors know?
+- [Investing.com] Why is LendLease stock collapsing today?
+- [Investing.com] Why is Kinsus Interconnect Technology stock surging today?
+- [Investing.com] dormakaba targets 14% operating margin, 3-5% organic growth by FY29
+- [Investing.com] Taiwan stocks higher at close of trade; Taiwan Weighted up 0.12%
+- [Investing.com] SGS targets 5-7% annual organic sales growth, 17% margin by 2030
+- [Yahoo Finance] Bitdeer Technologies (BTDR) Investors Are Running for the Exits
+- [Nasdaq] Cotton Bounces on Turnaround Tuesday
+- [Yahoo Finance] Should You Buy Anthropic Stock When It Debuts on Thursday?
+- [Yahoo Finance] Bernstein Is Holding Its $350 Coherent Target With the Stock 52% Off Its High
+- [Yahoo Finance] ZAI vs. MiniMax: Which Chinese AI lab looks better placed amid growing headwinds?
+- [Yahoo Finance] 3 Undervalued Stocks With Cash Flow Value Gaps Over 35%
+- [Nasdaq] Soybeans Fail to Hold Front Month Gains on Tuesday
+- [CoinDesk] XRP whales moved $270 million during the selloff. The coins didn’t go to exchanges
+- [Nasdaq] Golden Sun Health Technology Group Limited Reschedules Meetings to December 21, 2026 and Proposes Share Consolidation
+- [Nasdaq] Transocean Ltd. Supplements Joint Proxy Statement for Valaris Limited Acquisition
+- [Nasdaq] The AES Corporation Announces FERC Approval for Merger with Closing Expected December 2, 2026
+- [Nasdaq] Crescent Capital BDC, Inc. and Remora Capital Corporation Form CCAP Middle Market Loan Fund Joint Venture
+- [Nasdaq] Air Industries Group Announces November 27, 2026 Record Date for Distribution of Redemption Rights
+- [Nasdaq] Solo Brands, Inc. Approves Equity Awards Effective November 15, 2026
+- [Nasdaq] FitLife Brands, Inc. Reports Third Quarter 2026 Financial Results
+- [Nasdaq] i3 Verticals, Inc. Reports Fourth Quarter and Full Fiscal Year 2026 Financial Results
+- [Nasdaq] NovaBay Pharmaceuticals, Inc. Files Prospectus Supplement for Up to $100.0 million Additional ATM Shares
+- [Nasdaq] Wheat Posts Tuesday Rally Following Black Sea Strikes
+- [CNBC] LeBron James sues startup over viral AI ad allegedly exploiting his likeness
+- [OilPrice.com] Oil Prices Drop Despite Escalating U.S.-Iran Conflict
+- [Mining.com] General Flash raises $128 million to scale US critical metals production
+- [MarketWatch] Want to earn 5% on shorter-term Treasurys again? Watch for this shift.
 - [CNBC] FAA pauses installation of new routers after ground stop
 - [CNBC] A generational flight from tech to defensive stocks is underway. How we’re capitalizing
 - [CNBC] Wall Street's fear gauge is surging again and this time it's not just about AI jitters
-- [MarketWatch] Gold is in a bear market — and hackproof in an increasingly digital world. Is now a good time to buy?
-- [CoinDesk] Predictions platform Kalshi complies with order to halt Trump mention contracts
-- [CNBC] Chase Home Lending CEO says he plans to 'go on offense' against non-bank lenders
-- [CoinDesk] Druckenmiller says he is short copper, warns of economic weakness in 2027
-- [Mining.com] Perpetua eyes $55.5 million deal to unlock US tungsten supply
