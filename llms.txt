@@ -20,6 +20,8 @@
 - [Pulsarium Mood Index](https://pulsarium.finance/mood/): a daily 0-100 score of how positive the day's stock market headlines are (50 = neutral), with history as [JSON](https://pulsarium.finance/mood/history.json) and sector moods.
 
 ## Market data pages
+- [Market Universe](https://pulsarium.finance/universe/): an interactive 3D map of about 300 of the largest US-listed companies — each company a star, each sector a galaxy — built from SEC filings: revenue growth, margins and cash-flow signals, with end-of-day prices and price correlations between companies.
+- [Q3 2026 earnings season in one picture](https://pulsarium.finance/earnings-season/): 744 US companies worth $10 billion or more and each stock's move on the first trading day after its Q3 2026 earnings report, grouped by date, result (beat or missed forecasts) and sector. A dated snapshot of reports from October 12 to November 13, 2026.
 - [IPO lock-up calendar](https://pulsarium.finance/lock-up-calendar/): lock-up expiration dates for every US IPO since November 2025 that raised $1 billion or more (SpaceX, Anthropic, Cerebras, Medline, INNIO, Quantinuum, Bending Spoons and others). For each release step: the first day the shares may be sold, the number of shares, their share of the company and the trigger (fixed day, earnings report or price test), read by hand from each final prospectus (Form 424B4) on SEC EDGAR; the data as [JSON](https://pulsarium.finance/assets/lockups.json). Not investment advice.
 
 ## Guides and tools
