@@ -21,10 +21,6 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://pulsarium.finance/lock-up-calendar/</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://pulsarium.finance/import/</loc>
     <changefreq>monthly</changefreq>
   </url>
@@ -105,6 +101,10 @@
     <loc>https://pulsarium.finance/insider-selling/</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/lock-up-calendar/</loc>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://pulsarium.finance/mood/</loc>
@@ -338,7 +338,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/bx/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1207,6 +1207,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://pulsarium.finance/news/ice/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://pulsarium.finance/news/ilmn/</loc>
     <lastmod>2026-10-30</lastmod>
     <changefreq>hourly</changefreq>
@@ -1333,7 +1338,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/lrcx/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1588,7 +1593,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/psa/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1648,7 +1653,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/rklb/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1668,7 +1673,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/san/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -1778,7 +1783,7 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/news/sector/real-estate-homebuilders/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
