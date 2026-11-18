@@ -56,10 +56,11 @@
   root.classList.add('js');
   const counts = [...root.querySelectorAll('.lu-orb-c b[data-date]')];
   const tick = () => counts.forEach((el) => {
-    const l = left(el.dataset.date);
-    el.textContent = l ? l.d : 'FREE';
+    // calendar days in New York, as the news page's Lock-up watch counts them
+    const n = Math.round((ts(el.dataset.date) - today) / DAY);
+    el.textContent = n >= 0 ? n : 'FREE';
     const small = el.nextElementSibling;
-    if (small) small.textContent = l ? (l.d === 1 ? 'day' : 'days') : 'released';
+    if (small) small.textContent = n < 0 ? 'released' : n === 1 ? 'day' : 'days';
   });
   if (counts.length) { tick(); setInterval(tick, 60e3); }
   // each block animates when it comes into view

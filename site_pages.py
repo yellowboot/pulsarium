@@ -945,7 +945,7 @@ def lockup_calendar() -> dict:
               '<span>? Date set by a future earnings report · far-off steps sit in the last column</span></div>')
     body = (
         '<header class="page-head feature-head"><span class="eyebrow">IPO lock-ups · US listings that raised $1B+</span>'
-        "<h1>Lock-up calendar: when IPO insiders can start selling</h1>"
+        "<h1>Lock-up calendar</h1>"
         '<p class="lead">After an IPO, founders, employees and early investors usually promise not to sell for a while. '
         "This calendar shows when those promises end for every US IPO of the past year that raised $1 billion or more: "
         "the date, the size and the exact terms from each company's prospectus.</p></header>"
@@ -958,7 +958,7 @@ def lockup_calendar() -> dict:
         '<span><i class="k-done"></i>Released</span><span><i class="k-base"></i>Free since the IPO</span></div>'
         f'<div class="lu-list">{"".join(cards)}</div></section>'
         + features("What a lock-up is", [
-            ("A promise not to sell", "Before an IPO, insiders and early investors sign lock-up agreements with the banks running "
+            ("A promise not to sell", "Before an IPO, founders, employees and early investors sign lock-up agreements with the banks running "
              "the deal: no selling for a set time, usually 180 days. It keeps a flood of shares off the market in the first months."),
             ("Some unlock in steps", "Newer deals often open in stages: a slice after the first earnings report, more after the "
              "next, or earlier if the stock trades well above the IPO price. Every stage is listed separately here."),
@@ -984,7 +984,7 @@ def lockup_calendar() -> dict:
                        "over-allotment option: for each step the first day the shares may be sold, the number of shares and "
                        "their share of the company, and the trigger, read from the final prospectus (Form 424B4) on SEC EDGAR.",
         "url": "https://pulsarium.finance/lock-up-calendar/",
-        "keywords": ["IPO lock-up", "lock-up expiration", "lock-up calendar", "insider selling", "IPO"] + names_ld[:6],
+        "keywords": ["IPO lock-up", "lock-up expiration", "lock-up calendar", "IPO"] + names_ld[:6],
         "dateModified": data["updated"],
         "creator": {"@type": "Organization", "name": "Pulsarium", "url": "https://pulsarium.finance/"},
         "isAccessibleForFree": True,
@@ -995,7 +995,7 @@ def lockup_calendar() -> dict:
     return {
         "path": "/lock-up-calendar/", "crumb": "Lock-up calendar",
         "title": "IPO Lock-up Expiration Calendar: " + ", ".join(names_ld[:2]) + " & More",
-        "description": "When can IPO insiders sell? Lock-up expiration dates for every US IPO since late 2025 that raised $1B+ "
+        "description": "When do IPO shares unlock? Lock-up expiration dates for every US IPO since late 2025 that raised $1B+ "
                        "(" + ", ".join(names_ld[:4]) + "): each release, its size and the prospectus terms.",
         "body": body,
         "head": '<link rel="stylesheet" href="/assets/lockups.css?v=2">\n<script src="/assets/lockups.js?v=2" defer></script>\n'

@@ -1030,6 +1030,7 @@
 <link rel="stylesheet" href="/assets/pagination.css?v=1">
 <link rel="stylesheet" href="/assets/panel-fold.css?v=1">
 <link rel="stylesheet" href="/assets/market-map.css?v=8">
+<link rel="stylesheet" href="/assets/lockup-watch.css?v=1">
 <link rel="stylesheet" href="/assets/footer.css?v=d89dd84f32">
 <link rel="stylesheet" href="/assets/themes.css?v=995daca531" data-pulsarium-theme="styles">
 </head>
@@ -1115,6 +1116,7 @@
   </a>
   <nav class="header-actions" aria-label="Main">
     <a class="header-link" href="/universe/">Universe</a>
+    <a class="header-link" href="/lock-up-calendar/">Lock-ups</a>
     <a class="header-link" href="/mood/">Mood Index</a>
     <a class="header-link" href="/news/companies/">Companies</a>
     <a class="header-link" href="/news/daily/">Daily digest</a>
@@ -1231,7 +1233,7 @@
 
   <!-- IPO watch: facts typed in by hand from the filing and press reports. The countdown runs to
        data-ipo-open; the panel hides itself after data-ipo-hide. -->
-  <section class="panel mm-ipo" id="ipo-watch" data-ipo data-ipo-open="2026-11-19T14:30:00Z" data-ipo-hide="2026-11-24T00:00:00Z" aria-labelledby="ipo-watch-title" hidden>
+  <section class="panel mm-ipo" id="ipo-watch" data-ipo data-ipo-open="2026-11-19T14:30:00Z" data-ipo-hide="2026-11-19T14:30:00Z" aria-labelledby="ipo-watch-title" hidden>
     <div class="panel-edge" aria-hidden="true"></div>
     <div class="ipo-main">
       <h2 id="ipo-watch-title"><span class="ipo-dot" aria-hidden="true"></span>IPO watch · Anthropic <span class="ipo-ticker">ANT · Nasdaq</span></h2>
@@ -1246,7 +1248,17 @@
       <div><dt>Raising</dt><dd>$57.8–64.4B</dd><small>825M Class A shares</small></div>
     </dl>
     <p class="ipo-note">Estimated range from the Nov 10 filing; dates as reported by <a href="https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html" target="_blank" rel="noopener noreferrer">CNBC</a>. Terms can change. Not investment advice.</p>
-    <a class="mm-open ipo-lockups" href="/lock-up-calendar/">IPO lock-up calendar: when insiders can sell <span aria-hidden="true">↗</span></a>
+    <a class="mm-open ipo-lockups" href="/lock-up-calendar/">Lock-up calendar <span aria-hidden="true">↗</span></a>
+  </section>
+  <!-- Lock-up watch (assets/lockup-watch.js): takes the IPO watch panel's place from the Anthropic open on -->
+  <section class="panel mm-ipo luw" id="lockup-watch" data-lockup-watch data-lockup-from="2026-11-19T14:30:00Z" data-src="/assets/lockups.json?v=2" aria-labelledby="lockup-watch-title" hidden>
+    <div class="panel-edge" aria-hidden="true"></div>
+    <div class="ipo-main">
+      <h2 id="lockup-watch-title"><span class="ipo-dot" aria-hidden="true"></span>Lock-up watch <span class="ipo-ticker">NEXT RELEASES</span></h2>
+      <p class="ipo-when">When locked IPO shares can be sold</p>
+    </div>
+    <div class="luw-list" data-lockup-list></div>
+    <p class="ipo-note">Days left to each release, from the company's final prospectus. Not investment advice. <a href="/lock-up-calendar/">Lock-up calendar ↗</a></p>
   </section>
 
   <div class="controls-block">
@@ -1375,7 +1387,7 @@
         <li><a href="/universe/">Market Universe</a></li>
         <li><a href="/insider-buying/">Insider buying</a></li>
         <li><a href="/insider-selling/">Insider selling</a></li>
-        <li><a href="/sector-analytics/">Sector analytics</a></li><li><a href="/lock-up-calendar/">IPO lock-ups</a></li>
+        <li><a href="/sector-analytics/">Sector analytics</a></li><li><a href="/lock-up-calendar/">Lock-up calendar</a></li>
         <li><a href="/report-highlights/">Report highlights</a></li>
         <li><a href="/tools/">Calculators</a></li>
       </ul>
@@ -1468,6 +1480,7 @@
 <script src="/assets/panel-fold.js?v=4" defer></script>
 <script src="/assets/season-q3-2026.js?v=2" defer></script>
 <script src="/assets/market-map.js?v=7" defer></script>
+<script src="/assets/lockup-watch.js?v=1" defer></script>
 <script src="../news_data.js" onerror="window.__NO_DATA_FILE__ = true"></script>
 <script src="/universe/tickers.js"></script>
 <script>

@@ -78,7 +78,7 @@ FOOTER_COLUMNS = [
     ("Market news", [("/news/", "Live news"), ("/news/companies/", "News by company"), ("/news/daily/", "Daily digest"),
                      ("/mood/", "Mood Index"), ("/news/feed.xml", "RSS feed")]),
     ("SEC data & tools", [("/universe/", "Market Universe"), ("/insider-buying/", "Insider buying"), ("/insider-selling/", "Insider selling"),
-                          ("/sector-analytics/", "Sector analytics"), ("/lock-up-calendar/", "IPO lock-ups"),
+                          ("/sector-analytics/", "Sector analytics"), ("/lock-up-calendar/", "Lock-up calendar"),
                           ("/report-highlights/", "Report highlights"), ("/tools/", "Calculators")]),
     ("About", [(f"{APP_URL}?legal=faq", "FAQ"), (f"{APP_URL}?legal=disclaimer", "Financial notice"),
                (f"{APP_URL}?legal=imprint", "Imprint"), (f"{APP_URL}?legal=privacy", "Privacy"),
@@ -737,6 +737,7 @@ def page(*, path: str, title: str, description: str, body: str, crumbs: list,
     <a href="/portfolio-tracker/">Portfolio tracker</a>
     <a href="/news/">Live news</a>
     <a href="/universe/">Universe</a>
+    <a href="/lock-up-calendar/">Lock-ups</a>
     <a href="/mood/">Mood Index</a>
     <a href="/tools/">Calculators</a>
     <a class="nav-secondary" href="/news/companies/">Companies</a>
