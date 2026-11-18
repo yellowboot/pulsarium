@@ -6,417 +6,282 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Wed, 18 Nov 2026 16:17:23 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 18 Nov 2026 17:37:29 +0000</lastBuildDate>
   <item>
-    <title>Dow slides 600 points, Nasdaq seesaws as Nvidia earnings bounce fizzles: Live updates</title>
-    <link>https://www.cnbc.com/2026/11/17/stock-market-today-live-updates.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/17/stock-market-today-live-updates.html</guid>
-    <pubDate>Wed, 18 Nov 2026 16:14:22 +0000</pubDate>
+    <title>‘GTA VI’ publisher Take-Two jumps as gamers relish blockbuster release</title>
+    <link>https://www.cnbc.com/2026/11/18/gta-vi-publisher-take-two-jumps-as-gamers-relish-blockbuster-release.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/gta-vi-publisher-take-two-jumps-as-gamers-relish-blockbuster-release.html</guid>
+    <pubDate>Wed, 18 Nov 2026 17:36:08 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Nvidia shares rose in extended trading after the company’s first earnings report since co-founder Jensen Huang resigned last week.</description>
-    <category>NVDA</category>
+    <description>Shares of Take-Two Interactive jumped more than 6% in premarket trading, with investors betting that glowing reviews from critics and players will propel sales</description>
+    <category>TTWO</category>
   </item>
   <item>
-    <title>Waymo pulls robotaxis off highways after California ban, with tech seen as &#x27;far from perfect&#x27;</title>
-    <link>https://finance.yahoo.com/markets/stocks/article/waymo-pulls-robotaxis-off-highways-after-california-ban-with-tech-seen-as-far-from-perfect-161031372.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/article/waymo-pulls-robotaxis-off-highways-after-california-ban-with-tech-seen-as-far-from-perfect-161031372.html?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 16:10:31 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The robotaxi rollout in America hit a roadblock. Alphabet-owned (GOOGL) Waymo pulled its robotaxis off freeways in every US market where it offers them, after California regulators banned the company&#x27;s driverless cars from state highways.</description>
-    <category>GOOGL</category>
-  </item>
-  <item>
-    <title>Jensen Huang has agreed to appear before Senate banking committee, Chairman Scott says</title>
-    <link>https://www.cnbc.com/2026/11/18/jensen-huang-nvidia-tim-scott-congress.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/jensen-huang-nvidia-tim-scott-congress.html</guid>
-    <pubDate>Wed, 18 Nov 2026 16:08:29 +0000</pubDate>
+    <title>Nvidia sinks after earnings, dragging down neoclouds CoreWeave, Iren</title>
+    <link>https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html</guid>
+    <pubDate>Wed, 18 Nov 2026 17:35:27 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Jensen Huang will appear before the Senate banking committee, its Chair Tim Scott said. That adds to an already announced appearance before House panels.</description>
-    
-  </item>
-  <item>
-    <title>NVIDIA: 3 Key Takeaways for Long-Term Investors</title>
-    <link>https://www.fool.com/earnings/takeaways/2026/11/18/nvidia-3-key-takeaways-for-long-term-investors/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/earnings/takeaways/2026/11/18/nvidia-3-key-takeaways-for-long-term-investors/?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 16:07:59 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Data center revenue doubled to $108 billion, but the leadership transition leaves it open who will steer that momentum forward.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Owala and Coca-Cola team up for new Amazon-exclusive release</title>
-    <link>https://www.thestreet.com/retail/owala-coca-cola-new-amazon-exclusive-collaboration?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.thestreet.com/retail/owala-coca-cola-new-amazon-exclusive-collaboration?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 16:07:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>The popular drinkware brand is joining forces with Coca-Cola again after last year’s collaboration sold out within days.</description>
-    <category>AMZN</category><category>KO</category>
-  </item>
-  <item>
-    <title>Anthropic prices blockbuster IPO as Nvidia scandal rattles AI stocks</title>
-    <link>https://finance.yahoo.com/technology/ai/articles/anthropic-set-price-ipo-key-030309911.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/anthropic-set-price-ipo-key-030309911.html?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 16:04:54 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Anthropic prices its blockbuster IPO on Wednesday, giving ordinary investors their first direct bet on a stand-alone AI giant in a market rattled by the Nvidia spy scandal that toppled its chief executive.Wall Street is also digesting…</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Microsoft Corporation (MSFT) Surged on Strong Azure Growth and AI-related Demand</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/microsoft-corporation-msft-surged-strong-160400758.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/microsoft-corporation-msft-surged-strong-160400758.html?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 16:04:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Carillon Tower Advisers, an investment management company, released its third-quarter 2026 investor letter for the “Carillon Eagle Growth &amp; Income Fund”. The letter can be downloaded here. In the third quarter, the S&amp;P 500 Index rose…</description>
-    <category>MSFT</category><category>SPY</category>
-  </item>
-  <item>
-    <title>Worried investors are paying up for these stocks — some with up to 49% upside, analysts say</title>
-    <link>https://www.marketwatch.com/story/worried-investors-are-paying-up-for-these-stocks-some-with-up-to-49-upside-analysts-say-ea8f2c6f?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/worried-investors-are-paying-up-for-these-stocks-some-with-up-to-49-upside-analysts-say-ea8f2c6f?mod=mw_rss_topstories</guid>
-    <pubDate>Wed, 18 Nov 2026 16:04:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>Defensive sectors have beaten the S&amp;P 500 by a wide margin in recent months, even though they are priced much higher relative to earnings estimates than the index.</description>
-    <category>SPY</category>
-  </item>
-  <item>
-    <title>59 Analysts Rate Amazon a Buy. Here’s Where the Stock Could Go</title>
-    <link>https://247wallst.com/investing/2026/11/18/59-analysts-rate-amazon-a-buy-heres-where-the-stock-could-go/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/18/59-analysts-rate-amazon-a-buy-heres-where-the-stock-could-go/?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 16:03:46 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Almost no one on Wall Street doubts Amazon, yet a bolder price target would demand a rare kind of year. A look at the math, the catalysts, and the one spending problem that could keep shares from getting there.</description>
-    <category>AMZN</category>
-  </item>
-  <item>
-    <title>Amazon’s CEO Says Pulling Back on Data Centers Would Be a “Historic Mistake”</title>
-    <link>https://247wallst.com/investing/2026/11/18/amazons-ceo-says-pulling-back-on-data-centers-would-be-a-historic-mistake/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/18/amazons-ceo-says-pulling-back-on-data-centers-would-be-a-historic-mistake/?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 16:03:20 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Andy Jassy defended a spending spree of hundreds of billions to a crowd that had just rejected data centers, yet he left out the one number investors need most. The real threat to Amazon&#x27;s AI bet may not be demand at all.</description>
-    <category>AMZN</category>
-  </item>
-  <item>
-    <title>Crypto Long &amp; Short: Crypto exchanges shouldn’t double as the vault</title>
-    <link>https://www.coindesk.com/coindesk-indices/2026/11/18/crypto-long-and-short-crypto-exchanges-shouldn-t-double-as-the-vault</link>
-    <guid isPermaLink="false">https://www.coindesk.com/coindesk-indices/2026/11/18/crypto-long-and-short-crypto-exchanges-shouldn-t-double-as-the-vault</guid>
-    <pubDate>Wed, 18 Nov 2026 16:02:54 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
-    <description>A single breach moved billions out of Binance in minutes, exposing how much client money sits with the venue that trades it. Darren Jordan of Komainu argues institutions should keep trading and custody separate, as traditional markets…</description>
-    
-  </item>
-  <item>
-    <title>Intercontinental Exchange (ICE) Rose on Strong Trading Volumes Amid Continued Volatility</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/intercontinental-exchange-ice-rose-strong-160231816.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/intercontinental-exchange-ice-rose-strong-160231816.html?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 16:02:31 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Carillon Tower Advisers, an investment management company, released its third-quarter 2026 investor letter for the “Carillon Eagle Growth &amp; Income Fund”. The letter can be downloaded here. In the third quarter, the S&amp;P 500 Index rose…</description>
-    <category>SPY</category><category>ICE</category>
-  </item>
-  <item>
-    <title>Nvidia rating cut by Summit Insights on post-Huang uncertainty</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/nvidia-rating-cut-summit-insights-160220619.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/nvidia-rating-cut-summit-insights-160220619.html?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 16:02:20 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Investing.com -- Summit Insights Group downgraded Nvidia (NASDAQ: NVDA) from Buy to Hold in a note on Wednesday, telling investors that the chipmaker’s leadership change creates too much uncertainty, despite strong fiscal third-quarter…</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Raymond James bullish on Schwab amid ‘compelling valuation’</title>
-    <link>https://www.investing.com/news/stock-market-news/raymond-james-bullish-on-schwab-amid-compelling-valuation-5036623</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/raymond-james-bullish-on-schwab-amid-compelling-valuation-5036623</guid>
-    <pubDate>Wed, 18 Nov 2026 16:02:16 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>SCHW</category><category>RJF</category>
-  </item>
-  <item>
-    <title>Off-price retailer TJX lifts annual forecast on strong holiday demand, shares jump</title>
-    <link>https://www.investing.com/news/stock-market-news/offprice-retailer-tjx-beats-quarterly-sales-estimates-5035816</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/offprice-retailer-tjx-beats-quarterly-sales-estimates-5035816</guid>
-    <pubDate>Wed, 18 Nov 2026 16:00:57 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>TJX</category>
-  </item>
-  <item>
-    <title>Canada’s La Caisse in talks for stake in Bain’s Bridge Data Centres, sources say</title>
-    <link>https://www.investing.com/news/stock-market-news/canadas-la-caisse-in-talks-for-stake-in-bains-bridge-data-centres-sources-say-5034948</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/canadas-la-caisse-in-talks-for-stake-in-bains-bridge-data-centres-sources-say-5034948</guid>
-    <pubDate>Wed, 18 Nov 2026 16:00:26 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>There&#x27;s a &#x27;real risk&#x27; for Nvidia if they pick the wrong CEO candidate</title>
-    <link>https://finance.yahoo.com/video/theres-real-risk-nvidia-pick-160000497.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/video/theres-real-risk-nvidia-pick-160000497.html?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 16:00:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Seaport Research Partners senior analyst Jay Goldberg sits down with Yahoo Finance Executive Editor Brian Sozzi to share his thoughts on Nvidia&#x27;s (NVDA) hunt for the next CEO, emphasizing what exactly is at stake.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Commvault Expands Microsoft Security Integration to Turn Threat Intelligence into Recovery Action</title>
-    <link>https://finance.yahoo.com/technology/ai/articles/commvault-expands-microsoft-security-integration-160000543.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/commvault-expands-microsoft-security-integration-160000543.html?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 16:00:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Commvault (NASDAQ: CVLT), delivering continuous recovery for the AI era, today announced a new integration between Commvault Threat Scan and Microsoft Defender for Endpoint. When Microsoft Defender detects a potential cyberattack,…</description>
-    <category>MSFT</category>
-  </item>
-  <item>
-    <title>Humanoids Summit Returns to Silicon Valley, Bringing Together Tesla Optimus and Global Leaders in Physical AI</title>
-    <link>https://finance.yahoo.com/technology/ai/articles/humanoids-summit-returns-silicon-valley-160000468.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/humanoids-summit-returns-silicon-valley-160000468.html?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 16:00:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>SAN MATEO, Calif., November 18, 2026--Humanoids Summit returns to Silicon Valley on December 1–2, 2026, moving to the larger San Mateo County Event Center for its most ambitious gathering yet. The sixth global edition and third Silicon…</description>
-    <category>TSLA</category><category>SAN</category>
-  </item>
-  <item>
-    <title>PSA: Immediately Patch NGINX Web Servers Due to Critical Vulnerability Allowing Unauthenticated User RCE</title>
-    <link>https://finance.yahoo.com/technology/ai/articles/psa-immediately-patch-nginx-servers-160000691.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/psa-immediately-patch-nginx-servers-160000691.html?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 16:00:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>AUSTIN, Texas, November 18, 2026--Immediately Patch NGINX Web Servers Due to Critical Vulnerability Allowing Unauthenticated User RCE</description>
-    <category>PSA</category>
-  </item>
-  <item>
-    <title>Dan Loeb Is Betting Big on Meta</title>
-    <link>https://www.tikr.com/blog/dan-loeb-is-betting-big-on-meta?ref=yahoofinance&amp;tlnk=yf-261118-fj4pw8g8&amp;.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.tikr.com/blog/dan-loeb-is-betting-big-on-meta?ref=yahoofinance&amp;tlnk=yf-261118-fj4pw8g8&amp;.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 15:59:31 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Key TakeawaysDan Loeb’s Third Point made Meta Platforms its largest US stock holding in the third quarter, with a new stake worth $475 million at Sept. 30.</description>
-    <category>META</category>
-  </item>
-  <item>
-    <title>Lam Research Corporation (LRCX) Retreated Amid Cyclical Peak Concerns</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/lam-research-corporation-lrcx-retreated-155911915.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/lam-research-corporation-lrcx-retreated-155911915.html?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 15:59:11 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Carillon Tower Advisers, an investment management company, released its third-quarter 2026 investor letter for the “Carillon Eagle Growth &amp; Income Fund”. The letter can be downloaded here. In the third quarter, the S&amp;P 500 Index rose…</description>
-    <category>SPY</category><category>LRCX</category>
-  </item>
-  <item>
-    <title>Copper price craters as AI, tariff trades unwind and Asia Copper Week hears of ‘recessionary-like’ demand</title>
-    <link>https://www.mining.com/copper-price-craters-as-ai-tariff-trades-unwind-and-asia-copper-week-hears-of-recessionary-like-demand/</link>
-    <guid isPermaLink="false">https://www.mining.com/copper-price-craters-as-ai-tariff-trades-unwind-and-asia-copper-week-hears-of-recessionary-like-demand/</guid>
-    <pubDate>Wed, 18 Nov 2026 15:58:41 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Mining.com</source>
-    <description>Stan Druckenmiller has gone short and the biggest copper producers have shed $141 billion in a month, yet Chinese buyers are paying a record premium for prompt metal.</description>
-    
-  </item>
-  <item>
-    <title>AST SpaceMobile Falls 5% After Jim Cramer Calls It ‘a Very Hard Stock to Own’; SpaceX Rises 3%, Rocket Lab Holds Steady</title>
-    <link>https://247wallst.com/investing/2026/11/18/ast-spacemobile-falls-5-after-jim-cramer-calls-it-a-very-hard-stock-to-own-spacex-rises-3-rocket-lab-holds-steady/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/18/ast-spacemobile-falls-5-after-jim-cramer-calls-it-a-very-hard-stock-to-own-spacex-rises-3-rocket-lab-holds-steady/?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 15:57:51 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>A TV host&#x27;s blunt verdict on one space stock lands just as rivals pull away in the opposite direction. What separates the battered name from the peers still climbing, and why does one critique cut so deep?</description>
-    <category>SPCX</category><category>RKLB</category><category>ASTS</category>
-  </item>
-  <item>
-    <title>Stock Indexes Finish Lower as Tech Stocks Retreat</title>
-    <link>https://www.nasdaq.com/articles/stock-indexes-finish-lower-tech-stocks-retreat</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/stock-indexes-finish-lower-tech-stocks-retreat</guid>
-    <pubDate>Wed, 18 Nov 2026 15:57:26 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The S&amp;P 500 Index ($SPX ) (SPY ) closed down -1.03% on Tuesday, the Dow Jones Industrial Average ($DOWI ) (DIA ) closed down -1.64%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) closed down -0.72%. December E-mini S&amp;P futures (ESZ26 ) fell…</description>
-    <category>SPY</category><category>QQQ</category><category>DJI</category>
-  </item>
-  <item>
-    <title>Hogs Look to Midweek Trade as Cash and the Cutout Resume Weakness</title>
-    <link>https://www.nasdaq.com/articles/hogs-look-midweek-trade-cash-and-cutout-resume-weakness</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/hogs-look-midweek-trade-cash-and-cutout-resume-weakness</guid>
-    <pubDate>Wed, 18 Nov 2026 15:57:26 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Lean hog futures closed the Tuesday session with contracts down $1.60 to $2.57 across the board. Open interest was up 1,535 contracts on Tuesday, suggesting additional short interest. USDA’s national base hog price was reported at…</description>
-    
-  </item>
-  <item>
-    <title>Cattle Look to Wednesday Trade</title>
-    <link>https://www.nasdaq.com/articles/cattle-look-wednesday-trade-0</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cattle-look-wednesday-trade-0</guid>
-    <pubDate>Wed, 18 Nov 2026 15:57:26 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Live cattle futures closed the Tuesday session with contracts down $1.42 to $2.60 at the close. Open interest was down 2,055 contracts on Tuesday, suggesting some longs were exiting. Cash trade has yet to get kicked off this week,…</description>
-    
-  </item>
-  <item>
-    <title>Oracle’s stock is ridiculously cheap even under the most gloomy scenarios, analyst says</title>
-    <link>https://www.marketwatch.com/story/oracles-stock-is-ridiculously-cheap-even-under-the-most-gloomy-scenarios-analyst-says-630d30ec?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/oracles-stock-is-ridiculously-cheap-even-under-the-most-gloomy-scenarios-analyst-says-630d30ec?mod=mw_rss_topstories</guid>
-    <pubDate>Wed, 18 Nov 2026 15:57:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>Even if you assume Oracle’s AI data-center business disappears while its debt remains, Oracle shares are still trading lower than they should, according to new analysis from Bernstein.</description>
-    <category>ORCL</category>
-  </item>
-  <item>
-    <title>Has a Stock Market Crash Started? Here&#x27;s What Sobering Lessons From the Dot-Com Bust Say Comes Next</title>
-    <link>https://www.fool.com/investing/2026/11/18/has-a-stock-market-crash-started-here-s-what-sobering-lessons-from-the-dot-com-bust-say-comes-next/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/18/has-a-stock-market-crash-started-here-s-what-sobering-lessons-from-the-dot-com-bust-say-comes-next/?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 15:56:04 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>A top strategist&#x27;s study of the dot-com bust finds that today&#x27;s case for AI stocks sounds a lot like the one investors made in the summer of 2000.</description>
-    
+    <description>Nvidia&#x27;s earnings come at a tumultuous time for the company.</description>
+    <category>NVDA</category><category>CRWV</category>
   </item>
   <item>
     <title>Dealbook Summit 2026 live updates: Altman says &#x27;hard to imagine the AI industry without Jensen&#x27;</title>
     <link>https://www.cnbc.com/2026/11/18/dealbook-summit-2026-live-updates.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/dealbook-summit-2026-live-updates.html</guid>
-    <pubDate>Wed, 18 Nov 2026 15:55:39 +0000</pubDate>
+    <pubDate>Wed, 18 Nov 2026 17:35:13 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>Follow the discussion of AI, business and politics at the DealBook Summit 2026.</description>
     
   </item>
   <item>
-    <title>Norway stocks lower at close of trade; Oslo OBX down 1.17%</title>
-    <link>https://www.investing.com/news/stock-market-news/norway-stocks-lower-at-close-of-trade-oslo-obx-down-117-5036607</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/norway-stocks-lower-at-close-of-trade-oslo-obx-down-117-5036607</guid>
-    <pubDate>Wed, 18 Nov 2026 15:55:29 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
+    <title>E-commerce boosts Home Depot, Lowe’s in Q3</title>
+    <link>https://www.retaildive.com/news/home-depot-lowes-digital-sales-boost-q3-ecommerce/875054/</link>
+    <guid isPermaLink="false">https://www.retaildive.com/news/home-depot-lowes-digital-sales-boost-q3-ecommerce/875054/</guid>
+    <pubDate>Wed, 18 Nov 2026 17:31:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Retail Dive</source>
+    <description>Both retailers notched double-digit gains within their digital businesses as they continue to make investments to improve the online experience.</description>
+    <category>HD</category><category>LOW</category>
+  </item>
+  <item>
+    <title>Investigators make progress in hunt for cause of FAA ground stop</title>
+    <link>https://www.cnbc.com/2026/11/18/faa-ground-stop-router-investigation.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/faa-ground-stop-router-investigation.html</guid>
+    <pubDate>Wed, 18 Nov 2026 17:29:31 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Engineers and analysts are still searching for the root cause of the issue, which led to a four-hour ground stop on Friday.</description>
     
   </item>
   <item>
-    <title>Israel stocks lower at close of trade; TA 35 down 0.34%</title>
-    <link>https://www.investing.com/news/stock-market-news/israel-stocks-lower-at-close-of-trade-ta-35-down-034-5036605</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/israel-stocks-lower-at-close-of-trade-ta-35-down-034-5036605</guid>
-    <pubDate>Wed, 18 Nov 2026 15:55:03 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
+    <title>Rising healthcare costs push Medicare Part B premiums higher</title>
+    <link>https://www.marketwatch.com/story/medicare-part-b-premiums-rise-due-higher-healthcare-spending-f2daba13?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/medicare-part-b-premiums-rise-due-higher-healthcare-spending-f2daba13?mod=mw_rss_topstories</guid>
+    <pubDate>Wed, 18 Nov 2026 17:28:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>The premiums will increase by $6.50, to $209.40 a month.</description>
     
   </item>
   <item>
-    <title>Wall Street prepares for Anthropic IPO frenzy, despite broader AI stock slump</title>
-    <link>https://www.investing.com/news/stock-market-news/wall-street-prepares-for-anthropic-ipo-frenzy-despite-broader-ai-stock-slump-5035325</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/wall-street-prepares-for-anthropic-ipo-frenzy-despite-broader-ai-stock-slump-5035325</guid>
-    <pubDate>Wed, 18 Nov 2026 15:55:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Nvidia Delivers Reassuring Results, Outlook. But Wall Street Split.</title>
-    <link>https://finance.yahoo.com/m/7d839da5-898d-3b89-b6a4-ed8b84753cb0/nvidia-delivers-reassuring.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/7d839da5-898d-3b89-b6a4-ed8b84753cb0/nvidia-delivers-reassuring.html?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 15:55:00 +0000</pubDate>
+    <title>What the Next Fed Rate Move Means for Utility Stocks -- and 2 Worth Owning</title>
+    <link>https://www.fool.com/investing/2026/11/18/what-the-next-fed-rate-move-means-for-utility-stocks-and-2-worth-owning/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/18/what-the-next-fed-rate-move-means-for-utility-stocks-and-2-worth-owning/?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:23:02 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Nvidia showed that the AI buildout is healthy with its beat-and-raise fiscal third-quarter earnings report. But Nvidia stock fell on lingering worries.</description>
+    <description>For risk-tolerant investors, Hawaiian Electric Industries and Portland General Electric are examples of utility stocks that may be worth taking fliers on.</description>
+    <category>GE</category><category>FED</category>
+  </item>
+  <item>
+    <title>Why Recursion Pharmaceuticals Stock Is Up Today</title>
+    <link>https://www.fool.com/investing/2026/11/18/why-recursion-pharmaceuticals-stock-is-up-today/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/18/why-recursion-pharmaceuticals-stock-is-up-today/?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:23:01 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>This pharmaceutical-development technology company continues to demonstrate that its testing platform has real potential.</description>
+    
+  </item>
+  <item>
+    <title>It’s not too late to add U.S. energy companies to your 401(k). They’ve been making out like bandits.</title>
+    <link>https://www.marketwatch.com/story/its-not-too-late-to-add-u-s-energy-companies-to-your-401-k-theyve-been-making-out-like-bandits-e77a8d6a?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/its-not-too-late-to-add-u-s-energy-companies-to-your-401-k-theyve-been-making-out-like-bandits-e77a8d6a?mod=mw_rss_topstories</guid>
+    <pubDate>Wed, 18 Nov 2026 17:23:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>Energy stocks are pretending the war is over. It isn’t.</description>
+    
+  </item>
+  <item>
+    <title>Jensen Huang Can Still Nominate Two Directors to Nvidia’s Board</title>
+    <link>https://247wallst.com/investing/2026/11/18/jensen-huang-can-still-nominate-two-directors-to-nvidias-board/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/18/jensen-huang-can-still-nominate-two-directors-to-nvidias-board/?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:22:21 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Jensen Huang walked away from the CEO job and the boardroom, yet a little-noticed bylaw still lets him shape who sits there. The catch is a three-year ownership test, a hard cap, and a calendar that matters.</description>
     <category>NVDA</category>
   </item>
   <item>
-    <title>Should You Buy Hershey Stock At This Price?</title>
-    <link>https://www.trefis.com/stock/hsy/articles/626161/should-you-buy-hershey-stock-at-this-price/2026-11-18?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.trefis.com/stock/hsy/articles/626161/should-you-buy-hershey-stock-at-this-price/2026-11-18?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 15:54:49 +0000</pubDate>
+    <title>Stocks Mixed as Nvidia Erases Overnight Gains</title>
+    <link>https://www.nasdaq.com/articles/stocks-mixed-nvidia-erases-overnight-gains</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-mixed-nvidia-erases-overnight-gains</guid>
+    <pubDate>Wed, 18 Nov 2026 17:20:54 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is down -0.20% today, the Dow Jones Industrial Average ($DOWI ) (DIA ) is down -0.96%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is up +0.36%. December E-mini S&amp;P futures (ESZ26 ) are down -0.15%, and…</description>
+    <category>NVDA</category><category>SPY</category><category>QQQ</category><category>DJI</category>
+  </item>
+  <item>
+    <title>Stock Indexes Finish Lower as Tech Stocks Retreat</title>
+    <link>https://www.nasdaq.com/articles/stock-indexes-finish-lower-tech-stocks-retreat</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/stock-indexes-finish-lower-tech-stocks-retreat</guid>
+    <pubDate>Wed, 18 Nov 2026 17:20:53 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The S&amp;P 500 Index ($SPX ) (SPY ) closed down -1.03% on Tuesday, the Dow Jones Industrial Average ($DOWI ) (DIA ) closed down -1.64%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) closed down -0.72%. December E-mini S&amp;P futures (ESZ26 ) fell…</description>
+    <category>SPY</category><category>QQQ</category><category>DJI</category>
+  </item>
+  <item>
+    <title>Cotton Fading Back Lower on Wednesday Morning</title>
+    <link>https://www.nasdaq.com/articles/cotton-fading-back-lower-wednesday-morning</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/cotton-fading-back-lower-wednesday-morning</guid>
+    <pubDate>Wed, 18 Nov 2026 17:20:53 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Cotton price action is down 22 to 39 points so far on Wednesday. Futures posted gains of 20 to 48 points across the board on Tuesday, holding early gains into the close. Crude oil was down 11 cents per barrel on the session to $85.61,…</description>
+    
+  </item>
+  <item>
+    <title>Dow slides 400 points, Nasdaq seesaws as Nvidia earnings bounce fizzles: Live updates</title>
+    <link>https://www.cnbc.com/2026/11/17/stock-market-today-live-updates.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/17/stock-market-today-live-updates.html</guid>
+    <pubDate>Wed, 18 Nov 2026 17:20:27 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Nvidia shares rose in extended trading after the company’s first earnings report since co-founder Jensen Huang resigned last week.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>2 Reasons NVIDIA Is a Buy After Its Latest Earnings Report</title>
+    <link>https://www.fool.com/investing/2026/11/18/2-reasons-nvidia-is-a-buy-after-its-latest-earnings-report/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/18/2-reasons-nvidia-is-a-buy-after-its-latest-earnings-report/?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:20:02 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Nvidia shares just got a lot cheaper.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Anthropic&#x27;s $1.4 Trillion IPO: The Ultimate Guide</title>
+    <link>https://www.fool.com/investing/2026/11/18/anthropics-14-trillion-ipo-the-ultimate-guide/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/18/anthropics-14-trillion-ipo-the-ultimate-guide/?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:20:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Both teams see promise in the business, but Team Rule Breakers wants to see a few more quarters of results, while Team Hidden Gems is open to buying.</description>
+    
+  </item>
+  <item>
+    <title>Governments warn Java flaw leaves computer systems open to hackers</title>
+    <link>https://www.investing.com/news/stock-market-news/us-south-korea-issue-urgent-advisories-over-flaws-in-java-programming-language-5034710</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/us-south-korea-issue-urgent-advisories-over-flaws-in-java-programming-language-5034710</guid>
+    <pubDate>Wed, 18 Nov 2026 17:18:40 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Anthropic options could begin trading on Monday, expected to draw strong demand</title>
+    <link>https://www.investing.com/news/stock-market-news/anthropic-options-could-begin-trading-on-monday-expected-to-draw-strong-demand-5036728</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/anthropic-options-could-begin-trading-on-monday-expected-to-draw-strong-demand-5036728</guid>
+    <pubDate>Wed, 18 Nov 2026 17:18:26 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Anthropic IPO: AI lab considers increasing the offering as investor demand surges, sources say</title>
+    <link>https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html</guid>
+    <pubDate>Wed, 18 Nov 2026 17:17:44 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol ANT on Thursday.</description>
+    
+  </item>
+  <item>
+    <title>NVDA Stock Set For Fifth Day Lower: House Committee Goes Steps Up Nvidia Investigation, Asks Kress To Testify</title>
+    <link>https://stocktwits.com/news-articles/markets/equity/nvda-stock-set-for-fifth-day-lower-house-committee-goes-steps-up-nvidia-investigation-asks-kress-to-testify/cNbg7AjR9LD?.tsrc=rss</link>
+    <guid isPermaLink="false">https://stocktwits.com/news-articles/markets/equity/nvda-stock-set-for-fifth-day-lower-house-committee-goes-steps-up-nvidia-investigation-asks-kress-to-testify/cNbg7AjR9LD?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:17:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The House of Representatives Energy and Commerce Committee has sent a letter to Nvidia interim CEO Colette Kress.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Cathie Wood Was Right About These 5 Stocks</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/cathie-wood-5-stocks-171622537.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/cathie-wood-5-stocks-171622537.html?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:16:22 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Cathie Wood became one of Wall Street’s best-known fund managers during the pandemic rally, but her flagship ARK Innovation ETF (BATS:ARKK) fell sharply in 2022 and has trailed the market since. As of mid-November, ARKK is down about 4%…</description>
+    
+  </item>
+  <item>
+    <title>European shares fall on hot inflation and Anthropic IPO jitters</title>
+    <link>https://www.investing.com/news/stock-market-news/europe-shares-steady-after-nvidia-results--reels-from-steepest-drop-since-march-5034786</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/europe-shares-steady-after-nvidia-results--reels-from-steepest-drop-since-march-5034786</guid>
+    <pubDate>Wed, 18 Nov 2026 17:16:15 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>U.S. Stocks Slip After Nvidia Earnings Fail to Soothe Nerves</title>
+    <link>https://www.wsj.com/finance/commodities-futures/stock-futures-rally-as-nvidia-earnings-calm-ai-trade-fears-96f51546?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.wsj.com/finance/commodities-futures/stock-futures-rally-as-nvidia-earnings-calm-ai-trade-fears-96f51546?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:16:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Nvidia’s blockbuster earnings failed to give tech stocks a lift, a sign that worries about the AI trade continue to haunt investors.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>‘Nvidia’s turmoil has me spooked’: Has the time come to sell my stocks and buy real estate?</title>
+    <link>https://www.marketwatch.com/story/nvidia-spooked-me-should-i-sell-my-stocks-or-ride-out-the-market-turmoil-560583c6?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/nvidia-spooked-me-should-i-sell-my-stocks-or-ride-out-the-market-turmoil-560583c6?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:15:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>“Real estate here in Florida seems to be presenting some interesting opportunities.”</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>FTSE 100 today: Stocks extend drop as metals slump; UK CPI rises to 3.6%</title>
+    <link>https://www.investing.com/news/stock-market-news/ftse-100-today-stocks-slip-as-miners-sink-on-metals-rout-cpi-at-36-5035095</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/ftse-100-today-stocks-slip-as-miners-sink-on-metals-rout-cpi-at-36-5035095</guid>
+    <pubDate>Wed, 18 Nov 2026 17:14:23 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Nearly half of home builders are cutting prices and offering lower mortgage rates as they struggle to find buyers</title>
+    <link>https://www.marketwatch.com/story/nearly-half-of-home-builders-are-cutting-prices-and-offering-lower-mortgage-rates-as-they-struggle-to-find-buyers-033351e1?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/nearly-half-of-home-builders-are-cutting-prices-and-offering-lower-mortgage-rates-as-they-struggle-to-find-buyers-033351e1?mod=mw_rss_topstories</guid>
+    <pubDate>Wed, 18 Nov 2026 17:14:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>More builders are cutting prices in spite of rising construction costs that make it more expensive to build new homes.</description>
+    
+  </item>
+  <item>
+    <title>Stocks slide despite bumper Nvidia profits, Anthropic IPO</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/stocks-drop-booming-nvidia-results-024500677.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/stocks-drop-booming-nvidia-results-024500677.html?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:13:56 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Investors on Wednesday were absorbing a blockbuster earnings report from AI chip titan Nvidia and getting set for the long-awaited IPO from chatbot maker Anthropic, though stocks fell across the board as uncertainty continues to stalk…</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Ford ships first battery cells using CATL technology</title>
+    <link>https://www.investing.com/news/stock-market-news/ford-ships-first-batterycells-using-catl-technology-5036719</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/ford-ships-first-batterycells-using-catl-technology-5036719</guid>
+    <pubDate>Wed, 18 Nov 2026 17:13:54 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>F</category>
+  </item>
+  <item>
+    <title>Gamers enter Vice City as Grand Theft Auto VI begins global rollout</title>
+    <link>https://www.investing.com/news/stock-market-news/gamers-get-ready-to-enter-vice-city-as-grand-theft-auto-vi-begins-globalrollout-5035485</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/gamers-get-ready-to-enter-vice-city-as-grand-theft-auto-vi-begins-globalrollout-5035485</guid>
+    <pubDate>Wed, 18 Nov 2026 17:13:41 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Should You Pick Vertex Stock Over Its Biotech Rivals?</title>
+    <link>https://www.trefis.com/stock/vrtx/articles/626165/should-you-pick-vertex-stock-over-its-biotech-rivals/2026-11-18?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/vrtx/articles/626165/should-you-pick-vertex-stock-over-its-biotech-rivals/2026-11-18?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:13:07 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
     <description>Today&#x27;s big story: Anthropic IPO: Priced For 2031, Or 2036.</description>
-    <category>HSY</category>
-  </item>
-  <item>
-    <title>How the Anthropic IPO stacks up against SpaceX</title>
-    <link>https://www.investing.com/news/stock-market-news/how-theanthropic-ipo-stacks-up-against-spacex-5036604</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/how-theanthropic-ipo-stacks-up-against-spacex-5036604</guid>
-    <pubDate>Wed, 18 Nov 2026 15:54:46 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>SPCX</category>
-  </item>
-  <item>
-    <title>Huang could return as NVIDIA CEO - by friendly means or via a boardroom power play</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/huang-could-return-nvidia-ceo-155317875.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/huang-could-return-nvidia-ceo-155317875.html?.tsrc=rss</guid>
-    <pubDate>Wed, 18 Nov 2026 15:53:17 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Investing.com -- Jensen Huang may be out as NVIDIA&#x27;s (NASDAQ:NVDA) CEO, but he is far from out of the picture. In fact, the company’s own corporate governance rules could give its co-founder a path back to the top — either through a…</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Blackstone’s Gray says market shakeout could benefit firm</title>
-    <link>https://www.investing.com/news/stock-market-news/blackstones-gray-says-market-shakeout-could-benefit-firm-5036601</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/blackstones-gray-says-market-shakeout-could-benefit-firm-5036601</guid>
-    <pubDate>Wed, 18 Nov 2026 15:51:59 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>BX</category>
-  </item>
-  <item>
-    <title>Greece stocks lower at close of trade; Athens General Composite down 2.01%</title>
-    <link>https://www.investing.com/news/stock-market-news/greece-stocks-lower-at-close-of-trade-athens-general-composite-down-201-5036600</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/greece-stocks-lower-at-close-of-trade-athens-general-composite-down-201-5036600</guid>
-    <pubDate>Wed, 18 Nov 2026 15:50:03 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
     
   </item>
   <item>
-    <title>Stocks making the biggest moves Wednesday: Nvidia, Take-Two Interactive, Lowe&#x27;s &amp; more</title>
-    <link>https://www.cnbc.com/2026/11/18/stocks-moving-the-most-today-live-updates.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/stocks-moving-the-most-today-live-updates.html</guid>
-    <pubDate>Wed, 18 Nov 2026 15:49:49 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Follow along as CNBC covers the biggest stock market moves of the day.</description>
-    <category>NVDA</category><category>LOW</category><category>TTWO</category>
-  </item>
-  <item>
-    <title>Nvidia sinks after earnings, dragging down neoclouds</title>
-    <link>https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html</guid>
-    <pubDate>Wed, 18 Nov 2026 15:48:12 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Nvidia&#x27;s earnings come at a tumultuous time for the company.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Target shares rise 5% as retailer posts best sales growth in five years, hikes guidance</title>
-    <link>https://www.cnbc.com/2026/11/18/target-tgt-q3-2026-earnings.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/target-tgt-q3-2026-earnings.html</guid>
-    <pubDate>Wed, 18 Nov 2026 15:47:44 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Target beat third-quarter sales expectations and raised its guidance as it continues a turnaround effort.</description>
-    
-  </item>
-  <item>
-    <title>Nvidia’s booming demand is ‘hard to ignore,’ but these four questions loom over the stock</title>
-    <link>https://www.marketwatch.com/story/what-wall-street-analysts-are-now-saying-after-nvidias-beat-and-raise-quarter-9311c85d?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/what-wall-street-analysts-are-now-saying-after-nvidias-beat-and-raise-quarter-9311c85d?mod=mw_rss_topstories</guid>
-    <pubDate>Wed, 18 Nov 2026 15:42:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>Nvidia investors face uncertainty around CEO succession, the AI ecosystem, export controls and China.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Lowe&#x27;s posts strong online sales, raises outlook despite slow housing market</title>
-    <link>https://www.cnbc.com/2026/11/18/lowes-low-q3-2026-earnings.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/lowes-low-q3-2026-earnings.html</guid>
-    <pubDate>Wed, 18 Nov 2026 15:39:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Lowe&#x27;s said it saw strength in online sales during its quarter that contributed to a guidance raise for the full year.</description>
-    <category>LOW</category>
-  </item>
-  <item>
-    <title>German judge proposes dropping Movie2k case if operator hands over $2.56 billion in bitcoin</title>
-    <link>https://www.coindesk.com/business/2026/11/18/german-judge-proposes-dropping-movie2k-case-if-operator-hands-over-usd2-56-billion-in-bitcoin</link>
-    <guid isPermaLink="false">https://www.coindesk.com/business/2026/11/18/german-judge-proposes-dropping-movie2k-case-if-operator-hands-over-usd2-56-billion-in-bitcoin</guid>
-    <pubDate>Wed, 18 Nov 2026 15:38:38 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
-    <description>Prosecutors estimate the defendant still holds 56,000 BTC, meaning the proposed deal would leave him with roughly $1 billion.</description>
-    <category>BTC</category>
-  </item>
-  <item>
-    <title>Deutsche Bank Names Top North America Telecom Services Stock</title>
-    <link>https://www.investing.com/news/stock-market-news/deutsche-bank-names-top-north-america-telecom-services-stock-5036574</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/deutsche-bank-names-top-north-america-telecom-services-stock-5036574</guid>
-    <pubDate>Wed, 18 Nov 2026 15:36:20 +0000</pubDate>
+    <title>Patching in the AI age may underlie some of the major tech outages, experts say</title>
+    <link>https://www.investing.com/news/stock-market-news/patching-in-the-ai-age-may-underlie-some-of-the-major-tech-outages-experts-say-5036726</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/patching-in-the-ai-age-may-underlie-some-of-the-major-tech-outages-experts-say-5036726</guid>
+    <pubDate>Wed, 18 Nov 2026 17:12:36 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
     <description></description>
     
@@ -425,37 +290,172 @@
     <title>Vance scraps schedule to address tech outages as Trump admin insists incidents aren&#x27;t linked</title>
     <link>https://www.cnbc.com/2026/11/18/trump-tech-outages-nsa-faa-microsoft.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/trump-tech-outages-nsa-faa-microsoft.html</guid>
-    <pubDate>Wed, 18 Nov 2026 15:35:37 +0000</pubDate>
+    <pubDate>Wed, 18 Nov 2026 17:11:11 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>Recent disruptions include a nationwide ground stop, Microsoft Outlook outage and a reported blackout of the National Security Agency&#x27;s communications network.</description>
     <category>MSFT</category>
   </item>
   <item>
-    <title>‘I felt so seen’: Why families across America are laughing — and crying — over SNL’s ‘Sister’ sketch</title>
-    <link>https://www.marketwatch.com/story/so-sad-and-so-true-has-your-family-talked-about-snls-sister-sketch-yet-19bf9d67?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/so-sad-and-so-true-has-your-family-talked-about-snls-sister-sketch-yet-19bf9d67?mod=mw_rss_topstories</guid>
-    <pubDate>Wed, 18 Nov 2026 15:32:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>The late-night comedy sketch does the impossible by making female caregivers feel seen.</description>
+    <title>AT&amp;T vs. Verizon: Total Revenue Volume and Recent Growth for Two Phone Network Giants</title>
+    <link>https://www.fool.com/coverage/charts/2026/11/18/at-and-t-vs-verizon-total-revenue-volume-and-recent-growth-for-two-phone-network-giants/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/coverage/charts/2026/11/18/at-and-t-vs-verizon-total-revenue-volume-and-recent-growth-for-two-phone-network-giants/?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:10:02 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Verizon has held the top revenue line in every tracked quarter, but AT&amp;T&#x27;s year-over-year growth has been picking up pace toward the latest periods.</description>
+    <category>T</category><category>VZ</category>
+  </item>
+  <item>
+    <title>How Hard Was It To Hold ATI Stock?</title>
+    <link>https://www.trefis.com/stock/ati/articles/626269/how-hard-was-it-to-hold-ati-stock/2026-11-18?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/ati/articles/626269/how-hard-was-it-to-hold-ati-stock/2026-11-18?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:09:57 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Today&#x27;s big story: Anthropic IPO: Priced For 2031, Or 2036.</description>
+    <category>ATI</category>
+  </item>
+  <item>
+    <title>What Would It Take For Pinterest Stock To Reach Its High Again?</title>
+    <link>https://www.trefis.com/stock/pins/articles/626263/what-would-it-take-for-pinterest-stock-to-reach-its-high-again/2026-11-18?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/pins/articles/626263/what-would-it-take-for-pinterest-stock-to-reach-its-high-again/2026-11-18?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:09:57 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Today&#x27;s big story: Anthropic IPO: Priced For 2031, Or 2036.</description>
     
   </item>
   <item>
-    <title>Hong Kong wants banks to use AI to catch crypto crime before money disappears</title>
-    <link>https://www.coindesk.com/business/2026/11/18/hong-kong-wants-banks-to-use-ai-to-catch-crypto-crime-before-money-disappears</link>
-    <guid isPermaLink="false">https://www.coindesk.com/business/2026/11/18/hong-kong-wants-banks-to-use-ai-to-catch-crypto-crime-before-money-disappears</guid>
-    <pubDate>Wed, 18 Nov 2026 15:23:18 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
-    <description>As Hong Kong pushes banks to use AI to combat crypto crime, experts say the technology must detect suspicious transfers without putting customer funds at risk.</description>
+    <title>Time to change your passwords, and maybe everything else, too</title>
+    <link>https://www.americanbanker.com/news/time-to-change-your-passwords-and-maybe-everything-else-too?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.americanbanker.com/news/time-to-change-your-passwords-and-maybe-everything-else-too?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:09:43 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>This week’s spate of seemingly AI-related breakdowns is just the anagnorisis of a world that is already all around us.</description>
     
   </item>
   <item>
-    <title>‘GTA VI’ publisher Take-Two jumps as gamers relish blockbuster release</title>
-    <link>https://www.cnbc.com/2026/11/18/gta-vi-publisher-take-two-jumps-as-gamers-relish-blockbuster-release.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/gta-vi-publisher-take-two-jumps-as-gamers-relish-blockbuster-release.html</guid>
-    <pubDate>Wed, 18 Nov 2026 15:22:29 +0000</pubDate>
+    <title>Dollar Gains on Hawkish Fed Comments</title>
+    <link>https://www.nasdaq.com/articles/dollar-gains-hawkish-fed-comments</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/dollar-gains-hawkish-fed-comments</guid>
+    <pubDate>Wed, 18 Nov 2026 17:09:22 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The dollar index (DXY00 ) climbed to a 19-month high today and is up +0.27%. Hawkish comments today from Fed Governor Christopher Waller boosted the dollar when he said inflation is moving in the wrong direction and the Fed should…</description>
+    
+  </item>
+  <item>
+    <title>CoreWeave Sinks 5% After Nvidia Earnings as Kress Vows “A Very Strong Look” at Neocloud Financing</title>
+    <link>https://www.tikr.com/blog/coreweave-sinks-5-after-nvidia-earnings-as-kress-vows-a-very-strong-look-at-neocloud-financing?ref=yahoofinance&amp;tlnk=yf-261118-25647mpv&amp;.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.tikr.com/blog/coreweave-sinks-5-after-nvidia-earnings-as-kress-vows-a-very-strong-look-at-neocloud-financing?ref=yahoofinance&amp;tlnk=yf-261118-25647mpv&amp;.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:09:09 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Key TakeawaysCoreWeave fell 5% today after Nvidia’s beat-and-raise quarter. Nvidia’s interim CEO said it’s taking “a very strong look” at which companies it helps finance, and its neocloud agreements fell to $32 billion.</description>
+    <category>NVDA</category><category>CRWV</category>
+  </item>
+  <item>
+    <title>Hedge funds eye Europe-over-US volatility trade as S&amp;P 500 options reprice</title>
+    <link>https://www.investing.com/news/stock-market-news/hedge-funds-eye-europeoverus-volatility-trade-as-sp-500-options-reprice-93CH-5036724</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/hedge-funds-eye-europeoverus-volatility-trade-as-sp-500-options-reprice-93CH-5036724</guid>
+    <pubDate>Wed, 18 Nov 2026 17:08:58 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>SPY</category>
+  </item>
+  <item>
+    <title>U.K. stocks lower at close of trade; Investing.com United Kingdom 100 down 1.34%</title>
+    <link>https://www.investing.com/news/stock-market-news/uk-stocks-lower-at-close-of-trade-investingcom-united-kingdom-100-down-134-5036723</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/uk-stocks-lower-at-close-of-trade-investingcom-united-kingdom-100-down-134-5036723</guid>
+    <pubDate>Wed, 18 Nov 2026 17:08:53 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Top Midday Stories: Nvidia Shares Fall Despite Strong Earnings Results; Anthropic Reportedly Considering Raising IPO Price Above $80</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/top-midday-stories-nvidia-shares-170851929.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/top-midday-stories-nvidia-shares-170851929.html?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:08:51 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>All three major US stock indexes were down in late-morning trading Wednesday, as investors look back</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Walmart Or Amazon: Which Is The Tech Stock Now?</title>
+    <link>https://www.trefis.com/stock/wmt/articles/626060/walmart-or-amazon-which-is-the-tech-stock-now/2026-11-18?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/wmt/articles/626060/walmart-or-amazon-which-is-the-tech-stock-now/2026-11-18?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:08:40 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Today&#x27;s big story: Anthropic IPO: Priced For 2031, Or 2036.</description>
+    <category>AMZN</category><category>WMT</category>
+  </item>
+  <item>
+    <title>Spain stocks lower at close of trade; IBEX 35 down 1.26%</title>
+    <link>https://www.investing.com/news/stock-market-news/spain-stocks-lower-at-close-of-trade-ibex-35-down-126-5036722</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/spain-stocks-lower-at-close-of-trade-ibex-35-down-126-5036722</guid>
+    <pubDate>Wed, 18 Nov 2026 17:08:28 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Nvidia Has Plunged 32% From Its Peak. Here’s the Price at Which I’d Buy.</title>
+    <link>https://www.fool.com/investing/2026/11/18/nvidia-has-plunged-32-from-its-peak-heres-the-price-at-which-id-buy/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/18/nvidia-has-plunged-32-from-its-peak-heres-the-price-at-which-id-buy/?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:03:02 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Never forget that time in the market beats trying to time the market.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Why Sandisk Stock Dropped Again</title>
+    <link>https://www.fool.com/investing/2026/11/18/why-sandisk-stock-dropped-again/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/18/why-sandisk-stock-dropped-again/?.tsrc=rss</guid>
+    <pubDate>Wed, 18 Nov 2026 17:02:55 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Zacks thinks Sandisk stock will double from here. So why did Zacks downgrade Sandisk?</description>
+    <category>SNDK</category>
+  </item>
+  <item>
+    <title>Ford starts U.S. battery cell production using Chinese tech amid geopolitical tensions</title>
+    <link>https://www.cnbc.com/2026/11/18/ford-us-battery-cells-catl-tech.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/ford-us-battery-cells-catl-tech.html</guid>
+    <pubDate>Wed, 18 Nov 2026 17:02:53 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Shares of Take-Two Interactive jumped more than 6% in premarket trading, with investors betting that glowing reviews from critics and players will propel sales</description>
-    <category>TTWO</category>
+    <description>Ford has started U.S. production and shipments of battery cells for its next-generation EVs using technologies licensed by Chinese battery giant CATL.</description>
+    <category>F</category>
+  </item>
+  <item>
+    <title>Jeffries wins Democratic House speaker race, on track to make history in January</title>
+    <link>https://www.cnbc.com/2026/11/18/jeffries-house-speaker-congress.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/18/jeffries-house-speaker-congress.html</guid>
+    <pubDate>Wed, 18 Nov 2026 17:00:26 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Jeffries will still need to win a floor vote in January to officially become House speaker.</description>
+    
+  </item>
+  <item>
+    <title>Soybeans Fading Back on Wednesday Morning</title>
+    <link>https://www.nasdaq.com/articles/soybeans-fading-back-wednesday-morning</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/soybeans-fading-back-wednesday-morning</guid>
+    <pubDate>Wed, 18 Nov 2026 16:55:05 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Soybeans are trading with Wednesday morning are posting Wednesday AM losses of 4 to 5 cents. Futures rounded out Tuesday trade with contracts fractionally to 3 ½ cents lower in the front months and fractionally to 6 cents higher in…</description>
+    
+  </item>
+  <item>
+    <title>Jim Cramer looks at what turned the market lower and where stocks could go next</title>
+    <link>https://www.cnbc.com/investingclub/2026/11/18/cramer-looks-at-what-turned-the-market-lower-where-stocks-could-go-next.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/investingclub/2026/11/18/cramer-looks-at-what-turned-the-market-lower-where-stocks-could-go-next.html</guid>
+    <pubDate>Wed, 18 Nov 2026 16:54:42 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>The Investing Club holds its &quot;Morning Meeting&quot; every weekday at 10:20 a.m. ET.</description>
+    
+  </item>
+  <item>
+    <title>Wheat Falling Back on Wednesday Morning</title>
+    <link>https://www.nasdaq.com/articles/wheat-falling-back-wednesday-morning</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-falling-back-wednesday-morning</guid>
+    <pubDate>Wed, 18 Nov 2026 16:50:39 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Wheat is showing weakness across the three markets, down 1 to 7 ½ cents. The wheat complex was in rally mode across the three exchanges on Tuesday, following Black Sea events early on Tuesday. Chicago SRW futures settled with contracts…</description>
+    
   </item>
 </channel>
 </rss>
