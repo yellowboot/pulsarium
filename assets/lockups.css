@@ -1,0 +1,204 @@
+/* /lock-up-calendar/: the "next to unlock" cards, the timeline of padlocks and the company cards (lockups.js).
+   Colours come from the page's theme variables, so Neon and Calm both apply; the Calm-only corrections are scoped to
+   :root[data-color-theme='calm'] at the end. Everything animates once when it scrolls into view; reduced motion shows
+   the final state at once. */
+.lu { --lu-acc: var(--accent, #00f0ff); --lu-mag: var(--magenta, #ff2bd6); --lu-pos: var(--pos, #3dffa2);
+  --lu-mono: var(--font-mono, 'JetBrains Mono', monospace); --lu-name-w: 190px; position: relative; }
+.lu-sec-title { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 0 0 14px; }
+.lu-sec-title h2 { margin: 0; }
+.lu-sec-title span { font-family: var(--lu-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--text-low); }
+
+/* ---------- 1. next to unlock ---------- */
+.lu-next { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-bottom: 26px; }
+.lu-card { position: relative; display: grid; grid-template-columns: 74px 1fr; gap: 14px; align-items: center; padding: 16px 16px 15px;
+  opacity: 0; transform: translateY(14px); }
+.lu-next.is-in .lu-card { animation: lu-rise .6s cubic-bezier(.2, .8, .2, 1) forwards; animation-delay: calc(var(--i) * 110ms); }
+.lu-ring { position: relative; width: 74px; height: 74px; }
+.lu-ring svg { width: 74px; height: 74px; transform: rotate(-90deg); }
+.lu-ring circle { fill: none; stroke-width: 5; }
+.lu-ring .bg { stroke: color-mix(in srgb, var(--lu-acc) 14%, transparent); }
+.lu-ring .fg { stroke: var(--lu-acc); stroke-linecap: round; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--lu-acc) 60%, transparent));
+  transition: stroke-dashoffset 1.6s cubic-bezier(.2, .8, .2, 1) .3s; }
+.lu-ring b { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; font-family: var(--lu-mono);
+  font-size: 22px; line-height: 1; color: var(--text-hi); }
+.lu-ring b small { display: block; margin-top: 4px; font-size: 11px; font-weight: 600; letter-spacing: .12em; color: var(--text-mid); }
+.lu-card .lu-tk { margin-bottom: 6px; }
+.lu-card h3 { margin: 0 0 4px; font-size: 15px; line-height: 1.25; color: var(--text-hi); }
+.lu-card p { margin: 0; font-size: 12.5px; line-height: 1.45; color: var(--text-mid); }
+.lu-card p strong { color: var(--text-hi); font-weight: 600; }
+.lu-card.is-first::after { content: ''; position: absolute; inset: -1px; border-radius: inherit; pointer-events: none;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--lu-acc) 55%, transparent), 0 0 26px color-mix(in srgb, var(--lu-acc) 22%, transparent);
+  animation: lu-breathe 2.8s ease-in-out infinite; }
+
+/* ticker badge */
+.lu-tk { flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px 3px 6px; border-radius: 999px; font-family: var(--lu-mono);
+  font-size: 11px; font-weight: 600; letter-spacing: .08em; color: var(--lu-acc);
+  background: color-mix(in srgb, var(--lu-acc) 10%, transparent); border: 1px solid color-mix(in srgb, var(--lu-acc) 32%, transparent); }
+.lu-tk::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; box-shadow: 0 0 8px currentColor; }
+
+/* ---------- 2. timeline ---------- */
+.lu-chart { position: relative; padding: 16px 18px 12px; margin-bottom: 26px; }
+/* no sideways scrolling: the tracks shrink with the screen; the right padding keeps the last padlocks inside */
+.lu-scroll { overflow: visible; }
+.lu-grid { position: relative; padding-right: 16px; }
+.lu-axis, .lu-lane { display: grid; grid-template-columns: var(--lu-name-w) 1fr; align-items: center; }
+.lu-axis { height: 26px; }
+.lu-axis .lu-track { height: 26px; }
+.lu-month { position: absolute; top: 4px; transform: translateX(-50%); font-family: var(--lu-mono); font-size: 10px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--text-low); white-space: nowrap; }
+.lu-month.is-year { color: var(--text-mid); }
+.lu-track { position: relative; height: 46px; }
+.lu-lane { opacity: 0; transform: translateX(-10px); border-top: 1px solid var(--line); border-radius: 10px; transition: background .2s; }
+.lu-chart.is-in .lu-lane { animation: lu-in .5s ease-out forwards; animation-delay: calc(var(--i) * 70ms); }
+.lu-lane:hover { background: color-mix(in srgb, var(--lu-acc) 5%, transparent); }
+.lu-name { display: flex; align-items: center; gap: 8px; min-width: 0; padding-right: 10px; }
+.lu-name span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; color: var(--text); }
+.lu-gridline { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--line); opacity: .55; }
+
+/* the locked stretch from the IPO to the last release, the IPO mark and the padlocks */
+.lu-bar { position: absolute; top: 50%; height: 4px; margin-top: -2px; border-radius: 4px; transform-origin: left center; transform: scaleX(0);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--lu-acc) 70%, transparent), color-mix(in srgb, var(--lu-mag) 70%, transparent));
+  box-shadow: 0 0 10px color-mix(in srgb, var(--lu-acc) 35%, transparent); }
+.lu-chart.is-in .lu-bar { animation: lu-grow 1s cubic-bezier(.2, .8, .2, 1) forwards; animation-delay: calc(var(--i) * 70ms + 120ms); }
+.lu-bar.is-free { background: color-mix(in srgb, var(--text-low) 40%, transparent); box-shadow: none; }
+.lu-ipo { position: absolute; top: 50%; width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px; transform: rotate(45deg); border-radius: 2px;
+  background: var(--text-hi); box-shadow: 0 0 10px color-mix(in srgb, var(--text-hi) 50%, transparent); }
+.lu-lock { position: absolute; top: 50%; width: var(--s); height: var(--s); padding: 0; border: 0; background: none; cursor: pointer;
+  color: var(--lu-acc); transform: translate(-50%, -50%) scale(0); }
+.lu-chart.is-in .lu-lock { animation: lu-pop .5s cubic-bezier(.3, 1.6, .5, 1) forwards; animation-delay: calc(var(--i) * 70ms + var(--d)); }
+.lu-lock svg { width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 0 6px color-mix(in srgb, currentColor 55%, transparent)); }
+.lu-lock .lu-shackle { transform-box: view-box; transform-origin: 17px 11px; }
+.lu-lock .lu-hole { fill: var(--bg-0, #04050c); }
+.lu-lock.is-passed { color: var(--text-low); }
+.lu-lock.is-passed svg { filter: none; opacity: .75; }
+.lu-chart.is-in .lu-lock.is-passed .lu-shackle { animation: lu-open .55s ease-out forwards; animation-delay: calc(var(--i) * 70ms + var(--d) + 450ms); }
+.lu-lock.is-soon { color: var(--lu-mag); }
+.lu-lock.is-next::after { content: ''; position: absolute; inset: -40%; border-radius: 50%; pointer-events: none;
+  border: 1.5px solid currentColor; opacity: 0; animation: lu-ping 2.2s ease-out infinite; animation-delay: 1.4s; }
+.lu-lock.is-tbd { color: var(--text-mid); }
+.lu-lock.is-tbd svg { opacity: .8; }
+.lu-lock.is-tbd::before { content: '?'; position: absolute; right: -7px; top: -8px; font: 700 10px/1 var(--lu-mono); color: var(--text-hi); }
+.lu-lock:focus-visible { outline: 2px solid var(--lu-acc); outline-offset: 3px; border-radius: 6px; }
+/* steps that wait for a report date sit in the last column, after a dashed line */
+.lu-tbdzone { position: absolute; top: 6px; bottom: 6px; border-left: 1px dashed color-mix(in srgb, var(--text-low) 60%, transparent); }
+.lu-tbdlabel { position: absolute; top: 4px; transform: translateX(8px); font-family: var(--lu-mono); font-size: 10px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--text-low); white-space: nowrap; }
+
+/* today */
+.lu-now { position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: var(--lu-acc);
+  box-shadow: 0 0 12px var(--lu-acc); opacity: .85; animation: lu-glow 2.4s ease-in-out infinite; }
+.lu-nowlabel { position: absolute; top: 2px; transform: translateX(-50%); padding: 2px 7px; border-radius: 999px; font-family: var(--lu-mono);
+  font-size: 10px; font-weight: 600; letter-spacing: .12em; color: var(--bg-0, #04050c); background: var(--lu-acc); white-space: nowrap; z-index: 2; }
+
+/* tooltip */
+.lu-tip { position: absolute; z-index: 5; width: 260px; padding: 12px 14px; border-radius: 14px; pointer-events: none; opacity: 0;
+  transform: translateY(6px); transition: opacity .15s, transform .15s; background: color-mix(in srgb, var(--bg-1, #070a16) 92%, transparent);
+  border: 1px solid color-mix(in srgb, var(--lu-acc) 35%, transparent); box-shadow: 0 16px 40px rgba(0, 0, 0, .45); backdrop-filter: blur(10px); }
+.lu-tip.is-on { opacity: 1; transform: none; }
+.lu-tip b { display: block; font-size: 13.5px; color: var(--text-hi); margin-bottom: 2px; }
+.lu-tip em { display: block; font-style: normal; font-family: var(--lu-mono); font-size: 11px; letter-spacing: .06em; color: var(--lu-acc); margin-bottom: 6px; }
+.lu-tip p { margin: 0; font-size: 12px; line-height: 1.45; color: var(--text-mid); }
+.lu-legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 10px 0 0; font-size: 12px; color: var(--text-low); }
+.lu-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.lu-legend svg { width: 14px; height: 14px; }
+
+/* ---------- 3. company cards (rendered by site_pages.py, enhanced by lockups.js) ---------- */
+.lu-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+/* the company as a ring (drawn by site_pages.py): full circle = all its shares, an arc per release step */
+.lu-co-main { display: grid; grid-template-columns: 116px 1fr; gap: 16px; align-items: center; }
+.lu-orb { position: relative; width: 116px; height: 116px; }
+.lu-orb svg { width: 116px; height: 116px; transform: rotate(-90deg); overflow: visible; }
+.lu-orb circle { fill: none; stroke-width: 11; }
+.lu-orb .base { stroke: color-mix(in srgb, var(--text-low) 18%, transparent); }
+.lu-orb .arc { stroke: var(--lu-acc); cursor: pointer; transition: stroke-width .2s;
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--lu-acc) 55%, transparent)); }
+.lu-orb .arc:hover { stroke-width: 15; }
+.lu-orb .arc.done { stroke: color-mix(in srgb, var(--text-low) 60%, transparent); filter: none; }
+.lu-orb .arc.tbd { stroke: color-mix(in srgb, var(--lu-acc) 42%, transparent); filter: none; }
+.lu-orb .arc.soon, .lu-orb .arc.next { stroke: var(--lu-mag); filter: drop-shadow(0 0 5px color-mix(in srgb, var(--lu-mag) 60%, transparent)); }
+.lu.js .lu-list:not(.is-in) .arc { opacity: 0; }
+.lu-list.is-in .arc { animation: lu-arc 1s cubic-bezier(.2, .8, .2, 1) both; animation-delay: calc(var(--k) * 90ms + 100ms); }
+.lu-list.is-in .arc.next { animation: lu-arc 1s cubic-bezier(.2, .8, .2, 1) both, lu-arc-pulse 2.2s ease-in-out infinite;
+  animation-delay: calc(var(--k) * 90ms + 100ms), 1.4s; }
+.lu-orb-c { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; pointer-events: none; }
+.lu-orb-c b { font-family: var(--lu-mono); font-size: 30px; font-weight: 600; line-height: 1; color: var(--text-hi); }
+.lu-orb-c b.free { font-size: 15px; letter-spacing: .1em; color: var(--text-low); }
+.lu-orb-c b.free + small { font-size: 10px; color: var(--text-low); }
+.lu-orb-c small { margin-top: 5px; line-height: 1.2; font-family: var(--lu-mono); font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-mid); }
+.lu-co:has(.arc.next.soon) .lu-orb-c b { color: var(--lu-mag); text-shadow: 0 0 14px color-mix(in srgb, var(--lu-mag) 50%, transparent); }
+.lu-co-txt h3 { margin: 6px 0 4px; }
+.lu-line { margin: 0 0 4px; font-size: 13px; color: var(--text-mid); }
+.lu-line b { color: var(--text-hi); font-weight: 600; }
+/* the share of the company a release frees, in the colour of the next-release arc */
+.lu .lu-pct { color: var(--lu-mag); font-weight: 700; text-shadow: 0 0 10px color-mix(in srgb, var(--lu-mag) 45%, transparent); }
+.lu-more { margin-top: 12px; padding-top: 8px; border-top: 1px solid var(--line); }
+.lu-more summary { cursor: pointer; font-family: var(--lu-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--lu-acc); }
+.lu-more .lu-steps { margin-top: 10px; }
+.lu-src { margin: 8px 0 0; font-size: 12px; color: var(--text-low); }
+.lu-src a { color: var(--lu-acc); }
+.lu-key { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: -4px 0 14px; font-size: 12px; color: var(--text-mid); }
+.lu-key span { display: inline-flex; align-items: center; gap: 7px; }
+.lu-key i { width: 22px; height: 6px; border-radius: 6px; }
+.lu-key .k-up { background: var(--lu-acc); box-shadow: 0 0 8px color-mix(in srgb, var(--lu-acc) 55%, transparent); }
+.lu-key .k-next { background: var(--lu-mag); box-shadow: 0 0 8px color-mix(in srgb, var(--lu-mag) 55%, transparent); }
+.lu-key .k-done { background: color-mix(in srgb, var(--text-low) 60%, transparent); }
+.lu-key .k-base { background: color-mix(in srgb, var(--text-low) 18%, transparent); }
+@keyframes lu-arc { from { stroke-dasharray: 0 400; } }
+@keyframes lu-arc-pulse { 50% { stroke-width: 15; } }
+.lu-co { padding: 16px 18px 14px; }
+.lu-co header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+.lu-co h3 { margin: 0; font-size: 16px; color: var(--text-hi); }
+.lu-meta { margin: 0 0 10px; font-family: var(--lu-mono); font-size: 11px; letter-spacing: .04em; color: var(--text-low); }
+.lu-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+.lu-steps li { display: grid; grid-template-columns: 1fr auto; gap: 3px 10px; align-items: center; padding-top: 7px; border-top: 1px solid var(--line); font-size: 12.5px; line-height: 1.45; color: var(--text-mid); }
+.lu-steps li > span:nth-child(2) { grid-column: 1 / -1; grid-row: 2; }
+.lu-steps time, .lu-steps .lu-date { font-family: var(--lu-mono); font-size: 11.5px; color: var(--text-hi); }
+.lu-steps strong { color: var(--text); font-weight: 600; }
+.lu-chip { font-family: var(--lu-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; padding: 2px 7px; border-radius: 999px; white-space: nowrap; }
+.lu-chip.up { color: var(--lu-acc); background: color-mix(in srgb, var(--lu-acc) 10%, transparent); }
+.lu-chip.soon { color: var(--lu-mag); background: color-mix(in srgb, var(--lu-mag) 12%, transparent); }
+.lu-chip.done { color: var(--text-low); background: color-mix(in srgb, var(--text-low) 12%, transparent); }
+.lu-chip.tbd { color: var(--text-mid); background: color-mix(in srgb, var(--text-mid) 10%, transparent); }
+.lu-co footer { margin-top: 10px; font-size: 12px; color: var(--text-low); }
+.lu-co footer a { color: var(--lu-acc); }
+.lu-co .lu-note { margin: 8px 0 0; font-size: 12px; line-height: 1.45; color: var(--text-low); }
+
+@keyframes lu-rise { to { opacity: 1; transform: none; } }
+@keyframes lu-in { to { opacity: 1; transform: none; } }
+@keyframes lu-grow { to { transform: scaleX(1); } }
+@keyframes lu-pop { to { transform: translate(-50%, -50%) scale(1); } }
+@keyframes lu-open { 0% { transform: none; } 60% { transform: translateY(-3px) rotate(-38deg); } 100% { transform: translateY(-2px) rotate(-30deg); } }
+@keyframes lu-ping { 0% { transform: scale(.55); opacity: .9; } 100% { transform: scale(1.35); opacity: 0; } }
+@keyframes lu-glow { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+@keyframes lu-breathe { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+
+@media (max-width: 700px) {
+  .lu { --lu-name-w: 74px; }
+  .lu-name > span:not(.lu-tk) { display: none; }
+  .lu-lock { width: calc(var(--s) * .75); height: calc(var(--s) * .75); }
+  .lu-chart { padding: 12px 10px 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lu-card, .lu-lane { opacity: 1; transform: none; animation: none !important; }
+  .lu-bar { transform: scaleX(1); animation: none !important; }
+  .lu-lock { transform: translate(-50%, -50%) scale(1); animation: none !important; }
+  .lu-lock.is-passed .lu-shackle { transform: translateY(-2px) rotate(-30deg); animation: none !important; }
+  .lu-lock.is-next::after, .lu-now, .lu-card.is-first::after { animation: none; }
+  .lu-ring .fg { transition: none; }
+  .arc { animation: none !important; opacity: 1 !important; }
+}
+
+/* Calm: lighter glows, solid tooltip */
+:root[data-color-theme='calm'] .lu-tip { background: #fff; box-shadow: 0 18px 44px rgba(27, 31, 59, .16); }
+:root[data-color-theme='calm'] .lu-bar { box-shadow: none; }
+:root[data-color-theme='calm'] .lu-lock svg { filter: drop-shadow(0 2px 4px rgba(27, 31, 59, .18)); }
+:root[data-color-theme='calm'] .lu-lock .lu-hole { fill: #fff; }
+:root[data-color-theme='calm'] .lu-now { box-shadow: 0 0 6px color-mix(in srgb, var(--lu-acc) 50%, transparent); }
+:root[data-color-theme='calm'] .lu-nowlabel { color: #fff; }
+:root[data-color-theme='calm'] .lu-ipo { box-shadow: none; }
+:root[data-color-theme='calm'] .lu-ring .fg { filter: none; }
+:root[data-color-theme='calm'] .lu-tk::before { box-shadow: none; }
+:root[data-color-theme='calm'] .lu-orb .arc { filter: none; }
+:root[data-color-theme='calm'] .lu-co:has(.arc.next.soon) .lu-orb-c b { text-shadow: none; }
+:root[data-color-theme='calm'] .lu-key i { box-shadow: none; }
+:root[data-color-theme='calm'] .lu .lu-pct { text-shadow: none; }

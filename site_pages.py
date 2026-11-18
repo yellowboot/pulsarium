@@ -814,7 +814,182 @@ def earnings_season() -> dict:
     }
 
 
+LOCKUPS_JSON = "assets/lockups.json"
+NYSE_HOLIDAYS = {
+    "2025-11-27", "2025-12-25", "2026-01-01", "2026-01-19", "2026-02-16", "2026-04-03", "2026-05-25", "2026-06-19",
+    "2026-07-03", "2026-09-07", "2026-11-26", "2026-12-25", "2027-01-01", "2027-01-18", "2027-02-15", "2027-03-26",
+    "2027-05-31", "2027-06-18", "2027-07-05", "2027-09-06", "2027-11-25", "2027-12-24", "2028-01-17", "2028-02-21",
+    "2028-04-14", "2028-05-29", "2028-06-19", "2028-07-04", "2028-09-04", "2028-11-23", "2028-12-25",
+}
+_LOCK_ICON = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11V8a5 5 0 0 1 10 0v3" fill="none" stroke="currentColor" '
+              'stroke-width="2.4" stroke-linecap="round"{open}/><rect x="4.5" y="11" width="15" height="10.5" rx="2.6" fill="currentColor"/></svg>')
+
+
+def lockup_calendar() -> dict:
+    """/lock-up-calendar/: the lock-ups of US IPOs that raised $1B+, typed by hand from each final prospectus into
+    assets/lockups.json. The company cards are rendered here (they read without JavaScript and for search engines);
+    lockups.js adds the "next to unlock" cards, the padlock timeline and keeps the status chips current."""
+    from datetime import datetime, timedelta, timezone
+
+    with open(LOCKUPS_JSON, encoding="utf-8") as f:
+        data = json.load(f)
+    # today in New York without tz data (Windows Python has none): US DST runs from the 2nd Sunday of March to the
+    # 1st Sunday of November, both at 2:00 local
+    now = datetime.now(timezone.utc).replace(tzinfo=None)
+    y = now.year
+    dst_on = datetime(y, 3, 8 + (6 - datetime(y, 3, 8).weekday()) % 7, 7)
+    dst_off = datetime(y, 11, 1 + (6 - datetime(y, 11, 1).weekday()) % 7, 6)
+    today = (now - timedelta(hours=4 if dst_on <= now < dst_off else 5)).date().isoformat()
+
+    def day(d):
+        dt = datetime.fromisoformat(d)
+        return f"{dt:%b} {dt.day}, {dt.year}"
+
+    def qty(n):
+        if n >= 1e9:
+            return f"{n / 1e9:.2f}".rstrip("0").rstrip(".") + "B"
+        if n >= 1e6:
+            return (f"{n / 1e6:.0f}" if n >= 1e8 else f"{n / 1e6:.1f}".rstrip("0").rstrip(".")) + "M"
+        return f"{n:,.0f}"
+
+    def size(s):
+        if s.get("pct") is not None:
+            return (f"{qty(s['shares'])} shares · " if s.get("shares") else "") + f"{s['pct']}% of the company"
+        return f"{qty(s['shares'])} shares" if s.get("shares") else "size not disclosed"
+
+    def free_day(d):
+        # lockups.json stores the first day the shares may be sold (moved past weekends and NYSE_HOLIDAYS when typed in)
+        return d
+
+    def chip(d):
+        if not d:
+            return "tbd", "Date TBD"
+        free = free_day(d)
+        if free < today:
+            return "done", "Released"
+        left = (datetime.fromisoformat(free) - datetime.fromisoformat(today)).days
+        return ("soon" if left <= 14 else "up"), ("Today" if left == 0 else f"In {left} d")
+
+    def next_up(c):
+        return min((s["date"] for s in c["steps"] if s.get("date") and free_day(s["date"]) >= today), default="9999")
+
+    # largest company first: all its shares at the IPO price (Anthropic at the midpoint until it is priced)
+    # companies whose lock-ups are all behind them go last
+    def all_done(c):
+        return all(st.get("date") and st["date"] < today for st in c["steps"])
+
+    companies = sorted(data["companies"], key=lambda c: (all_done(c), -(c.get("outstanding") or 0) * (c.get("price") or c.get("price_mid") or 0)))
+    import math
+
+    def orb(c, upcoming):
+        """The company as a ring: the whole circle is all its shares, each coloured arc one release step (by size, in
+        date order from the top): bright = still locked, faint = released, pink = next. Drawn here; lockups.css animates it."""
+        r, circ, gap = 44, 2 * math.pi * 44, 1.6
+        arcs, start = [], 0.0
+        steps = sorted(c["steps"], key=lambda s: s.get("date") or "9999")
+        for k, s in enumerate(steps):
+            length = circ * (s["pct"] / 100 if s.get("pct") is not None else 0.012)
+            cls = chip(s.get("date"))[0] + (" next" if s.get("date") == upcoming else "")
+            tip = f"{s['label']} · {day(s['date']) if s.get('date') else 'date TBD'} · {size(s)}"
+            arcs.append(f'<circle class="arc {cls}" cx="60" cy="60" r="{r}" style="--k:{k}" stroke-dasharray="{max(0.6, length - gap):.2f} {circ:.2f}" '
+                        f'stroke-dashoffset="{-start:.2f}" data-tip="{esc(tip)}"><title>{esc(tip)}</title></circle>')
+            start += length
+        if upcoming != "9999":
+            left = (datetime.fromisoformat(upcoming) - datetime.fromisoformat(today)).days
+            centre = f'<b data-date="{upcoming}">{left}</b><small>days</small>'
+        elif any(not s.get("date") for s in c["steps"]):
+            centre = "<b>TBD</b><small>next date</small>"
+        else:
+            centre = '<b class="free">FREE</b><small>released</small>'
+        return (f'<div class="lu-orb"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="base" cx="60" cy="60" r="{r}"/>'
+                f'{"".join(arcs)}</svg><div class="lu-orb-c">{centre}</div></div>')
+
+    cards = []
+    for c in companies:
+        rows = []
+        for s in c["steps"]:
+            cls, text = chip(s.get("date"))
+            trigger = f". {esc(s['trigger'])}" if s.get("trigger") else ""
+            sized = esc(size(s)).replace(f"{s['pct']}%", f'<b class="lu-pct">{s["pct"]}%</b>') if s.get("pct") is not None else esc(size(s))
+            rows.append(f'<li data-date="{esc(s.get("date") or "")}"><span class="lu-date">{day(s["date"]) if s.get("date") else "TBD"}</span>'
+                        f'<span><strong>{esc(s["label"])}</strong> — {sized}{trigger}</span>'
+                        f'<span class="lu-chip {cls}">{text}</span></li>')
+        raised = ("≈ " if c.get("raised_est") else "") + f"${c['raised'] / 1e9:.2f}".rstrip("0").rstrip(".") + "B"
+        price = f"${c['price']:g}" if c.get("price") else "price pending"
+        note = f'<p class="lu-note">{esc(c["note"])}</p>' if c.get("note") else ""
+        upcoming = next_up(c)
+        nx = next((s for s in c["steps"] if s.get("date") == upcoming), None)
+        if nx:
+            line = f'Next <b>{day(upcoming)[:-6]}</b>' + (f' · <b class="lu-pct">{nx["pct"]:g}%</b> of shares' if nx.get("pct") is not None else "")
+        elif any(not s.get("date") for s in c["steps"]):
+            line = "Next date set by an earnings report"
+        else:
+            line = "All shares released"
+        cards.append(f"""<article class="panel lu-co" id="{esc(c['ticker'].lower())}">
+  <div class="lu-co-main">{orb(c, upcoming)}
+    <div class="lu-co-txt"><span class="lu-tk">{esc(c['ticker'])}</span><h3>{esc(c['name'])}</h3>
+      <p class="lu-line">{line}</p><p class="lu-meta">IPO {day(c['ipo_date'])[:-6]} · {price} · {raised}</p></div></div>
+  <details class="lu-more"><summary>All steps ({len(c['steps'])})</summary><ol class="lu-steps">{''.join(rows)}</ol>{note}
+    <p class="lu-src">Source: <a href="{esc(c['sec'])}" target="_blank" rel="noopener">final prospectus on SEC EDGAR</a></p></details>
+</article>""")
+
+    nxt = sorted(((free_day(s["date"]), c, s) for c in companies for s in c["steps"]
+                  if s.get("date") and free_day(s["date"]) >= today), key=lambda r: r[0])
+    nxt_text = f" Next: {nxt[0][1]['name']}, shares free from {day(nxt[0][0])}." if nxt else ""
+    names = ", ".join(c["name"] for c in sorted(companies, key=lambda c: -c["raised"])[:3])
+    closed_icon = _LOCK_ICON.format(open="")
+    open_icon = _LOCK_ICON.format(open=' transform="rotate(-30 17 11)"')
+    legend = (f'<div class="lu-legend"><span>{closed_icon} Locked</span>'
+              f'<span>{open_icon} Released</span>'
+              '<span><span class="lu-ipo" style="position:static;margin:0 4px 0 2px;display:inline-block"></span> IPO day</span>'
+              '<span>? Date set by a future earnings report · far-off steps sit in the last column</span></div>')
+    body = (
+        '<header class="page-head feature-head"><span class="eyebrow">IPO lock-ups · US listings that raised $1B+</span>'
+        "<h1>Lock-up calendar: when IPO insiders can start selling</h1>"
+        '<p class="lead">After an IPO, founders, employees and early investors usually promise not to sell for a while. '
+        "This calendar shows when those promises end for every US IPO of the past year that raised $1 billion or more: "
+        "the date, the size and the exact terms from each company's prospectus.</p></header>"
+        f'<section class="lu" data-src="/assets/lockups.json?v=1">'
+        '<div hidden><div class="lu-sec-title"><h2>Next to unlock</h2><span>Days left · the ring shows the time already served</span></div>'
+        '<div class="lu-next"></div></div>'
+        '<div hidden><div class="lu-sec-title"><h2>The calendar</h2><span>One row per IPO · a bigger padlock frees a bigger share</span></div>'
+        f'<div class="panel lu-chart"><div class="lu-scroll"><div class="lu-grid"></div></div>{legend}'
+        '<div class="lu-tip" role="tooltip"></div></div></div>'
+        '<div class="lu-sec-title"><h2>Every IPO at a glance</h2><span>Full ring = all the company\'s shares · each arc = one release</span></div>'
+        '<div class="lu-key"><span><i class="k-up"></i>Still locked</span><span><i class="k-next"></i>Next release</span>'
+        '<span><i class="k-done"></i>Released</span><span><i class="k-base"></i>Free since the IPO</span></div>'
+        f'<div class="lu-list">{"".join(cards)}</div></section>'
+        + features("What a lock-up is", [
+            ("A promise not to sell", "Before an IPO, insiders and early investors sign lock-up agreements with the banks running "
+             "the deal: no selling for a set time, usually 180 days. It keeps a flood of shares off the market in the first months."),
+            ("Some unlock in steps", "Newer deals often open in stages: a slice after the first earnings report, more after the "
+             "next, or earlier if the stock trades well above the IPO price. Every stage is listed separately here."),
+            ("An unlock is not a sale", "When a lock-up ends, holders may sell; many don't. Prices sometimes weaken around large "
+             "releases, but the date alone says nothing about where a stock goes next."),
+        ])
+        + steps("How this calendar is built", [
+            ("The list", "US IPOs priced since November 2025 that raised at least $1 billion before the over-allotment option."),
+            ("The terms", "Read by hand from each company's final prospectus (Form 424B4) on SEC EDGAR, plus later filings for "
+             "early releases and waivers. Every card links to its source."),
+            ("The dates", "A step tied to an earnings report gets its date once the company announces when it reports; until "
+             f"then it shows as TBD. Dates are New York calendar days. Updated {day(data['updated'])}. This page is "
+             "information, not investment advice."),
+        ])
+        + closing_cta("Track the companies you own", "Create a free account: report dates, SEC filings, insider trades and news "
+                      "for your holdings in one place.")
+    )
+    return {
+        "path": "/lock-up-calendar/", "crumb": "Lock-up calendar",
+        "title": "IPO Lock-up Calendar — When Insiders Can Sell (" + names + ")",
+        "description": "Lock-up expiration dates for every US IPO of the past year that raised $1 billion or more: each release "
+                       "step, its size and the exact terms from the prospectus." + nxt_text,
+        "body": body,
+        "head": '<link rel="stylesheet" href="/assets/lockups.css?v=1">\n<script src="/assets/lockups.js?v=1" defer></script>\n',
+    }
+
+
 def all_pages() -> list:
-    pages = [portfolio_tracker(), dividend_tracker(), price_alerts(), import_hub(), why_pulsarium(), earnings_season()]
+    pages = [portfolio_tracker(), dividend_tracker(), price_alerts(), import_hub(), why_pulsarium(), earnings_season(),
+             lockup_calendar()]
     pages += [broker_page(slug, broker) for slug, broker in BROKERS.items()]
     return pages

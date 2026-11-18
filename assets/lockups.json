@@ -1,0 +1,624 @@
+{
+ "updated": "2026-11-18",
+ "about": "Lock-ups of US IPOs that raised $1B+ (base deal) since 2025-11-18, typed by hand from each final prospectus (424B4) and later filings. A step's date is the FIRST day the shares may be sold (a 'period ending N days after the prospectus' frees them on the next trading day). pct = share of all shares outstanding after the IPO.",
+ "companies": [
+  {
+   "ticker": "SPCX",
+   "name": "SpaceX",
+   "exchange": "Nasdaq",
+   "ipo_date": "2026-06-11",
+   "price": 135,
+   "raised": 75000000000,
+   "outstanding": 13159198508,
+   "sec": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm",
+   "steps": [
+    {
+     "date": "2026-08-06",
+     "label": "20% after the Q2 results",
+     "kind": "earnings",
+     "shares": 911500000,
+     "pct": 6.9,
+     "trigger": "Second full trading day after the Q2 2026 results (Aug 4); Rule 144 affiliates excluded"
+    },
+    {
+     "date": "2026-08-20",
+     "label": "7% release (day 70)",
+     "kind": "time",
+     "shares": 319000000,
+     "pct": 2.4
+    },
+    {
+     "date": "2026-09-09",
+     "label": "7% release (day 90)",
+     "kind": "time",
+     "shares": 319000000,
+     "pct": 2.4
+    },
+    {
+     "date": "2026-09-10",
+     "label": "Affiliates' released shares become sellable",
+     "kind": "time",
+     "shares": 59100000,
+     "pct": 0.45
+    },
+    {
+     "date": "2026-09-24",
+     "label": "7% release (day 105)",
+     "kind": "time",
+     "shares": 328400000,
+     "pct": 2.5
+    },
+    {
+     "date": "2026-10-09",
+     "label": "7% release (day 120)",
+     "kind": "time",
+     "shares": 328400000,
+     "pct": 2.5
+    },
+    {
+     "date": "2026-10-22",
+     "label": "28% after the Q3 results",
+     "kind": "earnings",
+     "shares": 1300000000,
+     "pct": 9.9,
+     "trigger": "Second full trading day after the Q3 2026 results (Oct 20)"
+    },
+    {
+     "date": "2026-10-26",
+     "label": "7% release (day 135)",
+     "kind": "time",
+     "shares": 328400000,
+     "pct": 2.5,
+     "trigger": "Day 135 fell on a Saturday"
+    },
+    {
+     "date": "2026-12-08",
+     "label": "180-day lock-up ends",
+     "kind": "time",
+     "shares": 797600000,
+     "pct": 6.1,
+     "trigger": "All remaining shares of the main group, Dec 8 as printed in the prospectus"
+    },
+    {
+     "date": null,
+     "label": "20% of the extended group after the Q4 results",
+     "kind": "earnings",
+     "shares": 351900000,
+     "pct": 2.7,
+     "trigger": "Second full trading day after the Q4 2026 results; the date is not announced yet"
+    },
+    {
+     "date": "2027-03-18",
+     "label": "10% of the extended group (day 280)",
+     "kind": "time",
+     "shares": 176000000,
+     "pct": 1.3
+    },
+    {
+     "date": null,
+     "label": "20% of the extended group after the Q1 2027 results",
+     "kind": "earnings",
+     "shares": 351900000,
+     "pct": 2.7,
+     "trigger": "Second full trading day after the Q1 2027 results"
+    },
+    {
+     "date": "2027-05-17",
+     "label": "10% of the extended group (day 340)",
+     "kind": "time",
+     "shares": 176000000,
+     "pct": 1.3
+    },
+    {
+     "date": "2027-06-14",
+     "label": "Elon Musk's lock-up ends, plus 20% of the extended group",
+     "kind": "time",
+     "shares": 6751900000,
+     "pct": 51.3,
+     "trigger": "Day 366 (Saturday, Jun 12): about 6.4B of Musk's shares and 351.9M more"
+    },
+    {
+     "date": null,
+     "label": "The rest of the extended group after the Q2 2027 results",
+     "kind": "earnings",
+     "shares": 351900000,
+     "pct": 2.7,
+     "trigger": "Second full trading day after the Q2 2027 results"
+    }
+   ],
+   "note": "An extra 10% (about 456M shares) would have unlocked in August if the stock had closed at $175.50 or more for long enough; it didn't, so those shares wait for Dec 8."
+  },
+  {
+   "ticker": "ANT",
+   "name": "Anthropic",
+   "exchange": "Nasdaq",
+   "ipo_date": "2026-11-18",
+   "price": null,
+   "raised": 61050000000,
+   "raised_est": true,
+   "outstanding": 13086672593,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074338/anthropicpbc-sx1ax3.htm",
+   "steps": [
+    {
+     "date": "2026-11-19",
+     "label": "10% for employees on the first trading day",
+     "kind": "time",
+     "shares": 315000000,
+     "pct": 2.4,
+     "trigger": "Employees and non-founder directors and officers"
+    },
+    {
+     "date": "2026-12-15",
+     "label": "Day 27 release",
+     "kind": "time",
+     "shares": 303000000,
+     "pct": 2.3
+    },
+    {
+     "date": "2027-01-05",
+     "label": "Day 48 release",
+     "kind": "time",
+     "shares": 303000000,
+     "pct": 2.3
+    },
+    {
+     "date": "2027-01-19",
+     "label": "Day 62 release",
+     "kind": "time",
+     "shares": 353000000,
+     "pct": 2.7
+    },
+    {
+     "date": "2027-02-02",
+     "label": "Day 76 release",
+     "kind": "time",
+     "shares": 353000000,
+     "pct": 2.7
+    },
+    {
+     "date": null,
+     "label": "Big release after the FY2026 results",
+     "kind": "earnings",
+     "shares": 1700000000,
+     "pct": 13,
+     "trigger": "Two full trading days after the FY2026 results: employees +35%, other holders +12.5% and +3.75%"
+    },
+    {
+     "date": null,
+     "label": "Five more steps after the FY2026 results",
+     "kind": "earnings",
+     "shares": 2400000000,
+     "pct": 18.3,
+     "trigger": "About 480M shares each, 13, 27, 41, 55 and 69 days after the FY2026 results"
+    },
+    {
+     "date": null,
+     "label": "Main lock-up ends",
+     "kind": "earnings",
+     "shares": 3000000000,
+     "pct": 22.9,
+     "trigger": "Two full trading days after the Q1 2027 results or May 17, 2027, whichever comes first; co-founders get 29%"
+    },
+    {
+     "date": null,
+     "label": "Four steps after the Q1 2027 results",
+     "kind": "earnings",
+     "shares": 1788000000,
+     "pct": 13.7,
+     "trigger": "About 447M shares each, 34 to 76 days after the Q1 2027 results, for holders of more than 0.5%"
+    },
+    {
+     "date": null,
+     "label": "Q2 2027 results and five steps after",
+     "kind": "earnings",
+     "shares": 3068000000,
+     "pct": 23.4,
+     "trigger": "About 558M shares after the Q2 2027 results, then about 502M every two weeks"
+    },
+    {
+     "date": null,
+     "label": "Final: the co-founders' remaining shares",
+     "kind": "earnings",
+     "shares": 1900000000,
+     "pct": 14.5,
+     "trigger": "After the Q3 2027 results or by Nov 18, 2027, whichever comes first"
+    }
+   ],
+   "note": "Projected from the S-1/A of Nov 17, 2026: the price is set the evening of Nov 18, and the dates assume a final prospectus dated Nov 18; they will be checked against it. Share counts are estimates at the $74 midpoint.",
+   "price_mid": 74
+  },
+  {
+   "ticker": "CBRS",
+   "name": "Cerebras Systems",
+   "exchange": "Nasdaq",
+   "ipo_date": "2026-05-13",
+   "price": 185,
+   "raised": 5550000000,
+   "outstanding": 219610345,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026035214/cerebras-424b4.htm",
+   "steps": [
+    {
+     "date": "2026-05-14",
+     "label": "7.5% for employees on the first trading day",
+     "kind": "time",
+     "shares": 2500000,
+     "pct": 1.1
+    },
+    {
+     "date": "2026-05-15",
+     "label": "Another 7.5% for employees (price test met)",
+     "kind": "price",
+     "shares": 2500000,
+     "pct": 1.1,
+     "trigger": "The first-day close of $311.07 was above the trigger of $246.05"
+    },
+    {
+     "date": "2026-06-25",
+     "label": "Release after the Q1 results",
+     "kind": "earnings",
+     "shares": 27700000,
+     "pct": 12.6
+    },
+    {
+     "date": "2026-08-14",
+     "label": "Release after the Q2 results",
+     "kind": "earnings",
+     "shares": 36400000,
+     "pct": 16.6
+    },
+    {
+     "date": "2026-08-19",
+     "label": "Scheduled release",
+     "kind": "time",
+     "shares": 14600000,
+     "pct": 6.7
+    },
+    {
+     "date": "2026-09-02",
+     "label": "Scheduled release",
+     "kind": "time",
+     "shares": 14600000,
+     "pct": 6.7
+    },
+    {
+     "date": "2026-09-16",
+     "label": "Scheduled release",
+     "kind": "time",
+     "shares": 14600000,
+     "pct": 6.7
+    },
+    {
+     "date": "2026-09-30",
+     "label": "Scheduled release",
+     "kind": "time",
+     "shares": 19400000,
+     "pct": 8.8
+    },
+    {
+     "date": "2026-10-14",
+     "label": "Scheduled release",
+     "kind": "time",
+     "shares": 19400000,
+     "pct": 8.8
+    },
+    {
+     "date": "2026-10-28",
+     "label": "Scheduled release",
+     "kind": "time",
+     "shares": 19400000,
+     "pct": 8.8
+    },
+    {
+     "date": "2026-11-09",
+     "label": "Lock-up ends: all remaining shares",
+     "kind": "time",
+     "shares": null,
+     "pct": null,
+     "trigger": "180 days after the prospectus came before the Q3 results (Nov 12)"
+    }
+   ]
+  },
+  {
+   "ticker": "BSP",
+   "name": "Bending Spoons",
+   "exchange": "Nasdaq",
+   "ipo_date": "2026-06-30",
+   "price": 29,
+   "raised": 1680000000,
+   "outstanding": 640463336,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2004711/000110465926079884/tm2613674-14_424b4.htm",
+   "steps": [
+    {
+     "date": "2026-11-23",
+     "label": "Lock-up ends early",
+     "kind": "earnings",
+     "shares": 573796669,
+     "pct": 89.6,
+     "trigger": "48 hours after its Q3 results, due Nov 20, as at least 125 days have passed since the IPO"
+    }
+   ],
+   "note": "If the Q3 results slip, the lock-up runs to its plain 180-day end on Dec 27, 2026."
+  },
+  {
+   "ticker": "INIO",
+   "name": "INNIO",
+   "exchange": "Nasdaq",
+   "ipo_date": "2026-06-03",
+   "price": 27,
+   "raised": 2430000000,
+   "outstanding": 750000000,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2109150/000119312526256992/liberty_-_424b4.htm",
+   "steps": [
+    {
+     "date": "2026-12-01",
+     "label": "Lock-up ends",
+     "kind": "time",
+     "shares": 646500000,
+     "pct": 86.2,
+     "trigger": "180 days after the June 3 prospectus; the shares are held by the Advent and ADIA holding company"
+    }
+   ]
+  },
+  {
+   "ticker": "QNT",
+   "name": "Quantinuum",
+   "exchange": "Nasdaq",
+   "ipo_date": "2026-06-03",
+   "price": 60,
+   "raised": 1680000000,
+   "outstanding": 261470737,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2110105/000162828026041003/quantinuum-424b4.htm",
+   "steps": [
+    {
+     "date": "2026-12-01",
+     "label": "Lock-up ends",
+     "kind": "time",
+     "shares": 232970737,
+     "pct": 89.1,
+     "trigger": "180 days after the June 3 prospectus; mostly Class B units exchangeable into Class A shares"
+    }
+   ],
+   "note": "The locked share count is an estimate (all shares minus those sold in the IPO); the prospectus gives no exact figure."
+  },
+  {
+   "ticker": "CSQR",
+   "name": "Csquare",
+   "exchange": "NYSE",
+   "ipo_date": "2026-07-15",
+   "price": 21,
+   "raised": 1050000000,
+   "outstanding": 162519702,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2105398/000110465926084293/tm264837-15_424b4.htm",
+   "steps": [
+    {
+     "date": "2027-01-12",
+     "label": "Lock-up ends",
+     "kind": "time",
+     "shares": 106887373,
+     "pct": 65.8,
+     "trigger": "180 days after the July 15 prospectus"
+    }
+   ]
+  },
+  {
+   "ticker": "JMKE",
+   "name": "Jersey Mike's",
+   "exchange": "NYSE",
+   "ipo_date": "2026-07-29",
+   "price": 23,
+   "raised": 1000000000,
+   "outstanding": 317638900,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2127043/000119312526326453/project_70_424b4.htm",
+   "steps": [
+    {
+     "date": "2027-01-26",
+     "label": "Lock-up ends",
+     "kind": "time",
+     "shares": 271588079,
+     "pct": 85.5,
+     "trigger": "180 days after the July 29 prospectus"
+    }
+   ],
+   "note": "Blackstone pledged about 172.6M of its shares for $1.09B of margin loans (8-K, Sept 22); the lock-up does not stop a lender from selling pledged shares. The locked share count is an estimate."
+  },
+  {
+   "ticker": "MAIR",
+   "name": "Madison Air Solutions",
+   "exchange": "NYSE",
+   "ipo_date": "2026-04-15",
+   "price": 27,
+   "raised": 2230000000,
+   "outstanding": 488864126,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2098430/000119312526160250/project_breathe_form_424.htm",
+   "steps": [
+    {
+     "date": "2026-10-13",
+     "label": "IPO lock-up ends",
+     "kind": "time",
+     "shares": 36950888,
+     "pct": 7.4,
+     "trigger": "180 days after the April 15 prospectus; the founder's holding companies stay locked longer"
+    },
+    {
+     "date": null,
+     "label": "Founder's private-placement shares",
+     "kind": "time",
+     "shares": 24829795,
+     "pct": 4.2,
+     "trigger": "One year after the August 2026 private placement by founder Larry Gies; the exact day is not disclosed (around September 2027)"
+    },
+    {
+     "date": "2028-04-17",
+     "label": "Two-year lock-up ends",
+     "kind": "time",
+     "shares": 369220930,
+     "pct": 73.7,
+     "trigger": "Two years after the IPO, for Madison Industries Holdings and Kedge"
+    }
+   ]
+  },
+  {
+   "ticker": "ARXS",
+   "name": "Arxis",
+   "exchange": "Nasdaq",
+   "ipo_date": "2026-04-15",
+   "price": 28,
+   "raised": 1130000000,
+   "outstanding": 404330767,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2093536/000119312526159369/d81728d424b4.htm",
+   "steps": [
+    {
+     "date": "2026-10-13",
+     "label": "Lock-up ends",
+     "kind": "time",
+     "shares": 363830766,
+     "pct": 88.7,
+     "trigger": "180 days after the April 15 prospectus"
+    }
+   ],
+   "note": "Separately, 8.9M shares issued for the Omnetics acquisition in June 2026 are released in tranches through May 2028; that is not part of the IPO lock-up."
+  },
+  {
+   "ticker": "XE",
+   "name": "X-Energy",
+   "exchange": "Nasdaq",
+   "ipo_date": "2026-04-23",
+   "price": 23,
+   "raised": 1020000000,
+   "outstanding": 392349868,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2088896/000110465926049515/tm2527015-22_424b4.htm",
+   "steps": [
+    {
+     "date": "2026-09-02",
+     "label": "Lock-up ended early",
+     "kind": "time",
+     "shares": 348095209,
+     "pct": 87.2,
+     "trigger": "The blackout clause moved the end from Oct 20 to Sep 1 (8-K)"
+    }
+   ]
+  },
+  {
+   "ticker": "FRVO",
+   "name": "Fervo Energy",
+   "exchange": "Nasdaq",
+   "ipo_date": "2026-05-12",
+   "price": 27,
+   "raised": 1890000000,
+   "outstanding": 283562333,
+   "sec": "https://www.sec.gov/Archives/edgar/data/1853868/000162828026034849/fervoenergy-424b4.htm",
+   "steps": [
+    {
+     "date": "2026-11-09",
+     "label": "Lock-up ends",
+     "kind": "time",
+     "shares": 213562333,
+     "pct": 72.6,
+     "trigger": "180 days after the May 12 prospectus; confirmed as expired in the company's 10-Q"
+    }
+   ]
+  },
+  {
+   "ticker": "BXDC",
+   "name": "Blackstone Digital Infrastructure Trust",
+   "exchange": "NYSE",
+   "ipo_date": "2026-05-13",
+   "price": 20,
+   "raised": 1750000000,
+   "outstanding": 87500005,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2100161/000119312526225090/d52761d424b4.htm",
+   "steps": [
+    {
+     "date": "2026-11-10",
+     "label": "Lock-up ends",
+     "kind": "time",
+     "shares": 14131250,
+     "pct": 14,
+     "trigger": "180 days after the May 13 prospectus; covered insiders, Blackstone's own stake and directed shares only"
+    }
+   ],
+   "note": "An externally managed REIT run by a Blackstone affiliate, not an operating company; most of its shares traded freely from day one."
+  },
+  {
+   "ticker": "FPS",
+   "name": "Forgent Power Solutions",
+   "exchange": "NYSE",
+   "ipo_date": "2026-02-04",
+   "price": 27,
+   "raised": 1510000000,
+   "outstanding": 304428889,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2080126/000119312526040029/d890989d424b4.htm",
+   "steps": [
+    {
+     "date": "2026-03-26",
+     "label": "Early release for a follow-on sale",
+     "kind": "waiver",
+     "shares": 23716795,
+     "pct": 7.8,
+     "trigger": "The banks waived the lock-up for shares sold in the March follow-on offering"
+    },
+    {
+     "date": "2026-05-28",
+     "label": "Early release for a follow-on sale",
+     "kind": "waiver",
+     "shares": 32769681,
+     "pct": 10.8,
+     "trigger": "Waiver for the May follow-on offering"
+    },
+    {
+     "date": "2026-07-01",
+     "label": "Early release for a follow-on sale",
+     "kind": "waiver",
+     "shares": 33458165,
+     "pct": 11,
+     "trigger": "Waiver for the July follow-on offering, which set a new 60-day lock-up"
+    },
+    {
+     "date": "2026-08-04",
+     "label": "IPO lock-up ends",
+     "kind": "time",
+     "shares": null,
+     "pct": null,
+     "trigger": "180 days after the February 4 prospectus"
+    }
+   ]
+  },
+  {
+   "ticker": "MDLN",
+   "name": "Medline",
+   "exchange": "Nasdaq",
+   "ipo_date": "2025-12-16",
+   "price": 29,
+   "raised": 6260000000,
+   "outstanding": 1313717222,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2046386/000119312525323742/d77351d424b4.htm",
+   "steps": [
+    {
+     "date": "2026-03-04",
+     "label": "Early release for a follow-on sale",
+     "kind": "waiver",
+     "shares": 86250000,
+     "pct": 6.6,
+     "trigger": "The banks released shares sold in the March secondary offering"
+    },
+    {
+     "date": "2026-05-21",
+     "label": "Early release for a follow-on sale",
+     "kind": "waiver",
+     "shares": 83437783,
+     "pct": 6.4,
+     "trigger": "Release for the May secondary offering, which set a new 75-day lock-up"
+    },
+    {
+     "date": "2026-06-15",
+     "label": "IPO lock-up ends",
+     "kind": "time",
+     "shares": null,
+     "pct": null,
+     "trigger": "180 days after the December 16 prospectus"
+    }
+   ],
+   "note": "A new 60M-share secondary offering filed Nov 16, 2026 brings its own 75-day lock-up for the sellers (around Jan 31, 2027, pending the final prospectus)."
+  }
+ ]
+}
