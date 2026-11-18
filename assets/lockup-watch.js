@@ -1,53 +1,72 @@
-// "Lock-up watch": the next three IPO lock-up releases from /assets/lockups.json (one per company), each with a ring
-// for the share of its lock-up already served. On the news page it takes the IPO watch panel's place from
-// data-lockup-from on (that panel hides itself at the same moment). Dates are New York calendar days; a step's date is the first day its shares may be sold.
+// "Lock-up watch" on the news page, in the style of the IPO watch panel it replaces: the next three IPO lock-up
+// releases from /assets/lockups.json (one per company), each with days and hours to the market open on its first free
+// day and the share of the company it frees. It takes the IPO watch panel's place from data-lockup-from on (that panel
+// hides itself at the same moment). A step's date is the first day its shares may be sold.
 (() => {
-  const roots = [...document.querySelectorAll('[data-lockup-watch]')];
-  if (!roots.length) return;
-  const DAY = 864e5;
+  const root = document.querySelector('[data-lockup-watch]');
+  if (!root) return;
   const ts = (d) => Date.parse(d + 'T00:00:00Z');
-  const nyToday = () => ts(new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date()));
+  // 9:30 New York on a given day (EST or EDT)
+  const openAt = (d) => {
+    const guess = Date.parse(d + 'T14:30:00Z');
+    const h = +new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', hour12: false }).format(guess);
+    return guess - (h - 9) * 3600e3;
+  };
   const fmt = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
   const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
-  let data = null;
-  const load = () => data || (data = fetch(roots[0].dataset.src).then((r) => (r.ok ? r.json() : Promise.reject(r.status))));
+  const pad = (n) => String(n).padStart(2, '0');
+  const list = root.querySelector('[data-luw-list]');
+  if (!list) return;
 
-  roots.forEach((root) => {
-    const from = Date.parse(root.dataset.lockupFrom || '') || 0;
-    const start = () => load().then((d) => draw(root, d)).catch(() => {});
-    if (Date.now() >= from) { start(); return; }
-    const timer = setInterval(() => { if (Date.now() >= from) { clearInterval(timer); start(); } }, 30e3);
-  });
+  const from = Date.parse(root.dataset.lockupFrom || '') || 0;
+  const start = () => fetch(root.dataset.src).then((r) => (r.ok ? r.json() : Promise.reject(r.status))).then(run).catch(() => {});
+  if (Date.now() >= from) start();
+  else { const wait = setInterval(() => { if (Date.now() >= from) { clearInterval(wait); start(); } }, 30e3); }
 
-  function draw(root, d) {
-    const today = nyToday(), seen = new Set();
-    const next = d.companies.flatMap((c) => c.steps.filter((s) => s.date && ts(s.date) >= today).map((s) => ({ c, s })))
-      .sort((a, b) => ts(a.s.date) - ts(b.s.date))
-      .filter(({ c }) => !seen.has(c.ticker) && seen.add(c.ticker))
-      .slice(0, 3);
-    const list = root.querySelector('[data-lockup-list]');
-    if (!next.length || !list) return;
-    const R = 22, L = 2 * Math.PI * R;
-    list.innerHTML = next.map(({ c, s }, i) => {
-      const days = Math.round((ts(s.date) - today) / DAY);
-      const served = Math.min(1, Math.max(0, (today - ts(c.ipo_date)) / Math.max(DAY, ts(s.date) - ts(c.ipo_date))));
-      const when = days === 0 ? 'today' : days === 1 ? 'tomorrow' : `in ${days} days`;
-      return `<a class="luw-item" href="/lock-up-calendar/#${esc(c.ticker.toLowerCase())}" style="--i:${i}">
-        <span class="luw-ring"><svg viewBox="0 0 52 52" aria-hidden="true"><circle class="bg" cx="26" cy="26" r="${R}"/><circle class="fg" cx="26" cy="26" r="${R}"
-          stroke-dasharray="${L.toFixed(1)}" stroke-dashoffset="${L.toFixed(1)}" data-off="${(L * (1 - served)).toFixed(1)}"/></svg><b>${days}</b></span>
-        <span class="luw-txt"><span class="luw-tk">${esc(c.ticker)}</span><span class="luw-name">${esc(c.name)}</span>
-          <span class="luw-when">${when} · ${fmt.format(ts(s.date))}</span>${s.pct != null ? `<span class="luw-pct">${s.pct}% of shares</span>` : ''}</span></a>`;
-    }).join('');
+  function run(data) {
+    const all = data.companies.flatMap((c) => c.steps.filter((s) => s.date).map((s) => ({ c, s, at: openAt(s.date) })))
+      .sort((a, b) => a.at - b.at || (b.s.pct ?? 0) - (a.s.pct ?? 0));
+    let shown = '';
+    const draw = () => {
+      const now = Date.now(), seen = new Set();
+      const next = all.filter((r) => r.at > now && !seen.has(r.c.ticker) && seen.add(r.c.ticker)).slice(0, 3);
+      if (!next.length) { root.hidden = true; return false; }
+      const key = next.map((r) => r.c.ticker + r.s.date).join();
+      if (key !== shown) {
+        shown = key;
+        list.innerHTML = next.map(({ c, s }) => `<a class="luw-col" href="/lock-up-calendar/#${esc(c.ticker.toLowerCase())}">
+          <span class="luw-co" title="${esc(c.name)}"><i>${esc(c.ticker)}</i><span>${esc(c.name)}</span></span>
+          <span class="ipo-clock"><span class="ipo-unit"><b data-d>--</b><i>days</i></span><span class="ipo-unit"><b data-h>--</b><i>hrs</i></span></span>
+          <span class="luw-meta">${fmt.format(ts(s.date))}${s.pct != null ? ` · <b class="luw-pct">${s.pct}%</b> of shares` : ''}</span></a>`).join('');
+      }
+      [...list.children].forEach((col, i) => {
+        const left = Math.max(0, next[i].at - now);
+        col.querySelector('[data-d]').textContent = pad(Math.floor(left / 864e5));
+        col.querySelector('[data-h]').textContent = pad(Math.floor((left % 864e5) / 3600e3));
+      });
+      return true;
+    };
+    if (!draw()) return;
     root.hidden = false;
-    // the news page: take the IPO watch panel's place in the layout
+    // take the IPO watch panel's place in the layout
     const grid = root.closest('.hero-grid');
+    const ipo = grid?.querySelector('#ipo-watch');
+    // the same height as the IPO watch panel at this width: measure it unseen, then keep it hidden
+    const match = () => {
+      if (!ipo) return;
+      ipo.style.visibility = 'hidden'; ipo.hidden = false;
+      root.style.minHeight = '';
+      const h = ipo.offsetHeight;
+      ipo.hidden = true; ipo.style.visibility = '';
+      if (h > root.offsetHeight) root.style.minHeight = h + 'px';
+    };
     if (grid) {
-      const ipo = grid.querySelector('#ipo-watch');
       if (ipo) ipo.hidden = true;
       grid.classList.add('has-ipo');
+      match();
+      let resize = 0;
+      window.addEventListener('resize', () => { clearTimeout(resize); resize = setTimeout(match, 150); });
     }
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      root.querySelectorAll('.luw-ring .fg').forEach((circle) => { circle.style.strokeDashoffset = circle.dataset.off; });
-    }));
+    setInterval(draw, 60e3);
   }
 })();
