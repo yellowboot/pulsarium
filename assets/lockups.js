@@ -1,4 +1,4 @@
-// /lock-up-calendar/: draws the "next to unlock" cards and the padlock timeline from /assets/lockups.json and keeps
+// /lock-up-calendar/: draws the padlock timeline from /assets/lockups.json and keeps
 // the release statuses of the company cards (rendered by site_pages.py) current. Dates are New York calendar days.
 // If the data can't be read the page keeps its static company cards.
 (() => {
@@ -79,31 +79,8 @@
 
   function draw(data) {
     const cos = data.companies.filter((c) => c.ipo_date && c.steps?.length);
-    nextCards(cos);
     timeline(cos);
-    reveal(root.querySelector('.lu-next'), () => root.querySelectorAll('.lu-ring .fg').forEach((c) => { c.style.strokeDashoffset = c.dataset.off; }));
     reveal(root.querySelector('.lu-chart'));
-  }
-
-  // 2. the next releases, with a ring for the share of the lock-up already behind
-  function nextCards(cos) {
-    const box = root.querySelector('.lu-next');
-    const up = cos.flatMap((c) => c.steps.filter((s) => s.date && left(s.date)).map((s) => ({ c, s })))
-      .sort((a, b) => ts(a.s.date) - ts(b.s.date)).slice(0, 4);
-    if (!box || !up.length) return;
-    const R = 32, L = 2 * Math.PI * R;
-    const ring = (s) => { const l = left(s.date); return l ? `${l.d}<small>${l.d === 1 ? 'DAY' : 'DAYS'}</small>` : 'FREE'; };
-    box.innerHTML = up.map(({ c, s }, i) => {
-      const done = Math.min(1, Math.max(0, (Date.now() - ts(c.ipo_date)) / (openAt(freeDay(s.date)) - ts(c.ipo_date))));
-      return `<article class="panel lu-card${i === 0 ? ' is-first' : ''}" style="--i:${i}">
-        <div class="lu-ring"><svg viewBox="0 0 74 74"><circle class="bg" cx="37" cy="37" r="${R}"/><circle class="fg" cx="37" cy="37" r="${R}"
-          stroke-dasharray="${L.toFixed(1)}" stroke-dashoffset="${L.toFixed(1)}" data-off="${(L * (1 - done)).toFixed(1)}"/></svg>
-          <b data-date="${s.date}">${ring(s)}</b></div>
-        <div><span class="lu-tk">${esc(c.ticker)}</span><h3>${esc(c.name)}: ${esc(s.label)}</h3>
-          <p>Shares free from <strong>${fmt.format(ts(freeDay(s.date)))}</strong> · ${s.pct != null ? (s.shares ? qty(s.shares) + ' shares · ' : '') + `<b class="lu-pct">${s.pct}%</b> of the company` : esc(size(s))}</p></div></article>`;
-    }).join('');
-    setInterval(() => box.querySelectorAll('.lu-ring b[data-date]').forEach((b) => { b.innerHTML = ring({ date: b.dataset.date }); }), 60e3);
-    box.closest('[hidden]')?.removeAttribute('hidden');
   }
 
   // 3. the timeline: one lane per IPO, a padlock per release, sized by the share of the company it frees

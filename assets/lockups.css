@@ -1,4 +1,4 @@
-/* /lock-up-calendar/: the "next to unlock" cards, the timeline of padlocks and the company cards (lockups.js).
+/* /lock-up-calendar/: the timeline of padlocks and the company rings (lockups.js, site_pages.py).
    Colours come from the page's theme variables, so Neon and Calm both apply; the Calm-only corrections are scoped to
    :root[data-color-theme='calm'] at the end. Everything animates once when it scrolls into view; reduced motion shows
    the final state at once. */
@@ -7,28 +7,6 @@
 .lu-sec-title { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 0 0 14px; }
 .lu-sec-title h2 { margin: 0; }
 .lu-sec-title span { font-family: var(--lu-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--text-low); }
-
-/* ---------- 1. next to unlock ---------- */
-.lu-next { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-bottom: 26px; }
-.lu-card { position: relative; display: grid; grid-template-columns: 74px 1fr; gap: 14px; align-items: center; padding: 16px 16px 15px;
-  opacity: 0; transform: translateY(14px); }
-.lu-next.is-in .lu-card { animation: lu-rise .6s cubic-bezier(.2, .8, .2, 1) forwards; animation-delay: calc(var(--i) * 110ms); }
-.lu-ring { position: relative; width: 74px; height: 74px; }
-.lu-ring svg { width: 74px; height: 74px; transform: rotate(-90deg); }
-.lu-ring circle { fill: none; stroke-width: 5; }
-.lu-ring .bg { stroke: color-mix(in srgb, var(--lu-acc) 14%, transparent); }
-.lu-ring .fg { stroke: var(--lu-acc); stroke-linecap: round; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--lu-acc) 60%, transparent));
-  transition: stroke-dashoffset 1.6s cubic-bezier(.2, .8, .2, 1) .3s; }
-.lu-ring b { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; font-family: var(--lu-mono);
-  font-size: 22px; line-height: 1; color: var(--text-hi); }
-.lu-ring b small { display: block; margin-top: 4px; font-size: 11px; font-weight: 600; letter-spacing: .12em; color: var(--text-mid); }
-.lu-card .lu-tk { margin-bottom: 6px; }
-.lu-card h3 { margin: 0 0 4px; font-size: 15px; line-height: 1.25; color: var(--text-hi); }
-.lu-card p { margin: 0; font-size: 12.5px; line-height: 1.45; color: var(--text-mid); }
-.lu-card p strong { color: var(--text-hi); font-weight: 600; }
-.lu-card.is-first::after { content: ''; position: absolute; inset: -1px; border-radius: inherit; pointer-events: none;
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--lu-acc) 55%, transparent), 0 0 26px color-mix(in srgb, var(--lu-acc) 22%, transparent);
-  animation: lu-breathe 2.8s ease-in-out infinite; }
 
 /* ticker badge */
 .lu-tk { flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px 3px 6px; border-radius: 999px; font-family: var(--lu-mono);
@@ -163,14 +141,12 @@
 .lu-co footer a { color: var(--lu-acc); }
 .lu-co .lu-note { margin: 8px 0 0; font-size: 12px; line-height: 1.45; color: var(--text-low); }
 
-@keyframes lu-rise { to { opacity: 1; transform: none; } }
 @keyframes lu-in { to { opacity: 1; transform: none; } }
 @keyframes lu-grow { to { transform: scaleX(1); } }
 @keyframes lu-pop { to { transform: translate(-50%, -50%) scale(1); } }
 @keyframes lu-open { 0% { transform: none; } 60% { transform: translateY(-3px) rotate(-38deg); } 100% { transform: translateY(-2px) rotate(-30deg); } }
 @keyframes lu-ping { 0% { transform: scale(.55); opacity: .9; } 100% { transform: scale(1.35); opacity: 0; } }
 @keyframes lu-glow { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
-@keyframes lu-breathe { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
 
 @media (max-width: 700px) {
   .lu { --lu-name-w: 74px; }
@@ -179,12 +155,11 @@
   .lu-chart { padding: 12px 10px 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .lu-card, .lu-lane { opacity: 1; transform: none; animation: none !important; }
+  .lu-lane { opacity: 1; transform: none; animation: none !important; }
   .lu-bar { transform: scaleX(1); animation: none !important; }
   .lu-lock { transform: translate(-50%, -50%) scale(1); animation: none !important; }
   .lu-lock.is-passed .lu-shackle { transform: translateY(-2px) rotate(-30deg); animation: none !important; }
-  .lu-lock.is-next::after, .lu-now, .lu-card.is-first::after { animation: none; }
-  .lu-ring .fg { transition: none; }
+  .lu-lock.is-next::after, .lu-now { animation: none; }
   .arc { animation: none !important; opacity: 1 !important; }
 }
 
@@ -196,7 +171,6 @@
 :root[data-color-theme='calm'] .lu-now { box-shadow: 0 0 6px color-mix(in srgb, var(--lu-acc) 50%, transparent); }
 :root[data-color-theme='calm'] .lu-nowlabel { color: #fff; }
 :root[data-color-theme='calm'] .lu-ipo { box-shadow: none; }
-:root[data-color-theme='calm'] .lu-ring .fg { filter: none; }
 :root[data-color-theme='calm'] .lu-tk::before { box-shadow: none; }
 :root[data-color-theme='calm'] .lu-orb .arc { filter: none; }
 :root[data-color-theme='calm'] .lu-co:has(.arc.next.soon) .lu-orb-c b { text-shadow: none; }

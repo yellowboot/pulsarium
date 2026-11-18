@@ -949,9 +949,7 @@ def lockup_calendar() -> dict:
         '<p class="lead">After an IPO, founders, employees and early investors usually promise not to sell for a while. '
         "This calendar shows when those promises end for every US IPO of the past year that raised $1 billion or more: "
         "the date, the size and the exact terms from each company's prospectus.</p></header>"
-        f'<section class="lu" data-src="/assets/lockups.json?v=1">'
-        '<div hidden><div class="lu-sec-title"><h2>Next to unlock</h2><span>Days left · the ring shows the time already served</span></div>'
-        '<div class="lu-next"></div></div>'
+        f'<section class="lu" data-src="/assets/lockups.json?v=2">'
         '<div hidden><div class="lu-sec-title"><h2>The calendar</h2><span>One row per IPO · a bigger padlock frees a bigger share</span></div>'
         f'<div class="panel lu-chart"><div class="lu-scroll"><div class="lu-grid"></div></div>{legend}'
         '<div class="lu-tip" role="tooltip"></div></div></div>'
@@ -984,7 +982,7 @@ def lockup_calendar() -> dict:
         "description": "Lock-up expiration dates for every US IPO of the past year that raised $1 billion or more: each release "
                        "step, its size and the exact terms from the prospectus." + nxt_text,
         "body": body,
-        "head": '<link rel="stylesheet" href="/assets/lockups.css?v=1">\n<script src="/assets/lockups.js?v=1" defer></script>\n',
+        "head": '<link rel="stylesheet" href="/assets/lockups.css?v=2">\n<script src="/assets/lockups.js?v=2" defer></script>\n',
     }
 
 
