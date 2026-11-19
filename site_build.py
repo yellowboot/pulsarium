@@ -1872,14 +1872,11 @@ def home_today(history: list, window: list, now: datetime) -> str:
     if history:
         point = history[-1]
         cards.append(f"""<iframe class="today-mood" src="/mood/widget/" title="Pulsarium Mood Index: {point["value"]}/100, {esc(point["label"].lower())}" loading="lazy"></iframe>""")
-    # under the Mood Index, in the same column: the Market Universe in three numbers (universe/data.js)
-    counts = universe_counts()
-    if counts:
-        cards.append(f"""<a class="today-card today-uni" href="/universe/">
-          <span class="today-label">Market Universe</span>
-          <span class="today-uni-nums"><span><b>{counts["companies"]}</b> companies</span><span class="pos"><b>{counts["growth"]}</b> growth signals</span><span class="neg"><b>{counts["risk"]}</b> risk signals</span></span>
-          <span class="today-uni-open">Open the 3D map ↗</span>
-        </a>""")
+    # under the Mood Index, in the same column: the next IPO lock-up releases (assets/lockups.json); it replaced
+    # the Market Universe numbers in Nov 2026
+    lockups = home_lockups(now)
+    if lockups:
+        cards.append(lockups)
     if cards:
         cards = ['<div class="today-col">' + "".join(cards) + '</div>']
     # two live pictures from the news page instead of tables (Nov 2026): the week's insider trades as bubbles and
@@ -1909,7 +1906,8 @@ def home_today(history: list, window: list, now: datetime) -> str:
           </div>
         </section>""")
     scripts = (f'<script src="{asset_url(season["path"])}" defer></script>' if season else "") + \
-        f'<script src="{asset_url("/assets/market-map.js")}" defer></script>'
+        f'<script src="{asset_url("/assets/market-map.js")}" defer></script>' + \
+        (f'<script src="{asset_url("/assets/lockup-mini.js")}" defer></script>' if lockups else "")
     return f"""<section class="today" aria-label="Today on the market">
         <link rel="stylesheet" href="{asset_url("/assets/market-map.css")}">
         <div class="today-head">
@@ -1921,6 +1919,62 @@ def home_today(history: list, window: list, now: datetime) -> str:
         </div>
         {scripts}
       </section>"""
+
+
+def ny_open_utc(day: date) -> datetime:
+    """9:30 New York on `day`, in UTC: EDT from the second Sunday of March to the first Sunday of November."""
+    def sunday(month: int, nth: int) -> date:
+        first = date(day.year, month, 1)
+        return first + timedelta(days=(6 - first.weekday()) % 7 + 7 * (nth - 1))
+    summer = sunday(3, 2) <= day < sunday(11, 1)
+    return datetime(day.year, day.month, day.day, 13 if summer else 14, 30, tzinfo=timezone.utc)
+
+
+def home_lockups(now: datetime, count: int = 2) -> str:
+    """The home page's "Lock-up watch" card: the next `count` lock-up releases, one per company, from
+    assets/lockups.json (a step's date is the first day its shares may be sold, from the market open). Each row has
+    the days left, the ticker and name, the share of the company it frees and a bar of how far the wait has gone
+    since the previous release (or the IPO). assets/lockup-mini.js keeps the numbers current. "" if nothing is due."""
+    try:
+        with open("assets/lockups.json", encoding="utf-8") as f:
+            companies = json.load(f).get("companies") or []
+    except (OSError, ValueError):
+        return ""
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    upcoming = []
+    for c in companies:
+        try:
+            starts = [ny_open_utc(date.fromisoformat(c["ipo_date"]))]
+            dated = sorted((ny_open_utc(date.fromisoformat(s["date"])), s) for s in c.get("steps", []) if s.get("date"))
+        except (KeyError, TypeError, ValueError):
+            continue
+        for at, step in dated:
+            if at > now:
+                upcoming.append((at, -(step.get("pct") or 0), max(starts), c, step))
+                break
+            starts.append(at)
+    upcoming.sort(key=lambda r: (r[0], r[1]))
+    rows = []
+    for at, _, start, c, step in upcoming[:count]:
+        left = (at - now).total_seconds()
+        days, hours = int(left // 86400), int(left // 3600)
+        n, unit = (days, "day" if days == 1 else "days") if days >= 1 else (max(hours, 1), "hrs" if hours > 1 else "hr")
+        done = min(1.0, max(0.02, (now - start).total_seconds() / max(1.0, (at - start).total_seconds())))
+        pct = step.get("pct")
+        when = f"{at.strftime('%b')} {at.day}"
+        rows.append(f"""<a class="lum-row" href="/lock-up-calendar/#{esc(c["ticker"].lower())}" data-at="{int(at.timestamp() * 1000)}" data-from="{int(start.timestamp() * 1000)}" style="--f:{done:.3f}" title="{esc(c["name"])}: shares free from {when}{f', {pct}% of the company' if pct is not None else ''}">
+            <span class="lum-days"><b data-n>{n}</b> <span data-unit>{unit}</span></span>
+            <span class="lum-co"><i>{esc(c["ticker"])}</i><span>{esc(c["name"])}</span></span>
+            {f'<b class="lum-pct">{pct}%</b>' if pct is not None else '<span></span>'}
+            <span class="lum-bar" aria-hidden="true"><span></span></span>
+          </a>""")
+    if not rows:
+        return ""
+    return f"""<section class="today-card today-lum" data-lockup-mini aria-labelledby="today-lockups">
+          <div class="lum-head"><h2 class="today-label" id="today-lockups">Lock-up watch</h2><a href="/lock-up-calendar/">All lock-ups ↗</a></div>
+          <div class="lum-list">{"".join(rows)}</div>
+        </section>"""
 
 
 def newest_season() -> dict:

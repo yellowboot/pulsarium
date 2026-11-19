@@ -258,12 +258,29 @@
   .today-live .mm-foot { padding-top: 8px; }
   .today-col { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
   .today-col .today-mood { flex: 1 1 150px; height: auto; min-height: 150px; }
-  .today-uni { gap: 8px; text-decoration: none; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
-  .today-uni:hover { border-color: rgba(0,240,255,0.5); box-shadow: 0 0 22px rgba(0,240,255,0.14); }
-  .today-uni-nums { display: flex; flex-wrap: wrap; gap: 4px 16px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 11.5px; color: var(--text-mid); }
-  .today-uni-nums b { margin-right: 5px; font-size: 19px; font-weight: 700; color: var(--text-hi); }
-  .today-uni-nums .pos b { color: var(--pos); } .today-uni-nums .neg b { color: var(--neg); }
-  .today-uni-open { font-size: 12.5px; font-weight: 600; color: var(--accent); }
+  /* "Lock-up watch" under the Mood Index (site_build.home_lockups + assets/lockup-mini.js): the next two releases */
+  .today-lum { gap: 9px; padding: 14px 16px 13px; }
+  .lum-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .lum-head .today-label { margin: 0; }
+  .lum-head a { font-size: 12px; font-weight: 600; color: var(--accent); text-decoration: none; white-space: nowrap; }
+  .lum-list { display: grid; gap: 9px; }
+  .lum-row { display: grid; grid-template-columns: 54px minmax(0, 1fr) auto; align-items: center; column-gap: 7px; row-gap: 5px; color: inherit; text-decoration: none; }
+  .lum-row[hidden] { display: none; }
+  .lum-days { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 10.5px; color: var(--text-mid); white-space: nowrap; }
+  .lum-days b { margin-right: 2px; font-size: 17px; font-weight: 700; color: var(--text-hi); font-variant-numeric: tabular-nums; }
+  .lum-co { display: flex; align-items: center; gap: 6px; min-width: 0; font-size: 12px; font-weight: 600; color: var(--text-hi); }
+  .lum-co > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lum-co i { flex: none; padding: 1px 6px; border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); border-radius: 999px; background: color-mix(in srgb, var(--accent) 10%, transparent); font-style: normal; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; color: var(--accent); }
+  .lum-row:hover .lum-co { color: var(--accent); }
+  .lum-pct { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 11.5px; font-weight: 700; color: var(--magenta); text-shadow: 0 0 8px color-mix(in srgb, var(--magenta) 40%, transparent); }
+  /* how far the wait has gone: the bar fills toward the release, its pink head pulses */
+  .lum-bar { grid-column: 1 / -1; position: relative; height: 3px; border-radius: 3px; background: color-mix(in srgb, var(--accent) 13%, transparent); }
+  .lum-bar > span { position: absolute; inset: 0 auto 0 0; width: calc(var(--f, 0) * 100%); border-radius: inherit; background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 55%, transparent), var(--magenta)); transition: width 1.3s cubic-bezier(.2, .7, .2, 1); }
+  .lum-bar > span::after { content: ""; position: absolute; right: -3px; top: 50%; width: 7px; height: 7px; margin-top: -3.5px; border-radius: 50%; background: var(--magenta); box-shadow: 0 0 8px var(--magenta); animation: lum-pulse 2.2s ease-in-out infinite; }
+  @keyframes lum-pulse { 50% { box-shadow: 0 0 2px var(--magenta); opacity: .65; } }
+  @media (prefers-reduced-motion: reduce) { .lum-bar > span { transition: none; } .lum-bar > span::after { animation: none; } }
+  :root[data-color-theme='calm'] .lum-pct { text-shadow: none; }
+  :root[data-color-theme='calm'] .lum-bar > span::after { box-shadow: none; }
   .today-live .mm-open { font-size: 12.5px; font-weight: 600; color: var(--accent); white-space: nowrap; }
   .today-live .chip { font-family: var(--font-ui, 'Chakra Petch', sans-serif); border-radius: 20px; border: 1px solid rgba(120,220,255,0.18); background: transparent; color: var(--text-mid); cursor: pointer; }
   .today-live .chip:hover { color: var(--text-hi); border-color: var(--accent); }
@@ -553,11 +570,20 @@
           <a class="today-more" href="news/">Open the news dashboard →</a>
         </div>
         <div class="today-grid today-live">
-        <div class="today-col"><iframe class="today-mood" src="/mood/widget/" title="Pulsarium Mood Index: 57/100, leaning optimistic" loading="lazy"></iframe><a class="today-card today-uni" href="/universe/">
-          <span class="today-label">Market Universe</span>
-          <span class="today-uni-nums"><span><b>309</b> companies</span><span class="pos"><b>61</b> growth signals</span><span class="neg"><b>31</b> risk signals</span></span>
-          <span class="today-uni-open">Open the 3D map ↗</span>
-        </a></div><section class="today-card mm-card mm-wide" data-insider-map aria-labelledby="today-insiders" hidden>
+        <div class="today-col"><iframe class="today-mood" src="/mood/widget/" title="Pulsarium Mood Index: 57/100, leaning optimistic" loading="lazy"></iframe><section class="today-card today-lum" data-lockup-mini aria-labelledby="today-lockups">
+          <div class="lum-head"><h2 class="today-label" id="today-lockups">Lock-up watch</h2><a href="/lock-up-calendar/">All lock-ups ↗</a></div>
+          <div class="lum-list"><a class="lum-row" href="/lock-up-calendar/#bsp" data-at="1795444200000" data-from="1782826200000" style="--f:0.973" title="Bending Spoons: shares free from Nov 23, 89.6% of the company">
+            <span class="lum-days"><b data-n>3</b> <span data-unit>days</span></span>
+            <span class="lum-co"><i>BSP</i><span>Bending Spoons</span></span>
+            <b class="lum-pct">89.6%</b>
+            <span class="lum-bar" aria-hidden="true"><span></span></span>
+          </a><a class="lum-row" href="/lock-up-calendar/#qnt" data-at="1796135400000" data-from="1780493400000" style="--f:0.934" title="Quantinuum: shares free from Dec 1, 89.1% of the company">
+            <span class="lum-days"><b data-n>11</b> <span data-unit>days</span></span>
+            <span class="lum-co"><i>QNT</i><span>Quantinuum</span></span>
+            <b class="lum-pct">89.1%</b>
+            <span class="lum-bar" aria-hidden="true"><span></span></span>
+          </a></div>
+        </section></div><section class="today-card mm-card mm-wide" data-insider-map aria-labelledby="today-insiders" hidden>
           <div class="mm-head"><h2 id="today-insiders" data-bubbles-title>Insider trades · this week</h2><p class="mm-cap" data-bubbles-cap>What company officers and directors bought and sold</p></div>
           <div class="mm-stage"><canvas role="img" aria-label="Floating bubbles, one per company: green and red by direction, a bigger bubble is a bigger amount"></canvas></div>
           <div class="mm-info" data-insider-info aria-live="polite"></div>
@@ -579,7 +605,7 @@
           </div>
         </section>
         </div>
-        <script src="/assets/season-q3-2026.js?v=6080dfab81" defer></script><script src="/assets/market-map.js?v=a61e23b364" defer></script>
+        <script src="/assets/season-q3-2026.js?v=6080dfab81" defer></script><script src="/assets/market-map.js?v=a61e23b364" defer></script><script src="/assets/lockup-mini.js?v=5075d85b74" defer></script>
       </section>
       <!-- today:end -->
 
