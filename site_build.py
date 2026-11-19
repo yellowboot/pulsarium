@@ -56,6 +56,11 @@ WINDOW_DAYS = 30
 # sitemap, so search engines don't see near-empty pages.
 MIN_INDEXABLE = 3
 MIN_INDEXABLE_DAY = 5
+# Nov 2026, her decision: the headline pages (a company's, a sector's and a day's headlines) repeat what Yahoo,
+# Investing.com and CNBC already show; Google tried them in early October, then stopped showing the site. They
+# stay on the site for readers and keep passing links (noindex, follow), but leave the index, the sitemap and the
+# IndexNow pings, so search engines judge the site by the pages with our own data.
+HEADLINE_PAGES_INDEXABLE = False
 ITEMS_PER_PAGE = 60
 ITEMS_SHOWN = 6    # a company page shows this many headlines, the rest behind "Show more"
 PEERS_SHOWN = 12   # "More in <sector>" chips on a company page
@@ -927,7 +932,7 @@ def ticker_page(company: dict, items: list, companies: dict, sector_counts: dict
     noun = news_noun(company)
     week = [i for i in items if i["_time"] >= now - timedelta(days=7)]
     m = mood(items)
-    indexable = len(items) >= MIN_INDEXABLE
+    indexable = HEADLINE_PAGES_INDEXABLE and len(items) >= MIN_INDEXABLE
     sources = sources_phrase(items)
     path = f"/news/{company['slug']}/"
 
@@ -1001,7 +1006,7 @@ def sector_page(sector: str, items: list, companies: dict, counts: dict, now: da
     path = f"/news/sector/{slug}/"
     week = [i for i in items if i["_time"] >= now - timedelta(days=7)]
     m = mood(items)
-    indexable = len(items) >= MIN_INDEXABLE
+    indexable = HEADLINE_PAGES_INDEXABLE and len(items) >= MIN_INDEXABLE
     # companies without a page (no headline yet) aren't listed
     members = sorted((c for c in companies.values() if c["sector"] == sector and c.get("paged", True)),
                      key=lambda c: (-counts.get(c["ticker"], 0), c["ticker"]))
@@ -1053,7 +1058,7 @@ def daily_page(day: str, items: list, companies: dict, prev_day, next_day, mood_
     d = date.fromisoformat(day)
     path = f"/news/daily/{day}/"
     m = mood(items)
-    indexable = len(items) >= MIN_INDEXABLE_DAY
+    indexable = HEADLINE_PAGES_INDEXABLE and len(items) >= MIN_INDEXABLE_DAY
     counts = {}
     for item in items:
         for t in item["_tickers"]:
