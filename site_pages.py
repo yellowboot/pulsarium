@@ -766,11 +766,11 @@ def why_pulsarium() -> dict:
 
 
 def earnings_season() -> dict:
-    """The Q3 2026 earnings season as one interactive picture: assets/market-map.js draws it from
+    """Earnings reports since Oct 12, 2026 as one interactive picture (every refresh adds the new reports): assets/market-map.js draws it from
     assets/season-q3-2026.js (a dated snapshot, Oct 12 - Nov 18, 2026, refreshed by hand); the figures in the text are the same snapshot."""
     def chips(attr: str, items: list) -> str:
         return "".join(f'<button type="button" class="chip" {attr}="{value}">{esc(label)}</button>' for value, label in items)
-    picture = f"""<section class="panel market-map mm-full" data-season="full" aria-label="Interactive picture of the Q3 2026 earnings season" hidden>
+    picture = f"""<section class="panel market-map mm-full" data-season="full" aria-label="Interactive picture of earnings reports since October 12, 2026" hidden>
   <div class="mm-body">
     <div class="mm-stage"><canvas role="img" aria-label="One line per company: up if the stock rose after its earnings report, down if it fell"></canvas></div>
     <div class="mm-side">
@@ -782,7 +782,7 @@ def earnings_season() -> dict:
   <p class="mm-note">Up = the stock rose, down = it fell. The thicker the line, the larger the company. Reports from Oct 12 to Nov 18, 2026.</p>
 </section>"""
     body = (
-        '<header class="page-head feature-head"><span class="eyebrow">Earnings season · Q3 2026</span>'
+        '<header class="page-head feature-head"><span class="eyebrow">Earnings reports · since&nbsp;Oct&nbsp;12</span>'
         "<h1>764 stocks on the day after their earnings reports</h1>"
         '<p class="lead">One line is one company worth $10 billion or more. It points up if the stock rose on its first '
         "trading day after the report and down if it fell. Regroup the lines by date, by result or by sector, and point at "
@@ -805,8 +805,8 @@ def earnings_season() -> dict:
     )
     return {
         "path": "/earnings-season/", "crumb": "Earnings season",
-        "title": "Q3 2026 Earnings Season in One Picture — 764 Stocks After Their Reports",
-        "description": "An interactive picture of the Q3 2026 earnings season: 764 companies worth $10 billion or more, "
+        "title": "Earnings Season in One Picture — 764 Stocks After Their Reports",
+        "description": "An interactive picture of earnings reports since October 12, 2026: 764 companies worth $10 billion or more, "
                        "each stock's move on the first trading day after its report. 78% beat forecasts; 45% of those fell.",
         "body": body,
         "head": '<link rel="stylesheet" href="/assets/market-map.css?v=5">\n'

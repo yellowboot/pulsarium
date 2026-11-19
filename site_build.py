@@ -1898,7 +1898,7 @@ def home_today(history: list, window: list, now: datetime) -> str:
     season = newest_season()
     if season:
         cards.append(f"""<section class="today-card market-map mm-card" data-season="mini" aria-labelledby="today-season" hidden>
-          <div class="mm-head"><h2 id="today-season">Earnings season · Q{season["quarter"]} {season["year"]}</h2><p class="mm-cap">{season["companies"]} stocks on the day after their reports</p></div>
+          <div class="mm-head"><h2 id="today-season">Earnings reports · since&nbsp;Oct&nbsp;12</h2><p class="mm-cap">{season["companies"]} stocks on the day after their reports</p></div>
           <div class="mm-stage"><canvas role="img" aria-label="One line per company: up if the stock rose after its earnings report, down if it fell"></canvas></div>
           <div class="mm-info" data-season-info aria-live="polite"></div>
           <div class="mm-foot">
