@@ -135,8 +135,8 @@
    "ipo_date": "2026-11-18",
    "price": 83,
    "raised": 81300000000,
-   "outstanding": 13086672593,
-   "sec": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074338/anthropicpbc-sx1ax3.htm",
+   "outstanding": 13219642274,
+   "sec": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
    "steps": [
     {
      "date": "2026-11-19",
@@ -179,7 +179,7 @@
      "label": "Big release after the FY2026 results",
      "kind": "earnings",
      "shares": 1700000000,
-     "pct": 13,
+     "pct": 12.9,
      "trigger": "Two full trading days after the FY2026 results: employees +35%, other holders +12.5% and +3.75%"
     },
     {
@@ -187,7 +187,7 @@
      "label": "Five more steps after the FY2026 results",
      "kind": "earnings",
      "shares": 2400000000,
-     "pct": 18.3,
+     "pct": 18.2,
      "trigger": "About 480M shares each, 13, 27, 41, 55 and 69 days after the FY2026 results"
     },
     {
@@ -195,7 +195,7 @@
      "label": "Main lock-up ends",
      "kind": "earnings",
      "shares": 3000000000,
-     "pct": 22.9,
+     "pct": 22.7,
      "trigger": "Two full trading days after the Q1 2027 results or May 17, 2027, whichever comes first; co-founders get 29%"
     },
     {
@@ -203,7 +203,7 @@
      "label": "Four steps after the Q1 2027 results",
      "kind": "earnings",
      "shares": 1788000000,
-     "pct": 13.7,
+     "pct": 13.5,
      "trigger": "About 447M shares each, 34 to 76 days after the Q1 2027 results, for holders of more than 0.5%"
     },
     {
@@ -211,7 +211,7 @@
      "label": "Q2 2027 results and five steps after",
      "kind": "earnings",
      "shares": 3068000000,
-     "pct": 23.4,
+     "pct": 23.2,
      "trigger": "About 558M shares after the Q2 2027 results, then about 502M every two weeks"
     },
     {
@@ -219,11 +219,11 @@
      "label": "Final: the co-founders' remaining shares",
      "kind": "earnings",
      "shares": 1900000000,
-     "pct": 14.5,
+     "pct": 14.4,
      "trigger": "After the Q3 2027 results or by Nov 18, 2027, whichever comes first"
     }
    ],
-   "note": "Priced Nov 18, 2026 at $83, above the $70–78 range, with the offering upsized to about 980M shares. The release dates follow the S-1/A of Nov 17 (prospectus dated Nov 18) and will be checked against the final prospectus; share counts are estimates from that filing."
+   "note": "Priced Nov 18, 2026 at $83, above the $70–78 range, with the offering upsized to 980M shares. Release dates and share counts (\"up to\") are from the final prospectus of Nov 18, 2026. Steps tied to results get their dates once Anthropic announces its report days."
   },
   {
    "ticker": "CBRS",
