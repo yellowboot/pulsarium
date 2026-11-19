@@ -133,9 +133,8 @@
    "name": "Anthropic",
    "exchange": "Nasdaq",
    "ipo_date": "2026-11-18",
-   "price": null,
-   "raised": 61050000000,
-   "raised_est": true,
+   "price": 83,
+   "raised": 81300000000,
    "outstanding": 13086672593,
    "sec": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074338/anthropicpbc-sx1ax3.htm",
    "steps": [
@@ -224,8 +223,7 @@
      "trigger": "After the Q3 2027 results or by Nov 18, 2027, whichever comes first"
     }
    ],
-   "note": "Projected from the S-1/A of Nov 17, 2026: the price is set the evening of Nov 18, and the dates assume a final prospectus dated Nov 18; they will be checked against it. Share counts are estimates at the $74 midpoint.",
-   "price_mid": 74
+   "note": "Priced Nov 18, 2026 at $83, above the $70–78 range, with the offering upsized to about 980M shares. The release dates follow the S-1/A of Nov 17 (prospectus dated Nov 18) and will be checked against the final prospectus; share counts are estimates from that filing."
   },
   {
    "ticker": "CBRS",
