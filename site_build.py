@@ -1931,7 +1931,8 @@ def ny_open_utc(day: date) -> datetime:
 
 
 def home_lockups(now: datetime, count: int = 2) -> str:
-    """The home page's "Lock-up watch" card: the next `count` lock-up releases, one per company, from
+    """The home page's "Lock-up watch" card: `count` upcoming lock-up releases (the nearest one, then the largest
+    company due within 30 days), one per company, from
     assets/lockups.json (a step's date is the first day its shares may be sold, from the market open). Each row has
     the days left, the ticker and name, the share of the company it frees and a bar of how far the wait has gone
     since the previous release (or the IPO). assets/lockup-mini.js keeps the numbers current. "" if nothing is due."""
@@ -1955,8 +1956,15 @@ def home_lockups(now: datetime, count: int = 2) -> str:
                 break
             starts.append(at)
     upcoming.sort(key=lambda r: (r[0], r[1]))
+    # her rule (Nov 2026): the nearest release first, then the largest company (shares x IPO price) whose next
+    # release is within 30 days; the second nearest only when no other company is due that soon
+    picked = upcoming[:1]
+    soon = [r for r in upcoming[1:] if r[0] - now <= timedelta(days=30)]
+    if soon:
+        picked.append(max(soon, key=lambda r: (r[3].get("outstanding") or 0) * (r[3].get("price") or 0)))
+    picked += [r for r in upcoming if r not in picked][:max(0, count - len(picked))]
     rows = []
-    for at, _, start, c, step in upcoming[:count]:
+    for at, _, start, c, step in picked[:count]:
         left = (at - now).total_seconds()
         days, hours = int(left // 86400), int(left // 3600)
         n, unit = (days, "day" if days == 1 else "days") if days >= 1 else (max(hours, 1), "hrs" if hours > 1 else "hr")
