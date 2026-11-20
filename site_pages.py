@@ -988,6 +988,7 @@ def lockup_calendar() -> dict:
         "dateModified": data["updated"],
         "creator": {"@type": "Organization", "name": "Pulsarium", "url": "https://pulsarium.finance/"},
         "isAccessibleForFree": True,
+        "license": "https://creativecommons.org/licenses/by/4.0/",
         "about": [{"@type": "Corporation", "name": n} for n in names_ld],
         "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json",
                           "contentUrl": "https://pulsarium.finance/assets/lockups.json"}],
