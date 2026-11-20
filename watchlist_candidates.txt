@@ -6,46 +6,40 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 20.11.2026 13:17
-40 of 80 news items unmatched this run
+Generated: 20.11.2026 14:37
+34 of 80 news items unmatched this run
 
-- [CNBC] Anthropic raises $93.5 billion total as underwriters scoop up ‘greenshoe’ overallotment
-- [CNBC] Nasdaq futures drop as Anthropic falls one day after debut, chip stocks decline: Live updates
-- [CNBC] Cathie Wood's ARK Invest was a big buyer of Anthropic, tells CNBC she's 'quite optimistic'
-- [Yahoo Finance] As The Stock Market Tries To Bottom, Follow This Relative Strength Screen
-- [Yahoo Finance] Arrive AI's Pro Forma Stockholders' Equity Now Above Nasdaq Minimum Requirement Following Recent Transactions
-- [Yahoo Finance] REX Shares Renames NVII, TSII, and WMTI as Enhanced Growth & Income ETFs, Effective November 20, 2026
-- [Yahoo Finance] Stock Market Today: Tech Futures Sell Off As Anthropic Plunges 10% After IPO (Live Coverage)
-- [Investing.com] Worldline shares sink 15% after FT report on supplier payment delays
-- [Yahoo Finance] Equity Futures Drop as AI Concerns Remain Despite Anthropic's Record Market Debut
-- [Yahoo Finance] US Equity Futures Drop Pre-Bell as Anthropic Shares Decline One Day After Debut
-- [Investing.com] US equity funds draw inflows for a third straight week
-- [Yahoo Finance] The Stock Market Has Problems Even Anthropic Can’t Solve
-- [Investing.com] Exclusive-Citi underestimated risky assets by $35 billion after incorrectly recording trades, sources say
-- [Yahoo Finance] 343 Companies Report $28.5 Billion In Trump Tariff Refunds. Here's Where The Money Is Going.
-- [Investing.com] Erasca falls 5% as early RAS cancer data leave key questions unanswered
-- [Yahoo Finance] KONST at Data Center Asia in Kuala Lumpur: Advancing Its Southeast Asia Token Factory Strategy with Flagship Projects in Cyberjaya and Jakarta
-- [Yahoo Finance] Cizzle Brands Corporation Announces Pricing of US$15,150,000 Public Offering and Nasdaq Listing
-- [MarketWatch] These 5 defense stocks are drawing millions in insider bets ahead of military-spending boom in 2027
-- [Yahoo Finance] Anthropic IPO triggers AI selloff — washout or deeper unwind?
-- [Investing.com] Nasdaq futures falter, Anthropic slides amid AI anxieties
-- [Investing.com] Anthropic shares fall around 10% premarket as tech sell off continues
-- [Nasdaq] NextCure, Inc. Receives Nasdaq Non-Compliance Notice on November 16, 2026
-- [Nasdaq] Erasca, Inc. Announces Phase 1 Data for ERAS-0015 and Accelerates Phase 3 Trial in Pancreatic Cancer to First Half of 2027
-- [Nasdaq] Vanda Pharmaceuticals Inc. Settles HETLIOZ LQ Patent Litigation with MSN
-- [Nasdaq] Granite Construction Incorporated Appoints Stanley G. Bass to Board of Directors
+- [CNBC] Nasdaq drops as Anthropic shares tumble; Dow nears correction territory: Live updates
+- [MarketWatch] Anthropic’s stock slides closer to IPO price and drags down the AI trade
+- [Investing.com] Big Pharma, with eye on Anthropic, says AI is shrinking drug discovery timelines
+- [Yahoo Finance] LHV Group's own share acquisition transactions
+- [Nasdaq] Interactive Strength Inc. Amends Exchange Agreements and Series R Preferred Stock Terms
+- [Nasdaq] Purple Biotech Ltd Announces Preclinical Data on IM1240 at 38th EORTC-NCI-AACR Symposium
+- [Yahoo Finance] The 1 Unstoppable ETF I'd Buy Today and Hold for Decades
+- [Investing.com] European shares extend losses as Anthropic debut tests AI trade (Nov. 19)
+- [Yahoo Finance] Would Warren Buffett Buy Anthropic? This Is the One Question He'd Have
 - [MarketWatch] GameStop has transformed from a meme stock into a ‘real company,’ analysts say
-- [Nasdaq] Atmus Filtration Technologies Inc. Approves Compensation for Interim Chief People Officer Laura Heltebran
-- [Nasdaq] Borr Drilling Limited Reports Q3 2026 Results and Details Sinking of Prospector 5 Rig
-- [Nasdaq] Westlake Corporation Agrees to Pay $119.5 million and $79.5 million to Settle PVC Pipe Antitrust Litigation
-- [Nasdaq] Borr Drilling Limited Announces Third Quarter 2026 Results
-- [MarketWatch] Anthropic’s stock surges in its debut — and the rest of the market dives anyway
-- [Nasdaq] Alterity Therapeutics Limited Appoints BDO Audit Pty Ltd as Successor Auditor Effective November 20, 2026
+- [Investing.com] This software stock ’is firing on all cylinders heading into 2027’: TD Cowen
+- [Nasdaq] Aprea Therapeutics, Inc. Announces Interim Phase 1 Results for APR-1051
+- [Nasdaq] NB Bancorp, Inc. Announces Additional Stock Repurchase Plan for Up to 2,190,925 Shares
+- [Yahoo Finance] VEON 2026 Capital Markets Day Content is Now Available on Demand
+- [Yahoo Finance] Sector Update: Tech Stocks Fall Premarket Friday
+- [Investing.com] Should you accumulate Anthropic stock early after paring debut day gains?
+- [Investing.com] Mercedes gets German approval for assisted point-to-point driving
+- [Yahoo Finance] Stock Market Today: Tech Futures Sell Off As Anthropic Plunges 10% After IPO (Live Coverage)
+- [Investing.com] Anthropic shares slump premarket as tech sell off continues
+- [Nasdaq] Chicago Rivet & Machine Co. Announces CEO Gregory D. Rizzo to Step Down Effective April 1, 2027
+- [Nasdaq] CytoSorbents Corporation Announces $4.0 million Registered Direct Offering and Restructuring of Avenue Capital Credit Facility
+- [CNBC] Anthropic raises $93.5 billion total as underwriters scoop up ‘greenshoe’ overallotment
+- [Nasdaq] Agilysys, Inc. Raises Fiscal Year 2027 Annual Revenue Guidance to $374M - $378M
+- [Nasdaq] Shutterstock, Inc. Appoints Stephen Casari as Chief Accounting Officer
+- [Nasdaq] C.H. Robinson Worldwide, Inc. Enters into $500 million Term Loan Agreement and Amends Receivables Facility
+- [Nasdaq] NuCana plc Announces Preclinical Data Showing NUC-7738 Enhances Carfilzomib Activity
+- [CNBC] Cathie Wood's ARK Invest was a big buyer of Anthropic, tells CNBC she's 'quite optimistic'
+- [Nasdaq] CCSC Technology International Holdings Limited Announces 20-for-1 Share Consolidation
+- [MarketWatch] These 5 defense stocks are drawing millions in insider bets ahead of military-spending boom in 2027
 - [CNBC] A24 is having a great year at the box office. That could give HBO Max a streaming edge
 - [CNBC] Rejecting cheap fabrics, higher prices: Why shoppers are asking for better clothes
 - [CNBC] The Tech Download: Anthropic charmed Wall Street. But one big uncertainty hangs over the business
-- [MarketWatch] Citi warns a key stock-market signal is close to flashing red
 - [CoinDesk] No special rules for Hyperliquid or other onchain trading platforms, CFTC says
-- [CNBC] ‘More than just a game’: How GTA VI’s blockbuster launch fuels a booming content economy
-- [BioPharma Dive] This week in charts: Biotech investors’ China bets are already paying off
-- [OilPrice.com] WTI Crude Sinks More Than 5% as Global Oil Glut Fears Grow
+- [OilPrice.com] Europe Has Already Drained 11% of Its Summer Gas Injections
