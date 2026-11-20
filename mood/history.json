@@ -700,15 +700,15 @@
    "date": "2026-11-19",
    "value": 55,
    "label": "Neutral",
-   "headlines": 359,
+   "headlines": 360,
    "avg7": 51.0
   },
   {
    "date": "2026-11-20",
-   "value": 42,
+   "value": 39,
    "label": "Leaning cautious",
-   "headlines": 122,
-   "avg7": 49.3,
+   "headlines": 104,
+   "avg7": 48.9,
    "window": "in the last 12 hours"
   }
  ]
