@@ -108,17 +108,17 @@
   </url>
   <url>
     <loc>https://pulsarium.finance/mood/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://pulsarium.finance/news/companies/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://pulsarium.finance/news/daily/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -609,6 +609,11 @@
   <url>
     <loc>https://pulsarium.finance/news/daily/2026-11-17/</loc>
     <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://pulsarium.finance/news/daily/2026-11-18/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
