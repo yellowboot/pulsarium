@@ -712,10 +712,17 @@
   },
   {
    "date": "2026-11-21",
-   "value": 34,
+   "value": 35,
    "label": "Leaning cautious",
-   "headlines": 50,
-   "avg7": 45.7,
+   "headlines": 93,
+   "avg7": 45.9
+  },
+  {
+   "date": "2026-11-22",
+   "value": 28,
+   "label": "Cautious",
+   "headlines": 31,
+   "avg7": 42.4,
    "window": "in the last 12 hours"
   }
  ]
