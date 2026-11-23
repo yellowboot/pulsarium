@@ -6,34 +6,31 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 23.11.2026 11:37
-28 of 80 news items unmatched this run
+Generated: 23.11.2026 13:17
+25 of 80 news items unmatched this run
 
-- [Yahoo Finance] Anthropic Stock Is Off to a Shaky Start. Here's What Could Happen Next.
-- [Yahoo Finance] Dan Ives Calls Tech Sell-Off a 'Buying Opportunity' -- AI Boom Has Room to Run
-- [Investing.com] Goldman’s Snider outlines 3 signs of a market recovery
-- [Investing.com] European shares catch modest bid after brutal sell-off
-- [Yahoo Finance] Stocks struggle to recover from tech-led rout
-- [Yahoo Finance] Big Tech Rebound on Wall Street Pre-Bell; Asia Off, Europe Up
-- [Yahoo Finance] Wall Street Futures Rebound Sharply After AI Sell-Off Pushes Major US Indices Into Correction
-- [Nasdaq] Capricor Therapeutics Receives Complete Response Letter From FDA for Deramiocel BLA
-- [Yahoo Finance] What ARK Blockchain & Fintech (ARKF) Bought: Block Leads on Nov. 19
-- [Yahoo Finance] Claude “May Have Just Proved” the Riemann Hypothesis. Anthropic’s Stock Fell Toward Its IPO Price Anyway
+- [Investing.com] TSX futures rise as Wall Street bounces following AI selloff
+- [Investing.com] International Paper board approves EMEA packaging spinoff
+- [Investing.com] Health insurer stocks slide as Medicare Advantage proposal threatens payments
+- [Yahoo Finance] Compass Therapeutics to Participate in the 38th Annual Piper Sandler Healthcare Conference
+- [Nasdaq] PepGen Inc. Updated its Corporate Presentation
+- [Nasdaq] Loop Industries, Inc. Enters Into Agreement and Amending Agreement With Chief Executive Officer Daniel Solomita
+- [Nasdaq] Kingsway Financial Services Inc. Subsidiaries Enter Credit Agreement Amendments and Obtain Covenant Waivers
+- [Nasdaq] Himalaya Shipping Ltd. (HSHP) – New time charter agreement for Mount Ita
+- [Nasdaq] Evogene Ltd. Reports Voluntary Delisting from TASE
+- [Nasdaq] BioLineRx Reports Third Quarter 2026 Financial Results and Provides Corporate Update
+- [Investing.com] Barclays Sees 35% Upside in Two EU Chemical Distributors as Growth Returns
+- [Investing.com] Wall Street futures bounce after AI jitters spark slide into correction
+- [Investing.com] Saudi Arabia stocks lower at close of trade; Tadawul All Share down 0.23%
 - [Investing.com] Wall Street futures rebound as battered AI stocks gain ground
-- [Investing.com] Why is Nemetschek stock sliding today?
-- [Investing.com] Why is thyssenkrupp nucera stock sliding today?
+- [Yahoo Finance] Chuck Shehadi named Unspun CEO as OneWeave enters global rollout
+- [Nasdaq] SOAR AI Reports Third Quarter 2026 Results with $41.2 Million in Cash and $1.2 Billion Under Contract; Revenue Up 245%
+- [Nasdaq] Viant Technology Inc. Reports Stockholder Approval of Reincorporation from Delaware to Texas
+- [Nasdaq] Hyperscale Data, Inc. Reaffirms 2027 Guidance of $300 Million to $350 Million in Revenue
+- [Nasdaq] MEDIROM Healthcare Technologies Inc. Regains Compliance with Nasdaq Periodic Filing Requirement
+- [Nasdaq] Smith & Nephew plc Announces Appointment of Nick Alexos as Chief Financial Officer
+- [Nasdaq] Stantec Inc. Selected by City of San Diego for US$75 million Dam Modernization Contract
+- [Nasdaq] RYTHM, Inc. Enters Into Third Amendment to Secured Convertible Note
+- [CNBC] Tokenized stocks face pushback as NYSE, Nasdaq pivot for a new market
+- [CNBC] The biggest money-making energy trade looks over. What to buy instead
 - [CNBC] French biotech rejects short seller’s cancer-risk claims after shares plunge 17%
-- [Nasdaq] Bull of the Day: Wolverine World Wide (WWW)
-- [Nasdaq] Bear of the Day: Camping World (CWH)
-- [CNBC] Forget Anthropic: In Europe, the IPO hype is about a blue lagoon
-- [Nasdaq] Dollar Weakens as T-Note Yields Plunge
-- [CoinDesk] Cardano holders are turning down a $4 million request for running its flagship event
-- [Nasdaq] Corn Holding onto Friday Losses at Midday
-- [CNBC] Yemen's Houthis claim attacks on Saudi oil refinery as Trump warns of new strikes next year
-- [OilPrice.com] Libya’s Oil Output Plunges as Armed Groups Shut Key Pipelines
-- [OilPrice.com] European Natural Gas Prices Surge 8.6% as Cold Snap Looms
-- [OilPrice.com] EU Green Energy Giants Slam €40 Billion Budget Cut
-- [Nasdaq] Cattle Post Mixed Trade Heading into Another Bullish Cattle on Feed Report
-- [Nasdaq] Cattle Posting Mixed Trade Ahead of USDA Report
-- [Nasdaq] Improved Supply Outlook Weighs on Sugar Prices
-- [OilPrice.com] Oil Prices Slide as AI Bubble Fears Rattle Global Markets
