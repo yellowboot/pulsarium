@@ -6,27 +6,33 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 24.11.2026 06:37
-21 of 80 news items unmatched this run
+Generated: 24.11.2026 08:37
+27 of 80 news items unmatched this run
 
-- [Investing.com] Valneva reports 32% drop in nine-month sales, keeps guidance
-- [Investing.com] Tomra sets medium-term margin target of 16-18% by 2030-2032
-- [Nasdaq] Milestone Scientific Consensus Price Target Raised 20% to $1.53
-- [Nasdaq] Consensus Price Target for Taiheiyo Cement Corporation - Depositary Receipt Decreased by 44.49% to $7.26
-- [Investing.com] Taiwan stocks higher at close of trade; Taiwan Weighted up 8.99%
-- [Yahoo Finance] Europe new car registrations rise 3.4% in Oct as EV, hybrids maintain lead- ACEA
-- [Nasdaq] Corn Holds Firm on Monday
-- [Nasdaq] FuelCell Energy, Inc. - Preferred Stock Price Target Increased by 110.21% to $1,658.86
-- [Nasdaq] DeFi Development - Preferred Stock Price Target Increased by 54.32% to $40.84
-- [Nasdaq] Perdoceo Education Consensus Price Target Increased by 86.36% to $83.64
-- [Nasdaq] American Integrity Insurance Group Consensus Price Target Raised 11.50% to $32.13
-- [Nasdaq] Japan Steel Works, - Depositary Receipt Price Target Decreased by 13.07% to $32.22
-- [Nasdaq] Average Analyst Price Target for Toshiba Tec Corporation - Depositary Receipt Decreased by 11.61% to $12.67
-- [Nasdaq] SL Green Realty - Preferred Stock Price Target Increased by 11.04% to $26.23
-- [Nasdaq] Valaris Limited - Equity Warrant Price Target Decreased by 17.41% to $7.84
-- [Nasdaq] Pelthos Therapeutics Consensus Price Target Decreased by 12.58% to $44.20
-- [Nasdaq] Babcock & Wilcox Enterprises, Inc. - Preferred Stock Price Target Decreased by 31.90% to $81.77
+- [Investing.com] FTSE 100 today: Stocks edge lower as miners slide with metals
+- [Investing.com] Europe’s STOXX 600 subdued after AI-driven rally
+- [Investing.com] Indonesia stocks higher at close of trade; IDX Composite Index up 1.05%
+- [Investing.com] Why is Kingfisher stock sliding today?
+- [Investing.com] Why is Cranswick stock sliding today?
+- [Investing.com] Why is Compass stock surging today?
+- [Yahoo Finance] Compass Group weighs U.S. primary listing, resumes buybacks as profit rises 12%
+- [Investing.com] Fujitsu sees stronger Monaka demand as buyers seek alternatives, Bloomberg reports
+- [Nasdaq] Federal Home Loan Mortgage Corporation - Preferred Stock Price Target Increased by 14.42% to $7.94
+- [Nasdaq] Cibus Consensus Price Target Raised 100% to $6.12
+- [Nasdaq] Ispire Technology Consensus Price Target Increased 42.42% to $4.79
+- [Nasdaq] Ceconomy AG - Depositary Receipt Price Target Increased by 22.78% to $0.98
+- [Nasdaq] Compass Diversified - Preferred Stock Price Target Decreased by 10.78% to $25.89
+- [Nasdaq] Atlanticus Holdings Corporation - Preferred Stock Price Target Increased by 23.03% to $35.94
+- [Nasdaq] Sky Harbour Group Corporation - Equity Warrant Price Target Increased by 19.52% to $0.37
+- [Nasdaq] GrabAGun Digital Holdings Consensus Price Target Lowered 20% to $4.08
+- [Nasdaq] Gold Royalty - Equity Warrant Price Target Decreased by 35.13% to $1.12
+- [Nasdaq] Consensus Price Target for New World Development Company Limited - Depositary Receipt Lowered by 22.02% to $0.30
+- [Nasdaq] Eagle Point Credit Company - Preferred Stock Price Target Decreased by 28.04% to $23.65
+- [Nasdaq] Teads Holding Consensus Price Target Increased 37.93% to $0.41
+- [Nasdaq] Consensus Price Target for Embraer S.A. - Depositary Receipt Decreased by 75.95% to $18.08
+- [Nasdaq] Valterra Platinum Limited - Depositary Receipt Price Target Decreased by 10.95% to $13.46
+- [Nasdaq] Adagio Medical Holdings Consensus Price Target Increased 20% to $122.40
 - [CNBC] Iran says three tankers hit mines in Hormuz despite U.S. escort, as Treasury widens sanctions
+- [OilPrice.com] Oil Prices Hold Near Three-Month Lows Despite Hormuz Mine Claims
 - [OilPrice.com] Electric and Hybrid Cars Capture Three-Quarters of Europe’s Auto Market
 - [CNBC] Fed's John Williams indicates higher interest rates likely 'over time' to address inflation
-- [OilPrice.com] America's Refiners Drowned Their Own Gasoline Windfall
