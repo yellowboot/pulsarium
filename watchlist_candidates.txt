@@ -6,30 +6,38 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 24.11.2026 19:17
-32 of 80 news items unmatched this run
+Generated: 24.11.2026 20:37
+38 of 80 news items unmatched this run
 
-- [Yahoo Finance] Worried That the Rally in AI Stocks Won't Last? Here Are 3 Low-Risk Stocks to Buy Right Now to Safeguard Your Wealth.
-- [Yahoo Finance] Here's How Many Shares of My Highest-Conviction Value Stock You'd Need for $1,000 in Yearly Dividends.
-- [Yahoo Finance] Pinterest Soars 11% as Executive Pay Overhaul Sparks Takeover Speculation
-- [Yahoo Finance] Solana Foundation DeFi head says utility is what makes tokenized stocks matter
-- [Yahoo Finance] Sector Update: Energy Stocks Advance in Afternoon Trading
-- [MarketWatch] Visiting Las Vegas is getting too expensive — but don’t blame airfares
+- [Yahoo Finance] Why Is Vishay (VSH) Stock Down Today? Chip Selloff Drags Semiconductors
+- [Yahoo Finance] Why Ichor Holdings (ICHR) Stock Is Plunging Today: Semiconductor Equipment Selloff
+- [Yahoo Finance] Leidos (LDOS) Stock Is Up 5.0% Today Without Company News
+- [Yahoo Finance] Why Viridian Therapeutics (VRDN) Stock Is Up 10.7% Today Without Company News
+- [Yahoo Finance] Trevi Therapeutics (TRVI) Stock Is Up 11.3% Today Without Company News
+- [Yahoo Finance] Dianthus (DNTH) Stock Is Up 9.1% Today as Biotech Stocks Rally
+- [Yahoo Finance] TG Therapeutics (TGTX) Stock Is Up 9.2% Today: FDA Accepts Briumvi Filing
+- [Yahoo Finance] Krystal Biotech (KRYS) Stock Is Up 7.7% Today Along With Biotech Stocks
+- [Yahoo Finance] Why Syndax (SNDX) Stock Is Up 8.2% Today Without Company News
+- [Yahoo Finance] ORIC Pharmaceuticals (ORIC) Stock Is Up 12.5% Today Without Company News
+- [Investing.com] S&P upgrades E.W. Scripps to ‘B-’ on cost cuts and debt reduction progress
+- [Nasdaq] Wheat Fading Lower on Tuesday
 - [Nasdaq] Smaller Supplies from the Ivory Coast Boost Cocoa Prices
 - [Nasdaq] Easing Supply Concerns Pressure Coffee Prices
-- [Nasdaq] Soybeans Posting Tuesday AM Strength
+- [Nasdaq] Cotton Bulls Powering Higher at Midday
+- [Nasdaq] Soybeans Rallying on Tuesday, as Meal Leads the Charge
+- [Nasdaq] Dollar Weakness Spurs Short Covering in Sugar
+- [Investing.com] US proposes to give automakers until 2031 to install automatic emergency braking
+- [MarketWatch] GameStop has been saved by trading cards and even Rolex watches, say Wall Street’s newest bulls
+- [CNBC] Anthropic shares fall below IPO price. Traders see even more pain
+- [Investing.com] BMO highlights top interactive entertainment pick
+- [MarketWatch] Anthropic’s stock just broke below its IPO price for the first time
+- [CNBC] Buffer ETFs protect investors from the harshest market swings – for a price
+- [CNBC] Retail turnarounds are taking hold just in time for the holiday season
+- [CNBC] Gold is doing something strange. Here's one way to play it
+- [MarketWatch] Visiting Las Vegas is getting too expensive — but don’t blame airfares
 - [CNBC] Kalshi daily volume of ‘perps’ trading begins to top its prediction markets
 - [CNBC] Consumer confidence shoots up after Democrats' midterm victories — though inflation worries persist
-- [Nasdaq] Cattle Look to Tuesday After Mixed Monday Trade
-- [Nasdaq] Braemar Hotels & Resorts Inc. - Preferred Stock Price Target Increased by 10.88% to $18.78
-- [CNBC] Retail turnarounds are taking hold just in time for the holiday season
-- [Nasdaq] Crude Prices Rebound on Reports of Attacks on Tankers in the Strait of Hormuz
-- [CNBC] As Anthropic falls below its IPO price, here's how big-money traders are reacting
-- [Nasdaq] Pearl Diver Credit Consensus Price Target Decreased by 18.60% to $8.92
-- [Investing.com] Dick’s Sporting Goods earnings analysis: questions answered and next catalysts
-- [Nasdaq] Commit To Buy Community Health Systems At $1, Earn 25% Using Options
 - [CoinDesk] Utah moves to drop criminal pursuit of Kalshi after the firm halted services there
-- [MarketWatch] The AI debt market isn’t convinced the worst is over for investors
 - [CNBC] Anthropic sinks 8%, falling below $83 IPO price, but analysts are still largely positive
 - [CNBC] Waymo says recall prompted by 11 new incidents of robotaxis entering closed freeway lanes
 - [CNBC] Amtrak sets ridership record as rising gas prices encourage Americans to travel by rail
@@ -39,5 +47,3 @@ Generated: 24.11.2026 19:17
 - [Mining.com] Silver miners struggle to close persistent supply gap
 - [Mining.com] Marimaca gets Sprott’s backing for Chile copper project
 - [Mining.com] B2Gold charts path back to million-ounce producer ranks
-- [CNBC] Fed's John Williams indicates higher interest rates likely 'over time' to address inflation
-- [CoinDesk] Crypto trader Ansem says his wallet was hacked as $2 million in memecoins were sold
