@@ -6,29 +6,32 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 24.11.2026 11:37
-23 of 80 news items unmatched this run
+Generated: 24.11.2026 13:17
+26 of 80 news items unmatched this run
 
-- [Yahoo Finance] These 3 Stocks Have Raised Their Dividends Annually for at Least 49 Years. Should you Buy Them?
-- [Investing.com] Airlines, squeezed by high fuel costs, rethink jet financing strategy
-- [Nasdaq] INNEOVA Holdings Limited to Effect 5-for-1 Share Consolidation on November 27, 2026
-- [Yahoo Finance] Huang-Over Damps Wall Street Pre-Bell; Asia Up, Europe Off
-- [Nasdaq] AB SKF Consensus Price Target Raised 16.44% to $33.26
-- [Yahoo Finance] Is Krystal Biotech Stock's Market Price Justified?
-- [Yahoo Finance] The Crypto Fear & Greed Index Is Now in Extreme Fear Territory. But These 6 Cryptocurrencies Are Soaring in Value.
-- [Nasdaq] Furukawa Electric Co., - Depositary Receipt Price Target Decreased by 16.20% to $17.22
-- [Investing.com] Why is Bilibili stock climbing today?
-- [Investing.com] Why is Vipshop ADR stock sliding today?
+- [Yahoo Finance] Copper slides 3% as Monday’s bounce fully reverses
+- [CNBC] Property Play: Commercial real estate activity falls 14% in October, as interest rates rise
+- [Yahoo Finance] Avnet to Participate in the Nasdaq Investor Conference on December 8
+- [Yahoo Finance] Onfolio Holdings Announces Nasdaq Stay of Delisting Action
+- [Yahoo Finance] Profusa Announces 1-for-8 Reverse Stock Split
+- [Nasdaq] On November 19, 2026, Idaho Copper Corporation received an Initial Assessment and S-K 1300 Technical Report Summary.
+- [Nasdaq] Ituran Location and Control Ltd. Reports Q3 2026 Results
+- [Yahoo Finance] ANT Stock Slips Below IPO Price In Premarket — Canaccord Sees Bigger AI Opportunity, 60% Upside Potential
+- [Nasdaq] Eve Holding, Inc. - Equity Warrant Price Target Increased by 55.55% to $0.05
+- [CNBC] Anthropic has room to run despite volatile start as public company, Wedbush says
+- [Nasdaq] Algonquin Power & Utilities Corp. Announces Successful Completion of Consent Solicitations for Three Series of Subordinated Notes
+- [Nasdaq] NexGen Energy Ltd. Announces Results From Fifteen Additional Drill Holes at Patterson Corridor East
+- [Investing.com] Vicat shares rise as J.P. Morgan flags European cement pricing potential
+- [Investing.com] Saudi Arabia stocks higher at close of trade; Tadawul All Share up 0.40%
+- [Nasdaq] Ibiden Co., - Depositary Receipt Price Target Decreased by 10.66% to $17.38
+- [Investing.com] European cement makers poised for price gains as costs climb, J.P. Morgan says
+- [Nasdaq] Average Analyst Price Target for Midland States Bancorp, Inc. - Preferred Stock Raised 10.21% to $30.76
+- [Nasdaq] Driven Brands Holdings Inc. Receives Nasdaq Notice Regarding Delayed Form 10-Q
+- [Nasdaq] Rein Therapeutics, Inc. Published Phase 2 Clinical Trial Presentation
+- [Nasdaq] Rezolute, Inc. Furnished Investor Presentation Materials
+- [Nasdaq] NRC Health Appoints Ron Farnsworth as Chief Financial Officer Effective November 30, 2026
+- [Nasdaq] News Corporation Files Daily Share Buy-Back Notification for Class A and Class B Shares
 - [CoinDesk] BTCS sells more than half its ether to repay $43.8 million in Aave debt
-- [Nasdaq] First Tractor Company Limited - Depositary Receipt Price Target Decreased by 12.30% to $17.17
-- [Nasdaq] Eos Energy Enterprises, Inc. - Equity Right Price Target Increased by 19.61% to $0.02
-- [Nasdaq] PennyMac Mortgage Investment Trust - Preferred Stock Price Target Decreased by 11.81% to $22.11
-- [Nasdaq] AGNC Investment - Preferred Stock Price Target Increased by 11.64% to $29.50
-- [Nasdaq] Consensus Price Target for Sound Point Meridian Capital, Inc. - Preferred Stock Decreased by 22.66% to $32.31
-- [Nasdaq] Chimera Investment Corporation - Preferred Stock Price Target Decreased by 31.32% to $26.66
-- [Nasdaq] Kensington Capital Acquisition VI - Equity Warrant Price Target Increased by 57.33% to $4.96
-- [Nasdaq] Airtel Africa Plc - Depositary Receipt Price Target Decreased by 11.98% to $48.38
+- [Mining.com] Trafigura takes control of $260 million copper-gold project in Chile
+- [OilPrice.com] European Gas Prices Climb as Cold Snap Threatens Depleted Reserves
 - [CNBC] Iran says three tankers hit mines in Hormuz despite U.S. escort, as Treasury widens sanctions
-- [OilPrice.com] Japan Poised to Ramp Up LNG Buying as Power Prices Surge
-- [OilPrice.com] Oil Prices Hold Near Three-Month Lows Despite Hormuz Mine Claims
-- [OilPrice.com] Electric and Hybrid Cars Capture Three-Quarters of Europe’s Auto Market
