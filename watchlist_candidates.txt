@@ -6,36 +6,38 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 24.11.2026 16:17
-35 of 80 news items unmatched this run
+Generated: 24.11.2026 17:37
+37 of 80 news items unmatched this run
 
-- [CNBC] Anthropic sinks 12%, falling below $83 IPO price, but analysts are still largely positive
-- [Investing.com] Retail stocks surge into Black Friday amid earnings beats
-- [CNBC] Consumer confidence shoots up after Democrats' midterm victories — though inflation worries persist
-- [Yahoo Finance] Materion (MTRN) Stock Is Down 9.8% Today Without Company News
-- [Yahoo Finance] Why Avnet (AVT) Stock Is Down Today: Semiconductor Sector Selloff
-- [Yahoo Finance] Power Integrations (POWI) Stock Is Down 9.9% Today: Chip Sector Selloff
-- [Yahoo Finance] Plexus (PLXS) Stock Is Down 8.9% Today Without Company News
-- [Investing.com] Norway stocks lower at close of trade; Oslo OBX down 0.82%
-- [Investing.com] Israel stocks lower at close of trade; TA 35 down 0.86%
-- [Investing.com] Greece stocks lower at close of trade; Athens General Composite down 1.46%
-- [Nasdaq] Wheat Showing Marginal Tuesday AM Losses
+- [Yahoo Finance] Why FormFactor (FORM) Stock Is Down 12.4% Today: Semiconductor Selloff Hits Peers
+- [Yahoo Finance] Liberty Global (LBTYB) Stock Is Down 6.2% Today Without Company News
+- [Yahoo Finance] Why Ambarella (AMBA) Stock Is Down Today: Chip Stocks Sell Off
+- [Yahoo Finance] Axsome Therapeutics (AXSM) Stock Is Up 5.4% Today Without Company News
+- [Yahoo Finance] Erasca (ERAS) Stock Is Up 13.0% Today Without Company News
+- [Yahoo Finance] Beta Bionics (BBNX) Stock Is Up 12.1% Today Without Company News
+- [Yahoo Finance] Ecovyst (ECVT) Stock Is Up 6.1% Today Without Company News
+- [CNBC] Anthropic sinks 8%, falling below $83 IPO price, but analysts are still largely positive
+- [Yahoo Finance] Hon Hai Stocks Jump 9.95% to Taipei's Limit as AI Server Maker Rides Huang Rebound
+- [Investing.com] Why is Skydance stock rallying today?
+- [Investing.com] Wendy’s hit with US class action over menu pricing
+- [Investing.com] Why is JetBlue Airways stock climbing today?
+- [Nasdaq] Dollar Weighed Down by Falling T-Note Yields and Trade Tensions
+- [Investing.com] U.K. stocks lower at close of trade; Investing.com United Kingdom 100 down 0.20%
+- [Investing.com] GitLab options signal 13% stock move ahead of Dec. 1 earnings
+- [Investing.com] Spain stocks lower at close of trade; IBEX 35 down 0.86%
+- [Nasdaq] Mesa Laboratories Consensus Price Target Increased by 20% to $153.00
+- [Nasdaq] Cotton Fading Back Lower on Tuesday
+- [Nasdaq] Eagle Point Income Company - Preferred Stock Price Target Decreased by 11.63% to $33.21
 - [Nasdaq] Soybeans Posting Tuesday AM Strength
 - [Nasdaq] Corn Fading Back on Tuesday Morning
-- [Nasdaq] Wheat Posts Mixed Trade on Monday
-- [Nasdaq] Soybeans Close Higher to Start the Holiday Week
+- [Nasdaq] Telos Consensus Price Target Increased by 38.26% to $8.75
+- [CNBC] Consumer confidence shoots up after Democrats' midterm victories — though inflation worries persist
+- [Nasdaq] Wheat Showing Marginal Tuesday AM Losses
+- [Nasdaq] Cotton Rallies on Monday
 - [Nasdaq] Corn Holds Firm on Monday
 - [Nasdaq] Sugar Prices Rebound Higher
-- [Nasdaq] Cocoa Prices Supported by Reduced Ivory Coast Shipments
-- [Nasdaq] Coffee Prices Fall as ICE Inventories Rise and Brazilian Real Falls to 1.75-Year Low
+- [Nasdaq] The Mosaic Company Announces Agreement with CF Industries for the Sale of its Faustina Ammonia Plant
 - [CNBC] Amtrak sets ridership record as rising gas prices encourage Americans to travel by rail
-- [Nasdaq] Cotton Fading Back Lower on Tuesday
-- [Nasdaq] Cotton Rallies on Monday
-- [Investing.com] Why is Fossil stock rallying today?
-- [Investing.com] Why is Cogent Biosciences stock surging today?
-- [Investing.com] Why is Target stock surging to a 52-week high today?
-- [Nasdaq] Alamos Gold Announces Investment in Trident Resources
-- [Nasdaq] MindWalk Advances AI-Designed Ebola Vaccine Candidate Targeting Every Ebolavirus Species Known to Cause Human Disease
 - [CNBC] Kushner-backed OakNorth secures U.S. bank charter as global digital banks push into America
 - [MarketWatch] Anthropic’s stock just broke below its IPO price for the first time
 - [CoinDesk] Anchorage Digital to unveil new asset-management subsidiary
