@@ -6,456 +6,456 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Tue, 24 Nov 2026 08:37:23 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 24 Nov 2026 11:37:25 +0000</lastBuildDate>
   <item>
-    <title>Jensen Huang is ‘too big to fire,’ putting Nvidia’s governance in focus: analysts</title>
-    <link>https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-governance.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-governance.html</guid>
-    <pubDate>Tue, 24 Nov 2026 08:35:16 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Jensen Huang’s return has underscored Nvidia’s deep reliance on its founder, putting the company&#x27;s board oversight and corporate governance under scrutiny.</description>
-    <category>NVDA</category>
+    <title>Bitcoin hands back Monday&#x27;s Nvidia-driven gains, liquidations triple</title>
+    <link>https://www.coindesk.com/markets/2026/11/24/bitcoin-hands-back-monday-s-nvidia-driven-gains-liquidations-triple</link>
+    <guid isPermaLink="false">https://www.coindesk.com/markets/2026/11/24/bitcoin-hands-back-monday-s-nvidia-driven-gains-liquidations-triple</guid>
+    <pubDate>Tue, 24 Nov 2026 11:31:56 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
+    <description>Bitcoin (BTC) has dropped 2.2% since midnight UTC to around $59,900, giving back Monday&#x27;s jump and lagging the stock market&#x27;s rebound from last week&#x27;s selloff.</description>
+    <category>NVDA</category><category>BTC</category>
   </item>
   <item>
-    <title>FTSE 100 today: Stocks edge lower as miners slide with metals</title>
-    <link>https://www.investing.com/news/stock-market-news/ftse-100-today-stocks-edge-lower-as-miners-slide-with-metals-5047340</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/ftse-100-today-stocks-edge-lower-as-miners-slide-with-metals-5047340</guid>
-    <pubDate>Tue, 24 Nov 2026 08:32:12 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Sanofi shares jump 5% to more than one-year high after $41 bln Insmed deal</title>
-    <link>https://www.investing.com/news/stock-market-news/sanofi-to-acquire-insmed-in-41-billion-cash-deal-5047167</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/sanofi-to-acquire-insmed-in-41-billion-cash-deal-5047167</guid>
-    <pubDate>Tue, 24 Nov 2026 08:31:36 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>SNY</category><category>INSM</category>
-  </item>
-  <item>
-    <title>Europe’s STOXX 600 subdued after AI-driven rally</title>
-    <link>https://www.investing.com/news/stock-market-news/europes-stoxx-600-subdued-after-aidriven-rally-5047331</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/europes-stoxx-600-subdued-after-aidriven-rally-5047331</guid>
-    <pubDate>Tue, 24 Nov 2026 08:30:22 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Indonesia stocks higher at close of trade; IDX Composite Index up 1.05%</title>
-    <link>https://www.investing.com/news/stock-market-news/indonesia-stocks-higher-at-close-of-trade-idx-composite-index-up-105-5047328</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/indonesia-stocks-higher-at-close-of-trade-idx-composite-index-up-105-5047328</guid>
-    <pubDate>Tue, 24 Nov 2026 08:30:04 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Why is Kingfisher stock sliding today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-kingfisher-stock-sliding-today-93CH-5047327</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-kingfisher-stock-sliding-today-93CH-5047327</guid>
-    <pubDate>Tue, 24 Nov 2026 08:27:41 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Why is Cranswick stock sliding today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-cranswick-stock-sliding-today-93CH-5047326</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-cranswick-stock-sliding-today-93CH-5047326</guid>
-    <pubDate>Tue, 24 Nov 2026 08:27:18 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Why is Compass stock surging today?</title>
-    <link>https://www.investing.com/news/stock-market-news/why-is-compass-stock-surging-today-93CH-5047325</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-compass-stock-surging-today-93CH-5047325</guid>
-    <pubDate>Tue, 24 Nov 2026 08:25:42 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>CRWV, NBIS And IREN Rally In A ‘Good Day’ For Neoclouds — Databricks Co-Founder Flags Security Gaps At ‘Top’ Neoclouds</title>
-    <link>https://stocktwits.com/news-articles/markets/equity/crwv-nbis-iren-rally-good-day-neoclouds-databricks-co-founder-security-gaps-top-neoclouds/cNbsRgYR9kB?.tsrc=rss</link>
-    <guid isPermaLink="false">https://stocktwits.com/news-articles/markets/equity/crwv-nbis-iren-rally-good-day-neoclouds-databricks-co-founder-security-gaps-top-neoclouds/cNbsRgYR9kB?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 08:23:57 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>NBIS had separately disclosed that Databricks chose its cloud for AI research.</description>
-    <category>CRWV</category><category>NBIS</category>
-  </item>
-  <item>
-    <title>Stock futures rise as traders see whether Nvidia can extend rally from Jensen Huang’s return: Live updates</title>
+    <title>Stock futures decline as Nvidia pulls back, giving back part of Monday’s rally: Live updates</title>
     <link>https://www.cnbc.com/2026/11/23/stock-market-today-live-updates.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/11/23/stock-market-today-live-updates.html</guid>
-    <pubDate>Tue, 24 Nov 2026 08:22:53 +0000</pubDate>
+    <pubDate>Tue, 24 Nov 2026 11:26:08 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>On Monday, the S&amp;P 500 and Nasdaq Composite posted their best sessions since April 2025 as the artificial intelligence trade roared back to life.</description>
     <category>NVDA</category><category>SPY</category><category>QQQ</category>
   </item>
   <item>
-    <title>The Stock Market Just Entered a Correction. History Says Investors Who Make This 1 Move Right Now Will Win Out.</title>
-    <link>https://www.fool.com/investing/2026/11/24/the-stock-market-just-entered-a-correction-history-says-investors-who-make-this-1-move-right-now-will-win-out/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/24/the-stock-market-just-entered-a-correction-history-says-investors-who-make-this-1-move-right-now-will-win-out/?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 08:20:02 +0000</pubDate>
+    <title>Nike’s 2031 Plan Calls for Earnings to More Than Double. Here’s What That Math Means for the Stock Today.</title>
+    <link>https://www.fool.com/investing/2026/11/24/nike-2031-plan-earnings-more-than-double-heres-what-that-math-means-for-the-stock-today/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/24/nike-2031-plan-earnings-more-than-double-heres-what-that-math-means-for-the-stock-today/?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:25:01 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Stocks are plunging, but history says the right strategy can protect your portfolio.</description>
+    <description>Potentially upbeat financial targets aren&#x27;t helping to prevent the company&#x27;s shares from sliding recently.</description>
+    <category>NKE</category>
+  </item>
+  <item>
+    <title>CrowdStrike Poised For ‘Hyper Growth And Profit,’ Says Guggenheim — Sees 34% Upside In CRWD Stock</title>
+    <link>https://stocktwits.com/news-articles/markets/equity/crowdstrike-poised-for-hyper-growth-and-profit-says-guggenheim-sees-34-upside-in-crwd-stock/cNbsEP5R9kg?.tsrc=rss</link>
+    <guid isPermaLink="false">https://stocktwits.com/news-articles/markets/equity/crowdstrike-poised-for-hyper-growth-and-profit-says-guggenheim-sees-34-upside-in-crwd-stock/cNbsEP5R9kg?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:20:19 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Guggenheim analyst John DiFucci said Microsoft, once seen by some investors as a significant competitive threat to CrowdStrike, now works closely with the company.</description>
+    <category>CRWD</category><category>MSFT</category>
+  </item>
+  <item>
+    <title>Warren Buffett’s Record Cash Pile Is Sending Investors a Message About AI Stocks</title>
+    <link>https://www.fool.com/investing/2026/11/24/warren-buffetts-record-cash-pile-is-sending-investors-a-message-about-ai-stocks/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/24/warren-buffetts-record-cash-pile-is-sending-investors-a-message-about-ai-stocks/?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:20:02 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The message may seem like a surprise at first, but it makes sense upon further reflection.</description>
     
   </item>
   <item>
-    <title>Asian Nvidia-related stocks jump after Huang&#x27;s return, with Taiwan&#x27;s near price limits</title>
-    <link>https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-asia-chip-stocks.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-asia-chip-stocks.html</guid>
-    <pubDate>Tue, 24 Nov 2026 08:13:58 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Investors piled back into the tech market, following the reinstatement of Nvidia CEO Jensen Huang by its board.</description>
+    <title>Prediction: This Is What Will Happen to Broadcom’s Stock Price in December</title>
+    <link>https://www.fool.com/investing/2026/11/24/prediction-this-is-what-will-happen-to-broadcom-s-stock-price-in-december/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/24/prediction-this-is-what-will-happen-to-broadcom-s-stock-price-in-december/?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:20:02 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Broadcom stock has pulled back significantly, but it could go on a bull run following its upcoming results.</description>
+    <category>AVGO</category>
+  </item>
+  <item>
+    <title>Most Of Nvidia&#x27;s Drop Came Before Huang Left</title>
+    <link>https://www.trefis.com/stock/nvda/articles/628268/most-of-nvidia-s-drop-came-before-huang-left/2026-11-24?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/nvda/articles/628268/most-of-nvidia-s-drop-came-before-huang-left/2026-11-24?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:18:15 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Nvidia&#x27;s board reinstated Jensen Huang as CEO on Monday, Nov 23. He had resigned after the board opened an investigation into reports that he was the target of a foreign intelligence effort. The stock rose 31.5% that day and closed at…</description>
     <category>NVDA</category>
   </item>
   <item>
-    <title>Sanofi strikes $41 billion deal for Insmed as CEO Garijo makes her mark</title>
-    <link>https://www.investing.com/news/stock-market-news/sanofi-strikes-41-billion-deal-to-acquire-us-drugmaker-insmed-5047163</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/sanofi-strikes-41-billion-deal-to-acquire-us-drugmaker-insmed-5047163</guid>
-    <pubDate>Tue, 24 Nov 2026 08:12:44 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>SNY</category><category>INSM</category>
-  </item>
-  <item>
-    <title>Volkswagen confronts union over costs in face of strike threat</title>
-    <link>https://www.investing.com/news/stock-market-news/volkswagen-confronts-union-over-costs-in-face-of-strike-threat-5047119</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/volkswagen-confronts-union-over-costs-in-face-of-strike-threat-5047119</guid>
-    <pubDate>Tue, 24 Nov 2026 08:12:29 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>VOW3</category>
-  </item>
-  <item>
-    <title>Nvidia and 3 AI Chip Stocks for Export Control Resilient Growth</title>
-    <link>https://finance.yahoo.com/technology/ai/articles/nvidia-3-ai-chip-stocks-081204748.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/nvidia-3-ai-chip-stocks-081204748.html?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 08:12:04 +0000</pubDate>
+    <title>These 3 Stocks Have Raised Their Dividends Annually for at Least 49 Years. Should you Buy Them?</title>
+    <link>https://www.fool.com/investing/2026/11/24/these-3-stocks-have-raised-their-dividends-annually-for-at-least-49-years-should-you-buy-them/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/24/these-3-stocks-have-raised-their-dividends-annually-for-at-least-49-years-should-you-buy-them/?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:18:02 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>AI chip headlines moved fast after Nvidia brought Jensen Huang back as CEO, and that leadership reset has quickly reshaped how traders view anything linked to high-end computing and export controls. Some stocks tied to this story now…</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Pecoy Copper And 2 Canadian Founder Led Stocks To Watch</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/pecoy-copper-2-canadian-founder-081123606.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/pecoy-copper-2-canadian-founder-081123606.html?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 08:11:23 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Asian shares recently rallied after Jensen Huang returned as Nvidia’s CEO, which reignited interest in founder-led businesses that investors feel personally steer their companies through shocks. That spotlight on committed leaders puts…</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Keystone Law Group And 2 Other British Founder Led Stocks To Watch</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/keystone-law-group-2-other-081113560.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/keystone-law-group-2-other-081113560.html?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 08:11:13 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Jensen Huang’s dramatic return to Nvidia has reminded markets how much conviction leadership can sway billions in value when founders stay closely tied to their creations. For United Kingdom investors, that spotlight on founder grit…</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Compass Group weighs U.S. primary listing, resumes buybacks as profit rises 12%</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/compass-group-weighs-u-primary-081045171.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/compass-group-weighs-u-primary-081045171.html?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 08:10:45 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Investing.com -- Compass Group said it will consult shareholders on moving its primary stock market listing to the U.S., and will resume share buybacks of up to $1.5 billion over the next two years. The catering group reported a 12%…</description>
+    <description>One of their annual raise streaks stands at 64.</description>
     
   </item>
   <item>
-    <title>Fujitsu sees stronger Monaka demand as buyers seek alternatives, Bloomberg reports</title>
-    <link>https://www.investing.com/news/stock-market-news/fujitsu-sees-strong-monaka-demand-as-firms-seek-alternatives-to-us--china-chips-5047269</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/fujitsu-sees-strong-monaka-demand-as-firms-seek-alternatives-to-us--china-chips-5047269</guid>
-    <pubDate>Tue, 24 Nov 2026 08:09:28 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
+    <title>Jim Cramer Calls CrowdStrike’s Zscaler Deal the Biggest in Cybersecurity History. What It Means for Both Stocks</title>
+    <link>https://247wallst.com/investing/2026/11/24/jim-cramer-calls-crowdstrikes-zscaler-deal-the-biggest-in-cybersecurity-history-what-it-means-for-both-stocks/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://247wallst.com/investing/2026/11/24/jim-cramer-calls-crowdstrikes-zscaler-deal-the-biggest-in-cybersecurity-history-what-it-means-for-both-stocks/?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:17:04 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>One stock sank while the other soared the moment CrowdStrike unveiled its all-stock bid for a rival. Behind the split reaction sit dilution fears, a thin spread, and a regulatory gauntlet that could reshape who wins from here.</description>
+    <category>CRWD</category><category>ZS</category>
   </item>
   <item>
-    <title>Coherent Stock Is Jensen Huang Reinstatement Changing The AI Partner Story</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/coherent-stock-jensen-huang-reinstatement-080923486.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/coherent-stock-jensen-huang-reinstatement-080923486.html?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 08:09:23 +0000</pubDate>
+    <title>Stocks climb as Huang&#x27;s return to Nvidia lifts investor optimism</title>
+    <link>https://www.euronews.com/2026/11/24/stocks-climb-as-huangs-return-to-nvidia-lifts-investor-optimism?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.euronews.com/2026/11/24/stocks-climb-as-huangs-return-to-nvidia-lifts-investor-optimism?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:16:59 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Coherent Corp. has authorized a share repurchase program of up to US$2.0b with no expiration date, after its board approved the plan on 18 November 2026. The buyback sits alongside Coherent&#x27;s growing role as an optical partner to Nvidia…</description>
-    <category>NVDA</category><category>COHR</category>
-  </item>
-  <item>
-    <title>David Tepper, Seth Klarman and 5 Other Famous Investors Own Alphabet. Here’s Who Sold Recently</title>
-    <link>https://www.tikr.com/blog/david-tepper-seth-klarman-and-5-other-famous-investors-own-alphabet-heres-who-sold-recently?ref=yahoofinance&amp;tlnk=yf-261124-w59872fw&amp;.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.tikr.com/blog/david-tepper-seth-klarman-and-5-other-famous-investors-own-alphabet-heres-who-sold-recently?ref=yahoofinance&amp;tlnk=yf-261124-w59872fw&amp;.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 08:04:51 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Key TakeawaysSeven famous investors held Alphabet at Sept. 30, but Dan Loeb, David Tepper and Seth Klarman cut their stakes in the third quarter, Stanley Druckenmiller and Brad Gerstner sold out, and the stock is down 18% since.</description>
-    <category>GOOGL</category>
-  </item>
-  <item>
-    <title>Trump Calls America “a Country of Second Chances” and Pushes Nvidia to Rehire Jensen Huang</title>
-    <link>https://www.tikr.com/blog/trump-urges-nvidia-rehire-jensen-huang-second-chance?ref=yahoofinance&amp;tlnk=yf-261124-4vqr9fj3&amp;.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.tikr.com/blog/trump-urges-nvidia-rehire-jensen-huang-second-chance?ref=yahoofinance&amp;tlnk=yf-261124-4vqr9fj3&amp;.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 08:03:17 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Key TakeawaysPresident Trump said Friday that Nvidia (NVDA:NASDAQ) would be smart to bring back former CEO Jensen Huang, on a day the stock fell 11%. Investor Gavin Baker reads Trump’s stronger comments as a sign that a month of review…</description>
+    <description>Shares in AI chip behemoth Nvidia rocketed 30% higher on Monday after the shock reinstatement of its CEO Jensen Huang, which sparked a recovery across markets after a technology-led rout last week.View on euronews</description>
     <category>NVDA</category>
-  </item>
-  <item>
-    <title>Dan Loeb and 47 Other Big Funds Bought Microsoft Last Quarter. Bill Ackman and 28 Others Sold. Who’s Right?</title>
-    <link>https://www.tikr.com/blog/dan-loeb-and-47-other-big-funds-bought-microsoft-last-quarter-bill-ackman-and-28-others-sold-whos-right?ref=yahoofinance&amp;tlnk=yf-261124-g4v647r9&amp;.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.tikr.com/blog/dan-loeb-and-47-other-big-funds-bought-microsoft-last-quarter-bill-ackman-and-28-others-sold-whos-right?ref=yahoofinance&amp;tlnk=yf-261124-g4v647r9&amp;.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 08:01:14 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Key TakeawaysOf the 460 big funds that have filed 13Fs for the quarter ended Sept. 30, 48 bought Microsoft and 29 sold.</description>
-    <category>MSFT</category>
-  </item>
-  <item>
-    <title>Federal Home Loan Mortgage Corporation - Preferred Stock Price Target Increased by 14.42% to $7.94</title>
-    <link>https://www.nasdaq.com/articles/federal-home-loan-mortgage-corporation-preferred-stock-price-target-increased-1442-794</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/federal-home-loan-mortgage-corporation-preferred-stock-price-target-increased-1442-794</guid>
-    <pubDate>Tue, 24 Nov 2026 08:00:29 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Federal Home Loan Mortgage Corporation - Preferred Stock (OTCPK:FMCKM) has been revised to $7.94 / share. This is an increase of 14.42% from the prior estimate of $6.94 dated November 8, 2026. These…</description>
-    
-  </item>
-  <item>
-    <title>Tesla And SpaceX Reportedly Name 5 Directors To Lead Merger Discussions — Investor Says Talks Are Moving At ‘Warp Speed’</title>
-    <link>https://stocktwits.com/news-articles/markets/equity/tesla-spacex-5-directors-lead-merger-discussions-investor-talks-warp-speed/cNbsbrxR9ke?.tsrc=rss</link>
-    <guid isPermaLink="false">https://stocktwits.com/news-articles/markets/equity/tesla-spacex-5-directors-lead-merger-discussions-investor-talks-warp-speed/cNbsbrxR9ke?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 08:00:14 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>After Nvidia reinstated Jensen Huang, New Street’s Pierre Ferragu called a Tesla-SpaceX merger the “next move.”</description>
-    <category>NVDA</category><category>TSLA</category><category>SPCX</category>
-  </item>
-  <item>
-    <title>Trump, Nvidia and power: could we be nearing the end of tech’s Gilded Age?</title>
-    <link>https://finance.yahoo.com/technology/ai/articles/trump-nvidia-power-could-nearing-080011472.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/trump-nvidia-power-could-nearing-080011472.html?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 08:00:11 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Oligarchs believe they’re untouchable – the blue wave offers hope that the rampant corruption of the Trump era may soon be over</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>US targets chip smuggling to China after Huang&#x27;s return to scandal-hit Nvidia</title>
-    <link>https://finance.yahoo.com/technology/ai/articles/nvidia-reinstates-jensen-huang-ceo-141738492.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/nvidia-reinstates-jensen-huang-ceo-141738492.html?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 07:59:51 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Singapore agreed Tuesday to cooperate with the United States after it added the company at the centre of the Nvidia scandal to a trade backlist, following CEO Jensen Huang&#x27;s stunning return to the helm of the US chip giant.Following…</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Jim Cramer Calls Nvidia’s Quarter “Fabulous” but Says Buy Anthropic Instead. I’ll Take the Other Side</title>
-    <link>https://www.tikr.com/blog/jim-cramer-nvidia-vs-anthropic-stock?ref=yahoofinance&amp;tlnk=yf-261124-27574whw&amp;.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.tikr.com/blog/jim-cramer-nvidia-vs-anthropic-stock?ref=yahoofinance&amp;tlnk=yf-261124-27574whw&amp;.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 07:58:31 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Key TakeawaysJim Cramer called Nvidia’s (NVDA:NASDAQ) quarter “fabulous” but said investors would rather own Anthropic (ANT:NASDAQ), which went public on Nov. 19.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Grayscale Says Bitcoin Looks Oversold, Warns Of Near-Term AI Risks As Nvidia And Anthropic Developments Put Markets In Focus</title>
-    <link>https://stocktwits.com/news-articles/markets/cryptocurrency/grayscale-bitcoin-oversold-ai-risks-nvidia-anthropic/cNbsGFxR9kI?.tsrc=rss</link>
-    <guid isPermaLink="false">https://stocktwits.com/news-articles/markets/cryptocurrency/grayscale-bitcoin-oversold-ai-risks-nvidia-anthropic/cNbsGFxR9kI?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 07:57:36 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Investors are paying more for Bitcoin options to hedge against additional losses, as crypto exchange-traded funds globally lost more than $2 billion last week.</description>
-    <category>NVDA</category><category>BTC</category>
-  </item>
-  <item>
-    <title>Black Friday Comes to Tech Stocks: 3 Artificial Intelligence (AI) Names I’d Buy on Sale</title>
-    <link>https://www.fool.com/investing/2026/11/24/black-friday-comes-to-tech-stocks-3-artificial-intelligence-ai-names-id-buy-on-sale/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/24/black-friday-comes-to-tech-stocks-3-artificial-intelligence-ai-names-id-buy-on-sale/?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 07:54:02 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Micron, Nvidia, and Broadcom have all been thrown in the bargain bin ahead of Black Friday.</description>
-    <category>NVDA</category><category>AVGO</category><category>MU</category>
-  </item>
-  <item>
-    <title>Cibus Consensus Price Target Raised 100% to $6.12</title>
-    <link>https://www.nasdaq.com/articles/cibus-consensus-price-target-raised-100-612</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cibus-consensus-price-target-raised-100-612</guid>
-    <pubDate>Tue, 24 Nov 2026 07:40:46 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Cibus (NASDAQCM:CBUS) has been revised to $6.12 / share. This is an increase of 100.00% from the prior estimate of $3.06 dated November 6, 2026. These figures represent aggregate analyst targets…</description>
-    
-  </item>
-  <item>
-    <title>Ispire Technology Consensus Price Target Increased 42.42% to $4.79</title>
-    <link>https://www.nasdaq.com/articles/ispire-technology-consensus-price-target-increased-4242-479</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/ispire-technology-consensus-price-target-increased-4242-479</guid>
-    <pubDate>Tue, 24 Nov 2026 07:35:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Ispire Technology (NASDAQCM:ISPR) has been revised to $4.79 / share. This is an increase of 42.42% from the prior estimate of $3.37 dated November 6, 2026. These figures represent aggregate analyst…</description>
-    
-  </item>
-  <item>
-    <title>Ceconomy AG - Depositary Receipt Price Target Increased by 22.78% to $0.98</title>
-    <link>https://www.nasdaq.com/articles/ceconomy-ag-depositary-receipt-price-target-increased-2278-098</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/ceconomy-ag-depositary-receipt-price-target-increased-2278-098</guid>
-    <pubDate>Tue, 24 Nov 2026 07:33:24 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Ceconomy AG - Depositary Receipt (OTCPK:MTTRY) (BST:MEOD) has been revised to $0.98 / share. This is an increase of 22.78% from the prior estimate of $0.80 dated November 8, 2026. These figures…</description>
-    
-  </item>
-  <item>
-    <title>Rene Haas to remain CEO of chipmaker Arm through 2033 amid Nvidia top job chatter</title>
-    <link>https://www.cnbc.com/2026/11/24/rene-haas-to-remain-ceo-of-chipmaker-arm-through-2033-amid-nvidia-top-job-chatter.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/24/rene-haas-to-remain-ceo-of-chipmaker-arm-through-2033-amid-nvidia-top-job-chatter.html</guid>
-    <pubDate>Tue, 24 Nov 2026 07:30:10 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Arm CEO Rene Haas has extended his contract through 2033, amid speculation Nvidia could tap him to succeed Jensen Huang.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Signal joins United Airlines, banks in limiting AI agents over customer risks</title>
-    <link>https://www.cnbc.com/2026/11/24/signal-airlines-banks-ai-limit.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/24/signal-airlines-banks-ai-limit.html</guid>
-    <pubDate>Tue, 24 Nov 2026 07:25:41 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Privacy-focused messaging application Signal has joined United Airlines and JPMorgan Chase in implementing restrictions around artificial intelligence agents.</description>
-    <category>JPM</category><category>UAL</category>
-  </item>
-  <item>
-    <title>Six key questions raised by Jensen Huang&#x27;s return to Nvidia</title>
-    <link>https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-politics-market.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-politics-market.html</guid>
-    <pubDate>Tue, 24 Nov 2026 07:12:33 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>As Jensen Huang returns to Nvidia, questions remained around the board&#x27;s reversal, Trump&#x27;s involvement and the tech giant&#x27;s future.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Compass Diversified - Preferred Stock Price Target Decreased by 10.78% to $25.89</title>
-    <link>https://www.nasdaq.com/articles/compass-diversified-preferred-stock-price-target-decreased-1078-2589</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/compass-diversified-preferred-stock-price-target-decreased-1078-2589</guid>
-    <pubDate>Tue, 24 Nov 2026 07:08:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Compass Diversified - Preferred Stock (NYSE:CODI.PRA) has been revised to $25.89 / share. This is a decrease of 10.78% from the prior estimate of $29.02 dated November 8, 2026. These figures…</description>
-    
-  </item>
-  <item>
-    <title>Atlanticus Holdings Corporation - Preferred Stock Price Target Increased by 23.03% to $35.94</title>
-    <link>https://www.nasdaq.com/articles/atlanticus-holdings-corporation-preferred-stock-price-target-increased-2303-3594</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/atlanticus-holdings-corporation-preferred-stock-price-target-increased-2303-3594</guid>
-    <pubDate>Tue, 24 Nov 2026 07:05:10 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Atlanticus Holdings Corporation - Preferred Stock (NASDAQGS:ATLCP) has been revised to $35.94 / share. This is an increase of 23.03% from the prior estimate of $29.21 dated November 8, 2026. Please…</description>
-    
-  </item>
-  <item>
-    <title>Oil Prices Hold Near Three-Month Lows Despite Hormuz Mine Claims</title>
-    <link>https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Hold-Near-Three-Month-Lows-Despite-Hormuz-Mine-Claims.html</link>
-    <guid isPermaLink="false">https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Hold-Near-Three-Month-Lows-Despite-Hormuz-Mine-Claims.html</guid>
-    <pubDate>Tue, 24 Nov 2026 07:05:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">OilPrice.com</source>
-    <description>Crude oil prices remained subdued in early trading on Tuesday, with Brent trading below $90 per barrel despite Iranian claims that three oil tankers had struck mines in the Strait of Hormuz. At the time of writing, Brent crude was…</description>
-    
   </item>
   <item>
     <title>Why France is at risk of recession — and what could keep it out of one</title>
     <link>https://www.cnbc.com/2026/11/24/france-recession-risk-pmi.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/11/24/france-recession-risk-pmi.html</guid>
-    <pubDate>Tue, 24 Nov 2026 06:55:36 +0000</pubDate>
+    <pubDate>Tue, 24 Nov 2026 11:15:30 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>Bank of France Governor Emmanuel Moulin told CNBC he still expects growth, pointing to resilience in sectors including defense, aerospace and electricity.</description>
     
   </item>
   <item>
-    <title>Sky Harbour Group Corporation - Equity Warrant Price Target Increased by 19.52% to $0.37</title>
-    <link>https://www.nasdaq.com/articles/sky-harbour-group-corporation-equity-warrant-price-target-increased-1952-037</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/sky-harbour-group-corporation-equity-warrant-price-target-increased-1952-037</guid>
-    <pubDate>Tue, 24 Nov 2026 06:49:11 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Sky Harbour Group Corporation - Equity Warrant (NYSE:SKYH.WS) has been revised to $0.37 per share, as of November 22, 2026. This represents an increase of 19.52% from the prior average estimate of…</description>
+    <title>U.S. stock futures slip after Nvidia-led Wall Street rally</title>
+    <link>https://www.investing.com/news/stock-market-news/us-stock-futures-steady-after-nvidialed-wall-street-rally-5046750</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/us-stock-futures-steady-after-nvidialed-wall-street-rally-5046750</guid>
+    <pubDate>Tue, 24 Nov 2026 11:15:03 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>A 66-year-old nurse is facing down retirement with just $500 saved. Who’s to blame?</title>
+    <link>https://www.marketwatch.com/story/a-66-year-old-nurse-faces-retirement-with-just-500-saved-whos-to-blame-4249a0fd?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/a-66-year-old-nurse-faces-retirement-with-just-500-saved-whos-to-blame-4249a0fd?mod=mw_rss_topstories</guid>
+    <pubDate>Tue, 24 Nov 2026 11:15:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>“Retirement is a financial status, not an age.”</description>
     
   </item>
   <item>
-    <title>GrabAGun Digital Holdings Consensus Price Target Lowered 20% to $4.08</title>
-    <link>https://www.nasdaq.com/articles/grabagun-digital-holdings-consensus-price-target-lowered-20-408</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/grabagun-digital-holdings-consensus-price-target-lowered-20-408</guid>
-    <pubDate>Tue, 24 Nov 2026 06:45:53 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for GrabAGun Digital Holdings (NYSE:PEW) has been revised to $4.08 / share. This is a decrease of 20.00% from the prior estimate of $5.10 dated November 6, 2026. These figures represent aggregate…</description>
-    
+    <title>Former Elon Musk Adviser: &#x27;Nvidia Now Intertwined With Washington&#x27;</title>
+    <link>https://finance.yahoo.com/video/former-elon-musk-adviser-nvidia-111337443.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/video/former-elon-musk-adviser-nvidia-111337443.html?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:13:37 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Nvidia&#x27;s board already faced criticism for lacking the gravitas required to oversee the AI chip powerhouse and that was before President Donald Trump chose to moonlight as a director. Dex Hunter-Torricke tells Bloomberg Radio &quot;Nvidia…</description>
+    <category>NVDA</category>
   </item>
   <item>
-    <title>Gold Royalty - Equity Warrant Price Target Decreased by 35.13% to $1.12</title>
-    <link>https://www.nasdaq.com/articles/gold-royalty-equity-warrant-price-target-decreased-3513-112</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/gold-royalty-equity-warrant-price-target-decreased-3513-112</guid>
-    <pubDate>Tue, 24 Nov 2026 06:38:35 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Gold Royalty - Equity Warrant (NYSEAM:GROY.WS) has been revised to $1.12 per share, as of the data date of November 22, 2026. This represents a decrease of 35.13% from the prior average estimate of…</description>
-    
+    <title>Nvidia board’s Huang reversal raises doubts about independence, critics say</title>
+    <link>https://www.investing.com/news/stock-market-news/nvidia-boards-huang-reversal-raises-doubts-about-independence-critics-say-5047621</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/nvidia-boards-huang-reversal-raises-doubts-about-independence-critics-say-5047621</guid>
+    <pubDate>Tue, 24 Nov 2026 11:13:11 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>NVDA</category>
   </item>
   <item>
-    <title>Electric and Hybrid Cars Capture Three-Quarters of Europe’s Auto Market</title>
-    <link>https://oilprice.com/Latest-Energy-News/World-News/Electric-and-Hybrid-Cars-Capture-Three-Quarters-of-Europes-Auto-Market.html</link>
-    <guid isPermaLink="false">https://oilprice.com/Latest-Energy-News/World-News/Electric-and-Hybrid-Cars-Capture-Three-Quarters-of-Europes-Auto-Market.html</guid>
-    <pubDate>Tue, 24 Nov 2026 06:30:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">OilPrice.com</source>
-    <description>Electric and hybrid vehicle sales across Europe dominated total car sales last month, representing around 75% of all new vehicle registrations, while gasoline and diesel car sales dropped, highlighting demand sensitivity to soaring…</description>
-    
+    <title>Jensen Huang returns to Nvidia, vows to be ’a better CEO’</title>
+    <link>https://www.investing.com/news/stock-market-news/jensen-huangs-comeback-to-nvidia-underscores-his-outsized-grip-on-ai-5046711</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/jensen-huangs-comeback-to-nvidia-underscores-his-outsized-grip-on-ai-5046711</guid>
+    <pubDate>Tue, 24 Nov 2026 11:12:57 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>NVDA</category>
   </item>
   <item>
-    <title>Malaysia PM says China easier to deal with than U.S. amid tech tensions- SCMP</title>
-    <link>https://www.investing.com/news/stock-market-news/malaysia-pm-says-china-easier-to-deal-with-than-us-amid-tech-tensions-scmp-93CH-5047138</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/malaysia-pm-says-china-easier-to-deal-with-than-us-amid-tech-tensions-scmp-93CH-5047138</guid>
-    <pubDate>Tue, 24 Nov 2026 06:28:17 +0000</pubDate>
+    <title>Airlines, squeezed by high fuel costs, rethink jet financing strategy</title>
+    <link>https://www.investing.com/news/stock-market-news/airlines-squeezed-by-high-fuel-costs-rethink-jet-financing-strategy-5047610</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/airlines-squeezed-by-high-fuel-costs-rethink-jet-financing-strategy-5047610</guid>
+    <pubDate>Tue, 24 Nov 2026 11:12:42 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
     <description></description>
     
   </item>
   <item>
-    <title>Consensus Price Target for New World Development Company Limited - Depositary Receipt Lowered by 22.02% to $0.30</title>
-    <link>https://www.nasdaq.com/articles/consensus-price-target-new-world-development-company-limited-depositary-receipt-lowered</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/consensus-price-target-new-world-development-company-limited-depositary-receipt-lowered</guid>
-    <pubDate>Tue, 24 Nov 2026 06:28:15 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for New World Development Company Limited - Depositary Receipt (OTCPK:NDVLY) has been revised to $0.30 / share. This represents a decrease of 22.02% from the prior estimate of $0.39 dated November 8,…</description>
-    
-  </item>
-  <item>
-    <title>SpaceX, Tesla directors negotiate potential $3.5 trillion merger, FT reports</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/spacex-tesla-directors-negotiate-potential-062339987.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/spacex-tesla-directors-negotiate-potential-062339987.html?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 06:23:39 +0000</pubDate>
+    <title>Sandisk Stock Jumps 15% as Wall Street Sees 192% Upside</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/sandisk-stock-jumps-15-wall-111200041.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/sandisk-stock-jumps-15-wall-111200041.html?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:12:00 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Investing.com -- Space Exploration Technologies (NASDAQ:SPCX) and Tesla Inc (NASDAQ:TSLA) are working towards a potential $3.5 trillion merger, with five directors appointed to negotiate the terms of an all-stock combination that could…</description>
-    <category>TSLA</category><category>SPCX</category>
+    <description>Strong demand for NAND flash memory supports Sandisk&#x27;s earnings, although analysts warn that pricing could weaken in 2027.</description>
+    <category>SNDK</category>
   </item>
   <item>
-    <title>Eagle Point Credit Company - Preferred Stock Price Target Decreased by 28.04% to $23.65</title>
-    <link>https://www.nasdaq.com/articles/eagle-point-credit-company-preferred-stock-price-target-decreased-2804-2365</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/eagle-point-credit-company-preferred-stock-price-target-decreased-2804-2365</guid>
-    <pubDate>Tue, 24 Nov 2026 06:22:27 +0000</pubDate>
+    <title>Bitcoin’s drop to $55,000 left a record 11.6 million BTC underwater</title>
+    <link>https://www.coindesk.com/markets/2026/11/24/bitcoin-s-drop-to-usd55-000-left-a-record-11-6-million-btc-underwater</link>
+    <guid isPermaLink="false">https://www.coindesk.com/markets/2026/11/24/bitcoin-s-drop-to-usd55-000-left-a-record-11-6-million-btc-underwater</guid>
+    <pubDate>Tue, 24 Nov 2026 11:11:38 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
+    <description>Bitcoin’s supply in profit fell below its 2022 FTX collapse low, while entities holding 100 to 10,000 BTC continued to accumulate.</description>
+    <category>BTC</category>
+  </item>
+  <item>
+    <title>Insmed Incorporated Enters Merger Agreement to Be Acquired by Sanofi for $175.00 Per Share</title>
+    <link>https://www.nasdaq.com/articles/insmed-incorporated-enters-merger-agreement-be-acquired-sanofi-17500-share</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/insmed-incorporated-enters-merger-agreement-be-acquired-sanofi-17500-share</guid>
+    <pubDate>Tue, 24 Nov 2026 11:10:58 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Eagle Point Credit Company - Preferred Stock (NYSE:ECC.PRD) has been revised to $23.65 / share. This is a decrease of 28.04% from the prior estimate of $32.87 dated November 8, 2026. These figures…</description>
+    <description>On November 23, 2026, Insmed Incorporated entered into an Agreement and Plan of Merger with Sanofi and Polaris Merger Sub, Inc., a wholly owned subsidiary of Sanofi. Under the terms of the agreement, Polaris Merger Sub, Inc. will merge…</description>
+    <category>SNY</category><category>INSM</category>
+  </item>
+  <item>
+    <title>INNEOVA Holdings Limited to Effect 5-for-1 Share Consolidation on November 27, 2026</title>
+    <link>https://www.nasdaq.com/articles/inneova-holdings-limited-effect-5-1-share-consolidation-november-27-2026</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/inneova-holdings-limited-effect-5-1-share-consolidation-november-27-2026</guid>
+    <pubDate>Tue, 24 Nov 2026 11:10:58 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>INNEOVA Holdings Limited announced that its shareholders approved a share consolidation of the authorized, issued, and outstanding shares of the Company on a 5-for-1 ratio during an annual general meeting held on September 3, 2026. The…</description>
     
   </item>
   <item>
-    <title>Teads Holding Consensus Price Target Increased 37.93% to $0.41</title>
-    <link>https://www.nasdaq.com/articles/teads-holding-consensus-price-target-increased-3793-041</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/teads-holding-consensus-price-target-increased-3793-041</guid>
-    <pubDate>Tue, 24 Nov 2026 06:22:19 +0000</pubDate>
+    <title>ING Groep N.V. Provides Progress on Share Buyback Programme</title>
+    <link>https://www.nasdaq.com/articles/ing-groep-nv-provides-progress-share-buyback-programme</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/ing-groep-nv-provides-progress-share-buyback-programme</guid>
+    <pubDate>Tue, 24 Nov 2026 11:10:47 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The average one-year price target for Teads Holding (NASDAQGS:TEAD) (MUN:852) has been revised to $0.41 / share. This is an increase of 37.93% from the prior estimate of $0.30 dated November 6, 2026. These figures represent aggregate…</description>
-    
+    <description>ING Groep N.V. announced an update regarding its ongoing share buyback programme. During the week of 16 November up to and including 20 November 2026, a total of 3,850,000 shares were repurchased as part of the €1.65 billion share…</description>
+    <category>ING</category>
   </item>
   <item>
-    <title>Prediction: 1 &quot;Magnificent Seven&quot; Stock That Will Lag the Market in 2027</title>
-    <link>https://www.fool.com/investing/2026/11/24/prediction-1-magnificent-seven-stock-that-will-lag-the-market-in-2027/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/24/prediction-1-magnificent-seven-stock-that-will-lag-the-market-in-2027/?.tsrc=rss</guid>
-    <pubDate>Tue, 24 Nov 2026 06:20:02 +0000</pubDate>
+    <title>What Will Decide Nike Stock Over The Next Six Months?</title>
+    <link>https://www.trefis.com/stock/nke/articles/628293/what-will-decide-nike-stock-over-the-next-six-months/2026-11-24?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/nke/articles/628293/what-will-decide-nike-stock-over-the-next-six-months/2026-11-24?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:09:55 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Tesla is building some of the most exciting technology on Earth, but I think its stock is set up to trail the market next year.</description>
-    <category>TSLA</category>
+    <description>For questions about this article or underlying research, email help@trefis.com.</description>
+    <category>NKE</category>
+  </item>
+  <item>
+    <title>Huang-Over Damps Wall Street Pre-Bell; Asia Up, Europe Off</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/huang-over-damps-wall-street-110942839.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/huang-over-damps-wall-street-110942839.html?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:09:42 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Wall Street futures pointed lower pre-bell Tuesday as traders uneasily digested Monday&#x27;s epic rallie</description>
+    
+  </item>
+  <item>
+    <title>AB SKF Consensus Price Target Raised 16.44% to $33.26</title>
+    <link>https://www.nasdaq.com/articles/ab-skf-consensus-price-target-raised-1644-3326</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/ab-skf-consensus-price-target-raised-1644-3326</guid>
+    <pubDate>Tue, 24 Nov 2026 11:07:58 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for AB SKF (OTCPK:SKFRY) (MUN:SKFD) has been revised to $33.26 / share. This is an increase of 16.44% from the prior estimate of $28.56 dated November 8, 2026. These figures represent aggregate analyst…</description>
+    
+  </item>
+  <item>
+    <title>Is Amphenol Stock Paying You Enough For The Swings?</title>
+    <link>https://www.trefis.com/stock/aph/articles/628286/is-amphenol-stock-paying-you-enough-for-the-swings/2026-11-24?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/aph/articles/628286/is-amphenol-stock-paying-you-enough-for-the-swings/2026-11-24?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:07:48 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>For questions about this article or underlying research, email help@trefis.com.</description>
+    <category>APH</category>
+  </item>
+  <item>
+    <title>Can Adobe Stock Rise 30% From Here?</title>
+    <link>https://www.trefis.com/stock/adbe/articles/628292/can-adobe-stock-rise-30-from-here/2026-11-24?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/adbe/articles/628292/can-adobe-stock-rise-30-from-here/2026-11-24?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:07:47 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>For questions about this article or underlying research, email help@trefis.com.</description>
+    <category>ADBE</category>
+  </item>
+  <item>
+    <title>US malls make a holiday comeback as shoppers seek more than deals</title>
+    <link>https://www.investing.com/news/stock-market-news/us-malls-make-a-holiday-comeback-as-shoppers-seek-more-than-deals-5047620</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/us-malls-make-a-holiday-comeback-as-shoppers-seek-more-than-deals-5047620</guid>
+    <pubDate>Tue, 24 Nov 2026 11:07:09 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Is Krystal Biotech Stock&#x27;s Market Price Justified?</title>
+    <link>https://www.trefis.com/stock/krys/articles/628305/is-krystal-biotech-stocks-market-price-justified/2026-11-24?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/krys/articles/628305/is-krystal-biotech-stocks-market-price-justified/2026-11-24?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:05:33 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>For questions about this article or underlying research, email help@trefis.com.</description>
+    
+  </item>
+  <item>
+    <title>European shares slip after month-best rally on Nvidia euphoria</title>
+    <link>https://www.investing.com/news/stock-market-news/european-shares-pause-after-monthbest-rally-on-nvidia-euphoria-5047076</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/european-shares-pause-after-monthbest-rally-on-nvidia-euphoria-5047076</guid>
+    <pubDate>Tue, 24 Nov 2026 11:05:19 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>The Crypto Fear &amp; Greed Index Is Now in Extreme Fear Territory. But These 6 Cryptocurrencies Are Soaring in Value.</title>
+    <link>https://www.fool.com/investing/2026/11/24/the-crypto-fear-greed-index-is-now-in-extreme-fear-territory-but-these-x-cryptocurrencies-are-still-soaring-in-value/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/24/the-crypto-fear-greed-index-is-now-in-extreme-fear-territory-but-these-x-cryptocurrencies-are-still-soaring-in-value/?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:05:01 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The overall crypto market may be struggling, but these cryptocurrencies have delivered impressive returns during the past 90 days.</description>
+    
+  </item>
+  <item>
+    <title>Invesco NASDAQ 100 ETF (QQQM) Adds Apple and Microsoft on Friday</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/invesco-nasdaq-100-etf-qqqm-110444816.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/invesco-nasdaq-100-etf-qqqm-110444816.html?.tsrc=rss</guid>
+    <pubDate>Tue, 24 Nov 2026 11:04:44 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The $97.29 billion fund bought $198.5 million of stock on Friday, Nov. 20, lifting all 100 of its increased positions and selling nothing.</description>
+    <category>MSFT</category><category>AAPL</category><category>QQQ</category>
+  </item>
+  <item>
+    <title>Furukawa Electric Co., - Depositary Receipt Price Target Decreased by 16.20% to $17.22</title>
+    <link>https://www.nasdaq.com/articles/furukawa-electric-co-depositary-receipt-price-target-decreased-1620-1722</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/furukawa-electric-co-depositary-receipt-price-target-decreased-1620-1722</guid>
+    <pubDate>Tue, 24 Nov 2026 11:00:41 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Furukawa Electric Co., - Depositary Receipt (OTCPK:FUWAY) has been revised to $17.22 / share. This is a decrease of 16.20% from the prior estimate of $20.55 dated November 8, 2026. These figures…</description>
+    
+  </item>
+  <item>
+    <title>Why is Bilibili stock climbing today?</title>
+    <link>https://www.investing.com/news/stock-market-news/why-is-bilibili-stock-climbing-today-93CH-5047576</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-bilibili-stock-climbing-today-93CH-5047576</guid>
+    <pubDate>Tue, 24 Nov 2026 11:00:19 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Why is Vipshop ADR stock sliding today?</title>
+    <link>https://www.investing.com/news/stock-market-news/why-is-vipshop-adr-stock-sliding-today-93CH-5047569</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/why-is-vipshop-adr-stock-sliding-today-93CH-5047569</guid>
+    <pubDate>Tue, 24 Nov 2026 10:59:58 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>U.S. seeks $1.1 billion seized in Binance hack as North Korean funds keep moving</title>
+    <link>https://www.coindesk.com/policy/2026/11/24/u-s-seeks-usd1-1-billion-seized-in-binance-hack-as-north-korean-funds-keep-moving</link>
+    <guid isPermaLink="false">https://www.coindesk.com/policy/2026/11/24/u-s-seeks-usd1-1-billion-seized-in-binance-hack-as-north-korean-funds-keep-moving</guid>
+    <pubDate>Tue, 24 Nov 2026 10:58:51 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
+    <description>U.S. seeks to recover $1.1 billion in frozen USDC as billions more from the Binance hack remain unaccounted for.</description>
+    
+  </item>
+  <item>
+    <title>Pentagon seeks GM and Ford help for drone production - report</title>
+    <link>https://www.investing.com/news/stock-market-news/pentagon-seeks-gm-and-ford-help-for-drone-production--report-93CH-5047568</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/pentagon-seeks-gm-and-ford-help-for-drone-production--report-93CH-5047568</guid>
+    <pubDate>Tue, 24 Nov 2026 10:58:19 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>F</category>
+  </item>
+  <item>
+    <title>Jensen Huang is ‘too big to fire,’ putting Nvidia’s governance in focus: analysts</title>
+    <link>https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-governance.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-governance.html</guid>
+    <pubDate>Tue, 24 Nov 2026 10:56:56 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Jensen Huang’s return has underscored Nvidia’s deep reliance on its founder, putting the company&#x27;s board oversight and corporate governance under scrutiny.</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>BTCS sells more than half its ether to repay $43.8 million in Aave debt</title>
+    <link>https://www.coindesk.com/business/2026/11/24/btcs-sells-more-than-half-its-ether-to-repay-usd43-8-million-in-aave-debt</link>
+    <guid isPermaLink="false">https://www.coindesk.com/business/2026/11/24/btcs-sells-more-than-half-its-ether-to-repay-usd43-8-million-in-aave-debt</guid>
+    <pubDate>Tue, 24 Nov 2026 10:55:30 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
+    <description>The firm&#x27;s DeFi business, Imperium, temporarily pulled out of liquidity pools after generating $3.5 million in Q3 revenue.</description>
+    
+  </item>
+  <item>
+    <title>Pentagon in talks with General Motors and Ford on military drones, WSJ reports</title>
+    <link>https://www.investing.com/news/stock-market-news/pentagon-in-talks-with-general-motors-and-ford-on-military-drones-wsj-reports-5047560</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/pentagon-in-talks-with-general-motors-and-ford-on-military-drones-wsj-reports-5047560</guid>
+    <pubDate>Tue, 24 Nov 2026 10:54:41 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>F</category><category>GM</category>
+  </item>
+  <item>
+    <title>First Tractor Company Limited - Depositary Receipt Price Target Decreased by 12.30% to $17.17</title>
+    <link>https://www.nasdaq.com/articles/first-tractor-company-limited-depositary-receipt-price-target-decreased-1230-1717</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/first-tractor-company-limited-depositary-receipt-price-target-decreased-1230-1717</guid>
+    <pubDate>Tue, 24 Nov 2026 10:53:02 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for First Tractor Company Limited - Depositary Receipt (OTCPK:FIRRY) has been revised to $17.17 / share. This is a decrease of 12.30% from the prior estimate of $19.57 dated October 22, 2026. These…</description>
+    
+  </item>
+  <item>
+    <title>Drugmaker Insmed shares rally 14% after Sanofi agrees to buy it in pharma’s biggest deal in three years</title>
+    <link>https://www.cnbc.com/2026/11/24/insmed-sanofi-deal-stock-pharma.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/24/insmed-sanofi-deal-stock-pharma.html</guid>
+    <pubDate>Tue, 24 Nov 2026 10:50:26 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Sanofi faces a revenue drop towards the end of the decade as top-selling drugs lose exclusivity and open up for generic drugmakers to compete.</description>
+    <category>SNY</category><category>INSM</category>
+  </item>
+  <item>
+    <title>Strategy Inc - Preferred Stock Price Target Increased by 35.72% to $190.83</title>
+    <link>https://www.nasdaq.com/articles/strategy-inc-preferred-stock-price-target-increased-3572-19083</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/strategy-inc-preferred-stock-price-target-increased-3572-19083</guid>
+    <pubDate>Tue, 24 Nov 2026 10:42:48 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Strategy Inc - Preferred Stock (NASDAQGS:STRD) (DB:MIG1) has been revised to $190.83 / share. This is an increase of 35.72% from the prior estimate of $140.60 dated November 8, 2026. These figures…</description>
+    <category>MSTR</category>
+  </item>
+  <item>
+    <title>Eos Energy Enterprises, Inc. - Equity Right Price Target Increased by 19.61% to $0.02</title>
+    <link>https://www.nasdaq.com/articles/eos-energy-enterprises-inc-equity-right-price-target-increased-1961-002</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/eos-energy-enterprises-inc-equity-right-price-target-increased-1961-002</guid>
+    <pubDate>Tue, 24 Nov 2026 10:42:16 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Eos Energy Enterprises, Inc. - Equity Right (NASDAQCM:EOSER) has been revised to $0.02 / share. This is an increase of 19.61% from the prior estimate of $0.02 dated November 8, 2026. These figures…</description>
+    
+  </item>
+  <item>
+    <title>PennyMac Mortgage Investment Trust - Preferred Stock Price Target Decreased by 11.81% to $22.11</title>
+    <link>https://www.nasdaq.com/articles/pennymac-mortgage-investment-trust-preferred-stock-price-target-decreased-1181-2211</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/pennymac-mortgage-investment-trust-preferred-stock-price-target-decreased-1181-2211</guid>
+    <pubDate>Tue, 24 Nov 2026 10:38:13 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for PennyMac Mortgage Investment Trust - Preferred Stock (NYSE:PMT.PRA) has been revised to $22.11 / share. This is a decrease of 11.81% from the prior estimate of $25.07 dated November 8, 2026. These…</description>
+    
+  </item>
+  <item>
+    <title>AGNC Investment - Preferred Stock Price Target Increased by 11.64% to $29.50</title>
+    <link>https://www.nasdaq.com/articles/agnc-investment-preferred-stock-price-target-increased-1164-2950</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/agnc-investment-preferred-stock-price-target-increased-1164-2950</guid>
+    <pubDate>Tue, 24 Nov 2026 10:36:17 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for AGNC Investment - Preferred Stock (NASDAQGS:AGNCM) has been revised to $29.50 / share. This is an increase of 11.64% from the prior estimate of $26.42 dated November 8, 2026. These figures represent…</description>
+    
+  </item>
+  <item>
+    <title>Japan Poised to Ramp Up LNG Buying as Power Prices Surge</title>
+    <link>https://oilprice.com/Latest-Energy-News/World-News/Japan-Poised-to-Ramp-Up-LNG-Buying-as-Power-Prices-Surge.html</link>
+    <guid isPermaLink="false">https://oilprice.com/Latest-Energy-News/World-News/Japan-Poised-to-Ramp-Up-LNG-Buying-as-Power-Prices-Surge.html</guid>
+    <pubDate>Tue, 24 Nov 2026 10:35:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">OilPrice.com</source>
+    <description>Japanese utilities may raise spot LNG cargo buying as surging electricity prices in recent days have made gas-fired power generation profitable for the first time since the Iran war began. Japan’s physical spark spread, the difference…</description>
+    
+  </item>
+  <item>
+    <title>Consensus Price Target for Sound Point Meridian Capital, Inc. - Preferred Stock Decreased by 22.66% to $32.31</title>
+    <link>https://www.nasdaq.com/articles/consensus-price-target-sound-point-meridian-capital-inc-preferred-stock-decreased-2266</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/consensus-price-target-sound-point-meridian-capital-inc-preferred-stock-decreased-2266</guid>
+    <pubDate>Tue, 24 Nov 2026 10:33:42 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Sound Point Meridian Capital, Inc. - Preferred Stock (NYSE:SPME) has been revised to $32.31 / share. This is a decrease of 22.66% from the prior estimate of $41.77 dated November 8, 2026. These…</description>
+    
+  </item>
+  <item>
+    <title>South Korea regulator backs bank-controlled stablecoins after months of dispute</title>
+    <link>https://www.coindesk.com/policy/2026/11/24/south-korea-regulator-backs-bank-controlled-stablecoins-after-months-of-dispute</link>
+    <guid isPermaLink="false">https://www.coindesk.com/policy/2026/11/24/south-korea-regulator-backs-bank-controlled-stablecoins-after-months-of-dispute</guid>
+    <pubDate>Tue, 24 Nov 2026 10:29:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CoinDesk</source>
+    <description>Fintech firms could lead stablecoin ventures, but banks would need to own more than half of any issuer.</description>
+    
+  </item>
+  <item>
+    <title>Strategy Inc - Preferred Stock Price Target Increased by 36.61% to $185.31</title>
+    <link>https://www.nasdaq.com/articles/strategy-inc-preferred-stock-price-target-increased-3661-18531</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/strategy-inc-preferred-stock-price-target-increased-3661-18531</guid>
+    <pubDate>Tue, 24 Nov 2026 10:26:49 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The average one-year price target for Strategy Inc - Preferred Stock (NASDAQGS:STRK) (DB:MIG) has been revised to $185.31 / share. This is an increase of 36.61% from the prior estimate of $135.65 dated November 8, 2026.</description>
+    <category>MSTR</category>
   </item>
 </channel>
 </rss>
