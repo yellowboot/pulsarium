@@ -6,33 +6,41 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 24.11.2026 14:37
-27 of 80 news items unmatched this run
+Generated: 24.11.2026 16:17
+35 of 80 news items unmatched this run
 
-- [Investing.com] U.S. stocks slide at the open a day after Wall Street’s explosive rally
-- [CNBC] Monday’s huge stock rally was a rare event. Here’s what could happen next
-- [Investing.com] Why is Anthropic stock sliding today?
-- [Yahoo Finance] These 4 Cryptocurrencies Could See the Biggest Gains in 2027, According to BitMEX Co-Founder Arthur Hayes
-- [Investing.com] Why is Applied Optoelectronics stock rallying today?
-- [Investing.com] Applied Optoelectronics stock rises on datacenter deal
-- [Investing.com] Why is GameStop stock gaining today?
-- [Investing.com] 3 defensive stocks to watch as tech, chip volatility persists
-- [Yahoo Finance] Mexico Data Center Market Size - Investment Analysis and Growth Opportunities 2026-2031 | Global Cloud Providers Expanding Their Mexican Operations as Enterprise and Consumer Demand Increases
-- [Investing.com] From horsepower to firepower, Japan draws auto suppliers into major arms buildup
-- [Investing.com] TSX futures slip as caution takes hold after AI-fueled rally
-- [Nasdaq] Abercrombie & Fitch Co. Reports Third Quarter Fiscal 2026 Results
-- [Nasdaq] CytoMed Therapeutics Limited Appoints Dr. Ahmad Radzi bin Ahmad Badruddin to Board, Effective December 1, 2026
-- [Nasdaq] Titan Machinery Inc. Announces Results for Fiscal Third Quarter Ended October 31, 2026
-- [Mining.com] B2Gold charts path back to million-ounce producer ranks
-- [Nasdaq] Nissan Chemical Corporation - Depositary Receipt Price Target Decreased by 14.15% to $57.22
-- [Nasdaq] DYCOM INDUSTRIES, INC. REPORTS FISCAL 2027 THIRD QUARTER RESULTS
-- [Nasdaq] The J. M. Smucker Company Reports Fiscal Year 2027 Second Quarter Results and Updates Full-Year Outlook
-- [Nasdaq] Embecta Corp. Reports Fiscal 2026 Fourth Quarter and Full Year Financial Results; Provides Initial Fiscal Year 2027 Financial Guidance
-- [CNBC] Fed's John Williams indicates higher interest rates likely 'over time' to address inflation
-- [Nasdaq] Victoria's Secret & Co. Announces Board Chair Succession
-- [Nasdaq] Fury Intercepts 9.81 g/t Gold over 2.99 m within Seven Mineralized Zones at Eau Claire, Advancing Resource Conversion
-- [Nasdaq] Movado Group, Inc. Announces Third Quarter Fiscal 2027 Results
+- [CNBC] Anthropic sinks 12%, falling below $83 IPO price, but analysts are still largely positive
+- [Investing.com] Retail stocks surge into Black Friday amid earnings beats
+- [CNBC] Consumer confidence shoots up after Democrats' midterm victories — though inflation worries persist
+- [Yahoo Finance] Materion (MTRN) Stock Is Down 9.8% Today Without Company News
+- [Yahoo Finance] Why Avnet (AVT) Stock Is Down Today: Semiconductor Sector Selloff
+- [Yahoo Finance] Power Integrations (POWI) Stock Is Down 9.9% Today: Chip Sector Selloff
+- [Yahoo Finance] Plexus (PLXS) Stock Is Down 8.9% Today Without Company News
+- [Investing.com] Norway stocks lower at close of trade; Oslo OBX down 0.82%
+- [Investing.com] Israel stocks lower at close of trade; TA 35 down 0.86%
+- [Investing.com] Greece stocks lower at close of trade; Athens General Composite down 1.46%
+- [Nasdaq] Wheat Showing Marginal Tuesday AM Losses
+- [Nasdaq] Soybeans Posting Tuesday AM Strength
+- [Nasdaq] Corn Fading Back on Tuesday Morning
+- [Nasdaq] Wheat Posts Mixed Trade on Monday
+- [Nasdaq] Soybeans Close Higher to Start the Holiday Week
+- [Nasdaq] Corn Holds Firm on Monday
+- [Nasdaq] Sugar Prices Rebound Higher
+- [Nasdaq] Cocoa Prices Supported by Reduced Ivory Coast Shipments
+- [Nasdaq] Coffee Prices Fall as ICE Inventories Rise and Brazilian Real Falls to 1.75-Year Low
+- [CNBC] Amtrak sets ridership record as rising gas prices encourage Americans to travel by rail
+- [Nasdaq] Cotton Fading Back Lower on Tuesday
+- [Nasdaq] Cotton Rallies on Monday
+- [Investing.com] Why is Fossil stock rallying today?
+- [Investing.com] Why is Cogent Biosciences stock surging today?
+- [Investing.com] Why is Target stock surging to a 52-week high today?
+- [Nasdaq] Alamos Gold Announces Investment in Trident Resources
+- [Nasdaq] MindWalk Advances AI-Designed Ebola Vaccine Candidate Targeting Every Ebolavirus Species Known to Cause Human Disease
+- [CNBC] Kushner-backed OakNorth secures U.S. bank charter as global digital banks push into America
+- [MarketWatch] Anthropic’s stock just broke below its IPO price for the first time
+- [CoinDesk] Anchorage Digital to unveil new asset-management subsidiary
 - [CNBC] Commercial real estate activity falls 14% in October, as interest rates rise
+- [CNBC] Monday’s huge stock rally was a rare event. Here’s what could happen next
+- [Mining.com] B2Gold charts path back to million-ounce producer ranks
+- [CNBC] Fed's John Williams indicates higher interest rates likely 'over time' to address inflation
 - [CoinDesk] Crypto trader Ansem says his wallet was hacked as $2 million in memecoins were sold
-- [CoinDesk] BTCS sells more than half its ether to repay $43.8 million in Aave debt
-- [Mining.com] Trafigura takes control of $260 million copper-gold project in Chile
