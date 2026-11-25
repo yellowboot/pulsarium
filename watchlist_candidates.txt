@@ -6,15 +6,20 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 25.11.2026 08:37
-30 of 80 news items unmatched this run
+Generated: 25.11.2026 11:37
+29 of 80 news items unmatched this run
 
-- [Investing.com] FTSE 100 today: Stocks rise as consumer shares lead, U.S. PCE awaited
-- [Yahoo Finance] Clarivate Develops IPOne in Collaboration with Leading Global Organizations
-- [Investing.com] Australian regulator finds more suspected audit misconduct at Big Four firms
+- [Yahoo Finance] AI Anxiety Rules Wall Street Pre-Bell; Asia Off, Europe Up
+- [Yahoo Finance] What's Happening To Anthropic Stock Below Its IPO Price
+- [Investing.com] US grocers serve up Thanksgiving deals even as turkey prices climb
+- [Investing.com] J.P. Morgan sees trucks, luxury cars and tyres leading Europe’s autos in 2027
+- [CNBC] Budget carrier Norse Atlantic falls 77% after warning its finances are ‘critical’ amid soaring fuel costs
+- [Investing.com] European carmakers rise as EU caps hybrid car imports from Dec. 1
+- [Investing.com] Why is Sandoz stock rallying today?
+- [Investing.com] Wall St futures fall amid tech selloff, U.S. tariff reports
+- [Nasdaq] BioLargo Consensus Price Target Lowered by 16.67% to $0.26
+- [Nasdaq] Bear of the Day: Zillow Group (ZG)
 - [Nasdaq] Senti Biosciences Holdings Consensus Price Target Increased by 3,200% to $353.43
-- [Investing.com] Hannover Re targets at least €2.9 bln net income in 2027, sets 18% ROE goal for 2027-29
-- [Investing.com] Indra raises 2030 revenue target to over €12 bln, margin goal to 12.5%
 - [Nasdaq] Dollar Falls With T-Note Yields
 - [Nasdaq] Sugar Prices Supported by Dollar Weakness and Strength in Crude Oil
 - [CoinDesk] Solana developers move to stop validators finishing work on blocks that already lost
@@ -26,16 +31,10 @@ Generated: 25.11.2026 08:37
 - [Nasdaq] Azenta, Inc. Announces Director Dipal Doshi Will Not Stand for Reelection
 - [Nasdaq] Ready Capital Corporation - Preferred Stock Price Target Decreased by 19.32% to $12.46
 - [Nasdaq] FiEE, Inc. Reports Voting Results and Charter Amendments from 2026 Annual Meeting
-- [Nasdaq] New Found Gold Delivers High-Grade Gold at Surface from Iceberg Grade Control Drilling 110.47 g/t Au over 2.60 m and 14.58 g/t Au over 12.00 m
-- [Nasdaq] Transocean Ltd. Reports Voting Results from Extraordinary General Meeting
-- [Nasdaq] BBB Foods Consensus Price Target Increased by 12.07% to $70.30
-- [Nasdaq] Kymera Therapeutics, Inc. Enters into Underwriting Agreement for Common Stock Offering
-- [CNBC] SoftBank drops 15% as Wall Street AI sell-off ripples across Asian tech names
+- [OilPrice.com] Dangote Refinery Set to Become Africa’s Most Valuable Listed Company
+- [OilPrice.com] Iran Reports Fresh Tanker Explosions as Hormuz Attacks Intensify
 - [CNBC] U.S. jury convicts Huawei in a criminal trial over fraud and trade secrets
 - [OilPrice.com] Global LNG Supply Crunch Set to Spill Into 2027
+- [CNBC] Jim Cramer sizes up six retail stocks after earnings — and names his two favorites
 - [OilPrice.com] Oil Prices Slide Despite Mounting Threats in the Strait of Hormuz
 - [OilPrice.com] China Goes on Oil Buying Spree as Crude Prices Slide
-- [MarketWatch] Anthropic’s stock just broke below its IPO price for the first time
-- [CNBC] Anthropic closes below $83 IPO price, but analysts are still largely positive
-- [Mining.com] Tudor sees $2.3B value in Treaty Creek mine
-- [CNBC] Buffer ETFs protect investors from the harshest market swings – for a price
