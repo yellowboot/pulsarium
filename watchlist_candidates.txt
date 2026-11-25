@@ -6,32 +6,35 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 25.11.2026 17:37
-32 of 80 news items unmatched this run
+Generated: 25.11.2026 19:17
+33 of 80 news items unmatched this run
 
-- [Yahoo Finance] 1 Surprisingly Powerful ETF for Investors Who Only Have $200 to Start
-- [Mining.com] Copper price sinks to 2026 low as mining stocks brace for further losses
-- [Yahoo Finance] The Jensen Huang Premium Is Gone. 3 AI Stocks down 25% to 33% I'd Confidently Buy Right Now
-- [MarketWatch] HP’s stock is a standout gainer in the tech rout, as an earnings beat still matters
-- [Investing.com] FTSE 100 today: Stocks fall as U.S. tech stocks dent sentiment
-- [Yahoo Finance] SK hynix Stocks Sink 11.05% Despite 80% Operating Margin
-- [Yahoo Finance] Cytek Biosciences (CTKB) Stock Is Down 8.1% Today Without Company News
-- [Nasdaq] Dollar Climbs on Stock Weakness and Signs of US Economic Strength
-- [Nasdaq] Cotton Fading Back on Wednesday Morning Trade
-- [Nasdaq] Corn Starting Wednesday with Thin Trade
-- [Investing.com] U.K. stocks lower at close of trade; Investing.com United Kingdom 100 down 0.43%
-- [Investing.com] Spain stocks lower at close of trade; IBEX 35 down 2.00%
-- [CNBC] Prediction markets push OpenAI IPO expectations later into 2027
-- [Investing.com] Portugal stocks lower at close of trade; PSI down 0.85%
-- [Investing.com] Netherlands stocks lower at close of trade; AEX down 1.30%
-- [Investing.com] Italy stocks lower at close of trade; Investing.com Italy 40 down 1.81%
-- [Investing.com] In olive branch to banks, Italy plans to drop curbs on home renovation tax credits
-- [Investing.com] Why is Diana Shipping stock sliding today?
-- [Investing.com] Germany stocks lower at close of trade; DAX down 1.14%
+- [Yahoo Finance] NuScale Earns More on Interest Than It Does on Developing Reactors. Here’s the Math.
+- [Yahoo Finance] Vinci Compass (VINP) Stock Is Up 4.6% Today Without Company News
+- [Yahoo Finance] Update: Equities Mostly Down Intraday Following Hot Inflation Report
+- [Yahoo Finance] 5 Beaten-Down Stocks Insiders Are Still Dumping (Even After a 50% Crash)
+- [Nasdaq] Crude Prices Climb on Escalating Attacks on Shipping in the Middle East
 - [Nasdaq] Wheat Posting Mixed Action on Wednesday Morning
-- [Nasdaq] Cattle Look to Pre-Thanksgiving Trade
 - [Nasdaq] Soybeans Fading Back on Wednesday Morning
+- [Yahoo Finance] Jim Cramer’s 5 Long-Term Stock Picks
+- [Nasdaq] Cocoa Prices Rebound as the Dollar Weakens
+- [Nasdaq] Hogs Look to Wednesday, as Pork Hits Fresh 6+ Year Low
+- [Nasdaq] Cattle Look to Pre-Thanksgiving Trade
 - [Nasdaq] Cattle Closes Higher, as Beef Rallies Ahead of Turkey Day, Feeders Retreat
+- [Nasdaq] Heavy Rains in Brazil Boost Arabica Coffee Prices
+- [Nasdaq] Dollar Climbs on Stock Weakness and Signs of US Economic Strength
+- [Investing.com] In olive branch to banks, Italy plans to drop curbs on home renovation tax credits
+- [CNBC] Anthropic teeters at $1 trillion market cap. Why it may stabilize from here
+- [Investing.com] Anthropic’s slide tests Wall Street’s lofty bets on future AI profits
+- [Investing.com] TSX claws back losses as investors reassess global tech selloff and tariff risks
+- [Mining.com] Harmony Gold bets on copper as South African mines age
+- [Nasdaq] Loop Industries, Inc. Enters into Amending Agreement No. 2 with Daniel Solomita
+- [Investing.com] Exclusive-Boehly signs US-backed share swap deal to buy Lukoil global assets
+- [Investing.com] Wall Street cuts losses after brutal rout, Dow erases slide of over 2%
+- [MarketWatch] Why this stock-market selloff is probably going to get worse before it gets better
+- [Mining.com] Copper price sinks to 2026 low as mining stocks brace for further losses
+- [MarketWatch] HP’s stock is a standout gainer in the tech rout, as an earnings beat still matters
+- [CNBC] Prediction markets push OpenAI IPO expectations later into 2027
 - [CNBC] Anthropic's stock has been a clunker post-IPO. Why that matters for the AI trade
 - [CNBC] U.S. proposes new tariffs on 14 trading partners, including China and the EU
 - [CNBC] Investors led by U.S. billionaire Todd Boehly to buy Lukoil's oil and gas assets outside Russia, sources say
@@ -39,5 +42,3 @@ Generated: 25.11.2026 17:37
 - [CNBC] Wealthy investors seek tax savings from municipal bonds as yields remain elevated
 - [CoinDesk] South Korean crypto exchange Bithumb warns of phishing after deeper October breach probe
 - [CNBC] Budget carrier Norse Atlantic falls 78% after warning its finances are ‘critical’ amid soaring fuel costs
-- [CoinDesk] Fed’s preferred inflation gauge lands with a December rate increase already priced in
-- [Mining.com] Stratum AI model feeds Simberi’s mineral resource estimate
