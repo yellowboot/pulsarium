@@ -6,23 +6,437 @@
   <atom:link href="https://pulsarium.finance/news/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Stock market headlines from public sources, tagged by ticker and sector.</description>
   <language>en</language>
-  <lastBuildDate>Wed, 25 Nov 2026 20:37:26 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 25 Nov 2026 21:37:25 +0000</lastBuildDate>
   <item>
-    <title>Dow turns positive on the day as Wall Street attempts to recover from sell-off: Live updates</title>
+    <title>Nasdaq Plunges 4.6% Before Dramatic Rebound. Wall Street Faces A Triple Threat From AI, Inflation And Trump Tariffs.</title>
+    <link>https://www.ibtimes.com/us-stocks-recover-ai-inflation-tariff-selloff-3810199?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.ibtimes.com/us-stocks-recover-ai-inflation-tariff-selloff-3810199?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:29:34 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The Nasdaq and S&amp;P 500 trimmed steep morning declines, while stronger economic growth and elevated inflation reinforced expectations of higher interest rates.</description>
+    <category>SPY</category>
+  </item>
+  <item>
+    <title>How to spot ‘bogus boutiques’ and other Black Friday shopping scams</title>
+    <link>https://www.marketwatch.com/story/how-to-spot-bogus-boutiques-and-other-black-friday-shopping-scams-86cc182d?mod=mw_rss_topstories</link>
+    <guid isPermaLink="false">https://www.marketwatch.com/story/how-to-spot-bogus-boutiques-and-other-black-friday-shopping-scams-86cc182d?mod=mw_rss_topstories</guid>
+    <pubDate>Wed, 25 Nov 2026 21:29:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
+    <description>AI tools have made it even easier for scammers to create fake storefronts and misleading product listings.</description>
+    
+  </item>
+  <item>
+    <title>Jensen Huang reclaims throne at Nvidia: Here&#x27;s the bottom line for investors</title>
+    <link>https://finance.yahoo.com/video/jensen-huang-reclaims-throne-at-nvidia-heres-the-bottom-line-for-investors-212803135.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/video/jensen-huang-reclaims-throne-at-nvidia-heres-the-bottom-line-for-investors-212803135.html?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:28:03 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Nvidia&#x27;s (NVDA) stock continued to waver in Wednesday&#x27;s trading session, seemingly after the fanfare around CEO Jensen Huang&#x27;s return had died down. Yahoo Finance Executive Editor Brian Sozzi shares his perspective on Huang&#x27;s…</description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Is the market experiencing a &#x27;dead cat&#x27; bounce?</title>
+    <link>https://finance.yahoo.com/video/is-the-market-experiencing-a-dead-cat-bounce-212704552.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/video/is-the-market-experiencing-a-dead-cat-bounce-212704552.html?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:27:04 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Interactive Brokers Chief Strategist Steve Sosnick joins Yahoo Finance Data and Markets Editor Jared Blikre to discuss the recent volatility in the market (^GSPC, ^IXIC) and the tech sell-off.</description>
+    <category>IBKR</category>
+  </item>
+  <item>
+    <title>Bullish hopes spring as traders bet against a higher VIX: Options Action Live</title>
+    <link>https://www.cnbc.com/2026/11/25/bullish-hopes-spring-as-traders-bet-against-a-higher-vix-options-action-live.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/25/bullish-hopes-spring-as-traders-bet-against-a-higher-vix-options-action-live.html</guid>
+    <pubDate>Wed, 25 Nov 2026 21:26:47 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>With stocks mounting a comeback Wednesday, options trading across a few key volatility products suggests big swings in stocks may dampen in the near term.</description>
+    
+  </item>
+  <item>
+    <title>Macy&#x27;s postpones Thanksgiving Day Parade due to severe weather</title>
+    <link>https://www.cnbc.com/2026/11/25/macys-thanksgiving-day-parade-postponed.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/25/macys-thanksgiving-day-parade-postponed.html</guid>
+    <pubDate>Wed, 25 Nov 2026 21:26:36 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Macy&#x27;s announced on Wednesday that the annual Thanksgiving Day Parade is being postponed to Saturday due to severe weather.</description>
+    <category>M</category>
+  </item>
+  <item>
+    <title>Alumis (ALMS): 532.60% Analyst Upside, but Can It Find the Partner It Needs?</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/alumis-alms-532-60-analyst-212534951.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/alumis-alms-532-60-analyst-212534951.html?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:25:34 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>We recently published our list of the 10 Must-Buy Penny Stocks for 2027, and Alumis Inc. (NASDAQ:ALMS) ranked sixth, with 43 hedge funds holding stakes in the company. Why Are Investors Looking Beyond the Market Leaders? Penny stocks…</description>
+    
+  </item>
+  <item>
+    <title>Lumen (LUMN) Has Over $13.5 Billion in Connectivity Deals. Why Is It Still Below $5?</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/lumen-lumn-over-13-5-212514028.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/lumen-lumn-over-13-5-212514028.html?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:25:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Lumen Technologies, Inc. (NASDAQ:LUMN) earned the seventh spot on our recently published list of the 10 Must-Buy Penny Stocks for 2027, attracting investments from 42 hedge funds. Why Are Investors Looking Beyond the Market Leaders?…</description>
+    
+  </item>
+  <item>
+    <title>Federal Court Rules in Favor of CPSC in Landmark E-Commerce Product Safety Case</title>
+    <link>https://finance.yahoo.com/economy/policy/articles/federal-court-rules-favor-cpsc-212500597.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/economy/policy/articles/federal-court-rules-favor-cpsc-212500597.html?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:25:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>The U.S. Consumer Product Safety Commission (CPSC) today welcomed an order by the United States District Court for the District of Maryland granting summary judgment in favor of the Commission and dismissing Amazon.com, Inc.&#x27;s challenge…</description>
+    <category>AMZN</category>
+  </item>
+  <item>
+    <title>Dauch (DCH) Trades at Just 4× Estimated 2027 Earnings. What’s Holding It Back?</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/dauch-dch-trades-just-4-212450568.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/dauch-dch-trades-just-4-212450568.html?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:24:50 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>With 41 hedge funds holding positions, Dauch Corporation (NYSE:DCH) placed eighth on our recently published list of the 10 Must-Buy Penny Stocks for 2027. Why Are Investors Looking Beyond the Market Leaders? Penny stocks are entering…</description>
+    
+  </item>
+  <item>
+    <title>Bitdeer (BTDR) Has a $2.9 Billion AI Cloud Backlog. Can It Afford the Expansion?</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/bitdeer-btdr-2-9-billion-212424820.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/bitdeer-btdr-2-9-billion-212424820.html?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:24:24 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Our recently published list of the 10 Must-Buy Penny Stocks for 2027 featured Bitdeer Technologies Group (NASDAQ:BTDR) in ninth place, backed by ownership from 41 hedge funds. Why Are Investors Looking Beyond the Market Leaders? Penny…</description>
+    
+  </item>
+  <item>
+    <title>Sable Offshore (SOC): Analysts See 1,706% Upside, but Cash Is Running Short</title>
+    <link>https://finance.yahoo.com/markets/stocks/articles/sable-offshore-soc-analysts-see-212224283.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/sable-offshore-soc-analysts-see-212224283.html?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:22:24 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Sable Offshore Corp. (NYSE:SOC) rounded out our recently published list of the 10 Must-Buy Penny Stocks for 2027, taking the tenth spot with 41 hedge fund holders. Why Are Investors Looking Beyond the Market Leaders? Penny stocks are…</description>
+    
+  </item>
+  <item>
+    <title>The Biggest Earnings Winners Grind Dell And Sandisk Into The Dust</title>
+    <link>https://finance.yahoo.com/m/e45ffa23-8286-379b-b6e0-081e46a83f75/the-biggest-earnings-winners.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/e45ffa23-8286-379b-b6e0-081e46a83f75/the-biggest-earnings-winners.html?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:21:48 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Some of the biggest Q3 winners signaled bullish narrative shifts, including Pentair and Clorox.</description>
+    <category>SNDK</category><category>DELL</category>
+  </item>
+  <item>
+    <title>Palo Alto Networks sued over alleged accounting fraud claims</title>
+    <link>https://www.investing.com/news/stock-market-news/palo-alto-networks-sued-over-alleged-accounting-fraud-claims-5051500</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/palo-alto-networks-sued-over-alleged-accounting-fraud-claims-5051500</guid>
+    <pubDate>Wed, 25 Nov 2026 21:21:44 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>PANW</category>
+  </item>
+  <item>
+    <title>Russia stocks higher at close of trade; MOEX Russia Index up 0.92%</title>
+    <link>https://www.investing.com/news/stock-market-news/russia-stocks-higher-at-close-of-trade-moex-russia-index-up-092-5051485</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/russia-stocks-higher-at-close-of-trade-moex-russia-index-up-092-5051485</guid>
+    <pubDate>Wed, 25 Nov 2026 21:20:03 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Qualcomm vs. Sandisk: Which Technology Stock Is a Better Buy for 2027?</title>
+    <link>https://www.fool.com/coverage/better-buy/2026/11/25/qualcomm-vs-sandisk-which-technology-stock-is-a-better-buy-for-2027/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/coverage/better-buy/2026/11/25/qualcomm-vs-sandisk-which-technology-stock-is-a-better-buy-for-2027/?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:20:02 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Sandisk&#x27;s revenue surged over 270%, driven by demand for cloud memory, while Qualcomm is branching into automotive and satellite connectivity. Which chip stock holds up better?</description>
+    <category>QCOM</category><category>SNDK</category>
+  </item>
+  <item>
+    <title>Neuralink secures FDA approval for first U.S. pivotal brain-chip trial</title>
+    <link>https://www.investing.com/news/stock-market-news/neuralink-secures-fda-approval-for-first-us-pivotal-brainchip-trial-5051484</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/neuralink-secures-fda-approval-for-first-us-pivotal-brainchip-trial-5051484</guid>
+    <pubDate>Wed, 25 Nov 2026 21:19:23 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Macy’s Thanksgiving Day Parade postponed due to storm projections, US media reports</title>
+    <link>https://www.investing.com/news/stock-market-news/macys-thanksgiving-day-parade-postponed-due-to-storm-projections-us-media-reports-5051483</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/macys-thanksgiving-day-parade-postponed-due-to-storm-projections-us-media-reports-5051483</guid>
+    <pubDate>Wed, 25 Nov 2026 21:18:45 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>M</category>
+  </item>
+  <item>
+    <title>Dow closes higher Wednesday, wiping out 1,100-point loss in stunning rebound: Live updates</title>
     <link>https://www.cnbc.com/2026/11/24/stock-market-today-live-updates-.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/11/24/stock-market-today-live-updates-.html</guid>
-    <pubDate>Wed, 25 Nov 2026 20:30:46 +0000</pubDate>
+    <pubDate>Wed, 25 Nov 2026 21:17:25 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>Wall Street is coming off a losing session for the S&amp;P 500 and Nasdaq Composite.</description>
     <category>SPY</category><category>QQQ</category>
   </item>
   <item>
+    <title>How major US stock indexes fared Wednesday 11/25/2026</title>
+    <link>https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-211718440.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-211718440.html?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:17:18 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Stocks on Wall Street recovered most of their steep early losses as a pullback in AI stocks eased.3% after being down as much as 3.</description>
+    
+  </item>
+  <item>
+    <title>These 5 Tech Stocks are Sidestepping the AI Downturn</title>
+    <link>https://finance.yahoo.com/m/d635c9d7-dbc8-3f44-bc94-e186ec33e2bd/these-5-tech-stocks-are.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/m/d635c9d7-dbc8-3f44-bc94-e186ec33e2bd/these-5-tech-stocks-are.html?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:16:00 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Apple, Gen Digital, and Take-Two, are just some of the tech stocks bucking the AI selloff.</description>
+    <category>AAPL</category><category>TTWO</category>
+  </item>
+  <item>
+    <title>Kinetik Holdings shares surge on Targa takeover talks</title>
+    <link>https://www.investing.com/news/stock-market-news/kinetik-holdings-shares-surge-on-targa-takeover-talks-5051477</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/kinetik-holdings-shares-surge-on-targa-takeover-talks-5051477</guid>
+    <pubDate>Wed, 25 Nov 2026 21:15:47 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Why Is Credo Stock Going Up?</title>
+    <link>https://www.trefis.com/stock/crdo/articles/628617/why-is-credo-stock-going-up/2026-11-25?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.trefis.com/stock/crdo/articles/628617/why-is-credo-stock-going-up/2026-11-25?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:13:32 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Today&#x27;s big story: Anthropic Below Its IPO Price: Do Giants Come Back.</description>
+    
+  </item>
+  <item>
+    <title>Wall Street rebounds strongly after brutal rout, Dow ends higher &amp; Nasdaq recovers</title>
+    <link>https://www.investing.com/news/stock-market-news/wall-st-futures-fall-after-sp-500-nasdaq-end-lower-inflation-data-eyed-5049469</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/wall-st-futures-fall-after-sp-500-nasdaq-end-lower-inflation-data-eyed-5049469</guid>
+    <pubDate>Wed, 25 Nov 2026 21:12:03 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Apple (AAPL) Pushes Back As 24 7 Tokenized Shares Trading Opens</title>
+    <link>https://finance.yahoo.com/markets/crypto/articles/apple-aapl-pushes-back-24-211147818.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/markets/crypto/articles/apple-aapl-pushes-back-24-211147818.html?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:11:47 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Apple (NasdaqGS:AAPL) is challenging the trading of tokenized versions of its shares on newly expanded blockchain-based markets. Crypto exchange OKX and the New York Stock Exchange parent have launched a 24/7 tokenized U.S. securities…</description>
+    <category>AAPL</category>
+  </item>
+  <item>
+    <title>AI spending leads the biggest market risks heading into 2027</title>
+    <link>https://finance.yahoo.com/technology/ai/articles/ai-spending-leads-biggest-market-210742225.html?.tsrc=rss</link>
+    <guid isPermaLink="false">https://finance.yahoo.com/technology/ai/articles/ai-spending-leads-biggest-market-210742225.html?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:07:42 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>Investing.com -- Of the four major narratives driving market fear currently, AI spending looks the most concerning. Rate hikes are a close second because they amplify it. Tariffs and regulation rank lower. This is a judgment from the…</description>
+    
+  </item>
+  <item>
+    <title>Coca-Cola Has Raised Its Dividend 64 Straight Years. Here&#x27;s What $10,000 Will Pay You in 2027.</title>
+    <link>https://www.fool.com/investing/2026/11/25/coca-cola-has-raised-its-dividend-64-straight-years-what-10000-will-pay-you-in-2027/?.tsrc=rss</link>
+    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/25/coca-cola-has-raised-its-dividend-64-straight-years-what-10000-will-pay-you-in-2027/?.tsrc=rss</guid>
+    <pubDate>Wed, 25 Nov 2026 21:07:01 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
+    <description>This Dividend King pays investors reliably, but its stock price has run ahead of the business.</description>
+    <category>KO</category>
+  </item>
+  <item>
+    <title>U.S. Rig Count Holds Steady as Oil Production Hits Fifth Straight Record</title>
+    <link>https://oilprice.com/Energy/Crude-Oil/US-Rig-Count-Holds-Steady-as-Oil-Production-Hits-Fifth-Straight-Record.html</link>
+    <guid isPermaLink="false">https://oilprice.com/Energy/Crude-Oil/US-Rig-Count-Holds-Steady-as-Oil-Production-Hits-Fifth-Straight-Record.html</guid>
+    <pubDate>Wed, 25 Nov 2026 21:06:52 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">OilPrice.com</source>
+    <description>The total number of active drilling rigs for oil and gas in the United States stayed the same this week, according to new data that Baker Hughes published on Wednesday ahead of the Thanksgiving holiday. The total rig count in the US…</description>
+    <category>BKR</category>
+  </item>
+  <item>
+    <title>Third Point reopens private investment side pocket to hedge fund clients - WSJ</title>
+    <link>https://www.investing.com/news/stock-market-news/third-point-reopens-private-investment-side-pocket-to-hedge-fund-clients--wsj-5051447</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/third-point-reopens-private-investment-side-pocket-to-hedge-fund-clients--wsj-5051447</guid>
+    <pubDate>Wed, 25 Nov 2026 21:05:55 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Nvidia ends lower for second straight session as AI trade selloff gathers pace</title>
+    <link>https://www.investing.com/news/stock-market-news/nvidia-shares-fall-5-premarket-after-huang-return-rally-wanes-5050114</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/nvidia-shares-fall-5-premarket-after-huang-return-rally-wanes-5050114</guid>
+    <pubDate>Wed, 25 Nov 2026 21:05:34 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>NVDA</category>
+  </item>
+  <item>
+    <title>Hogs Extending Losses into the Holiday Break</title>
+    <link>https://www.nasdaq.com/articles/hogs-extending-losses-holiday-break</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/hogs-extending-losses-holiday-break</guid>
+    <pubDate>Wed, 25 Nov 2026 21:04:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Lean hog futures are trading with midday losses of 70 cents to $1.57 so far on Wednesday. USDA’s national base hog price was reported at $33.56 on Wednesday morning. The CME Lean Hog Index was down 29 cents on November 23 at $55.02.…</description>
+    
+  </item>
+  <item>
+    <title>Cattle Falling Ahead of Turkey Day</title>
+    <link>https://www.nasdaq.com/articles/cattle-falling-ahead-turkey-day</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/cattle-falling-ahead-turkey-day</guid>
+    <pubDate>Wed, 25 Nov 2026 21:04:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Live Cattle futures are $2.45 to $3.05 lower across the front months on Wednesday. Cash trade has seen very light trade at $355 dressed in the north this week, compared to sales of $340-345 last week, as a few live sales were picked up…</description>
+    
+  </item>
+  <item>
+    <title>Sugar Prices Rally on Expectations of a Smaller Sugar Crop in India</title>
+    <link>https://www.nasdaq.com/articles/sugar-prices-rally-expectations-smaller-sugar-crop-india</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/sugar-prices-rally-expectations-smaller-sugar-crop-india</guid>
+    <pubDate>Wed, 25 Nov 2026 21:04:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>March NY world sugar #11 (SBH27 ) closed up +0.68 (+3.85%) on Wednesday, and March London ICE white sugar #5 (SWH27 ) closed up +16.00 (+3.19%). Sugar prices rallied sharply to 1.5-week highs on Wednesday on the outlook for smaller…</description>
+    
+  </item>
+  <item>
+    <title>Dollar Weakness Boosts Cocoa Prices</title>
+    <link>https://www.nasdaq.com/articles/dollar-weakness-boosts-cocoa-prices-0</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/dollar-weakness-boosts-cocoa-prices-0</guid>
+    <pubDate>Wed, 25 Nov 2026 21:04:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>March ICE NY cocoa (CCH27 ) closed up +21 (+0.39%) on Wednesday, and ICE London cocoa #7 (CAZ26 ) closed up +32 (+0.80%). Cocoa prices erased early losses on Wednesday and settled higher as short covering emerged after the dollar index…</description>
+    
+  </item>
+  <item>
+    <title>Arabica Coffee Recovers as Heavy Brazil Rains Spark Short Covering</title>
+    <link>https://www.nasdaq.com/articles/arabica-coffee-recovers-heavy-brazil-rains-spark-short-covering</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/arabica-coffee-recovers-heavy-brazil-rains-spark-short-covering</guid>
+    <pubDate>Wed, 25 Nov 2026 21:04:14 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>March arabica coffee (KCH26 ) closed up +7.40 (+2.82%) on Wednesday, and January ICE robusta coffee (RMF27 ) closed down -15 (-0.53%). Coffee prices settled mixed on Wednesday, with robusta falling to a 3-year low. Arabica recovered…</description>
+    
+  </item>
+  <item>
+    <title>Stocks Slump as Tech Selloff Deepens</title>
+    <link>https://www.nasdaq.com/articles/stocks-slump-tech-selloff-deepens</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-slump-tech-selloff-deepens</guid>
+    <pubDate>Wed, 25 Nov 2026 21:04:13 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is down by -2.88% today, the Dow Jones Industrial Average ($DOWI ) (DIA ) is down -2.04%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is down -4.29%. December E-mini S&amp;P futures (ESZ26 ) are down -2.26%,…</description>
+    <category>SPY</category><category>QQQ</category><category>DJI</category>
+  </item>
+  <item>
+    <title>Soybeans Rallying Despite Tariff News</title>
+    <link>https://www.nasdaq.com/articles/soybeans-rallying-despite-tariff-news</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/soybeans-rallying-despite-tariff-news</guid>
+    <pubDate>Wed, 25 Nov 2026 21:04:13 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Soybeans are trading with 3 to 11 cent losses across most contracts on Wednesday.. The cmdtyView national average Cash Bean price was up 5 3/4 cents at $11.76. Soymeal futures are $4.90 to $5.70 higher, with Soy Oil futures up 23 to 31…</description>
+    
+  </item>
+  <item>
+    <title>10-year Treasury yield slides despite sticky inflation data as investors buy bonds for protection</title>
+    <link>https://www.cnbc.com/2026/11/25/treasury-yields-bonds-inflation.html</link>
+    <guid isPermaLink="false">https://www.cnbc.com/2026/11/25/treasury-yields-bonds-inflation.html</guid>
+    <pubDate>Wed, 25 Nov 2026 21:02:05 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
+    <description>Bond yields moved lower Wednesday as investors fled to bonds for protection amid sticky inflation data.</description>
+    <category>UST10Y</category>
+  </item>
+  <item>
+    <title>Barrick’s CEO meets Mali’s PM for first time since resolution</title>
+    <link>https://www.investing.com/news/stock-market-news/barricks-ceo-meets-malis-pm-for-first-time-since-resolution-5051442</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/barricks-ceo-meets-malis-pm-for-first-time-since-resolution-5051442</guid>
+    <pubDate>Wed, 25 Nov 2026 21:01:06 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    <category>B</category>
+  </item>
+  <item>
     <title>Vance says he was assured Jensen Huang was not under DOJ investigation</title>
     <link>https://www.cnbc.com/2026/11/25/vance-jensen-huang-nvidia-doj-investigation.html</link>
     <guid isPermaLink="false">https://www.cnbc.com/2026/11/25/vance-jensen-huang-nvidia-doj-investigation.html</guid>
-    <pubDate>Wed, 25 Nov 2026 20:28:42 +0000</pubDate>
+    <pubDate>Wed, 25 Nov 2026 21:00:08 +0000</pubDate>
     <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
     <description>Whether the Trump administration has investigated Jensen Huang for potential national security risks has been the subject of questions.</description>
+    
+  </item>
+  <item>
+    <title>Cotton Pushing Higher into the Holiday</title>
+    <link>https://www.nasdaq.com/articles/cotton-pushing-higher-holiday</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/cotton-pushing-higher-holiday</guid>
+    <pubDate>Wed, 25 Nov 2026 20:59:27 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Cotton futures are showing 50 to 55 point gains so far on Wednesday, as traders head into the holiday. Crude oil is up $1.60 per barrel on the session to $83.65, with the US dollar index $0.189 lower on the day. The Seam reported 7,268…</description>
+    
+  </item>
+  <item>
+    <title>Corn Rallying Heading into Thanksgiving Break</title>
+    <link>https://www.nasdaq.com/articles/corn-rallying-heading-thanksgiving-break</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/corn-rallying-heading-thanksgiving-break</guid>
+    <pubDate>Wed, 25 Nov 2026 20:59:27 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Corn futures are showing 3 to 5 ¼ cent gains across most contracts. The CmdtyView national average Cash Corn price is up 7 cents at $4.10 ½. The market will have normal hours today, while being closed on Thursday for Thanksgiving.…</description>
+    
+  </item>
+  <item>
+    <title>Virbac to buy Axiota Animal Health for $315 million</title>
+    <link>https://www.investing.com/news/stock-market-news/virbac-to-buy-axiota-animal-health-for-315-million-93CH-5051435</link>
+    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/virbac-to-buy-axiota-animal-health-for-315-million-93CH-5051435</guid>
+    <pubDate>Wed, 25 Nov 2026 20:59:24 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
+    <description></description>
+    
+  </item>
+  <item>
+    <title>Corn Starting Wednesday with Thin Trade</title>
+    <link>https://www.nasdaq.com/articles/corn-starting-wednesday-thin-trade</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/corn-starting-wednesday-thin-trade</guid>
+    <pubDate>Wed, 25 Nov 2026 20:53:02 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Corn prices are up just fractionally across the front months on Wednesday. Futures posted mostly higher trade on Tuesday, with nearby December down a tick and other contracts fractionally to 2 cents higher. Open interest was down…</description>
+    
+  </item>
+  <item>
+    <title>Wheat Posting Mixed Action on Wednesday Morning</title>
+    <link>https://www.nasdaq.com/articles/wheat-posting-mixed-action-wednesday-morning</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-posting-mixed-action-wednesday-morning</guid>
+    <pubDate>Wed, 25 Nov 2026 20:53:02 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>Wheat is showing mixed action on Wednesday AM, with winter wheats fading lower. The wheat complex closed Tuesday slipping into the holiday, with contracts down across the three exchanges. Chicago SRW futures were down 2 to 7 1/4 cents…</description>
+    
+  </item>
+  <item>
+    <title>Cocoa Prices Rebound as the Dollar Weakens</title>
+    <link>https://www.nasdaq.com/articles/cocoa-prices-rebound-dollar-weakens</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/cocoa-prices-rebound-dollar-weakens</guid>
+    <pubDate>Wed, 25 Nov 2026 20:46:42 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>March ICE NY cocoa (CCH27 ) is up +23 (+0.42%) today, and ICE London cocoa #7 (CAZ26 ) is up +22 (+0.55%). Cocoa prices erased early losses today and moved higher as short covering emerged after the dollar index ($DXY ) gave up an early…</description>
+    
+  </item>
+  <item>
+    <title>Crude Prices Climb on Escalating Attacks on Shipping in the Middle East</title>
+    <link>https://www.nasdaq.com/articles/crude-prices-climb-escalating-attacks-shipping-middle-east</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/crude-prices-climb-escalating-attacks-shipping-middle-east</guid>
+    <pubDate>Wed, 25 Nov 2026 20:46:42 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>January WTI crude oil (CLF27 ) is up +1.31 (+1.60%) today, and January RBOB gasoline (RBF27 ) is down -0.0086 (-0.35%). Crude oil and gasoline prices are mixed today. Crude is climbing amid escalating attacks on shipping in the Persian…</description>
+    
+  </item>
+  <item>
+    <title>Sugar Prices Jump on the Outlook for Smaller Sugar Output in India</title>
+    <link>https://www.nasdaq.com/articles/sugar-prices-jump-outlook-smaller-sugar-output-india</link>
+    <guid isPermaLink="false">https://www.nasdaq.com/articles/sugar-prices-jump-outlook-smaller-sugar-output-india</guid>
+    <pubDate>Wed, 25 Nov 2026 20:46:42 +0000</pubDate>
+    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
+    <description>March NY world sugar #11 (SBH27 ) is up +0.62 (+3.51%) on Tuesday, and March London ICE white sugar #5 (SWH27 ) is up +15.10 (+3.01%). Sugar prices rallied sharply to 1.5-week highs today on the outlook for smaller sugar production in…</description>
     
   </item>
   <item>
@@ -42,420 +456,6 @@
     <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
     <description>While rivals pour billions into data centers, Apple is putting AI into the devices people already own, and its cash flow shows the difference.</description>
     <category>AAPL</category>
-  </item>
-  <item>
-    <title>Gold falls to more than one-year low after data shows U.S. inflation rose further</title>
-    <link>https://www.cnbc.com/2026/11/25/gold-metals-federal-reserve-inflation.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/25/gold-metals-federal-reserve-inflation.html</guid>
-    <pubDate>Wed, 25 Nov 2026 20:17:39 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>Gold fell to its lowest level in more ‌than a year after strong U.S. inflation data failed to assuage concerns surrounding the Federal Reserve&#x27;s rate-hike path.</description>
-    <category>FED</category>
-  </item>
-  <item>
-    <title>Anthropic Broke Its $83 IPO Price. Most Giants Recovered</title>
-    <link>https://www.trefis.com/stock/ant/articles/628871/anthropic-broke-its-83-ipo-price-most-giants-recovered/2026-11-25?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.trefis.com/stock/ant/articles/628871/anthropic-broke-its-83-ipo-price-most-giants-recovered/2026-11-25?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:16:35 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Today&#x27;s big story: Anthropic Below Its IPO Price: Do Giants Come Back.</description>
-    
-  </item>
-  <item>
-    <title>Dell earnings analysis: questions answered and next catalysts</title>
-    <link>https://www.investing.com/news/stock-market-news/dell-earnings-analysis-questions-answered-and-next-catalysts-93CH-5051407</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/dell-earnings-analysis-questions-answered-and-next-catalysts-93CH-5051407</guid>
-    <pubDate>Wed, 25 Nov 2026 20:15:36 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>DELL</category>
-  </item>
-  <item>
-    <title>Why FTAI Infrastructure (FIP) Stock Is Up 10.5% Today Without Company News</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/why-ftai-infrastructure-fip-stock-201518758.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/why-ftai-infrastructure-fip-stock-201518758.html?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:15:18 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>On Wednesday, Nov. 25, the shares rose 10.5% without company-specific news.</description>
-    
-  </item>
-  <item>
-    <title>Ambarella earnings analysis: questions answered and next catalysts</title>
-    <link>https://www.investing.com/news/stock-market-news/ambarella-earnings-analysis-questions-answered-and-next-catalysts-93CH-5051406</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/ambarella-earnings-analysis-questions-answered-and-next-catalysts-93CH-5051406</guid>
-    <pubDate>Wed, 25 Nov 2026 20:15:17 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Summit Midstream (SMC) Stock Is Up 4.4% Today Without Company News</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/summit-midstream-smc-stock-4-201515420.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/summit-midstream-smc-stock-4-201515420.html?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:15:15 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>On Wednesday, Nov. 25, the shares rose 4.4% without company-specific news as energy stocks gained</description>
-    
-  </item>
-  <item>
-    <title>Arko Petroleum (APC) Stock Is Up 5.3% Today Without Company News</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/arko-petroleum-apc-stock-5-201515767.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/arko-petroleum-apc-stock-5-201515767.html?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:15:15 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>On Wednesday, Nov. 25, the shares rose 5.3% without company-specific news.</description>
-    
-  </item>
-  <item>
-    <title>Deere earnings analysis: questions answered and next catalysts</title>
-    <link>https://www.investing.com/news/stock-market-news/deere-earnings-analysis-questions-answered-and-next-catalysts-93CH-5051402</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/deere-earnings-analysis-questions-answered-and-next-catalysts-93CH-5051402</guid>
-    <pubDate>Wed, 25 Nov 2026 20:14:42 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>DE</category>
-  </item>
-  <item>
-    <title>Li Auto earnings analysis: questions answered and next catalysts</title>
-    <link>https://www.investing.com/news/stock-market-news/li-auto-earnings-analysis-questions-answered-and-next-catalysts-93CH-5051401</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/li-auto-earnings-analysis-questions-answered-and-next-catalysts-93CH-5051401</guid>
-    <pubDate>Wed, 25 Nov 2026 20:14:32 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Here&#x27;s How Much a $10,000 Investment in McDonald&#x27;s Pays You Every Single Year</title>
-    <link>https://www.fool.com/investing/2026/11/25/heres-how-much-a-10000-investment-in-mcdonalds-pays-you-every-single-year/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/25/heres-how-much-a-10000-investment-in-mcdonalds-pays-you-every-single-year/?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:13:02 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>For McDonald&#x27;s stock, steady, consistently growing dividends are just one part of the recipe.</description>
-    <category>MCD</category>
-  </item>
-  <item>
-    <title>Is Space Exploration Technologies (SPCX) Cheap As Tesla Merger Talks Raise Valuation Questions?</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/space-exploration-technologies-spcx-cheap-201121157.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/space-exploration-technologies-spcx-cheap-201121157.html?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:11:21 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Tesla and Space Exploration Technologies (NasdaqGS:SPCX) are reportedly deepening talks on a potential all stock merger valued above US$3.5 trillion. Investors are watching how deal structure, governance and exchange ratios might…</description>
-    <category>TSLA</category><category>SPCX</category>
-  </item>
-  <item>
-    <title>Cotton Pushing Higher into the Holiday</title>
-    <link>https://www.nasdaq.com/articles/cotton-pushing-higher-holiday</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cotton-pushing-higher-holiday</guid>
-    <pubDate>Wed, 25 Nov 2026 20:08:31 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Cotton futures are showing 50 to 55 point gains so far on Wednesday, as traders head into the holiday. Crude oil is up $1.60 per barrel on the session to $83.65, with the US dollar index $0.189 lower on the day. The Seam reported 7,268…</description>
-    
-  </item>
-  <item>
-    <title>Corn Rallying Heading into Thanksgiving Break</title>
-    <link>https://www.nasdaq.com/articles/corn-rallying-heading-thanksgiving-break</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/corn-rallying-heading-thanksgiving-break</guid>
-    <pubDate>Wed, 25 Nov 2026 20:08:31 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Corn futures are showing 3 to 5 ¼ cent gains across most contracts. The CmdtyView national average Cash Corn price is up 7 cents at $4.10 ½. The market will have normal hours today, while being closed on Thursday for Thanksgiving.…</description>
-    
-  </item>
-  <item>
-    <title>Stocks Slump as Tech Selloff Deepens</title>
-    <link>https://www.nasdaq.com/articles/stocks-slump-tech-selloff-deepens</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-slump-tech-selloff-deepens</guid>
-    <pubDate>Wed, 25 Nov 2026 20:08:30 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is down by -2.88% today, the Dow Jones Industrial Average ($DOWI ) (DIA ) is down -2.04%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is down -4.29%. December E-mini S&amp;P futures (ESZ26 ) are down -2.26%,…</description>
-    <category>SPY</category><category>QQQ</category><category>DJI</category>
-  </item>
-  <item>
-    <title>What&#x27;s Behind Dell Stock&#x27;s Fall?</title>
-    <link>https://www.trefis.com/stock/dell/articles/628977/what-s-behind-dell-stock-s-fall/2026-11-25?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.trefis.com/stock/dell/articles/628977/what-s-behind-dell-stock-s-fall/2026-11-25?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:06:53 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Today&#x27;s big story: Anthropic Below Its IPO Price: Do Giants Come Back.</description>
-    <category>DELL</category>
-  </item>
-  <item>
-    <title>AMCR Crosses Above 6% Yield Territory</title>
-    <link>https://www.nasdaq.com/articles/amcr-crosses-above-6-yield-territory</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/amcr-crosses-above-6-yield-territory</guid>
-    <pubDate>Wed, 25 Nov 2026 20:06:37 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Looking at the universe of stocks we cover at Dividend Channel, in trading on Wednesday, shares of Amcor plc (Symbol: AMCR) were yielding above the 6% mark based on its quarterly dividend (annualized to $2.64), with the stock changing…</description>
-    <category>AMCR</category>
-  </item>
-  <item>
-    <title>ElevenLabs targets $33B valuation in early 2027 funding talks, Bloomberg reports</title>
-    <link>https://www.investing.com/news/stock-market-news/elevenlabs-targets-33b-valuation-in-early-2027-funding-talks-bloomberg-reports-5051400</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/elevenlabs-targets-33b-valuation-in-early-2027-funding-talks-bloomberg-reports-5051400</guid>
-    <pubDate>Wed, 25 Nov 2026 20:06:09 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>How retail investors are flipping the &#x27;balance of power&#x27; in markets</title>
-    <link>https://finance.yahoo.com/markets/article/how-retail-investors-are-flipping-the-balance-of-power-in-markets-200317274.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/article/how-retail-investors-are-flipping-the-balance-of-power-in-markets-200317274.html?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:03:17 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Retail investors are having a larger impact than ever on markets, according to stock market veteran Barbara Doran, CEO of BD8 Capital Partners.</description>
-    
-  </item>
-  <item>
-    <title>Wheat Posting Mixed Trade on Wednesday</title>
-    <link>https://www.nasdaq.com/articles/wheat-posting-mixed-trade-wednesday</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-posting-mixed-trade-wednesday</guid>
-    <pubDate>Wed, 25 Nov 2026 20:03:08 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The wheat complex is mixed across the three exchanges, with winter wheats holding lower. Chicago SRW futures are down 1 to 3 ¼ cents on the session. KC wheat futures are down 3 ¼ to 10 ¾ cents led by longs exiting ahead of next week’s…</description>
-    
-  </item>
-  <item>
-    <title>Cocoa Prices Rebound as the Dollar Weakens</title>
-    <link>https://www.nasdaq.com/articles/cocoa-prices-rebound-dollar-weakens</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cocoa-prices-rebound-dollar-weakens</guid>
-    <pubDate>Wed, 25 Nov 2026 20:03:07 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>March ICE NY cocoa (CCH27 ) is up +23 (+0.42%) today, and ICE London cocoa #7 (CAZ26 ) is up +22 (+0.55%). Cocoa prices erased early losses today and moved higher as short covering emerged after the dollar index ($DXY ) gave up an early…</description>
-    
-  </item>
-  <item>
-    <title>Stocks Sharply Lower on AI Angst</title>
-    <link>https://www.nasdaq.com/articles/stocks-sharply-lower-ai-angst</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/stocks-sharply-lower-ai-angst</guid>
-    <pubDate>Wed, 25 Nov 2026 20:03:07 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>The S&amp;P 500 Index ($SPX ) (SPY ) is down by -2.54% today, the Dow Jones Industrial Average ($DOWI ) (DIA ) is down -1.48%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is down -4.16%. December E-mini S&amp;P futures (ESZ26 ) are down -2.68%,…</description>
-    <category>SPY</category><category>QQQ</category><category>DJI</category>
-  </item>
-  <item>
-    <title>Soybeans Rallying Despite Tariff News</title>
-    <link>https://www.nasdaq.com/articles/soybeans-rallying-despite-tariff-news</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/soybeans-rallying-despite-tariff-news</guid>
-    <pubDate>Wed, 25 Nov 2026 20:03:07 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Soybeans are trading with 3 to 11 cent losses across most contracts on Wednesday.. The cmdtyView national average Cash Bean price was up 5 3/4 cents at $11.76. Soymeal futures are $4.90 to $5.70 higher, with Soy Oil futures up 23 to 31…</description>
-    
-  </item>
-  <item>
-    <title>Corn Starting Wednesday with Thin Trade</title>
-    <link>https://www.nasdaq.com/articles/corn-starting-wednesday-thin-trade</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/corn-starting-wednesday-thin-trade</guid>
-    <pubDate>Wed, 25 Nov 2026 20:03:06 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Corn prices are up just fractionally across the front months on Wednesday. Futures posted mostly higher trade on Tuesday, with nearby December down a tick and other contracts fractionally to 2 cents higher. Open interest was down…</description>
-    
-  </item>
-  <item>
-    <title>3 Glorious AI Stocks to Buy Hand Over Fist If the Stock Market Crashes</title>
-    <link>https://www.fool.com/investing/2026/11/25/3-glorious-ai-stocks-to-buy-hand-over-fist-if-the-stock-market-crashes/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.fool.com/investing/2026/11/25/3-glorious-ai-stocks-to-buy-hand-over-fist-if-the-stock-market-crashes/?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:02:01 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>A crash would put these dominant businesses on sale, and one already looks cheap.</description>
-    
-  </item>
-  <item>
-    <title>In olive branch to banks, Italy plans to drop curbs on home renovation tax credits</title>
-    <link>https://www.investing.com/news/stock-market-news/in-olive-branch-to-banks-italy-plans-to-drop-curbs-on-home-renovation-tax-credits-5051276</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/in-olive-branch-to-banks-italy-plans-to-drop-curbs-on-home-renovation-tax-credits-5051276</guid>
-    <pubDate>Wed, 25 Nov 2026 20:00:43 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>Opendoor (OPEN) Stock Is Up 11.8% Today: Real Estate Stocks Rally</title>
-    <link>https://finance.yahoo.com/real-estate/articles/opendoor-open-stock-11-8-200019940.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/real-estate/articles/opendoor-open-stock-11-8-200019940.html?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:00:19 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Opendoor shares rose 11.8% on Wednesday, Nov. 25, as real estate stocks rallied, with no company-specific news.</description>
-    
-  </item>
-  <item>
-    <title>Hotel101 Global (HBNB) Stock Is Up 13.7% Today Without Company News</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/hotel101-global-hbnb-stock-13-200019494.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/hotel101-global-hbnb-stock-13-200019494.html?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:00:19 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>On Wednesday, Nov. 25, the shares rose 13.7% without company-specific news</description>
-    
-  </item>
-  <item>
-    <title>Why Centuri (CTRI) Stock Is Up Today: Joining S&amp;P SmallCap 600</title>
-    <link>https://finance.yahoo.com/markets/stocks/articles/why-centuri-ctri-stock-today-200016988.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/markets/stocks/articles/why-centuri-ctri-stock-today-200016988.html?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:00:16 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Centuri Holdings shares rose 6.6% on Wednesday, Nov. 25, a day after the company said it will join the S&amp;P SmallCap 600.</description>
-    
-  </item>
-  <item>
-    <title>Is the AI Correction Over? Why Ram Ahluwalia Thinks the AI Trade Has Hit Bottom</title>
-    <link>https://unchainedcrypto.com/is-the-ai-correction-over-why-ram-ahluwalia-thinks-the-ai-trade-has-hit-bottom/?.tsrc=rss</link>
-    <guid isPermaLink="false">https://unchainedcrypto.com/is-the-ai-correction-over-why-ram-ahluwalia-thinks-the-ai-trade-has-hit-bottom/?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:00:07 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Austin Campbell, founder of Zero Knowledge Group, says the AI race is no longer a two-player contest. Ram Ahluwalia, CEO of Lumida, argues the AI trade has bottomed and frontier labs can keep charging the highest prices. From Unchained,…</description>
-    
-  </item>
-  <item>
-    <title>Mysterious traders made $340,000 betting on Huang’s Nvidia return</title>
-    <link>https://www.thestreet.com/crypto/markets/mysterious-traders-made-340000-betting-on-huangs-nvidia-return?.tsrc=rss</link>
-    <guid isPermaLink="false">https://www.thestreet.com/crypto/markets/mysterious-traders-made-340000-betting-on-huangs-nvidia-return?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 20:00:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Some traders appeared unusually well-positioned before Nvidia’s dramatic leadership reversal.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>Valneva SE Reports Nine-Month 2026 Financial Results and Provides Corporate Updates</title>
-    <link>https://www.nasdaq.com/articles/valneva-se-reports-nine-month-2026-financial-results-and-provides-corporate-updates</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/valneva-se-reports-nine-month-2026-financial-results-and-provides-corporate-updates</guid>
-    <pubDate>Wed, 25 Nov 2026 19:58:51 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Valneva SE reported its consolidated financial results for the first nine months of the year ended September 30, 2026, and reaffirmed its financial guidance for 2026. Total product sales reached €81.4 million, while total revenues were…</description>
-    
-  </item>
-  <item>
-    <title>Stock Market Today: Dow Reverses For 275-Point Gain; This Ad Firm Breaks Out (Live Coverage)</title>
-    <link>https://finance.yahoo.com/m/90407e46-3b17-34e8-8c82-527bf00b63e4/stock-market-today%3A-dow.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/90407e46-3b17-34e8-8c82-527bf00b63e4/stock-market-today%3A-dow.html?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 19:57:02 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>IPO stock Anthropic is turning higher. Dell reverses losses after strong results.</description>
-    <category>DELL</category>
-  </item>
-  <item>
-    <title>Equitable Holdings&#x27; Preferred Stock Series C Yield Pushes Past 7.5%</title>
-    <link>https://www.nasdaq.com/articles/equitable-holdings-preferred-stock-series-c-yield-pushes-past-75</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/equitable-holdings-preferred-stock-series-c-yield-pushes-past-75</guid>
-    <pubDate>Wed, 25 Nov 2026 19:55:49 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>In trading on Wednesday, shares of Equitable Holdings Inc&#x27;s 4.30% Dep Share Fix Rate Non-Cumul Perp Prfd Stock Ser C (Symbol: EQH.PRC) were yielding above the 7.5% mark based on its quarterly dividend (annualized to $1.075), with shares…</description>
-    <category>EQH</category>
-  </item>
-  <item>
-    <title>Jensen Huang broke Nvidia’s code of conduct, and his employees may not forget it</title>
-    <link>https://finance.yahoo.com/technology/articles/jensen-huang-broke-nvidia-code-195457319.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/technology/articles/jensen-huang-broke-nvidia-code-195457319.html?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 19:54:57 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Most codes of conduct serve as a reflection of corporate culture. In Nvidia&#x27;s case, that could have consequences.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>EU postpones discussion to approve Tesla&#x27;s self-driving tech</title>
-    <link>https://www.cnbc.com/2026/11/25/eu-postpones-discussion-to-approve-teslas-self-driving-tech.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/25/eu-postpones-discussion-to-approve-teslas-self-driving-tech.html</guid>
-    <pubDate>Wed, 25 Nov 2026 19:54:42 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>The vote is a key hurdle in Tesla&#x27;s effort to roll out the technology across Europe.</description>
-    <category>TSLA</category>
-  </item>
-  <item>
-    <title>Disney Stock Offers A Sizable Dividend. Ramp It Up With A Covered-Call Trade.</title>
-    <link>https://finance.yahoo.com/m/22f44b26-f8a3-3ba4-8c88-1c18b8115fc7/disney-stock-offers-a-sizable.html?.tsrc=rss</link>
-    <guid isPermaLink="false">https://finance.yahoo.com/m/22f44b26-f8a3-3ba4-8c88-1c18b8115fc7/disney-stock-offers-a-sizable.html?.tsrc=rss</guid>
-    <pubDate>Wed, 25 Nov 2026 19:53:23 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Yahoo Finance</source>
-    <description>Disney stock has been showing strength lately. This trade can improve the media conglomerate&#x27;s already healthy dividend yield.</description>
-    <category>DIS</category>
-  </item>
-  <item>
-    <title>SpaceX wins FCC approval to deploy 1 million orbital data center satellites</title>
-    <link>https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html</link>
-    <guid isPermaLink="false">https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html</guid>
-    <pubDate>Wed, 25 Nov 2026 19:52:47 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">CNBC</source>
-    <description>SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.</description>
-    <category>AMZN</category><category>SPCX</category>
-  </item>
-  <item>
-    <title>Hogs Extending Losses into the Holiday Break</title>
-    <link>https://www.nasdaq.com/articles/hogs-extending-losses-holiday-break</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/hogs-extending-losses-holiday-break</guid>
-    <pubDate>Wed, 25 Nov 2026 19:49:10 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Lean hog futures are trading with midday losses of 70 cents to $1.57 so far on Wednesday. USDA’s national base hog price was reported at $33.56 on Wednesday morning. The CME Lean Hog Index was down 29 cents on November 23 at $55.02.…</description>
-    
-  </item>
-  <item>
-    <title>Cattle Falling Ahead of Turkey Day</title>
-    <link>https://www.nasdaq.com/articles/cattle-falling-ahead-turkey-day</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/cattle-falling-ahead-turkey-day</guid>
-    <pubDate>Wed, 25 Nov 2026 19:49:09 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Live Cattle futures are $2.45 to $3.05 lower across the front months on Wednesday. Cash trade has seen very light trade at $355 dressed in the north this week, compared to sales of $340-345 last week, as a few live sales were picked up…</description>
-    
-  </item>
-  <item>
-    <title>Wheat Posting Mixed Action on Wednesday Morning</title>
-    <link>https://www.nasdaq.com/articles/wheat-posting-mixed-action-wednesday-morning</link>
-    <guid isPermaLink="false">https://www.nasdaq.com/articles/wheat-posting-mixed-action-wednesday-morning</guid>
-    <pubDate>Wed, 25 Nov 2026 19:49:08 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Nasdaq</source>
-    <description>Wheat is showing mixed action on Wednesday AM, with winter wheats fading lower. The wheat complex closed Tuesday slipping into the holiday, with contracts down across the three exchanges. Chicago SRW futures were down 2 to 7 1/4 cents…</description>
-    
-  </item>
-  <item>
-    <title>Nvidia is heading for its first ‘death cross’ since March 2025 as stock continues to struggle</title>
-    <link>https://www.marketwatch.com/story/nvidia-is-heading-for-its-first-death-cross-since-march-2025-as-stock-continues-to-struggle-a611b99c?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/nvidia-is-heading-for-its-first-death-cross-since-march-2025-as-stock-continues-to-struggle-a611b99c?mod=mw_rss_topstories</guid>
-    <pubDate>Wed, 25 Nov 2026 19:43:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>This tape has not been kind to Nvidia.</description>
-    <category>NVDA</category>
-  </item>
-  <item>
-    <title>VP Vance defends Huang’s reinstatement, cites no probe</title>
-    <link>https://www.investing.com/news/stock-market-news/vp-vance-defends-huangs-reinstatement-cites-no-probe-5051380</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/vp-vance-defends-huangs-reinstatement-cites-no-probe-5051380</guid>
-    <pubDate>Wed, 25 Nov 2026 19:39:03 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    
-  </item>
-  <item>
-    <title>The Fed says inflation hasn’t gotten any better ahead of its key December vote to raise rates</title>
-    <link>https://www.marketwatch.com/story/the-fed-says-inflation-hasnt-gotten-any-better-ahead-of-its-key-december-vote-to-raise-rates-65024d33?mod=mw_rss_topstories</link>
-    <guid isPermaLink="false">https://www.marketwatch.com/story/the-fed-says-inflation-hasnt-gotten-any-better-ahead-of-its-key-december-vote-to-raise-rates-65024d33?mod=mw_rss_topstories</guid>
-    <pubDate>Wed, 25 Nov 2026 19:39:00 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">MarketWatch</source>
-    <description>Just ahead of pivotal December vote to raise U.S. interest rates, the Federal Reserve on Wednesday said stubborn inflation remains a thorn in the side of an expanding economy.</description>
-    <category>FED</category>
-  </item>
-  <item>
-    <title>EU postpones discussion to approve Tesla’s self-driving tech</title>
-    <link>https://www.investing.com/news/stock-market-news/eu-postpones-discussion-to-approve-teslas-selfdriving-tech-5050292</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/eu-postpones-discussion-to-approve-teslas-selfdriving-tech-5050292</guid>
-    <pubDate>Wed, 25 Nov 2026 19:36:20 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>TSLA</category>
-  </item>
-  <item>
-    <title>SpaceX to contribute one Class A share to every Trump Account</title>
-    <link>https://www.investing.com/news/stock-market-news/spacex-to-contribute-one-class-a-share-to-every-trump-account-5051378</link>
-    <guid isPermaLink="false">https://www.investing.com/news/stock-market-news/spacex-to-contribute-one-class-a-share-to-every-trump-account-5051378</guid>
-    <pubDate>Wed, 25 Nov 2026 19:32:40 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Investing.com</source>
-    <description></description>
-    <category>SPCX</category>
-  </item>
-  <item>
-    <title>Gold at $8,000 could signal dollar crisis: economist</title>
-    <link>https://www.mining.com/gold-at-8000-could-signal-dollar-crisis-economist/</link>
-    <guid isPermaLink="false">https://www.mining.com/gold-at-8000-could-signal-dollar-crisis-economist/</guid>
-    <pubDate>Wed, 25 Nov 2026 19:25:57 +0000</pubDate>
-    <source url="https://pulsarium.finance/news/feed.xml">Mining.com</source>
-    <description>Alasdair Macleod warns that the Federal Reserve may have to sacrifice the currency’s purchasing power to protect markets.</description>
-    <category>FED</category>
   </item>
 </channel>
 </rss>
