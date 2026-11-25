@@ -735,8 +735,15 @@
    "date": "2026-11-24",
    "value": 56,
    "label": "Leaning optimistic",
-   "headlines": 279,
-   "avg7": 47.0,
+   "headlines": 334,
+   "avg7": 47.0
+  },
+  {
+   "date": "2026-11-25",
+   "value": 48,
+   "label": "Neutral",
+   "headlines": 132,
+   "avg7": 47.3,
    "window": "in the last 12 hours"
   }
  ]
