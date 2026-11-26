@@ -6,23 +6,25 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 26.11.2026 17:37
-25 of 80 news items unmatched this run
+Generated: 26.11.2026 19:17
+24 of 80 news items unmatched this run
 
+- [Investing.com] Retail inventories and goods trade balance among economic data due Friday
+- [Investing.com] Bekaert and more set to report earnings Friday
+- [Yahoo Finance] SoftBank Group Stocks Jump 7.32% as AI Rebound Lifts Tokyo After a 14.83% Rout
+- [Yahoo Finance] This Oversold Artificial Intelligence (AI) Stock Will Skyrocket 123% in 2027, According to Wall Street
 - [CNBC] Microdrama apps chase profits as Hollywood moves into short-form, vertical video
 - [Investing.com] European stocks end higher as benign U.S. tariffs, Thanksgiving lull offer relief
-- [Yahoo Finance] European stocks rally as tech jitters ease
 - [Investing.com] U.K. stocks higher at close of trade; Investing.com United Kingdom 100 up 1.88%
 - [Investing.com] Spain stocks higher at close of trade; IBEX 35 up 2.35%
 - [Investing.com] Portugal stocks higher at close of trade; PSI up 1.33%
 - [Investing.com] Netherlands stocks higher at close of trade; AEX up 1.86%
-- [Investing.com] Italy stocks higher at close of trade; Investing.com Italy 40 up 2.47%
-- [Investing.com] Germany stocks higher at close of trade; DAX up 2.14%
-- [Investing.com] France stocks higher at close of trade; CAC 40 up 1.61%
-- [Investing.com] Belgium stocks higher at close of trade; BEL 20 up 1.57%
-- [Yahoo Finance] Stock-Split Watch: 3 Industrial Stocks That Could Split in 2027
-- [Nasdaq] Saipem's $650M Aramco Deal Strengthens Offshore Growth Prospects
+- [Nasdaq] DNTH Stock Gains 26% in a Month: What's Next for the Biotech?
+- [Nasdaq] Ryder EPS Estimates Northbound: Should Investors Buy the Stock?
+- [Nasdaq] Smith+Nephew's TENDON SEAM Shows Superior Rotator Cuff Repair Strength
+- [Mining.com] Planet One leads $933M plan for Senegal iron ore
 - [CoinDesk] Standard Chartered's Zodia Custody suffers data breach, exposing client information
+- [Mining.com] Chile clears Marimaca to start early copper mine works
 - [CNBC] Global stocks rally as investors shrug off U.S. tariffs and AI jitters to 'fish for bargains'
 - [CoinDesk] Hong Kong-based crypto trading firm Auros is winding down operations
 - [OilPrice.com] Why Gasoline Prices Are Falling While Diesel Remains Expensive
@@ -31,6 +33,3 @@ Generated: 26.11.2026 17:37
 - [OilPrice.com] Cold Snap Squeezes UK Spare Power Capacity
 - [CNBC] Norse Atlantic suspends all flights, warns it may file for bankruptcy after share price collapse
 - [Mining.com] Ivanhoe Mines taps AI to unlock Angola’s geological archives
-- [CNBC] Taking on Starlink: Europe’s largest satellite factory opens in push to rival Musk
-- [CNBC] Robots could be doing household chores in just 1-2 years, Chinese EV firm says
-- [CoinDesk] Zcash developers want to phase out older privacy system as a precaution against future attacks
