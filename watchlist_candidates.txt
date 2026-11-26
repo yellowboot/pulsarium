@@ -6,23 +6,23 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 26.11.2026 20:37
-27 of 80 news items unmatched this run
+Generated: 26.11.2026 21:37
+25 of 80 news items unmatched this run
 
+- [Investing.com] Colombia stocks higher at close of trade; COLCAP up 0.97%
+- [Investing.com] Russia stocks lower at close of trade; MOEX Russia Index down 0.80%
+- [Yahoo Finance] Compass (COMP) Jumped, But What Is Driving Attention Now?
+- [Investing.com] TSX ends higher after whipsaw session, helped by battery metal stocks & labor data
+- [Nasdaq] Soybeans Rallying Despite Tariff News
+- [Investing.com] U.S. stock futures rise on Thanksgiving a day after wild swings on Wall Street
+- [Investing.com] Brazil stocks higher at close of trade; Bovespa up 4.30%
 - [Nasdaq] Wheat Posting Mixed Trade on Wednesday
 - [Yahoo Finance] HP Stock Just Had Its Best Day Since May and Blew Past Wall Street’s Price Target
-- [Investing.com] TSX climbs nearly 1% on boost from battery metal stocks, labor market data
 - [Yahoo Finance] Anthropic Stock Is Now Trading as ANT. Should You Buy Today or Wait?
 - [Investing.com] Retail inventories and goods trade balance among economic data due Friday
 - [Investing.com] Bekaert and more set to report earnings Friday
-- [Yahoo Finance] SoftBank Group Stocks Jump 7.32% as AI Rebound Lifts Tokyo After a 14.83% Rout
-- [Yahoo Finance] This Oversold Artificial Intelligence (AI) Stock Will Skyrocket 123% in 2027, According to Wall Street
 - [CNBC] Microdrama apps chase profits as Hollywood moves into short-form, vertical video
 - [Mining.com] MaxMine launches predictive fleet allocation technology
-- [Investing.com] European stocks end higher as benign U.S. tariffs, Thanksgiving lull offer relief
-- [Investing.com] U.K. stocks higher at close of trade; Investing.com United Kingdom 100 up 1.88%
-- [Investing.com] Spain stocks higher at close of trade; IBEX 35 up 2.35%
-- [Investing.com] Portugal stocks higher at close of trade; PSI up 1.33%
 - [Mining.com] Turkey’s Çöpler gold mine restarts after 2024 fatal landslide
 - [OilPrice.com] Norway Pauses Data Center Grid Reservations as Requests Top Peak Demand
 - [Mining.com] Planet One leads $933M plan for Senegal iron ore
@@ -34,5 +34,3 @@ Generated: 26.11.2026 20:37
 - [OilPrice.com] Why Copper's Thanksgiving Bounce May Not Be the Start of Anything
 - [Mining.com] Cyclic Materials picks Germany for first European plant
 - [OilPrice.com] Cold Snap Squeezes UK Spare Power Capacity
-- [CNBC] Norse Atlantic suspends all flights, warns it may file for bankruptcy after share price collapse
-- [Mining.com] Ivanhoe Mines taps AI to unlock Angola’s geological archives
