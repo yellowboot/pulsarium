@@ -6,24 +6,26 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 26.11.2026 16:17
-22 of 80 news items unmatched this run
+Generated: 26.11.2026 17:37
+25 of 80 news items unmatched this run
 
-- [Investing.com] Norway stocks higher at close of trade; Oslo OBX up 1.50%
-- [Investing.com] Israel stocks higher at close of trade; TA 35 up 2.34%
-- [Investing.com] Stocks rally, Europe sizes up next ECB chief
-- [Investing.com] Greece stocks higher at close of trade; Athens General Composite up 1.02%
-- [Yahoo Finance] Anthropic Is Down 7% Since Its IPO. History Says a $5,000 Investment Could Be Worth This Much in a Year.
-- [Investing.com] Turkey stocks higher at close of trade; BIST 100 up 0.82%
-- [Yahoo Finance] The Economy Grew Way Faster Than First Reported: Q3 GDP Revised Up to 4.3%
-- [Investing.com] Morocco stocks higher at close of trade; Moroccan All Shares up 0.90%
-- [Yahoo Finance] Europe Cloud Computing Market Surges to $ 550.42 billion at a CAGR 11.0% by 2030 | Report by MarketsandMarkets™
-- [Yahoo Finance] AI's self-improvement era is nearly here. It will be felt everywhere
-- [Nasdaq] Stocks Are Spooked. This 12.1% Payer Is a Calm Way to Buy the Dip
-- [Nasdaq] Energy Fuels vs. Centrus Energy: Which Uranium Stock Has The Edge Now?
+- [CNBC] Microdrama apps chase profits as Hollywood moves into short-form, vertical video
+- [Investing.com] European stocks end higher as benign U.S. tariffs, Thanksgiving lull offer relief
+- [Yahoo Finance] European stocks rally as tech jitters ease
+- [Investing.com] U.K. stocks higher at close of trade; Investing.com United Kingdom 100 up 1.88%
+- [Investing.com] Spain stocks higher at close of trade; IBEX 35 up 2.35%
+- [Investing.com] Portugal stocks higher at close of trade; PSI up 1.33%
+- [Investing.com] Netherlands stocks higher at close of trade; AEX up 1.86%
+- [Investing.com] Italy stocks higher at close of trade; Investing.com Italy 40 up 2.47%
+- [Investing.com] Germany stocks higher at close of trade; DAX up 2.14%
+- [Investing.com] France stocks higher at close of trade; CAC 40 up 1.61%
+- [Investing.com] Belgium stocks higher at close of trade; BEL 20 up 1.57%
+- [Yahoo Finance] Stock-Split Watch: 3 Industrial Stocks That Could Split in 2027
+- [Nasdaq] Saipem's $650M Aramco Deal Strengthens Offshore Growth Prospects
 - [CoinDesk] Standard Chartered's Zodia Custody suffers data breach, exposing client information
 - [CNBC] Global stocks rally as investors shrug off U.S. tariffs and AI jitters to 'fish for bargains'
 - [CoinDesk] Hong Kong-based crypto trading firm Auros is winding down operations
+- [OilPrice.com] Why Gasoline Prices Are Falling While Diesel Remains Expensive
 - [OilPrice.com] Why Copper's Thanksgiving Bounce May Not Be the Start of Anything
 - [Mining.com] Cyclic Materials picks Germany for first European plant
 - [OilPrice.com] Cold Snap Squeezes UK Spare Power Capacity
@@ -31,3 +33,4 @@ Generated: 26.11.2026 16:17
 - [Mining.com] Ivanhoe Mines taps AI to unlock Angola’s geological archives
 - [CNBC] Taking on Starlink: Europe’s largest satellite factory opens in push to rival Musk
 - [CNBC] Robots could be doing household chores in just 1-2 years, Chinese EV firm says
+- [CoinDesk] Zcash developers want to phase out older privacy system as a precaution against future attacks
