@@ -6,46 +6,36 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 25.11.2026 21:37
-40 of 80 news items unmatched this run
+Generated: 26.11.2026 06:37
+30 of 80 news items unmatched this run
 
-- [CNBC] Bullish hopes spring as traders bet against a higher VIX: Options Action Live
-- [Yahoo Finance] Alumis (ALMS): 532.60% Analyst Upside, but Can It Find the Partner It Needs?
-- [Yahoo Finance] Lumen (LUMN) Has Over $13.5 Billion in Connectivity Deals. Why Is It Still Below $5?
-- [Yahoo Finance] Dauch (DCH) Trades at Just 4× Estimated 2027 Earnings. What’s Holding It Back?
-- [Yahoo Finance] Bitdeer (BTDR) Has a $2.9 Billion AI Cloud Backlog. Can It Afford the Expansion?
-- [Yahoo Finance] Sable Offshore (SOC): Analysts See 1,706% Upside, but Cash Is Running Short
-- [Investing.com] Russia stocks higher at close of trade; MOEX Russia Index up 0.92%
-- [Investing.com] Neuralink secures FDA approval for first U.S. pivotal brain-chip trial
-- [Yahoo Finance] How major US stock indexes fared Wednesday 11/25/2026
-- [Investing.com] Kinetik Holdings shares surge on Targa takeover talks
-- [Yahoo Finance] Why Is Credo Stock Going Up?
-- [Investing.com] Wall Street rebounds strongly after brutal rout, Dow ends higher & Nasdaq recovers
-- [Investing.com] Third Point reopens private investment side pocket to hedge fund clients - WSJ
-- [Nasdaq] Sugar Prices Rally on Expectations of a Smaller Sugar Crop in India
-- [Nasdaq] Dollar Weakness Boosts Cocoa Prices
-- [Nasdaq] Arabica Coffee Recovers as Heavy Brazil Rains Spark Short Covering
-- [Nasdaq] Hogs Extending Losses into the Holiday Break
-- [Nasdaq] Cattle Falling Ahead of Turkey Day
-- [Nasdaq] Soybeans Rallying Despite Tariff News
-- [Nasdaq] Cotton Pushing Higher into the Holiday
-- [Nasdaq] Corn Rallying Heading into Thanksgiving Break
-- [Investing.com] Virbac to buy Axiota Animal Health for $315 million
-- [Nasdaq] Wheat Posting Mixed Action on Wednesday Morning
-- [Nasdaq] Corn Starting Wednesday with Thin Trade
-- [Nasdaq] Sugar Prices Jump on the Outlook for Smaller Sugar Output in India
-- [Nasdaq] Cocoa Prices Rebound as the Dollar Weakens
-- [Nasdaq] Crude Prices Climb on Escalating Attacks on Shipping in the Middle East
-- [MarketWatch] New-home sales just hit a 2026 high as builders dangle low mortgages and Black Friday deals
-- [CNBC] Anthropic teeters at $1 trillion market cap. Why it may stabilize from here
-- [Mining.com] Harmony Gold bets on copper as South African mines age
+- [Investing.com] Taiwan stocks higher at close of trade; Taiwan Weighted up 2.79%
+- [Nasdaq] Upexi, Inc. Reports Voting Results from Special Meeting of Stockholders
+- [Investing.com] Why is Shein stock sliding today?
+- [Investing.com] Why did Fisher & Paykel Healthcare shares hit a record high today?
+- [Investing.com] Why is NRW Holdings stock rising today?
+- [Nasdaq] Dollar Erases Early Gains as T-Note Yields Tumble
+- [Nasdaq] America's Car-Mart, Inc. Receives Nasdaq Delisting Notice Following Chapter 11 Bankruptcy Filings
+- [Nasdaq] Methanex Corporation Enhances Financial Strength and Flexibility
+- [Nasdaq] Personalis, Inc. Announces Parent Cash Election by Tempus AI, Inc. Related to Proposed Merger
+- [CoinDesk] Ripple is worth $90 a share to one fund and $300 to another, SEC filings show
+- [Nasdaq] Lands' End, Inc. Reports Executive Departure and Separation Agreement
+- [Nasdaq] SEALSQ Announces that Euronext Paris Approved the Admission of its Ordinary Shares For Trading on Euronext Growth Paris
+- [Investing.com] Why is Kioxia stock surging today?
+- [Nasdaq] DIANA SHIPPING INC. ANNOUNCES KEY LEADERSHIP APPOINTMENT AND ORGANIZATIONAL CHANGES TO SUPPORT ITS LONG-TERM STRATEGY
+- [Nasdaq] Avalon GloboCare Corp. Issues $600,000 Promissory Note and Enters Exchange Agreement for Series F Preferred Stock
+- [Nasdaq] Valion Bio Announces 1-for-4 Reverse Stock Split Intended to Broaden Institutional Investor Access
+- [Yahoo Finance] GoodRx Holdings (GDRX) Faces A Fresh Test As Its Narrative Shifts Toward Fair Value
+- [Nasdaq] International Paper Company Reports Director Resignation and Executive Incentive
+- [Nasdaq] Dermata Therapeutics, Inc. Received Notice of Deficiencies From Nasdaq Regarding Minimum Bid Price
+- [Nasdaq] Drilling Tools International Corporation Enters Into First Amendment to Share Purchase Agreement
+- [CNBC] South Korea's Kospi leads gains as tech rebound lifts Asia markets
+- [Yahoo Finance] Global markets rebound as tech shares recover and tariff fears ease
+- [CNBC] South Korea upgrades growth forecast, raises benchmark rates to highest in two years
+- [CNBC] Norse Atlantic flights suspended after warning finances 'critical'
 - [MarketWatch] Why this stock-market selloff is probably going to get worse before it gets better
-- [Mining.com] Copper price sinks to 2026 low as mining stocks brace for further losses
-- [MarketWatch] HP’s stock is a standout gainer in the tech rout, as an earnings beat still matters
-- [CNBC] Prediction markets push OpenAI IPO expectations later into 2027
-- [Mining.com] Sulphur shortage threatens Indonesia’s nickel plans
-- [CNBC] Anthropic's stock has been a clunker post-IPO. Why that matters for the AI trade
-- [CNBC] U.S. proposes new tariffs on 14 trading partners, including China and the EU
-- [CNBC] Investors led by U.S. billionaire Todd Boehly to buy Lukoil's oil and gas assets outside Russia, sources say
-- [CNBC] These low-volatility stocks are shining in November as markets shudder
-- [CNBC] Wealthy investors seek tax savings from municipal bonds as yields remain elevated
+- [OilPrice.com] Oil Rallies as Hormuz Mine Strikes Rattle Global Markets
+- [MarketWatch] HP’s stock is a standout gainer in the tech selloff, as an earnings beat still matters
+- [Mining.com] Can price floors fund rare earth projects beyond China?
+- [Mining.com] Kazatomprom operations chief detained in bribery probe
+- [Mining.com] Harmony Gold bets on copper as South African mines age
