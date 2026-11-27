@@ -6,35 +6,38 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 27.11.2026 13:17
-29 of 80 news items unmatched this run
+Generated: 27.11.2026 14:37
+32 of 80 news items unmatched this run
 
-- [CNBC] Dow futures rally 600 points as benchmark heads for best week since April 2025: Live updates
-- [Yahoo Finance] US Equity Futures Climb Pre-Bell as Traders Prepare to Wind Down Volatile Holiday Week
-- [Yahoo Finance] Stock Futures Rise as Wall Street Heads for Weekly Gains
-- [Investing.com] Why history suggests a sharp rally could be near
-- [Nasdaq] Studio City International Holdings Limited Reports Third Quarter 2026 Results
-- [Nasdaq] Ero Copper Corp. Temporarily Suspends Tucumã Operation and Faces US$2.9 million in Environmental Fines
-- [Yahoo Finance] Latest News In Cloud AI - Cloudera Advances Data Control With Digital Sovereignty Solution
-- [Yahoo Finance] Premarket movers: AI stocks rebound, Vertex slides on FDA review
-- [Investing.com] Canada’s TSX futures climb as Bay Street eyes three-day winning streak
-- [Investing.com] Exclusive-Global fashion brands shift orders from Bangladesh to India amid unrest
-- [Nasdaq] Companhia Siderúrgica Nacional announced leadership changes including the resignation of Mr. Antonio Marco Campos Rabello.
-- [Nasdaq] Cementos Pacasmayo S.A.A. Announces Settlement of the U.S. Offering
-- [Investing.com] Jefferies sees Brazil rebound potential after finance minister pick
-- [Investing.com] Why is SMA Solar Technology stock rallying today?
-- [Investing.com] Nasdaq futures surge as investors pile back into battered AI stocks
-- [Investing.com] SMA Solar jumps 5% as Berenberg sees backlog driving earnings upside
+- [CNBC] Dow rallies 500 points as benchmark heads for best week since April 2025: Live updates
+- [CNBC] Top 10 things to watch in the stock market on Black Friday
+- [Yahoo Finance] How Leopold Aschenbrenner made a $225 million bet on AI infrastructure
+- [CNBC] This week’s bounce following a rapid correction may not hold, history shows
+- [Investing.com] Explainer-Black Friday test for retailers as tight budgets meet AI-savvy shoppers
+- [Yahoo Finance] TruGolf Announces Reverse Stock Split
+- [Investing.com] European shares extend rally, but bruising November leaves AI scars
+- [Nasdaq] Hogs Extend Losses into the Holiday Break
+- [Nasdaq] Cattle Retreat Heading into Turkey Day
+- [Nasdaq] Wheat Comes off Lows to Close Mixed on Wednesday
+- [Nasdaq] Soybeans Rally into the Holiday
+- [Nasdaq] Corn Rallies into Thanksgiving Break
+- [Nasdaq] Hogs Extending Losses into the Holiday Break
+- [Nasdaq] Cattle Falling Ahead of Turkey Day
+- [Nasdaq] Soybeans Rallying Despite Tariff News
+- [Nasdaq] Corn Rallying Heading into Thanksgiving Break
+- [Investing.com] US stocks set for higher open as battered AI shares claw back losses
+- [Yahoo Finance] PagSeguro (PAGS) Stock Jumps 12.4% Premarket Without Company News
+- [CNBC] Budget airline Norse Atlantic files for bankruptcy in Europe after failing to secure funding
+- [Yahoo Finance] Update: US Equity Futures Climb Pre-Bell as Traders Prepare to Wind Down Volatile Holiday Week
+- [Nasdaq] Cotton Post Gains in Pre-Thanksgiving Trade
+- [Nasdaq] Cotton Pushing Higher into the Holiday
+- [Nasdaq] Wheat Posting Mixed Trade on Wednesday
+- [Nasdaq] The Math Shows GXC Can Go To $101
+- [Investing.com] Why is Antofagasta stock rallying today?
+- [Investing.com] Why is Fresnillo stock rallying today?
+- [MarketWatch] New-home sales just hit a 2026 high as builders dangle low mortgages and Black Friday deals
+- [CoinDesk] Kalshi turns to small businesses as legal battles threaten forecasts on sports
 - [CNBC] The Tech Download: Will Jensen Huang’s return be the spark the shaky AI market needs?
-- [Nasdaq] Concord Medical Announces Receipt of NYSE Non-Compliance Letter Regarding Delayed Form 20-F Filings
-- [Nasdaq] Applied Digital Corporation Posts Updated Investor Presentation
-- [Nasdaq] Caesarstone Ltd. Announces Results of the 2026 Annual General Meeting of Shareholders and Appointment of Director
-- [Nasdaq] X Financial Reports Third Quarter 2026 Unaudited Financial Results
 - [CoinDesk] Brazil’s stock exchange teams up with major banks to launch real-pegged stablecoin
-- [Nasdaq] IonQ's QKD Systems Pass IDEMIA Validation for Critical Communications
 - [CoinDesk] Tether can freeze stolen crypto in minutes. Getting it back can take years.
-- [OilPrice.com] Stockpiling Will Support Oil Prices in 2027, Energy Aspects Says
-- [CoinDesk] Ripple's lending plan moves closer to tapping XRP Ledger's $800 million in stablecoins
-- [CoinDesk] Binance says customer withdrawals are fully restored, four weeks after the $6.3 billion hack
-- [OilPrice.com] Iraq Delays Up to 30 Million Barrels of Crude Oil Shipments
-- [CNBC] Anthropic teeters at $1 trillion market cap. Why it may stabilize from here
+- [OilPrice.com] South Sudan Readies Licensing Round to Boost Oil Production
