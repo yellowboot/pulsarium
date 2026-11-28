@@ -6,27 +6,35 @@ ticker/company in COMPANY_MAP (fetch_news.py). If a name keeps
 showing up here across multiple runs, it's probably worth adding —
 just ask, or add it yourself as one line in COMPANY_MAP.
 
-Generated: 27.11.2026 21:37
-31 of 80 news items unmatched this run
+Generated: 28.11.2026 03:37
+36 of 80 news items unmatched this run
 
-- [Yahoo Finance] 5 Best Tech Stocks to Buy for 2027 According to Hedge Funds
-- [Investing.com] Colombia stocks higher at close of trade; COLCAP up 1.53%
-- [Nasdaq] Supply Woes Push Cocoa Prices to 3-Week Highs
-- [Nasdaq] Interactive Strength Inc. Notifies Nasdaq of Audit and Compensation Committee Noncompliance Following Director Resignation
-- [Nasdaq] Propanc Biopharma, Inc. Enters Securities Purchase Agreements for $3,000,000 in Convertible Notes
-- [Investing.com] Russia stocks higher at close of trade; MOEX Russia Index up 1.29%
-- [Nasdaq] Brazilian Real Strength Lifts Coffee Prices
+- [Investing.com] Are recent outages bad for software?
+- [Investing.com] Glass Lewis backs Vail Resorts board in proxy fight with activist Oasis
+- [Investing.com] AI stocks rebound: Catch the next move with AI picks at 60% off, Black Friday only
+- [Investing.com] THE INSANE SAVINGS ARE ENDING! InvestingPro for less than $1.9/week
+- [Yahoo Finance] Here's Why Anthropic Stock Rallied on Friday -- and Why Wall Street Analysts Say It's Still a Buy Right Now
+- [Investing.com] ECB officials signal further rate hikes as inflation remains elevated
+- [Investing.com] China’s premium puffer jacket push meets consumer resistance
+- [Nasdaq] Wheat Round Out Post-Thanksgiving Trade with Gains
+- [Yahoo Finance] Vanguard's Growth ETF Has 3 Stocks Making Up More Than a Third of It. Only 1 Has Held Up in the Tech Sell-Off.
+- [Yahoo Finance] Why Monte Rosa Therapeutics Stock Slumped Today
+- [Nasdaq] Relative Strength Alert For Permian Basin Royalty Trust
+- [Nasdaq] Safe & Green Holdings Corp. Reports Unregistered Sales of Common Stock
+- [Nasdaq] HeartSciences Inc. Enters Into Debt Exchange Agreement in Connection With Proposed Transaction
+- [Nasdaq] Icahn Enterprises L.P. Amends Employment Agreements for CEO Ted Papapostolou and CFO Robert Flint, Increasing Base Salaries to $6,500,000 and $2,250,000
+- [Nasdaq] Wheat Holding Higher on Friday
 - [Nasdaq] Sugar Prices Settle Higher on Supply Conccerns and Brazilian Real Strength
-- [Investing.com] Brazil stocks higher at close of trade; Bovespa up 0.05%
-- [Nasdaq] Opendoor Technologies Inc. Enters $300,000,000 At-The-Market Equity Offering Program
-- [Nasdaq] AI Financial Corporation Reports Officer Transition and Fiscal Year Change
-- [Investing.com] Is today’s Black Friday tech rebound a real rally—or a dead cat bounce?
-- [Investing.com] Millions of Americans are retiring—lifting this wealth stock 13%
-- [Investing.com] Small Businesses Are Fighting Costs—This HR Stock Surged 23%
-- [Investing.com] Shoppers Are Hunting Home Bargains—Lifting This Stock 25% in a Month
-- [Investing.com] Weight-Loss Drugs Stole Headlines—This $8 Diabetes Stock Jumped 37%
+- [Yahoo Finance] Anthropic's Best Customers Spend 20 Times More Than the Rest. That's Why I'm Buying the Stock.
+- [Nasdaq] Sentinel Holdings Ltd. Announces Termination of Gladiator Solutions, Inc. Stock for Stock Acquisition and Settlement of Litigation
+- [Nasdaq] Banco Macro S.A. Reports Relevant Event Regarding Share Acquisition
+- [Nasdaq] Q/C Technologies, Inc. Sets 2026 Annual Meeting Date and Submission Deadlines
+- [Nasdaq] Brazilian Real Strength Lifts Coffee Prices
+- [Nasdaq] Moleculin Biotech, Inc. Regains Compliance With Nasdaq Bid Price Rule
+- [Nasdaq] Gulf Resources, Inc. Enters Into Asset Purchase Agreement for Bromine and Crude Salt Assets
+- [Yahoo Finance] e.l.f. Beauty vs. Wendy's: Which Consumer Goods Stock Is a Better Buy for 2027?
+- [Mining.com] Entrée, Mongolia target March 31 for Oyu Tolgoi deal
 - [MarketWatch] Coming next year: Medicare Advantage plans without drug coverage for almost 640,000 people and fewer choices for the rest
-- [Yahoo Finance] Update: Equities Climb as Dow Posts Biggest Weekly Jump Since October 2022
 - [CNBC] Jensen Huang's return did little to ease AI jitters. We used the weakness to buy
 - [MarketWatch] The warnings behind this week’s stock-market rally
 - [CNBC] Budget airline Norse Atlantic files for bankruptcy in Europe after failing to secure funding
@@ -37,6 +45,3 @@ Generated: 27.11.2026 21:37
 - [OilPrice.com] Georgia Voters to Decide Fate of $17 Billion Data Center Megaproject
 - [Mining.com] Ero Copper halts Brazil mine after water overflows
 - [CNBC] The Tech Download: Will Jensen Huang’s return be the spark the shaky AI market needs?
-- [OilPrice.com] The Oil Glut Everyone Expected Is Looking Increasingly Elusive
-- [OilPrice.com] Soaring Fuel Prices Threaten to Push More Airlines Into Bankruptcy
-- [CoinDesk] Brazil’s stock exchange teams up with major banks to launch real-pegged stablecoin
